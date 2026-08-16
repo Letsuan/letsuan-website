@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <title>Le Tsuan Design | Interior, Exhibition &amp; Visual Design Studio</title>
+  <meta name="description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
+  <link rel="canonical" href="https://www.letsuan.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Le Tsuan Design | Interior, Exhibition & Visual Design Studio" />
+  <meta property="og:description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
+  <meta property="og:url" content="https://www.letsuan.com/" />
+  <meta property="og:image" content="https://www.letsuan.com/assets/logo.png" />
+  <meta property="og:site_name" content="Le Tsuan Design" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Le Tsuan Design | Interior, Exhibition & Visual Design Studio" />
+  <meta name="twitter:description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
+  <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.","foundingDate":"2005","address":[{"@type":"PostalAddress","addressLocality":"Taichung","addressCountry":"TW"},{"@type":"PostalAddress","addressLocality":"Taipei","addressCountry":"TW"}],"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="./image-slot.js"></script>
+  <style>
+    :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
+    body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
+    a{color:var(--ltsuan-accent)}
+    a:hover{color:var(--ltsuan-accent-hover)}
+  </style>
+</helmet>
+<div style="background:var(--ltsuan-bg);overflow-x:hidden">
+  <dc-import name="Nav" active="home" hint-size="100%,0px" style="background:var(--ltsuan-bg)"></dc-import>
+
+  <section data-screen-label="Home / Hero" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
+    <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
+      <div style="{{ slide.layerStyle }}">
+        <div style="{{ slide.imgStyle }}; position:relative">
+          <image-slot id="hero-slide-{{ $index }}" shape="rect" placeholder="{{ slide.placeholder }}" style="width:100%;height:100%"></image-slot>
+          <img ref="{{ slide.imgRef }}" alt="{{ slide.title }}" style="{{ slide.realImgStyle }}" decoding="async" />
+        </div>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.28);transition:background .5s ease" style-hover="background:rgba(0,0,0,.05)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 55%,rgba(0,0,0,.1) 100%)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.45) 0%,transparent 55%,transparent 100%)"></div>
+      </div>
+    </sc-for>
+
+    <div style="position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;flex-direction:column;justify-content:center;padding:0 56px">
+      <div style="max-width:1200px">
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.25em;opacity:.65;margin-bottom:16px">{{ activeSlideData.num }} / {{ activeSlideData.category }}</div>
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,8vw,120px);line-height:.9;letter-spacing:-.03em;margin:0;pointer-events:auto">{{ activeTitleNode }}</h1>
+        <div style="margin-top:28px;display:flex;align-items:center;gap:32px;flex-wrap:wrap">
+          <p style="font-family:'Oswald',sans-serif;font-size:22px;letter-spacing:.02em;opacity:.8;line-height:1.2;max-width:34ch;margin:0">{{ activeSlideData.subtitle }}</p>
+          <a href="{{ activeSlideData.href }}" style="pointer-events:auto;display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(244,239,232,.3);padding:0 26px;height:42px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;color:var(--ltsuan-text);text-decoration:none;transition:color .2s ease" style-hover="color:var(--ltsuan-accent)">VIEW PROJECT <span>→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:absolute;right:40px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;z-index:10">
+      <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
+        <button onClick="{{ goTo }}" data-idx="{{ $index }}" style="{{ slide.dotBtnStyle }}" aria-label="{{ slide.dotLabel }}"><span style="{{ slide.dotStyle }}"></span></button>
+      </sc-for>
+    </div>
+
+    <div style="position:absolute;left:0;right:0;bottom:0;z-index:10;padding:0 56px;height:64px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(244,239,232,.1)">
+      <div style="display:flex;align-items:center;gap:28px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;opacity:.5">AUTO</span>
+          <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoKnobStyle }}"></span></button>
+          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.15em;opacity:{{ autoLabelOpacity }}">{{ autoLabel }}</span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px">
+        <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;opacity:.6">{{ counterLabel }}</span>
+        <div style="width:110px;height:1px;background:rgba(244,239,232,.15);position:relative;overflow:hidden">
+          <div style="{{ progressStyle }}"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Home / Statement" style="padding:160px 56px;display:flex;justify-content:flex-start">
+    <div style="max-width:920px">
+      <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:24px">OUR APPROACH</div>
+      <p style="text-align:left;font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,4.6vw,58px);line-height:1.18;letter-spacing:-.01em;margin:0 0 20px;color:#f0e9de">The same team that designs the space also builds it.</p>
+      <p style="text-align:left;font-family:'Oswald',sans-serif;font-size:clamp(16px,1.6vw,20px);line-height:1.6;margin:0;color:rgba(240,233,222,.55);max-width:600px">One point of contact from first sketch to final install — nothing lost in translation between concept and construction.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Home / What We Do" style="padding:0 56px 150px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:16px">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);margin:0">What We Do</h2>
+      <a href="./what-we-do.dc.html" style="font-family:'Oswald',sans-serif;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ltsuan-accent);padding-bottom:3px">See our full process →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+        <a href="{{ svc.href }}" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:#141414;border:1px solid rgba(244,239,232,.08);border-radius:2px;overflow:hidden">
+          <div style="position:relative;width:100%;height:220px">
+            <image-slot id="svc-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:220px"></image-slot>
+            <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+          </div>
+          <div style="padding:26px 24px 30px">
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:21px;margin:8px 0 10px">{{ svc.title }}</h3>
+            <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.6;color:rgba(244,239,232,.65);margin:0">{{ svc.desc }}</p>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Home / Featured Work" style="padding:0 56px 160px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:16px">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);margin:0">Selected Work</h2>
+      <a href="./portfolio.dc.html" style="font-family:'Oswald',sans-serif;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ltsuan-accent);padding-bottom:3px">View full portfolio →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
+      <sc-for list="{{ featuredProjects }}" as="p" hint-placeholder-count="3">
+        <a href="{{ p.href }}" style="text-decoration:none;color:inherit;display:block">
+          <div style="position:relative;height:400px;overflow:hidden;margin-bottom:18px">
+            <image-slot id="feat-{{ p.id }}" shape="rect" placeholder="{{ p.placeholder }}" style="width:100%;height:100%"></image-slot>
+            <img ref="{{ p.imgRef }}" alt="{{ p.title }}" style="{{ p.realImgStyle }}" loading="lazy" decoding="async" />
+          </div>
+          <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--ltsuan-accent);margin-bottom:6px">{{ p.category }} — {{ p.year }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:22px;margin:0">{{ p.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:14px;color:rgba(244,239,232,.55);margin:8px 0 0">{{ p.subtitle }}</p>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+<div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  slideData = [
+    { num: '01', category: 'EXHIBITION', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', href: './project-marine-illusion.dc.html', realImg: './marine-illusion-03-opt.jpg' },
+    { num: '02', category: 'EXHIBITION', title: 'You Are Part of the Art', subtitle: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition.dc.html', realImg: './ocean-mimic-hero-opt.jpg' },
+    { num: '03', category: 'EXHIBITION', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art.dc.html', realImg: './assets/cat-art-208801-opt.jpg' },
+  ];
+  services = [
+    { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html', placeholder: 'exhibition design photo', realImg: './air-force-academy-g1.jpg' },
+    { id: 'interior', title: 'Interior Design', desc: 'Commercial and institutional interiors designed around how people actually move and gather.', href: './portfolio.dc.html', placeholder: 'interior design photo', realImg: './uploads/green-energy-vision-pavilion-03-letsuan-design.jpg' },
+    { id: 'visual', title: 'Interactive Multimedia', desc: 'Digital installations, projection and interactive media that bring exhibitions to life.', href: './portfolio.dc.html', placeholder: 'visual design photo', realImg: './uploads/universe-led-kinetic-light-01-letsuan-design.jpg' },
+    { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to reality.', href: './portfolio.dc.html', placeholder: 'construction photo', realImg: './engineering-construction-g1.jpg' },
+  ];
+  featuredProjects = [
+    { id: 'marine-illusion', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', category: 'Exhibition', year: '2026', href: './project-marine-illusion.dc.html', realImg: './marine-illusion-03-opt.jpg' },
+    { id: 'ocean', title: 'Beyond Just an Exhibition—You Are Part of the Art!', subtitle: 'A Breathing Magical Universe of Light and Shadows', category: 'Exhibition', year: '2024', href: './project-beyond-just-an-exhibition.dc.html', objectPosition: 'center 30%', realImg: './ocean-mimic-hero-opt.jpg' },
+    { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame.dc.html', realImg: './uploads/International Debut - Eternal Notre-Dame Immersive Exhibition in Taiwan (Kaohsiung),Le Tsuan design & interior deco,展覽,麗荃室內裝修-2023082-1004.jpg' },
+  ];
+  state = { active: 0, auto: !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) };
+  componentDidMount() {
+    this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._maybeStartAuto();
+  }
+  componentWillUnmount() {
+    clearInterval(this._autoTimer);
+  }
+  _maybeStartAuto() {
+    clearInterval(this._autoTimer);
+    if (this.state.auto) {
+      this._autoTimer = setInterval(() => {
+        const order = [0, 1, 2];
+        this._orderPos = ((this._orderPos ?? 0) + 1) % order.length;
+        this.setState({ active: order[this._orderPos] });
+      }, 5000);
+    }
+  }
+  renderVals() {
+    const active = this.state.active;
+    const goTo = (e) => {
+      const idx = parseInt(e.currentTarget.getAttribute('data-idx'), 10);
+      this.setState({ active: idx });
+    };
+    const toggleAuto = () => this.setState(s => ({ auto: !s.auto }), () => this._maybeStartAuto());
+    const slides = this.slideData.map((s, i) => {
+      const offset = i === active ? 0 : i < active ? -100 : 100;
+      return {
+        title: s.title,
+        dotLabel: `Go to slide: ${s.title}`,
+        imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
+        realImgStyle: s.realImg
+          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
+          : 'display:none',
+        placeholder: s.placeholder,
+        layerStyle: `position:absolute;inset:0;overflow:hidden;z-index:${i === active ? 2 : 1};transition:transform 1.1s cubic-bezier(.76,0,.24,1);transform:translateY(${offset}%);backface-visibility:hidden;will-change:${i === active ? 'transform' : 'auto'}`,
+        imgStyle: this._reducedMotion
+          ? 'width:100%;height:100%;transform:none'
+          : `width:100%;height:100%;transition:transform 6s ease-out;transform:scale(${i === active ? 1.06 : 1})`,
+        dotBtnStyle: `width:32px;height:44px;border:none;padding:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center`,
+        dotStyle: `width:1px;height:${i === active ? 44 : 18}px;background:${i === active ? 'var(--ltsuan-text)' : 'rgba(244,239,232,.3)'};transition:all .3s ease`,
+      };
+    });
+    return {
+      slides,
+      goTo,
+      activeSlideData: this.slideData[active],
+      activeTitleNode: this.slideData[active].title,
+      services: this.services.map(svc => ({
+        ...svc,
+        imgRef: (el) => { if (el && svc.realImg) el.src = svc.realImg; },
+        realImgStyle: svc.realImg
+          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block'
+          : 'display:none',
+      })),
+      featuredProjects: this.featuredProjects.map(p => ({
+        ...p,
+        imgRef: (el) => { if (el && p.realImg) el.src = p.realImg; },
+        realImgStyle: p.realImg
+          ? `position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:${p.objectPosition || 'center'};display:block`
+          : 'display:none',
+      })),
+      toggleAuto,
+      autoPressed: this.state.auto ? 'true' : 'false',
+      autoToggleStyle: `position:relative;width:38px;height:18px;border-radius:999px;border:1px solid rgba(244,239,232,${this.state.auto ? '.4' : '.15'});background:${this.state.auto ? 'rgba(244,239,232,.1)' : 'transparent'};cursor:pointer;padding:0`,
+      autoKnobStyle: `position:absolute;top:1px;left:${this.state.auto ? '19px' : '1px'};width:14px;height:14px;background:var(--ltsuan-text);border-radius:50%;transition:left .25s ease`,
+      autoLabel: this.state.auto ? 'ON' : 'OFF',
+      autoLabelOpacity: this.state.auto ? 1 : .4,
+      counterLabel: `${String(active + 1).padStart(2, '0')} — ${String(this.slideData.length).padStart(2, '0')}`,
+      progressStyle: `position:absolute;left:0;top:0;height:100%;width:100%;background:var(--ltsuan-text);transform-origin:left;transition:transform .5s ease;transform:scaleX(${(active + 1) / this.slideData.length})`,
+    };
+  }
+}
+</script>
+</body>
+</html>

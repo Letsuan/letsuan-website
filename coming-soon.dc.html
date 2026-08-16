@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <title>中文網站即將推出 | Le Tsuan Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>:root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}</style>
+</helmet>
+<div style="background:var(--ltsuan-bg);min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="Nav" active="none" hint-size="100%,0px"></dc-import>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 32px">
+    <div>
+      <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:24px">中文版 · CHINESE SITE</div>
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,6vw,58px);margin:0 0 20px">即將推出<br />Coming Soon</h1>
+      <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.7;color:rgba(244,239,232,.7);max-width:480px;margin:0 auto 36px">我們正在準備中文版網站。想先了解我們的作品或聯絡我們，歡迎瀏覽英文版。</p>
+      <a href="./index.dc.html" style="display:inline-block;padding:16px 36px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:14px;text-decoration:none">Back to English Site</a>
+    </div>
+  </div>
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+<div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
+</x-dc>
+</body>
+</html>

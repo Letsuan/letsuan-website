@@ -1,0 +1,6 @@
+# Design-tool internal state (not part of the deployed site)
+.image-slots.state.json
+.thumbnail
+.impeccable/
+.claude/
+.superdesign

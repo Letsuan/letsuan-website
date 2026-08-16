@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <title>Portfolio | Le Tsuan Design</title>
+  <meta name="description" content="Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces." />
+  <link rel="canonical" href="https://www.letsuan.com/portfolio.dc.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio" />
+  <meta property="og:description" content="Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces." />
+  <meta property="og:url" content="https://www.letsuan.com/portfolio.dc.html" />
+  <meta property="og:image" content="https://www.letsuan.com/assets/logo.png" />
+  <meta property="og:site_name" content="Le Tsuan Design" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio" />
+  <meta name="twitter:description" content="Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces." />
+  <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="./image-slot.js"></script>
+  <style>:root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
+    body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
+    .ltsuan-pf-img{filter:brightness(0.55);transform:scale(1.1);transition:filter .6s ease,transform 1.2s ease}
+    .ltsuan-pf-text{opacity:.92;transition:opacity .35s ease}
+    .ltsuan-pf-card:hover .ltsuan-pf-img{filter:brightness(1.25);transform:scale(1)}
+    .ltsuan-pf-card:hover .ltsuan-pf-text{opacity:1}
+  </style>
+</helmet>
+<div style="background:var(--ltsuan-bg)">
+  <dc-import name="Nav" active="portfolio" hint-size="100%,0px"></dc-import>
+
+  <section data-screen-label="Portfolio / Hero" style="padding:170px 56px 63px;border-bottom:1px solid rgba(244,239,232,.08)">
+    <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.25em;opacity:.5;margin-bottom:18px">ARCHIVE</div>
+    <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);line-height:0.9;margin:0 0 20px;max-width:900px;letter-spacing:-.02em">Work That Turns Spaces Into Experiences.</h1>
+    <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.6;color:rgba(244,239,232,.6);max-width:600px;margin:0">A selection of exhibitions, interiors and visual environments delivered across Taiwan.</p>
+  </section>
+
+  <section data-screen-label="Portfolio / Filters" style="padding:25px 56px 0;display:flex;gap:10px;flex-wrap:wrap">
+    <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="4">
+      <button onClick="{{ setFilter }}" data-cat="{{ cat.id }}" style="{{ cat.style }}" aria-pressed="{{ cat.active }}">{{ cat.label }}</button>
+    </sc-for>
+  </section>
+
+  <section data-screen-label="Portfolio / Grid" style="padding:44px 0 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1px;background:rgba(244,239,232,.1)">
+    <sc-for list="{{ visibleProjects }}" as="p" hint-placeholder-count="6">
+      <a href="{{ p.href }}" class="ltsuan-pf-card" style="text-decoration:none;color:inherit;position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--ltsuan-bg)">
+        <image-slot id="pf-{{ p.id }}" shape="rect" placeholder="{{ p.placeholder }}" style="width:100%;height:100%"></image-slot>
+        <img ref="{{ p.imgRef }}" alt="{{ p.title }}" class="ltsuan-pf-img" style="{{ p.realImgStyle }}" loading="lazy" decoding="async" />
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,0));pointer-events:none"></div>
+        <div class="ltsuan-pf-text" style="position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none">
+          <div style="display:flex;justify-content:space-between;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;opacity:.75">
+            <span>{{ p.area }}</span>
+          </div>
+          <div>
+            <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:28px;line-height:1;letter-spacing:-.01em;margin:0">{{ p.title }}</h2>
+            <p style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.12em;opacity:.65;margin:8px 0 0;line-height:1.6">{{ p.subtitle }}</p>
+          </div>
+        </div>
+      </a>
+    </sc-for>
+    </div>
+  </section>
+
+  <div style="height:64px"></div>
+  <dc-import name="Footer" background="var(--ltsuan-bg)" hint-size="100%,320px"></dc-import>
+</div>
+<div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { filter: 'All Works' };
+  componentDidMount() {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat && this.categories.includes(cat)) this.setState({ filter: cat });
+  }
+  projects = [
+    { id: 'marine-illusion', num: '00', title: 'Seeing Is Believing', categories: ["Exhibition Design","Graphic Design","Interactive Multimedia","Interior Design","Visual Design"], subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', year: '2026', href: './project-marine-illusion.dc.html', realImg: './marine-illusion-03.jpg' },
+    { id: 'cat-art', num: '01', title: 'Cat Art Museum', categories: ["Exhibition Design","Installation Art","Graphic Design","Visual Design","Construction"], subtitle: 'A Super-Healing World by Shu Yamamoto', year: '2024', href: './project-cat-art.dc.html', realImg: './cat-art-g1.jpg' },
+    { id: 'led-kinetic', num: '02', title: 'Universe — LED Kinetic Light', categories: ["Exhibition Design","Installation Art","Interactive Multimedia","Construction"], subtitle: '500 Pieces of LED Kinetic Light', year: '2024', href: './project-led-kinetic.dc.html', realImg: './uploads/universe-led-kinetic-light-01-letsuan-design.jpg' },
+    { id: 'ocean', num: '03', title: 'Beyond Just an Exhibition', categories: ["Event","Exhibition Design","Installation Art"], subtitle: 'Step Into a Breathing Magical Universe of Light and Shadows', year: '2024', href: './project-beyond-just-an-exhibition.dc.html', realImg: './beyond-exhibition-g1.jpg' , area: '1,785.126 ㎡' },
+    { id: 'notre-dame', num: '04', title: 'Eternal Notre-Dame', categories: ["Exhibition Design","Installation Art","Interactive Multimedia","Construction"], subtitle: 'International Debut of the VR Immersive Exhibition in Taiwan', year: '2023', href: './project-notre-dame.dc.html', realImg: './notre-dame-vr-group.jpg' , area: '1,785.126 ㎡' },
+    { id: 'missing-scientist', num: '05', title: 'The Missing Scientist', categories: ["Curatorial Project","Exhibition Design","Graphic Design","Interactive Multimedia","Visual Design","Construction"], subtitle: 'Electromagnetic Horizon II', year: '2023', href: './project-missing-scientist.dc.html', realImg: './assets/missing-scientist-005.jpg' },
+    { id: 'changhua-flower', num: '06', title: 'Changhua Flower Festival 2023', categories: ["Event","Graphic Design","Construction"], subtitle: 'From Leftover Lot to Landmark — Ørsted at the 2023 Changhua Flower Festival', year: '2023', href: './project-changhua-flower.dc.html', realImg: './changhua-flower-g1.jpg' },
+    { id: 'yokai', num: '07', title: 'Experience the Yokai World', categories: ["Exhibition Design","Construction"], subtitle: '100 Stories of Yokai Exhibition', year: '2022–2023', href: './project-yokai-world.dc.html', realImg: './uploads/letsuan design-ゲゲゲの鬼太郎 妖怪100物語-0095.jpg' , area: '1,223.1423 ㎡' },
+    { id: 'offshore-wind', num: '08', title: 'Offshore Wind O&M Building', categories: ["Curatorial Project","Exhibition Design","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Learning Center Decorating Modifications', year: '2022', href: './project-offshore-wind.dc.html', realImg: './uploads/offshore-wind-om-learning-center-01-letsuan-design.jpg' },
+    { id: 'green-energy', num: '09', title: 'The Future Is Worth It', categories: ["Curatorial Project","Exhibition Design","Installation Art","Interactive Multimedia","Interior Design","Construction"], subtitle: 'TCCGE Green Energy Vision Pavilion', year: '2022', href: './project-green-energy.dc.html', realImg: './uploads/green-energy-vision-pavilion-09-letsuan-design.jpg' },
+    { id: 'orsted-energy', num: '10', title: 'Energy Taiwan 2022 — Ørsted', categories: ["Event","Exhibition Design","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Ørsted Exhibition Stand', year: '2022', href: './project-orsted-energy.dc.html', realImg: './uploads/energy-taiwan-orsted-2022-01-letsuan-design.jpg' },
+    { id: 'westernmost-point', num: '11', title: 'The Westernmost Point of Taiwan', categories: ["Installation Art","Construction"], subtitle: 'A Paper-Cutting Landmark', year: '2022', href: './project-westernmost-point.dc.html', realImg: './uploads/westernmost-point-taiwan-01-letsuan-design.jpg' },
+    { id: 'securities-office', num: '12', title: 'Securities Company Office', categories: ["Fitment Project","Interior Design","Construction"], subtitle: 'A Contemporary, High-End Workplace', year: '2022', href: './project-securities-office.dc.html', realImg: './uploads/securities-company-office-design-02-letsuan-design.jpg' },
+    { id: 'tccge-deck', num: '13', title: 'Green Energy Education Observation Platform', categories: ["Exhibition Design","Fitment Project","Interior Design","Visual Design"], subtitle: 'Changhua Coastal Industrial Park', year: '2021', href: './project-tccge-deck.dc.html', realImg: './uploads/tccge-observation-deck-zhangbin-01-letsuan-design.jpg' },
+    { id: 'world-semiconductors', num: '14', title: 'The World of Semiconductors', categories: ["Event","Fitment Project","Interior Design","Visual Design","Construction"], subtitle: 'TSMC × National Museum of Natural Science', year: '2021', href: './project-world-semiconductors.dc.html', realImg: './uploads/world-of-semiconductors-01-letsuan-design.jpg' },
+    { id: 'detention-pier2', num: '15', title: 'Detention — Reality Experience', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Songshan Cultural and Creative Park & The Pier2 Art Center', year: '2020–2021', href: './project-detention-pier2.dc.html', realImg: './detention-pier2-g1.jpg' },
+    { id: 'story-telling', num: '18', title: 'Story Telling by the Ancient People', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'by the Ancient People', year: '2020', href: './project-story-telling.dc.html', realImg: './uploads/ancient-people-storytelling-exhibition-01-letsuan-design.jpg' },
+    { id: 'amazing-homeland', num: '19', title: 'Amazing Homeland', categories: ["Exhibition Design","Graphic Design","Visual Design","Construction"], subtitle: 'Cheng-Hsiung Chen\'s Collection of Taiwanese Indigenous Artifacts', year: '2020', href: './project-amazing-homeland.dc.html', realImg: './amazing-homeland-g1.jpg' },
+    { id: 'detective-conan-taipei', num: '21', title: 'Detective Conan', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Science Investigation Exhibition — Taipei & Kaohsiung', year: '2019–2020', href: './project-detective-conan-taipei.dc.html', realImg: './uploads/detective-conan-taipei-01-letsuan-design.jpg' },
+    { id: 'air-force-academy', num: '22', title: 'Ninety Years of Sky', categories: ["Event","Exhibition Design","Fitment Project","Graphic Design","Visual Design","Construction"], subtitle: 'R.O.C. Air Force Academy 90th Founding Anniversary', year: '2019', href: './project-air-force-academy.dc.html', realImg: './air-force-academy-g1.jpg' },
+    { id: 'art-gallery-culture', num: '23', title: 'See the Ministry of Culture', categories: ["Exhibition Design","Interactive Multimedia","Graphic Design","Construction"], subtitle: 'One History. Six Departments. Countless Everyday Moments.', year: '2019', href: './project-art-gallery-culture.dc.html', realImg: './art-gallery-culture-g1.jpg' },
+    { id: 'mobile-museum', num: '24', title: 'Mobile Museum', categories: ["Event","Exhibition Design","Fitment Project","Graphic Design","Visual Design","Construction"], subtitle: 'A Cool Adventure of Reality and Imagination', year: '2019', href: './project-mobile-museum.dc.html', realImg: './uploads/mobile-museum-exhibition-01-letsuan-design.jpg' },
+    { id: 'la-fortuna-bordada', num: '25', title: 'La Fortuna Bordada', categories: ["Exhibition Design","Graphic Design","Interior Design","Logo Design","Visual Design"], subtitle: 'Taiwanese Embroidery in Madrid', year: '2017', href: './project-la-fortuna-bordada.dc.html', realImg: './uploads/la Fortuna Bordada--letsuan-design-01.jpg' },
+    { id: 'serialization-anniversary', num: '27', title: '20-Year Serialization — Conan Exhibit', categories: ["Exhibition Design","Fitment Project","Graphic Design","Installation Art","Visual Design"], subtitle: 'Congratulatory Exhibit "Conan Exhibit"', year: '2016', href: './project-serialization-anniversary.dc.html', realImg: './conan-anniv-g1.jpg' },
+    { id: 'tibetan-thangka', num: '28', title: 'Tibetan Thangka Art', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Logo Design","Typography","Construction"], subtitle: 'Sacred Buddhist Painting Exhibition', year: '2015', href: './project-tibetan-thangka.dc.html', realImg: './uploads/tibetan-thangka-art-exhibition-01-letsuan-design.jpg' },
+    { id: 'asian-art-biennial', num: '29', title: 'I Love Taiwan', categories: ["Construction"], subtitle: '2013 Asian Art Biennial', year: '2013', href: './project-asian-art-biennial.dc.html', realImg: './uploads/Asian%20Art%20Biennial%20Exhibition-01-Le%20Tsuan%20Design%20Deco.png' },
+    { id: 'nmns-teldap', num: '30', title: 'NMNS TELDAP', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'Digital Archives Exhibition', year: '2013', href: './project-nmns-teldap.dc.html', realImg: './uploads/nmns-teldap-digital-archives-01-letsuan-design.jpg' },
+    { id: 'hakka-culture', num: '31', title: 'Hakka Culture Development', categories: ["Exhibition Design","Fitment Project","Graphic Design","Construction"], subtitle: 'Development Center', year: '2012', href: './project-hakka-culture.dc.html', realImg: './hakka-culture-g1.jpg' },
+    { id: 'nmh-highlights', num: '34', title: 'Highlights of NMH Collection', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Collection Exhibition', year: '2015', href: './project-nmh-highlights.dc.html', realImg: './uploads/nmh-collection-highlights-06-letsuan-design.png' },
+    { id: 'wang-ye-donggang', num: '35', title: 'The Hunt of the Celestial Court', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'Wang Ye Worship in Donggang', year: '2012', href: './project-wang-ye-donggang.dc.html', realImg: './uploads/wang-ye-worship-donggang-01-letsuan-design.jpg' },
+    { id: 'just-only-environment', num: '37', title: 'Just Only Environment Protection', categories: ["Brochure","Graphic Design","Typography","Visual Design","Website"], subtitle: 'Environment Protection Brochure', year: '2010', href: './project-just-only-environment.dc.html', realImg: './just-only-environment-g1.jpg' },
+    { id: 'fullchamp-brochure', num: '36', title: 'Fullchamp Brochure Design', categories: ["Graphic Design","Typography","Visual Design"], subtitle: 'Brochure Design', year: '2010', href: './project-fullchamp-brochure.dc.html', realImg: './fullchamp-brochure-g1.jpg' },
+    { id: 'dragon-to-beast', num: '33', title: 'From Dragon to Beast', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'The Age of Giants and the Rise of Mammals', year: '2013', href: './project-dragon-to-beast.dc.html', realImg: './dragon-to-beast-g5.jpg' },
+    { id: 'engineering-construction', num: '32', title: 'Disaster Prevention Hall', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: '921 Earthquake Museum of Taiwan', year: '2012', href: './project-engineering-construction.dc.html', realImg: './engineering-construction-g1.jpg' },
+    { id: 'tokyo-ghost-hospital', num: '26', title: 'Tokyo Ghost Hospital', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'A Horror Experience by TOEI', year: '2015', href: './project-tokyo-ghost-hospital.dc.html', realImg: './uploads/tokyo-ghost-hospital-exhibition-08-letsuan-design.jpg' , area: '1,200+ ㎡' },
+    { id: 'jehol-biota', num: '20', title: 'Jehol Biota Special Exhibition', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'Special Exhibition', year: '2019–2020', href: './project-jehol-biota.dc.html', realImg: './uploads/dragon-beast-extinction-exhibition-01-letsuan-design.jpg' , area: '991.737 ㎡' },
+  ];
+  categories = ['All Works', 'Exhibition Design', 'Interior Design', 'Visual Design', 'Event'];
+  renderVals() {
+    const filter = this.state.filter;
+    const setFilter = (e) => this.setState({ filter: e.currentTarget.getAttribute('data-cat') });
+    const categories = this.categories.map(c => ({
+      id: c,
+      label: c.toUpperCase(),
+      style: `padding:9px 18px;border:1px solid ${filter === c ? 'var(--ltsuan-text)' : 'rgba(244,239,232,.2)'};background:${filter === c ? 'var(--ltsuan-text)' : 'transparent'};color:${filter === c ? 'var(--ltsuan-bg)' : 'rgba(244,239,232,.7)'};font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.12em;font-weight:400;cursor:pointer;min-height:44px;display:inline-flex;align-items:center`,
+      active: filter === c ? 'true' : 'false',
+    }));
+    const list = (filter === 'All Works' ? this.projects : this.projects.filter(p => (p.categories || [p.cat]).includes(filter)))
+      .map(p => ({
+        ...p,
+        area: p.area || '',
+        categoryText: (p.categories || [p.cat]).slice().sort((a, b) => (a === 'Construction') - (b === 'Construction')).join(', ').toUpperCase(),
+        imgRef: (el) => { if (el && p.realImg) el.src = p.realImg; },
+        realImgStyle: p.realImg
+          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover'
+          : 'display:none',
+      }));
+    return { categories, visibleProjects: list, setFilter };
+  }
+}
+</script>
+</body>
+</html>

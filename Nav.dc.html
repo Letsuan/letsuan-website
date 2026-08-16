@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: {{ navPadding }}; background: {{ navBg }}; backdrop-filter: blur(4px); transition: background .3s ease; font-family: 'Oswald',sans-serif; height: 45px">
+  <div style="display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;transform:scale({{ navContentScale }});transform-origin:center;transition:transform .3s ease">
+    <a href="./index.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none"><img src="./assets/logo-white.png" alt="Le Tsuan Design" style="height:{{ logoHeight }};width:auto;display:block" width="209" height="21"><span style="display:{{ taglineDisplay }};color:rgba(244,239,232,.5);font-size:14.5px;letter-spacing:.05em;font-weight:400">We Craft Moments, Not Just Spaces</span></a>
+    <div style="display:flex;align-items:center;gap:{{ navGap }}">
+      <div style="display:flex;gap:{{ langWrapGap }};padding:4px;background:rgba(255,255,255,.06);border-radius:999px">
+        <span style="padding:{{ langPillPadding }};border-radius:999px;background:#8CC81E;color:#0a0a0a;font-size:11px;font-weight:400;letter-spacing:.1em">EN</span>
+        <a href="./coming-soon.dc.html" style="padding:{{ langPillPadding }};border-radius:999px;color:rgba(255,255,255,.7);font-size:11px;font-weight:400;letter-spacing:.1em;text-decoration:none">中文</a>
+      </div>
+      <button ref="{{ menuBtnRef }}" style="display:flex;align-items:center;justify-content:center;gap:{{ menuBtnGap }};background:none;border:none;color:#f4efe8;cursor:pointer;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;font-weight:400;padding:{{ menuBtnPadding }};min-height:44px">
+        <span>{{ menuLabel }}</span>
+        <span style="display:flex;flex-direction:column;gap:4px;width:20px">
+          <span style="{{ bar1Style }}"></span>
+          <span style="{{ bar2Style }}"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div style="{{ overlayStyle }}">
+  <div style="height:100%;display:flex;flex-direction:column;justify-content:space-between;max-width:1400px;margin:0 auto;padding:{{ menuOverlayPadding }};overflow:auto">
+    <div style="display:grid;grid-template-columns:{{ menuGridCols }};gap:60px">
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:27px">
+        <sc-for list="{{ menuItems }}" as="item" hint-placeholder-count="6">
+          <a href="{{ item.href }}" style="{{ item.style }}" style-hover="color:#8CC81E;opacity:1">{{ item.label }}</a>
+        </sc-for>
+      </div>
+      <div style="padding-top:12px">
+        <div style="font-size:15px;letter-spacing:.2em;color:rgba(255,255,255,.4);margin-bottom:20px">FEATURED</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <sc-for list="{{ featuredItems }}" as="f" hint-placeholder-count="6">
+            <a href="{{ f.href }}" style="display:flex;gap:16px;text-decoration:none;color:#f4efe8;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:12px;transition:opacity .2s ease" style-hover="opacity:.6">
+              <span style="font-size:15px;opacity:.4;margin-top:4px">{{ f.num }}</span>
+              <span>
+                <span style="display:block;font-size:20px;font-weight:400;letter-spacing:.02em">{{ f.title }}</span>
+                <span style="display:block;font-size:15px;opacity:.5;margin-top:4px;letter-spacing:.1em">{{ f.meta }}</span>
+              </span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.4)">
+      <span>Le Tsuan Design Studio — Since 2005<br>We Craft Moments, Not Just Spaces</span>
+      <span>© 2026 LE TSUAN DESIGN</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;active&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, menuOpen: false, narrow: typeof window !== 'undefined' && window.innerWidth < 720 };
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 40;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll);
+    this._onResize = () => {
+      const n = window.innerWidth < 720;
+      if (n !== this.state.narrow) this.setState({ narrow: n });
+    };
+    this._onResize();
+    window.addEventListener('resize', this._onResize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+  }
+  renderVals() {
+    const open = this.state.menuOpen;
+    const narrow = this.state.narrow;
+    const toggleMenu = () => this.setState(s => ({ menuOpen: !s.menuOpen }));
+    const menuBtnRef = (el) => { if (el) el.onclick = toggleMenu; };
+    const menuItemFont = narrow ? 'clamp(26px,9vw,40px)' : 'clamp(28px,5.2vw,58px)';
+    return {
+      menuBtnRef,
+      logoHeight: narrow ? '20px' : '30px',
+      taglineDisplay: narrow ? 'none' : 'block',
+      navGap: narrow ? '6px' : '28px',
+      navBg: this.state.scrolled ? 'rgba(10,10,10,0.92)' : 'rgba(10,10,10,0.15)',
+      navPadding: narrow ? '14px 12px' : '16px 56px',
+      navContentScale: 1,
+      langWrapGap: narrow ? '4px' : '6px',
+      langPillPadding: narrow ? '6px 8px' : '6px 14px',
+      menuBtnGap: narrow ? '6px' : '10px',
+      menuBtnPadding: narrow ? '14px 2px' : '14px 4px',
+      menuOverlayPadding: narrow ? '100px 24px 40px' : '120px 56px 64px',
+      menuGridCols: narrow ? '1fr' : '1.3fr 1fr',
+      menuItemFont,
+      menuLabel: open ? 'CLOSE' : 'MENU',
+      bar1Style: `display:block;width:100%;height:1px;background:#f4efe8;transition:transform .3s ease;transform:${open ? 'rotate(45deg) translateY(2.5px)' : 'none'}`,
+      bar2Style: `display:block;width:100%;height:1px;background:#f4efe8;transition:transform .3s ease;transform:${open ? 'rotate(-45deg) translateY(-2.5px)' : 'none'}`,
+      overlayStyle: `position:fixed;inset:0;z-index:999;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);transition:opacity .5s ease;opacity:${open ? 1 : 0};pointer-events:${open ? 'auto' : 'none'}`,
+      menuItems: [
+        { key: 'portfolio', label: 'All Works', href: './portfolio.dc.html' },
+        { key: 'exhibition', label: 'Exhibition Design', href: './portfolio.dc.html?cat=Exhibition+Design' },
+        { key: 'interior', label: 'Interior Design', href: './portfolio.dc.html?cat=Interior+Design' },
+        { key: 'visual', label: 'Visual Design', href: './portfolio.dc.html?cat=Visual+Design' },
+        { key: 'about', label: 'About', href: './about.dc.html' },
+        { key: 'contact', label: 'Contact', href: './contact.dc.html' },
+      ].map((item) => {
+        const isActive = item.key === this.props.active;
+        const base = `text-decoration:none;font-family:'Oswald',sans-serif;font-weight:300;font-size:${menuItemFont};line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,opacity .2s ease`;
+        return {
+          ...item,
+          style: `${base};color:${isActive ? '#8CC81E' : '#f4efe8'};opacity:${isActive ? 1 : .9}`,
+          hoverStyle: `${base};color:#8CC81E;opacity:1`,
+        };
+      }),
+      featuredItems: [
+        { num: '01', title: 'Seeing is Believing?', meta: 'Masters of Marine Illusion: Mimicry & Camouflage', href: './project-marine-illusion.dc.html' },
+        { num: '02', title: 'Beyond Just an Exhibition—You Are Part of the Art!', meta: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition.dc.html' },
+        { num: '03', title: 'Eternal Notre-Dame', meta: 'International Debut of the VR Immersive Exhibition in Taiwan', href: './project-notre-dame.dc.html' },
+        { num: '04', title: 'Cat Art Museum', meta: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art.dc.html' },
+        { num: '05', title: 'The Missing Scientist', meta: 'Electromagnetic Horizon II', href: './project-missing-scientist.dc.html' },
+        { num: '06', title: 'Experience the Yokai World', meta: '100 Stories of Yokai Exhibition', href: './project-yokai-world.dc.html' },
+        { num: '07', title: 'Universe', meta: '500 Pieces of LED Kinetic Light', href: './project-led-kinetic.dc.html' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
