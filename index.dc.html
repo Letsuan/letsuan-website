@@ -88,7 +88,7 @@
       <div style="width:100%;max-width:1280px;margin:0 auto;padding:0 6vw">
         <div class="ltsuan-hero-text" style="position:relative">
           <div style="position:relative">
-            <h1 style="font-family:'Oswald',sans-serif;font-size:{{ titleFontSize }};line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
+            <h1 style="font-family:'Oswald',sans-serif;font-size:clamp(40px,8vw,120px);line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
               <span style="display:block;overflow:hidden;padding-bottom:.2em"><span ref="{{ titleLine1Ref }}" style="display:block;font-weight:300;{{ revealLine1 }}">We Craft</span></span>
               <span style="display:block;overflow:hidden;padding-bottom:.2em;margin-top:calc(-.05em + 5px)"><span ref="{{ titleLine2Ref }}" style="display:block;font-weight:300;{{ revealLine2 }}">Moments</span></span>
             </h1>
@@ -207,7 +207,7 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   slideData = [
-    { num: '01', title: 'We Craft Moments, Not Just Spaces', titleLine1: 'We Craft Moments,', titleLine2: 'Not Just Spaces', subtitleLine1: 'Not just spaces —', subtitleLine2: 'every project starts with a story we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', alt: 'Backlit marine camouflage exhibition displays in a dim gallery' },
+    { num: '01', title: 'We Craft Moments, Not Just Spaces', titleLine1: 'We Craft Moments,', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story we want people to feel.', subtitleLine2: '', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', alt: 'Backlit marine camouflage exhibition displays in a dim gallery' },
     { num: '02', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/construction-worker-hard-hat-safety-glasses-portrait-letsuan-design.jpg', alt: 'Construction worker in white hard hat and safety glasses, side profile portrait' },
     { num: '03', title: 'You Become Part of the Art', titleLine1: 'You Become', titleLine2: 'Part of the Art', subtitleLine1: 'We design environments people step into,', subtitleLine2: 'not just look at.', ctaLabel: 'SEE THE WORK', href: './portfolio.dc.html', realImg: './images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', alt: 'Cat Art Museum gallery with parody paintings and visitors' },
     { num: '04', title: 'Two Decades of Trust', titleLine1: 'Two Decades', titleLine2: 'of Trust', subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Eternal Notre-Dame VR exhibition hall with visitors' },
@@ -307,8 +307,6 @@ class Component extends DCLogic {
     const tv = this.state.textVisible;
     const num = this.slideData[active].num;
     const total = String(this.slideData.length).padStart(2, '0');
-    const longestLine = Math.max(this.slideData[active].titleLine1.length, this.slideData[active].titleLine2.length);
-    const titleFontSize = longestLine >= 17 ? 'clamp(30px,6vw,64px)' : 'clamp(40px,8vw,88px)';
     return {
       slides,
       goTo,
@@ -316,7 +314,6 @@ class Component extends DCLogic {
       heroMouseMove,
       heroMouseLeave,
       nextSlide,
-      titleFontSize,
       revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s;transform:translateY(${tv ? 0 : 110}%)`,
       revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s;transform:translateY(${tv ? 0 : 110}%)`,
       revealTagline: `transition:transform .7s ease .75s, opacity .6s ease .75s;transform:translateY(${tv ? 0 : 16}px);opacity:${tv ? 1 : 0}`,
