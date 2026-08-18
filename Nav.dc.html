@@ -9,7 +9,7 @@
 <x-dc>
 <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: {{ navPadding }}; background: {{ navBg }}; backdrop-filter: blur(4px); transition: background .3s ease; font-family: 'Oswald',sans-serif; height: 45px">
   <div style="display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;transform:scale({{ navContentScale }});transform-origin:center;transition:transform .3s ease">
-    <a href="./index.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none"><img src="./assets/logo-white.png" alt="Le Tsuan Design" style="height:{{ logoHeight }};width:auto;display:block" width="209" height="21"><span style="display:{{ taglineDisplay }};color:rgba(244,239,232,.5);font-size:14.5px;letter-spacing:.05em;font-weight:400">We Craft Moments, Not Just Spaces</span></a>
+    <a href="./index.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none"><img src="./assets/logo-white.png" alt="Le Tsuan Design" style="height:{{ logoHeight }};width:auto;display:block;margin-left:23px" width="209" height="21"></a>
     <div style="display:flex;align-items:center;gap:{{ navGap }}">
       <div style="display:flex;gap:{{ langWrapGap }};padding:4px;background:rgba(255,255,255,.06);border-radius:999px">
         <span style="padding:{{ langPillPadding }};border-radius:999px;background:#8CC81E;color:#0a0a0a;font-size:11px;font-weight:400;letter-spacing:.1em">EN</span>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;letter-spacing:.15em;color:rgba(255,255,255,.4)">
-      <span>Le Tsuan Design Studio — Since 2005<br>We Craft Moments, Not Just Spaces</span>
+      <span>Le Tsuan Design Studio — Since 2005</span>
       <span>© 2026 LE TSUAN DESIGN</span>
     </div>
   </div>
@@ -83,8 +83,7 @@ class Component extends DCLogic {
     const menuItemFont = narrow ? 'clamp(26px,9vw,40px)' : 'clamp(28px,5.2vw,58px)';
     return {
       menuBtnRef,
-      logoHeight: narrow ? '20px' : '30px',
-      taglineDisplay: narrow ? 'none' : 'block',
+      logoHeight: narrow ? '17px' : '25.5px',
       navGap: narrow ? '6px' : '28px',
       navBg: this.state.scrolled ? 'rgba(10,10,10,0.92)' : 'rgba(10,10,10,0.15)',
       navPadding: narrow ? '14px 12px' : '16px 56px',

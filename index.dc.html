@@ -33,9 +33,22 @@
     a{color:var(--ltsuan-accent)}
     a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-hero-text{max-width:44%}
+    .ltsuan-hero-rail{display:flex;flex-direction:column;align-items:center;gap:24px}
+    .ltsuan-hero-scrollcue{display:flex;align-items:center;gap:10px}
+    @keyframes ltsuanPing{0%{transform:scale(1);opacity:.5}75%,100%{transform:scale(1.8);opacity:0}}
+    @keyframes ltsuanBeam{0%{transform:translateY(-100%)}100%{transform:translateY(500%)}}
+    @keyframes ltsuanGlintSweep{0%,20%{transform:translateX(0) scale(1);opacity:.9}70%{transform:translateX(40px) scale(.3);opacity:.1}100%{transform:translateX(0) scale(1);opacity:.9}}
+    @keyframes ltsuanBgLightSweep{0%{transform:translateX(0);filter:brightness(1)}50%{transform:translateX(-25px);filter:brightness(1.18)}100%{transform:translateX(0);filter:brightness(1)}}
+    .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
+    .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
+    .ltsuan-glint-sweep{animation:ltsuanGlintSweep 3.5s ease-in-out infinite}
+    .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
     @media (max-width:900px){
       .ltsuan-hero-deco{display:none}
       .ltsuan-hero-text{max-width:92%}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .ltsuan-ping,.ltsuan-beam,.ltsuan-glint-sweep,.ltsuan-bg-light-sweep{animation:none}
     }
   </style>
 </helmet>
@@ -47,69 +60,87 @@
       <div style="{{ slide.layerStyle }}">
         <div style="{{ slide.imgStyle }}; position:relative">
           <image-slot id="hero-slide-{{ $index }}" shape="rect" placeholder="{{ slide.placeholder }}" style="width:100%;height:100%"></image-slot>
-          <picture>
-            <source ref="{{ slide.avifRef }}" type="image/avif" />
-            <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" style="{{ slide.realImgStyle }}" decoding="async" />
-          </picture>
+          <div style="{{ slide.parallaxStyle }}">
+            <picture class="{{ slide.bgSweepClass }}" style="display:block;width:100%;height:100%">
+              <source ref="{{ slide.avifRef }}" type="image/avif" />
+              <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" style="{{ slide.realImgStyle }}" decoding="async" />
+            </picture>
+          </div>
+          <div style="{{ slide.glintStyle }}">
+            <div class="{{ slide.glintSweepClass }}" style="{{ slide.glintInnerStyle }}"></div>
+          </div>
         </div>
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.28);transition:background .5s ease" style-hover="background:rgba(0,0,0,.05)"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 55%,rgba(0,0,0,.1) 100%)"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.45) 0%,transparent 55%,transparent 100%)"></div>
+        <div style="position:absolute;inset:0;background:rgba(10,10,10,.15)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.2) 100%)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,transparent 50%,rgba(0,0,0,.3) 100%)"></div>
+        <div style="position:absolute;inset:0;opacity:.6;background:radial-gradient(120% 90% at 50% 50%,transparent 60%,rgba(0,0,0,.7) 100%)"></div>
       </div>
     </sc-for>
 
-    <div class="ltsuan-hero-deco" style="position:absolute;top:6vh;left:6vw;width:22px;height:22px;border-top:1px solid rgba(244,239,232,.28);border-left:1px solid rgba(244,239,232,.28);z-index:10;pointer-events:none"></div>
-    <div class="ltsuan-hero-deco" style="position:absolute;top:6vh;right:6vw;width:22px;height:22px;border-top:1px solid rgba(244,239,232,.28);border-right:1px solid rgba(244,239,232,.28);z-index:10;pointer-events:none"></div>
-    <div class="ltsuan-hero-deco" style="position:absolute;bottom:84px;left:6vw;width:22px;height:22px;border-bottom:1px solid rgba(244,239,232,.28);border-left:1px solid rgba(244,239,232,.28);z-index:10;pointer-events:none"></div>
-    <div class="ltsuan-hero-deco" style="position:absolute;bottom:84px;right:6vw;width:22px;height:22px;border-bottom:1px solid rgba(244,239,232,.28);border-right:1px solid rgba(244,239,232,.28);z-index:10;pointer-events:none"></div>
-
-    <div class="ltsuan-hero-deco" style="position:absolute;left:46%;top:0;bottom:64px;width:1px;background:rgba(244,239,232,.16);z-index:10;pointer-events:none">
-      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%;border:1px solid var(--ltsuan-accent);background:var(--ltsuan-bg)"></div>
+    <div class="ltsuan-hero-deco" style="position:absolute;left:6vw;right:6vw;top:6vh;bottom:84px;border:1px solid rgba(244,239,232,.08);z-index:9;pointer-events:none">
+      <div style="position:absolute;top:-1px;left:-1px;width:32px;height:32px;border-top:1px solid rgba(244,239,232,.2);border-left:1px solid rgba(244,239,232,.2)"></div>
+      <div style="position:absolute;top:-1px;right:-1px;width:32px;height:32px;border-top:1px solid rgba(244,239,232,.2);border-right:1px solid rgba(244,239,232,.2)"></div>
+      <div style="position:absolute;bottom:-1px;left:-1px;width:32px;height:32px;border-bottom:1px solid rgba(244,239,232,.2);border-left:1px solid rgba(244,239,232,.2)"></div>
+      <div style="position:absolute;bottom:-1px;right:-1px;width:32px;height:32px;border-bottom:1px solid rgba(244,239,232,.2);border-right:1px solid rgba(244,239,232,.2)"></div>
     </div>
 
-    <div class="ltsuan-hero-deco" ref="{{ bigNumRef }}" style="position:absolute;bottom:-2vw;right:2vw;font-family:'Oswald',sans-serif;font-weight:200;font-size:clamp(140px,22vw,300px);line-height:1;color:rgba(244,239,232,.05);z-index:4;pointer-events:none;user-select:none">01</div>
-
-    <div style="position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;flex-direction:column;justify-content:center;padding:0 56px">
-      <div class="ltsuan-hero-text" style="position:relative">
-        <div class="ltsuan-hero-deco" style="{{ watermarkStyle }}">造境入心</div>
-        <div style="overflow:hidden;margin-bottom:16px">
-          <div ref="{{ eyebrowRef }}" style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.25em;opacity:.65;{{ revealEyebrow }}">CHAPTER 01 — CRAFT — 01 / 03</div>
-        </div>
-        <h1 style="font-family:'Oswald',sans-serif;font-size:clamp(40px,8vw,120px);line-height:.9;letter-spacing:-.03em;margin:0;pointer-events:auto">
-          <span style="display:block;overflow:hidden"><span ref="{{ titleLine1Ref }}" style="display:block;font-weight:300;{{ revealLine1 }}">We Craft</span></span>
-          <span style="display:block;overflow:hidden;margin-top:-.05em"><span ref="{{ titleLine2Ref }}" style="display:block;font-weight:500;{{ revealLine2 }}">Moments</span></span>
-        </h1>
-        <div style="margin-top:28px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;{{ revealTagline }}">
-          <p ref="{{ subtitleRef }}" style="font-family:'Oswald',sans-serif;font-size:22px;letter-spacing:.02em;opacity:.8;line-height:1.2;max-width:34ch;margin:0">Not just spaces — every project starts with a story we want people to feel.</p>
-          <a ref="{{ ctaRef }}" href="./about.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(244,239,232,.3);padding:0 26px;height:42px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;color:var(--ltsuan-text);text-decoration:none;transition:color .2s ease" style-hover="color:var(--ltsuan-accent)"><span ref="{{ ctaLabelRef }}">OUR STORY</span> <span>→</span></a>
+    <div style="position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;align-items:center">
+      <div style="width:100%;max-width:1280px;margin:0 auto;padding:0 6vw">
+        <div class="ltsuan-hero-text" style="position:relative">
+          <div style="position:relative">
+            <h1 style="font-family:'Oswald',sans-serif;font-size:{{ titleFontSize }};line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
+              <span style="display:block;overflow:hidden;padding-bottom:.2em"><span ref="{{ titleLine1Ref }}" style="display:block;font-weight:300;{{ revealLine1 }}">We Craft</span></span>
+              <span style="display:block;overflow:hidden;padding-bottom:.2em;margin-top:calc(-.05em + 5px)"><span ref="{{ titleLine2Ref }}" style="display:block;font-weight:300;{{ revealLine2 }}">Moments</span></span>
+            </h1>
+          </div>
+          <div style="margin-top:15px;{{ revealTagline }}">
+            <div style="margin-bottom:22px">
+              <p style="font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:.02em;color:rgba(244,239,232,.75);margin:0;max-width:36ch;line-height:1.5"><span ref="{{ subtitleLine1Ref }}">Not just spaces —</span><span style="{{ subtitleLine2WrapStyle }}"><br><span ref="{{ subtitleLine2Ref }}"></span></span></p>
+            </div>
+            <div style="display:flex;align-items:center;gap:20px">
+              <a ref="{{ ctaRef }}" href="./about.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 28px;border-radius:999px;border:1px solid rgba(244,239,232,.25);background:rgba(244,239,232,.06);backdrop-filter:blur(6px);font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ltsuan-text);text-decoration:none;transition:all .35s ease" style-hover="background:var(--ltsuan-text);border-color:var(--ltsuan-text);color:#0A0A0A"><span ref="{{ ctaLabelRef }}">OUR STORY</span><span style="width:20px;height:1px;background:currentColor;opacity:.6"></span></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div style="position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:10">
-      <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:26px">
-        <div style="position:absolute;top:16px;bottom:16px;left:50%;width:1px;background:rgba(244,239,232,.15);transform:translateX(-50%)"></div>
+    <div class="ltsuan-hero-deco ltsuan-hero-rail" style="position:absolute;right:4vw;top:50%;transform:translateY(-50%);z-index:10">
+      <div style="position:relative;width:1px;height:18vh;background:rgba(244,239,232,.1);overflow:hidden">
+        <div style="{{ railProgressStyle }}"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
         <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
-          <button onClick="{{ goTo }}" data-idx="{{ $index }}" style="{{ slide.dotBtnStyle }}" aria-label="{{ slide.dotLabel }}">{{ slide.numLabel }}</button>
+          <button onClick="{{ goTo }}" data-idx="{{ $index }}" style="position:relative;background:none;border:none;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;pointer-events:auto" aria-label="{{ slide.dotLabel }}">
+            <div style="{{ slide.dotBtnStyle }}">{{ slide.numLabel }}</div>
+            <div class="{{ slide.pingClass }}" style="{{ slide.pingStyle }}"></div>
+          </button>
         </sc-for>
       </div>
+      <div style="width:1px;height:6vh;background:linear-gradient(rgba(244,239,232,.1),transparent)"></div>
+      <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.25em;opacity:.2">{{ counterLabel }}</div>
     </div>
 
-    <div style="position:absolute;left:0;right:0;bottom:0;z-index:10;padding:0 56px;height:64px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(244,239,232,.1)">
-      <div style="display:flex;align-items:center;gap:28px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;opacity:.5">AUTO</span>
+    <div style="position:absolute;left:0;right:0;bottom:0;z-index:10;padding:0 6vw;padding-bottom:28px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none">
+      <div style="display:flex;align-items:center;gap:24px;pointer-events:auto">
+        <div style="display:flex;align-items:center;gap:8px">
           <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoKnobStyle }}"></span></button>
-          <span style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.15em;opacity:{{ autoLabelOpacity }}">{{ autoLabel }}</span>
+          <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;opacity:.4">AUTO {{ autoLabel }}</span>
+        </div>
+        <div class="ltsuan-hero-deco ltsuan-hero-scrollcue">
+          <div style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <div style="position:relative;width:1px;height:16px;overflow:hidden;background:rgba(244,239,232,.15)">
+              <div class="ltsuan-beam" style="position:absolute;top:0;left:0;width:100%;height:8px;background:var(--ltsuan-text)"></div>
+            </div>
+          </div>
+          <div>
+            <p style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.2em;opacity:.5;margin:0">SCROLL TO EXPLORE</p>
+          </div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:20px">
-        <button onClick="{{ prevSlide }}" aria-label="Previous chapter" style="width:28px;height:28px;border-radius:50%;border:1px solid rgba(244,239,232,.25);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;transition:border-color .2s ease" style-hover="border-color:var(--ltsuan-accent)">↑</button>
-        <button onClick="{{ nextSlide }}" aria-label="Next chapter" style="width:28px;height:28px;border-radius:50%;border:1px solid rgba(244,239,232,.25);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;transition:border-color .2s ease" style-hover="border-color:var(--ltsuan-accent)">↓</button>
-        <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;opacity:.6">{{ counterLabel }}</span>
-        <div style="width:110px;height:1px;background:rgba(244,239,232,.15);position:relative;overflow:hidden">
-          <div style="{{ progressStyle }}"></div>
-        </div>
+      <div style="display:flex;align-items:center;gap:12px;pointer-events:auto">
+        <button onClick="{{ prevSlide }}" aria-label="Previous chapter" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .3s ease" style-hover="background:var(--ltsuan-text);color:#0A0A0A">↑</button>
+        <button onClick="{{ nextSlide }}" aria-label="Next chapter" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .3s ease" style-hover="background:var(--ltsuan-text);color:#0A0A0A">↓</button>
       </div>
     </div>
   </section>
@@ -176,9 +207,10 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   slideData = [
-    { num: '01', category: 'CRAFT', title: 'We Craft Moments', titleLine1: 'We Craft', titleLine2: 'Moments', subtitle: 'Not just spaces — every project starts with a story we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', alt: 'Backlit marine camouflage exhibition displays in a dim gallery' },
-    { num: '02', category: 'PROCESS', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitle: 'The same team that designs the space also builds it — nothing lost in translation.', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/ocean-mimic-hero-opt-letsuan-design.jpg', alt: 'Immersive ocean-themed installation with glowing projected light and shadow' },
-    { num: '03', category: 'EXPERIENCE', title: 'You Become Part of the Art', titleLine1: 'You Become', titleLine2: 'Part of the Art', subtitle: 'We design environments people step into, not just look at.', ctaLabel: 'SEE THE WORK', href: './portfolio.dc.html', realImg: './images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', alt: 'Cat Art Museum gallery with parody paintings and visitors' },
+    { num: '01', title: 'We Craft Moments, Not Just Spaces', titleLine1: 'We Craft Moments,', titleLine2: 'Not Just Spaces', subtitleLine1: 'Not just spaces —', subtitleLine2: 'every project starts with a story we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', alt: 'Backlit marine camouflage exhibition displays in a dim gallery' },
+    { num: '02', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/construction-worker-hard-hat-safety-glasses-portrait-letsuan-design.jpg', alt: 'Construction worker in white hard hat and safety glasses, side profile portrait' },
+    { num: '03', title: 'You Become Part of the Art', titleLine1: 'You Become', titleLine2: 'Part of the Art', subtitleLine1: 'We design environments people step into,', subtitleLine2: 'not just look at.', ctaLabel: 'SEE THE WORK', href: './portfolio.dc.html', realImg: './images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', alt: 'Cat Art Museum gallery with parody paintings and visitors' },
+    { num: '04', title: 'Two Decades of Trust', titleLine1: 'Two Decades', titleLine2: 'of Trust', subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Eternal Notre-Dame VR exhibition hall with visitors' },
   ];
   services = [
     { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
@@ -205,9 +237,8 @@ class Component extends DCLogic {
     clearInterval(this._autoTimer);
     if (this.state.auto) {
       this._autoTimer = setInterval(() => {
-        const order = [0, 1, 2];
-        this._orderPos = ((this._orderPos ?? 0) + 1) % order.length;
-        this.changeSlide(order[this._orderPos]);
+        this._orderPos = ((this._orderPos ?? 0) + 1) % this.slideData.length;
+        this.changeSlide(this._orderPos);
       }, 5000);
     }
   }
@@ -240,6 +271,7 @@ class Component extends DCLogic {
       });
     };
     const heroMouseLeave = () => this.setState({ parallax: { x: 0, y: 0 } });
+    const px = this.state.parallax || { x: 0, y: 0 };
     const toggleAuto = () => this.setState(s => ({ auto: !s.auto }), () => this._maybeStartAuto());
     const slides = this.slideData.map((s, i) => {
       const offset = i === active ? 0 : i < active ? -100 : 100;
@@ -253,35 +285,49 @@ class Component extends DCLogic {
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
           : 'display:none',
         placeholder: s.placeholder,
+        parallaxStyle: (i === 1 && !this._reducedMotion)
+          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -16).toFixed(1)}px, ${(px.y * -12).toFixed(1)}px) scale(1.05)`
+          : 'position:absolute;inset:0',
+        glintStyle: (i === 1 && !this._reducedMotion)
+          ? `position:absolute;left:calc(56% + 10px);top:39%;width:70px;height:70px;margin:-25px 0 0 -35px;pointer-events:none;transition:transform .2s ease-out;transform:translateY(${(px.y * 18).toFixed(1)}px)`
+          : 'display:none',
+        glintInnerStyle: 'width:100%;height:100%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.9) 0%,rgba(255,255,255,.35) 45%,transparent 70%);filter:blur(6px);mix-blend-mode:screen',
+        glintSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-glint-sweep' : '',
+        bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
         layerStyle: `position:absolute;inset:0;overflow:hidden;z-index:${i === active ? 2 : 1};transition:transform 1.1s cubic-bezier(.76,0,.24,1);transform:translateY(${offset}%);backface-visibility:hidden;will-change:${i === active ? 'transform' : 'auto'}`,
         imgStyle: this._reducedMotion
           ? 'width:100%;height:100%;transform:none'
-          : `width:100%;height:100%;transition:transform 6s ease-out;transform:scale(${i === active ? 1.06 : 1})`,
+          : `width:100%;height:100%;transition:transform 1.8s cubic-bezier(.16,1,.3,1);transform:scale(${i === active ? 1 : 1.15})`,
         numLabel: String(i + 1).padStart(2, '0'),
-        dotBtnStyle: `position:relative;z-index:1;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.03em;transition:all .3s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:rgba(140,200,30,.12);color:var(--ltsuan-accent)' : 'border:1px solid rgba(244,239,232,.2);background:var(--ltsuan-bg);color:rgba(244,239,232,.45)'}`,
+        dotBtnStyle: `position:relative;z-index:1;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.03em;transition:all .4s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:var(--ltsuan-accent);color:#0A0A0A;transform:scale(1.1)' : 'border:1px solid rgba(244,239,232,.15);background:transparent;color:rgba(244,239,232,.3)'}`,
+        pingClass: i === active ? 'ltsuan-ping' : '',
+        pingStyle: `position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(140,200,30,.35);pointer-events:none;opacity:${i === active ? 1 : 0}`,
       };
     });
-    const px = this.state.parallax || { x: 0, y: 0 };
     const tv = this.state.textVisible;
+    const num = this.slideData[active].num;
+    const total = String(this.slideData.length).padStart(2, '0');
+    const longestLine = Math.max(this.slideData[active].titleLine1.length, this.slideData[active].titleLine2.length);
+    const titleFontSize = longestLine >= 17 ? 'clamp(30px,6vw,64px)' : 'clamp(40px,8vw,88px)';
     return {
       slides,
       goTo,
       prevSlide,
-      nextSlide,
       heroMouseMove,
       heroMouseLeave,
-      watermarkStyle: `position:absolute;top:-6px;right:-24px;font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,7vw,90px);line-height:1;letter-spacing:-.02em;color:rgba(244,239,232,.09);pointer-events:none;white-space:nowrap;transition:transform .3s ease-out,opacity .6s ease .32s;opacity:${tv ? 1 : 0};transform:translate(${(px.x * 10).toFixed(1)}px, ${(px.y * 10 - (tv ? 0 : 8)).toFixed(1)}px)`,
-      revealEyebrow: `transition:transform .7s cubic-bezier(.16,1,.3,1) 0ms, opacity .5s ease 0ms;transform:translateY(${tv ? 0 : 130}%);opacity:${tv ? 1 : 0}`,
-      revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) 120ms;transform:translateY(${tv ? 0 : 110}%)`,
-      revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) 200ms;transform:translateY(${tv ? 0 : 110}%)`,
-      revealTagline: `transition:transform .7s ease .3s, opacity .6s ease .3s;transform:translateY(${tv ? 0 : 16}px);opacity:${tv ? 1 : 0}`,
+      nextSlide,
+      titleFontSize,
+      revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s;transform:translateY(${tv ? 0 : 110}%)`,
+      revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s;transform:translateY(${tv ? 0 : 110}%)`,
+      revealTagline: `transition:transform .7s ease .75s, opacity .6s ease .75s;transform:translateY(${tv ? 0 : 16}px);opacity:${tv ? 1 : 0}`,
+      railProgressStyle: `position:absolute;top:0;left:0;width:100%;height:100%;background:var(--ltsuan-accent);transform-origin:top;transition:transform .7s cubic-bezier(.85,0,.15,1);transform:scaleY(${((active + 1) / this.slideData.length).toFixed(3)})`,
       activeSlideData: this.slideData[active],
       activeTitleNode: this.slideData[active].title,
-      bigNumRef: (el) => { if (el) el.textContent = this.slideData[active].num; },
-      eyebrowRef: (el) => { if (el) el.textContent = `CHAPTER ${this.slideData[active].num} — ${this.slideData[active].category} — ${this.slideData[active].num} / ${String(this.slideData.length).padStart(2, '0')}`; },
       titleLine1Ref: (el) => { if (el) el.textContent = this.slideData[active].titleLine1; },
       titleLine2Ref: (el) => { if (el) el.textContent = this.slideData[active].titleLine2; },
-      subtitleRef: (el) => { if (el) el.textContent = this.slideData[active].subtitle; },
+      subtitleLine1Ref: (el) => { if (el) el.textContent = this.slideData[active].subtitleLine1; },
+      subtitleLine2Ref: (el) => { if (el) el.textContent = this.slideData[active].subtitleLine2; },
+      subtitleLine2WrapStyle: this.slideData[active].subtitleLine2 ? '' : 'display:none',
       ctaRef: (el) => { if (el) el.href = this.slideData[active].href; },
       ctaLabelRef: (el) => { if (el) el.textContent = this.slideData[active].ctaLabel; },
       services: this.services.map(svc => ({
@@ -305,9 +351,7 @@ class Component extends DCLogic {
       autoToggleStyle: `position:relative;width:38px;height:18px;border-radius:999px;border:1px solid rgba(244,239,232,${this.state.auto ? '.4' : '.15'});background:${this.state.auto ? 'rgba(244,239,232,.1)' : 'transparent'};cursor:pointer;padding:0`,
       autoKnobStyle: `position:absolute;top:1px;left:${this.state.auto ? '19px' : '1px'};width:14px;height:14px;background:var(--ltsuan-text);border-radius:50%;transition:left .25s ease`,
       autoLabel: this.state.auto ? 'ON' : 'OFF',
-      autoLabelOpacity: this.state.auto ? 1 : .4,
-      counterLabel: `${String(active + 1).padStart(2, '0')} — ${String(this.slideData.length).padStart(2, '0')}`,
-      progressStyle: `position:absolute;left:0;top:0;height:100%;width:100%;background:var(--ltsuan-text);transform-origin:left;transition:transform .5s ease;transform:scaleX(${(active + 1) / this.slideData.length})`,
+      counterLabel: `SCROLL — ${num} / ${total}`,
     };
   }
 }
