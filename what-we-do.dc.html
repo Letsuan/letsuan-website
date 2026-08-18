@@ -68,7 +68,10 @@
     <section style="{{ svc.sectionStyle }}">
       <div style="flex:1;min-width:320px;position:relative;height:460px">
         <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:460px"></image-slot>
-        <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+        <picture>
+          <source ref="{{ svc.avifRef }}" type="image/avif" />
+          <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+        </picture>
       </div>
       <div style="flex:1;min-width:320px">
         <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.1em;color:var(--ltsuan-accent);margin-bottom:16px">{{ svc.num }}</div>
@@ -98,15 +101,16 @@
 class Component extends DCLogic {
   renderVals() {
     const items = [
-      { id: 'exhibition', num: '01 — EXHIBITION DESIGN', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', rev: false, realImg: './air-force-academy-g1.jpg' },
-      { id: 'interior', num: '02 — INTERIOR DESIGN', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', rev: true, realImg: './uploads/green-energy-vision-pavilion-03-letsuan-design.jpg' },
-      { id: 'visual', num: '03 — VISUAL DESIGN', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', rev: false, realImg: './uploads/universe-led-kinetic-light-01-letsuan-design.jpg' },
-      { id: 'construction', num: '04 — CONSTRUCTION', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', rev: true, realImg: './engineering-construction-g1.jpg' },
+      { id: 'exhibition', num: '01 — EXHIBITION DESIGN', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', rev: false, realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
+      { id: 'interior', num: '02 — INTERIOR DESIGN', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', rev: true, realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
+      { id: 'visual', num: '03 — VISUAL DESIGN', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', rev: false, realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
+      { id: 'construction', num: '04 — CONSTRUCTION', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', rev: true, realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
     ];
     const services = items.map((s, i) => ({
       ...s,
       sectionStyle: `padding:100px 56px;display:flex;gap:64px;flex-wrap:wrap;align-items:center;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid rgba(244,239,232,.08)' : ''}`,
       imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
+      avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
       realImgStyle: s.realImg
         ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block'
         : 'display:none',

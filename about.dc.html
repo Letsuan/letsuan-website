@@ -27,86 +27,160 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
-  <style>:root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}</style>
+  <style>
+    :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
+    body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
+    a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
+    .ltsuan-about-rail{display:flex}
+    .ltsuan-about-main{padding-left:120px}
+    @media (max-width:900px){
+      .ltsuan-about-rail{display:none}
+      .ltsuan-about-main{padding-left:0}
+    }
+  </style>
 </helmet>
-<div style="background:var(--ltsuan-bg)">
+<div style="background:var(--ltsuan-bg);position:relative">
   <dc-import name="Nav" active="about" hint-size="100%,0px"></dc-import>
 
-  <section data-screen-label="About / Hero" style="padding:150px 0 0;border-bottom:1px solid rgba(244,239,232,.08);overflow:hidden">
-    <div style="display:flex;flex-wrap:wrap-reverse;align-items:stretch;min-height:600px">
-      <div style="flex:1.15;min-width:340px;padding:70px 56px 64px;display:flex;flex-direction:column;justify-content:space-between">
-        <div>
-          <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:22px">ABOUT US</div>
-          <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0;max-width:14ch">Space and story, built by the same hands.</h1>
+  <div class="ltsuan-about-rail" style="position:fixed;left:40px;top:50%;transform:translateY(-50%);z-index:40;flex-direction:column;gap:2px">
+    <sc-for list="{{ railItems }}" as="item" hint-placeholder-count="5">
+      <button onClick="{{ item.onClick }}" aria-label="{{ item.ariaLabel }}" style="display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;padding:10px 4px;text-align:left;min-height:32px">
+        <span style="{{ item.tickStyle }}"></span>
+        <span style="{{ item.labelStyle }}">{{ item.num }}&nbsp;&nbsp;{{ item.label }}</span>
+      </button>
+    </sc-for>
+  </div>
+
+  <div class="ltsuan-about-main">
+    <section ref="{{ zone0Ref }}" data-screen-label="About / Origin" style="padding:150px 0 0;border-bottom:1px solid rgba(244,239,232,.08);overflow:hidden">
+      <div style="display:flex;flex-wrap:wrap-reverse;align-items:stretch;min-height:600px">
+        <div style="flex:1.15;min-width:340px;padding:70px 56px 64px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-family:'Oswald',sans-serif;font-size:13px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:22px">ABOUT US</div>
+            <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0;max-width:14ch">Space and story, built by the same hands.</h1>
+          </div>
+          <div style="display:flex;gap:48px;margin-top:48px;flex-wrap:wrap">
+            <div>
+              <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">2005</div>
+              <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">STUDIO FOUNDED</div>
+            </div>
+            <div>
+              <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">35+</div>
+              <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">PROJECTS DELIVERED</div>
+            </div>
+            <div>
+              <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">TW</div>
+              <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">TAICHUNG · TAIPEI</div>
+            </div>
+          </div>
         </div>
-        <div style="display:flex;gap:48px;margin-top:48px;flex-wrap:wrap">
-          <div>
-            <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">2005</div>
-            <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">STUDIO FOUNDED</div>
-          </div>
-          <div>
-            <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">35+</div>
-            <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">PROJECTS DELIVERED</div>
-          </div>
-          <div>
-            <div style="font-family:'Oswald',sans-serif;font-size:26px;color:#f4efe8;margin-bottom:4px">TW</div>
-            <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:rgba(244,239,232,.6)">TAICHUNG · TAIPEI</div>
+        <div style="flex:1;min-width:340px;position:relative">
+          <picture>
+            <source srcset="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.avif" type="image/avif" />
+            <img src="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg" alt="Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design" style="width:100%;height:100%;min-height:420px;object-fit:cover;display:block" />
+          </picture>
+          <div style="position:absolute;left:0;bottom:0;padding:20px 28px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent)">
+            <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:#f4efe8">MASTERS OF MARINE ILLUSION — TAICHUNG AQUARIUM</div>
           </div>
         </div>
       </div>
-      <div style="flex:1;min-width:340px;position:relative">
-        <img src="./marine-illusion-g1.jpg" alt="Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design" style="width:100%;height:100%;min-height:420px;object-fit:cover;display:block" />
-        <div style="position:absolute;left:0;bottom:0;padding:20px 28px;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent)">
-          <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:#f4efe8">MASTERS OF MARINE ILLUSION — TAICHUNG AQUARIUM</div>
-        </div>
+    </section>
+
+    <section ref="{{ zone1Ref }}" data-screen-label="About / The Work" style="padding:110px 56px 0">
+      <div style="max-width:70ch">
+        <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0 0 24px">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. We work across museums, aquariums, cultural venues, corporate spaces and public installations — wherever a physical space needs to carry a message.</p>
+        <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install — and keep every detail in service of the same idea.</p>
       </div>
-    </div>
-  </section>
 
-  <section data-screen-label="About / Story" style="padding:110px 56px 90px">
-    <div style="max-width:70ch">
-      <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0 0 24px">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. We work across museums, aquariums, cultural venues, corporate spaces and public installations — wherever a physical space needs to carry a message.</p>
-      <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install — and keep every detail in service of the same idea.</p>
-    </div>
-  </section>
+      <div style="margin-top:90px;padding:80px 0;border-top:1px solid rgba(244,239,232,.1);border-bottom:1px solid rgba(244,239,232,.1)">
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:24px">THE DIFFERENCE</div>
+        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,5vw,64px);line-height:1.15;letter-spacing:-.01em;margin:0;max-width:19ch">The same team that designs the space <span style="color:var(--ltsuan-accent)">also builds it.</span></p>
+        <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.7;color:rgba(244,239,232,.65);margin:24px 0 0;max-width:56ch">One point of contact from first sketch to final install — nothing lost in translation between concept and construction.</p>
+      </div>
+    </section>
 
-  <section data-screen-label="About / Clients" style="padding:0 56px 90px">
-    <div style="border-top:1px solid rgba(244,239,232,.15);border-bottom:1px solid rgba(244,239,232,.15);padding:44px 0">
-      <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:rgba(244,239,232,.6);margin-bottom:20px">SELECTED CLIENTS</div>
-      <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.5;color:#f4efe8;margin:0;max-width:56ch">National Museum of Natural Science · National Museum of History · National Taiwan Museum of Fine Arts · Ministry of Culture · R.O.C. Air Force Academy · Ørsted · TSMC · HTC</p>
-      <a href="./portfolio.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'Oswald',sans-serif;font-size:14px;color:var(--ltsuan-accent);text-decoration:none">See our work with them →</a>
-    </div>
-    <p style="font-family:'Oswald',sans-serif;font-size:13px;color:rgba(244,239,232,.6);margin:20px 0 0">Licensed Interior Decorator — Registration No. 40E2007●●●. We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
-  </section>
+    <section ref="{{ zone2Ref }}" data-screen-label="About / The Record" style="padding:90px 56px 90px">
+      <div style="border-top:1px solid rgba(244,239,232,.15);border-bottom:1px solid rgba(244,239,232,.15);padding:44px 0">
+        <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:rgba(244,239,232,.6);margin-bottom:20px">SELECTED CLIENTS</div>
+        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.5;color:#f4efe8;margin:0;max-width:56ch">National Museum of Natural Science · National Museum of History · National Taiwan Museum of Fine Arts · Ministry of Culture · R.O.C. Air Force Academy · Ørsted · TSMC · HTC</p>
+        <a href="./portfolio.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'Oswald',sans-serif;font-size:14px;color:var(--ltsuan-accent);text-decoration:none">See our work with them →</a>
+      </div>
+      <p style="font-family:'Oswald',sans-serif;font-size:13px;color:rgba(244,239,232,.6);margin:20px 0 0">Licensed Interior Decorator — Registration No. 40E2007●●●. We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
+    </section>
 
-  <section data-screen-label="About / Values" style="padding:20px 56px 140px">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 8px">How We Work</h2>
-    <div>
-      <sc-for list="{{ principles }}" as="p" hint-placeholder-count="3">
-        <div style="display:flex;gap:40px;align-items:baseline;padding:36px 0;border-top:1px solid rgba(244,239,232,.1);flex-wrap:wrap">
-          <div style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5vw,64px);color:var(--ltsuan-accent);line-height:1;min-width:90px">{{ p.num }}</div>
-          <div style="flex:1;min-width:280px">
-            <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:24px;margin:0 0 10px">{{ p.title }}</h3>
-            <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.7;color:rgba(244,239,232,.65);margin:0;max-width:60ch">{{ p.desc }}</p>
+    <section ref="{{ zone3Ref }}" data-screen-label="About / Principle" style="padding:20px 56px 140px">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 8px">How We Work</h2>
+      <div>
+        <sc-for list="{{ principles }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;gap:40px;align-items:baseline;padding:36px 0;border-top:1px solid rgba(244,239,232,.1);flex-wrap:wrap">
+            <div style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5vw,64px);color:var(--ltsuan-accent);line-height:1;min-width:90px">{{ p.num }}</div>
+            <div style="flex:1;min-width:280px">
+              <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:24px;margin:0 0 10px">{{ p.title }}</h3>
+              <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.7;color:rgba(244,239,232,.65);margin:0;max-width:60ch">{{ p.desc }}</p>
+            </div>
           </div>
-        </div>
-      </sc-for>
-    </div>
-  </section>
+        </sc-for>
+      </div>
+    </section>
 
-  <section data-screen-label="About / CTA" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid rgba(244,239,232,.08)">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Want to work with us?</h2>
-    <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
-  </section>
+    <section ref="{{ zone4Ref }}" data-screen-label="About / Visit" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid rgba(244,239,232,.08)">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Want to work with us?</h2>
+      <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
+    </section>
 
-  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+    <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+  </div>
 </div>
 <div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  state = { activeZone: 0 };
+  zoneEls = [];
+  zoneLabels = ['ORIGIN', 'THE WORK', 'RECORD', 'PRINCIPLE', 'VISIT'];
+  componentDidMount() {
+    this._observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = this.zoneEls.indexOf(entry.target);
+          if (idx !== -1 && idx !== this.state.activeZone) this.setState({ activeZone: idx });
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+    this.zoneEls.forEach((el) => { if (el) this._observer.observe(el); });
+  }
+  componentWillUnmount() {
+    if (this._observer) this._observer.disconnect();
+  }
+  makeZoneRef(i) {
+    return (el) => { if (el) this.zoneEls[i] = el; };
+  }
+  scrollToZone(i) {
+    return () => {
+      const el = this.zoneEls[i];
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  }
   renderVals() {
+    const active = this.state.activeZone;
+    const railItems = this.zoneLabels.map((label, i) => {
+      const isActive = i === active;
+      return {
+        num: String(i + 1).padStart(2, '0'),
+        label,
+        ariaLabel: `Go to ${label} section`,
+        onClick: this.scrollToZone(i),
+        tickStyle: `width:1px;height:${isActive ? '30px' : '14px'};background:${isActive ? 'var(--ltsuan-accent)' : 'rgba(244,239,232,.25)'};transition:all .3s ease;flex-shrink:0`,
+        labelStyle: `font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:${isActive ? '#f4efe8' : 'rgba(244,239,232,.4)'};transition:color .3s ease;white-space:nowrap`,
+      };
+    });
     return {
+      railItems,
+      zone0Ref: this.makeZoneRef(0),
+      zone1Ref: this.makeZoneRef(1),
+      zone2Ref: this.makeZoneRef(2),
+      zone3Ref: this.makeZoneRef(3),
+      zone4Ref: this.makeZoneRef(4),
       principles: [
         { num: '01', title: 'Narrative First', desc: 'Every project starts from the story a space needs to tell, not from a floor plan.' },
         { num: '02', title: 'One Team, Full Delivery', desc: 'Design, fabrication and installation stay under one roof, so nothing gets lost in translation.' },
