@@ -255,6 +255,14 @@ class Component extends DCLogic {
   }
   changeSlide(idx) {
     if (idx === this.state.active || this._transitioning) return;
+    if (idx === 1 && this._panImgEl && !this._reducedMotion) {
+      // Restart the pan (instead of toggling the class on active-change) so slide 1
+      // never reverts to its static center crop mid-transition when leaving it.
+      const el = this._panImgEl;
+      el.style.animation = 'none';
+      void el.offsetHeight;
+      el.style.animation = '';
+    }
     this._transitioning = true;
     this.setState({ textVisible: false });
     this._textTimer = setTimeout(() => {
@@ -294,7 +302,7 @@ class Component extends DCLogic {
         imgRef: (el) => {
           if (!el) return;
           if (s.realImg) el.src = s.realImg;
-          if (i === 1) el.onanimationend = this._onPanEnd;
+          if (i === 1) { el.onanimationend = this._onPanEnd; this._panImgEl = el; }
         },
         avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         realImgStyle: s.realImg
@@ -305,7 +313,7 @@ class Component extends DCLogic {
           ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6).toFixed(1)}px, ${(px.y * -5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0',
         bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
-        panClass: (i === 1 && i === active && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
+        panClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
         frostStyle: i === 1
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none'
           : 'display:none',
