@@ -100,12 +100,12 @@ class Component extends DCLogic {
       bar2Style: `display:block;width:100%;height:1px;background:#f4efe8;transition:transform .3s ease;transform:${open ? 'rotate(-45deg) translateY(-2.5px)' : 'none'}`,
       overlayStyle: `position:fixed;inset:0;z-index:999;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);transition:opacity .5s ease;opacity:${open ? 1 : 0};pointer-events:${open ? 'auto' : 'none'}`,
       menuItems: [
-        { key: 'portfolio', label: 'All Works', href: './portfolio.dc.html' },
         { key: 'exhibition', label: 'Exhibition Design', href: './portfolio.dc.html?cat=Exhibition+Design' },
         { key: 'interior', label: 'Interior Design', href: './portfolio.dc.html?cat=Interior+Design' },
         { key: 'visual', label: 'Visual Design', href: './portfolio.dc.html?cat=Visual+Design' },
-        { key: 'what-we-do', label: 'What We Do', href: './what-we-do.dc.html' },
+        { key: 'event', label: 'Event', href: './portfolio.dc.html?cat=Event' },
         { key: 'about', label: 'About', href: './about.dc.html' },
+        { key: 'what-we-do', label: 'What We Do', href: './what-we-do.dc.html' },
         { key: 'contact', label: 'Contact', href: './contact.dc.html' },
       ].map((item) => {
         const isActive = item.key === this.props.active;
