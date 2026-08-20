@@ -32,9 +32,6 @@
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
     a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-scale-rule{height:1px;background:repeating-linear-gradient(to right,var(--ltsuan-line) 0 1px,transparent 1px 16px)}
-    .ltsuan-plaque{display:inline-flex;align-items:baseline;gap:9px;padding:5px 12px;border:1px solid var(--ltsuan-line)}
-    .ltsuan-plaque-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent)}
-    .ltsuan-plaque-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:rgba(244,239,232,.5)}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
   </style>
 </helmet>
@@ -44,7 +41,6 @@
   <div class="ltsuan-about-main">
     <section ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Origin" style="padding:150px 56px 100px">
       <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 01</span><span class="ltsuan-plaque-label">ORIGIN</span></div>
         <div style="display:flex;gap:56px;flex-wrap:wrap;align-items:flex-end;margin-bottom:64px">
           <h1 style="flex:1.3;min-width:320px;font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0;max-width:14ch">Space and story, built by the same hands.</h1>
           <p style="flex:1;min-width:260px;font-family:'Oswald',sans-serif;font-size:16px;line-height:1.7;color:var(--ltsuan-dim);margin:0 0 6px;max-width:40ch">Interior, exhibition and visual design — one team from concept to construction, based in Taiwan.</p>
@@ -86,10 +82,7 @@
     <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
     <section ref="{{ zone1Ref }}" data-screen-label="About / Room 02 — Philosophy" style="padding:100px 56px 0">
-      <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 02</span><span class="ltsuan-plaque-label">PHILOSOPHY</span></div>
-      </div>
-      <div style="max-width:70ch">
+      <div class="ltsuan-reveal" style="{{ zone1Reveal }};max-width:70ch">
         <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0 0 24px">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. We work across museums, aquariums, cultural venues, corporate spaces and public installations — wherever a physical space needs to carry a message.</p>
         <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install — and keep every detail in service of the same idea.</p>
         <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:24px 0 0">We scale the team to the project, bringing in licensed architects, fire-safety engineers, civil engineers and quality-control inspectors as each site and regulatory requirement demands.</p>
@@ -103,10 +96,7 @@
     </section>
 
     <section ref="{{ zone2Ref }}" data-screen-label="About / Room 03 — Sustainability" style="padding:0 56px 100px">
-      <div class="ltsuan-reveal" style="{{ zone2Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 03</span><span class="ltsuan-plaque-label">SUSTAINABILITY</span></div>
-      </div>
-      <div style="max-width:70ch;padding:44px 40px;border:1px solid var(--ltsuan-line)">
+      <div class="ltsuan-reveal" style="{{ zone2Reveal }};max-width:70ch;padding:44px 40px;border:1px solid var(--ltsuan-line)">
         <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 16px">Sustainability runs through how we build: non-invasive structural systems that protect heritage sites and historic fabric.</p>
         <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 16px">Our green building material usage rate meets the current legal minimum of 60%, balancing environmental responsibility with client cost.</p>
         <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0">As a licensed interior decorator, we apply the same regulatory and safety standards to our subcontractors that we apply to ourselves.</p>
@@ -116,10 +106,7 @@
     <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
     <section ref="{{ zone3Ref }}" data-screen-label="About / Room 04 — Record" style="padding:100px 56px 90px">
-      <div class="ltsuan-reveal" style="{{ zone3Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 04</span><span class="ltsuan-plaque-label">RECORD</span></div>
-      </div>
-      <div style="border-top:1px solid var(--ltsuan-line);border-bottom:1px solid var(--ltsuan-line);padding:44px 0">
+      <div class="ltsuan-reveal" style="{{ zone3Reveal }};border-top:1px solid var(--ltsuan-line);border-bottom:1px solid var(--ltsuan-line);padding:44px 0">
         <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-dim);margin-bottom:20px">SELECTED CLIENTS</div>
         <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.6;color:rgba(244,239,232,.65);margin:0 0 20px;max-width:56ch">We have partnered with <span style="font-family:'Oswald',sans-serif">7+</span> government agencies and public institutions.</p>
         <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.5;color:#f4efe8;margin:0;max-width:56ch">National Museum of Natural Science · National Museum of History · National Taiwan Museum of Fine Arts · Ministry of Culture · R.O.C. Air Force Academy · Ørsted · TSMC · HTC · FedEx · Toei · Shogakukan · SinoPac Securities</p>
@@ -132,7 +119,6 @@
 
     <section ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Principle" style="padding:100px 56px 140px">
       <div class="ltsuan-reveal" style="{{ zone4Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 05</span><span class="ltsuan-plaque-label">PRINCIPLE</span></div>
         <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 8px">How We Work</h2>
       </div>
       <div>
@@ -149,7 +135,6 @@
     </section>
 
     <section ref="{{ zone5Ref }}" data-screen-label="About / Room 06 — Visit" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid var(--ltsuan-line)">
-      <div class="ltsuan-plaque" style="margin-bottom:22px"><span class="ltsuan-plaque-num">ROOM 06</span><span class="ltsuan-plaque-label">VISIT</span></div>
       <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Want to work with us?</h2>
       <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
     </section>

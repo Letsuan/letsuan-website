@@ -32,9 +32,6 @@
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
     a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-scale-rule{height:1px;background:repeating-linear-gradient(to right,var(--ltsuan-line) 0 1px,transparent 1px 16px)}
-    .ltsuan-plaque{display:inline-flex;align-items:baseline;gap:9px;padding:5px 12px;border:1px solid var(--ltsuan-line)}
-    .ltsuan-plaque-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent)}
-    .ltsuan-plaque-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:rgba(244,239,232,.5)}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
   </style>
 </helmet>
@@ -43,7 +40,6 @@
 
   <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 56px 100px;border-bottom:1px solid var(--ltsuan-line)">
     <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
-      <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 01</span><span class="ltsuan-plaque-label">PROCESS</span></div>
       <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);margin:0 0 60px;max-width:900px">Four Disciplines, One Continuous Process.</h1>
     </div>
     <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(24px,3.2vw,34px);margin:0 0 48px;max-width:760px">From brief to handover, one accountable team.</h2>
@@ -60,7 +56,6 @@
 
   <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:100px 56px;background:#141414;border-bottom:1px solid var(--ltsuan-line)">
     <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
-      <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 02</span><span class="ltsuan-plaque-label">CAPABILITIES</span></div>
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 56px;max-width:760px">Built to withstand what the site, the client and the code demand.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line)">
@@ -75,9 +70,6 @@
   </section>
 
   <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services">
-    <div class="ltsuan-reveal" style="{{ zone2Reveal }};padding:90px 56px 0">
-      <div class="ltsuan-plaque"><span class="ltsuan-plaque-num">ROOM 03</span><span class="ltsuan-plaque-label">SERVICES</span></div>
-    </div>
     <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
       <section style="{{ svc.sectionStyle }}">
         <div style="flex:1;min-width:320px;position:relative;height:460px">
@@ -106,7 +98,6 @@
   <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
   <section data-screen-label="What We Do / Room 04 — Visit" style="padding:130px 56px;text-align:center;background:#141414">
-    <div class="ltsuan-plaque" style="margin-bottom:22px"><span class="ltsuan-plaque-num">ROOM 04</span><span class="ltsuan-plaque-label">VISIT</span></div>
     <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Tell us what you're building.</h2>
     <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Start a Project</a>
   </section>
