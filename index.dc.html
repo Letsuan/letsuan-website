@@ -38,7 +38,7 @@
     @keyframes ltsuanPing{0%{transform:scale(1);opacity:.5}75%,100%{transform:scale(1.8);opacity:0}}
     @keyframes ltsuanBeam{0%{transform:translateY(-100%)}100%{transform:translateY(500%)}}
     @keyframes ltsuanBgLightSweep{0%{transform:translateX(0);filter:brightness(1)}50%{transform:translateX(-25px);filter:brightness(1.18)}100%{transform:translateX(0);filter:brightness(1)}}
-    @keyframes ltsuanPanLR{0%{object-position:15% 45%}100%{object-position:85% 45%}}
+    @keyframes ltsuanPanLR{0%{object-position:85% 45%}100%{object-position:15% 45%}}
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
@@ -292,7 +292,7 @@ class Component extends DCLogic {
           : 'display:none',
         placeholder: s.placeholder,
         parallaxStyle: (i === 1 && !this._reducedMotion)
-          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -16).toFixed(1)}px, ${(px.y * -12).toFixed(1)}px) scale(1.05)`
+          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6).toFixed(1)}px, ${(px.y * -5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0',
         bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
         panClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
