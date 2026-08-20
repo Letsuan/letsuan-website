@@ -321,9 +321,7 @@ class Component extends DCLogic {
           ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);background:rgba(255,255,255,.04) repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0px,rgba(255,255,255,.03) 1px,rgba(255,255,255,.26) 14px,rgba(0,0,0,.16) 28px,rgba(255,255,255,.03) 47px,rgba(0,0,0,.22) 48px,rgba(255,255,255,.02) 49px,rgba(255,255,255,.16) 62px,rgba(0,0,0,.1) 76px,rgba(255,255,255,.02) 95px,rgba(0,0,0,.22) 96px);filter:url(#ltsuanFlutedGlass);border-right:1px solid rgba(244,239,232,.1)'
           : 'display:none',
         layerStyle: `position:absolute;inset:0;overflow:hidden;z-index:${i === active ? 2 : 1};transition:transform 1.1s cubic-bezier(.76,0,.24,1);transform:translateY(${offset}%);backface-visibility:hidden;will-change:${i === active ? 'transform' : 'auto'}`,
-        imgStyle: this._reducedMotion
-          ? 'width:100%;height:100%;transform:none'
-          : `width:100%;height:100%;transition:transform 1.8s cubic-bezier(.16,1,.3,1);transform:scale(${i === active ? 1 : 1.15})`,
+        imgStyle: 'width:100%;height:100%;transform:none',
         numLabel: String(i + 1).padStart(2, '0'),
         dotBtnStyle: `position:relative;z-index:1;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.03em;transition:all .4s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:var(--ltsuan-accent);color:#0A0A0A;transform:scale(1.1)' : 'border:1px solid rgba(244,239,232,.15);background:transparent;color:rgba(244,239,232,.3)'}`,
         pingClass: i === active ? 'ltsuan-ping' : '',
