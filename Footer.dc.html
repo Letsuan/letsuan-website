@@ -73,7 +73,7 @@ class Component extends DCLogic {
       footerBottomStyle: veryNarrow
         ? 'display:flex;flex-direction:column;gap:8px'
         : 'display:flex;justify-content:space-between;align-items:center',
-      ctaHref: onContactPage ? 'mailto:hello@letsuan.com' : './contact.dc.html',
+      ctaHref: onContactPage ? 'mailto:' + ['info', 'letsuan.com'].join('@') : './contact.dc.html',
       ctaLabel: onContactPage ? 'Email Us' : 'Contact Us',
     };
   }

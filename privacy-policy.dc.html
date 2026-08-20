@@ -39,15 +39,23 @@
       <p style="margin:0 0 28px">We retain contact form submissions only as long as needed to respond to your inquiry and maintain a record of past communications, unless you request deletion.</p>
 
       <h2 style="font-size:16px;font-weight:400;color:var(--ltsuan-text);margin:0 0 12px">Your Rights</h2>
-      <p style="margin:0 0 28px">You may request to view, correct, or delete any personal information we hold about you by contacting us at <a href="mailto:hello@letsuan.com">hello@letsuan.com</a>.</p>
+      <p style="margin:0 0 28px">You may request to view, correct, or delete any personal information we hold about you by contacting us at <a href="{{ emailHref }}">{{ emailText }}</a>.</p>
 
       <h2 style="font-size:16px;font-weight:400;color:var(--ltsuan-text);margin:0 0 12px">Contact</h2>
-      <p style="margin:0">Questions about this policy can be sent to <a href="mailto:hello@letsuan.com">hello@letsuan.com</a>.</p>
+      <p style="margin:0">Questions about this policy can be sent to <a href="{{ emailHref }}">{{ emailText }}</a>.</p>
     </div>
   </section>
 
   <dc-import name="Footer" hint-size="100%,320px"></dc-import>
 </div>
 </x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const email = ['info', 'letsuan.com'].join('@');
+    return { emailHref: 'mailto:' + email, emailText: email };
+  }
+}
+</script>
 </body>
 </html>
