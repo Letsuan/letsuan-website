@@ -42,7 +42,7 @@
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
-    .ltsuan-pan-lr{animation:ltsuanPanLR 16s ease-in-out infinite alternate}
+    .ltsuan-pan-lr{animation:ltsuanPanLR 5s ease-in-out 1 forwards}
     @media (max-width:900px){
       .ltsuan-hero-deco{display:none}
       .ltsuan-hero-text{max-width:92%}
@@ -232,21 +232,26 @@ class Component extends DCLogic {
   state = { active: 0, auto: !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches), textVisible: true, parallax: { x: 0, y: 0 } };
   componentDidMount() {
     this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._onPanEnd = () => {
+      if (!this.state.auto || this.state.active !== 1 || this._transitioning) return;
+      this.changeSlide((this.state.active + 1) % this.slideData.length);
+    };
     this._maybeStartAuto();
   }
   componentWillUnmount() {
-    clearInterval(this._autoTimer);
+    clearTimeout(this._autoTimer);
     clearTimeout(this._textTimer);
     if (this._parallaxRAF) cancelAnimationFrame(this._parallaxRAF);
   }
   _maybeStartAuto() {
-    clearInterval(this._autoTimer);
-    if (this.state.auto) {
-      this._autoTimer = setInterval(() => {
-        this._orderPos = ((this._orderPos ?? 0) + 1) % this.slideData.length;
-        this.changeSlide(this._orderPos);
-      }, 5000);
-    }
+    clearTimeout(this._autoTimer);
+    if (!this.state.auto) return;
+    // Slide 2 (index 1) advances when its right-to-left pan finishes (see _onPanEnd),
+    // not on the fixed timer, so the cut always lands right as the pan settles.
+    if (this.state.active === 1 && !this._reducedMotion) return;
+    this._autoTimer = setTimeout(() => {
+      this.changeSlide((this.state.active + 1) % this.slideData.length);
+    }, 5000);
   }
   changeSlide(idx) {
     if (idx === this.state.active || this._transitioning) return;
@@ -255,6 +260,7 @@ class Component extends DCLogic {
     this._textTimer = setTimeout(() => {
       this.setState({ active: idx, textVisible: true });
       this._transitioning = false;
+      this._maybeStartAuto();
     }, 260);
   }
   renderVals() {
@@ -285,7 +291,11 @@ class Component extends DCLogic {
         title: s.title,
         alt: s.alt,
         dotLabel: `Go to slide: ${s.title}`,
-        imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
+        imgRef: (el) => {
+          if (!el) return;
+          if (s.realImg) el.src = s.realImg;
+          if (i === 1) el.onanimationend = this._onPanEnd;
+        },
         avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         realImgStyle: s.realImg
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
@@ -295,7 +305,7 @@ class Component extends DCLogic {
           ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6).toFixed(1)}px, ${(px.y * -5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0',
         bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
-        panClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
+        panClass: (i === 1 && i === active && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
         frostStyle: i === 1
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none'
           : 'display:none',
