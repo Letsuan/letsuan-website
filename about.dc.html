@@ -106,7 +106,7 @@
       <p style="font-family:'Oswald',sans-serif;font-size:13px;color:rgba(244,239,232,.6);margin:20px 0 0">Licensed Interior Decorator — Registration No. 40E2007●●●. We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
     </section>
 
-    <section data-screen-label="About / What We Do" style="padding:20px 56px 0">
+    <section id="what-we-do" data-screen-label="About / What We Do" style="padding:20px 56px 0;scroll-margin-top:100px">
       <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:16px">WHAT WE DO</div>
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 8px;max-width:760px">Four Disciplines, One Continuous Process.</h2>
     </section>
@@ -193,6 +193,13 @@ class Component extends DCLogic {
   zoneEls = [];
   zoneLabels = ['ORIGIN', 'THE WORK', 'RECORD', 'PRINCIPLE', 'VISIT'];
   componentDidMount() {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const id = window.location.hash.slice(1);
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
     this._observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
