@@ -35,24 +35,11 @@
     .ltsuan-plaque{display:inline-flex;align-items:baseline;gap:9px;padding:5px 12px;border:1px solid var(--ltsuan-line)}
     .ltsuan-plaque-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent)}
     .ltsuan-plaque-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:rgba(244,239,232,.5)}
-    .ltsuan-about-rail{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:16px}
-    .ltsuan-about-rail button{display:flex;align-items:center;justify-content:flex-end;gap:10px;background:none;border:none;padding:2px 0;cursor:pointer}
-    @media (max-width:1180px){.ltsuan-about-rail{display:none}}
-    @media (min-width:1181px){.ltsuan-about-main{padding-right:210px}}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
   </style>
 </helmet>
 <div style="background:var(--ltsuan-bg);position:relative">
   <dc-import name="Nav" active="about" hint-size="100%,0px"></dc-import>
-
-  <div class="ltsuan-about-rail">
-    <sc-for list="{{ railItems }}" as="r" hint-placeholder-count="8">
-      <button onClick="{{ r.onClick }}" aria-label="{{ r.ariaLabel }}">
-        <span style="{{ r.labelStyle }}">{{ r.num }} — {{ r.label }}</span>
-        <span style="{{ r.tickStyle }}"></span>
-      </button>
-    </sc-for>
-  </div>
 
   <div class="ltsuan-about-main">
     <section ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Origin" style="padding:150px 56px 100px">
@@ -143,71 +130,9 @@
 
     <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
-    <section id="what-we-do" ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Process" style="padding:100px 56px 0;scroll-margin-top:100px">
+    <section ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Principle" style="padding:100px 56px 140px">
       <div class="ltsuan-reveal" style="{{ zone4Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 05</span><span class="ltsuan-plaque-label">PROCESS</span></div>
-        <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 60px;max-width:760px">Four Disciplines, One Continuous Process.</h2>
-      </div>
-      <h3 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(22px,3vw,30px);margin:0 0 48px;max-width:760px">From brief to handover, one accountable team.</h3>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:100px">
-        <sc-for list="{{ processSteps }}" as="step" hint-placeholder-count="5">
-          <div>
-            <div style="font-family:'Oswald',sans-serif;font-size:13px;color:var(--ltsuan-accent);margin-bottom:12px">{{ step.num }}</div>
-            <h4 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:18px;margin:0 0 10px">{{ step.title }}</h4>
-            <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.7;color:rgba(244,239,232,.6);margin:0">{{ step.desc }}</p>
-          </div>
-        </sc-for>
-      </div>
-
-      <div style="margin:0 -56px;padding:90px 56px;background:#141414;border-top:1px solid var(--ltsuan-line);border-bottom:1px solid var(--ltsuan-line)">
-        <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ltsuan-accent);margin-bottom:16px">ENGINEERING CAPABILITIES — SPEC SHEET</div>
-        <h3 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(24px,3.2vw,34px);margin:0 0 56px;max-width:760px">Built to withstand what the site, the client and the code demand.</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line)">
-          <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="6">
-            <div style="background:#141414;padding:32px">
-              <div style="font-family:'Oswald',sans-serif;font-size:11px;color:var(--ltsuan-dim);margin-bottom:10px">§ {{ cap.num }}</div>
-              <h4 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;margin:0 0 10px">{{ cap.title }}</h4>
-              <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.7;color:rgba(244,239,232,.55);margin:0">{{ cap.desc }}</p>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </section>
-
-    <div ref="{{ zone5Ref }}" data-screen-label="About / Room 06 — Services">
-      <div class="ltsuan-reveal" style="{{ zone5Reveal }};padding:90px 56px 0">
-        <div class="ltsuan-plaque"><span class="ltsuan-plaque-num">ROOM 06</span><span class="ltsuan-plaque-label">SERVICES</span></div>
-      </div>
-      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-        <section style="{{ svc.sectionStyle }}">
-          <div style="flex:1;min-width:320px;position:relative;height:460px">
-            <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:460px"></image-slot>
-            <picture>
-              <source ref="{{ svc.avifRef }}" type="image/avif" />
-              <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <div style="flex:1;min-width:320px">
-            <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--ltsuan-accent);margin-bottom:16px">{{ svc.num }}</div>
-            <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 20px">{{ svc.title }}</h3>
-            <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 28px;max-width:480px">{{ svc.desc }}</p>
-            <div style="display:flex;flex-direction:column;gap:10px">
-              <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-                <div style="display:flex;gap:12px;align-items:baseline;font-family:'Oswald',sans-serif;font-size:14px;color:rgba(244,239,232,.65)">
-                  <span style="width:6px;height:6px;border-radius:50%;background:var(--ltsuan-accent);flex-shrink:0;transform:translateY(-2px)"></span>{{ pt }}
-                </div>
-              </sc-for>
-            </div>
-          </div>
-        </section>
-      </sc-for>
-    </div>
-
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section ref="{{ zone6Ref }}" data-screen-label="About / Room 07 — Principle" style="padding:100px 56px 140px">
-      <div class="ltsuan-reveal" style="{{ zone6Reveal }}">
-        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 07</span><span class="ltsuan-plaque-label">PRINCIPLE</span></div>
+        <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 05</span><span class="ltsuan-plaque-label">PRINCIPLE</span></div>
         <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 8px">How We Work</h2>
       </div>
       <div>
@@ -223,8 +148,8 @@
       </div>
     </section>
 
-    <section ref="{{ zone7Ref }}" data-screen-label="About / Room 08 — Visit" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid var(--ltsuan-line)">
-      <div class="ltsuan-plaque" style="margin-bottom:22px"><span class="ltsuan-plaque-num">ROOM 08</span><span class="ltsuan-plaque-label">VISIT</span></div>
+    <section ref="{{ zone5Ref }}" data-screen-label="About / Room 06 — Visit" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid var(--ltsuan-line)">
+      <div class="ltsuan-plaque" style="margin-bottom:22px"><span class="ltsuan-plaque-num">ROOM 06</span><span class="ltsuan-plaque-label">VISIT</span></div>
       <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Want to work with us?</h2>
       <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
     </section>
@@ -236,28 +161,18 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { activeZone: 0, revealed: new Set([0]) };
+  state = { revealed: new Set([0]) };
   zoneEls = [];
-  zoneLabels = ['ORIGIN', 'PHILOSOPHY', 'SUSTAINABILITY', 'RECORD', 'PROCESS', 'SERVICES', 'PRINCIPLE', 'VISIT'];
   componentDidMount() {
     this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (typeof window !== 'undefined' && window.location.hash) {
-      const id = window.location.hash.slice(1);
-      requestAnimationFrame(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
     this._observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const idx = this.zoneEls.indexOf(entry.target);
-          if (idx === -1) return;
-          if (idx !== this.state.activeZone || !this.state.revealed.has(idx)) {
-            const revealed = new Set(this.state.revealed);
-            revealed.add(idx);
-            this.setState({ activeZone: idx, revealed });
-          }
+          if (idx === -1 || this.state.revealed.has(idx)) return;
+          const revealed = new Set(this.state.revealed);
+          revealed.add(idx);
+          this.setState({ revealed });
         }
       });
     }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
@@ -269,80 +184,28 @@ class Component extends DCLogic {
   makeZoneRef(i) {
     return (el) => { if (el) this.zoneEls[i] = el; };
   }
-  scrollToZone(i) {
-    return () => {
-      const el = this.zoneEls[i];
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-  }
   revealStyle(i) {
     const shown = this._reducedMotion || this.state.revealed.has(i);
     return `opacity:${shown ? 1 : 0};transform:translateY(${shown ? 0 : 18}px);transition:opacity .7s ease,transform .7s ease`;
   }
   renderVals() {
-    const active = this.state.activeZone;
-    const railItems = this.zoneLabels.map((label, i) => {
-      const isActive = i === active;
-      return {
-        num: String(i + 1).padStart(2, '0'),
-        label,
-        ariaLabel: `Go to ${label} section`,
-        onClick: this.scrollToZone(i),
-        tickStyle: `width:${isActive ? '26px' : '12px'};height:1px;background:${isActive ? 'var(--ltsuan-accent)' : 'rgba(244,239,232,.3)'};transition:all .3s ease;flex-shrink:0`,
-        labelStyle: `font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:${isActive ? '#f4efe8' : 'rgba(244,239,232,.35)'};transition:color .3s ease;white-space:nowrap`,
-      };
-    });
     return {
-      railItems,
       zone0Ref: this.makeZoneRef(0),
       zone1Ref: this.makeZoneRef(1),
       zone2Ref: this.makeZoneRef(2),
       zone3Ref: this.makeZoneRef(3),
       zone4Ref: this.makeZoneRef(4),
       zone5Ref: this.makeZoneRef(5),
-      zone6Ref: this.makeZoneRef(6),
-      zone7Ref: this.makeZoneRef(7),
       zone0Reveal: this.revealStyle(0),
       zone1Reveal: this.revealStyle(1),
       zone2Reveal: this.revealStyle(2),
       zone3Reveal: this.revealStyle(3),
       zone4Reveal: this.revealStyle(4),
-      zone5Reveal: this.revealStyle(5),
-      zone6Reveal: this.revealStyle(6),
       principles: [
         { num: '01', title: 'Narrative First', desc: 'Every project starts from the story a space needs to tell, not from a floor plan.' },
         { num: '02', title: 'One Team, Full Delivery', desc: 'Design, fabrication and installation stay under one roof, so nothing gets lost in translation.' },
         { num: '03', title: 'Built to Last', desc: 'We design for the visitors who will walk through a space for years, not just the opening day.' },
       ],
-      processSteps: [
-        { num: '01', title: 'Brief & Feasibility', desc: 'Site survey, code and structural constraints, and client requirements assessed before a single drawing is made.' },
-        { num: '02', title: 'Concept & Engineering Design', desc: 'Design and structural engineering developed in parallel, so the concept is buildable within site and code constraints from day one.' },
-        { num: '03', title: 'Fabrication & Testing', desc: 'In-house fabrication with mechanical, lighting and AV systems tested before anything leaves the workshop.' },
-        { num: '04', title: 'Site Installation', desc: 'Scheduled, trade-by-trade installation under our own site management, coordinated with venue operations and any third-party inspectors.' },
-        { num: '05', title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
-      ],
-      capabilities: [
-        { num: '01', title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.' },
-        { num: '02', title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification — character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.' },
-        { num: '03', title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.' },
-        { num: '04', title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
-        { num: '05', title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
-        { num: '06', title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints — shared access, weather, and regulatory windows.' },
-      ],
-      services: [
-        { id: 'exhibition', num: '01 — EXHIBITION DESIGN', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', rev: false, realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
-        { id: 'interior', num: '02 — INTERIOR DESIGN', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', rev: true, realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
-        { id: 'visual', num: '03 — VISUAL DESIGN', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', rev: false, realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
-        { id: 'construction', num: '04 — CONSTRUCTION', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', rev: true, realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
-      ].map((s, i) => ({
-        ...s,
-        sectionStyle: `padding:100px 56px;display:flex;gap:64px;flex-wrap:wrap;align-items:center;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid var(--ltsuan-line)' : ''}`,
-        imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
-        avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
-        realImgStyle: s.realImg
-          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block'
-          : 'display:none',
-      })),
     };
   }
 }

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+  <title>What We Do | Le Tsuan Design</title>
+  <meta name="description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <link rel="canonical" href="https://www.letsuan.com/what-we-do.dc.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="What We Do" />
+  <meta property="og:description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <meta property="og:url" content="https://www.letsuan.com/what-we-do.dc.html" />
+  <meta property="og:image" content="https://www.letsuan.com/assets/logo.png" />
+  <meta property="og:site_name" content="Le Tsuan Design" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What We Do" />
+  <meta name="twitter:description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Exhibition design, interior design, visual design and construction services from Le Tsuan Design.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="./image-slot.js"></script>
+  <style>
+    :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a;--ltsuan-line:rgba(244,239,232,.14);--ltsuan-dim:rgba(244,239,232,.6)}
+    body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
+    a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
+    .ltsuan-scale-rule{height:1px;background:repeating-linear-gradient(to right,var(--ltsuan-line) 0 1px,transparent 1px 16px)}
+    .ltsuan-plaque{display:inline-flex;align-items:baseline;gap:9px;padding:5px 12px;border:1px solid var(--ltsuan-line)}
+    .ltsuan-plaque-num{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:var(--ltsuan-accent)}
+    .ltsuan-plaque-label{font-family:'Oswald',sans-serif;font-size:11px;font-weight:400;letter-spacing:.2em;color:rgba(244,239,232,.5)}
+    @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
+  </style>
+</helmet>
+<div style="background:var(--ltsuan-bg)">
+  <dc-import name="Nav" active="what-we-do" hint-size="100%,0px"></dc-import>
+
+  <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 56px 100px;border-bottom:1px solid var(--ltsuan-line)">
+    <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
+      <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 01</span><span class="ltsuan-plaque-label">PROCESS</span></div>
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);margin:0 0 60px;max-width:900px">Four Disciplines, One Continuous Process.</h1>
+    </div>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(24px,3.2vw,34px);margin:0 0 48px;max-width:760px">From brief to handover, one accountable team.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
+      <sc-for list="{{ processSteps }}" as="step" hint-placeholder-count="5">
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-size:13px;color:var(--ltsuan-accent);margin-bottom:12px">{{ step.num }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:18px;margin:0 0 10px">{{ step.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.7;color:rgba(244,239,232,.6);margin:0">{{ step.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:100px 56px;background:#141414;border-bottom:1px solid var(--ltsuan-line)">
+    <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
+      <div class="ltsuan-plaque" style="margin-bottom:26px"><span class="ltsuan-plaque-num">ROOM 02</span><span class="ltsuan-plaque-label">CAPABILITIES</span></div>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 56px;max-width:760px">Built to withstand what the site, the client and the code demand.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line)">
+      <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="6">
+        <div style="background:#141414;padding:32px">
+          <div style="font-family:'Oswald',sans-serif;font-size:11px;color:var(--ltsuan-dim);margin-bottom:10px">§ {{ cap.num }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;margin:0 0 10px">{{ cap.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.7;color:rgba(244,239,232,.55);margin:0">{{ cap.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services">
+    <div class="ltsuan-reveal" style="{{ zone2Reveal }};padding:90px 56px 0">
+      <div class="ltsuan-plaque"><span class="ltsuan-plaque-num">ROOM 03</span><span class="ltsuan-plaque-label">SERVICES</span></div>
+    </div>
+    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+      <section style="{{ svc.sectionStyle }}">
+        <div style="flex:1;min-width:320px;position:relative;height:460px">
+          <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:460px"></image-slot>
+          <picture>
+            <source ref="{{ svc.avifRef }}" type="image/avif" />
+            <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+          </picture>
+        </div>
+        <div style="flex:1;min-width:320px">
+          <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--ltsuan-accent);margin-bottom:16px">{{ svc.num }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 20px">{{ svc.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 28px;max-width:480px">{{ svc.desc }}</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
+              <div style="display:flex;gap:12px;align-items:baseline;font-family:'Oswald',sans-serif;font-size:14px;color:rgba(244,239,232,.65)">
+                <span style="width:6px;height:6px;border-radius:50%;background:var(--ltsuan-accent);flex-shrink:0;transform:translateY(-2px)"></span>{{ pt }}
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </section>
+    </sc-for>
+  </div>
+
+  <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
+
+  <section data-screen-label="What We Do / Room 04 — Visit" style="padding:130px 56px;text-align:center;background:#141414">
+    <div class="ltsuan-plaque" style="margin-bottom:22px"><span class="ltsuan-plaque-num">ROOM 04</span><span class="ltsuan-plaque-label">VISIT</span></div>
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Tell us what you're building.</h2>
+    <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Start a Project</a>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+</div>
+<div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { revealed: new Set([0]) };
+  zoneEls = [];
+  componentDidMount() {
+    this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = this.zoneEls.indexOf(entry.target);
+          if (idx === -1 || this.state.revealed.has(idx)) return;
+          const revealed = new Set(this.state.revealed);
+          revealed.add(idx);
+          this.setState({ revealed });
+        }
+      });
+    }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+    this.zoneEls.forEach((el) => { if (el) this._observer.observe(el); });
+  }
+  componentWillUnmount() {
+    if (this._observer) this._observer.disconnect();
+  }
+  makeZoneRef(i) {
+    return (el) => { if (el) this.zoneEls[i] = el; };
+  }
+  revealStyle(i) {
+    const shown = this._reducedMotion || this.state.revealed.has(i);
+    return `opacity:${shown ? 1 : 0};transform:translateY(${shown ? 0 : 18}px);transition:opacity .7s ease,transform .7s ease`;
+  }
+  renderVals() {
+    const items = [
+      { id: 'exhibition', num: '01 — EXHIBITION DESIGN', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', rev: false, realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
+      { id: 'interior', num: '02 — INTERIOR DESIGN', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', rev: true, realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
+      { id: 'visual', num: '03 — VISUAL DESIGN', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', rev: false, realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
+      { id: 'construction', num: '04 — CONSTRUCTION', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', rev: true, realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
+    ];
+    const services = items.map((s, i) => ({
+      ...s,
+      sectionStyle: `padding:100px 56px;display:flex;gap:64px;flex-wrap:wrap;align-items:center;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid var(--ltsuan-line)' : ''}`,
+      imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
+      avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+      realImgStyle: s.realImg
+        ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block'
+        : 'display:none',
+    }));
+    const processSteps = [
+      { num: '01', title: 'Brief & Feasibility', desc: 'Site survey, code and structural constraints, and client requirements assessed before a single drawing is made.' },
+      { num: '02', title: 'Concept & Engineering Design', desc: 'Design and structural engineering developed in parallel, so the concept is buildable within site and code constraints from day one.' },
+      { num: '03', title: 'Fabrication & Testing', desc: 'In-house fabrication with mechanical, lighting and AV systems tested before anything leaves the workshop.' },
+      { num: '04', title: 'Site Installation', desc: 'Scheduled, trade-by-trade installation under our own site management, coordinated with venue operations and any third-party inspectors.' },
+      { num: '05', title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
+    ];
+    const capabilities = [
+      { num: '01', title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.' },
+      { num: '02', title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification — character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.' },
+      { num: '03', title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.' },
+      { num: '04', title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
+      { num: '05', title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
+      { num: '06', title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints — shared access, weather, and regulatory windows.' },
+    ];
+    return {
+      zone0Ref: this.makeZoneRef(0),
+      zone1Ref: this.makeZoneRef(1),
+      zone2Ref: this.makeZoneRef(2),
+      zone0Reveal: this.revealStyle(0),
+      zone1Reveal: this.revealStyle(1),
+      zone2Reveal: this.revealStyle(2),
+      services,
+      processSteps,
+      capabilities,
+    };
+  }
+}
+</script>
+</body>
+</html>
