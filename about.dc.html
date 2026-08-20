@@ -31,25 +31,10 @@
     :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
     a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
-    .ltsuan-about-rail{display:flex}
-    .ltsuan-about-main{padding-left:120px}
-    @media (max-width:900px){
-      .ltsuan-about-rail{display:none}
-      .ltsuan-about-main{padding-left:0}
-    }
   </style>
 </helmet>
 <div style="background:var(--ltsuan-bg);position:relative">
   <dc-import name="Nav" active="about" hint-size="100%,0px"></dc-import>
-
-  <div class="ltsuan-about-rail" style="position:fixed;left:40px;top:50%;transform:translateY(-50%);z-index:40;flex-direction:column;gap:2px">
-    <sc-for list="{{ railItems }}" as="item" hint-placeholder-count="5">
-      <button onClick="{{ item.onClick }}" aria-label="{{ item.ariaLabel }}" style="display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;padding:10px 4px;text-align:left;min-height:32px">
-        <span style="{{ item.tickStyle }}"></span>
-        <span style="{{ item.labelStyle }}">{{ item.num }}&nbsp;&nbsp;{{ item.label }}</span>
-      </button>
-    </sc-for>
-  </div>
 
   <div class="ltsuan-about-main">
     <section ref="{{ zone0Ref }}" data-screen-label="About / Origin" style="padding:150px 0 0;border-bottom:1px solid rgba(244,239,232,.08);overflow:hidden">
