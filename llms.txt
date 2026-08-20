@@ -5,7 +5,6 @@
 ## Studio
 - [Home](https://www.letsuan.com/)
 - [Portfolio](https://www.letsuan.com/portfolio.dc.html)
-- [What We Do](https://www.letsuan.com/what-we-do.dc.html)
 - [About](https://www.letsuan.com/about.dc.html)
 - [Contact](https://www.letsuan.com/contact.dc.html)
 
