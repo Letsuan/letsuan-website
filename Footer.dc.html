@@ -51,23 +51,27 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { narrow: false, veryNarrow: false };
+  state = { narrow: false, veryNarrow: false, navNarrow: false };
   componentDidMount() {
     this._onResize = () => {
       const narrow = window.innerWidth < 900;
       const veryNarrow = window.innerWidth < 560;
-      if (narrow !== this.state.narrow || veryNarrow !== this.state.veryNarrow) this.setState({ narrow, veryNarrow });
+      const navNarrow = window.innerWidth < 720;
+      if (narrow !== this.state.narrow || veryNarrow !== this.state.veryNarrow || navNarrow !== this.state.navNarrow) this.setState({ narrow, veryNarrow, navNarrow });
     };
     this._onResize();
     window.addEventListener('resize', this._onResize);
   }
   componentWillUnmount() { window.removeEventListener('resize', this._onResize); }
   renderVals() {
-    const { narrow, veryNarrow } = this.state;
+    const { narrow, veryNarrow, navNarrow } = this.state;
     const onContactPage = typeof window !== 'undefined' && /\/contact\.dc\.html|\/contact(?:[?#]|$)/.test(window.location.pathname);
+    // Left padding matches the nav logo's exact x-position (nav padding-left + its 23px own margin-left),
+    // so the footer logo/columns/social icons/copyright line up with the nav logo above.
+    const footerLeftPad = navNarrow ? 35 : 79;
     return {
       bgColor: this.props.background || '#0A0A0A',
-      footerPadding: veryNarrow ? '48px 24px 24px' : '72px 56px 32px',
+      footerPadding: veryNarrow ? `48px 24px 24px ${footerLeftPad}px` : `72px 56px 32px ${footerLeftPad}px`,
       footerCols: veryNarrow ? '1fr' : narrow ? '1fr 1fr' : '1.4fr 1fr 1fr 1.2fr',
       footerGap: veryNarrow ? '32px' : '40px',
       footerBottomStyle: veryNarrow
