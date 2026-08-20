@@ -241,7 +241,6 @@ class Component extends DCLogic {
   componentWillUnmount() {
     clearTimeout(this._autoTimer);
     clearTimeout(this._textTimer);
-    clearTimeout(this._revealTimer);
     if (this._parallaxRAF) cancelAnimationFrame(this._parallaxRAF);
   }
   _maybeStartAuto() {
@@ -267,8 +266,7 @@ class Component extends DCLogic {
     this._transitioning = true;
     this.setState({ textVisible: false });
     this._textTimer = setTimeout(() => {
-      this.setState({ active: idx });
-      this._revealTimer = setTimeout(() => this.setState({ textVisible: true }), 30);
+      this.setState({ active: idx, textVisible: true });
       this._transitioning = false;
       this._maybeStartAuto();
     }, 260);
@@ -342,8 +340,8 @@ class Component extends DCLogic {
       heroMouseMove,
       heroMouseLeave,
       nextSlide,
-      revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s,opacity .6s ease .35s;transform:translateY(${tv ? 0 : 110}%);opacity:${active === 1 ? (tv ? 1 : .5) : 1}`,
-      revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s,opacity .6s ease .5s;transform:translateY(${tv ? 0 : 110}%);opacity:${active === 1 ? (tv ? 1 : .5) : 1}`,
+      revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s;transform:translateY(${tv ? 0 : 110}%)`,
+      revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s;transform:translateY(${tv ? 0 : 110}%)`,
       revealTagline: `transition:transform .7s ease .75s, opacity .6s ease .75s;transform:translateY(${tv ? 0 : 16}px);opacity:${tv ? 1 : 0}`,
       railProgressStyle: `position:absolute;top:0;left:0;width:100%;height:100%;background:var(--ltsuan-accent);transform-origin:top;transition:transform .7s cubic-bezier(.85,0,.15,1);transform:scaleY(${((active + 1) / this.slideData.length).toFixed(3)})`,
       activeSlideData: this.slideData[active],
