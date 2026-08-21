@@ -38,7 +38,7 @@
 <div style="background:var(--ltsuan-bg)">
   <dc-import name="Nav" active="what-we-do" hint-size="100%,0px"></dc-import>
 
-  <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 56px 100px;border-bottom:1px solid var(--ltsuan-line)">
+  <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 56px 100px 79px;border-bottom:1px solid var(--ltsuan-line)">
     <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
       <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);margin:0 0 60px;max-width:900px">Four Disciplines, One Continuous Process.</h1>
     </div>
@@ -53,13 +53,13 @@
     </div>
   </section>
 
-  <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:100px 56px;background:#141414;border-bottom:1px solid var(--ltsuan-line)">
+  <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:100px 56px 100px 79px;background:#141414;border-bottom:1px solid var(--ltsuan-line)">
     <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 56px;max-width:760px">Built to withstand what the site, the client and the code demand.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line);margin:0 -32px;width:calc(100% + 64px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line)">
       <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="6">
-        <div style="background:#141414;padding:32px">
+        <div style="{{ cap.cardStyle }}">
           <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 10px">{{ cap.title }}</h3>
           <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.7;color:rgba(244,239,232,.55);margin:0;text-align:justify">{{ cap.desc }}</p>
         </div>
@@ -141,7 +141,7 @@ class Component extends DCLogic {
     ];
     const services = items.map((s, i) => ({
       ...s,
-      sectionStyle: `padding:100px 56px;display:flex;gap:64px;flex-wrap:wrap;align-items:stretch;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid var(--ltsuan-line)' : ''}`,
+      sectionStyle: `padding:100px 56px 100px 79px;display:flex;gap:64px;flex-wrap:wrap;align-items:stretch;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid var(--ltsuan-line)' : ''}`,
       imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
       avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
       realImgStyle: s.realImg
@@ -158,7 +158,10 @@ class Component extends DCLogic {
       { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
       { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
       { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints — shared access, weather, and regulatory windows.' },
-    ];
+    ].map((c, i) => ({
+      ...c,
+      cardStyle: i === 0 ? 'background:#141414;padding:32px 32px 32px 0' : 'background:#141414;padding:32px',
+    }));
     return {
       zone0Ref: this.makeZoneRef(0),
       zone1Ref: this.makeZoneRef(1),
