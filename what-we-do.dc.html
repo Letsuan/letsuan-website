@@ -38,27 +38,27 @@
 <div style="background:var(--ltsuan-bg)">
   <dc-import name="Nav" active="what-we-do" hint-size="100%,0px"></dc-import>
 
-  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services" style="padding-top:130px">
-    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-      <section style="{{ svc.sectionStyle }}">
-        <div style="flex:1;min-width:320px;position:relative;min-height:280px">
-          <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:100%"></image-slot>
-          <picture>
-            <source ref="{{ svc.avifRef }}" type="image/avif" />
-            <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
-          </picture>
-        </div>
-        <div style="flex:1;min-width:320px">
-          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px">
+  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services" style="padding:130px 60px 90px 79px;border-bottom:1px solid var(--ltsuan-line)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+        <div>
+          <div style="position:relative;height:160px;margin-bottom:20px;overflow:hidden">
+            <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:100%"></image-slot>
+            <picture>
+              <source ref="{{ svc.avifRef }}" type="image/avif" />
+              <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:20px;margin:0 0 10px">{{ svc.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.6;color:rgba(244,239,232,.65);margin:0 0 14px">{{ svc.desc }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
             <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-              <span style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.05em;color:rgba(244,239,232,.65);border:1px solid var(--ltsuan-line);border-radius:999px;padding:6px 14px">{{ pt }}</span>
+              <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.05em;color:rgba(244,239,232,.6);border:1px solid var(--ltsuan-line);border-radius:999px;padding:4px 10px">{{ pt }}</span>
             </sc-for>
           </div>
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 20px">{{ svc.title }}</h3>
-          <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0;max-width:480px">{{ svc.desc }}</p>
         </div>
-      </section>
-    </sc-for>
+      </sc-for>
+    </div>
   </div>
 
   <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 60px 100px 79px;border-bottom:1px solid var(--ltsuan-line)">
@@ -134,14 +134,13 @@ class Component extends DCLogic {
   }
   renderVals() {
     const items = [
-      { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', rev: false, realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
-      { id: 'interior', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', rev: true, realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
-      { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', rev: false, realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
-      { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', rev: true, realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
+      { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
+      { id: 'interior', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
+      { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
+      { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
     ];
-    const services = items.map((s, i) => ({
+    const services = items.map((s) => ({
       ...s,
-      sectionStyle: `padding:100px 60px 100px 79px;display:flex;gap:64px;flex-wrap:wrap;align-items:stretch;${s.rev ? 'flex-direction:row-reverse' : ''}${i > 0 ? ';border-top:1px solid var(--ltsuan-line)' : ''}`,
       imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
       avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
       realImgStyle: s.realImg
