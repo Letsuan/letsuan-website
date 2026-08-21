@@ -38,6 +38,29 @@
 <div style="background:var(--ltsuan-bg)">
   <dc-import name="Nav" active="what-we-do" hint-size="100%,0px"></dc-import>
 
+  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services" style="padding-top:130px">
+    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
+      <section style="{{ svc.sectionStyle }}">
+        <div style="flex:1;min-width:320px;position:relative;min-height:280px">
+          <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:100%"></image-slot>
+          <picture>
+            <source ref="{{ svc.avifRef }}" type="image/avif" />
+            <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
+          </picture>
+        </div>
+        <div style="flex:1;min-width:320px">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px">
+            <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
+              <span style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.05em;color:rgba(244,239,232,.65);border:1px solid var(--ltsuan-line);border-radius:999px;padding:6px 14px">{{ pt }}</span>
+            </sc-for>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 20px">{{ svc.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0;max-width:480px">{{ svc.desc }}</p>
+        </div>
+      </section>
+    </sc-for>
+  </div>
+
   <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 60px 100px 79px;border-bottom:1px solid var(--ltsuan-line)">
     <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
       <div style="margin-bottom:64px">
@@ -68,31 +91,6 @@
       </sc-for>
     </div>
   </section>
-
-  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services">
-    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-      <section style="{{ svc.sectionStyle }}">
-        <div style="flex:1;min-width:320px;position:relative;min-height:280px">
-          <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:100%"></image-slot>
-          <picture>
-            <source ref="{{ svc.avifRef }}" type="image/avif" />
-            <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
-          </picture>
-        </div>
-        <div style="flex:1;min-width:320px">
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 20px">{{ svc.title }}</h3>
-          <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 28px;max-width:480px">{{ svc.desc }}</p>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-              <div style="display:flex;gap:12px;align-items:baseline;font-family:'Oswald',sans-serif;font-size:14px;color:rgba(244,239,232,.65)">
-                <span style="width:6px;height:6px;border-radius:50%;background:var(--ltsuan-accent);flex-shrink:0;transform:translateY(-2px)"></span>{{ pt }}
-              </div>
-            </sc-for>
-          </div>
-        </div>
-      </section>
-    </sc-for>
-  </div>
 
   <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
@@ -156,10 +154,10 @@ class Component extends DCLogic {
       { title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
     ];
     const capabilities = [
-      { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.' },
-      { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
-      { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
-      { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints — shared access, weather, and regulatory windows.' },
+      { title: 'Spatial Audit', desc: 'We start from circulation, light and brand narrative — mapping foot traffic and sightlines to build the space’s narrative skeleton. Not just a floor plan, but a map of how visitors will actually feel.' },
+      { title: 'Concept & Atmosphere', desc: 'The exhibit’s emotional tone is defined in a single sentence, then built out through material, light temperature and sound into a memorable atmosphere. We communicate it with a mood film, not a rendering.' },
+      { title: 'Technical Design', desc: 'Structural, lighting circuitry, media integration and sustainable material specs are resolved in one pass. Every drawing is held to on-site buildability, with tolerances controlled to within 5mm.' },
+      { title: 'Execution', desc: 'From factory pre-assembly to on-site fine-tuning, we stay until the last light comes on — so the story is delivered exactly as designed, not compromised along the way.' },
     ].map((c, i) => ({
       ...c,
       cardStyle: i === 0 ? 'background:#141414;padding:32px 32px 32px 0' : 'background:#141414;padding:32px',
