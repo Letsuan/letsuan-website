@@ -81,11 +81,12 @@
         <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,transparent 50%,rgba(0,0,0,.3) 100%)"></div>
         <div style="position:absolute;inset:0;opacity:.6;background:radial-gradient(120% 90% at 50% 50%,transparent 60%,rgba(0,0,0,.7) 100%)"></div>
         <div style="{{ slide.doorPanelStyle }}">
+          <div style="{{ slide.doorBlurStyle }}"></div>
           <picture style="display:block;width:100%;height:100%">
             <source ref="{{ slide.doorAvifRef }}" type="image/avif" />
-            <img ref="{{ slide.doorImgRef }}" alt="{{ slide.doorAlt }}" style="width:100%;height:100%;object-fit:cover;object-position:105% 80%;transform:scale(1.2);filter:brightness(0.58);display:block" decoding="async" />
+            <img ref="{{ slide.doorImgRef }}" alt="{{ slide.doorAlt }}" style="{{ slide.doorImgStyle }}" decoding="async" />
           </picture>
-          <div style="{{ slide.doorEdgeStyle }}"></div>
+          <div style="{{ slide.doorTileStyle }}"></div>
         </div>
       </div>
     </sc-for>
@@ -220,10 +221,9 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   slideData = [
-    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-door-panel-letsuan-design.jpg', doorAlt: 'Close-up of a natural wood-grain paneled door' },
-    { num: '02', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/construction-worker-hard-hat-safety-glasses-portrait-letsuan-design.jpg', alt: 'Construction worker in white hard hat and safety glasses, side profile portrait' },
-    { num: '03', title: 'You Become Part of the Art', titleLine1: 'You Become', titleLine2: 'Part of the Art', subtitleLine1: 'We design environments people step into,', subtitleLine2: 'not just look at.', ctaLabel: 'SEE THE WORK', href: './portfolio.dc.html', realImg: './images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', alt: 'Cat Art Museum gallery with parody paintings and visitors' },
-    { num: '04', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Eternal Notre-Dame VR exhibition hall with visitors' },
+    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass' },
+    { num: '02', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Eternal Notre-Dame VR exhibition hall with visitors' },
+    { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/construction-worker-hard-hat-safety-glasses-portrait-letsuan-design.jpg', alt: 'Construction worker in white hard hat and safety glasses, side profile portrait', doorImg: './images/letsuan-hero-slide3-cross-pattern-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of cross-pattern textured glass' },
   ];
   services = [
     { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
@@ -315,21 +315,27 @@ class Component extends DCLogic {
         doorImgRef: (el) => { if (el && s.doorImg) el.src = s.doorImg; },
         doorAvifRef: (el) => { if (el && s.doorImg) el.srcset = s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         doorAlt: s.doorAlt,
-        doorPanelStyle: (i === 0 && s.doorImg)
-          ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none;box-shadow:10px 0 30px rgba(0,0,0,.55)'
+        doorPanelStyle: ((i === 0 || i === 2) && s.doorImg)
+          ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none;box-shadow:inset -3px 0 10px rgba(0,0,0,.35), inset -1px 0 0 rgba(255,255,255,.22), 8px 0 24px rgba(0,0,0,.4);mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%);-webkit-mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%)'
           : 'display:none',
-        doorEdgeStyle: (i === 0 && s.doorImg)
-          ? 'position:absolute;top:0;right:0;bottom:0;width:20px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.5));box-shadow:inset -2px 0 0 rgba(255,255,255,.12)'
+        doorBlurStyle: ((i === 0 || i === 2) && s.doorImg)
+          ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(16px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+          : 'display:none',
+        doorImgStyle: (i === 0 && s.doorImg)
+          ? 'position:relative;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block'
+          : 'display:none',
+        doorTileStyle: (i === 2 && s.doorImg)
+          ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:repeat;background-size:100px 100px;opacity:.8;mix-blend-mode:screen;display:block`
           : 'display:none',
         realImgStyle: s.realImg
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
           : 'display:none',
         placeholder: s.placeholder,
-        parallaxStyle: ((i === 0 || i === 1) && i === active && !this._reducedMotion)
+        parallaxStyle: ((i === 0 || i === 1 || i === 2) && i === active && !this._reducedMotion)
           ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6).toFixed(1)}px, ${(px.y * -5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0;transform:scale(1.05)',
         bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
-        panClass: ((i === 0 || i === 1) && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
+        panClass: ((i === 0 || i === 1 || i === 2) && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
         frostStyle: i === 1
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none'
           : 'display:none',

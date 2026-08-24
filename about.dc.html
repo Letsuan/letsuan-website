@@ -28,133 +28,132 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
   <style>
-    :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a;--ltsuan-line:rgba(244,239,232,.14);--ltsuan-dim:rgba(244,239,232,.6)}
+    :root{--ltsuan-bg:#F3F0E8;--ltsuan-text:#1E1B18;--ltsuan-accent:#7A2432;--ltsuan-accent-hover:#93303F;--ltsuan-line:rgba(30,27,24,.14);--ltsuan-dim:rgba(30,27,24,.6)}
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
     a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-scale-rule{height:1px;background:repeating-linear-gradient(to right,var(--ltsuan-line) 0 1px,transparent 1px 16px)}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
-    @media (max-width:640px){.ltsuan-about-main section{padding-left:24px !important;padding-right:24px !important}.ltsuan-hero-text,.ltsuan-hero-media{min-width:100% !important}}
+    @media (max-width:640px){.ltsuan-about-main section{padding-left:24px !important;padding-right:24px !important}.ltsuan-hero-text,.ltsuan-hero-media{min-width:100% !important}.ltsuan-split{grid-template-columns:1fr !important}.ltsuan-badge{position:static !important;margin:20px 0 0 !important}}
   </style>
 </helmet>
 <div style="background:var(--ltsuan-bg);position:relative">
   <dc-import name="Nav" active="about" hint-size="100%,0px"></dc-import>
 
   <div class="ltsuan-about-main">
-    <section ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Origin" style="padding:150px 60px 100px 79px">
-      <div class="ltsuan-reveal" style="{{ zone0Reveal }};display:flex;gap:64px;flex-wrap:wrap;align-items:center;margin-bottom:72px">
-        <div class="ltsuan-hero-text" style="flex:1.1;min-width:340px">
-          <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5vw,76px);line-height:1.05;letter-spacing:-.01em;margin:0 0 24px;max-width:13ch">Space and story,<br><span style="color:var(--ltsuan-accent)">built by the same hands.</span></h1>
-          <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,1.6vw,26px);line-height:1.45;color:var(--ltsuan-dim);margin:0 0 40px;max-width:38ch">Interior, exhibition and visual design for museums, government agencies and global brands, based in Taiwan.</p>
-          <div style="display:flex;gap:16px;flex-wrap:wrap">
-            <a href="./portfolio.dc.html" style="display:inline-block;padding:16px 36px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:14px;text-decoration:none">See Our Work</a>
-            <a href="./contact.dc.html" style="display:inline-block;padding:16px 36px;border:1px solid var(--ltsuan-line);color:var(--ltsuan-text);border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:14px;text-decoration:none">Get in Touch</a>
-          </div>
+    <section ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Hero" style="padding:150px 60px 0 79px">
+      <div class="ltsuan-reveal" style="{{ zone0Reveal }};position:relative;max-width:900px;margin-bottom:56px">
+        <p style="font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;line-height:1.7;letter-spacing:.03em;color:var(--ltsuan-dim);margin:0 0 20px;max-width:44ch;text-transform:uppercase">One team, from concept to installation. Taiwan-based design and construction studio since 2014.</p>
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(48px,9vw,132px);line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin:0">Le Tsuan<br>Design</h1>
+        <a href="./portfolio.dc.html" class="ltsuan-badge" style="position:absolute;top:0;right:0;width:120px;height:120px;border-radius:50%;border:1px solid var(--ltsuan-line);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--ltsuan-text);text-decoration:none">VIEW<br>PORTFOLIO</a>
+      </div>
+
+      <div class="ltsuan-hero-media" style="position:relative;border-radius:28px;overflow:hidden;height:clamp(320px,42vw,560px)">
+        <picture>
+          <source srcset="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.avif" type="image/avif" />
+          <img src="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg" alt="Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
+        </picture>
+        <div style="position:absolute;left:32px;bottom:-28px;background:var(--ltsuan-bg);border:1px solid var(--ltsuan-line);border-radius:999px;padding:18px 36px">
+          <a href="./contact.dc.html" style="font-family:'Oswald',sans-serif;font-weight:400;font-size:14px;letter-spacing:.05em;color:var(--ltsuan-text);text-decoration:none">GET IN TOUCH →</a>
+        </div>
+      </div>
+      <div style="height:80px"></div>
+    </section>
+
+    <section ref="{{ zone1Ref }}" data-screen-label="About / Room 02 — Studio" style="padding:60px 60px 100px 79px">
+      <div class="ltsuan-reveal ltsuan-split" style="{{ zone1Reveal }};display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start">
+        <div class="ltsuan-hero-media" style="border-radius:24px;overflow:hidden;height:clamp(340px,32vw,540px)">
+          <picture>
+            <source srcset="./images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.avif" type="image/avif" />
+            <img src="./images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg" alt="Eagle sculpture installation at R.O.C. Air Force Academy, an exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
+          </picture>
         </div>
 
-        <div class="ltsuan-hero-media" style="flex:1;min-width:300px;display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:clamp(320px,32vw,440px)">
-          <div style="grid-row:1 / 3;position:relative;border-radius:28px;overflow:hidden">
-            <picture>
-              <source srcset="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.avif" type="image/avif" />
-              <img src="./images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg" alt="Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
-            </picture>
-            <div style="position:absolute;left:0;right:0;bottom:0;padding:0 0 20px;display:flex;justify-content:center;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent 70%)">
-              <div style="font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.16em;color:#f4efe8;text-align:center;padding:0 12px">MASTERS OF MARINE ILLUSION — TAICHUNG AQUARIUM</div>
-            </div>
-          </div>
-          <div style="border-radius:20px;overflow:hidden">
-            <picture>
-              <source srcset="./images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.avif" type="image/avif" />
-              <img src="./images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg" alt="Eagle sculpture installation at R.O.C. Air Force Academy, an exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
-            </picture>
-          </div>
-          <div style="border-radius:20px;overflow:hidden">
+        <div>
+          <div style="border-radius:24px;overflow:hidden;height:clamp(160px,16vw,220px);margin-bottom:40px">
             <picture>
               <source srcset="./images/hakka-culture-entrance-feature-wall-with-tree-cutout-letsuan-design.avif" type="image/avif" />
               <img src="./images/hakka-culture-entrance-feature-wall-with-tree-cutout-letsuan-design.jpg" alt="Entrance feature wall at a Hakka culture exhibition, a visual and exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
             </picture>
           </div>
-        </div>
-      </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
-        <div style="border:1px solid var(--ltsuan-line);border-radius:20px;padding:24px 26px">
-          <div style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,3.6vw,48px);color:var(--ltsuan-accent);line-height:1;margin-bottom:8px">42+</div>
-          <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:var(--ltsuan-dim)">PROJECTS DELIVERED</div>
-        </div>
-        <div style="border:1px solid var(--ltsuan-line);border-radius:20px;padding:24px 26px">
-          <div style="font-family:'Oswald',sans-serif;font-weight:400;font-size:23px;color:#f4efe8;margin-bottom:12px">2014</div>
-          <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:var(--ltsuan-dim)">STUDIO FOUNDED</div>
-        </div>
-        <div style="border:1px solid var(--ltsuan-line);border-radius:20px;padding:24px 26px">
-          <div style="font-family:'Oswald',sans-serif;font-weight:400;font-size:23px;color:#f4efe8;margin-bottom:12px">TW</div>
-          <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:var(--ltsuan-dim)">TAICHUNG · TAIPEI</div>
-        </div>
-        <div style="border:1px solid var(--ltsuan-line);border-radius:20px;padding:24px 26px">
-          <div style="font-family:'Oswald',sans-serif;font-weight:400;font-size:23px;color:#f4efe8;margin-bottom:12px">17,000+ m²</div>
-          <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.15em;color:var(--ltsuan-dim)">SPACE DELIVERED</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section ref="{{ zone1Ref }}" data-screen-label="About / Room 02 — Philosophy" style="padding:100px 60px 0 79px">
-      <div class="ltsuan-reveal" style="{{ zone1Reveal }};max-width:70ch">
-        <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0 0 24px">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. We work across museums, aquariums, cultural venues, corporate spaces and public installations — wherever a physical space needs to carry a message.</p>
-        <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:0">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install — and keep every detail in service of the same idea.</p>
-        <p style="font-family:'Oswald',sans-serif;font-size:19px;line-height:1.75;color:rgba(244,239,232,.85);margin:24px 0 0">We scale the team to the project, bringing in licensed architects, fire-safety engineers, civil engineers and quality-control inspectors as each site and regulatory requirement demands.</p>
-      </div>
-
-      <div style="margin-top:90px;padding:80px 0">
-        <div class="ltsuan-scale-rule" style="margin-bottom:80px"></div>
-        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,5vw,64px);line-height:1.15;letter-spacing:-.01em;margin:0;max-width:40ch">The same team that designs the space<br><span style="color:var(--ltsuan-accent)">also builds it.</span></p>
-        <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.7;color:rgba(244,239,232,.65);margin:24px 0 0;max-width:56ch">Licensed architects, fire-safety and structural engineers join as each project demands.</p>
-      </div>
-    </section>
-
-    <section ref="{{ zone2Ref }}" data-screen-label="About / Room 03 — Sustainability" style="padding:0 60px 100px 79px">
-      <div class="ltsuan-reveal" style="{{ zone2Reveal }};max-width:70ch;padding:44px 40px;border:1px solid var(--ltsuan-line)">
-        <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 16px">Sustainability runs through how we build: non-invasive structural systems that protect heritage sites and historic fabric.</p>
-        <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0 0 16px">Our green building material usage rate meets the current legal minimum of 60%, balancing environmental responsibility with client cost.</p>
-        <p style="font-family:'Oswald',sans-serif;font-size:17px;line-height:1.75;color:rgba(244,239,232,.75);margin:0">As a licensed interior decorator, we apply the same regulatory and safety standards to our subcontractors that we apply to ourselves.</p>
-      </div>
-    </section>
-
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section ref="{{ zone3Ref }}" data-screen-label="About / Room 04 — Record" style="padding:100px 60px 90px 79px">
-      <div class="ltsuan-reveal" style="{{ zone3Reveal }};border-top:1px solid var(--ltsuan-line);border-bottom:1px solid var(--ltsuan-line);padding:44px 0">
-        <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-dim);margin-bottom:20px">SELECTED CLIENTS</div>
-        <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.6;color:rgba(244,239,232,.65);margin:0 0 20px;max-width:56ch">We have partnered with <span style="font-family:'Oswald',sans-serif">7+</span> government agencies and public institutions.</p>
-        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2.4vw,30px);line-height:1.5;color:#f4efe8;margin:0;max-width:56ch">National Museum of Natural Science · National Museum of History · National Taiwan Museum of Fine Arts · Ministry of Culture · R.O.C. Air Force Academy · Ørsted · TSMC · HTC · FedEx · Toei · Shogakukan · SinoPac Securities</p>
-        <a href="./portfolio.dc.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-family:'Oswald',sans-serif;font-size:14px;color:var(--ltsuan-accent);text-decoration:none">See our work with them →</a>
-      </div>
-      <p style="font-family:'Oswald',sans-serif;font-size:12px;line-height:1.7;color:var(--ltsuan-dim);margin:20px 0 0">Licensed Interior Decorator — Registration No. 40E2007●●●. We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
-    </section>
-
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Principle" style="padding:100px 60px 140px 79px">
-      <div class="ltsuan-reveal" style="{{ zone4Reveal }}">
-        <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0 0 8px">How We Work</h2>
-      </div>
-      <div>
-        <sc-for list="{{ principles }}" as="p" hint-placeholder-count="3">
-          <div style="display:flex;gap:40px;align-items:baseline;padding:36px 0;border-top:1px solid var(--ltsuan-line);flex-wrap:wrap">
-            <div style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5vw,64px);color:var(--ltsuan-accent);line-height:1;min-width:90px">{{ p.num }}</div>
-            <div style="flex:1;min-width:280px">
-              <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:24px;margin:0 0 10px">{{ p.title }}</h3>
-              <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.7;color:rgba(244,239,232,.65);margin:0;max-width:60ch">{{ p.desc }}</p>
+          <div class="ltsuan-split" style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+            <div>
+              <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-accent);margin-bottom:14px">THE STUDIO</div>
+              <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.75;color:rgba(30,27,24,.8);margin:0">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction — staying involved from the first sketch to the final install, and scaling in licensed architects and engineers as each site demands.</p>
+            </div>
+            <div>
+              <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-dim);margin-bottom:14px">KEY STRENGTHS</div>
+              <div>
+                <sc-for list="{{ keyStrengths }}" as="ks" hint-placeholder-count="6">
+                  <div style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.9;color:rgba(30,27,24,.75)">— {{ ks }}</div>
+                </sc-for>
+              </div>
             </div>
           </div>
-        </sc-for>
+        </div>
       </div>
     </section>
 
     <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
 
-    <section ref="{{ zone5Ref }}" data-screen-label="About / Room 06 — Services" style="padding:100px 60px 90px 79px">
-      <div class="ltsuan-reveal" style="{{ zone5Reveal }};display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:56px">
+    <section ref="{{ zone2Ref }}" data-screen-label="About / Room 03 — Record" style="padding:100px 60px 100px 79px">
+      <div class="ltsuan-reveal ltsuan-split" style="{{ zone2Reveal }};display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:start">
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(32px,4.4vw,54px);line-height:1.05;margin:0">Nothing is<br>outsourced.</h2>
+
+        <div>
+          <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
+            <div style="{{ st.rowStyle }}">
+              <div style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(30px,3.4vw,40px);min-width:150px;{{ st.valueColor }}">{{ st.value }}</div>
+              <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.6;{{ st.descColor }};margin:0">{{ st.desc }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
+
+    <section ref="{{ zone3Ref }}" data-screen-label="About / Room 04 — Sustainability & Clients" style="padding:100px 60px 90px 79px">
+      <div class="ltsuan-reveal ltsuan-split" style="{{ zone3Reveal }};display:grid;grid-template-columns:1fr 1fr;gap:56px">
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-accent);margin-bottom:20px">SUSTAINABILITY</div>
+          <div style="border-radius:20px;overflow:hidden;height:200px;margin-bottom:24px">
+            <picture>
+              <source srcset="./images/green-energy-vision-pavilion-01-letsuan-design.avif" type="image/avif" />
+              <img src="./images/green-energy-vision-pavilion-01-letsuan-design.jpg" alt="Green Energy Vision pavilion, an interior design project by Le Tsuan Design demonstrating non-invasive sustainable construction" style="width:100%;height:100%;object-fit:cover;display:block" />
+            </picture>
+          </div>
+          <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.75;color:rgba(30,27,24,.75);margin:0 0 14px">Non-invasive structural systems protect heritage sites and historic fabric. Our green building material usage meets the legal minimum of 60%, balancing environmental responsibility with client cost.</p>
+          <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.75;color:rgba(30,27,24,.75);margin:0">As a licensed interior decorator, we apply the same regulatory and safety standards to our subcontractors that we apply to ourselves.</p>
+        </div>
+
+        <div>
+          <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-dim);margin-bottom:20px">SELECTED CLIENTS</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px">
+            <div style="border-radius:20px;overflow:hidden;height:200px">
+              <picture>
+                <source srcset="./images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.avif" type="image/avif" />
+                <img src="./images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.jpg" alt="Gallery corridor at a Hakka culture exhibition, an exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
+              </picture>
+            </div>
+            <div style="border-radius:20px;overflow:hidden;height:200px">
+              <picture>
+                <source srcset="./images/asian-art-biennial-02-letsuan-design.avif" type="image/avif" />
+                <img src="./images/asian-art-biennial-02-letsuan-design.jpg" alt="Asian Art Biennial installation, an exhibition design project by Le Tsuan Design" style="width:100%;height:100%;object-fit:cover;display:block" />
+              </picture>
+            </div>
+          </div>
+          <p style="font-family:'Oswald',sans-serif;font-size:15px;line-height:1.75;color:rgba(30,27,24,.75);margin:0 0 14px">We have partnered with 7+ government agencies and public institutions, including National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC, FedEx, Toei, Shogakukan and SinoPac Securities.</p>
+          <a href="./portfolio.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:14px;color:var(--ltsuan-accent);text-decoration:none">See our work with them →</a>
+          <p style="font-family:'Oswald',sans-serif;font-size:12px;line-height:1.7;color:var(--ltsuan-dim);margin:20px 0 0">Licensed Interior Decorator — Registration No. 40E2007●●●. We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
+
+    <section ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Services" style="padding:100px 60px 90px 79px">
+      <div class="ltsuan-reveal" style="{{ zone4Reveal }};display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:56px">
         <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0">Services</h2>
         <a href="./what-we-do.dc.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:14px;color:var(--ltsuan-accent);text-decoration:none">See full services →</a>
       </div>
@@ -162,10 +161,10 @@
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
           <div style="flex:1 1 240px;min-width:240px;border:1px solid var(--ltsuan-line);border-radius:20px;padding:32px 28px">
             <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:19px;margin:0 0 10px">{{ svc.title }}</h3>
-            <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.65;color:rgba(244,239,232,.65);margin:0 0 16px">{{ svc.desc }}</p>
+            <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.65;color:rgba(30,27,24,.65);margin:0 0 16px">{{ svc.desc }}</p>
             <div style="display:flex;flex-wrap:wrap;gap:8px">
               <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-                <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.05em;color:rgba(244,239,232,.6);border:1px solid var(--ltsuan-line);border-radius:999px;padding:4px 10px">{{ pt }}</span>
+                <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.05em;color:rgba(30,27,24,.6);border:1px solid var(--ltsuan-line);border-radius:999px;padding:4px 10px">{{ pt }}</span>
               </sc-for>
             </div>
           </div>
@@ -173,9 +172,9 @@
       </div>
     </section>
 
-    <section ref="{{ zone6Ref }}" data-screen-label="About / Room 07 — Visit" style="padding:130px 56px;text-align:center;background:#141414;border-top:1px solid var(--ltsuan-line)">
-      <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Want to work with us?</h2>
-      <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
+    <section ref="{{ zone5Ref }}" data-screen-label="About / Room 06 — Visit" style="padding:130px 56px;text-align:center;background:var(--ltsuan-accent)">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px;color:var(--ltsuan-bg)">Want to work with us?</h2>
+      <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-bg);color:var(--ltsuan-accent);border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Get in Touch</a>
     </section>
 
     <dc-import name="Footer" hint-size="100%,320px"></dc-import>
@@ -220,18 +219,34 @@ class Component extends DCLogic {
       zone3Ref: this.makeZoneRef(3),
       zone4Ref: this.makeZoneRef(4),
       zone5Ref: this.makeZoneRef(5),
-      zone6Ref: this.makeZoneRef(6),
       zone0Reveal: this.revealStyle(0),
       zone1Reveal: this.revealStyle(1),
       zone2Reveal: this.revealStyle(2),
       zone3Reveal: this.revealStyle(3),
       zone4Reveal: this.revealStyle(4),
-      zone5Reveal: this.revealStyle(5),
-      principles: [
-        { num: '01', title: 'Narrative First', desc: 'Every project starts from the story a space needs to tell, not from a floor plan.' },
-        { num: '02', title: 'One Team, Full Delivery', desc: 'Design and structural engineering move in parallel, so the concept stays buildable from day one.' },
-        { num: '03', title: 'Built to Last', desc: 'We design for the visitors who will walk through a space for years, not just the opening day.' },
+      keyStrengths: [
+        'Narrative-led design, not just floor plans',
+        'One team — design and construction in parallel',
+        'Built for the visitors who arrive years later',
+        'Non-invasive systems for heritage sites',
+        'Licensed architects and engineers scaled to each project',
+        '42+ projects delivered across Taiwan',
       ],
+      stats: (() => {
+        const rows = [
+          { value: '42+', desc: 'Museums, government agencies and global brands across Taiwan, each carried from concept to installation by the same team.' },
+          { value: '2014', desc: 'A decade of narrative-led design and in-house fabrication, based in Taichung and Taipei.' },
+          { value: '17,000+ m²', desc: 'Of exhibition, interior and public space engineered, built and installed without outsourcing.', highlight: true },
+        ];
+        return rows.map((r) => ({
+          ...r,
+          rowStyle: r.highlight
+            ? 'display:flex;gap:32px;align-items:baseline;flex-wrap:wrap;padding:28px 24px;background:var(--ltsuan-accent);border-radius:16px'
+            : 'display:flex;gap:32px;align-items:baseline;flex-wrap:wrap;padding:28px 24px;border-top:1px solid var(--ltsuan-line)',
+          valueColor: r.highlight ? 'color:var(--ltsuan-bg)' : 'color:var(--ltsuan-accent)',
+          descColor: r.highlight ? 'color:rgba(243,240,232,.8)' : 'color:rgba(30,27,24,.6)',
+        }));
+      })(),
       services: [
         { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', points: ['Concept & content planning', 'Object research & sourcing', 'Narrative scripting'] },
         { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'] },
