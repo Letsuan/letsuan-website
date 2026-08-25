@@ -39,16 +39,22 @@
     @keyframes ltsuanBeam{0%{transform:translateY(-100%)}100%{transform:translateY(500%)}}
     @keyframes ltsuanBgLightSweep{0%{transform:translateX(0);filter:brightness(1)}50%{transform:translateX(-25px);filter:brightness(1.18)}100%{transform:translateX(0);filter:brightness(1)}}
     @keyframes ltsuanPanLR{0%{object-position:85% 45%}100%{object-position:15% 45%}}
+    @keyframes ltsuanPanStatic{0%{object-position:50% 45%}100%{object-position:50% 45%}}
+    @keyframes ltsuanZoomIn{0%{transform:scale(1) translateY(0)}100%{transform:scale(0.96) translateY(0)}}
+    @keyframes ltsuanPersonGrow{0%{transform:scale(.96)}100%{transform:scale(1.04)}}
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
     .ltsuan-pan-lr{animation:ltsuanPanLR 5s ease-in-out 1 forwards}
+    .ltsuan-pan-static{animation:ltsuanPanStatic 5s linear 1 forwards}
+    .ltsuan-zoom-in{animation:ltsuanZoomIn 5s ease-out 1 forwards}
+    .ltsuan-person-grow{animation:ltsuanPersonGrow 5s ease-out 1 forwards;transform-origin:center bottom}
     @media (max-width:900px){
       .ltsuan-hero-deco{display:none}
       .ltsuan-hero-text{max-width:92%}
     }
     @media (prefers-reduced-motion:reduce){
-      .ltsuan-ping,.ltsuan-beam,.ltsuan-bg-light-sweep,.ltsuan-pan-lr{animation:none}
+      .ltsuan-ping,.ltsuan-beam,.ltsuan-bg-light-sweep,.ltsuan-pan-lr,.ltsuan-pan-static,.ltsuan-zoom-in,.ltsuan-person-grow{animation:none}
     }
   </style>
 </helmet>
@@ -57,7 +63,7 @@
     <defs>
       <filter id="ltsuanFlutedGlass" x="-25%" y="-25%" width="150%" height="150%">
         <feImage href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='0'%3E%3Cstop offset='0' stop-color='%23008080'/%3E%3Cstop offset='0.5' stop-color='%23ff8080'/%3E%3Cstop offset='1' stop-color='%23008080'/%3E%3C/linearGradient%3E%3Cpattern id='p' width='12' height='100' patternUnits='userSpaceOnUse'%3E%3Crect width='12' height='100' fill='url(%23g)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23p)'/%3E%3C/svg%3E" x="0" y="0" width="100%" height="100%" preserveAspectRatio="none" result="ltsuanRibs" />
-        <feDisplacementMap in="SourceGraphic" in2="ltsuanRibs" scale="32" xChannelSelector="R" yChannelSelector="G" />
+        <feDisplacementMap in="SourceGraphic" in2="ltsuanRibs" scale="22" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
   </svg>
@@ -72,6 +78,12 @@
             <picture class="{{ slide.bgSweepClass }}" style="display:block;width:100%;height:100%">
               <source ref="{{ slide.avifRef }}" type="image/avif" />
               <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" class="{{ slide.panClass }}" style="{{ slide.realImgStyle }}" decoding="async" />
+            </picture>
+          </div>
+          <div style="{{ slide.personStyle }}">
+            <picture style="display:block;width:100%;height:100%">
+              <source ref="{{ slide.personAvifRef }}" type="image/avif" />
+              <img ref="{{ slide.personImgRef }}" alt="{{ slide.personAlt }}" class="{{ slide.personZoomClass }}" style="{{ slide.personImgStyle }}" decoding="async" />
             </picture>
           </div>
           <div style="{{ slide.frostStyle }}"><div style="{{ slide.frostInnerStyle }}"></div></div>
@@ -107,12 +119,14 @@
               <span style="display:block;overflow:hidden;padding-bottom:.2em;margin-top:calc(-.05em + 5px)"><span ref="{{ titleLine2Ref }}" style="display:block;font-weight:300;{{ revealLine2 }}">Moments</span></span>
             </h1>
           </div>
-          <div style="margin-top:15px;{{ revealTagline }}">
-            <div style="margin-bottom:22px">
-              <p style="font-family:'Oswald',sans-serif;font-size:clamp(30px,2.4vw,40px);font-weight:300;letter-spacing:-.01em;color:rgba(244,239,232,.9);margin:0;max-width:36ch;line-height:1.08"><span ref="{{ subtitleLine1Ref }}">Not just spaces —</span><span style="{{ subtitleLine2WrapStyle }}"><br><span ref="{{ subtitleLine2Ref }}"></span></span></p>
+          <div style="margin-top:15px">
+            <div style="margin-bottom:22px;overflow:hidden;padding-bottom:.2em">
+              <p style="font-family:'Oswald',sans-serif;font-size:clamp(30px,2.4vw,40px);font-weight:300;letter-spacing:-.01em;color:rgba(244,239,232,.9);margin:0;max-width:36ch;line-height:1.08;{{ revealSubtitle }}"><span ref="{{ subtitleLine1Ref }}">Not just spaces —</span><span style="{{ subtitleLine2WrapStyle }}"><br><span ref="{{ subtitleLine2Ref }}"></span></span></p>
             </div>
-            <div style="display:flex;align-items:center;gap:20px">
-              <a ref="{{ ctaRef }}" href="./about.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 28px;border-radius:999px;border:1px solid rgba(244,239,232,.25);background:rgba(244,239,232,.06);backdrop-filter:blur(6px);font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ltsuan-text);text-decoration:none;transition:all .35s ease" style-hover="background:var(--ltsuan-text);border-color:var(--ltsuan-text);color:#0A0A0A"><span ref="{{ ctaLabelRef }}">OUR STORY</span><span style="width:20px;height:1px;background:currentColor;opacity:.6"></span></a>
+            <div style="overflow:hidden;padding-bottom:.2em">
+              <div style="display:flex;align-items:center;gap:20px;{{ revealButton }}">
+                <a ref="{{ ctaRef }}" href="./about.dc.html" style="pointer-events:auto;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 28px;border-radius:999px;border:1px solid rgba(244,239,232,.25);background:rgba(244,239,232,.06);backdrop-filter:blur(6px);font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ltsuan-text);text-decoration:none;transition:all .35s ease" style-hover="background:var(--ltsuan-text);border-color:var(--ltsuan-text);color:#0A0A0A"><span ref="{{ ctaLabelRef }}">OUR STORY</span><span style="width:20px;height:1px;background:currentColor;opacity:.6"></span></a>
+              </div>
             </div>
           </div>
         </div>
@@ -221,9 +235,9 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   slideData = [
-    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass' },
-    { num: '02', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Eternal Notre-Dame VR exhibition hall with visitors' },
-    { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/construction-worker-hard-hat-safety-glasses-portrait-letsuan-design.jpg', alt: 'Construction worker in white hard hat and safety glasses, side profile portrait', doorImg: './images/letsuan-hero-slide3-cross-pattern-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of cross-pattern textured glass' },
+    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-sparkle-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of sparkling star-patterned frosted glass' },
+    { num: '02', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide2-blue-floral-installation-letsuan-design.jpg', alt: 'Blue floral light installation with cascading illuminated strands and scattered petals', doorImg: './images/letsuan-hero-slide2-fluted-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of fluted reeded glass' },
+    { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/letsuan-hero-slide3-milky-way-bg-letsuan-design.jpg', alt: 'Milky Way night sky with dense stars', doorImg: './images/letsuan-hero-slide3-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass', personImg: './images/letsuan-hero-slide3-worker-cutout-letsuan-design.png', personAlt: 'Construction worker in white hard hat and safety glasses, side profile portrait, cut out' },
   ];
   services = [
     { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
@@ -270,6 +284,20 @@ class Component extends DCLogic {
       void el.offsetHeight;
       el.style.animation = '';
     }
+    if (idx === 2 && this._zoomImgEl && !this._reducedMotion) {
+      // Restart the pan+zoom so slide 3 always starts from scale(1) when it becomes active.
+      const el = this._zoomImgEl;
+      el.style.animation = 'none';
+      void el.offsetHeight;
+      el.style.animation = '';
+    }
+    if (idx === 2 && this._personZoomImgEl && !this._reducedMotion) {
+      // Restart the person grow so it always starts small again when slide 3 becomes active.
+      const el = this._personZoomImgEl;
+      el.style.animation = 'none';
+      void el.offsetHeight;
+      el.style.animation = '';
+    }
     this._transitioning = true;
     this.setState({ textVisible: false });
     this._textTimer = setTimeout(() => {
@@ -310,38 +338,57 @@ class Component extends DCLogic {
           if (!el) return;
           if (s.realImg) el.src = s.realImg;
           if (i === 1) { el.onanimationend = this._onPanEnd; this._panImgEl = el; }
+          if (i === 2) { this._zoomImgEl = el; }
         },
         avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        personImgRef: (el) => {
+          if (!el || !s.personImg) return;
+          el.src = s.personImg;
+          if (i === 2) { this._personZoomImgEl = el; }
+        },
+        personAvifRef: (el) => { if (el && s.personImg) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        personAlt: s.personAlt,
+        personZoomClass: (s.personImg && i === 2 && !this._reducedMotion) ? 'ltsuan-person-grow' : '',
+        personStyle: (s.personImg && i === active && !this._reducedMotion)
+          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -15.4).toFixed(1)}px, ${(px.y * -11).toFixed(1)}px)`
+          : (s.personImg ? 'position:absolute;inset:0' : 'display:none'),
+        personImgStyle: s.personImg
+          ? 'width:100%;height:100%;object-fit:cover;object-position:center 100%;display:block'
+          : 'display:none',
         doorImgRef: (el) => { if (el && s.doorImg) el.src = s.doorImg; },
         doorAvifRef: (el) => { if (el && s.doorImg) el.srcset = s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         doorAlt: s.doorAlt,
-        doorPanelStyle: ((i === 0 || i === 2) && s.doorImg)
+        doorPanelStyle: ((i === 0 || i === 1 || i === 2) && s.doorImg)
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none;box-shadow:inset -3px 0 10px rgba(0,0,0,.35), inset -1px 0 0 rgba(255,255,255,.22), 8px 0 24px rgba(0,0,0,.4);mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%);-webkit-mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%)'
           : 'display:none',
-        doorBlurStyle: ((i === 0 || i === 2) && s.doorImg)
-          ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(16px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+        doorBlurStyle: (i === 1 && s.doorImg)
+          ? 'position:absolute;inset:0;backdrop-filter:blur(4px) saturate(85%) brightness(1.35);-webkit-backdrop-filter:blur(4px) saturate(85%) brightness(1.35);background:rgba(255,255,255,.05) repeating-linear-gradient(90deg,rgba(0,0,0,.14) 0px,rgba(255,255,255,.08) 2px,rgba(255,255,255,.28) 9px,rgba(0,0,0,.1) 16px,rgba(255,255,255,.04) 22px,rgba(0,0,0,.16) 23px);filter:url(#ltsuanFlutedGlass);border-right:1px solid rgba(244,239,232,.1)'
+          : ((i === 0 && s.doorImg)
+            ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(16px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+            : ((i === 2 && s.doorImg)
+              ? 'position:absolute;inset:0;backdrop-filter:blur(36px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(36px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+              : 'display:none')),
+        doorImgStyle: (i === 1 && s.doorImg)
+          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.22;mix-blend-mode:screen;filter:brightness(.6) contrast(2.2) saturate(.3);display:block'
           : 'display:none',
-        doorImgStyle: (i === 0 && s.doorImg)
-          ? 'position:relative;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block'
-          : 'display:none',
-        doorTileStyle: (i === 2 && s.doorImg)
-          ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:repeat;background-size:100px 100px;opacity:.8;mix-blend-mode:screen;display:block`
-          : 'display:none',
+        doorTileStyle: (i === 0 && s.doorImg)
+          ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.66;mix-blend-mode:screen;filter:brightness(.6) contrast(2.64);display:block`
+          : ((i === 2 && s.doorImg)
+            ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block`
+            : 'display:none'),
         realImgStyle: s.realImg
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
           : 'display:none',
         placeholder: s.placeholder,
-        parallaxStyle: ((i === 0 || i === 1 || i === 2) && i === active && !this._reducedMotion)
-          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6).toFixed(1)}px, ${(px.y * -5).toFixed(1)}px) scale(1.05)`
+        parallaxStyle: ((i === 0 || i === 2) && i === active && !this._reducedMotion)
+          ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6.6).toFixed(1)}px, ${(px.y * -5.5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0;transform:scale(1.05)',
-        bgSweepClass: (i === 1 && !this._reducedMotion) ? 'ltsuan-bg-light-sweep' : '',
-        panClass: ((i === 0 || i === 1 || i === 2) && !this._reducedMotion) ? 'ltsuan-pan-lr' : '',
-        frostStyle: i === 1
-          ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none'
-          : 'display:none',
-        frostInnerStyle: i === 1
-          ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);background:rgba(255,255,255,.04) repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0px,rgba(255,255,255,.03) 1px,rgba(255,255,255,.26) 14px,rgba(0,0,0,.16) 28px,rgba(255,255,255,.03) 47px,rgba(0,0,0,.22) 48px,rgba(255,255,255,.02) 49px,rgba(255,255,255,.16) 62px,rgba(0,0,0,.1) 76px,rgba(255,255,255,.02) 95px,rgba(0,0,0,.22) 96px);filter:url(#ltsuanFlutedGlass);border-right:1px solid rgba(244,239,232,.1)'
-          : 'display:none',
+        bgSweepClass: '',
+        panClass: !this._reducedMotion
+          ? (i === 1 ? 'ltsuan-pan-static' : ((i === 0 || i === 2) ? `ltsuan-pan-lr${i === 2 ? ' ltsuan-zoom-in' : ''}` : ''))
+          : '',
+        frostStyle: 'display:none',
+        frostInnerStyle: 'display:none',
         layerStyle: `position:absolute;inset:0;overflow:hidden;z-index:${i === active ? 2 : 1};transition:transform 1.1s cubic-bezier(.76,0,.24,1);transform:translateY(${offset}%);backface-visibility:hidden;will-change:${i === active ? 'transform' : 'auto'}`,
         imgStyle: 'width:100%;height:100%;transform:none',
         numLabel: String(i + 1).padStart(2, '0'),
@@ -362,7 +409,8 @@ class Component extends DCLogic {
       nextSlide,
       revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s;transform:translateY(${tv ? 0 : 110}%)`,
       revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s;transform:translateY(${tv ? 0 : 110}%)`,
-      revealTagline: `transition:transform .7s ease .75s, opacity .6s ease .75s;transform:translateY(${tv ? 0 : 16}px);opacity:${tv ? 1 : 0}`,
+      revealSubtitle: `display:block;transition:transform .9s cubic-bezier(.16,1,.3,1) .65s;transform:translateY(${tv ? 0 : 110}%)`,
+      revealButton: `transition:transform .9s cubic-bezier(.16,1,.3,1) .8s;transform:translateY(${tv ? 0 : 110}%)`,
       railProgressStyle: `position:absolute;top:0;left:0;width:100%;height:100%;background:var(--ltsuan-accent);transform-origin:top;transition:transform .7s cubic-bezier(.85,0,.15,1);transform:scaleY(${((active + 1) / this.slideData.length).toFixed(3)})`,
       activeSlideData: this.slideData[active],
       activeTitleNode: this.slideData[active].title,
