@@ -33,8 +33,16 @@
     a{color:var(--ltsuan-accent)}
     a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-hero-text{max-width:44%}
-    @media (min-width:1400px){
-      .ltsuan-hero-text{transform:translateX(-15%)}
+    .ltsuan-hero-title{font-size:clamp(40px,8vw,120px)}
+    @media (min-width:1700px){
+      .ltsuan-hero-text{transform:translateX(-15%);max-width:48%}
+      .ltsuan-hero-title{font-size:clamp(120px,6.2vw,145px)}
+      .ltsuan-hero-container{max-width:1500px}
+    }
+    @media (min-width:2200px){
+      .ltsuan-hero-text{transform:translateX(-20%);max-width:50%}
+      .ltsuan-hero-title{font-size:clamp(120px,6.2vw,165px)}
+      .ltsuan-hero-container{max-width:1750px}
     }
     .ltsuan-hero-rail{display:flex;flex-direction:column;align-items:center;gap:24px}
     .ltsuan-hero-scrollcue{display:flex;align-items:center;gap:10px}
@@ -139,10 +147,10 @@
     </div>
 
     <div style="position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;align-items:center">
-      <div style="width:100%;max-width:1280px;margin:0 auto;padding:0 6vw">
+      <div class="ltsuan-hero-container" style="width:100%;max-width:1280px;margin:0 auto;padding:0 6vw 0 max(6vw,100px)">
         <div class="ltsuan-hero-text" style="position:relative">
           <div style="position:relative">
-            <h1 style="font-family:'Oswald',sans-serif;font-size:clamp(40px,8vw,120px);line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
+            <h1 class="ltsuan-hero-title" style="font-family:'Oswald',sans-serif;line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
               <span style="display:block;overflow:hidden;padding-bottom:.2em"><span ref="{{ titleLine1Ref }}" style="display:block;font-weight:300;{{ revealLine1 }}">We Craft</span></span>
               <span style="display:block;overflow:hidden;padding-bottom:.2em;margin-top:calc(-.05em + 5px)"><span ref="{{ titleLine2Ref }}" style="display:block;font-weight:300;{{ revealLine2 }}">Moments</span></span>
             </h1>
@@ -238,10 +246,10 @@
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);margin:0">Selected Work</h2>
       <a href="./portfolio.dc.html" style="font-family:'Oswald',sans-serif;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ltsuan-accent);padding-bottom:3px">View full portfolio →</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
-      <sc-for list="{{ featuredProjects }}" as="p" hint-placeholder-count="3">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+      <sc-for list="{{ featuredProjects }}" as="p" hint-placeholder-count="4">
         <a href="{{ p.href }}" style="text-decoration:none;color:inherit;display:block">
-          <div style="position:relative;height:400px;overflow:hidden;margin-bottom:18px">
+          <div style="position:relative;height:320px;overflow:hidden;margin-bottom:18px">
             <image-slot id="feat-{{ p.id }}" shape="rect" placeholder="{{ p.placeholder }}" style="width:100%;height:100%"></image-slot>
             <picture>
               <source ref="{{ p.avifRef }}" type="image/avif" />
@@ -268,15 +276,16 @@ class Component extends DCLogic {
     { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/letsuan-hero-slide3-milky-way-bg-letsuan-design.jpg', alt: 'Milky Way night sky with dense stars', doorImg: './images/letsuan-hero-slide3-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass', personImg: './images/letsuan-hero-slide3-worker-cutout-letsuan-design.png', personAlt: 'Construction worker in white hard hat and safety glasses, side profile portrait, cut out' },
   ];
   services = [
-    { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
-    { id: 'interior', title: 'Interior Design', desc: 'Commercial and institutional interiors designed around how people actually move and gather.', href: './portfolio.dc.html', placeholder: 'interior design photo', realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
-    { id: 'visual', title: 'Interactive Multimedia', desc: 'Digital installations, projection and interactive media that bring exhibitions to life.', href: './portfolio.dc.html', placeholder: 'visual design photo', realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
-    { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to reality.', href: './portfolio.dc.html', placeholder: 'construction photo', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
+    { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html?cat=Exhibition+Design', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
+    { id: 'interior', title: 'Interior Design', desc: 'Commercial and institutional interiors designed around how people actually move and gather.', href: './portfolio.dc.html?cat=Interior+Design', placeholder: 'interior design photo', realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
+    { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and environmental graphics that carry a brand through physical space.', href: './portfolio.dc.html?cat=Visual+Design', placeholder: 'visual design photo', realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
+    { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to reality.', href: './what-we-do.dc.html', placeholder: 'construction photo', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
   ];
   featuredProjects = [
     { id: 'marine-illusion', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', category: 'Exhibition', year: '2026', href: './project-marine-illusion.dc.html', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg' },
     { id: 'ocean', title: 'Beyond Just an Exhibition—You Are Part of the Art!', subtitle: 'A Breathing Magical Universe of Light and Shadows', category: 'Exhibition', year: '2024', href: './project-beyond-just-an-exhibition.dc.html', objectPosition: 'center 30%', realImg: './images/ocean-mimic-hero-opt-letsuan-design.jpg' },
     { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg' },
+    { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art.dc.html', realImg: './images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg' },
   ];
   state = { active: 0, auto: !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches), textVisible: true, parallax: { x: 0, y: 0 } };
   componentDidMount() {
@@ -403,21 +412,21 @@ class Component extends DCLogic {
         doorPanelStyle: ((i === 0 || i === 1 || i === 2) && s.doorImg)
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none;box-shadow:inset -3px 0 10px rgba(0,0,0,.35), inset -1px 0 0 rgba(255,255,255,.22), 8px 0 24px rgba(0,0,0,.4);mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%);-webkit-mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%)'
           : 'display:none',
-        doorBlurStyle: (i === 1 && s.doorImg)
-          ? 'position:absolute;inset:0;backdrop-filter:blur(18px) saturate(130%) brightness(1.15);-webkit-backdrop-filter:blur(18px) saturate(130%) brightness(1.15);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
-          : ((i === 0 && s.doorImg)
-            ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(16px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+        doorBlurStyle: (i === 0 && s.doorImg)
+          ? 'position:absolute;inset:0;backdrop-filter:blur(16px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(16px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
+          : ((i === 1 && s.doorImg)
+            ? 'position:absolute;inset:0;backdrop-filter:blur(26px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(26px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
             : ((i === 2 && s.doorImg)
               ? 'position:absolute;inset:0;backdrop-filter:blur(36px) saturate(150%) brightness(1.3);-webkit-backdrop-filter:blur(36px) saturate(150%) brightness(1.3);background:rgba(255,255,255,.04);border-right:1px solid rgba(244,239,232,.1)'
               : 'display:none')),
-        doorImgStyle: (i === 1 && s.doorImg)
-          ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.49;mix-blend-mode:screen;filter:brightness(.85) contrast(1.3) saturate(1.1);display:block'
-          : 'display:none',
+        doorImgStyle: 'display:none',
         doorTileStyle: (i === 0 && s.doorImg)
           ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.66;mix-blend-mode:screen;filter:brightness(.6) contrast(2.64);display:block`
-          : ((i === 2 && s.doorImg)
-            ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block`
-            : 'display:none'),
+          : ((i === 1 && s.doorImg)
+            ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.5;mix-blend-mode:screen;filter:brightness(.6) contrast(2.5);display:block`
+            : ((i === 2 && s.doorImg)
+              ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block`
+              : 'display:none')),
         realImgStyle: s.realImg
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
           : 'display:none',

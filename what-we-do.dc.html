@@ -8,98 +8,100 @@
 <body>
 <x-dc>
 <helmet data-dc-atomics>
-  <title>What We Do | Le Tsuan Design</title>
-  <meta name="description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <title>Our Process &amp; Engineering Capabilities | Le Tsuan Design</title>
+  <meta name="description" content="See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover. It also covers our engineering capabilities for heritage sites, IP-licensed exhibits and high-precision environments." />
   <link rel="canonical" href="https://www.letsuan.com/what-we-do.dc.html" />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="What We Do" />
-  <meta property="og:description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <meta property="og:title" content="Our Process & Engineering Capabilities" />
+  <meta property="og:description" content="See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover. It also covers our engineering capabilities for heritage sites, IP-licensed exhibits and high-precision environments." />
   <meta property="og:url" content="https://www.letsuan.com/what-we-do.dc.html" />
   <meta property="og:image" content="https://www.letsuan.com/assets/logo.png" />
   <meta property="og:site_name" content="Le Tsuan Design" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="What We Do" />
-  <meta name="twitter:description" content="Exhibition design, interior design, visual design and construction services from Le Tsuan Design." />
+  <meta name="twitter:title" content="Our Process & Engineering Capabilities" />
+  <meta name="twitter:description" content="See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover. It also covers our engineering capabilities for heritage sites, IP-licensed exhibits and high-precision environments." />
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Exhibition design, interior design, visual design and construction services from Le Tsuan Design.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
   <style>
-    :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a;--ltsuan-line:rgba(244,239,232,.14);--ltsuan-dim:rgba(244,239,232,.6)}
+    :root{--ltsuan-bg:#0B1526;--ltsuan-panel:#101B33;--ltsuan-text:#F4EFE8;--ltsuan-accent:#8EC31F;--ltsuan-accent-hover:#A8DC4A;--ltsuan-blue:#073D6F;--ltsuan-blue-dark:#073D6F;--ltsuan-line:rgba(244,239,232,.12);--ltsuan-dim:rgba(244,239,232,.6);--ltsuan-blueprint:#C9D6E8}
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
     a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-scale-rule{height:1px;background:repeating-linear-gradient(to right,var(--ltsuan-line) 0 1px,transparent 1px 16px)}
+    .ltsuan-capabilities-grid{grid-template-columns:repeat(4,1fr)}
+    .ltsuan-process-grid{grid-template-columns:repeat(5,1fr)}
+    @media (max-width:900px){.ltsuan-capabilities-grid{grid-template-columns:repeat(2,1fr)}.ltsuan-process-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.ltsuan-capabilities-grid{grid-template-columns:1fr}.ltsuan-process-grid{grid-template-columns:1fr}}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
   </style>
 </helmet>
 <div style="background:var(--ltsuan-bg)">
   <dc-import name="Nav" active="what-we-do" hint-size="100%,0px"></dc-import>
 
-  <div ref="{{ zone2Ref }}" data-screen-label="What We Do / Room 03 — Services" style="padding:130px 60px 90px 79px;border-bottom:1px solid var(--ltsuan-line)">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px">
-      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="4">
-        <div>
-          <div style="position:relative;height:160px;margin-bottom:20px;overflow:hidden">
-            <image-slot id="wwd-{{ svc.id }}" shape="rect" placeholder="{{ svc.placeholder }}" style="width:100%;height:100%"></image-slot>
-            <picture>
-              <source ref="{{ svc.avifRef }}" type="image/avif" />
-              <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.realImgStyle }}" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:20px;margin:0 0 10px">{{ svc.title }}</h3>
-          <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.6;color:rgba(244,239,232,.65);margin:0 0 14px">{{ svc.desc }}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-              <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.05em;color:rgba(244,239,232,.6);border:1px solid var(--ltsuan-line);border-radius:999px;padding:4px 10px">{{ pt }}</span>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
-    </div>
-  </div>
-
-  <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:150px 60px 100px 79px;border-bottom:1px solid var(--ltsuan-line)">
-    <div class="ltsuan-reveal" style="{{ zone0Reveal }}">
-      <div style="margin-bottom:64px">
-        <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0 0 24px">Four Disciplines<br>One Continuous Process.</h1>
-        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,2.4vw,40px);line-height:1.19;color:var(--ltsuan-dim);margin:0;max-width:40ch">From brief to handover, one accountable team.</p>
+  <section ref="{{ zone0Ref }}" data-screen-label="What We Do / Room 01 — Process" style="padding:110px 60px 60px 79px;border-bottom:1px solid var(--ltsuan-line)">
+    <div class="ltsuan-reveal" style="{{ zone0Reveal }};position:relative">
+      <div style="margin-bottom:36px;max-width:900px">
+        <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0 0 16px">Giving Form to Space.</h1>
+        <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2vw,28px);line-height:1.3;color:var(--ltsuan-dim);margin:0;max-width:52ch">From site survey to final handover, the same team carries every stage: feasibility, design, fabrication and installation. Complex knowledge becomes understandable. Experience unfolds naturally.</p>
       </div>
+      <a href="./portfolio.dc.html" style="position:absolute;top:0;right:0;width:120px;height:120px;border-radius:50%;border:1px solid var(--ltsuan-line);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--ltsuan-text);text-decoration:none">VIEW<br>PORTFOLIO</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px">
+    <div style="position:relative;overflow:hidden;height:clamp(280px,36vw,460px)">
+      <picture>
+        <source srcset="./images/centered-sparkler-hand-letsuan-design.avif" type="image/avif" />
+        <img src="./images/centered-sparkler-hand-letsuan-design.jpg" alt="Hand holding a lit sparkler against a bokeh light backdrop" style="width:100%;height:100%;object-fit:cover;object-position:center 60%;display:block;filter:brightness(.88) saturate(1.08)" />
+      </picture>
+      <span style="position:absolute;top:14px;left:14px;width:16px;height:16px;border-top:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.7"></span>
+      <span style="position:absolute;top:14px;right:14px;width:16px;height:16px;border-top:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.7"></span>
+      <span style="position:absolute;bottom:14px;left:14px;width:16px;height:16px;border-bottom:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.7"></span>
+      <span style="position:absolute;bottom:14px;right:14px;width:16px;height:16px;border-bottom:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.7"></span>
+    </div>
+  </section>
+
+  <section data-screen-label="What We Do / Room 01b — Process Steps" style="padding:56px 60px 56px 79px;border-bottom:1px solid var(--ltsuan-line)">
+    <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(24px,2.6vw,32px);margin:0 0 40px;max-width:44ch">From brief to handover, one accountable team.</h2>
+    <div class="ltsuan-process-grid" style="display:grid;gap:24px;position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:1px;background:var(--ltsuan-blueprint);opacity:.3"></div>
       <sc-for list="{{ processSteps }}" as="step" hint-placeholder-count="5">
         <div>
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:18px;margin:0 0 10px">{{ step.title }}</h3>
-          <p style="font-family:'Oswald',sans-serif;font-size:14px;line-height:1.7;color:rgba(244,239,232,.6);margin:0">{{ step.desc }}</p>
+          <div style="width:1px;height:14px;background:var(--ltsuan-blueprint);opacity:.5;margin-bottom:10px"></div>
+          <div style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--ltsuan-accent);margin-bottom:12px">{{ step.num }}</div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:17px;margin:0 0 10px">{{ step.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.7;color:rgba(244,239,232,.6);margin:0">{{ step.desc }}</p>
         </div>
       </sc-for>
     </div>
   </section>
 
-  <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:100px 60px 100px 79px;background:#141414;border-bottom:1px solid var(--ltsuan-line)">
-    <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
-      <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0 0 56px;max-width:760px">Built to withstand what the site<br>the client and the code demand.</h2>
+  <section ref="{{ zone1Ref }}" data-screen-label="What We Do / Room 02 — Capabilities" style="padding:56px 60px 56px 79px;background:var(--ltsuan-panel);border-bottom:1px solid var(--ltsuan-line)">
+    <div class="ltsuan-reveal" style="{{ zone1Reveal }};margin-bottom:36px">
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0;max-width:760px">Built to withstand what the site<br>the client and the code demand.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--ltsuan-line)">
-      <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="6">
+    <div class="ltsuan-capabilities-grid" style="display:grid;gap:16px;margin-left:-24px">
+      <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="7">
         <div style="{{ cap.cardStyle }}">
-          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 10px">{{ cap.title }}</h3>
-          <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.7;color:rgba(244,239,232,.55);margin:0;text-align:justify">{{ cap.desc }}</p>
+          <span style="position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
+          <span style="position:absolute;top:6px;right:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
+          <span style="position:absolute;bottom:6px;left:6px;width:10px;height:10px;border-bottom:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
+          <span style="position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
+          <div style="{{ cap.imgWrapStyle }}">
+            <picture>
+              <source ref="{{ cap.avifRef }}" type="image/avif" />
+              <img ref="{{ cap.imgRef }}" alt="{{ cap.title }}" style="{{ cap.imgStyle }}" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 8px">{{ cap.title }}</h3>
+          <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.6;color:rgba(244,239,232,.55);margin:0;text-align:left">{{ cap.desc }}</p>
         </div>
       </sc-for>
     </div>
   </section>
 
-  <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-  <section data-screen-label="What We Do / Room 04 — Visit" style="padding:130px 56px;text-align:center;background:#141414">
-    <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,4vw,48px);margin:0 0 28px">Tell us what you're building.</h2>
-    <a href="./contact.dc.html" style="display:inline-block;padding:18px 44px;background:var(--ltsuan-accent);color:#1a1613;border-radius:999px;font-family:'Oswald',sans-serif;font-weight:400;font-size:15px;text-decoration:none">Start a Project</a>
-  </section>
-
-  <dc-import name="Footer" hint-size="100%,320px"></dc-import>
+  <dc-import name="Footer" background="#0B1526" hint-size="100%,320px"></dc-import>
 </div>
 <div style="position:fixed;bottom:0;right:0;writing-mode:vertical-rl;font-family:monospace;font-size:9px;color:rgba(120,120,120,.45);z-index:99999;pointer-events:none;user-select:none;letter-spacing:.05em">LT260807A</div>
 </x-dc>
@@ -133,42 +135,39 @@ class Component extends DCLogic {
     return `opacity:${shown ? 1 : 0};transform:translateY(${shown ? 0 : 18}px);transition:opacity .7s ease,transform .7s ease`;
   }
   renderVals() {
-    const items = [
-      { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues — from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'], placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
-      { id: 'interior', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'], placeholder: 'interior design photo', realImg: './images/green-energy-vision-pavilion-03-letsuan-design.jpg' },
-      { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'], placeholder: 'visual design photo', realImg: './images/universe-led-kinetic-light-01-letsuan-design.jpg' },
-      { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'], placeholder: 'construction site photo', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg' },
-    ];
-    const services = items.map((s) => ({
-      ...s,
-      imgRef: (el) => { if (el && s.realImg) el.src = s.realImg; },
-      avifRef: (el) => { if (el && s.realImg) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
-      realImgStyle: s.realImg
-        ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block'
-        : 'display:none',
-    }));
     const processSteps = [
-      { title: 'Fabrication & Testing', desc: 'In-house fabrication with mechanical, lighting and AV systems tested before anything leaves the workshop.' },
-      { title: 'Site Installation', desc: 'Scheduled, trade-by-trade installation under our own site management, coordinated with venue operations and any third-party inspectors.' },
-      { title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
+      { num: '01', title: 'Brief & Feasibility', desc: 'Site survey, code and structural constraints, and client requirements assessed before a single drawing is made.' },
+      { num: '02', title: 'Concept & Engineering Design', desc: 'Design and structural engineering developed in parallel, so the concept is buildable within site and code constraints from day one.' },
+      { num: '03', title: 'Fabrication & Testing', desc: 'In-house fabrication with mechanical, lighting and AV systems tested before anything leaves the workshop.' },
+      { num: '04', title: 'Site Installation', desc: 'Scheduled, trade-by-trade installation under our own site management, coordinated with venue operations and any third-party inspectors.' },
+      { num: '05', title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
     ];
     const capabilities = [
-      { title: 'Spatial Audit', desc: 'We start from circulation, light and brand narrative — mapping foot traffic and sightlines to build the space’s narrative skeleton. Not just a floor plan, but a map of how visitors will actually feel.' },
-      { title: 'Concept & Atmosphere', desc: 'The exhibit’s emotional tone is defined in a single sentence, then built out through material, light temperature and sound into a memorable atmosphere. We communicate it with a mood film, not a rendering.' },
-      { title: 'Technical Design', desc: 'Structural, lighting circuitry, media integration and sustainable material specs are resolved in one pass. Every drawing is held to on-site buildability, with tolerances controlled to within 5mm.' },
-      { title: 'Execution', desc: 'From factory pre-assembly to on-site fine-tuning, we stay until the last light comes on — so the story is delivered exactly as designed, not compromised along the way.' },
+      { title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.' },
+      { title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.' },
+      { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.', img: './images/immersive-projection-mapping-grid-installation-letsuan-design.jpg' },
+      { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
+      { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
+      { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.' },
+      { title: 'In-House Fabrication & Waste Management', desc: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.' },
     ].map((c, i) => ({
       ...c,
-      cardStyle: i === 0 ? 'background:#141414;padding:32px 32px 32px 0' : 'background:#141414;padding:32px',
+      idx: String(i + 1).padStart(2, '0'),
+      cardStyle: 'position:relative;background:var(--ltsuan-panel);padding:24px',
+      imgRef: (el) => { if (el && c.img) el.src = c.img; },
+      avifRef: (el) => { if (el && c.img) el.srcset = c.img.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+      imgWrapStyle: c.img
+        ? 'position:relative;height:120px;overflow:hidden;margin-bottom:16px'
+        : 'display:none',
+      imgStyle: c.img
+        ? 'width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8) saturate(1.1)'
+        : 'display:none',
     }));
     return {
       zone0Ref: this.makeZoneRef(0),
       zone1Ref: this.makeZoneRef(1),
-      zone2Ref: this.makeZoneRef(2),
       zone0Reveal: this.revealStyle(0),
       zone1Reveal: this.revealStyle(1),
-      zone2Reveal: this.revealStyle(2),
-      services,
       processSteps,
       capabilities,
     };
