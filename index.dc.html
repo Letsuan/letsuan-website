@@ -90,6 +90,7 @@
       .ltsuan-hero-deco{display:none}
       .ltsuan-hero-text{max-width:92%}
       .ltsuan-hero-container{padding-left:6vw}
+      .ltsuan-door-panel{display:none !important}
     }
     @media (prefers-reduced-motion:reduce){
       .ltsuan-ping,.ltsuan-beam,.ltsuan-bg-light-sweep,.ltsuan-pan-lr,.ltsuan-pan-static,.ltsuan-zoom-in,.ltsuan-person-grow,.ltsuan-person-grow-glow,.ltsuan-brightness-pulse,.ltsuan-slow-parallax,.ltsuan-beam-twinkle{animation:none}
@@ -133,7 +134,7 @@
         <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.2) 100%)"></div>
         <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,transparent 50%,rgba(0,0,0,.3) 100%)"></div>
         <div style="position:absolute;inset:0;opacity:.6;background:radial-gradient(120% 90% at 50% 50%,transparent 60%,rgba(0,0,0,.7) 100%)"></div>
-        <div style="{{ slide.doorPanelStyle }}">
+        <div class="ltsuan-door-panel" style="{{ slide.doorPanelStyle }}">
           <div style="{{ slide.doorBlurStyle }}"></div>
           <picture style="display:block;width:100%;height:100%">
             <source ref="{{ slide.doorAvifRef }}" type="image/avif" />
