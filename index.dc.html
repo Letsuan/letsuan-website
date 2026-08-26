@@ -301,8 +301,7 @@ class Component extends DCLogic {
   componentDidMount() {
     this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this._onPanEnd = () => {
-      if (!this.state.auto || this.state.active !== 1 || this._transitioning) return;
-      this.changeSlide((this.state.active + 1) % this.slideData.length);
+      // Carousel intentionally stops once it reaches slide 2 (index 1) — no further auto-advance.
     };
     this._maybeStartAuto();
   }
