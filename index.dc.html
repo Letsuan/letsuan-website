@@ -329,8 +329,8 @@ class Component extends DCLogic {
       enteringEl.style.transition = 'transform 1.1s cubic-bezier(.76,0,.24,1)';
     }
     if (idx === 0 && this._panLRImgEl0 && !this._reducedMotion) {
-      // Restart slide 1's one-shot pan-lr animation each time it becomes active again,
-      // since ltsuanPanLR only plays once and freezes on its final frame otherwise.
+      // Restart slide 1's ambient zoom (matches slide 2's ltsuan-slow-parallax) so it
+      // always begins from scale(1) rather than resuming mid-cycle from the background.
       const el = this._panLRImgEl0;
       el.style.animation = 'none';
       void el.offsetHeight;
@@ -459,7 +459,7 @@ class Component extends DCLogic {
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
           : 'display:none',
         placeholder: s.placeholder,
-        parallaxStyle: ((i === 0 || i === 2) && i === active && !this._reducedMotion)
+        parallaxStyle: (i === 2 && i === active && !this._reducedMotion)
           ? `position:absolute;inset:0;transition:transform .2s ease-out;transform:translate(${(px.x * -6.6).toFixed(1)}px, ${(px.y * -5.5).toFixed(1)}px) scale(1.05)`
           : 'position:absolute;inset:0;transform:scale(1.05)',
         bgSweepClass: '',
@@ -482,7 +482,7 @@ class Component extends DCLogic {
             ]
           : [],
         panClass: !this._reducedMotion
-          ? (i === 1 ? 'ltsuan-slow-parallax' : (i === 0 ? 'ltsuan-pan-lr-slow' : (i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : '')))
+          ? ((i === 0 || i === 1) ? 'ltsuan-slow-parallax' : (i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : ''))
           : '',
         frostStyle: 'display:none',
         frostInnerStyle: 'display:none',
