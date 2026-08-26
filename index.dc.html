@@ -56,7 +56,8 @@
     @keyframes ltsuanBrightnessPulse{0%,100%{filter:brightness(1) contrast(1)}45%{filter:brightness(1.28) contrast(1.08)}70%{filter:brightness(.92) contrast(1)}}
     @keyframes ltsuanBeamTwinkle{0%,100%{opacity:0}50%{opacity:1}}
     .ltsuan-beam-twinkle{
-      position:absolute;top:0;bottom:0;width:35px;pointer-events:none;mix-blend-mode:overlay;
+      position:absolute;top:0;bottom:0;width:24.5px;pointer-events:none;mix-blend-mode:overlay;
+      transform:rotate(5deg);transform-origin:center;
       background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.9) 35%,rgba(255,255,255,.9) 65%,rgba(255,255,255,0) 100%);
       animation-name:ltsuanBeamTwinkle;
       animation-timing-function:ease-in-out;
