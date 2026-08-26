@@ -1417,6 +1417,17 @@
       if (!designDocMode || type !== "__dc_probe") return;
       postDesignMode(designDocMode);
     });
+    function claimStatic(predicate) {
+      const kids = doc.head.children;
+      for (let i = 0; i < kids.length; i++) {
+        const el = kids[i];
+        if (el.hasAttribute("data-dc-helmet")) continue;
+        if (predicate(el)) {
+          el.remove();
+          return;
+        }
+      }
+    }
     function compile(node) {
       const raw = [...node.children];
       const helmetClosed = node.nextSibling != null || node.parentNode?.nextSibling != null;
@@ -1439,16 +1450,41 @@
             const key = "SCRIPT|" + (child.getAttribute("src") || child.textContent || "");
             if (mounted.has(key)) continue;
             mounted.add(key);
+            const childSrc = child.getAttribute("src");
+            const childType = (child.getAttribute("type") || "").toLowerCase();
+            claimStatic((el2) => {
+              if (el2.tagName !== "SCRIPT") return false;
+              if (childSrc) return el2.getAttribute("src") === childSrc;
+              return childType === "application/ld+json" && (el2.getAttribute("type") || "").toLowerCase() === "application/ld+json";
+            });
             const el = doc.createElement("script");
             for (const { name: an, value } of [...child.attributes])
               el.setAttribute(an, value);
             if (child.textContent) el.textContent = child.textContent;
+            el.setAttribute("data-dc-helmet", "");
             doc.head.appendChild(el);
           } else if (tag === "LINK" || tag === "META") {
             if (mayBePartial) continue;
             const key = tag + "|" + (child.getAttribute("href") || child.getAttribute("src") || child.outerHTML);
             if (mounted.has(key)) continue;
             mounted.add(key);
+            const claimLinkOrMeta = () => claimStatic((el2) => {
+              if (el2.tagName !== tag) return false;
+              if (tag === "META") {
+                const cName = child.getAttribute("name");
+                const cProp = child.getAttribute("property");
+                if (cName) return el2.getAttribute("name") === cName;
+                if (cProp) return el2.getAttribute("property") === cProp;
+                return false;
+              }
+              const cRel = (child.getAttribute("rel") || "").toLowerCase();
+              const eRel = (el2.getAttribute("rel") || "").toLowerCase();
+              if (cRel !== eRel) return false;
+              if (cRel === "alternate") {
+                return (child.getAttribute("hreflang") || "") === (el2.getAttribute("hreflang") || "");
+              }
+              return true;
+            });
             if (tag === "LINK") {
               const rel = (child.getAttribute("rel") || "").toLowerCase().split(/\s+/);
               const href = (child.getAttribute("href") || "").trim();
@@ -1467,17 +1503,26 @@
                 void blob.text().then((css) => {
                   el.textContent = css;
                 });
+                el.setAttribute("data-dc-helmet", "");
                 doc.head.appendChild(el);
                 continue;
               }
             }
-            doc.head.appendChild(child.cloneNode(true));
+            claimLinkOrMeta();
+            const clone = child.cloneNode(true);
+            clone.setAttribute("data-dc-helmet", "");
+            doc.head.appendChild(clone);
           } else {
             const key = name + "|" + i;
             let el = live.get(key);
+            const firstMount = !el;
             if (!el || el.tagName !== tag) {
               if (el) el.remove();
               el = doc.createElement(tag.toLowerCase());
+              if (firstMount) {
+                claimStatic((el2) => el2.tagName === tag);
+                el.setAttribute("data-dc-helmet", "");
+              }
               live.set(key, el);
               doc.head.appendChild(el);
             }
