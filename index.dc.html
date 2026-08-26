@@ -69,7 +69,7 @@
     @keyframes ltsuanZoomIn{0%{transform:scale(1) translateY(0)}100%{transform:scale(0.96) translateY(0)}}
     @keyframes ltsuanPersonGrow{0%{transform:scale(.96)}100%{transform:scale(1.04)}}
     @keyframes ltsuanPanTB{0%{object-position:50% 30%}100%{object-position:50% 60%}}
-    @keyframes ltsuanPersonGlow{0%,100%{filter:brightness(.85) contrast(1.6) saturate(1.15) hue-rotate(-10deg)}50%{filter:brightness(1.1) contrast(1.65) saturate(1.2) hue-rotate(-10deg)}}
+    @keyframes ltsuanPersonGlow{0%,100%{filter:brightness(.78) contrast(1.35) saturate(1.05)}50%{filter:brightness(1) contrast(1.4) saturate(1.1)}}
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
@@ -128,6 +128,7 @@
               <source ref="{{ slide.personAvifRef }}" type="image/avif" />
               <img ref="{{ slide.personImgRef }}" alt="{{ slide.personAlt }}" class="{{ slide.personZoomClass }}" style="{{ slide.personImgStyle }}" decoding="async" />
             </picture>
+            <div style="{{ slide.personTintStyle }}"></div>
           </div>
           <div style="{{ slide.frostStyle }}"><div style="{{ slide.frostInnerStyle }}"></div></div>
         </div>
@@ -421,10 +422,13 @@ class Component extends DCLogic {
             ? `position:absolute;inset:0;transform-origin:center bottom;transition:transform .2s ease-out;transform:translate(${(px.x * -15.4).toFixed(1)}px, ${(px.y * -11).toFixed(1)}px)`
             : (s.personImg ? 'position:absolute;inset:0;transform-origin:center bottom' : 'display:none')),
         personImgStyle: (i === 1 && s.personImg)
-          ? 'width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:brightness(.85) contrast(1.6) saturate(1.15) hue-rotate(-10deg);display:block'
+          ? 'width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:brightness(.78) contrast(1.35) saturate(1.05);display:block'
           : (s.personImg
             ? 'width:100%;height:100%;object-fit:contain;object-position:center 100%;display:block'
             : 'display:none'),
+        personTintStyle: (i === 1 && s.personImg)
+          ? `position:absolute;inset:0;pointer-events:none;background:#1e4a7a;opacity:.4;mix-blend-mode:color;mask-image:url(${s.personImg});mask-size:contain;mask-position:center bottom;mask-repeat:no-repeat;-webkit-mask-image:url(${s.personImg});-webkit-mask-size:contain;-webkit-mask-position:center bottom;-webkit-mask-repeat:no-repeat`
+          : 'display:none',
         doorImgRef: (el) => { if (el && s.doorImg) el.src = s.doorImg; },
         doorAvifRef: (el) => { if (el && s.doorImg) el.srcset = s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         doorAlt: s.doorAlt,
