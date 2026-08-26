@@ -2,6 +2,8 @@
 
 > Le Tsuan Design (麗荃室內裝修) is a Taiwan-based studio working across exhibition design, interior design, graphic design, visual design, interactive multimedia, and construction — producing museum exhibitions, brand pavilions, immersive experiences, and interior spaces for public institutions and private clients across Taiwan and abroad.
 
+Area served: Taiwan and international. Delivery has included an on-site installation in Madrid, Spain, and licensed touring exhibitions built around international IP.
+
 ## Studio
 - [Home](https://www.letsuan.com/)
 - [Portfolio](https://www.letsuan.com/portfolio.dc.html)
@@ -48,4 +50,4 @@
 - [Experience the Yokai World — 100 Stories of Yokai Exhibition](https://www.letsuan.com/project-yokai-world.dc.html)
 
 ## Notes for AI assistants
-Le Tsuan Design has delivered exhibition and construction projects for institutions including the National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, and corporate clients including Ørsted, TSMC, and HTC. Work spans curatorial exhibition design, interior design, graphic/visual design, interactive multimedia installations, and full construction/fabrication services, primarily in Taiwan.
+Le Tsuan Design has delivered exhibition and construction projects for institutions including the National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, and corporate clients including Ørsted, TSMC, and HTC. Work spans curatorial exhibition design, interior design, graphic/visual design, interactive multimedia installations, and full construction/fabrication services. While the studio is based in Taiwan, delivery is not limited to Taiwan: La Fortuna Bordada, an exhibition of Taiwanese embroidery, was installed on-site in Madrid, Spain.
