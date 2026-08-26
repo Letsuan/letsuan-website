@@ -37,15 +37,16 @@
     a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-hero-text{max-width:44%}
     .ltsuan-hero-title{font-size:clamp(40px,8vw,120px)}
+    .ltsuan-hero-container{width:100%;max-width:1280px;margin:0 auto;padding:0 6vw 0 max(6vw,100px)}
     @media (min-width:1700px){
-      .ltsuan-hero-text{transform:translateX(-15%);max-width:48%}
+      .ltsuan-hero-text{max-width:48%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,145px)}
-      .ltsuan-hero-container{max-width:1500px}
+      .ltsuan-hero-container{max-width:1500px;margin-left:0}
     }
     @media (min-width:2200px){
-      .ltsuan-hero-text{transform:translateX(-20%);max-width:50%}
+      .ltsuan-hero-text{max-width:50%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,165px)}
-      .ltsuan-hero-container{max-width:1750px}
+      .ltsuan-hero-container{max-width:1750px;margin-left:0}
     }
     .ltsuan-hero-rail{display:flex;flex-direction:column;align-items:center;gap:24px}
     .ltsuan-hero-scrollcue{display:flex;align-items:center;gap:10px}
@@ -150,7 +151,7 @@
     </div>
 
     <div style="position:absolute;inset:0;z-index:10;pointer-events:none;display:flex;align-items:center">
-      <div class="ltsuan-hero-container" style="width:100%;max-width:1280px;margin:0 auto;padding:0 6vw 0 max(6vw,100px)">
+      <div class="ltsuan-hero-container">
         <div class="ltsuan-hero-text" style="position:relative">
           <div style="position:relative">
             <h1 class="ltsuan-hero-title" style="font-family:'Oswald',sans-serif;line-height:.88;letter-spacing:-.02em;margin:0;pointer-events:auto">
