@@ -113,7 +113,7 @@
 
   <section data-screen-label="Home / Hero" onMouseMove="{{ heroMouseMove }}" onMouseLeave="{{ heroMouseLeave }}" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
     <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
-      <div style="{{ slide.layerStyle }}">
+      <div ref="{{ slide.layerRef }}" style="{{ slide.layerStyle }}">
         <div style="{{ slide.imgStyle }}; position:relative">
           <image-slot id="hero-slide-{{ $index }}" shape="rect" placeholder="{{ slide.placeholder }}" style="width:100%;height:100%"></image-slot>
           <div style="{{ slide.parallaxStyle }}">
@@ -323,6 +323,15 @@ class Component extends DCLogic {
   }
   changeSlide(idx) {
     if (idx === this.state.active || this._transitioning) return;
+    const enteringEl = this._layerEls && this._layerEls[idx];
+    if (enteringEl) {
+      // Always snap the incoming slide below the viewport first (no transition), so every
+      // transition rises upward into view regardless of which slide was clicked or looped to.
+      enteringEl.style.transition = 'none';
+      enteringEl.style.transform = 'translateY(100%)';
+      void enteringEl.offsetHeight;
+      enteringEl.style.transition = 'transform 1.1s cubic-bezier(.76,0,.24,1)';
+    }
     if (idx === 0 && this._panLRImgEl0 && !this._reducedMotion) {
       // Restart slide 1's one-shot pan-lr animation each time it becomes active again,
       // since ltsuanPanLR only plays once and freezes on its final frame otherwise.
@@ -390,10 +399,8 @@ class Component extends DCLogic {
     const heroMouseLeave = () => this.setState({ parallax: { x: 0, y: 0 } });
     const px = this.state.parallax || { x: 0, y: 0 };
     const toggleAuto = () => this.setState(s => ({ auto: !s.auto }), () => this._maybeStartAuto());
-    const slideCount = this.slideData.length;
-    const nextIdx = (active + 1) % slideCount;
     const slides = this.slideData.map((s, i) => {
-      const offset = i === active ? 0 : i === nextIdx ? 100 : -100;
+      const offset = i === active ? 0 : -100;
       return {
         title: s.title,
         alt: s.alt,
@@ -486,6 +493,7 @@ class Component extends DCLogic {
         frostStyle: 'display:none',
         frostInnerStyle: 'display:none',
         layerStyle: `position:absolute;inset:0;overflow:hidden;z-index:${i === active ? 2 : 1};transition:transform 1.1s cubic-bezier(.76,0,.24,1);transform:translateY(${offset}%);backface-visibility:hidden;will-change:${i === active ? 'transform' : 'auto'}`,
+        layerRef: (el) => { if (el) { this._layerEls = this._layerEls || []; this._layerEls[i] = el; } },
         imgStyle: 'width:100%;height:100%;transform:none',
         numLabel: String(i + 1).padStart(2, '0'),
         dotBtnStyle: `position:relative;z-index:1;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.03em;transition:all .4s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:var(--ltsuan-accent);color:#0A0A0A;transform:scale(1.1)' : 'border:1px solid rgba(244,239,232,.15);background:transparent;color:rgba(244,239,232,.3)'}`,
