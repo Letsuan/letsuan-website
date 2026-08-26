@@ -92,6 +92,25 @@
 
 (() => {
   const STATE_FILE = '.image-slots.state.json';
+  // Production hardening: outside the omelette editor bridge, this
+  // component is documented as read-only, but its empty-state chrome
+  // (the "Drop an image" placeholder tile) still painted as an opaque
+  // layer over whatever real content a page author already placed
+  // alongside/behind the slot (e.g. a <picture><img> sibling with a
+  // baked-in final photo). On a plain static host there is no sidecar
+  // API and no window.omelette bridge, so every slot permanently shows
+  // that placeholder instead of the finished page. Since every slot on
+  // a deployed page is expected to have real content next to it, hide
+  // the element entirely when there is no editor bridge to interact
+  // with, so it never obscures the finished design.
+  if (typeof window !== 'undefined' && !(window.omelette && window.omelette.writeFile)) {
+    try {
+      const guardStyle = document.createElement('style');
+      guardStyle.textContent = 'image-slot{display:none !important}';
+      (document.head || document.documentElement).appendChild(guardStyle);
+    } catch (e) {}
+  }
+  
 
   // Unsplash terms require visible attribution wherever their photos
   // display, and every link back to unsplash.com must carry utm referral
