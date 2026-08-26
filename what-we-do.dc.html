@@ -23,8 +23,9 @@
   <meta name="twitter:title" content="Our Process & Engineering Capabilities" />
   <meta name="twitter:description" content="See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover. It also covers our engineering capabilities for heritage sites, IP-licensed exhibits and high-precision environments." />
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://www.letsuan.com/#organization","name":"Le Tsuan Design","alternateName":"麗荃室內裝修","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover.","foundingDate":"2014","telephone":"+886-4-2321-5956","address":[{"@type":"PostalAddress","streetAddress":"6F.-1, No. 85, Sec. 1, Huamei W. St.","addressLocality":"West District, Taichung City","postalCode":"403020","addressCountry":"TW"},{"@type":"PostalAddress","streetAddress":"3F., No. 62, Sec. 6, Yanping N. Rd.","addressLocality":"Shihlin District, Taipei City","postalCode":"111069","addressCountry":"TW"}],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Licensed Interior Decorator","identifier":"40E2007328"},"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
   <style>
@@ -36,6 +37,7 @@
     .ltsuan-process-grid{grid-template-columns:repeat(5,1fr)}
     @media (max-width:900px){.ltsuan-capabilities-grid{grid-template-columns:repeat(2,1fr)}.ltsuan-process-grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:560px){.ltsuan-capabilities-grid{grid-template-columns:1fr}.ltsuan-process-grid{grid-template-columns:1fr}}
+    @media (max-width:640px){.ltsuan-badge{position:static !important;margin:20px 0 0 !important}}
     @media (prefers-reduced-motion:reduce){.ltsuan-reveal{transition:none !important;opacity:1 !important;transform:none !important}}
   </style>
 </helmet>
@@ -48,7 +50,7 @@
         <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(40px,5.4vw,88px);line-height:1.02;letter-spacing:-.01em;margin:0 0 16px">Giving Form to Space.</h1>
         <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(20px,2vw,28px);line-height:1.3;color:var(--ltsuan-dim);margin:0;max-width:52ch">From site survey to final handover, the same team carries every stage: feasibility, design, fabrication and installation. Complex knowledge becomes understandable. Experience unfolds naturally.</p>
       </div>
-      <a href="./portfolio.dc.html" style="position:absolute;top:0;right:0;width:120px;height:120px;border-radius:50%;border:1px solid var(--ltsuan-line);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--ltsuan-text);text-decoration:none">VIEW<br>PORTFOLIO</a>
+      <a href="./portfolio.dc.html" class="ltsuan-badge" style="position:absolute;top:0;right:0;width:120px;height:120px;border-radius:50%;border:1px solid var(--ltsuan-line);display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--ltsuan-text);text-decoration:none">VIEW<br>PORTFOLIO</a>
     </div>
     <div style="position:relative;overflow:hidden;height:clamp(280px,36vw,460px)">
       <picture>
@@ -96,6 +98,7 @@
           </div>
           <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 8px">{{ cap.title }}</h3>
           <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.6;color:rgba(244,239,232,.55);margin:0;text-align:left">{{ cap.desc }}</p>
+          <a href="{{ cap.evidenceHref }}" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.06em;color:var(--ltsuan-accent);text-decoration:none">{{ cap.evidenceLabel }} →</a>
         </div>
       </sc-for>
     </div>
@@ -143,13 +146,13 @@ class Component extends DCLogic {
       { num: '05', title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
     ];
     const capabilities = [
-      { title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.' },
-      { title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.' },
-      { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.', img: './images/immersive-projection-mapping-grid-installation-letsuan-design.jpg' },
-      { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' },
-      { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' },
-      { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.' },
-      { title: 'In-House Fabrication & Waste Management', desc: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.' },
+      { title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.', evidenceHref: './project-air-force-academy.dc.html', evidenceLabel: 'R.O.C. Air Force Academy 90th Anniversary' },
+      { title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.', evidenceHref: './project-cat-art.dc.html', evidenceLabel: 'Cat Art Museum by Shu Yamamoto' },
+      { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.', img: './images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', evidenceHref: './project-led-kinetic.dc.html', evidenceLabel: 'Universe — LED Kinetic Light' },
+      { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.', evidenceHref: './project-notre-dame.dc.html', evidenceLabel: 'Eternal Notre-Dame VR Exhibition' },
+      { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.', evidenceHref: './project-engineering-construction.dc.html', evidenceLabel: '921 Earthquake Museum Disaster Prevention Hall' },
+      { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.', evidenceHref: './project-changhua-flower.dc.html', evidenceLabel: 'Changhua Flower Festival Pavilion' },
+      { title: 'In-House Fabrication & Waste Management', desc: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.', evidenceHref: './project-mobile-museum.dc.html', evidenceLabel: 'Mobile Museum Vehicle Fabrication' },
     ].map((c, i) => ({
       ...c,
       idx: String(i + 1).padStart(2, '0'),

@@ -23,11 +23,12 @@
   <meta name="twitter:title" content="Portfolio" />
   <meta name="twitter:description" content="Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces." />
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces.","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://www.letsuan.com/#organization","name":"Le Tsuan Design","alternateName":"麗荃室內裝修","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces.","foundingDate":"2014","telephone":"+886-4-2321-5956","address":[{"@type":"PostalAddress","streetAddress":"6F.-1, No. 85, Sec. 1, Huamei W. St.","addressLocality":"West District, Taichung City","postalCode":"403020","addressCountry":"TW"},{"@type":"PostalAddress","streetAddress":"3F., No. 62, Sec. 6, Yanping N. Rd.","addressLocality":"Shihlin District, Taipei City","postalCode":"111069","addressCountry":"TW"}],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Licensed Interior Decorator","identifier":"40E2007328"},"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
-  <style>:root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
+  <style>:root{--ltsuan-bg:#0B1526;--ltsuan-text:#f4efe8;--ltsuan-accent:#8EC31F;--ltsuan-accent-hover:#A8DC4A;--ltsuan-blueprint:#C9D6E8}
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}a{color:var(--ltsuan-accent)}a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-pf-img{filter:brightness(0.55);transform:scale(1.1);transition:filter .6s ease,transform 1.2s ease}
     .ltsuan-pf-text{opacity:.92;transition:opacity .35s ease}
@@ -89,7 +90,7 @@
   </section>
 
   <section data-screen-label="Portfolio / Hero" style="padding:170px 56px 63px;border-bottom:1px solid rgba(244,239,232,.08)">
-    <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.25em;opacity:.5;margin-bottom:18px">ARCHIVE</div>
+    <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.25em;color:var(--ltsuan-accent);margin-bottom:18px">ARCHIVE</div>
     <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);line-height:0.9;margin:0 0 20px;max-width:900px;letter-spacing:-.02em">Work That Turns Spaces Into Experiences.</h1>
     <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.6;color:rgba(244,239,232,.6);max-width:600px;margin:0">A selection of exhibitions, interiors and visual environments delivered across Taiwan.</p>
   </section>
@@ -111,6 +112,8 @@
         </picture>
         <div style="position:absolute;inset:0;background:rgba(0,0,0,.35);pointer-events:none"></div>
         <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,0));pointer-events:none"></div>
+        <span style="position:absolute;top:14px;left:14px;width:16px;height:16px;border-top:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.6;pointer-events:none"></span>
+        <span style="position:absolute;top:14px;right:14px;width:16px;height:16px;border-top:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.6;pointer-events:none"></span>
         <div class="ltsuan-pf-text" style="position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;pointer-events:none">
           <div>
             <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:28px;line-height:1;letter-spacing:-.01em;margin:0">{{ p.title }}</h2>
@@ -183,7 +186,7 @@ class Component extends DCLogic {
     { id: 'la-fortuna-bordada', num: '25', title: 'La Fortuna Bordada', categories: ["Exhibition Design","Graphic Design","Interior Design","Logo Design","Visual Design"], subtitle: 'Taiwanese Embroidery in Madrid', year: '2017', href: './project-la-fortuna-bordada.dc.html', realImg: './images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg' },
     { id: 'serialization-anniversary', num: '27', title: '20-Year Serialization — Conan Exhibit', categories: ["Exhibition Design","Fitment Project","Graphic Design","Installation Art","Visual Design"], subtitle: 'Congratulatory Exhibit "Conan Exhibit"', year: '2016', href: './project-serialization-anniversary.dc.html', realImg: './images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg' },
     { id: 'tibetan-thangka', num: '28', title: 'Tibetan Thangka Art', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Logo Design","Typography","Construction"], subtitle: 'Sacred Buddhist Painting Exhibition', year: '2015', href: './project-tibetan-thangka.dc.html', realImg: './images/tibetan-thangka-art-exhibition-01-letsuan-design.jpg' },
-    { id: 'asian-art-biennial', num: '29', title: 'I Love Taiwan', categories: ["Construction"], subtitle: '2013 Asian Art Biennial', year: '2013', href: './project-asian-art-biennial.dc.html', realImg: './images/asian-art-biennial-01-letsuan-design.png' },
+    { id: 'asian-art-biennial', num: '29', title: 'I Love Taiwan', categories: ["Construction"], subtitle: '2013 Asian Art Biennial', year: '2013', href: './project-asian-art-biennial.dc.html', realImg: './images/asian-art-biennial-01-letsuan-design.jpg' },
     { id: 'nmns-teldap', num: '30', title: 'NMNS TELDAP', categories: ["Exhibition Design","Fitment Project","Construction"], subtitle: 'Digital Archives Exhibition', year: '2013', href: './project-nmns-teldap.dc.html', realImg: './images/nmns-teldap-digital-archives-01-letsuan-design.jpg' },
     { id: 'hakka-culture', num: '31', title: 'Hakka Culture Development', categories: ["Exhibition Design","Fitment Project","Graphic Design","Construction"], subtitle: 'Development Center', year: '2012', href: './project-hakka-culture.dc.html', realImg: './images/hakka-culture-entrance-feature-wall-with-tree-cutout-letsuan-design.jpg' },
     { id: 'nmh-highlights', num: '34', title: 'Highlights of NMH Collection', categories: ["Exhibition Design","Fitment Project","Graphic Design","Interior Design","Visual Design","Construction"], subtitle: 'Collection Exhibition', year: '2015', href: './project-nmh-highlights.dc.html', realImg: './images/nmh-collection-highlights-06-letsuan-design.png' },
@@ -238,7 +241,7 @@ class Component extends DCLogic {
     const categories = this.categories.map(c => ({
       id: c,
       label: c.toUpperCase(),
-      style: `padding:9px 18px;border:1px solid ${filter === c ? 'var(--ltsuan-text)' : 'rgba(244,239,232,.2)'};background:${filter === c ? 'var(--ltsuan-text)' : 'transparent'};color:${filter === c ? 'var(--ltsuan-bg)' : 'rgba(244,239,232,.7)'};font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.12em;font-weight:400;cursor:pointer;min-height:44px;display:inline-flex;align-items:center`,
+      style: `padding:9px 18px;border:1px solid ${filter === c ? 'var(--ltsuan-accent)' : 'rgba(244,239,232,.2)'};background:${filter === c ? 'var(--ltsuan-accent)' : 'transparent'};color:${filter === c ? 'var(--ltsuan-bg)' : 'rgba(244,239,232,.7)'};font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.12em;font-weight:400;cursor:pointer;min-height:44px;display:inline-flex;align-items:center`,
       active: filter === c ? 'true' : 'false',
     }));
     const list = (filter === 'All Works' ? this.projects : this.projects.filter(p => (p.categories || [p.cat]).includes(filter)))

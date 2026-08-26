@@ -23,8 +23,9 @@
   <meta name="twitter:title" content="Le Tsuan Design | Interior, Exhibition & Visual Design Studio" />
   <meta name="twitter:description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Le Tsuan Design","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.","foundingDate":"2014","address":[{"@type":"PostalAddress","addressLocality":"Taichung","addressCountry":"TW"},{"@type":"PostalAddress","addressLocality":"Taipei","addressCountry":"TW"}],"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://www.letsuan.com/#organization","name":"Le Tsuan Design","alternateName":"麗荃室內裝修","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.","foundingDate":"2014","telephone":"+886-4-2321-5956","address":[{"@type":"PostalAddress","streetAddress":"6F.-1, No. 85, Sec. 1, Huamei W. St.","addressLocality":"West District, Taichung City","postalCode":"403020","addressCountry":"TW"},{"@type":"PostalAddress","streetAddress":"3F., No. 62, Sec. 6, Yanping N. Rd.","addressLocality":"Shihlin District, Taipei City","postalCode":"111069","addressCountry":"TW"}],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Licensed Interior Decorator","identifier":"40E2007328"},"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
   <style>
@@ -109,8 +110,8 @@
           <image-slot id="hero-slide-{{ $index }}" shape="rect" placeholder="{{ slide.placeholder }}" style="width:100%;height:100%"></image-slot>
           <div style="{{ slide.parallaxStyle }}">
             <picture class="{{ slide.bgSweepClass }}" style="display:block;width:100%;height:100%">
-              <source ref="{{ slide.avifRef }}" type="image/avif" />
-              <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" class="{{ slide.panClass }}" style="{{ slide.realImgStyle }}" decoding="async" />
+              <source ref="{{ slide.avifRef }}" type="image/avif" sizes="100vw" />
+              <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" class="{{ slide.panClass }}" style="{{ slide.realImgStyle }}" sizes="100vw" decoding="async" />
             </picture>
             <sc-for list="{{ slide.beamTwinkles }}" as="beam" hint-placeholder-count="0">
               <div class="ltsuan-beam-twinkle" style="{{ beam.style }}"></div>
@@ -270,10 +271,17 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  _responsiveSrcset(path, ext, fullWidth) {
+    const base = path.replace(/\.(jpg|jpeg|png|webp)$/i, '');
+    const tiers = [960, 1920].filter((w) => w < fullWidth);
+    const parts = tiers.map((w) => `${base}-${w}w.${ext} ${w}w`);
+    parts.push(`${base}.${ext} ${fullWidth}w`);
+    return parts.join(', ');
+  }
   slideData = [
-    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-sparkle-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of sparkling star-patterned frosted glass' },
-    { num: '02', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide2-blue-floral-installation-letsuan-design.jpg', alt: 'Blue floral light installation with cascading illuminated strands and scattered petals', doorImg: './images/letsuan-hero-slide2-fluted-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of fluted reeded glass', personImg: './images/letsuan-hero-slide2-woman-cutout-letsuan-design.png', personAlt: 'Woman in an iridescent holographic dress, side profile, cut out' },
-    { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/letsuan-hero-slide3-milky-way-bg-letsuan-design.jpg', alt: 'Milky Way night sky with dense stars', doorImg: './images/letsuan-hero-slide3-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass', personImg: './images/letsuan-hero-slide3-worker-cutout-letsuan-design.png', personAlt: 'Construction worker in white hard hat and safety glasses, side profile portrait, cut out' },
+    { num: '01', title: 'We Craft Moments Not Just Spaces', titleLine1: 'We Craft Moments', titleLine2: 'Not Just Spaces', subtitleLine1: 'Every project starts with a story', subtitleLine2: 'we want people to feel.', ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg', bgWidth: 4560, alt: 'Visitors viewing the Ocean Mimic Master exhibit in a dim blue-lit gallery of illuminated marine display cases', doorImg: './images/letsuan-hero-slide1-sparkle-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of sparkling star-patterned frosted glass' },
+    { num: '02', title: "Exhibitions Come Down. Memories Don't.", titleLine1: 'Exhibitions Come Down.', titleLine2: "Memories Don't.", subtitleLine1: 'From national museums to global brands —', subtitleLine2: "we've built spaces that last.", ctaLabel: 'OUR STORY', href: './about.dc.html', realImg: './images/letsuan-hero-slide2-blue-floral-installation-letsuan-design.jpg', bgWidth: 2048, alt: 'Blue floral light installation with cascading illuminated strands and scattered petals', doorImg: './images/letsuan-hero-slide2-fluted-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of fluted reeded glass', personImg: './images/letsuan-hero-slide2-woman-cutout-letsuan-design.png', personAlt: 'Woman in an iridescent holographic dress, side profile, cut out' },
+    { num: '03', title: 'One Team, Start to Finish', titleLine1: 'One Team', titleLine2: 'Start to Finish', subtitleLine1: 'Nothing lost in translation.', subtitleLine2: '', ctaLabel: 'HOW WE WORK', href: './what-we-do.dc.html', realImg: './images/letsuan-hero-slide3-milky-way-bg-letsuan-design.jpg', bgWidth: 4963, alt: 'Milky Way night sky with dense stars', doorImg: './images/letsuan-hero-slide3-embossed-glass-panel-letsuan-design.jpg', doorAlt: 'Close-up of embossed patterned glass', personImg: './images/letsuan-hero-slide3-worker-cutout-letsuan-design.png', personAlt: 'Construction worker in white hard hat and safety glasses, side profile portrait, cut out' },
   ];
   services = [
     { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.', href: './portfolio.dc.html?cat=Exhibition+Design', placeholder: 'exhibition design photo', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg' },
@@ -380,11 +388,14 @@ class Component extends DCLogic {
         dotLabel: `Go to slide: ${s.title}`,
         imgRef: (el) => {
           if (!el) return;
-          if (s.realImg) el.src = s.realImg;
+          if (s.realImg) {
+            el.src = s.realImg;
+            if (s.bgWidth) el.srcset = this._responsiveSrcset(s.realImg, 'jpg', s.bgWidth);
+          }
           if (i === 1) { el.onanimationend = this._onPanEnd; this._panImgEl = el; }
           if (i === 2) { this._zoomImgEl = el; }
         },
-        avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.bgWidth ? this._responsiveSrcset(s.realImg, 'avif', s.bgWidth) : s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personImgRef: (el) => {
           if (!el || !s.personImg) return;
           el.src = s.personImg;
@@ -421,11 +432,11 @@ class Component extends DCLogic {
               : 'display:none')),
         doorImgStyle: 'display:none',
         doorTileStyle: (i === 0 && s.doorImg)
-          ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.66;mix-blend-mode:screen;filter:brightness(.6) contrast(2.64);display:block`
+          ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-image:image-set(url(${s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif')}) type("image/avif"), url(${s.doorImg}) type("image/jpeg"));background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.66;mix-blend-mode:screen;filter:brightness(.6) contrast(2.64);display:block`
           : ((i === 1 && s.doorImg)
-            ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.5;mix-blend-mode:screen;filter:brightness(.6) contrast(2.5);display:block`
+            ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-image:image-set(url(${s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif')}) type("image/avif"), url(${s.doorImg}) type("image/jpeg"));background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.5;mix-blend-mode:screen;filter:brightness(.6) contrast(2.5);display:block`
             : ((i === 2 && s.doorImg)
-              ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block`
+              ? `position:absolute;inset:0;background-image:url(${s.doorImg});background-image:image-set(url(${s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif')}) type("image/avif"), url(${s.doorImg}) type("image/jpeg"));background-repeat:no-repeat;background-size:cover;background-position:center;opacity:.6;mix-blend-mode:screen;filter:brightness(.6) contrast(2.4);display:block`
               : 'display:none')),
         realImgStyle: s.realImg
           ? 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block'
