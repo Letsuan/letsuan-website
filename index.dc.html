@@ -92,9 +92,6 @@
       .ltsuan-hero-container{padding-left:6vw}
       .ltsuan-door-panel{display:none !important}
     }
-    @media (prefers-reduced-motion:reduce){
-      .ltsuan-ping,.ltsuan-beam,.ltsuan-bg-light-sweep,.ltsuan-pan-lr,.ltsuan-pan-static,.ltsuan-zoom-in,.ltsuan-person-grow,.ltsuan-person-grow-glow,.ltsuan-brightness-pulse,.ltsuan-slow-parallax,.ltsuan-beam-twinkle{animation:none}
-    }
   </style>
 </helmet>
 <div style="background:var(--ltsuan-bg);overflow-x:hidden">
@@ -300,9 +297,9 @@ class Component extends DCLogic {
     { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame.dc.html', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg' },
     { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art.dc.html', realImg: './images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg' },
   ];
-  state = { active: 0, auto: !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches), textVisible: true, parallax: { x: 0, y: 0 } };
+  state = { active: 0, auto: true, textVisible: true, parallax: { x: 0, y: 0 } };
   componentDidMount() {
-    this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this._reducedMotion = false;
     this._maybeStartAuto();
   }
   componentWillUnmount() {
