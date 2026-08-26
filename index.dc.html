@@ -390,8 +390,10 @@ class Component extends DCLogic {
     const heroMouseLeave = () => this.setState({ parallax: { x: 0, y: 0 } });
     const px = this.state.parallax || { x: 0, y: 0 };
     const toggleAuto = () => this.setState(s => ({ auto: !s.auto }), () => this._maybeStartAuto());
+    const slideCount = this.slideData.length;
+    const nextIdx = (active + 1) % slideCount;
     const slides = this.slideData.map((s, i) => {
-      const offset = i === active ? 0 : i < active ? -100 : 100;
+      const offset = i === active ? 0 : i === nextIdx ? 100 : -100;
       return {
         title: s.title,
         alt: s.alt,
