@@ -300,9 +300,6 @@ class Component extends DCLogic {
   state = { active: 0, auto: !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches), textVisible: true, parallax: { x: 0, y: 0 } };
   componentDidMount() {
     this._reducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    this._onPanEnd = () => {
-      // Carousel intentionally stops once it reaches slide 2 (index 1) — no further auto-advance.
-    };
     this._maybeStartAuto();
   }
   componentWillUnmount() {
@@ -313,9 +310,6 @@ class Component extends DCLogic {
   _maybeStartAuto() {
     clearTimeout(this._autoTimer);
     if (!this.state.auto) return;
-    // Slide 2 (index 1) advances when its right-to-left pan finishes (see _onPanEnd),
-    // not on the fixed timer, so the cut always lands right as the pan settles.
-    if (this.state.active === 1 && !this._reducedMotion) return;
     this._autoTimer = setTimeout(() => {
       this.changeSlide((this.state.active + 1) % this.slideData.length);
     }, 5000);
@@ -393,7 +387,7 @@ class Component extends DCLogic {
             el.src = s.realImg;
             if (s.bgWidth) el.srcset = this._responsiveSrcset(s.realImg, 'jpg', s.bgWidth);
           }
-          if (i === 1) { el.onanimationend = this._onPanEnd; this._panImgEl = el; }
+          if (i === 1) { this._panImgEl = el; }
           if (i === 2) { this._zoomImgEl = el; }
         },
         avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.bgWidth ? this._responsiveSrcset(s.realImg, 'avif', s.bgWidth) : s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
