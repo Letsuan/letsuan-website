@@ -112,8 +112,8 @@
           <image-slot id="hero-slide-{{ $index }}" shape="rect" placeholder="{{ slide.placeholder }}" style="width:100%;height:100%"></image-slot>
           <div style="{{ slide.parallaxStyle }}">
             <picture class="{{ slide.bgSweepClass }}" style="display:block;width:100%;height:100%">
-              <source ref="{{ slide.avifRef }}" type="image/avif" sizes="100vw" />
-              <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" class="{{ slide.panClass }}" style="{{ slide.realImgStyle }}" sizes="100vw" decoding="async" />
+              <source ref="{{ slide.avifRef }}" type="image/avif" sizes="115vw" />
+              <img ref="{{ slide.imgRef }}" alt="{{ slide.alt }}" class="{{ slide.panClass }}" style="{{ slide.realImgStyle }}" sizes="115vw" decoding="async" />
             </picture>
             <sc-for list="{{ slide.beamTwinkles }}" as="beam" hint-placeholder-count="0">
               <div class="ltsuan-beam-twinkle" style="{{ beam.style }}"></div>
