@@ -56,8 +56,8 @@
     @keyframes ltsuanBrightnessPulse{0%,100%{filter:brightness(1) contrast(1)}45%{filter:brightness(1.28) contrast(1.08)}70%{filter:brightness(.92) contrast(1)}}
     @keyframes ltsuanBeamTwinkle{0%,100%{opacity:0}50%{opacity:1}}
     .ltsuan-beam-twinkle{
-      position:absolute;top:0;bottom:0;width:24.5px;pointer-events:none;mix-blend-mode:overlay;
-      transform:rotate(-3deg);transform-origin:center;
+      position:absolute;top:0;bottom:0;width:19.6px;pointer-events:none;mix-blend-mode:overlay;
+      transform:rotate(-3deg);transform-origin:center;filter:brightness(1.15);
       background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.9) 35%,rgba(255,255,255,.9) 65%,rgba(255,255,255,0) 100%);
       animation-name:ltsuanBeamTwinkle;
       animation-timing-function:ease-in-out;
@@ -69,7 +69,7 @@
     @keyframes ltsuanZoomIn{0%{transform:scale(1) translateY(0)}100%{transform:scale(0.96) translateY(0)}}
     @keyframes ltsuanPersonGrow{0%{transform:scale(.96)}100%{transform:scale(1.04)}}
     @keyframes ltsuanPanTB{0%{object-position:50% 30%}100%{object-position:50% 60%}}
-    @keyframes ltsuanPersonGlow{0%,100%{filter:brightness(.78) contrast(1.35) saturate(1.05)}50%{filter:brightness(1.1) contrast(1.4) saturate(1.1)}}
+    @keyframes ltsuanPersonGlow{0%,100%{filter:brightness(.78) contrast(1.35) saturate(1.05)}50%{filter:brightness(1.2) contrast(1.4) saturate(1.1)}}
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
