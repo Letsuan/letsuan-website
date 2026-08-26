@@ -37,16 +37,16 @@
     a:hover{color:var(--ltsuan-accent-hover)}
     .ltsuan-hero-text{max-width:44%}
     .ltsuan-hero-title{font-size:clamp(40px,8vw,120px)}
-    .ltsuan-hero-container{width:100%;max-width:1280px;margin:0 auto;padding:0 6vw 0 max(6vw,100px)}
+    .ltsuan-hero-container{width:100%;max-width:1280px;margin:0;padding:0 6vw 0 max(6vw,100px)}
     @media (min-width:1700px){
       .ltsuan-hero-text{max-width:48%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,145px)}
-      .ltsuan-hero-container{max-width:1500px;margin-left:0}
+      .ltsuan-hero-container{max-width:1500px}
     }
     @media (min-width:2200px){
       .ltsuan-hero-text{max-width:50%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,165px)}
-      .ltsuan-hero-container{max-width:1750px;margin-left:0}
+      .ltsuan-hero-container{max-width:1750px}
     }
     .ltsuan-hero-rail{display:flex;flex-direction:column;align-items:center;gap:24px}
     .ltsuan-hero-scrollcue{display:flex;align-items:center;gap:10px}
@@ -89,6 +89,7 @@
     @media (max-width:900px){
       .ltsuan-hero-deco{display:none}
       .ltsuan-hero-text{max-width:92%}
+      .ltsuan-hero-container{padding-left:6vw}
     }
     @media (prefers-reduced-motion:reduce){
       .ltsuan-ping,.ltsuan-beam,.ltsuan-bg-light-sweep,.ltsuan-pan-lr,.ltsuan-pan-static,.ltsuan-zoom-in,.ltsuan-person-grow,.ltsuan-person-grow-glow,.ltsuan-brightness-pulse,.ltsuan-slow-parallax,.ltsuan-beam-twinkle{animation:none}
