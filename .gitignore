@@ -11,3 +11,9 @@
 
 # Large unused source file, kept locally only
 uploads/StockSnap_DCRRIOGE3R.jpg
+
+# Internal project/design-tool working notes (not part of the deployed site)
+CLAUDE.md
+PRODUCT.md
+DESIGN.md
+checklist-new-project-page.md
