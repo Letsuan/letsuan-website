@@ -490,7 +490,7 @@ class Component extends DCLogic {
         layerRef: (el) => { if (el) { this._layerEls = this._layerEls || []; this._layerEls[i] = el; } },
         imgStyle: 'width:100%;height:100%;transform:none',
         numLabel: String(i + 1).padStart(2, '0'),
-        dotBtnStyle: `position:relative;z-index:1;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.03em;transition:all .4s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:var(--ltsuan-accent);color:#0A0A0A;transform:scale(1.1)' : 'border:1px solid rgba(244,239,232,.15);background:transparent;color:rgba(244,239,232,.3)'}`,
+        dotBtnStyle: `position:relative;z-index:1;width:22px;height:22px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:8px;letter-spacing:.03em;transition:all .4s ease;${i === active ? 'border:1px solid var(--ltsuan-accent);background:var(--ltsuan-accent);color:#0A0A0A;transform:scale(1.1)' : 'border:1px solid rgba(244,239,232,.17);background:transparent;color:rgba(244,239,232,.3)'}`,
         pingClass: i === active ? 'ltsuan-ping' : '',
         pingStyle: `position:absolute;inset:-7px;border-radius:50%;border:1px solid rgba(140,200,30,.35);pointer-events:none;opacity:${i === active ? 1 : 0}`,
       };
