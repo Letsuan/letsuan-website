@@ -4,3 +4,7 @@
 .impeccable/
 .claude/
 .superdesign
+
+# Local content drafts (not part of the deployed site)
+*.doc
+*.docx
