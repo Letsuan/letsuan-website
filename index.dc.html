@@ -197,10 +197,6 @@
 
     <div style="position:absolute;left:0;right:0;bottom:0;z-index:10;padding:0 6vw;padding-bottom:28px;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none">
       <div style="display:flex;align-items:center;gap:24px;pointer-events:auto">
-        <div style="display:flex;align-items:center;gap:8px">
-          <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoKnobStyle }}"></span></button>
-          <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;opacity:.4">AUTO {{ autoLabel }}</span>
-        </div>
         <div class="ltsuan-hero-deco ltsuan-hero-scrollcue">
           <div style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);display:flex;align-items:center;justify-content:center;overflow:hidden">
             <div style="position:relative;width:1px;height:16px;overflow:hidden;background:rgba(244,239,232,.15)">
@@ -212,9 +208,9 @@
           </div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:12px;pointer-events:auto">
-        <button onClick="{{ prevSlide }}" aria-label="Previous chapter" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .3s ease" style-hover="background:var(--ltsuan-text);color:#0A0A0A">↑</button>
-        <button onClick="{{ nextSlide }}" aria-label="Next chapter" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(244,239,232,.15);background:transparent;color:var(--ltsuan-text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .3s ease" style-hover="background:var(--ltsuan-text);color:#0A0A0A">↓</button>
+      <div style="display:flex;align-items:center;gap:8px;pointer-events:auto">
+        <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoKnobStyle }}"></span></button>
+        <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;opacity:.4">AUTO {{ autoLabel }}</span>
       </div>
     </div>
   </section>
@@ -383,8 +379,6 @@ class Component extends DCLogic {
       const idx = parseInt(e.currentTarget.getAttribute('data-idx'), 10);
       this.changeSlide(idx);
     };
-    const prevSlide = () => this.changeSlide((active - 1 + this.slideData.length) % this.slideData.length);
-    const nextSlide = () => this.changeSlide((active + 1) % this.slideData.length);
     const heroMouseMove = (e) => {
       if (this._reducedMotion) return;
       const rect = e.currentTarget.getBoundingClientRect();
@@ -507,10 +501,8 @@ class Component extends DCLogic {
     return {
       slides,
       goTo,
-      prevSlide,
       heroMouseMove,
       heroMouseLeave,
-      nextSlide,
       revealLine1: `transition:transform .9s cubic-bezier(.16,1,.3,1) .35s;transform:translateY(${tv ? 0 : 110}%)`,
       revealLine2: `transition:transform .9s cubic-bezier(.16,1,.3,1) .5s;transform:translateY(${tv ? 0 : 110}%)`,
       revealSubtitle: `display:block;transition:transform .9s cubic-bezier(.16,1,.3,1) .65s;transform:translateY(${tv ? 0 : 110}%)`,
