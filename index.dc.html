@@ -26,8 +26,6 @@
   <meta name="twitter:description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://www.letsuan.com/#organization","name":"Le Tsuan Design","alternateName":"麗荃室內裝修","url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","description":"Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.","foundingDate":"2014","telephone":"+886-4-2321-5956","address":[{"@type":"PostalAddress","streetAddress":"6F.-1, No. 85, Sec. 1, Huamei W. St.","addressLocality":"West District, Taichung City","postalCode":"403020","addressCountry":"TW"},{"@type":"PostalAddress","streetAddress":"3F., No. 62, Sec. 6, Yanping N. Rd.","addressLocality":"Shihlin District, Taipei City","postalCode":"111069","addressCountry":"TW"}],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"license","name":"Licensed Interior Decorator","identifier":"40E2007328"},"areaServed":"TW","sameAs":["https://www.facebook.com/LETSUANDESIGN"]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="./image-slot.js"></script>
   <style>
@@ -38,6 +36,9 @@
     .ltsuan-hero-text{max-width:44%}
     .ltsuan-hero-title{font-size:clamp(40px,8vw,120px)}
     .ltsuan-hero-container{width:100%;max-width:1280px;margin:0;padding:0 6vw 0 max(6vw,100px)}
+    @media (min-width:1280px) and (max-width:1699px){
+      .ltsuan-hero-title{font-size:clamp(40px,6vw,88px)}
+    }
     @media (min-width:1700px){
       .ltsuan-hero-text{max-width:48%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,145px)}
@@ -412,11 +413,18 @@ class Component extends DCLogic {
         avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.bgWidth ? this._responsiveSrcset(s.realImg, 'avif', s.bgWidth) : s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personImgRef: (el) => {
           if (!el || !s.personImg) return;
+          // Set the sibling <source>'s avif srcset before the fallback src, so the
+          // <picture> has already resolved to avif by the time src would trigger a
+          // fetch -- setting src first raced the avif source and pulled down both.
+          const avifSource = el.previousElementSibling;
+          if (avifSource && avifSource.tagName === 'SOURCE' && !avifSource.srcset) {
+            avifSource.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif');
+          }
           el.src = s.personImg;
           if (i === 1) { this._personZoomImgEl1 = el; }
           if (i === 2) { this._personZoomImgEl = el; }
         },
-        personAvifRef: (el) => { if (el && s.personImg) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        personAvifRef: (el) => { if (el && s.personImg && !el.srcset) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personAlt: s.personAlt,
         personZoomClass: (s.personImg && !this._reducedMotion)
           ? (i === 1 ? 'ltsuan-person-grow-glow' : (i === 2 ? 'ltsuan-person-grow' : ''))

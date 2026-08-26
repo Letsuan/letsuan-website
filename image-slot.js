@@ -744,7 +744,10 @@
       // frame's clamp range.
       this._ro = new ResizeObserver(() => this._render());
       this._ro.observe(this);
-      load();
+      // No sidecar exists on a deployed page (no omelette editor bridge), so
+      // skip the fetch entirely instead of requesting a file that 404s on
+      // every load.
+      if (typeof window !== 'undefined' && window.omelette && window.omelette.writeFile) load();
       this._render();
     }
 
