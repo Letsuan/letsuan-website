@@ -68,13 +68,14 @@
     @keyframes ltsuanSlowParallax{0%{transform:scale(1)}100%{transform:scale(1.05)}}
     @keyframes ltsuanZoomIn{0%{transform:scale(1) translateY(0)}100%{transform:scale(0.96) translateY(0)}}
     @keyframes ltsuanPersonGrow{0%{transform:scale(.96)}100%{transform:scale(1.04)}}
+    @keyframes ltsuanPanTB{0%{object-position:50% 30%}100%{object-position:50% 60%}}
     @keyframes ltsuanPersonGlow{0%,100%{filter:brightness(.85) contrast(1.6) saturate(1.15) hue-rotate(-10deg)}50%{filter:brightness(1.1) contrast(1.65) saturate(1.2) hue-rotate(-10deg)}}
     .ltsuan-ping{animation:ltsuanPing 2.5s ease-out infinite}
     .ltsuan-beam{animation:ltsuanBeam 1.6s ease-in-out infinite}
     .ltsuan-bg-light-sweep{animation:ltsuanBgLightSweep 8s ease-in-out infinite}
     .ltsuan-brightness-pulse{animation:ltsuanBrightnessPulse 6s ease-in-out infinite}
     .ltsuan-pan-lr{animation:ltsuanPanLR 5s ease-in-out 1 forwards}
-    .ltsuan-pan-lr-slow{animation:ltsuanPanLR 10s ease-in-out infinite alternate}
+    .ltsuan-pan-lr-slow{animation:ltsuanPanTB 10s ease-in-out infinite alternate}
     .ltsuan-pan-static{animation:ltsuanPanStatic 5s linear 1 forwards}
     .ltsuan-slow-parallax{animation:ltsuanSlowParallax 9s ease-in-out infinite alternate}
     .ltsuan-zoom-in{animation:ltsuanZoomIn 5s ease-out 1 forwards}
