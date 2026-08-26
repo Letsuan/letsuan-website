@@ -316,6 +316,14 @@ class Component extends DCLogic {
   }
   changeSlide(idx) {
     if (idx === this.state.active || this._transitioning) return;
+    if (idx === 0 && this._panLRImgEl0 && !this._reducedMotion) {
+      // Restart slide 1's one-shot pan-lr animation each time it becomes active again,
+      // since ltsuanPanLR only plays once and freezes on its final frame otherwise.
+      const el = this._panLRImgEl0;
+      el.style.animation = 'none';
+      void el.offsetHeight;
+      el.style.animation = '';
+    }
     if (idx === 1 && this._panImgEl && !this._reducedMotion) {
       // Restart the pan (instead of toggling the class on active-change) so slide 1
       // never reverts to its static center crop mid-transition when leaving it.
@@ -387,6 +395,7 @@ class Component extends DCLogic {
             el.src = s.realImg;
             if (s.bgWidth) el.srcset = this._responsiveSrcset(s.realImg, 'jpg', s.bgWidth);
           }
+          if (i === 0) { this._panLRImgEl0 = el; }
           if (i === 1) { this._panImgEl = el; }
           if (i === 2) { this._zoomImgEl = el; }
         },
