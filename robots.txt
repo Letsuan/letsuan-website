@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /coming-soon.dc.html
-Disallow: /privacy-policy.dc.html
 
 Sitemap: https://www.letsuan.com/sitemap.xml
