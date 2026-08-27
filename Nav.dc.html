@@ -66,13 +66,13 @@ class Component extends DCLogic {
       const s = window.scrollY > 40;
       if (s !== this.state.scrolled) this.setState({ scrolled: s });
     };
-    window.addEventListener('scroll', this._onScroll);
+    window.addEventListener('scroll', this._onScroll, { passive: true });
     this._onResize = () => {
       const n = window.innerWidth < 720;
       if (n !== this.state.narrow) this.setState({ narrow: n });
     };
     this._onResize();
-    window.addEventListener('resize', this._onResize);
+    window.addEventListener('resize', this._onResize, { passive: true });
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this._onScroll);
