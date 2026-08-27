@@ -15,6 +15,8 @@ function withSecurityHeaders(res, pathname) {
       }
       if (UTF8_TEXT_ASSETS.has(pathname)) {
                 headers.set('Content-Type', 'text/plain; charset=utf-8');
+      } else if ((headers.get('Content-Type') || '').startsWith('text/html')) {
+                headers.set('Content-Type', 'text/html; charset=utf-8');
       }
       return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
 }
