@@ -105,7 +105,7 @@
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(28px,4vw,44px);margin:0;max-width:760px">Built to withstand what the site<br>the client and the code demand.</h2>
     </div>
     <div class="ltsuan-capabilities-grid" style="display:grid;gap:16px;margin-left:-24px">
-      <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="7">
+      <sc-for list="{{ capabilities }}" as="cap" hint-placeholder-count="8">
         <div style="{{ cap.cardStyle }}">
           <span style="position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
           <span style="position:absolute;top:6px;right:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
@@ -114,7 +114,7 @@
           <div style="{{ cap.imgWrapStyle }}">
             <picture>
               <source ref="{{ cap.avifRef }}" type="image/avif" />
-              <img ref="{{ cap.imgRef }}" alt="{{ cap.title }}" style="{{ cap.imgStyle }}" loading="lazy" decoding="async" />
+              <img ref="{{ cap.imgRef }}" alt="{{ cap.title }}" style="{{ cap.imgStyle }}" style-hover="filter:brightness(1) saturate(1.15)" loading="lazy" decoding="async" />
             </picture>
           </div>
           <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 8px">{{ cap.title }}</h3>
@@ -174,6 +174,7 @@ class Component extends DCLogic {
       { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.', img: './images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg', evidenceHref: './project-dragon-to-beast.dc.html', evidenceLabel: 'From Dragon to Beast' },
       { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.', img: './images/notre-dame-profile-line-letsuan-design.jpg', imgScale: 1.2, imgPosition: 'center 15%', evidenceHref: './project-notre-dame.dc.html', evidenceLabel: 'Eternal Notre-Dame VR Exhibition' },
       { title: 'In-House Fabrication & Waste Management', desc: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.', img: './images/mobile-museum-exhibition-01-letsuan-design.jpg', evidenceHref: './project-mobile-museum.dc.html', evidenceLabel: 'Mobile Museum Vehicle Fabrication' },
+      { title: 'Remote International Delivery', desc: 'Complete construction documentation precise enough to guide fabrication, display design and installation without any on-site supervision, for exhibitions built and installed entirely by a local crew abroad.', img: './images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg', evidenceHref: './project-la-fortuna-bordada.dc.html', evidenceLabel: 'La Fortuna Bordada — Madrid' },
     ].map((c, i) => ({
       ...c,
       idx: String(i + 1).padStart(2, '0'),
@@ -184,7 +185,7 @@ class Component extends DCLogic {
         ? 'position:relative;height:120px;overflow:hidden;margin-bottom:16px'
         : 'display:none',
       imgStyle: c.img
-        ? `width:100%;height:100%;object-fit:cover;object-position:${c.imgPosition || 'center'};display:block;filter:brightness(.8) saturate(1.1);transform:scale(${c.imgScale || 1.15})`
+        ? `width:100%;height:100%;object-fit:cover;object-position:${c.imgPosition || 'center'};display:block;transition:filter .35s ease;filter:brightness(.8) saturate(1.1);transform:scale(${c.imgScale || 1.15})`
         : 'display:none',
     }));
     return {
