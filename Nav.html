@@ -6,17 +6,17 @@
 <style>x-dc{display:none}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="./support.js" defer></script>
+<script src="/support.js" defer></script>
 </head>
 <body>
 <x-dc>
 <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; padding: {{ navPadding }}; background: {{ navBg }}; backdrop-filter: blur(4px); transition: background .3s ease; font-family: 'Oswald',sans-serif; height: 45px">
   <div style="display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;transform:scale({{ navContentScale }});transform-origin:center;transition:transform .3s ease">
-    <a href="./" style="display:flex;align-items:center;gap:14px;text-decoration:none"><img src="./assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" style="height:{{ logoHeight }};width:auto;display:block;margin-left:23px" width="178" height="21"></a>
+    <a href="/" style="display:flex;align-items:center;gap:14px;text-decoration:none"><img src="/assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" style="height:{{ logoHeight }};width:auto;display:block;margin-left:23px" width="178" height="21"></a>
     <div style="display:flex;align-items:center;gap:{{ navGap }}">
       <div style="display:flex;gap:{{ langWrapGap }};padding:4px;background:rgba(255,255,255,.06);border-radius:999px">
         <span style="padding:{{ langPillPadding }};border-radius:999px;background:#8CC81E;color:#0a0a0a;font-size:11px;font-weight:400;letter-spacing:.1em">EN</span>
-        <a href="./coming-soon" style="padding:{{ langPillPadding }};border-radius:999px;color:rgba(255,255,255,.7);font-size:11px;font-weight:400;letter-spacing:.1em;text-decoration:none">中文</a>
+        <a href="/coming-soon" style="padding:{{ langPillPadding }};border-radius:999px;color:rgba(255,255,255,.7);font-size:11px;font-weight:400;letter-spacing:.1em;text-decoration:none">中文</a>
       </div>
       <button ref="{{ menuBtnRef }}" style="display:flex;align-items:center;justify-content:center;gap:{{ menuBtnGap }};background:none;border:none;color:#f4efe8;cursor:pointer;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;font-weight:400;padding:{{ menuBtnPadding }};min-height:44px">
         <span>{{ menuLabel }}</span>
@@ -103,13 +103,13 @@ class Component extends DCLogic {
       bar2Style: `display:block;width:100%;height:1px;background:#f4efe8;transition:transform .3s ease;transform:${open ? 'rotate(-45deg) translateY(-2.5px)' : 'none'}`,
       overlayStyle: `position:fixed;inset:0;z-index:999;background:rgba(10,10,10,.97);backdrop-filter:blur(12px);transition:opacity .5s ease;opacity:${open ? 1 : 0};pointer-events:${open ? 'auto' : 'none'}`,
       menuItems: [
-        { key: 'exhibition', label: 'Exhibition Design', href: './portfolio?cat=Exhibition+Design' },
-        { key: 'interior', label: 'Interior Design', href: './portfolio?cat=Interior+Design' },
-        { key: 'visual', label: 'Visual Design', href: './portfolio?cat=Visual+Design' },
-        { key: 'event', label: 'Event', href: './portfolio?cat=Event' },
-        { key: 'about', label: 'About', href: './about' },
-        { key: 'what-we-do', label: 'What We Do', href: './what-we-do' },
-        { key: 'contact', label: 'Contact', href: './contact' },
+        { key: 'exhibition', label: 'Exhibition Design', href: '/portfolio?cat=Exhibition+Design' },
+        { key: 'interior', label: 'Interior Design', href: '/portfolio?cat=Interior+Design' },
+        { key: 'visual', label: 'Visual Design', href: '/portfolio?cat=Visual+Design' },
+        { key: 'event', label: 'Event', href: '/portfolio?cat=Event' },
+        { key: 'about', label: 'About', href: '/about' },
+        { key: 'what-we-do', label: 'What We Do', href: '/what-we-do' },
+        { key: 'contact', label: 'Contact', href: '/contact' },
       ].map((item) => {
         const isActive = item.key === this.props.active;
         const base = `display:block;padding:4px 0;text-decoration:none;font-family:'Oswald',sans-serif;font-weight:300;font-size:${menuItemFont};line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,opacity .2s ease`;
@@ -120,13 +120,13 @@ class Component extends DCLogic {
         };
       }),
       featuredItems: [
-        { num: '01', title: 'Seeing is Believing?', meta: 'Masters of Marine Illusion: Mimicry & Camouflage', href: './project-marine-illusion' },
-        { num: '02', title: 'Beyond Just an Exhibition—You Are Part of the Art!', meta: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition' },
-        { num: '03', title: 'Eternal Notre-Dame', meta: 'International Debut of the VR Immersive Exhibition in Taiwan', href: './project-notre-dame' },
-        { num: '04', title: 'Cat Art Museum', meta: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art' },
-        { num: '05', title: 'The Missing Scientist', meta: 'Electromagnetic Horizon II', href: './project-missing-scientist' },
-        { num: '06', title: 'Experience the Yokai World', meta: '100 Stories of Yokai Exhibition', href: './project-yokai-world' },
-        { num: '07', title: 'Universe', meta: '500 Pieces of LED Kinetic Light', href: './project-led-kinetic' },
+        { num: '01', title: 'Seeing is Believing?', meta: 'Masters of Marine Illusion: Mimicry & Camouflage', href: '/project-marine-illusion' },
+        { num: '02', title: 'Beyond Just an Exhibition—You Are Part of the Art!', meta: 'Step Into a Breathing Magical Universe of Light and Shadows', href: '/project-beyond-just-an-exhibition' },
+        { num: '03', title: 'Eternal Notre-Dame', meta: 'International Debut of the VR Immersive Exhibition in Taiwan', href: '/project-notre-dame' },
+        { num: '04', title: 'Cat Art Museum', meta: 'A Super-Healing World by Shu Yamamoto', href: '/project-cat-art' },
+        { num: '05', title: 'The Missing Scientist', meta: 'Electromagnetic Horizon II', href: '/project-missing-scientist' },
+        { num: '06', title: 'Experience the Yokai World', meta: '100 Stories of Yokai Exhibition', href: '/project-yokai-world' },
+        { num: '07', title: 'Universe', meta: '500 Pieces of LED Kinetic Light', href: '/project-led-kinetic' },
       ],
     };
   }

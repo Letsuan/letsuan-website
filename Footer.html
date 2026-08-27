@@ -6,23 +6,23 @@
 <style>x-dc{display:none}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="./support.js" defer></script>
+<script src="/support.js" defer></script>
 </head>
 <body>
 <x-dc>
 <footer style="background:{{ bgColor }};color:rgba(244,239,232,.85);font-family:'Oswald',sans-serif;padding:{{ footerPadding }};border-top:1px solid rgba(244,239,232,.08)">
   <div style="display:grid;grid-template-columns:{{ footerCols }};gap:{{ footerGap }};max-width:1280px;margin:0 auto">
     <div>
-      <a href="./" style="display:flex;align-items:center;width:fit-content;margin-bottom:14px;text-decoration:none"><img src="./assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" style="height:30px;display:block" /></a>
+      <a href="/" style="display:flex;align-items:center;width:fit-content;margin-bottom:14px;text-decoration:none"><img src="/assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" style="height:30px;display:block" /></a>
       <p style="font-size:16px;font-weight:300;line-height:1.7;color:rgba(244,239,232,.6);max-width:320px;margin:0">An interior, exhibition and visual design studio based in Taiwan — building immersive spaces and brand environments.</p>
     </div>
     <div>
       <div style="font-size:13px;font-weight:400;letter-spacing:.08em;color:rgba(244,239,232,.6);margin-bottom:16px">EXPLORE</div>
       <div style="display:flex;flex-direction:column;gap:10px">
-        <a href="./" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">Home</a>
-        <a href="./portfolio" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">Portfolio</a>
-        <a href="./about" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">About Us</a>
-        <a href="./what-we-do" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">What We Do</a>
+        <a href="/" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">Home</a>
+        <a href="/portfolio" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">Portfolio</a>
+        <a href="/about" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">About Us</a>
+        <a href="/what-we-do" style="color:rgba(244,239,232,.75);font-size:16px;font-weight:300;text-decoration:none">What We Do</a>
       </div>
     </div>
     <div>
@@ -48,7 +48,7 @@
     <div style="{{ footerBottomStyle }};font-weight:300">
       <span>© 2026 Le Tsuan Design &amp; Interior Deco. All rights reserved.</span>
       <span>Interior Decorators' Registration No. 40E2007328</span>
-      <a href="./privacy-policy" style="color:rgba(244,239,232,.6);font-size:13px;font-weight:300;text-decoration:none">Privacy Policy</a>
+      <a href="/privacy-policy" style="color:rgba(244,239,232,.6);font-size:13px;font-weight:300;text-decoration:none">Privacy Policy</a>
     </div>
   </div>
 </footer>
@@ -81,7 +81,7 @@ class Component extends DCLogic {
       footerBottomStyle: veryNarrow
         ? 'display:flex;flex-direction:column;gap:8px'
         : 'display:flex;justify-content:space-between;align-items:center',
-      ctaHref: onContactPage ? 'mailto:' + ['info', 'letsuan.com'].join('@') : './contact',
+      ctaHref: onContactPage ? 'mailto:' + ['info', 'letsuan.com'].join('@') : '/contact',
       ctaLabel: onContactPage ? 'Email Us' : 'Contact Us',
     };
   }
