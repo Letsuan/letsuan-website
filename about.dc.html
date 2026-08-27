@@ -64,7 +64,7 @@
   <dc-import name="Nav" active="about" hint-size="100%,0px"></dc-import>
 
   <div class="ltsuan-about-main">
-    <section id="hero" ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Hero" style="padding:110px 60px 0 79px">
+    <section id="hero" ref="{{ zone0Ref }}" data-screen-label="About / Room 01 — Hero" style="padding:110px 60px 0 79px;border-bottom:1px solid var(--ltsuan-line)">
       <div class="ltsuan-reveal" style="{{ zone0Reveal }};position:relative;max-width:900px;margin-bottom:36px">
         <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(36px,6vw,72px);line-height:1.05;letter-spacing:-.02em;margin:0 0 20px">Space and story,<br>built by the same hands.</h1>
         <p style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(17px,1.6vw,20px);line-height:1.5;color:var(--ltsuan-dim);margin:0;max-width:46ch">Interior, exhibition and visual design for museums, government agencies and global brands, based in Taiwan.</p>
@@ -84,7 +84,7 @@
       <div style="height:40px"></div>
     </section>
 
-    <section id="studio" ref="{{ zone1Ref }}" data-screen-label="About / Room 02 — Studio" style="padding:24px 60px 44px 79px">
+    <section id="studio" ref="{{ zone1Ref }}" data-screen-label="About / Room 02 — Studio" style="padding:24px 60px 44px 79px;border-bottom:1px solid var(--ltsuan-line)">
       <div class="ltsuan-reveal" style="{{ zone1Reveal }}">
         <div style="max-width:640px">
           <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-accent);margin-bottom:10px">THE STUDIO</div>
@@ -96,9 +96,7 @@
       </div>
     </section>
 
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section id="record" ref="{{ zone2Ref }}" data-screen-label="About / Room 03 — Record" style="padding:36px 60px 44px 79px">
+    <section id="record" ref="{{ zone2Ref }}" data-screen-label="About / Room 03 — Record" style="padding:36px 60px 44px 79px;border-bottom:1px solid var(--ltsuan-line)">
       <div class="ltsuan-reveal" style="{{ zone2Reveal }}">
         <div class="ltsuan-stats-grid" style="display:grid;gap:16px">
           <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
@@ -116,9 +114,7 @@
       </div>
     </section>
 
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section id="sustainability-clients" ref="{{ zone3Ref }}" data-screen-label="About / Room 04 — Sustainability & Clients" style="padding:64px 60px 56px 79px">
+    <section id="sustainability-clients" ref="{{ zone3Ref }}" data-screen-label="About / Room 04 — Sustainability & Clients" style="padding:64px 60px 56px 79px;border-bottom:1px solid var(--ltsuan-line)">
       <div class="ltsuan-reveal ltsuan-split" style="{{ zone3Reveal }};display:grid;grid-template-columns:1fr 1fr;gap:44px">
         <div>
           <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.15em;color:var(--ltsuan-accent);margin-bottom:14px">SUSTAINABILITY</div>
@@ -165,27 +161,27 @@
       </div>
     </section>
 
-    <div class="ltsuan-scale-rule" style="margin:0 56px"></div>
-
-    <section id="services" ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Services" style="padding:64px 60px 70px 79px">
+    <section id="services" ref="{{ zone4Ref }}" data-screen-label="About / Room 05 — Services" style="padding:64px 60px 70px 79px;background:var(--ltsuan-panel);border-bottom:1px solid var(--ltsuan-line)">
       <div class="ltsuan-reveal" style="{{ zone4Reveal }};display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;margin-bottom:36px">
         <h2 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:clamp(28px,3.6vw,42px);margin:0">Services</h2>
         <div style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.1em;color:var(--ltsuan-dim)">01&nbsp;/&nbsp;05</div>
       </div>
       <div class="ltsuan-services-grid" style="display:grid;gap:16px">
         <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
-          <div style="position:relative;background:var(--ltsuan-panel);padding:24px">
+          <div style="{{ svc.cardStyle }}">
             <span style="position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
             <span style="position:absolute;top:6px;right:6px;width:10px;height:10px;border-top:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
             <span style="position:absolute;bottom:6px;left:6px;width:10px;height:10px;border-bottom:1px solid var(--ltsuan-blueprint);border-left:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
             <span style="position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1px solid var(--ltsuan-blueprint);border-right:1px solid var(--ltsuan-blueprint);opacity:.55"></span>
-            <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;margin:0 0 10px">{{ svc.title }}</h3>
-            <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.6;color:rgba(244,239,232,.55);margin:0 0 12px">{{ svc.desc }}</p>
-            <div style="display:flex;flex-wrap:wrap;gap:8px">
-              <sc-for list="{{ svc.points }}" as="pt" hint-placeholder-count="3">
-                <span style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.05em;color:rgba(244,239,232,.6);border:1px solid var(--ltsuan-line);border-radius:999px;padding:4px 10px">{{ pt }}</span>
-              </sc-for>
+            <div style="{{ svc.imgWrapStyle }}">
+              <picture>
+                <source ref="{{ svc.avifRef }}" type="image/avif" />
+                <img ref="{{ svc.imgRef }}" alt="{{ svc.title }}" style="{{ svc.imgStyle }}" style-hover="filter:brightness(1) saturate(1.15)" loading="lazy" decoding="async" />
+              </picture>
             </div>
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:400;font-size:16px;line-height:1.3;min-height:calc(1.3em * 2);margin:0 0 8px">{{ svc.title }}</h3>
+            <p style="font-family:'Oswald',sans-serif;font-size:13px;line-height:1.6;color:rgba(244,239,232,.55);margin:0;text-align:left">{{ svc.desc }}</p>
+            <a href="{{ svc.evidenceHref }}" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.06em;color:var(--ltsuan-accent);text-decoration:none">{{ svc.evidenceLabel }} →</a>
           </div>
         </sc-for>
       </div>
@@ -244,12 +240,24 @@ class Component extends DCLogic {
         { value: '17,000+ m²', label: 'Space Delivered', desc: 'Engineered, built and installed without outsourcing.' },
       ],
       services: [
-        { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', points: ['Concept development & content planning', 'Object research & content sourcing', 'Narrative scripting'] },
-        { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', points: ['Concept & storyline development', 'Set & graphic design', 'Lighting & AV integration'] },
-        { title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', points: ['Spatial planning & concept design', 'Material & finish specification', 'Furniture & fixture selection'] },
-        { title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', points: ['Brand & identity systems', 'Wayfinding & signage', 'Environmental graphics'] },
-        { title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', points: ['Fabrication & millwork', 'Site management', 'Installation & handover'] },
-      ],
+        { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', img: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', evidenceHref: './project-air-force-academy.dc.html', evidenceLabel: 'R.O.C. Air Force Academy 90th Founding Anniversary' },
+        { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', img: './images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', evidenceHref: './project-cat-art.dc.html', evidenceLabel: 'Cat Art Museum' },
+        { title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', img: './images/securities-company-office-design-02-letsuan-design.jpg', evidenceHref: './project-securities-office.dc.html', evidenceLabel: 'Securities Company Office' },
+        { title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', img: './images/westernmost-point-taiwan-01-letsuan-design.jpg', evidenceHref: './project-westernmost-point.dc.html', evidenceLabel: 'The Westernmost Point of Taiwan' },
+        { title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', img: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', evidenceHref: './project-engineering-construction.dc.html', evidenceLabel: 'Disaster Prevention Hall' },
+      ].map((c, i) => ({
+        ...c,
+        idx: String(i + 1).padStart(2, '0'),
+        cardStyle: 'position:relative;background:var(--ltsuan-panel);padding:24px',
+        imgRef: (el) => { if (el && c.img) el.src = c.img; },
+        avifRef: (el) => { if (el && c.img) el.srcset = c.img.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        imgWrapStyle: c.img
+          ? 'position:relative;height:120px;overflow:hidden;margin-bottom:16px'
+          : 'display:none',
+        imgStyle: c.img
+          ? `width:100%;height:100%;object-fit:cover;object-position:${c.imgPosition || 'center'};display:block;transition:filter .35s ease;filter:brightness(.8) saturate(1.1);transform:scale(${c.imgScale || 1.15})`
+          : 'display:none',
+      })),
     };
   }
 }
