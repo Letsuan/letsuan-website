@@ -55,7 +55,7 @@
 <div style="background:var(--ltsuan-bg)">
   <dc-import name="Nav" active="portfolio" hint-size="100%,0px"></dc-import>
 
-  <section data-screen-label="Portfolio / Slider" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
+  <section id="hero" data-screen-label="Portfolio / Slider" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
     <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
       <div style="{{ slide.layerStyle }}">
         <div style="{{ slide.imgStyle }}; position:relative">
@@ -105,19 +105,19 @@
     </div>
   </section>
 
-  <section data-screen-label="Portfolio / Hero" style="padding:170px 56px 63px;border-bottom:1px solid rgba(244,239,232,.08)">
+  <section id="intro" data-screen-label="Portfolio / Hero" style="padding:170px 56px 63px;border-bottom:1px solid rgba(244,239,232,.08)">
     <div style="font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:.25em;color:var(--ltsuan-accent);margin-bottom:18px">ARCHIVE</div>
     <h1 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(38px,6vw,72px);line-height:0.9;margin:0 0 20px;max-width:900px;letter-spacing:-.02em">Work That Turns Spaces Into Experiences.</h1>
     <p style="font-family:'Oswald',sans-serif;font-size:16px;line-height:1.6;color:rgba(244,239,232,.6);max-width:600px;margin:0">A selection of exhibitions, interiors and visual environments delivered across Taiwan.</p>
   </section>
 
-  <section data-screen-label="Portfolio / Filters" style="padding:25px 56px 0;display:flex;gap:10px;flex-wrap:wrap">
+  <section id="filters" data-screen-label="Portfolio / Filters" style="padding:25px 56px 0;display:flex;gap:10px;flex-wrap:wrap">
     <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="4">
       <button onClick="{{ setFilter }}" data-cat="{{ cat.id }}" style="{{ cat.style }}" aria-pressed="{{ cat.active }}">{{ cat.label }}</button>
     </sc-for>
   </section>
 
-  <section data-screen-label="Portfolio / Grid" style="padding:44px 0 0">
+  <section id="portfolio" data-screen-label="Portfolio / Grid" style="padding:44px 0 0">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1px;background:rgba(244,239,232,.1)">
     <sc-for list="{{ visibleProjects }}" as="p" hint-placeholder-count="6">
       <a href="{{ p.href }}" class="ltsuan-pf-card" style="text-decoration:none;color:inherit;position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--ltsuan-bg)">

@@ -128,7 +128,7 @@
   </svg>
   <dc-import name="Nav" active="home" hint-size="100%,0px" style="background:var(--ltsuan-bg)"></dc-import>
 
-  <section data-screen-label="Home / Hero" onMouseMove="{{ heroMouseMove }}" onMouseLeave="{{ heroMouseLeave }}" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
+  <section id="hero" data-screen-label="Home / Hero" onMouseMove="{{ heroMouseMove }}" onMouseLeave="{{ heroMouseLeave }}" style="position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--ltsuan-bg)">
     <sc-for list="{{ slides }}" as="slide" hint-placeholder-count="3">
       <div ref="{{ slide.layerRef }}" style="{{ slide.layerStyle }}">
         <div style="{{ slide.imgStyle }}; position:relative">
@@ -232,7 +232,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Home / Statement" style="padding:160px 60px 160px 79px;display:flex;justify-content:flex-start">
+  <section id="about" data-screen-label="Home / Statement" style="padding:160px 60px 160px 79px;display:flex;justify-content:flex-start">
     <div style="max-width:920px">
       <div style="font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.2em;color:var(--ltsuan-accent);margin-bottom:24px">OUR APPROACH</div>
       <p style="text-align:left;font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(32px,4.6vw,58px);line-height:1.18;letter-spacing:-.01em;margin:0 0 20px;color:#f0e9de">The same team that designs the space<br>also builds it.</p>
@@ -240,7 +240,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Home / What We Do" style="max-width:1700px;margin:0 auto;padding:0 6vw 150px">
+  <section id="services" data-screen-label="Home / What We Do" style="max-width:1700px;margin:0 auto;padding:0 6vw 150px">
     <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:16px">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);margin:0">What We Do</h2>
       <a href="./what-we-do.dc.html" style="font-family:'Oswald',sans-serif;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ltsuan-accent);padding-bottom:3px">See our full process →</a>
@@ -264,7 +264,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Home / Featured Work" style="max-width:1700px;margin:0 auto;padding:0 6vw 160px">
+  <section id="portfolio" data-screen-label="Home / Featured Work" style="max-width:1700px;margin:0 auto;padding:0 6vw 160px">
     <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:52px;flex-wrap:wrap;gap:16px">
       <h2 style="font-family:'Oswald',sans-serif;font-weight:300;font-size:clamp(30px,4vw,48px);margin:0">Selected Work</h2>
       <a href="./portfolio.dc.html" style="font-family:'Oswald',sans-serif;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ltsuan-accent);padding-bottom:3px">View full portfolio →</a>
