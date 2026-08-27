@@ -3,3 +3,5 @@ Allow: /
 Disallow: /coming-soon
 
 Sitemap: https://www.letsuan.com/sitemap.xml
+
+# LLMs: https://www.letsuan.com/llms.txt

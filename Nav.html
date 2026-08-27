@@ -92,7 +92,7 @@ class Component extends DCLogic {
       navPadding: narrow ? '14px 12px' : '16px 56px',
       navContentScale: 1,
       langWrapGap: narrow ? '4px' : '6px',
-      langPillPadding: narrow ? '6px 8px' : '6px 14px',
+      langPillPadding: narrow ? '14px 8px' : '6px 14px',
       menuBtnGap: narrow ? '6px' : '10px',
       menuBtnPadding: narrow ? '14px 2px' : '14px 4px',
       menuOverlayPadding: narrow ? '100px 24px 40px 35px' : '120px 56px 64px 79px',
@@ -112,7 +112,7 @@ class Component extends DCLogic {
         { key: 'contact', label: 'Contact', href: './contact' },
       ].map((item) => {
         const isActive = item.key === this.props.active;
-        const base = `text-decoration:none;font-family:'Oswald',sans-serif;font-weight:300;font-size:${menuItemFont};line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,opacity .2s ease`;
+        const base = `display:block;padding:4px 0;text-decoration:none;font-family:'Oswald',sans-serif;font-weight:300;font-size:${menuItemFont};line-height:1.1;letter-spacing:-.02em;transition:color .2s ease,opacity .2s ease`;
         return {
           ...item,
           style: `${base};color:${isActive ? '#8CC81E' : '#f4efe8'};opacity:${isActive ? 1 : .9}`,

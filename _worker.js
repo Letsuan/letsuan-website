@@ -2,6 +2,8 @@ function isLongCacheAsset(pathname) {
       return pathname.startsWith('/images/') || pathname.startsWith('/assets/');
 }
 
+const UTF8_TEXT_ASSETS = new Set(['/llms.txt', '/llms-full.txt']);
+
 function withSecurityHeaders(res, pathname) {
       const headers = new Headers(res.headers);
       headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
@@ -10,6 +12,9 @@ function withSecurityHeaders(res, pathname) {
       headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
       if (isLongCacheAsset(pathname)) {
                 headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+      }
+      if (UTF8_TEXT_ASSETS.has(pathname)) {
+                headers.set('Content-Type', 'text/plain; charset=utf-8');
       }
       return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
 }

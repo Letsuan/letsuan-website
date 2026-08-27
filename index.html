@@ -6,7 +6,9 @@
 <style>x-dc{display:none}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesizes="100vw" imagesrcset="./images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design-960w.avif 960w, ./images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design-1920w.avif 1920w, ./images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.avif 4560w">
 <title>Le Tsuan Design | Exhibition, Interior &amp; Spatial Construction Studio, Taiwan</title>
 <meta name="description" content="Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces." />
@@ -46,7 +48,7 @@
   <meta name="twitter:image" content="https://www.letsuan.com/assets/logo.png" />
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["ProfessionalService","GeneralContractor","Organization"],"@id":"https://www.letsuan.com/#organization","name":"Le Tsuan Design","alternateName":["麗荃室內裝修有限公司","麗荃設計","Letsuan Design Ltd."],"url":"https://www.letsuan.com/","logo":"https://www.letsuan.com/assets/logo.png","image":"https://www.letsuan.com/assets/logo.png","description":"麗荃室內裝修（Le Tsuan Design）是一間位於臺灣台中與台北的專業設計與工程工作室，專精於博物館展示設計、文化場館策展、商業室內設計與全案工程施作。Taiwan-based studio specializing in interior, exhibition, visual design and construction, with studios in Taichung and Taipei.","foundingDate":"2014","telephone":"+886-4-2321-5956","email":"info@letsuan.com","priceRange":"$$$$","address":[{"@type":"PostalAddress","streetAddress":"6F.-1, No. 85, Sec. 1, Huamei W. St.","addressLocality":"West District, Taichung City","addressRegion":"Taichung","postalCode":"403020","addressCountry":"TW"},{"@type":"PostalAddress","streetAddress":"3F., No. 62, Sec. 6, Yanping N. Rd.","addressLocality":"Shihlin District, Taipei City","addressRegion":"Taipei","postalCode":"111069","addressCountry":"TW"}],"geo":{"@type":"GeoCoordinates","latitude":24.1555,"longitude":120.662},"contactPoint":{"@type":"ContactPoint","telephone":"+886-4-2321-5956","email":"info@letsuan.com","contactType":"Customer Service & Project Inquiries","areaServed":["TW","International"]},"areaServed":["TW","International"],"hasCredential":{"@type":"EducationalOccupationalCredential","credentialCategory":"Government License","name":"室內裝修業登記證 (Interior Decorators' Registration Certificate)","recognizedBy":{"@type":"GovernmentOrganization","name":"內政部國土管理署 (National Land Management Agency, MOI)","alternateName":"內政部營建署"},"identifier":"40E2007328"},"knowsAbout":["Exhibition Design","Museum Engineering","Interior Design","Visual Design","Heritage Site Non-Invasive Construction","VR Immersive Space Integration","Licensed Interior Decoration"],"sameAs":["https://www.facebook.com/LETSUANDESIGN"]},{"@type":"WebSite","@id":"https://www.letsuan.com/#website","url":"https://www.letsuan.com/","name":"Le Tsuan Design","publisher":{"@id":"https://www.letsuan.com/#organization"},"inLanguage":"en"}]}</script>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="./image-slot.js"></script>
+  <script src="./image-slot.js" defer></script>
   <style>
     :root{--ltsuan-bg:#0A0A0A;--ltsuan-text:#f4efe8;--ltsuan-accent:#8CC81E;--ltsuan-accent-hover:#a8dc4a}
     body{margin:0;background:var(--ltsuan-bg);color:var(--ltsuan-text);font-family:'Oswald',sans-serif}
@@ -229,7 +231,7 @@
         </div>
       </div>
       <div style="display:flex;align-items:center;gap:8px;pointer-events:auto">
-        <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoKnobStyle }}"></span></button>
+        <button onClick="{{ toggleAuto }}" style="{{ autoToggleStyle }}" aria-label="Toggle automatic slide rotation" aria-pressed="{{ autoPressed }}"><span style="{{ autoTrackStyle }}"><span style="{{ autoKnobStyle }}"></span></span></button>
         <span style="font-family:'Oswald',sans-serif;font-size:9px;letter-spacing:.2em;opacity:.4">AUTO {{ autoLabel }}</span>
       </div>
     </div>
@@ -321,13 +323,25 @@ class Component extends DCLogic {
     { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art', realImg: './images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg', imgWidth: 800, imgHeight: 425 },
   ];
   state = { active: 0, auto: true, textVisible: true, parallax: { x: 0, y: 0 } };
+  _loadedSlides = new Set([0]);
+  _preloadNext(idx) {
+    // Give the next slide in play order a head start on loading, rather than
+    // fetching every slide's images up front on initial mount.
+    clearTimeout(this._preloadTimer);
+    this._preloadTimer = setTimeout(() => {
+      this._loadedSlides.add(idx);
+      this.forceUpdate();
+    }, 1500);
+  }
   componentDidMount() {
     this._reducedMotion = false;
     this._maybeStartAuto();
+    this._preloadNext(1 % this.slideData.length);
   }
   componentWillUnmount() {
     clearTimeout(this._autoTimer);
     clearTimeout(this._textTimer);
+    clearTimeout(this._preloadTimer);
     if (this._parallaxRAF) cancelAnimationFrame(this._parallaxRAF);
   }
   _maybeStartAuto() {
@@ -388,9 +402,11 @@ class Component extends DCLogic {
     this._transitioning = true;
     this.setState({ textVisible: false });
     this._textTimer = setTimeout(() => {
+      this._loadedSlides.add(idx);
       this.setState({ active: idx, textVisible: true });
       this._transitioning = false;
       this._maybeStartAuto();
+      this._preloadNext((idx + 1) % this.slideData.length);
     }, 320);
   }
   renderVals() {
@@ -421,19 +437,23 @@ class Component extends DCLogic {
         dotLabel: `Go to slide: ${s.title}`,
         imgRef: (el) => {
           if (!el) return;
+          if (i === 0) { this._panLRImgEl0 = el; }
+          if (i === 1) { this._panImgEl = el; }
+          if (i === 2) { this._zoomImgEl = el; }
+          if (!this._loadedSlides.has(i)) return;
           if (s.realImg) {
             el.src = s.realImg;
             if (s.bgWidth) el.srcset = this._responsiveSrcset(s.realImg, 'jpg', s.bgWidth);
             if (s.bgWidth) el.width = s.bgWidth;
             if (s.bgHeight) el.height = s.bgHeight;
           }
-          if (i === 0) { this._panLRImgEl0 = el; }
-          if (i === 1) { this._panImgEl = el; }
-          if (i === 2) { this._zoomImgEl = el; }
         },
-        avifRef: (el) => { if (el && s.realImg && !s.noAvif) el.srcset = s.bgWidth ? this._responsiveSrcset(s.realImg, 'avif', s.bgWidth) : s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        avifRef: (el) => { if (el && s.realImg && !s.noAvif && this._loadedSlides.has(i)) el.srcset = s.bgWidth ? this._responsiveSrcset(s.realImg, 'avif', s.bgWidth) : s.realImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personImgRef: (el) => {
           if (!el || !s.personImg) return;
+          if (i === 1) { this._personZoomImgEl1 = el; }
+          if (i === 2) { this._personZoomImgEl = el; }
+          if (!this._loadedSlides.has(i)) return;
           // Set the sibling <source>'s avif srcset before the fallback src, so the
           // <picture> has already resolved to avif by the time src would trigger a
           // fetch -- setting src first raced the avif source and pulled down both.
@@ -444,10 +464,8 @@ class Component extends DCLogic {
           el.src = s.personImg;
           if (s.personWidth) el.width = s.personWidth;
           if (s.personHeight) el.height = s.personHeight;
-          if (i === 1) { this._personZoomImgEl1 = el; }
-          if (i === 2) { this._personZoomImgEl = el; }
         },
-        personAvifRef: (el) => { if (el && s.personImg && !el.srcset) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        personAvifRef: (el) => { if (el && s.personImg && !el.srcset && this._loadedSlides.has(i)) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personAlt: s.personAlt,
         personZoomClass: (s.personImg && !this._reducedMotion)
           ? (i === 1 ? 'ltsuan-person-grow-glow' : (i === 2 ? 'ltsuan-person-grow' : ''))
@@ -462,11 +480,11 @@ class Component extends DCLogic {
           : (s.personImg
             ? 'width:100%;height:100%;object-fit:contain;object-position:center 100%;display:block'
             : 'display:none'),
-        personTintStyle: (i === 1 && s.personImg)
+        personTintStyle: (i === 1 && s.personImg && this._loadedSlides.has(i))
           ? (() => { const maskUrl = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); return `position:absolute;inset:0;pointer-events:none;background:#1e4a7a;opacity:.4;mix-blend-mode:color;mask-image:url(${maskUrl});mask-size:contain;mask-position:center bottom;mask-repeat:no-repeat;-webkit-mask-image:url(${maskUrl});-webkit-mask-size:contain;-webkit-mask-position:center bottom;-webkit-mask-repeat:no-repeat`; })()
           : 'display:none',
-        doorImgRef: (el) => { if (el && s.doorImg) { el.src = s.doorImg; if (s.doorWidth) el.width = s.doorWidth; if (s.doorHeight) el.height = s.doorHeight; } },
-        doorAvifRef: (el) => { if (el && s.doorImg) el.srcset = s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
+        doorImgRef: (el) => { if (el && s.doorImg && this._loadedSlides.has(i)) { el.src = s.doorImg; if (s.doorWidth) el.width = s.doorWidth; if (s.doorHeight) el.height = s.doorHeight; } },
+        doorAvifRef: (el) => { if (el && s.doorImg && this._loadedSlides.has(i)) el.srcset = s.doorImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         doorAlt: s.doorAlt,
                 doorPanelStyle: ((i === 0 || i === 1 || i === 2) && s.doorImg)
           ? 'position:absolute;left:0;top:0;width:45%;height:100%;overflow:hidden;pointer-events:none;box-shadow:inset -3px 0 10px rgba(0,0,0,.35), inset -1px 0 0 rgba(255,255,255,.22), 8px 0 24px rgba(0,0,0,.4);mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%);-webkit-mask-image:linear-gradient(to top left, rgba(0,0,0,1) 0%, rgba(0,0,0,.5) 100%)'
@@ -566,7 +584,8 @@ class Component extends DCLogic {
       })),
       toggleAuto,
       autoPressed: this.state.auto ? 'true' : 'false',
-      autoToggleStyle: `position:relative;width:38px;height:18px;border-radius:999px;border:1px solid rgba(244,239,232,${this.state.auto ? '.4' : '.15'});background:${this.state.auto ? 'rgba(244,239,232,.1)' : 'transparent'};cursor:pointer;padding:0`,
+      autoToggleStyle: `display:flex;align-items:center;justify-content:center;width:44px;height:44px;background:transparent;border:none;cursor:pointer;padding:0`,
+      autoTrackStyle: `position:relative;width:38px;height:18px;border-radius:999px;border:1px solid rgba(244,239,232,${this.state.auto ? '.4' : '.15'});background:${this.state.auto ? 'rgba(244,239,232,.1)' : 'transparent'}`,
       autoKnobStyle: `position:absolute;top:1px;left:${this.state.auto ? '19px' : '1px'};width:14px;height:14px;background:var(--ltsuan-text);border-radius:50%;transition:left .25s ease`,
       autoLabel: this.state.auto ? 'ON' : 'OFF',
       counterLabel: `SCROLL — ${num} / ${total}`,
