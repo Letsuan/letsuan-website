@@ -65,7 +65,7 @@
       .ltsuan-hero-title{font-size:clamp(40px,6vw,88px)}
     }
     @media (min-width:1700px){
-      .ltsuan-hero-text{max-width:48%}
+      .ltsuan-hero-text{max-width:50%}
       .ltsuan-hero-title{font-size:clamp(120px,6.2vw,145px)}
       .ltsuan-hero-container{max-width:1500px}
     }
@@ -123,6 +123,12 @@
       .ltsuan-hero-text{max-width:92%}
       .ltsuan-hero-container{padding-left:6vw}
       .ltsuan-door-panel{display:none !important}
+      .ltsuan-hero-person-worker{top:42% !important}
+      .ltsuan-hero-person-worker img{object-fit:cover !important;object-position:center 15% !important}
+    }
+    @media (min-width:901px) and (max-width:1279px){
+      .ltsuan-hero-person-worker{left:38% !important;width:62% !important}
+      .ltsuan-hero-person-worker img{object-fit:cover !important;object-position:center 20% !important}
     }
   </style>
 </helmet>
@@ -151,7 +157,7 @@
               <div class="ltsuan-beam-twinkle" style="{{ beam.style }}"></div>
             </sc-for>
           </div>
-          <div style="{{ slide.personStyle }}">
+          <div class="{{ slide.personBoxClass }}" style="{{ slide.personStyle }}">
             <picture style="display:block;width:100%;height:100%">
               <source ref="{{ slide.personAvifRef }}" type="image/avif" />
               <img ref="{{ slide.personImgRef }}" alt="{{ slide.personAlt }}" class="{{ slide.personZoomClass }}" style="{{ slide.personImgStyle }}" decoding="async" />
@@ -472,6 +478,7 @@ class Component extends DCLogic {
         },
         personAvifRef: (el) => { if (el && s.personImg && !el.srcset && this._loadedSlides.has(i)) el.srcset = s.personImg.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif'); },
         personAlt: s.personAlt,
+        personBoxClass: i === 2 ? 'ltsuan-hero-person-worker' : '',
         personZoomClass: (s.personImg && !this._reducedMotion)
           ? (i === 1 ? 'ltsuan-person-grow-glow' : (i === 2 ? 'ltsuan-person-grow' : ''))
           : '',
