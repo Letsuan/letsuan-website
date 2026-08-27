@@ -21,9 +21,22 @@ function withSecurityHeaders(res, pathname) {
       return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
 }
 
+function legacyDcHtmlRedirect(url) {
+      if (!url.pathname.endsWith('.dc.html')) return null;
+      const stripped = url.pathname.slice(0, -'.dc.html'.length);
+      const target = stripped === '/index' || stripped === '' ? '/' : stripped;
+      const dest = new URL(target, url);
+      dest.search = url.search;
+      return dest.toString();
+}
+
 export default {
       async fetch(request, env) {
               const url = new URL(request.url);
+              const redirect = legacyDcHtmlRedirect(url);
+              if (redirect) {
+                      return Response.redirect(redirect, 301);
+              }
               return withSecurityHeaders(await env.ASSETS.fetch(request), url.pathname);
       }
 };
