@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { organizationJsonLd } from '../data/organization';
+
+const title = '中文網站即將推出 | Le Tsuan Design';
+const description = 'Le Tsuan Design 中文版網站即將推出。想先了解我們的作品或聯絡我們，歡迎瀏覽英文版。';
+const canonical = 'https://letsuan.com/coming-soon';
+const ogImage = 'https://letsuan.com/assets/logo.png';
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={organizationJsonLd}>
+  <div class="ltsuan-page">
+    <Nav active="none" />
+    <div class="ltsuan-cs-body">
+      <div>
+        <div class="ltsuan-eyebrow">中文版 · MANDARIN SITE</div>
+        <h1 class="ltsuan-h1">即將推出<br />Coming Soon</h1>
+        <p class="ltsuan-copy">我們正在準備中文版網站。想先了解我們的作品或聯絡我們，歡迎瀏覽英文版。</p>
+        <a href="./" class="ltsuan-btn-primary">Back to English Site</a>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .ltsuan-page {
+    background: var(--ltsuan-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .ltsuan-cs-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 32px;
+  }
+  .ltsuan-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 24px;
+  }
+  .ltsuan-h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(32px, 6vw, 58px);
+    margin: 0 0 20px;
+  }
+  .ltsuan-copy {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.7);
+    max-width: 480px;
+    margin: 0 auto 36px;
+  }
+  .ltsuan-btn-primary {
+    display: inline-block;
+    padding: 16px 36px;
+    background: var(--ltsuan-accent);
+    color: #1a1613;
+    border-radius: 999px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+  }
+</style>

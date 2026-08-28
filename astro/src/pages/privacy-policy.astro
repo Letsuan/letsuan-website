@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { organizationJsonLd } from '../data/organization';
+
+const title = 'Privacy Policy | Le Tsuan Design';
+const description = 'Privacy policy for Le Tsuan Design — how we collect, use, and protect information submitted through our website.';
+const canonical = 'https://letsuan.com/privacy-policy';
+const ogImage = 'https://letsuan.com/assets/logo.png';
+const email = 'info@letsuan.com';
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={organizationJsonLd}>
+  <div class="ltsuan-page">
+    <Nav active="" />
+
+    <section class="ltsuan-privacy-body">
+      <div class="ltsuan-eyebrow">LEGAL</div>
+      <h1 class="ltsuan-h1">Privacy Policy</h1>
+
+      <div class="ltsuan-copy">
+        <p class="ltsuan-updated">Last updated: August 7, 2026</p>
+
+        <h2 class="ltsuan-h2">Information We Collect</h2>
+        <p>When you submit our contact form, we collect the information you provide — name, email, phone number, company, budget range, and project details. We do not use tracking cookies or third-party analytics beyond what is needed to operate the contact form.</p>
+
+        <h2 class="ltsuan-h2">How We Use Your Information</h2>
+        <p>We use the information you submit solely to respond to your inquiry and discuss a potential project. We do not sell or share your information with third parties for marketing purposes.</p>
+
+        <h2 class="ltsuan-h2">Third-Party Services</h2>
+        <p>Our contact form is powered by Tally (tally.so), a third-party form provider. Submissions are processed through their platform, subject to <a href="https://tally.so/privacy-policy" target="_blank" rel="noopener">Tally's own privacy policy</a>.</p>
+
+        <h2 class="ltsuan-h2">Data Retention</h2>
+        <p>We retain contact form submissions only as long as needed to respond to your inquiry and maintain a record of past communications, unless you request deletion.</p>
+
+        <h2 class="ltsuan-h2">Your Rights</h2>
+        <p>You may request to view, correct, or delete any personal information we hold about you by contacting us at <a href={`mailto:${email}`}>{email}</a>.</p>
+
+        <h2 class="ltsuan-h2">Contact</h2>
+        <p class="ltsuan-last">Questions about this policy can be sent to <a href={`mailto:${email}`}>{email}</a>.</p>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .ltsuan-page {
+    background: var(--ltsuan-bg);
+  }
+  .ltsuan-privacy-body {
+    padding: 200px 56px 160px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .ltsuan-eyebrow {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 18px;
+  }
+  .ltsuan-h1 {
+    font-weight: 300;
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 0 0 40px;
+  }
+  .ltsuan-copy {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(244, 239, 232, 0.75);
+  }
+  .ltsuan-updated {
+    margin: 0 0 24px;
+    font-size: 13px;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ltsuan-text);
+    margin: 0 0 12px;
+  }
+  .ltsuan-copy p {
+    margin: 0 0 28px;
+  }
+  .ltsuan-copy p.ltsuan-last {
+    margin: 0;
+  }
+</style>
