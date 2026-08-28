@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+
+# Local copies of files that already live at the repo root (../images, ../assets) —
+# never committed here to avoid a second permanent copy. Re-copy locally before building.
+public/images/
+public/assets/

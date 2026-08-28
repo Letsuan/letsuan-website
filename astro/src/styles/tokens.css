@@ -1,0 +1,18 @@
+:root {
+  --ltsuan-bg: #0A0A0A;
+  --ltsuan-text: #f4efe8;
+  --ltsuan-accent: #8CC81E;
+  --ltsuan-accent-hover: #a8dc4a;
+}
+body {
+  margin: 0;
+  background: var(--ltsuan-bg);
+  color: var(--ltsuan-text);
+  font-family: 'Oswald', sans-serif;
+}
+a {
+  color: var(--ltsuan-accent);
+}
+a:hover {
+  color: var(--ltsuan-accent-hover);
+}

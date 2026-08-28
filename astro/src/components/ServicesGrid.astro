@@ -1,0 +1,107 @@
+---
+import { services, avifPath } from '../data/homepage';
+---
+
+<section id="services">
+  <div class="ltsuan-section-head">
+    <h2 class="ltsuan-section-title">What We Do</h2>
+    <a href="./what-we-do" class="ltsuan-section-link">See our full process →</a>
+  </div>
+  <div class="ltsuan-services-grid">
+    {services.map((svc) => (
+      <a href={svc.href} class="ltsuan-service-card">
+        <div class="ltsuan-service-image-wrap">
+          <picture>
+            <source type="image/avif" srcset={avifPath(svc.realImg)} />
+            <img
+              class="ltsuan-service-image"
+              alt={svc.title}
+              src={svc.realImg}
+              width={svc.imgWidth}
+              height={svc.imgHeight}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </div>
+        <div class="ltsuan-service-body">
+          <h3 class="ltsuan-service-title">{svc.title}</h3>
+          <p class="ltsuan-service-desc">{svc.desc}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  #services {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 6vw 150px;
+  }
+  .ltsuan-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .ltsuan-section-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 0;
+  }
+  .ltsuan-section-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ltsuan-accent);
+    padding-bottom: 3px;
+  }
+  .ltsuan-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+  .ltsuan-service-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    background: #141414;
+    border: 1px solid rgba(244, 239, 232, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .ltsuan-service-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 220px;
+  }
+  .ltsuan-service-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ltsuan-service-body {
+    padding: 26px 24px 30px;
+  }
+  .ltsuan-service-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    margin: 8px 0 10px;
+  }
+  .ltsuan-service-desc {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(244, 239, 232, 0.65);
+    margin: 0;
+  }
+</style>

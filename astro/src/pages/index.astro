@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+
+const title = 'Le Tsuan Design | Exhibition, Interior & Spatial Construction Studio, Taiwan';
+const description = 'Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.';
+const canonical = 'https://letsuan.com/';
+const ogImage = 'https://letsuan.com/assets/logo.png';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['HomeAndConstructionBusiness', 'ProfessionalService', 'GeneralContractor', 'Organization'],
+      '@id': 'https://letsuan.com/#organization',
+      name: 'Le Tsuan Design',
+      alternateName: ['麗荃室內裝修有限公司', '麗荃設計', 'Letsuan Design Ltd.'],
+      url: 'https://letsuan.com/',
+      logo: 'https://letsuan.com/assets/logo.png',
+      image: 'https://letsuan.com/assets/logo.png',
+      description: '麗荃室內裝修（Le Tsuan Design）是一間位於臺灣台中與台北的專業設計與工程工作室，專精於博物館展示設計、文化場館策展、商業室內設計與全案工程施作。Taiwan-based studio specializing in interior, exhibition, visual design and construction, with studios in Taichung and Taipei.',
+      foundingDate: '2014',
+      telephone: '+886-4-2321-5956',
+      email: 'info@letsuan.com',
+      priceRange: '$$$$',
+      address: [
+        {
+          '@type': 'PostalAddress',
+          streetAddress: '6F.-1, No. 85, Sec. 1, Huamei W. St.',
+          addressLocality: 'West District, Taichung City',
+          addressRegion: 'Taichung',
+          postalCode: '403020',
+          addressCountry: 'TW',
+        },
+        {
+          '@type': 'PostalAddress',
+          streetAddress: '3F., No. 62, Sec. 6, Yanping N. Rd.',
+          addressLocality: 'Shihlin District, Taipei City',
+          addressRegion: 'Taipei',
+          postalCode: '111069',
+          addressCountry: 'TW',
+        },
+      ],
+      geo: { '@type': 'GeoCoordinates', latitude: 24.1555, longitude: 120.662 },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+886-4-2321-5956',
+        email: 'info@letsuan.com',
+        contactType: 'Customer Service & Project Inquiries',
+        areaServed: ['TW', 'International'],
+      },
+      areaServed: ['TW', 'International'],
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Government License',
+        name: "室內裝修業登記證 (Interior Decorators' Registration Certificate)",
+        recognizedBy: {
+          '@type': 'GovernmentOrganization',
+          name: '內政部國土管理署 (National Land Management Agency, MOI)',
+          alternateName: '內政部營建署',
+        },
+        identifier: '40E2007328',
+      },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+      knowsAbout: [
+        'Exhibition Design',
+        'Museum Engineering',
+        'Interior Design',
+        'Visual Design',
+        'Heritage Site Non-Invasive Construction',
+        'VR Immersive Space Integration',
+        'Licensed Interior Decoration',
+      ],
+      sameAs: ['https://www.facebook.com/LETSUANDESIGN'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://letsuan.com/#website',
+      url: 'https://letsuan.com/',
+      name: 'Le Tsuan Design',
+      publisher: { '@id': 'https://letsuan.com/#organization' },
+      inLanguage: 'en',
+    },
+  ],
+};
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={jsonLd}>
+  <div class="ltsuan-page">
+    <Nav active="home" />
+
+    <Hero />
+
+    <section id="about">
+      <div class="ltsuan-about-inner">
+        <div class="ltsuan-about-eyebrow">OUR APPROACH</div>
+        <p class="ltsuan-about-headline">The same team that designs the space<br />also builds it.</p>
+        <p class="ltsuan-about-copy">One point of contact from first sketch to final install — nothing lost in translation between concept and construction.</p>
+      </div>
+    </section>
+
+    <ServicesGrid />
+    <PortfolioPreview />
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .ltsuan-page {
+    background: var(--ltsuan-bg);
+    overflow-x: hidden;
+  }
+  #about {
+    padding: 160px 60px 160px 79px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .ltsuan-about-inner {
+    max-width: 920px;
+  }
+  .ltsuan-about-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 24px;
+  }
+  .ltsuan-about-headline {
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(32px, 4.6vw, 58px);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    color: #f0e9de;
+  }
+  .ltsuan-about-copy {
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.6;
+    margin: 0;
+    color: rgba(240, 233, 222, 0.55);
+    max-width: 600px;
+  }
+</style>

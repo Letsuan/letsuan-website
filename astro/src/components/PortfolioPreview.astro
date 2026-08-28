@@ -1,0 +1,107 @@
+---
+import { featuredProjects, avifPath } from '../data/homepage';
+---
+
+<section id="portfolio">
+  <div class="ltsuan-section-head">
+    <h2 class="ltsuan-section-title">Selected Work</h2>
+    <a href="./portfolio" class="ltsuan-section-link">View full portfolio →</a>
+  </div>
+  <div class="ltsuan-portfolio-grid">
+    {featuredProjects.map((p) => (
+      <a href={p.href} class="ltsuan-portfolio-card">
+        <div class="ltsuan-portfolio-image-wrap">
+          <picture>
+            <source type="image/avif" srcset={avifPath(p.realImg)} />
+            <img
+              class="ltsuan-portfolio-image"
+              alt={p.title}
+              src={p.realImg}
+              width={p.imgWidth}
+              height={p.imgHeight}
+              loading="lazy"
+              decoding="async"
+              style={`object-position:${p.objectPosition || 'center'}`}
+            />
+          </picture>
+        </div>
+        <div class="ltsuan-portfolio-meta">{p.category} — {p.year}</div>
+        <h3 class="ltsuan-portfolio-title">{p.title}</h3>
+        <p class="ltsuan-portfolio-subtitle">{p.subtitle}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  #portfolio {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 6vw 160px;
+  }
+  .ltsuan-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .ltsuan-section-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 0;
+  }
+  .ltsuan-section-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--ltsuan-accent);
+    padding-bottom: 3px;
+  }
+  .ltsuan-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .ltsuan-portfolio-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .ltsuan-portfolio-image-wrap {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  .ltsuan-portfolio-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ltsuan-portfolio-meta {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 6px;
+  }
+  .ltsuan-portfolio-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 0;
+  }
+  .ltsuan-portfolio-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(244, 239, 232, 0.55);
+    margin: 8px 0 0;
+  }
+</style>
