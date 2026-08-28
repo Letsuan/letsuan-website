@@ -41,11 +41,11 @@ const stats = [
 ];
 
 const services = [
-  { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', img: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', evidenceHref: './project-air-force-academy', evidenceLabel: 'R.O.C. Air Force Academy 90th Founding Anniversary' },
-  { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', img: './images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', evidenceHref: './project-cat-art', evidenceLabel: 'Cat Art Museum' },
-  { title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', img: './images/securities-company-office-design-02-letsuan-design.jpg', evidenceHref: './project-securities-office', evidenceLabel: 'Securities Company Office' },
-  { title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', img: './images/westernmost-point-taiwan-01-letsuan-design.jpg', evidenceHref: './project-westernmost-point', evidenceLabel: 'The Westernmost Point of Taiwan' },
-  { title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', img: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', evidenceHref: './project-engineering-construction', evidenceLabel: 'Disaster Prevention Hall' },
+  { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', img: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: 'R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall', evidenceHref: './project-air-force-academy', evidenceLabel: 'R.O.C. Air Force Academy 90th Founding Anniversary' },
+  { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', img: './images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', alt: "Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting", evidenceHref: './project-cat-art', evidenceLabel: 'Cat Art Museum' },
+  { title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', img: './images/securities-company-office-design-02-letsuan-design.jpg', alt: 'Securities Company Office waiting area', evidenceHref: './project-securities-office', evidenceLabel: 'Securities Company Office' },
+  { title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', img: './images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: 'The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance', evidenceHref: './project-westernmost-point', evidenceLabel: 'The Westernmost Point of Taiwan' },
+  { title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', img: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', alt: 'Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls', evidenceHref: './project-engineering-construction', evidenceLabel: 'Disaster Prevention Hall' },
 ];
 ---
 
@@ -152,7 +152,7 @@ const services = [
               <div class="ltsuan-svc-img-wrap">
                 <picture>
                   <source srcset={avifPath(svc.img)} type="image/avif" />
-                  <img alt={svc.title} src={svc.img} style={`object-position:${svc.imgPosition || 'center'}`} class="ltsuan-svc-img" loading="lazy" decoding="async" />
+                  <img alt={svc.alt} src={svc.img} style={`object-position:${svc.imgPosition || 'center'}`} class="ltsuan-svc-img" loading="lazy" decoding="async" />
                 </picture>
               </div>
               <h3 class="ltsuan-svc-title">{svc.title}</h3>

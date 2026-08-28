@@ -11,7 +11,7 @@ import { avifPath } from '../utils/images';
           <source type="image/avif" srcset={avifPath(slide.realImg)} />
           <img
             class="pf-hero-img"
-            alt={slide.title}
+            alt={slide.alt}
             src={slide.realImg}
             decoding="async"
             fetchpriority={i === 0 ? 'high' : undefined}

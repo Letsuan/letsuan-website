@@ -24,6 +24,7 @@ export interface Service {
   desc: string;
   href: string;
   realImg: string;
+  alt: string;
   imgWidth: number;
   imgHeight: number;
 }
@@ -36,6 +37,7 @@ export interface FeaturedProject {
   year: string;
   href: string;
   realImg: string;
+  alt: string;
   imgWidth: number;
   imgHeight: number;
   objectPosition?: string;
@@ -92,18 +94,18 @@ export const slides: Slide[] = [
 ];
 
 export const services: Service[] = [
-  { id: 'curatorial', title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', href: './project-air-force-academy', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', imgWidth: 800, imgHeight: 400 },
-  { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', href: './project-cat-art', realImg: './images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgWidth: 1376, imgHeight: 1824 },
-  { id: 'interior', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', href: './project-securities-office', realImg: './images/securities-company-office-design-02-letsuan-design.jpg', imgWidth: 750, imgHeight: 400 },
-  { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', href: './project-westernmost-point', realImg: './images/westernmost-point-taiwan-01-letsuan-design.jpg', imgWidth: 800, imgHeight: 334 },
-  { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', href: './project-engineering-construction', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', imgWidth: 700, imgHeight: 383 },
+  { id: 'curatorial', title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', href: './project-air-force-academy', realImg: './images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: 'R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall', imgWidth: 800, imgHeight: 400 },
+  { id: 'exhibition', title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', href: './project-cat-art', realImg: './images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', alt: "Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting", imgWidth: 1376, imgHeight: 1824 },
+  { id: 'interior', title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', href: './project-securities-office', realImg: './images/securities-company-office-design-02-letsuan-design.jpg', alt: 'Securities Company Office waiting area', imgWidth: 750, imgHeight: 400 },
+  { id: 'visual', title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', href: './project-westernmost-point', realImg: './images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: 'The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance', imgWidth: 800, imgHeight: 334 },
+  { id: 'construction', title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', href: './project-engineering-construction', realImg: './images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', alt: 'Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls', imgWidth: 700, imgHeight: 383 },
 ];
 
 export const featuredProjects: FeaturedProject[] = [
-  { id: 'marine-illusion', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', category: 'Exhibition', year: '2026', href: './project-marine-illusion', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', imgWidth: 2400, imgHeight: 1811 },
-  { id: 'ocean', title: 'Beyond Just an Exhibition—You Are Part of the Art!', subtitle: 'A Breathing Magical Universe of Light and Shadows', category: 'Exhibition', year: '2024', href: './project-beyond-just-an-exhibition', objectPosition: 'center 30%', realImg: './images/ocean-mimic-hero-opt-letsuan-design.jpg', imgWidth: 1600, imgHeight: 1207 },
-  { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', imgWidth: 960, imgHeight: 520 },
-  { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art', realImg: './images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg', imgWidth: 800, imgHeight: 425 },
+  { id: 'marine-illusion', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', category: 'Exhibition', year: '2026', href: './project-marine-illusion', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', alt: 'Two visitors viewing illuminated aquarium display cases beneath an Ocean Mimic Master introductory screen in a dim blue-lit gallery', imgWidth: 2400, imgHeight: 1811 },
+  { id: 'ocean', title: 'Beyond Just an Exhibition—You Are Part of the Art!', subtitle: 'A Breathing Magical Universe of Light and Shadows', category: 'Exhibition', year: '2024', href: './project-beyond-just-an-exhibition', objectPosition: 'center 30%', realImg: './images/ocean-mimic-hero-opt-letsuan-design.jpg', alt: 'Visitors walking through an immersive floor-to-wall projection of pink and blue floral bursts and rippling water patterns', imgWidth: 1600, imgHeight: 1207 },
+  { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame', realImg: './images/eternal-notre-dame-kaohsiung-debut-letsuan-design.jpg', alt: 'Attendees wearing VR headsets and backpacks at the Eternal Notre-Dame exhibition’s Kaohsiung debut event', imgWidth: 960, imgHeight: 520 },
+  { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art', realImg: './images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg', alt: 'Starry Night mural reinterpreted with cat motifs', imgWidth: 800, imgHeight: 425 },
 ];
 
 export const navMenuItems = [
