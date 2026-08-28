@@ -5,6 +5,30 @@ import Footer from '../components/Footer.astro';
 import CornerFrame from '../components/CornerFrame.astro';
 import { organizationJsonLd } from '../data/organization';
 import { avifPath } from '../utils/images';
+import { services as coreServiceMeta } from '../data/homepage';
+
+const coreServiceCopy: Record<string, { headline: string; desc: string }> = {
+  curatorial: {
+    headline: 'A good exhibition starts with a good point of view.',
+    desc: "We handle full curatorial planning: concept development, content research and narrative scripting for every exhibition. Twelve years working on museums and exhibitions has taught us how to set the thematic direction, translate research into content and work out the display logic, so visitors can follow the exhibition's argument as they walk through it.",
+  },
+  exhibition: {
+    headline: 'Space tells the story, and visitors walk into it.',
+    desc: 'For museums, aquariums and cultural venues, we design exhibitions built around a story. Storyline, spatial planning, lighting and interactive multimedia all work together to turn an abstract theme into a concrete design that visitors read as they move through the space, not from long blocks of wall text.',
+  },
+  interior: {
+    headline: 'Spaces designed for people, not just for looks.',
+    desc: 'As a licensed interior decorator, we design commercial and institutional interiors around how people actually move and gather, not around appearance alone. Spatial zoning, circulation and material choices are all planned so people can move through the space and settle into it without friction.',
+  },
+  visual: {
+    headline: 'A brand recognized in every corner.',
+    desc: 'We handle brand identity, corporate identity systems and wayfinding, plus the graphic environments that carry a brand consistently through physical space. Logo systems and environmental graphics, both inside and outside a venue, keep the same visual tone recognizable wherever a visitor looks.',
+  },
+  construction: {
+    headline: 'From groundbreaking to handover, our own team stays on it.',
+    desc: 'We handle exhibition-site engineering from design drawings through to completion, including construction and display fabrication. Our team does the in-house fabrication and site management directly; specialized trades are carried out by partner teams under our direct supervision. We oversee material selection, scheduling and quality control throughout, and the finished space matches the drawings and holds up under long-term use.',
+  },
+};
 
 const title = 'What We Do | Exhibition Curation, Interior Design & Turn-key Construction';
 const description = 'See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, from site survey to fabrication, installation and handover. It also covers our engineering capabilities for heritage sites, IP-licensed exhibits and high-precision environments.';
@@ -83,6 +107,27 @@ const capabilities = [
           <img src="./images/centered-sparkler-hand-letsuan-design.jpg" alt="Hand holding a lit sparkler against a bokeh light backdrop" class="ltsuan-hero-img" />
         </picture>
         <CornerFrame size={16} />
+      </div>
+    </section>
+
+    <section id="core-services">
+      <div class="ltsuan-reveal">
+        <h2 class="ltsuan-section-h2">Five services. One accountable studio.</h2>
+      </div>
+      <div class="ltsuan-core-grid">
+        {coreServiceMeta.map((svc) => (
+          <div class="ltsuan-core-card">
+            <div class="ltsuan-core-img-wrap">
+              <picture>
+                <source srcset={avifPath(svc.realImg)} type="image/avif" />
+                <img alt={svc.alt} src={svc.realImg} class="ltsuan-core-img" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <h3 class="ltsuan-core-title">{svc.title}</h3>
+            <p class="ltsuan-core-headline">{coreServiceCopy[svc.id].headline}</p>
+            <p class="ltsuan-core-desc">{coreServiceCopy[svc.id].desc}</p>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -205,6 +250,52 @@ const capabilities = [
     object-position: center 60%;
     display: block;
     filter: brightness(0.88) saturate(1.08);
+  }
+  #core-services {
+    padding: 56px 60px 56px 79px;
+    border-bottom: 1px solid var(--ltsuan-line);
+  }
+  .ltsuan-core-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .ltsuan-core-card {
+    background: var(--ltsuan-panel);
+    padding: 24px;
+  }
+  .ltsuan-core-img-wrap {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .ltsuan-core-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) saturate(1.05);
+  }
+  .ltsuan-core-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin: 0 0 8px;
+  }
+  .ltsuan-core-headline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--ltsuan-accent);
+    margin: 0 0 10px;
+  }
+  .ltsuan-core-desc {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(244, 239, 232, 0.6);
+    margin: 0;
   }
   #process-steps {
     padding: 56px 60px 56px 79px;
