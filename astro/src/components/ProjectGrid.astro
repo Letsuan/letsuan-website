@@ -29,6 +29,7 @@ import { avifPath } from '../utils/images';
         <span class="pf-card-corner pf-card-corner-tr"></span>
         <div class="ltsuan-pf-text pf-card-text">
           <div>
+            {p.meta && <p class="pf-card-meta">{p.meta}</p>}
             <h2 class="pf-card-title">{p.title}</h2>
             <p class="pf-card-subtitle">{p.subtitle}</p>
           </div>
@@ -154,6 +155,15 @@ import { avifPath } from '../utils/images';
     flex-direction: column;
     justify-content: flex-end;
     pointer-events: none;
+  }
+  .pf-card-meta {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ltsuan-accent);
+    margin: 0 0 6px;
   }
   .pf-card-title {
     font-family: 'Oswald', sans-serif;
