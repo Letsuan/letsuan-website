@@ -3,41 +3,47 @@ import { services, avifPath } from '../data/homepage';
 ---
 
 <section id="services">
-  <div class="ltsuan-section-head">
-    <h2 class="ltsuan-section-title">What We Do</h2>
-    <a href="./what-we-do" class="ltsuan-section-link">See our full process →</a>
-  </div>
-  <div class="ltsuan-services-grid">
-    {services.map((svc) => (
-      <a href={svc.href} class="ltsuan-service-card">
-        <div class="ltsuan-service-image-wrap">
-          <picture>
-            <source type="image/avif" srcset={avifPath(svc.realImg)} />
-            <img
-              class="ltsuan-service-image"
-              alt={svc.alt}
-              src={svc.realImg}
-              width={svc.imgWidth}
-              height={svc.imgHeight}
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
-        </div>
-        <div class="ltsuan-service-body">
-          <h3 class="ltsuan-service-title">{svc.title}</h3>
-          <p class="ltsuan-service-desc">{svc.desc}</p>
-        </div>
-      </a>
-    ))}
+  <div class="ltsuan-services-inner">
+    <div class="ltsuan-section-head">
+      <h2 class="ltsuan-section-title">What We Do</h2>
+      <a href="./what-we-do" class="ltsuan-section-link">See our full process →</a>
+    </div>
+    <div class="ltsuan-services-grid">
+      {services.map((svc) => (
+        <a href={svc.href} class="ltsuan-service-card">
+          <div class="ltsuan-service-image-wrap">
+            <picture>
+              <source type="image/avif" srcset={avifPath(svc.realImg)} />
+              <img
+                class="ltsuan-service-image"
+                alt={svc.alt}
+                src={svc.realImg}
+                width={svc.imgWidth}
+                height={svc.imgHeight}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <div class="ltsuan-service-body">
+            <h3 class="ltsuan-service-title">{svc.title}</h3>
+            <p class="ltsuan-service-desc">{svc.desc}</p>
+          </div>
+        </a>
+      ))}
+    </div>
   </div>
 </section>
 
 <style>
   #services {
+    background: #1c1c1c;
+    padding: 120px 0;
+  }
+  .ltsuan-services-inner {
     max-width: 1700px;
     margin: 0 auto;
-    padding: 0 6vw 150px;
+    padding: 0 6vw;
   }
   .ltsuan-section-head {
     display: flex;
@@ -70,7 +76,7 @@ import { services, avifPath } from '../data/homepage';
     color: inherit;
     display: flex;
     flex-direction: column;
-    background: #2a2a2a;
+    background: #141414;
     border: 1px solid rgba(244, 239, 232, 0.08);
     border-radius: 2px;
     overflow: hidden;
