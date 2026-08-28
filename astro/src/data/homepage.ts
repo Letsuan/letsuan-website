@@ -1,3 +1,5 @@
+export { responsiveSrcset, avifPath } from '../utils/images';
+
 export interface Slide {
   num: string;
   titleLine1: string;
@@ -37,20 +39,6 @@ export interface FeaturedProject {
   imgWidth: number;
   imgHeight: number;
   objectPosition?: string;
-}
-
-// Bakes the same tiered-srcset convention the old runtime computed client-side
-// (`_responsiveSrcset` in index.html) into a build-time helper.
-export function responsiveSrcset(path: string, ext: string, fullWidth: number): string {
-  const base = path.replace(/\.(jpg|jpeg|png|webp)$/i, '');
-  const tiers = [960, 1920].filter((w) => w < fullWidth);
-  const parts = tiers.map((w) => `${base}-${w}w.${ext} ${w}w`);
-  parts.push(`${base}.${ext} ${fullWidth}w`);
-  return parts.join(', ');
-}
-
-export function avifPath(path: string): string {
-  return path.replace(/\.(jpg|jpeg|png|webp)$/i, '.avif');
 }
 
 export const slides: Slide[] = [

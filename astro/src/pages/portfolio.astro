@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PortfolioHero from '../components/PortfolioHero.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import { organizationJsonLd } from '../data/organization';
+
+const title = 'Portfolio | Exhibition, Interior & Spatial Construction Projects — Le Tsuan Design';
+const description = 'Browse exhibition, interior and visual design projects by Le Tsuan Design — a Taiwan-based studio for museums, brands and public spaces.';
+const canonical = 'https://letsuan.com/portfolio';
+const ogImage = 'https://letsuan.com/assets/logo.png';
+
+const pageJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://letsuan.com/portfolio#webpage',
+      url: 'https://letsuan.com/portfolio',
+      name: title,
+      description,
+      isPartOf: { '@id': 'https://letsuan.com/#website' },
+      about: { '@id': 'https://letsuan.com/#organization' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://letsuan.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://letsuan.com/portfolio' },
+      ],
+    },
+  ],
+};
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]}>
+  <div class="ltsuan-page">
+    <Nav active="exhibition" />
+
+    <PortfolioHero />
+
+    <section id="intro">
+      <div class="pf-intro-eyebrow">ARCHIVE</div>
+      <h1 class="pf-intro-title">Work That Turns Spaces Into Experiences.</h1>
+      <p class="pf-intro-copy">A selection of exhibitions, interiors and visual environments delivered across Taiwan.</p>
+    </section>
+
+    <ProjectGrid />
+
+    <div class="pf-spacer"></div>
+    <Footer background="var(--ltsuan-bg)" />
+  </div>
+</Layout>
+
+<style>
+  .ltsuan-page {
+    background: var(--ltsuan-bg);
+  }
+  :global(:root) {
+    --ltsuan-bg: #0b1526;
+    --ltsuan-accent: #8ec31f;
+    --ltsuan-accent-hover: #a8dc4a;
+    --ltsuan-blueprint: #c9d6e8;
+  }
+  #intro {
+    padding: 170px 56px 63px;
+    border-bottom: 1px solid rgba(244, 239, 232, 0.08);
+  }
+  .pf-intro-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 18px;
+  }
+  .pf-intro-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 0.9;
+    margin: 0 0 20px;
+    max-width: 900px;
+    letter-spacing: -0.02em;
+  }
+  .pf-intro-copy {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(244, 239, 232, 0.6);
+    max-width: 600px;
+    margin: 0;
+  }
+  .pf-spacer {
+    height: 64px;
+  }
+</style>
