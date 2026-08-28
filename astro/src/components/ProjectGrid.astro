@@ -20,8 +20,8 @@ import { avifPath } from '../utils/images';
         data-categories={p.categories.join('|')}
       >
         <picture>
-          <source type="image/avif" srcset={avifPath(p.realImg)} />
-          <img class="ltsuan-pf-img pf-card-img" alt={p.alt} src={p.realImg} loading="lazy" decoding="async" />
+          <source type="image/avif" srcset={avifPath(p.thumbImg ?? p.realImg)} />
+          <img class="ltsuan-pf-img pf-card-img" alt={p.alt} src={p.thumbImg ?? p.realImg} loading="lazy" decoding="async" />
         </picture>
         <div class="pf-card-shade"></div>
         <div class="pf-card-shade-bottom"></div>
