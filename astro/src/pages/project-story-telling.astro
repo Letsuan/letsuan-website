@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Five Thousand Years of Silence — Story telling by the ancient people | Le Tsuan Design";
+const description = "Five Thousand Years of Silence: Story telling by the ancient people. Construction in Taichung, Taiwan, 2020 — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-story-telling";
+const ogImage = "https://letsuan.com/images/ancient-people-storytelling-exhibition-01-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Story Telling by the Ancient People", "description": "Exhibition on Taiwan's Paleolithic discoveries at the National Museum of Natural Science.", "url": "https://letsuan.com/project-story-telling", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/ancient-people-storytelling-exhibition-01-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2020"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Story Telling by the Ancient People", "item": "https://letsuan.com/project-story-telling"}]}];
+const eyebrowLeft = "EXHIBITION — 2020";
+const eyebrowRight = "NATIONAL MUSEUM OF NATURAL SCIENCE";
+const h1Main = "Five Thousand Years of Silence";
+const h1Sub = "Story telling by the ancient people";
+const metaFields = [{"label": "LOCATION", "value": "Taichung, Taiwan"}, {"label": "YEAR", "value": "2020"}, {"label": "CATEGORY", "value": "Construction"}];
+const bodyHtml = "<h2>A Renovation Next Door, With Old Exhibits Still in the Room</h2>\n<p>This update to the permanent exhibition in the Anthropology Hall at the National Museum of Natural Science, titled Story-Telling by the Ancient People, presents the latest research on the Paleolithic culture of Baxian Cave on the east coast, the Neolithic Beinan and Chilin cultures, and the Dapenkeng, Niumatou, Damaling, Yingpu, and Fanziyuan cultures of central Taiwan.</p>\n<p>The exhibition's centerpiece is the Anhe Mother and Child, one of Taiwan's most significant archaeological discoveries. Within the Dapenkeng cultural layer of the Anhe site, 48 sets of tightly arranged human remains form the earliest known burial ground yet discovered in central Taiwan. The M13 and M15 specimens were found with extensive grave goods, the male specimen M46 wore a shark-tooth-shaped jade ornament, and a mother and infant were buried together; all four are treated as representative examples of the burial ground.</p>\n<h2>Demolition Next to Exhibits That Had to Stay</h2>\n<p>This was a partial update within a single permanent exhibition zone. Some exhibits stayed in place while others were demolished and rebuilt, and the fixtures and cases left standing sat directly next to the ongoing demolition work, with vibration and dust as the most immediate threats. Construction had to hold these risks to an absolute minimum so the demolition and new work never damaged the exhibits and collection items left in place.</p>\n<p>The old exhibition structure also contained large amounts of FRP, plaster, and wire-mesh composite material. Once removed, that material could only be handled by a contractor holding a valid environmental disposal license, and because only a limited number of qualified contractors exist, scheduling the demolition and removal took considerably longer than simply arranging for someone to clear it out.</p>\n<h2>Bronze, Then Colour, Then Time</h2>\n<p>The entrance display platform was finished with a special antique-bronze lacquer, so visitors sense the bronze-and-jade timeframe of the show through material and colour before they read a single label. The exhibition is organized into thematic zones by archaeological era, with wall colour distinguishing the Beinan culture, the Dapenkeng culture, and the others, linked by a curved circulation path that moves visitors through each cultural unit in chronological order.</p>\n<h2>Cases Built to the Object, Not the Other Way Around</h2>\n<p>Display cases vary in form depending on what they hold: wood-framed glass shelving cases for ceramics and jade ornaments and other small pieces, circular glass-domed pedestals for single featured artifacts such as pottery vessels, and multi-tiered recessed wall cases for layering items of different sizes. An \"Archaeological Conservation Lab,\" separated from the visitor path by a glass curtain wall, lets people watch actual preservation and restoration work in progress. Floor-projection interactive devices and a large-scale animated video wall, paired with physical displays of fossilized skeletal specimens, bring the atmosphere of an archaeological dig and prehistoric ecological scenes in front of the visitor.</p>";
+const relatedProjects = [{"href": "./project-nmns-teldap", "label": "NMNS TELDAP"}, {"href": "./project-wang-ye-donggang", "label": "The Hunt of the Celestial Court"}, {"href": "./project-hakka-culture", "label": "Hakka Culture"}];
+const nextHref = "./project-amazing-homeland";
+const images = [{"src": "./images/ancient-people-storytelling-exhibition-01-letsuan-design.jpg", "alt": "Five Thousand Years of Silence — Story Telling by the Ancient People entrance"}, {"src": "./images/ancient-people-storytelling-exhibition-02-letsuan-design.jpg", "alt": "Story Telling by the Ancient People gallery"}, {"src": "./images/ancient-people-storytelling-curved-gallery-with-visitors-display-cases-letsuan-design.jpg", "alt": "Visitors viewing archaeological artifact display cases in curved gallery with agricultural specimen wall and landscape backdrop"}, {"src": "./images/ancient-people-storytelling-exhibition-04-letsuan-design.jpg", "alt": "Story Telling by the Ancient People fossils"}, {"src": "./images/ancient-people-storytelling-exhibition-051-letsuan-design.jpg", "alt": "Story Telling by the Ancient People skeletons"}, {"src": "./images/ancient-people-storytelling-exhibition-06-letsuan-design.jpg", "alt": "Story Telling by the Ancient People burial goods"}, {"src": "./images/ancient-people-storytelling-exhibition-07-letsuan-design.jpg", "alt": "Story Telling by the Ancient People fossil layer"}, {"src": "./images/ancient-people-storytelling-exhibition-08-letsuan-design.jpg", "alt": "Story Telling by the Ancient People artifact"}, {"src": "./images/ancient-people-storytelling-exhibition-09-letsuan-design.jpg", "alt": "Story Telling by the Ancient People closing scene"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

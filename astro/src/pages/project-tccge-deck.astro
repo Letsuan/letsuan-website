@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Green Energy Education Observation Platform — Changhua Coastal Industrial Park | Le Tsuan Design";
+const description = "Green Energy Education Observation Platform: Changhua Coastal Industrial Park. Exhibition Design for TCCGE in Changhua, Taiwan, 2022–Present — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-tccge-deck";
+const ogImage = "https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Green Energy Education Observation Platform — Changhua Coastal Industrial Park", "description": "A rooftop viewing platform with wind and solar interactive exhibits.", "url": "https://letsuan.com/project-tccge-deck", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2021"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Green Energy Education Observation Platform — Changhua Coastal Industrial Park", "item": "https://letsuan.com/project-tccge-deck"}]}];
+const eyebrowLeft = "EXHIBITION — 2022–Present";
+const eyebrowRight = "CHANGHUA COASTAL INDUSTRIAL PARK";
+const h1Main = "Green Energy Education Observation Platform";
+const h1Sub = "Changhua Coastal Industrial Park";
+const metaFields = [{"label": "CLIENT", "value": "TCCGE"}, {"label": "LOCATION", "value": "Changhua, Taiwan"}, {"label": "YEAR", "value": "2022–Present"}, {"label": "CATEGORY", "value": "Exhibition Design, Interior Design, Visual Design, Construction"}];
+const bodyHtml = "<h2>Salt, Chemical Gas, and UV, All Acting on the Same Materials</h2>\n<p>This rooftop observation platform sits in the Changhua coastal industrial park, overlooking a solar farm. Through hands-on wind- and solar-power education exhibits, visitors move from looking to understanding: interactive simulation devices let people directly experience how wind and light become electricity, while a fully operational solar farm unfolds in front of them. Renewable energy becomes a scene you can see and touch rather than an abstract idea.</p>\n<p>The site sits right against the coastline and close to a chemical industrial zone, so the environmental conditions are far harsher than a typical project. Salt damage, corrosive chemical gases, and intense UV exposure all act on the same materials at once, and we had to confront that from the design stage; the landscape planting, the soil formula, and the materials for the education exhibits were all re-evaluated and tested before we used them here.</p>\n<h2>Waterproofing Comes Before Planting, Not After</h2>\n<p>Rooftop landscaping has an order that can't be reversed. We started with waterproofing the roof deck against long-term standing water or irrigation, then planned the drainage system so excess water could drain away rather than pool on the roof, then installed automatic irrigation to meet the plants' water needs under coastal wind and heat. Only after all of that did plant selection and the green space itself come into the picture.</p>\n<h2>Plants That Can Survive More Than One Season</h2>\n<p>Salt mist eats through the root systems of ordinary plants, so we chose salt-tolerant, wind-resistant native coastal species already adapted to poor soil. The soil itself can't withstand long-term salt-alkali buildup either, so the growing medium was reinforced specifically for drainage and salt-alkali resistance, letting plants survive over years rather than a single season.</p>\n<h2>304 Stainless Steel Is Only Half the Answer</h2>\n<p>The housing and structural elements of the interactive teaching devices are built from 304 stainless steel with a fluorocarbon-coated finish, but material specification alone doesn't guarantee weather resistance. What decides success or failure is execution: any scratch or damage left behind by fastening tools has to be fully re-coated, with no gap left exposed, because salt-induced corrosion finds its way in most easily through exactly these kinds of small surface flaws. Every fastening point and every recoat is what actually determines whether this platform holds up against the coastal climate.</p>";
+const relatedProjects = [{"href": "./project-detention-pier2", "label": "Detention — Reality Experience"}, {"href": "./project-detective-conan-taipei", "label": "Detective Conan"}, {"href": "./project-nmh-highlights", "label": "Highlights of NMH Collection"}];
+const nextHref = "./project-world-semiconductors";
+const images = [{"src": "./images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg", "alt": "Green Energy Education Observation Platform — TCCGE Observation Deck platform"}, {"src": "./images/tccge-observation-deck-zhangbin-03-letsuan-design.jpg", "alt": "TCCGE Observation Deck wind education"}, {"src": "./images/tccge-observation-deck-zhangbin-02-letsuan-design.jpg", "alt": "TCCGE Observation Deck interactive teaching aid"}, {"src": "./images/tccge-observation-deck-zhangbin-04-letsuan-design.jpg", "alt": "TCCGE Observation Deck solar display"}, {"src": "./images/tccge-observation-deck-zhangbin-05-letsuan-design.jpg", "alt": "TCCGE Observation Deck combined exhibit"}, {"src": "./images/tccge-observation-deck-zhangbin-06-letsuan-design.jpg", "alt": "TCCGE Observation Deck sunset closing view"}, {"src": "./images/tccge-observation-deck-zhangbin-07-letsuan-design.jpg", "alt": "TCCGE Observation Deck rooftop garden with wind turbine display"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

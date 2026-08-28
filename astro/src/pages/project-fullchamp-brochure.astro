@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Fullchamp — Brochure Design | Le Tsuan Design";
+const description = "Fullchamp. Graphic Design for Fullchamp, 2010 — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-fullchamp-brochure";
+const ogImage = "https://letsuan.com/images/fullchamp-brochure-fullchamp-forged-metal-solutions-brochure-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Fullchamp Brochure Design", "url": "https://letsuan.com/project-fullchamp-brochure", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/fullchamp-brochure-fullchamp-forged-metal-solutions-brochure-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2010"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Fullchamp Brochure Design", "item": "https://letsuan.com/project-fullchamp-brochure"}]}];
+const eyebrowLeft = "GRAPHIC DESIGN — 2010";
+const eyebrowRight = "TAIWAN";
+const h1Main = "Fullchamp";
+const h1Sub = "Brochure Design";
+const metaFields = [{"label": "CLIENT", "value": "Fullchamp"}, {"label": "YEAR", "value": "2010"}, {"label": "CATEGORY", "value": "Graphic Design, Visual Design, Typography"}];
+const bodyHtml = "<p>Fullchamp's brand identity and company brochure were designed by Le Tsuan's in-house team, carrying the company's identity through into a cohesive set of print collateral.</p>";
+const relatedProjects = [{"href": "./project-just-only-environment", "label": "Just Only Environment Protection"}, {"href": "./project-amazing-homeland", "label": "Amazing Homeland"}, {"href": "./project-art-gallery-culture", "label": "Art Gallery (Ministry of Culture)"}];
+const nextHref = "./project-dragon-to-beast";
+const images = [{"src": "./images/fullchamp-brochure-fullchamp-forged-metal-solutions-brochure-letsuan-design.jpg", "alt": "FullChamp Forged Metal Solutions brochure cover with truck imagery"}, {"src": "./images/fullchamp-brochure-brochure-spread-showing-12000-ton-metal-letsuan-design.jpg", "alt": "Brochure spread showing 12000-ton metal forging press facility"}, {"src": "./images/fullchamp-brochure-brochure-spread-with-quality-guarantee-letsuan-design.jpg", "alt": "Brochure spread with quality guarantee and forging process robot imagery"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

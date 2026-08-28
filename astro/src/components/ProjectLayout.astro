@@ -1,0 +1,478 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { avifPath } from '../utils/images';
+
+export interface MetaField {
+  label: string;
+  value: string;
+}
+export interface RelatedProject {
+  href: string;
+  label: string;
+}
+export interface ProjectImage {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage: string;
+  jsonLd: object[];
+  eyebrowLeft: string;
+  eyebrowRight: string;
+  h1Main: string;
+  h1Sub: string;
+  metaFields: MetaField[];
+  bodyHtml: string;
+  relatedProjects: RelatedProject[];
+  nextHref: string;
+  images: ProjectImage[];
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  jsonLd,
+  eyebrowLeft,
+  eyebrowRight,
+  h1Main,
+  h1Sub,
+  metaFields,
+  bodyHtml,
+  relatedProjects,
+  nextHref,
+  images,
+} = Astro.props;
+
+const shareUrl = encodeURIComponent(canonical);
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={jsonLd}>
+  <div class="ltsuan-detail">
+    <header class="ltsuan-detail-header">
+      <div class="ltsuan-detail-header-inner">
+        <a href="./" class="ltsuan-detail-logo-link"><img class="ltsuan-detail-logo" src="./assets/letsuan-logotype-navy.svg" alt="Le Tsuan Design" /></a>
+        <div class="ltsuan-detail-label">PROJECT DETAIL</div>
+        <a href="./portfolio" class="ltsuan-detail-close">CLOSE <span>✕</span></a>
+      </div>
+    </header>
+
+    <div class="ltsuan-detail-grid">
+      <div class="ltsuan-thin-scroll ltsuan-detail-left">
+        <div class="ltsuan-detail-eyebrow">
+          <span>{eyebrowLeft}</span><span class="ltsuan-detail-eyebrow-rule"></span><span>{eyebrowRight}</span>
+        </div>
+        <h1 class="ltsuan-detail-h1">
+          {h1Main}
+          {h1Sub && <span class="ltsuan-detail-h1-sub">{h1Sub}</span>}
+        </h1>
+        <div class="ltsuan-detail-meta-grid">
+          {metaFields.map((f) => (
+            <div>
+              <p class="ltsuan-detail-meta-label">{f.label}</p>
+              <p class="ltsuan-detail-meta-value">{f.value}</p>
+            </div>
+          ))}
+        </div>
+        <div class="ltsuan-detail-body" set:html={bodyHtml} />
+
+        {relatedProjects.length > 0 && (
+          <div class="ltsuan-detail-related">
+            <p class="ltsuan-detail-related-label">RELATED PROJECTS</p>
+            <div class="ltsuan-detail-related-list">
+              {relatedProjects.map((p) => (
+                <a href={p.href} class="ltsuan-detail-link">{p.label}</a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="ltsuan-detail-share">
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener" aria-label="Share on Facebook" class="ltsuan-detail-share-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+          </a>
+          <a href={`https://social-plugins.line.me/lineit/share?url=${shareUrl}`} target="_blank" rel="noopener" aria-label="Share on LINE" class="ltsuan-detail-share-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.4 7.2 8 7.8-.1.5-.5 1.8-.6 2.1 0 .1-.1.4.2.5s.5-.1.6-.2c.3-.2 2.1-1.4 2.9-2 .3 0 .6.1.9.1 5.5 0 10-3.6 10-8S17.5 3 12 3Z"/></svg>
+          </a>
+          <a href={`https://wa.me/?text=${shareUrl}`} target="_blank" rel="noopener" aria-label="Share on WhatsApp" class="ltsuan-detail-share-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1-.5-1.9-1.1-2.6-1.9-.6-.6-1.1-1.4-1.5-2.1-.1-.2 0-.4.1-.6.2-.2.4-.5.6-.7.1-.2.2-.4.1-.6-.1-.3-.6-1.6-.9-2.2-.2-.5-.4-.4-.6-.4h-.6c-.2 0-.5.1-.7.3-.7.7-1.1 1.6-1.1 2.6 0 2.6 2.2 5.1 2.5 5.4.9 1 3.1 3.3 5.9 4.1 2.7.8 2.7.5 3.2.5.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.2-.2-.5-.3ZM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.6 1.4 5.1L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Share on Instagram" class="ltsuan-detail-share-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+
+        <div class="ltsuan-detail-nav-row">
+          <a href="./portfolio" class="ltsuan-detail-link ltsuan-detail-nav-back">
+            <span class="ltsuan-detail-nav-circle"><span class="ltsuan-detail-nav-arrow">←</span></span>
+            <span class="ltsuan-detail-nav-text">BACK TO ARCHIVE</span>
+          </a>
+          <a href="./" class="ltsuan-detail-nav-home">HOME</a>
+          <a href={nextHref} class="ltsuan-detail-link ltsuan-detail-nav-next">
+            <span class="ltsuan-detail-nav-text">NEXT PROJECT</span>
+            <span class="ltsuan-detail-nav-circle"><span class="ltsuan-detail-nav-arrow">→</span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="ltsuan-detail-right">
+        {images.map((img) => (
+          <div class="ltsuan-thin-scroll ltsuan-detail-img-wrap">
+            <picture>
+              <source srcset={avifPath(img.src)} type="image/avif" />
+              <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div class="ltsuan-detail-watermark">LT260807A</div>
+</Layout>
+
+<style is:global>
+  :root {
+    --ltsuan-detail-bg: #fafaf9;
+    --ltsuan-detail-text: #111111;
+    --ltsuan-detail-link: #073d6f;
+    --ltsuan-detail-accent: #8fc31f;
+    --ltsuan-detail-border: #e5e5e5;
+  }
+  body {
+    background: var(--ltsuan-detail-bg);
+    color: var(--ltsuan-detail-text);
+  }
+  body a {
+    color: var(--ltsuan-detail-text);
+  }
+  body a:hover {
+    color: #555;
+  }
+</style>
+
+<style>
+  .ltsuan-thin-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(17, 17, 17, 0.25) transparent;
+  }
+  .ltsuan-thin-scroll::-webkit-scrollbar {
+    width: 1px;
+  }
+  .ltsuan-thin-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .ltsuan-thin-scroll::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, 0.25);
+    border-radius: 2px;
+  }
+  .ltsuan-detail {
+    background: var(--ltsuan-detail-bg);
+  }
+  .ltsuan-detail-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(250, 250, 249, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--ltsuan-detail-border);
+    font-family: 'Oswald', sans-serif;
+  }
+  .ltsuan-detail-header-inner {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 16px 56px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .ltsuan-detail-logo-link {
+    text-decoration: none;
+  }
+  .ltsuan-detail-logo {
+    height: 25.5px;
+    display: block;
+  }
+  .ltsuan-detail-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+  }
+  .ltsuan-detail-close {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ltsuan-detail-grid {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 56px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 0;
+  }
+  .ltsuan-detail-left {
+    position: sticky;
+    top: 84px;
+    height: calc(100svh - 84px);
+    overflow: auto;
+    padding: 56px 56px 56px 0;
+    border-right: 1px solid var(--ltsuan-detail-border);
+  }
+  .ltsuan-detail-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    opacity: 0.6;
+    margin-bottom: 32px;
+    margin-top: -8px;
+    font-family: 'Oswald', sans-serif;
+  }
+  .ltsuan-detail-eyebrow-rule {
+    width: 24px;
+    height: 1px;
+    background: rgba(17, 17, 17, 0.2);
+  }
+  .ltsuan-detail-h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(49px, 6.5vw, 83px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+  .ltsuan-detail-h1-sub {
+    display: block;
+    font-weight: 300;
+    font-size: clamp(30px, 2.4vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin-top: 27px;
+    opacity: 0.9;
+  }
+  .ltsuan-detail-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ltsuan-detail-border);
+    font-family: 'Oswald', sans-serif;
+  }
+  .ltsuan-detail-meta-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    margin: 0 0 8px;
+  }
+  .ltsuan-detail-meta-value {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .ltsuan-detail-body {
+    margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #000;
+    text-align: justify;
+  }
+  .ltsuan-detail-body :global(h2) {
+    margin: 32px 0 4px;
+    font-weight: 500;
+    color: #111;
+    font-size: 15px;
+  }
+  .ltsuan-detail-body :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .ltsuan-detail-body :global(p) {
+    margin: 0 0 20px;
+  }
+  .ltsuan-detail-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .ltsuan-detail-related {
+    margin-top: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ltsuan-detail-border);
+  }
+  .ltsuan-detail-related-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    margin: 0 0 14px;
+  }
+  .ltsuan-detail-related-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .ltsuan-detail-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--ltsuan-detail-link);
+    transition: color 0.2s ease;
+  }
+  .ltsuan-detail-link:hover {
+    color: var(--ltsuan-detail-accent);
+  }
+  .ltsuan-detail-share {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ltsuan-detail-border);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .ltsuan-detail-share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--ltsuan-detail-link);
+    color: var(--ltsuan-detail-link);
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .ltsuan-detail-share-btn:hover {
+    color: var(--ltsuan-detail-accent);
+    border-color: var(--ltsuan-detail-accent);
+  }
+  .ltsuan-detail-nav-row {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ltsuan-detail-nav-back {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .ltsuan-detail-nav-next {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .ltsuan-detail-nav-circle {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+  .ltsuan-detail-nav-arrow {
+    position: relative;
+    top: -2px;
+  }
+  .ltsuan-detail-nav-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+  .ltsuan-detail-nav-home {
+    flex: 0 0 auto;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    border: 1px solid var(--ltsuan-detail-link);
+    color: var(--ltsuan-detail-link);
+    padding: 0 8px;
+    height: 29px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .ltsuan-detail-nav-home:hover {
+    color: var(--ltsuan-detail-accent);
+  }
+  .ltsuan-detail-right {
+    padding: 56px 0 56px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ltsuan-detail-img-wrap {
+    overflow: auto;
+  }
+  .ltsuan-detail-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    transition: filter 0.35s ease;
+    filter: brightness(0.85);
+  }
+  .ltsuan-detail-img-wrap:hover .ltsuan-detail-img {
+    filter: brightness(1);
+  }
+  .ltsuan-detail-watermark {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    font-family: monospace;
+    font-size: 9px;
+    color: rgba(120, 120, 120, 0.45);
+    z-index: 99999;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 860px) {
+    .ltsuan-detail-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .ltsuan-detail-label {
+      display: none;
+    }
+    .ltsuan-detail-header-inner {
+      padding: 14px 12px !important;
+    }
+    .ltsuan-detail-logo {
+      height: 17px !important;
+    }
+    .ltsuan-detail-left {
+      position: static !important;
+      height: auto !important;
+      border-right: none !important;
+      border-bottom: 1px solid var(--ltsuan-detail-border);
+      padding: 32px 24px !important;
+    }
+    .ltsuan-detail-right {
+      padding: 32px 24px !important;
+    }
+  }
+</style>

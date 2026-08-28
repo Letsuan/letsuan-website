@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Securities Company Office — A Contemporary, High-End Workplace | Le Tsuan Design";
+const description = "Securities Company Office: A Contemporary, High-End Workplace. Interior Design for Securities Company in New Taipei City, Taiwan — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-securities-office";
+const ogImage = "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Securities Company Office Design", "description": "A contemporary, high-end office fit-out in Banqiao, New Taipei City.", "url": "https://letsuan.com/project-securities-office", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2022"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Securities Company Office Design", "item": "https://letsuan.com/project-securities-office"}]}];
+const eyebrowLeft = "INTERIOR — 2022";
+const eyebrowRight = "NEW TAIPEI CITY";
+const h1Main = "Securities Company Office";
+const h1Sub = "A Contemporary, High-End Workplace";
+const metaFields = [{"label": "CLIENT", "value": "Securities Company"}, {"label": "LOCATION", "value": "New Taipei City, Taiwan"}, {"label": "SIZE", "value": "200 ㎡"}, {"label": "CATEGORY", "value": "Interior Design, Construction"}];
+const bodyHtml = "<p>Located in the Banqiao District of New Taipei City, this new office was designed around a contemporary, high-end feel. Quality finishes carry that tone throughout, including a feature curved wall and custom-made handles at the entrance. The office now houses a dedicated waiting area, a kitchen and breakout area, a boardroom, executive offices, and an open-plan workstation area. Construction was handled by Le Tsuan's in-house team.</p>";
+const relatedProjects = [{"href": "./project-world-semiconductors", "label": "The World of Semiconductors"}, {"href": "./project-detention-pier2", "label": "Detention — Reality Experience"}, {"href": "./project-orsted-energy", "label": "Energy Taiwan 2022 — Ørsted"}];
+const nextHref = "./project-tccge-deck";
+const images = [{"src": "./images/securities-company-office-design-02-letsuan-design.jpg", "alt": "Securities Company Office waiting area"}, {"src": "./images/securities-company-office-design-01-letsuan-design.jpg", "alt": "Securities Company Office entrance"}, {"src": "./images/securities-company-office-design-03-letsuan-design.jpg", "alt": "Securities Company Office boardroom"}, {"src": "./images/securities-company-office-design-04-letsuan-design.jpg", "alt": "Securities Company Office workstation"}, {"src": "./images/securities-company-office-design-05-letsuan-design.jpg", "alt": "Securities Company Office corridor"}, {"src": "./images/securities-company-office-design-06-letsuan-design.jpg", "alt": "Securities Company Office executive room"}, {"src": "./images/securities-company-office-design-07-letsuan-design.jpg", "alt": "Securities Company Office feature wall"}, {"src": "./images/securities-company-office-design-08-letsuan-design.jpg", "alt": "Securities Company Office reception view"}, {"src": "./images/securities-company-office-design-09-letsuan-design.jpg", "alt": "Securities Company Office renovation in progress"}, {"src": "./images/securities-company-office-design-10-letsuan-design.jpg", "alt": "Securities Company Office renovation detail, wall finishing"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

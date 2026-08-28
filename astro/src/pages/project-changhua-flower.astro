@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination — Ørsted Pavilion, 2023 Changhua Flower Festival | Le Tsuan Design";
+const description = "Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination: Ørsted Pavilion, 2023 Changhua Flower Festival. Graphic Design — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-changhua-flower";
+const ogImage = "https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Changhua Flower Festival 2023 — Ørsted", "description": "Ørsted brought Taiwan's largest offshore wind farm imagery into a garden landscape at Xizhou Park.", "url": "https://letsuan.com/project-changhua-flower", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2023", "hasPart": [{"@type": "CreativeWork", "name": "Design Problem-Solving Framework"}, {"@type": "CreativeWork", "name": "Outcome"}, {"@type": "CreativeWork", "name": "Capabilities Demonstrated"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Changhua Flower Festival 2023 — Ørsted", "item": "https://letsuan.com/project-changhua-flower"}]}];
+const eyebrowLeft = "EVENT — 2023";
+const eyebrowRight = "CHANGHUA XIZHOU PARK";
+const h1Main = "Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination";
+const h1Sub = "Ørsted Pavilion, 2023 Changhua Flower Festival";
+const metaFields = [{"label": "CLIENT", "value": "Ørsted / Changhua County Government"}, {"label": "LOCATION", "value": "Changhua, Taiwan"}, {"label": "YEAR", "value": "2023"}, {"label": "CATEGORY", "value": "Graphic Design, Construction, Garden Design"}];
+const bodyHtml = "<h2>A Leftover Corner, and What Grew There</h2>\n<p>Ørsted took part in the 2023 Changhua International Flower Festival with a corporate pavilion built around the theme \"Green Wind, Sustainable Changhua.\" The site assigned to it sat in an awkward, constrained corner of the park, where existing concrete steps and concrete piers were already fixed in place, boxing in both circulation and display layout before design work even started.</p>\n<h2>Building on What Was Already There</h2>\n<p>Rather than working around those structures, we redefined the concrete piers as the fixed base for the main feature wall. That single decision solved two problems together: it gave the outdoor display a ready-made concrete foundation against the structural risks of long-term wind, rain, and weather exposure, and it folded a constraint that had originally felt unwanted into the landscape narrative itself, so structural performance and spatial aesthetics answered to the same move.</p>\n<h2>Color Against a Grey Season</h2>\n<p>The planting plan had its own problem: the exhibition period landed in the off-season for winter blooms, so the range of available flower material was limited. We compared options and settled on shrub species in auspicious, festive colors instead of the usual seasonal flowers, and, given the low ambient brightness typical of overcast winter weather, deliberately went with a high-saturation, high-brightness palette.</p>\n<p>Against the grayscale backdrop of the season, the pavilion stood out sharply, and more or less by accident became the brightest spot in the park. The planted wall was paired with a backdrop depicting Ørsted's Greater Changhua offshore wind farm, giving the company's sustainability message a form visitors could see and feel directly.</p>\n<h2>Result</h2>\n<p>This constrained, awkward corner ended up as the most popular photo spot in the park during the Lunar New Year period. The structural limitations weren't worked around; they got built directly into the wall.</p>";
+const relatedProjects = [{"href": "./project-orsted-energy", "label": "Energy Taiwan 2022 — Ørsted"}, {"href": "./project-air-force-academy", "label": "Ninety Years of Sky"}, {"href": "./project-world-semiconductors", "label": "The World of Semiconductors"}];
+const nextHref = "./project-yokai-world";
+const images = [{"src": "./images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg", "alt": "Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination — Ørsted Pavilion curved feature wall with wind turbines and ocean mural at dusk"}, {"src": "./images/changhua-flower-xizhou-park-pathway-with-concrete-planters-letsuan-design.jpg", "alt": "Xizhou Park pathway with concrete planters and glass building"}, {"src": "./images/changhua-flower-orsted-pavilion-feature-wall-among-flower-letsuan-design.jpg", "alt": "Ørsted Pavilion feature wall among flower beds at sunset"}, {"src": "./images/changhua-flower-qr-code-signage-post-among-flower-letsuan-design.jpg", "alt": "QR code signage post among flower beds"}, {"src": "./images/changhua-flower-child-flying-a-kite-in-front-letsuan-design.jpg", "alt": "Child flying a kite in front of Ørsted feature wall"}, {"src": "./images/changhua-flower-zodiac-rabbit-cutout-signage-among-flower-letsuan-design.jpg", "alt": "Zodiac rabbit cutout signage among flower beds"}, {"src": "./images/changhua-flower-orsted-branding-sign-with-clownfish-cutout-letsuan-design.jpg", "alt": "Ørsted branding sign with clownfish cutout among plants"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

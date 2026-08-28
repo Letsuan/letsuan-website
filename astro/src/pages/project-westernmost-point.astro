@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "The Westernmost Point of Taiwan — 23°06'02.7\"N 120°02'09.0\"E | Le Tsuan Design";
+const description = "The Westernmost Point of Taiwan: 23°06'02.7\"N 120°02'09.0\"E. Installation Art for Tourism Bureau of Tainan City Government in Tainan, Taiwan — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-westernmost-point";
+const ogImage = "https://letsuan.com/images/westernmost-point-taiwan-01-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "The Westernmost Point of Taiwan", "description": "A paper-cutting montage tunnel engineered with an All-304 stainless steel system and zero-breach fluorocarbon coating to withstand a saline sandbar site.", "url": "https://letsuan.com/project-westernmost-point", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/westernmost-point-taiwan-01-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2022-01-01", "dateModified": "2026-08-06"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "The Westernmost Point of Taiwan", "item": "https://letsuan.com/project-westernmost-point"}]}];
+const eyebrowLeft = "INSTALLATION — 2022";
+const eyebrowRight = "Dintouer Sandbank";
+const h1Main = "The Westernmost Point of Taiwan";
+const h1Sub = "23°06'02.7\"N 120°02'09.0\"E";
+const metaFields = [{"label": "CLIENT", "value": "Tourism Bureau of Tainan City Government"}, {"label": "LOCATION", "value": "Tainan, Taiwan"}, {"label": "YEAR", "value": "2022"}, {"label": "CATEGORY", "value": "Installation Art, Construction"}];
+const bodyHtml = "<h2>A Landmark on Ground That Won't Hold Still</h2>\n<p>The site sits at the threshold between sandbar and surf, with no solid ground beneath it, fully exposed to sea wind, salt spray, and intense UV. Our task was to create a landmark on this unstable terrain that could resist time. The design composes a walkable montage tunnel from a sequence of mask panels, light as paper yet architectural in scale, each face carved with a distinct character. Their perforated boundaries choreograph a delicate interplay between privacy and gaze.</p>\n<h2>Light, Shadow, and the Act of Walking Through</h2>\n<p>We designed the act of viewing as circulation itself. The angle and height of each panel are calibrated to the solar path and prevailing wind direction. In the morning, oblique light slices through and guides a slow procession forward. In the afternoon, overlapping shadows compel visitors to pause. At dusk, the entire tunnel is pierced by the afterglow, human silhouettes and paper-cut shadows merging into one, and the circulation becomes a passage from light into darkness, and back out into the sea and sky.</p>\n<h2>All 304, No Breach</h2>\n<p>To withstand the extreme saline environment, the project uses an all-304 stainless steel system. From the primary structure and mask panels to every bolt, stud, and screw, all hardware is fabricated in 304 stainless steel, eliminating galvanic corrosion caused by dissimilar metal contact. Every component is finished with a fluorocarbon coating (PVDF) for weather resistance, UV resistance, and long-term colour retention. Components are factory-finished with the coating before being transported to site; any micro-abrasions or breaches incurred during fastening are touched up on-site with colour-matched fluorocarbon paint, keeping the coating film continuous and defect-free so every joint can withstand salt-laden corrosion for years to come.</p>\n<p>The result translates the intricate lexicon of traditional paper-cutting into a spatial experience built to hold up, structurally and visually, under high-specification metal craftsmanship.</p>";
+const relatedProjects = [{"href": "./project-led-kinetic", "label": "Universe — LED Kinetic Light"}, {"href": "./project-notre-dame", "label": "Eternal Notre-Dame"}, {"href": "./project-marine-illusion", "label": "Seeing Is Believing"}];
+const nextHref = "./project-securities-office";
+const images = [{"src": "./images/westernmost-point-taiwan-01-letsuan-design.jpg", "alt": "The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance"}, {"src": "./images/westernmost-point-taiwan-07-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan paper-cutting installation in progress"}, {"src": "./images/westernmost-point-taiwan-02-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan tunnel"}, {"src": "./images/westernmost-point-taiwan-03-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan pattern"}, {"src": "./images/westernmost-point-taiwan-04-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan silhouette"}, {"src": "./images/westernmost-point-taiwan-05-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan night view"}, {"src": "./images/westernmost-point-taiwan-06-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan structure"}, {"src": "./images/westernmost-point-taiwan-08-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan structural framework detail"}, {"src": "./images/westernmost-point-taiwan-09-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan final view"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

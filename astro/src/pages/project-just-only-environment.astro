@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "Just Only — Environment Protection Brochure | Le Tsuan Design";
+const description = "Just Only. Graphic Design for Just Only Environment Protection, 2010 — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-just-only-environment";
+const ogImage = "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Just Only Environment Protection Brochure", "url": "https://letsuan.com/project-just-only-environment", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2010"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Just Only Environment Protection Brochure", "item": "https://letsuan.com/project-just-only-environment"}]}];
+const eyebrowLeft = "GRAPHIC DESIGN — 2010";
+const eyebrowRight = "TAIWAN";
+const h1Main = "Just Only";
+const h1Sub = "Environment Protection Brochure";
+const metaFields = [{"label": "CLIENT", "value": "Just Only Environment Protection"}, {"label": "YEAR", "value": "2010"}, {"label": "CATEGORY", "value": "Graphic Design, Visual Design, Typography, Brochure, Website"}];
+const bodyHtml = "<p>Just Only Environment Protection's brochure, typography, and website were designed by Le Tsuan's in-house team as part of the brand's collateral.</p>";
+const relatedProjects = [{"href": "./project-fullchamp-brochure", "label": "Fullchamp Brochure Design"}, {"href": "./project-amazing-homeland", "label": "Amazing Homeland"}, {"href": "./project-art-gallery-culture", "label": "Art Gallery (Ministry of Culture)"}];
+const nextHref = "./project-fullchamp-brochure";
+const images = [{"src": "./images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "alt": "Just Only — Paper Pulp Mold Technology brochure cover with folded panel detail"}, {"src": "./images/just-only-environment-brochure-spread-showing-inspection-reports-letsuan-design.jpg", "alt": "Brochure spread showing inspection reports and manufacturing process"}, {"src": "./images/just-only-environment-brochure-spread-showing-paper-pulp-mold-letsuan-design.jpg", "alt": "Brochure spread showing paper pulp mold tableware product catalog"}, {"src": "./images/just-only-environment-brochure-back-cover-with-blue-gradient-letsuan-design.jpg", "alt": "Brochure back cover with blue gradient and Paper Pulp Mold Tableware branding"}, {"src": "./images/just-only-environment-brochure-spread-showing-patterned-paper-pulp-letsuan-design.jpg", "alt": "Brochure spread showing patterned paper pulp plates and bowls"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>

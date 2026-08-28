@@ -1,0 +1,35 @@
+---
+import ProjectLayout from '../components/ProjectLayout.astro';
+
+const title = "R.O.C. Air Force Academy 90th Founding Anniversary — Corridor of Light: A Special Exhibition on Academy History | Le Tsuan Design";
+const description = "R.O.C. Air Force Academy 90th Founding Anniversary: Corridor of Light: A Special Exhibition on Academy History. Curation — Le Tsuan Design.";
+const canonical = "https://letsuan.com/project-air-force-academy";
+const ogImage = "https://letsuan.com/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg";
+const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "R.O.C Air Force Academy 90th Anniversary", "description": "R.O.C Air Force Museum exhibition.", "url": "https://letsuan.com/project-air-force-academy", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2019", "hasPart": [{"@type": "CreativeWork", "name": "The Exhibition Runs on a Timeline"}, {"@type": "CreativeWork", "name": "Visual Aesthetics and Display Detail"}, {"@type": "CreativeWork", "name": "Closing"}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "R.O.C Air Force Academy 90th Anniversary", "item": "https://letsuan.com/project-air-force-academy"}]}];
+const eyebrowLeft = "EVENT — 2019";
+const eyebrowRight = "R.O.C. AIR FORCE MUSEUM";
+const h1Main = "R.O.C. Air Force Academy 90th Founding Anniversary";
+const h1Sub = "Corridor of Light: A Special Exhibition on Academy History";
+const metaFields = [{"label": "CLIENT", "value": "R.O.C. Air Force Academy"}, {"label": "LOCATION", "value": "Kaohsiung, Taiwan"}, {"label": "YEAR", "value": "2019"}, {"label": "AREA", "value": "396.6948 ㎡"}, {"label": "CATEGORY", "value": "Curation, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction"}];
+const bodyHtml = "<h2>A Timeline You Walk Through</h2>\n<p>The exhibition's circulation follows the Academy's own chronology, and every stop marks another step forward, moving from the Academy's past into its present.</p>\n<h2>Prologue: Dreaming of the Sky</h2>\n<p>Walk in, and the first thing you meet is a feature wall with real presence, aviation-inspired geometric lines that plant the idea of \"Air Force\" in your mind before you've even moved further in.</p>\n<h2>Founding and Wartime Years</h2>\n<p>Old photographs, documents, and artifacts are laid out plainly, without dressing anything up. The resilience of those cadets, in those hard years, speaks for itself.</p>\n<h2>Modernization and a New Generation of Airpower</h2>\n<p>From fighter jet models to the evolution of equipment, you can trace how the Air Force grew from its rough early days into the force it is today.</p>\n<h2>Looking Forward: Education and Legacy</h2>\n<p>This zone ties the Academy's mission of training talent to the future of aerospace, so the exhibition looks ahead as much as it looks back.</p>\n<h2>The History Timeline Wall</h2>\n<p>This wall is the backbone of the whole exhibition's storytelling. Every major event across the Air Force's ninety years is marked on the wall in chronological order, with a single line running through it all, tying scattered moments into one continuous story. From the founding, through the war, through the relocation and rebuilding, every point in time sits on that line. Walking along it, you end up somewhere past reading a record: closer to walking through ninety years.</p>\n<h2>Wing Forms and Light</h2>\n<p>The ceiling takes on the streamlined shape of an aircraft wing, lit to evoke clouds against an open sky. The space itself says \"Air Force\" without needing a single word of text.</p>\n<h2>Display Cases and Artifact Presentation</h2>\n<p>The cases use high transparency, anti-reflective glass with carefully controlled lighting, so medals, artifacts, and uniforms are seen at their best, while still meeting the standards artifact preservation demands.</p>\n<h2>Models and Immersive Scenes</h2>\n<p>At the center of the exhibition sit aircraft models and recreated scenes rather than flat panels on a wall, giving visitors a much stronger sense of presence, much closer to being there.</p>\n<h2>Closing</h2>\n<p>The exhibition lays out historical material, but its real work is bringing the weight of military heritage together with the language of modern exhibition design. Anyone who walks through should be able to feel it, that drive, carried down from ninety years ago, that's still unmistakably Air Force.</p>";
+const relatedProjects = [{"href": "./project-mobile-museum", "label": "Mobile Museum"}, {"href": "./project-orsted-energy", "label": "Energy Taiwan 2022 — Ørsted"}, {"href": "./project-offshore-wind", "label": "Offshore Wind O&M Building"}];
+const nextHref = "./project-art-gallery-culture";
+const images = [{"src": "./images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg", "alt": "R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall"}, {"src": "./images/air-force-academy-feature-wall-archway-with-eagle-sculptures-letsuan-design.jpg", "alt": "Feature wall archway with eagle sculptures and timeline panel"}, {"src": "./images/air-force-academy-cockpit-simulator-interactive-exhibit-letsuan-design.jpg", "alt": "Cockpit simulator interactive exhibit"}, {"src": "./images/air-force-academy-overhead-view-of-exhibition-zone-layout-letsuan-design.jpg", "alt": "Overhead view of exhibition zone layout"}, {"src": "./images/air-force-academy-roc-air-force-academy-feature-wall-letsuan-design.jpg", "alt": "R.O.C. Air Force Academy feature wall with orange lighting"}, {"src": "./images/air-force-academy-visitors-viewing-history-timeline-wall-letsuan-design.jpg", "alt": "Visitors viewing history timeline wall"}, {"src": "./images/air-force-academy-eagle-sculptures-being-transported-to-site-letsuan-design.jpg", "alt": "Eagle sculptures being transported to site"}, {"src": "./images/air-force-academy-construction-team-installing-archway-feature-letsuan-design.jpg", "alt": "Construction team installing archway feature wall"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+/>
