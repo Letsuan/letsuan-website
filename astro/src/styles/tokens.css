@@ -16,3 +16,21 @@ a {
 a:hover {
   color: var(--ltsuan-accent-hover);
 }
+
+/* Scroll-reveal utility shared by pages with staggered fade-up sections */
+.ltsuan-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.ltsuan-reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ltsuan-reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
