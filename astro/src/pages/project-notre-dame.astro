@@ -1,11 +1,12 @@
 ---
 import ProjectLayout from '../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../data/organization';
 
 const title = "Eternal Notre-Dame — International Debut of the VR Immersive Exhibition in Taiwan | Le Tsuan Design";
 const description = "Eternal Notre-Dame: International Debut of the VR Immersive Exhibition in Taiwan. Exhibition Design for HTC in Kaohsiung, Taiwan, 2023-2024 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-notre-dame";
 const ogImage = "https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg";
-const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Eternal Notre-Dame — Taiwan Debut", "description": "A VR immersive experience inside the cathedral undergoing reconstruction, making its Taiwan debut in Kaohsiung.", "url": "https://letsuan.com/project-notre-dame", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2023"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Eternal Notre-Dame — Taiwan Debut", "item": "https://letsuan.com/project-notre-dame"}]}];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Eternal Notre-Dame — Taiwan Debut", "description": "A VR immersive experience inside the cathedral undergoing reconstruction, making its Taiwan debut in Kaohsiung.", "url": "https://letsuan.com/project-notre-dame", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2023", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Eternal Notre-Dame — Taiwan Debut", "item": "https://letsuan.com/project-notre-dame"}]}];
 const eyebrowLeft = "EXHIBITION — 2023-2024";
 const eyebrowRight = "NATIONAL SCIENCE AND TECHNOLOGY MUSEUM";
 const h1Main = "Eternal Notre-Dame";

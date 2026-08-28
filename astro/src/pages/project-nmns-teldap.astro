@@ -1,11 +1,12 @@
 ---
 import ProjectLayout from '../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../data/organization';
 
 const title = "NMNS TELDAP — Digital Archives Exhibition | Le Tsuan Design";
 const description = "NMNS TELDAP. Construction for National Museum of Natural Science in Taichung, Taiwan, 2013 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-nmns-teldap";
 const ogImage = "https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg";
-const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "NMNS TELDAP Exhibition", "url": "https://letsuan.com/project-nmns-teldap", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2013"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "NMNS TELDAP Exhibition", "item": "https://letsuan.com/project-nmns-teldap"}]}];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "NMNS TELDAP Exhibition", "url": "https://letsuan.com/project-nmns-teldap", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2013", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "NMNS TELDAP Exhibition", "item": "https://letsuan.com/project-nmns-teldap"}]}];
 const eyebrowLeft = "EXHIBITION — 2013";
 const eyebrowRight = "NATIONAL MUSEUM OF NATURAL SCIENCE";
 const h1Main = "NMNS TELDAP";

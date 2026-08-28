@@ -1,11 +1,12 @@
 ---
 import ProjectLayout from '../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../data/organization';
 
 const title = "Just Only — Environment Protection Brochure | Le Tsuan Design";
 const description = "Just Only. Graphic Design for Just Only Environment Protection, 2010 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-just-only-environment";
 const ogImage = "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg";
-const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Just Only Environment Protection Brochure", "url": "https://letsuan.com/project-just-only-environment", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2010"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Just Only Environment Protection Brochure", "item": "https://letsuan.com/project-just-only-environment"}]}];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Just Only Environment Protection Brochure", "url": "https://letsuan.com/project-just-only-environment", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2010", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Just Only Environment Protection Brochure", "item": "https://letsuan.com/project-just-only-environment"}]}];
 const eyebrowLeft = "GRAPHIC DESIGN — 2010";
 const eyebrowRight = "TAIWAN";
 const h1Main = "Just Only";

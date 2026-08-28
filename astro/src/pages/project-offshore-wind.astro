@@ -1,11 +1,12 @@
 ---
 import ProjectLayout from '../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../data/organization';
 
 const title = "Offshore Wind O&M Building — Learning Center Decorating Modifications | Le Tsuan Design";
 const description = "Offshore Wind O&M Building: Learning Center Decorating Modifications. Curatorial Project for Ørsted in Taichung, Taiwan, 2022–Present — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-offshore-wind";
 const ogImage = "https://letsuan.com/images/offshore-wind-om-learning-center-01-letsuan-design.jpg";
-const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Offshore Wind O&M Learning Center", "description": "Decorating modifications that convert underused space into a multi-purpose corporate facility.", "url": "https://letsuan.com/project-offshore-wind", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/offshore-wind-om-learning-center-01-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2022"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Offshore Wind O&M Learning Center", "item": "https://letsuan.com/project-offshore-wind"}]}];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Offshore Wind O&M Learning Center", "description": "Decorating modifications that convert underused space into a multi-purpose corporate facility.", "url": "https://letsuan.com/project-offshore-wind", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/offshore-wind-om-learning-center-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2022", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Offshore Wind O&M Learning Center", "item": "https://letsuan.com/project-offshore-wind"}]}];
 const eyebrowLeft = "INTERIOR";
 const eyebrowRight = "2022–Present –Ørsted Taiwan Offshore Wind Farms O&M Hub";
 const h1Main = "Offshore Wind O&M Building";

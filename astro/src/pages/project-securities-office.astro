@@ -1,11 +1,12 @@
 ---
 import ProjectLayout from '../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../data/organization';
 
 const title = "Securities Company Office — A Contemporary, High-End Workplace | Le Tsuan Design";
 const description = "Securities Company Office: A Contemporary, High-End Workplace. Interior Design for Securities Company in New Taipei City, Taiwan — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-securities-office";
 const ogImage = "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg";
-const jsonLd = [{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Securities Company Office Design", "description": "A contemporary, high-end office fit-out in Banqiao, New Taipei City.", "url": "https://letsuan.com/project-securities-office", "creator": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "image": "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg", "author": {"@type": "Organization", "name": "Le Tsuan Design", "url": "https://letsuan.com/"}, "datePublished": "2022"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Securities Company Office Design", "item": "https://letsuan.com/project-securities-office"}]}];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Securities Company Office Design", "description": "A contemporary, high-end office fit-out in Banqiao, New Taipei City.", "url": "https://letsuan.com/project-securities-office", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2022", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Securities Company Office Design", "item": "https://letsuan.com/project-securities-office"}]}];
 const eyebrowLeft = "INTERIOR — 2022";
 const eyebrowRight = "NEW TAIPEI CITY";
 const h1Main = "Securities Company Office";
