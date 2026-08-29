@@ -31,4 +31,4 @@ Disallow: /search
 Disallow: /share-widget
 Allow: /
 
-Sitemap: https://www.letsuan.com/sitemap.xml
+Sitemap: https://letsuan.com/sitemap.xml
