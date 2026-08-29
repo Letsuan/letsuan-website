@@ -1,7 +1,8 @@
 User-agent: Mediapartners-Google
 Disallow:
 
-# 封鎖 AI 訓練
+# --- Block AI training crawlers ---
+# These bots use your portfolio/images to train AI models. Blocked.
 User-agent: GPTBot
 User-agent: CCBot
 User-agent: Google-Extended
@@ -9,9 +10,22 @@ User-agent: ClaudeBot
 User-agent: anthropic-ai
 User-agent: Bytespider
 User-agent: FacebookBot
+User-agent: Applebot-Extended
+User-agent: cohere-ai
+User-agent: ImagesiftBot
+User-agent: img2dataset
+User-agent: omgilibot
 Disallow: /
 
-# 一般搜尋引擎
+# --- Allow AI search / answer engines to cite you ---
+# If someone asks ChatGPT/Perplexity for interior design recommendations, they can still find you.
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: Claude-SearchBot
+Allow: /
+
+# --- General search engines ---
 User-agent: *
 Disallow: /search
 Disallow: /share-widget
