@@ -1,8 +1,7 @@
 User-agent: Mediapartners-Google
 Disallow:
 
-# --- Block AI training crawlers ---
-# These bots use your portfolio/images to train AI models. Blocked.
+# --- Block AI training crawlers (Model Training Only) ---
 User-agent: GPTBot
 User-agent: CCBot
 User-agent: Google-Extended
@@ -15,14 +14,19 @@ User-agent: cohere-ai
 User-agent: ImagesiftBot
 User-agent: img2dataset
 User-agent: omgilibot
+User-agent: Diffbot
+User-agent: AI2Bot
+User-agent: meta-externalagent
+User-agent: Timpibot
 Disallow: /
 
-# --- Allow AI search / answer engines to cite you ---
-# If someone asks ChatGPT/Perplexity for interior design recommendations, they can still find you.
+# --- Allow AI search / answer engines (Citation & Retrieval) ---
 User-agent: ChatGPT-User
 User-agent: OAI-SearchBot
 User-agent: PerplexityBot
 User-agent: Claude-SearchBot
+User-agent: GoogleOther
+User-agent: YouBot
 Allow: /
 
 # --- General search engines ---
@@ -31,4 +35,7 @@ Disallow: /search
 Disallow: /share-widget
 Allow: /
 
+# --- Sitemaps & Machine-Readable Context ---
 Sitemap: https://letsuan.com/sitemap.xml
+# LLMs Context Reference
+# https://letsuan.com/llms.txt
