@@ -33,6 +33,23 @@ const pageJsonLd = {
   ],
 };
 
+const faqs = [
+  { q: 'What does Le Tsuan Design specialise in?', a: 'Le Tsuan Design is a licensed interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan, specialising in museum-grade exhibitions, commercial interiors, visual identity systems and turn-key construction.' },
+  { q: 'When was Le Tsuan Design founded?', a: 'The studio was founded in 2014 and has delivered 42+ projects across museums, government agencies and global brands.' },
+  { q: 'Does Le Tsuan Design handle both design and construction?', a: 'Yes. The project never changes hands between design and construction. The same team stays involved from the first sketch to the final install.' },
+  { q: 'Is Le Tsuan Design a licensed interior decorator?', a: "Yes. We hold Interior Decorators' Registration No. 40E2007328 and handle professional renovation permit filing and review submissions on behalf of our clients." },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 const stats = [
   { value: '42+', label: 'Projects Delivered', desc: 'Museums, government agencies and global brands across Taiwan.' },
   { value: '2014', label: 'Studio Founded', desc: 'A decade of narrative-led design, based in Taichung and Taipei.' },
@@ -49,7 +66,7 @@ const services = [
 ];
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]}>
   <div class="ltsuan-page">
     <Nav active="about" />
 
@@ -57,7 +74,7 @@ const services = [
       <section id="hero">
         <div class="ltsuan-reveal ltsuan-hero-block">
           <h1 class="ltsuan-hero-h1">Space and story,<br />built by the same hands.</h1>
-          <p class="ltsuan-hero-sub">Interior, exhibition and visual design for museums, government agencies and global brands, based in Taiwan.</p>
+          <p class="ltsuan-hero-sub">Interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan — serving museums, government agencies and global brands since 2014.</p>
           <a href="./portfolio" class="ltsuan-badge">VIEW<br />PORTFOLIO</a>
         </div>
 
@@ -78,7 +95,7 @@ const services = [
       <section id="studio">
         <div class="ltsuan-reveal ltsuan-studio-copy">
           <div class="ltsuan-eyebrow">THE STUDIO</div>
-          <p class="ltsuan-body-copy">Le Tsuan Design is an interior, exhibition and visual design studio based in Taiwan. We work across museums, aquariums, cultural venues, corporate spaces and public installations, wherever a physical space needs to carry a message.</p>
+          <p class="ltsuan-body-copy">Le Tsuan Design is a licensed interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan, delivering museum-grade exhibitions and commercial interiors since 2014. We work across museums, aquariums, cultural venues, corporate spaces and public installations, wherever a physical space needs to carry a message.</p>
           <p class="ltsuan-body-copy">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install, keeping every detail in service of the same idea.</p>
           <p class="ltsuan-body-copy">We scale the team to the project, bringing in licensed architects, fire-safety engineers, civil engineers and quality-control inspectors as each site and regulatory requirement demands.</p>
           <p class="ltsuan-body-copy ltsuan-body-copy-last">The project never changes hands between design and construction.</p>
@@ -160,6 +177,20 @@ const services = [
               <a href={svc.evidenceHref} class="ltsuan-svc-evidence">{svc.evidenceLabel} →</a>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="ltsuan-reveal">
+          <h2 class="ltsuan-section-h2 ltsuan-faq-title">Frequently Asked Questions</h2>
+          <div class="ltsuan-faq-list">
+            {faqs.map((f) => (
+              <div class="ltsuan-faq-item">
+                <h3 class="ltsuan-faq-q">{f.q}</h3>
+                <p class="ltsuan-faq-a">{f.a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -483,5 +514,37 @@ const services = [
     letter-spacing: 0.06em;
     color: var(--ltsuan-accent);
     text-decoration: none;
+  }
+  #faq {
+    padding: 64px 60px 80px 79px;
+    max-width: 900px;
+  }
+  .ltsuan-faq-title {
+    margin-bottom: 36px;
+  }
+  .ltsuan-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .ltsuan-faq-q {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #f4efe8;
+  }
+  .ltsuan-faq-a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(244, 239, 232, 0.75);
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    #faq {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
   }
 </style>

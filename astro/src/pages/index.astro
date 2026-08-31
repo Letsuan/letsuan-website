@@ -7,8 +7,8 @@ import ServicesGrid from '../components/ServicesGrid.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import { organizationJsonLd } from '../data/organization';
 
-const title = 'Le Tsuan Design | Exhibition, Interior & Spatial Construction Studio, Taiwan';
-const description = 'Le Tsuan Design is a Taiwan-based studio crafting immersive interior, exhibition, visual and construction projects for museums, brands and public spaces.';
+const title = 'Le Tsuan Design | Museum Exhibition Design & Design-Build Studio, Taiwan';
+const description = 'Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Same team from concept to installation. 42+ projects, 17,000+ m² delivered since 2014.';
 const canonical = 'https://letsuan.com/';
 const ogImage = 'https://letsuan.com/assets/logo.png';
 ---
@@ -24,6 +24,7 @@ const ogImage = 'https://letsuan.com/assets/logo.png';
         <div class="ltsuan-about-eyebrow">OUR APPROACH</div>
         <p class="ltsuan-about-headline">The same team that designs the space<br />also builds it.</p>
         <p class="ltsuan-about-copy">One point of contact from first sketch to final install — nothing lost in translation between concept and construction.</p>
+        <p class="ltsuan-about-copy ltsuan-about-copy-extra">Le Tsuan Design is a Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Founded in 2014 with studios in Taichung and Taipei, the same team carries projects from curatorial concept and spatial design through fabrication and on-site installation. Over 42 projects and 17,000+ m² delivered for national museums, government agencies, and global brands including Ørsted, TSMC, HTC VIVE Arts, and Toei Animation.</p>
       </div>
     </section>
 
@@ -72,5 +73,12 @@ const ogImage = 'https://letsuan.com/assets/logo.png';
     margin: 0;
     color: rgba(240, 233, 222, 0.55);
     max-width: 600px;
+  }
+  .ltsuan-about-copy-extra {
+    margin-top: 24px;
+    max-width: 52rem;
+    font-size: 15px;
+    line-height: 1.55;
+    opacity: 0.92;
   }
 </style>
