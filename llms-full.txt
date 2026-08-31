@@ -1,1017 +1,567 @@
 # Le Tsuan Design — Full Project Case Studies
 
-> This file expands on llms.txt with the complete technical write-up for every project in the portfolio: client, location, year, category, and the full case-study narrative including design methodology, engineering details, and material specifications. Sourced directly from each project's live page.
+> Complete technical write-ups for every project in the portfolio. Each entry includes client, location, year, category, area (when available), and the full design and engineering narrative. Sourced from the live project pages on letsuan.com.
 
+## How to use this file
+- For a quick studio overview and curated links, see /llms.txt
+- High-priority case studies (major museum exhibitions, international work, complex engineering, licensed IP) appear first
+- Each project follows a consistent structure for easier parsing
 
----
+## Studio Snapshot
+- Founded: 2014
+- Studios: Taichung and Taipei, Taiwan
+- Delivery model: Design-build — the same team carries projects from concept through fabrication and on-site installation
+- Projects delivered: 42+
+- Space completed: 17,000+ m²
+- Primary clients: National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC VIVE Arts, Toei Animation, Shogakukan, Mizuki Production
 
-## R.O.C. Air Force Academy 90th Founding Anniversary
-
-*Corridor of Light: A Special Exhibition on Academy History*
-
-
-Source: https://letsuan.com/project-air-force-academy
-
-
-**CLIENT:** R.O.C. Air Force Academy · **LOCATION:** Kaohsiung, Taiwan · **YEAR:** 2019 · **AREA:** 396.6948 ㎡ · **CATEGORY:** Curation, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction
-
-
-#### A Timeline You Walk Through
-The exhibition's circulation follows the Academy's own chronology, and every stop marks another step forward, moving from the Academy's past into its present.
-#### Prologue: Dreaming of the Sky
-Walk in, and the first thing you meet is a feature wall with real presence, aviation-inspired geometric lines that plant the idea of "Air Force" in your mind before you've even moved further in.
-#### Founding and Wartime Years
-Old photographs, documents, and artifacts are laid out plainly, without dressing anything up. The resilience of those cadets, in those hard years, speaks for itself.
-#### Modernization and a New Generation of Airpower
-From fighter jet models to the evolution of equipment, you can trace how the Air Force grew from its rough early days into the force it is today.
-#### Looking Forward: Education and Legacy
-This zone ties the Academy's mission of training talent to the future of aerospace, so the exhibition looks ahead as much as it looks back.
-#### The History Timeline Wall
-This wall is the backbone of the whole exhibition's storytelling. Every major event across the Air Force's ninety years is marked on the wall in chronological order, with a single line running through it all, tying scattered moments into one continuous story. From the founding, through the war, through the relocation and rebuilding, every point in time sits on that line. Walking along it, you end up somewhere past reading a record: closer to walking through ninety years.
-#### Wing Forms and Light
-The ceiling takes on the streamlined shape of an aircraft wing, lit to evoke clouds against an open sky. The space itself says "Air Force" without needing a single word of text.
-#### Display Cases and Artifact Presentation
-The cases use high transparency, anti-reflective glass with carefully controlled lighting, so medals, artifacts, and uniforms are seen at their best, while still meeting the standards artifact preservation demands.
-#### Models and Immersive Scenes
-At the center of the exhibition sit aircraft models and recreated scenes rather than flat panels on a wall, giving visitors a much stronger sense of presence, much closer to being there.
-#### Closing
-The exhibition lays out historical material, but its real work is bringing the weight of military heritage together with the language of modern exhibition design. Anyone who walks through should be able to feel it, that drive, carried down from ninety years ago, that's still unmistakably Air Force.
-
+## Core Technical Competencies & Specializations
+- **Zero-Penetration & Heritage Building Construction**: Free-standing structural frameworks, tensioned mounting, and counterweight systems that comply with strict non-drilling preservation rules (Huashan 1914, Songshan Cultural Park, Pier-2, National Museum of History, Chiang Kai-shek Memorial Hall).
+- **High-Density AV & Interactive Integration**: Node-by-node load calculations for large projector arrays (170+ units), free-roaming VR charging infrastructure (100+ headsets), motion sensors, pneumatic/IR triggers, DMX lighting choreography, and automated kinetic installations.
+- **Museum-Grade Conservation Engineering**: Constant-humidity micro-environment display cases, optical-fiber / low-lux preservation lighting (50–150 lux), airtight case sealing, Class-1 fire-retardant material fabrication.
+- **Harsh Environment & Coastal Engineering**: Anti-corrosion fluorocarbon coatings, 304 stainless steel structures, salt-tolerant coastal landscape planning, and installations designed for high UV and wind exposure.
+- **Design-Build Delivery**: Single team responsible for curatorial concept, spatial design, fabrication, MEP coordination, and on-site installation under compressed schedules and complex constraints.
 
 ---
 
-## Amazing Homeland
+## Seeing is Believing? — Masters of Marine Illusion: Mimicry & Camouflage
 
-*Cheng-Hsiung Chen’s Collection of Taiwanese Indigenous Artifacts*
+**Source:** https://letsuan.com/project-marine-illusion  
+**Client:** Taichung Aquarium  
+**Location:** Taichung, Taiwan  
+**Year:** 2026  
+**Area:** 68 ㎡  
+**Category:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
 
+### Summary
+Full design-build for Taichung Aquarium’s marine mimicry and camouflage exhibition. Within a tightly constrained 68 m² footprint, the team solved visitor circulation, living-specimen lighting requirements, fully concealed MEP, and used eco-certified materials throughout.
 
-Source: https://letsuan.com/project-amazing-homeland
+### Challenge
+The exhibition space measured only 68 square meters. Fitting a coherent story about seven species (including the mimic octopus and pharaoh cuttlefish) while protecting live animals and maintaining clear circulation was the primary constraint.
 
+### Approach
+Ultra-thin wall linings recovered floor area for circulation and a central motion-sensing interactive zone. Aquarium tanks were arranged in a stepped, cascading layout that served both adult and child sightlines. All wiring for life-support, lighting, and sensors was embedded inside the thin wall assembly. Screens, speakers, and projectors were recessed flush. Power for life support ran on a separate circuit from interactive and AV systems.
 
-**CLIENT:** National Museum of History · **LOCATION:** Taipei, Taiwan · **YEAR:** 2017 · **CATEGORY:** Exhibition Design, Graphic Design, Visual Design, Construction
-
-
-#### A Low-Light Room, Built Around the Objects
-The exhibition sits inside a deliberately low-illuminance museum atmosphere. Lighting is controlled with enough precision that visual noise disappears and each artifact emerges on its own, inside its own pool of light. Nothing decorative competes for attention; the eye stays on the craftsmanship.
-#### 01 Garment Gallery, A Suspended Theater of Light
-Long garments hang from a suspended tension system, each piece held by fine steel cables in front of a clean, off-white main wall, which gives the fabric a sense of lightness and floating. Every garment gets its own anti-glare spotlight, angled precisely to bring out the three-dimensional luster of glass beads, embroidery appliqués, and fur textures. Information plaques stay low on the wall and minimal, so they never compete with the pieces themselves.
-#### 02 Terminus Feature, The Aesthetics of Woven Identity
-The circulation ends at a monumental, full-height traditional woven tapestry that closes out the route. An interlaced diamond pattern in red, black, and blue-green covers the entire surface, forming the strongest visual punctuation point of the whole journey and standing in as a contemporary answer to the exhibition's core idea: that woven pattern is identity worn on the body.
-#### 03 Basketry and Pottery Gallery, An Immersive Corridor of Living
-From here the space shifts into a dark, immersive corridor. A mist-black floor and deep purple-grey walls pair with white graphic panels in a low-contrast palette that lets the artifacts' own natural colors carry the room.
-On one side, OSB shelving holds daily objects like baskets and wooden mortars, lit from below by warm 3000K linear strips recessed under each shelf, the light washing upward to outline the objects and add a lived-in warmth against the otherwise solemn tone.
-On the other side, glass vitrines and freestanding plinths hold pottery jars and urns, each one spotlighted on a black pedestal like an actor under a stage light. Black retractable stanchions choreograph the flow through this section, balancing protection for the artifacts against the pace of viewing.
-#### 04 Sculpture and Fine Pottery Gallery, A Sanctuary of Time
-The final gallery is built as a quiet sanctuary. A continuous run of full-height glass vitrines sits against a dark, reflective floor, and the reflections stretch the space into a deep, serene depth. Stone carvings, ceramic figures, and pots each get their own micro-spotlight and a suspended caption panel, and visitors move through it the way they might move through a corridor of time, the contrast between low ambient light and sharp accent lighting giving weight to the history each piece carries.
-#### Design Language
-Lighting strategy: low ambient illuminance paired with high-precision accent lighting. Material palette: blackened steel plinths, dark wood flooring, off-white walls, OSB shelving. The whole exhibition runs on one consistent museum logic, dark environment, bright artifact, softened by warm light details built into the shelving, holding a careful balance between solemnity and warmth so that attention keeps returning to the object itself.
-
+### Materials and Lighting
+Wall substrates, coatings, trim, and full-space graphics carried international environmental certifications, including the Green Building Material Label. Graphics used eco-certified non-woven fabric (recycled fiber, Class 1 fire retardancy, formaldehyde-free). Lighting used a deep-sea blue base (#00183A) with selective fluorescent cyan and warning-yellow accents, keeping ambient levels low enough not to stress the living specimens.
 
 ---
 
-## See the Ministry of Culture
+## Eternal Notre-Dame — International Debut of the VR Immersive Exhibition in Taiwan
 
-*One History. Six Departments. Countless Everyday Moments.*
+**Source:** https://letsuan.com/project-notre-dame  
+**Client:** HTC / National Science and Technology Museum  
+**Location:** Kaohsiung, Taiwan  
+**Year:** 2023–2024  
+**Area:** 720.64 ㎡  
+**Category:** Exhibition Design, Installation Art, Interactive Multimedia, Construction
 
+### Summary
+Taiwan debut of the Eternal Notre-Dame free-roaming VR exhibition. Le Tsuan handled spatial planning, construction drawings, wall-graphic production, and full on-site build across 720.64 m² in 12 days under strict non-drilling rules and a 5% maximum light-level variance required by the French technical team.
 
-Source: https://letsuan.com/project-art-gallery-culture
+### Key Constraints
+- No drilling or fastening into existing walls or structure
+- Lighting variance across the entire venue held under 5%
+- Over 100 simultaneous VR devices with rotational charging
+- Shared elevator for material transport; construction coincided with Typhoon Khanun
+- Seismic considerations for all freestanding and suspended elements
 
+### Approach
+Non-destructive freestanding and support-based construction completed light-blocking, partitions, and equipment supports without damaging the building. Lighting fixtures on 10-meter steel beams were suspended rather than fastened, protecting fireproof foam. Approximately 500 meters of curved-facade graphics were produced and installed with continuous alignment. Electrical load was calculated for more than 100 wearable VR sets. All structural elements were evaluated for seismic safety factors.
 
-**CLIENT:** Ministry of Culture · **YEAR:** 2019 · **CATEGORY:** Curation, Exhibition Design, Graphic Design, Interactive Multimedia, Construction
-
-
-#### Curatorial Concept: A Package Waiting to Be Opened
-A sealed box gives away nothing about what it holds until someone unwraps it, lays it flat, and lets it spread open panel by panel into what packaging designers call a die-line.
-The history of the Ministry of Culture works the same way. It runs from the founding of the Council for Cultural Affairs in the 1980s, through the Government Information Office's role in media and communications, to the Ministry's own establishment in 2012, and each of those organizational restructurings reads like a fold line pressed into the packaging.
-What the Ministry does today, across its various bureaus and divisions, is the content that only becomes visible once the box is unfolded. The exhibition takes "Unfold, See the Ministry of Culture" as its curatorial theme, using the packaging die-line as both visual language and spatial framework: visitors move through the space the way they'd unwrap a gift by hand, watching each fold line of the Ministry's history flatten out and become legible until they arrive at a clear picture of what the Ministry actually does.
-#### The Unfolding Diagram as Narrative Structure
-In packaging design, the unfolding diagram is the flat pattern a three-dimensional box produces when it's opened out. Its panels, the lid, the side flaps, the base, the corner tabs, are connected but distinct: folded, they form a complete box; flattened, they read like separate pages.
-That structural logic became the exhibition's narrative framework on two levels at once. Each fold line in the diagram lines up with a milestone in the Ministry's history (the founding of the Council for Cultural Affairs, the absorption of the Government Information Office's functions, the Ministry's inauguration), so crossing a fold line means completing a chapter of the story. Each panel, meanwhile, lines up with one of the Ministry's current bureaus or affiliated agencies, so visitors leave understanding both where the Ministry came from and what it oversees now, without needing two separate systems to explain it.
-#### Circulation: From Sealed Box to Unfolded Diagram
-The circulation follows the psychological experience of unwrapping a package, in three stages. The entrance is a monumental sealed packing box showing only the Ministry's emblem and minimal text, building curiosity before the unwrapping even starts.
-Past the entrance, the space opens into an actual unfolding-diagram floor and wall layout, so visitors feel like they're walking across a flattened box. Each fold line they cross carries them into the next historical period; each panel functions as its own zone introducing one division. Mapped against the Ministry's current structure: the lid panel belongs to the Department of Planning, which sets cultural policy direction, mid- and long-term plans, and cross-sector coordination, and sits at the "lid" as the overview entry point before the six functional panels.
-The six side-flap panels cover the Ministry's six operational bureaus: the Department of Cultural Resources (heritage, museums, community development, cultural facilities), the Department of Cultural Industries (creative-industry development, cross-strait economic exchange, technology), the Department of Motion Pictures and Popular Music Industries (film, radio, television, popular music policy), the Department of Humanities and Publications (literary development, publishing, government publications), the Department of Arts (visual arts, performing arts, everyday aesthetics), and the Department of Cultural Exchange (international and cross-strait cultural cooperation).
-The base panel closes with a summary timeline of the Ministry's history, looping back up to the Department of Planning at the lid, so the spatial logic runs from historical context to policy direction and back again. At the exit, echoing the sealed box at the entrance, an interactive installation invites visitors to "re-seal" the package by choosing the Ministry function that matters most to them and marking it on a digital box surface, leaving behind their own hope for what comes next.
-#### Visual and Graphic Design
-The visual identity system runs on fold lines, cut lines, and registration marks (the crosshair symbols used in print production), appearing consistently across the wayfinding system, panel borders, and timeline nodes.
-The color scheme builds on the Ministry's brand colors, with each panel assigned its own secondary accent by content theme, much like color blocks separate product lines in packaging design, so visitors know at a glance which division they're standing in.
-Each panel is kept to what can be read at a glance, so the diagram's clean visual character isn't buried under dense text; anything deeper is handed off to the interactive touch points.
-#### Exhibit and Interactive Design
-Floor and wall lighting shifts as visitors cross each fold line, reinforcing the sense of time advancing and structure unfolding. The departmental multimedia stations are the core of the interactive design, built to answer one specific need: letting the public see what each department actually does and where national cultural policy currently stands.
-Each of the six functional panels carries a touchscreen station with three layers of content. The first layer is an at-a-glance infographic of the department's core responsibilities. The second layer tracks what's happening now: current flagship policies and project status (the Department of Cultural Resources' heritage restoration work, the Department of Cultural Industries' support programs, the Department of Motion Pictures and Popular Music Industries' grants and incentives, and so on), supplied by each department and refreshed on a regular cycle so the content stays current. The third layer points forward, linking to the Ministry's official website or open-data resources so visitors who want to can keep following policy after they leave.
-All six stations share one interface language, layout, department color coding, and iconography, so visitors can identify what they're looking at even browsing out of order. The lid-panel station for the Department of Planning uses dynamic data visualization to show how the six departments' work coordinates, giving visitors an overview before they go deeper, and doubles as the navigational index for the six panels.
-At the exit, the interactive re-sealing wall collects visitors' hopes and feedback on cultural policy, closing the narrative loop back to the sealed box at the entrance while giving the Ministry a channel for public input.
-#### Structure, Materials, and Lighting
-The building's occupancy permit calculated the entire ground floor as a single area, which meant anything fixed to the structure would trigger a formal interior-alteration review. To leave that permit status untouched, the whole exhibition was designed as non-fixed construction: every plinth, panel, and volume stands free, anchored to neither the slab nor the beams and columns.
-The trade-off was that center of gravity, ballasting, and overturning risk had to be verified element by element to keep the gallery safe under crowd loading and seismic activity, and this ended up being the most time-consuming technical problem on the project.
-The primary structure uses clean white and light-gray volumes, in keeping with the durable, no-nonsense character expected of a government exhibition space, while select panels bring in corrugated-cardboard texture or matte finishes as a material echo of packaging, kept just short of tipping into a commercial look. The main circulation runs on even ambient lighting; fold lines and panel edges are traced with linear light strips to reinforce the diagram's structural lines; and key installations, like the emblem-reveal device, get focused spot lighting for a sense of ceremony.
-#### Closing
-The unfolding diagram isn't a visual gimmick so much as a narrative tool matched to what this exhibition needed to do: turning organizational history, the kind of material that usually ends up as a bullet list or an official document, into something visitors unwrap by hand and understand step by step. What visitors carry out isn't only the history from the Council for Cultural Affairs to the present Ministry, but a sense that what the Ministry actually does sits closer to daily life than they expected.
-
+### Outcome
+The exhibition met the international technical team’s specifications, passed venue and fire-department inspections, and opened successfully as the first stop of the Asia tour.
 
 ---
 
-## The Lawn Needed More Protection Than the Artwork Did
+## Beyond Just an Exhibition — You Are Part of the Art! (teamLab)
 
-*2013 Asian Art Biennial*
+**Source:** https://letsuan.com/project-beyond-just-an-exhibition  
+**Client:** teamLab  
+**Location:** National Taiwan Science Education Center, Taipei  
+**Year:** 2024  
+**Area:** 1,859.126 ㎡  
+**Category:** Exhibition Design, Installation Art, Event
 
+### Summary
+Full spatial planning, construction drawings, and general contracting for teamLab Future Park Taipei. A 1,859 m² floor was fitted with 178 projectors plus blending processors, sensors, and terminals in 14 days. The team remained on site through the full run and completed teardown and clearance within seven days of closing.
 
-Source: https://letsuan.com/project-asian-art-biennial
+### Key Engineering Challenges
+- Projectors, speakers, and sensors suspended from truss below the 8th-floor slab; load distribution calculated node by node
+- Raised access flooring up to 2.5 m high required structural reinforcement while allowing cable routing
+- Walls could not be drilled; partitions used structural tie-in methods
+- Full blackout required against curved glass walls and adjacent bright spaces
+- Power system reconfigured for the high simultaneous load
 
+### Operational Issues Resolved During Run
+Projected-image drift was traced (via displacement and gyroscopic sensors) to air-conditioning airflow vibrating the projectors; ductwork was re-wrapped and redirected without reducing visitor comfort. HDMI chip failures caused by bundled signal/power cables and static were resolved with proper separation and insulating mats. A slide landing angle was retrofitted after visitor reports.
 
-**CLIENT:** National Taiwan Museum of Fine Arts · **LOCATION:** Taichung, Taiwan · **YEAR:** 2013-2014 · **CATEGORY:** Construction
-
-
-#### Ten Light Boxes, One Lawn That Couldn't Be Damaged
-In 2013, the artist collective LuxuryLogico took part in the National Taiwan Museum of Fine Arts' "2013 Asian Art Biennial: Everyday Life" with a piece called I LOVE TAIWAN, using a large array of light-box installations to turn a well-worn Taiwanese catchphrase into a variable-scale outdoor artwork scattered across the museum's lawn. We handled the on-site construction and fabrication of the piece.
-#### The Lawn Was Part of the Work
-The site was the museum's expansive outdoor lawn, which functioned as both backdrop and part of the artwork's effect: light boxes standing scattered across the green, lighting up at night into a landscape of light. There was one non-negotiable requirement for the build: fix and wire all ten light boxes without damaging the lawn itself. That ruled out the heavy machinery normally used for outdoor construction, large-scale foundation excavation, and anything that would leave exposed soil or compaction marks behind, since the lawn's condition was tied directly to how the artwork looked and to the museum's ongoing maintenance obligations.
-#### Building Without a Trace
-For each light box's post and base, we skipped pouring concrete altogether and designed a custom base component to carry the load instead, using a low-disturbance fixing method that avoided large-scale digging. Power cabling between the ten light boxes ran along existing hard-paved surfaces wherever possible, or was buried shallow underground, cutting down how often equipment had to be dragged across the grass.
-We used manual labor and small tools instead of heavy machinery, working zone by zone in batches so the foot traffic and load on any one section of lawn stayed within what it could recover from. Large canvas sheets covered the main routes and work areas, so all foot traffic, tool storage, and material handling sat on canvas rather than directly on the grass.
-Once each installation was positioned, we checked the lawn zone by zone, backfilling and leveling any compression marks or loosened soil so the surface was flat again before opening day. With teardown in mind, the light-box structures and materials were chosen for roughly 90% recyclability, so most of the material could be reused or recycled once the show closed rather than becoming waste.
-#### Result
-The ten-light-box I LOVE TAIWAN installation went up across the museum's outdoor lawn without incident, hidden among the greenery by day and lighting up into a sea of text by night. The lawn came through the install exactly as it went in.
-
-
----
-
-## Beyond Just an Exhibition–You Are Part of the Art!
-
-*Step Into a Breathing Magical Universe of Light and Shadows*
-
-
-Source: https://letsuan.com/project-beyond-just-an-exhibition
-
-
-**CLIENT:** teamLab · **LOCATION:** Taipei, Taiwan · **YEAR:** 2024 · **AREA:** 1,785.126㎡ · **CATEGORY:** Exhibition Design, Installation Art, Event
-
-
-#### It Wasn't the Wall Moving, It Was the Wind
-Seventh floor, south wing special exhibition zone, National Taiwan Science Education Center. A quiet floor was turned, in fourteen days, into a breathing forest: creatures in the Bouncing Valley wake beside your footsteps, spheres of light echo a rolling soundtrack, fruit on the slide scatters with the sound of children's laughter. teamLab Future Park Taipei unfolded here, and out of sight of every visitor, an entire floor's slabs, trusses, power, and light had all been recalculated, over and over.
-This is a 1,785.126 square meter site, fitted out with 178 projectors, plus backend blending processors, wireless access points, and computer terminals, together weaving a sensing network that reacts to visitor behavior in real time. We handled the spatial planning, produced the construction drawings, and served as the general contractor for every on-site requirement, from day one of mobilization to teardown and clearance within seven days of closing, present through the entire run.
-#### Hanging a Playground From a Floor You Can't Drill Into
-This system demanded extreme precision. A large array of projectors had to be edge-blended with virtually no tolerance for misalignment, made harder by equipment that was already older and well used. Getting an international-standard blend out of aging hardware was, on its own, a delicate balancing act, and before any of that software could run, an entire invisible skeleton had to hold it up.
-Projectors, speakers, and sensors hang from a truss below the 8th-floor slab, and the combined weight of 178 devices was never something to estimate by eye. We used custom threaded rods and steel plates to calculate and distribute the load of every device across the truss structure. Once complete, every node held steady, with no sagging or loosening anywhere in the array.
-The raised access flooring underfoot carried its own challenge: in places it ran as high as 2.5 meters off the slab. At that height and span, we reinforced the structure with tightly spaced supports and additional steel, while routing the cabling through the void beneath, so load-bearing capacity and cable maintenance could coexist.
-The wall was another problem. Most of the venue's walls run six meters high, and this is a public venue where none of them could be drilled or fastened into. We used a structural tie-in method instead, lashing the partitions and support structures to the existing structure behind them. When the work was inspected, the wall surfaces were untouched, exactly as they'd been before.
-Curved floor-to-ceiling glass ran along two sides of the venue, and the exits, entrance, and gift shop all sat next to bright or open spaces. Interactive projection is extremely sensitive to ambient light, and any leak of outside light or reflection could throw off the projected image and confuse the sensing system.
-We worked through the two curved glass walls and every entrance, exit, and shop-adjacent route one at a time, blocking light while preserving both visitor flow and fire-exit requirements, until the entire floor held as a proper blackout space.
-With 178 projectors plus blending processors, access points, and terminals all running at once, power demand went far beyond what a typical exhibition space draws, so we reconfigured the electrical system from scratch. Part of the circuit runs on Hypalon cable, chosen for its resistance to abrasion, weather, and heat, and its flexibility, built to survive being routed again and again through the truss and under the raised floor as conditions shifted. Fourteen days, and all of it had to come together at once.
-#### The Wall Never Moved
-The real challenge only began after opening. The higher a system's blending precision, the less interference it can tolerate, and partway through the run, the projected image began drifting out of alignment. The initial suspicion on site fell on the wall itself. We didn't rush to a conclusion. We mounted displacement sensors on the wall, marked reference points, and had someone log readings on site every day. The data built up day by day, and the answer became clear: the wall hadn't moved.
-If it wasn't the wall, the problem had to be in the projectors themselves. We added gyroscopic sensors, transmitting readings daily to track the projectors' own micro-vibration over time, narrowing in zone by zone on where the drift kept showing up. The pieces came together: the problem clustered around the summer months, during the busiest visitor periods.
-The cause turned out to be almost absurdly simple. Staff, trying to keep visitors comfortable, had turned the air conditioning up to maximum. The vents had already been positioned away from the projector housings, but the stronger airflow was still enough to cause a barely perceptible vibration in the units, and that was enough to throw the blended image out of alignment.
-We didn't turn the airflow down, since that would have meant trading visitor comfort for image stability. The real fix was re-wrapping and tightening the ductwork, redirecting the airflow path away from the area around each projector. Airflow stayed exactly as it was, the projectors stopped shaking, and the drift problem was resolved. What maintenance remained through the rest of the run was a separate matter, wear and tear from visitors interacting with the installations, requiring periodic servicing.
-Another thread of the investigation was just as stubborn: HDMI chips began burning out in several zones. Tracing it back, we found the signal cable and power cable had all been bundled together on site, and some runs used extra-long HDMI cable to carry the signal directly over distance instead of going through a proper signal extender. The static that built up gradually damaged the chips inside the HDMI cabling.
-On top of that, the computer terminals had simply been set on wire shelving with no insulation at all, adding to the static buildup. We added insulating mats under the equipment, and this kind of chip failure dropped off noticeably from there.
-#### What the Drawings Didn't Show
-Not every problem shows up on a drawing. Partway through the run, visitors began reporting a jarring impact at the bottom of the Fruit Field slide, and one visitor even produced a medical note. We assessed the situation and traced the cause to the original slide's angle, not something we could look past. We worked with the client's technical team to propose a corrected slide angle, carried out the on-site retrofit on a closed day, and adjusted the angle to soften the landing. We never heard another report of the issue afterward.
-None of this troubleshooting happened behind closed doors. The suspicion about wall displacement was something our own team stayed on, reading the sensor data day after day, point by point, until it resolved. Every adjustment to floor load and power capacity had to be checked first against the venue's structural limits with the facilities team. Blocking light at the glass walls touched the fire-exit routes, which meant bringing in the fire department to sign off before we could seal anything for good.
-#### Seven Days to Zero
-When the exhibition closed, all 178 projectors, the blending processors, the access points, the computer terminals, the sensor units, the entire truss-suspension system, the raised-floor structural reinforcement, and every partition wall had to be fully dismantled and cleared within seven days, returning the site to exactly the condition it was handed over in, ready for the venue's next scheduled exhibition.
-
+### Outcome
+The exhibition operated successfully through its run. Full dismantling and site restoration were completed within the required seven-day window.
 
 ---
 
-## Cat Art Museum
+## Detention — Reality Experience
 
-*A Super-Healing World by Shu Yamamoto*
+**Source:** https://letsuan.com/project-detention-pier2  
+**Location:** Songshan Cultural and Creative Park, Taipei / The Pier-2 Art Center, Kaohsiung  
+**Year:** 2020–2021  
+**Area:** Songshan 1,210 ㎡ / Pier-2 1,190.2 ㎡  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
 
+### Summary
+Immersive adaptation of the acclaimed Taiwanese horror game Detention. A multi-layered physical experience was built across two venues, recreating a 1960s Taiwanese high school with period-accurate aging, scent, sound, and triggered mechanisms while fully satisfying fire-code and evacuation requirements.
 
-Source: https://letsuan.com/project-cat-art
+### Core Contradiction Solved
+The game demanded extremely low light, maze-like enclosure, and extensive aged timber. Fire code demanded high-visibility exit signage, wide accessible routes, and Class-1 fire-retardant materials. Four invisible-design techniques resolved the conflict: smart DMX-controlled evacuation lighting that stayed minimal until emergency, nano fire-retardant impregnation of all wood and fabric, staggered walls that preserved visual tightness while maintaining 1.2–1.5 m clear width, and ultra-low-power baseboard LED strips that did not break dark adaptation.
 
+### Experience Design
+Genuine 1960s campus objects were collected or custom-fabricated and professionally aged. Directional 3D sound, precision scent diffusion, pneumatic and infrared triggers, water-mist rain effects, and UV-reactive hidden messages were choreographed with NPC actor ambush points.
 
-**CLIENT:** Cat Art Museum · **LOCATION:** Pingtung, Taiwan · **YEAR:** 2024 · **CATEGORY:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
-
-
-#### Stepping Into a Painting
-Walk into "CATART," Japanese artist Shu Yamamoto's cat-themed exhibition in Pingtung, and the paintings on the wall stop staying flat. We handled the overall spatial planning, color strategy, and the work of turning two-dimensional paintings into three-dimensional installations and immersive scenes for the show.
-#### The Challenge
-The collection spans both Eastern and Western art traditions and jumps across visual styles, so the core design question was how to give each group of works its own fitting stage through spatial language, and then link those stages into one visitor journey with a clear rhythm and something memorable at every turn.
-#### Color as the Backbone
-Instead of the neutral white-box gallery convention, we split the space into large, saturated color zones, olive green, caramel yellow, lavender, magenta, indigo, arranged in sequence so visitors feel the emotional shift as they move through, without needing to read a single wall text. Arched signage panels at each corner fold the curatorial text directly into the architecture, so there's no separate placard breaking up the walls.
-#### Bringing the Paintings Off the Wall
-Select characters from the paintings were reproduced at true scale as large-format figures and sculptures, paired with dedicated lighting and background murals, letting them step out of their frames. For scenes tied to a specific setting, we extended the mural into real furniture, matching hand-painted backdrops and physical props precisely in perspective, light, and shadow so visitors could sit directly into the scene. This translation work was the most technically demanding part of the project, requiring tight coordination between mural painting, custom prop fabrication, and spatial scale.
-Each stylistically distinct series also got its own material and formal vocabulary, from geometric 3D display walls, to a backlit installation referencing cathedral stained glass, to a pop-art line-drawing wall and a fountain-based set piece, so every zone carries its own identity instead of repeating one display formula.
-The entire second floor was planned around a dimensional photo zone concept: every corner and leftover pocket of space was designed in advance as its own photo point, turning the circulation path into a continuous, uninterrupted experience rather than a plain passageway.
-#### Light and Flow
-Track-mounted spotlighting runs throughout, with angle and color temperature adjusted individually for each artwork and installation, keeping the overall space low-lit while the content pops off the walls. The route is segmented by wall corners, so visitors keep running into a sense of discovery as they move through.
-#### What Visitors Actually Do There
-Every zone has become a natural hotspot for visitor photos since opening, and social media reach has followed. The design set out to let visitors, once inside, do more than look at paintings: they get pulled gently into the process of becoming a cat themselves: walking into the paintings, exploring the giant stained-glass window of "Cat Light," visiting the cats-only "Cat Palace," and wandering through scenes exclusive to Pingtung: cats napping on Dawan Island, a cat fountain, a kitten's birth, a cat café, a starlit cat night. Each zone reinterprets the world through a cat's eyes, languid, playful, unbound, and no art-historical knowledge is needed to enjoy any of it.
-
+### Outcome
+A frightening dark exhibit and a code-compliant public venue were delivered as a single integrated system across two cities.
 
 ---
 
-## Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination
+## Detective Conan — Science Investigation Exhibition (Taipei & Kaohsiung)
 
-*Ørsted Pavilion, 2023 Changhua Flower Festival*
+**Source:** https://letsuan.com/project-detective-conan-taipei  
+**Client:** Shogakukan Inc.  
+**Location:** National Taiwan Science Education Center, Taipei / National Science and Technology Museum, Kaohsiung  
+**Year:** 2019–2020  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
 
+### Summary
+Licensed Detective Conan forensic-science exhibition adapted for two Taiwanese venues of different scales. The team handled circulation planning, set reconstruction matched to original anime/manga references, interactive forensic devices, crowd-flow engineering, and post-show teardown with component reuse between cities.
 
-Source: https://letsuan.com/project-changhua-flower
+### Approach
+Two staggered circulation tracks (hardcore forensics vs. lighter deduction) naturally split crowds. Sets for the crime scene, Mouri Detective Agency, and Poirot Cafe were cross-checked against source material for proportions, furniture, typography, and color. Queue and bottleneck points were pre-mapped; dual-route booklets, multi-station forensic devices, calculated corridor widths, and real-time wait displays managed peak summer traffic.
 
-
-**CLIENT:** Ørsted / Changhua County Government · **LOCATION:** Changhua, Taiwan · **YEAR:** 2023 · **CATEGORY:** Graphic Design, Construction, Garden Design
-
-
-#### A Leftover Corner, and What Grew There
-Ørsted took part in the 2023 Changhua International Flower Festival with a corporate pavilion built around the theme "Green Wind, Sustainable Changhua." The site assigned to it sat in an awkward, constrained corner of the park, where existing concrete steps and concrete piers were already fixed in place, boxing in both circulation and display layout before design work even started.
-#### Building on What Was Already There
-Rather than working around those structures, we redefined the concrete piers as the fixed base for the main feature wall. That single decision solved two problems together: it gave the outdoor display a ready-made concrete foundation against the structural risks of long-term wind, rain, and weather exposure, and it folded a constraint that had originally felt unwanted into the landscape narrative itself, so structural performance and spatial aesthetics answered to the same move.
-#### Color Against a Grey Season
-The planting plan had its own problem: the exhibition period landed in the off-season for winter blooms, so the range of available flower material was limited. We compared options and settled on shrub species in auspicious, festive colors instead of the usual seasonal flowers, and, given the low ambient brightness typical of overcast winter weather, deliberately went with a high-saturation, high-brightness palette.
-Against the grayscale backdrop of the season, the pavilion stood out sharply, and more or less by accident became the brightest spot in the park. The planted wall was paired with a backdrop depicting Ørsted's Greater Changhua offshore wind farm, giving the company's sustainability message a form visitors could see and feel directly.
-#### Result
-This constrained, awkward corner ended up as the most popular photo spot in the park during the Lunar New Year period. The structural limitations weren't worked around; they got built directly into the wall.
-
+### Outcome
+Consistent IP fidelity was maintained across two buildings. Reusable components from the Taipei run were refurbished for Kaohsiung, avoiding full recalculation.
 
 ---
 
-## Detective Conan
+## Experience the Yokai World — 100 Stories of Yokai Exhibition
 
-*Science Investigation Exhibition – Taipei & Kaohsiung*
+**Source:** https://letsuan.com/project-yokai-world  
+**Client:** Mizuki Production  
+**Location:** Huashan Creative Park, Taipei  
+**Year:** 2022–2023  
+**Area:** 958.68 ㎡  
+**Category:** Exhibition Design, Construction
 
+### Summary
+Centennial exhibition for Mizuki Shigeru, first stop outside Japan. A fully immersive dark-exhibit environment of 958.68 ㎡ was built under strict zero-penetration heritage rules and a compressed pandemic-era schedule, then passed Mizuki Production’s on-site inspection in a single round.
 
-Source: https://letsuan.com/project-detective-conan-taipei
+### Key Constraints
+- No drilling or structural contact with the heritage building
+- High-density FRP sculptural sets, multi-zone automated triggers, full audio-lighting-electrical integration
+- Absolute blackout required before any other system could function
+- Tens of thousands of daily trigger cycles demanded industrial-grade durability
 
+### Approach
+Self-supporting steel-and-timber frame with modular raised floor transferred all load independently. Sensors (PIR, microwave, pressure) were fully concealed. Wiring and pneumatics ran inside set maintenance corridors. 24-hour phased construction by trade kept headcount compliant with pandemic rules.
 
-**LOCATION:** National Taiwan Science Education Center, TaipeiNational Science and Technology Museum, Kaohsiung · **YEAR:** 2019–2020 · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
-
-
-#### Turning a Detective Story Into a Crowd-Flow Plan
-The exhibition adapts a mystery in which a novel starring Kogoro Mouri is about to be published, only for its author to turn up dead at home with "14:00 Kogoro Mouri" written in his appointment book, making Mouri the prime suspect overnight. Visitors don't watch this story from the outside; they step into the crime scene and use forensic science to clear Mouri's name and find the real killer. We were responsible for turning this Japanese licensed IP exhibition into a physical build that worked within Taiwanese venue conditions, covering circulation planning, set reconstruction, interactive-device integration, and post-show teardown, across two venues in Taipei and Kaohsiung.
-#### One Script, Two Buildings
-The exhibition runs two staggered circulation tracks, a hardcore forensics route following Conan and Amuro, and a lighter deduction route following Conan and Ran, which naturally splits the crowd inside the venue. A three-stage narrative circulation, crime scene investigation, clue exploration, science lab, uses wall transitions and pacing to make visitors feel the case advancing as they move through the space.
-Wall structures for the crime scene, the Mouri Detective Agency, and the Poirot Cafe were all cross-checked against footage and panels from the original anime and manga beforehand, matching scene proportions, furniture placement, signage typography, and color tone so the physical rooms held up against what visitors remembered from the screen.
-Because Taipei and Kaohsiung differ in scale, we redesigned the wall templates and scene-transition circulation for each venue while keeping the same level of research fidelity, so the same IP scenes could deliver a consistent experience in two different buildings.
-#### Queuing Had to Be Designed Too
-The biggest risk to an immersive exhibition usually isn't weak content, it's crowds locking up at a single point. We mapped the known bottlenecks ahead of time: the ticketing counter and QR-code redemption point at the entrance, the audio-guide rental counter, the first crime-scene set (a high-density photo spot right at entry), the forensic devices in the science lab zone, the manuscript gallery, and the gift shop near the exit. Any one of these could form a long queue during peak hours.
-The manuscript gallery bans photography and sees low interaction but long dwell times, so we placed it near the end of the route and widened its corridor to keep it from backing up the flow behind it. For the other hotspots, we used different weekday and weekend opening hours to spread crowds across time. The dual-route booklet system itself worked as a natural flow-splitter, with entrance guidance adjusted dynamically according to real-time crowd data on each route. The forensic-device zones used multi-station parallel setups, with two or more workstations each for fingerprint and handwriting analysis, cutting down dwell time at any single point.
-Corridor widths at key scene nodes were calculated directly, working backward from maximum simultaneous occupancy multiplied by average dwell time in seconds, with buffer zones placed behind major photo spots so photo-taking wouldn't back up the flow behind it. A physical partition and separate checkout line ran between the gift shop and the paid exhibition zone, so free-entry foot traffic and paying visitors were counted separately, reducing the impact of end-of-route congestion on overall evacuation.
-During summer peak season, electronic displays at the ticketing area showed real-time wait estimates, and additional staff enforced capacity control at each zone's entrance, so exhibition quality and safe evacuation held at the same time.
-#### Four Forensic Devices
-Voiceprint analysis, handwriting analysis, fingerprint analysis, and blood analysis each run as an independent interactive device, chained together into one complete line of evidence, so solving the mystery is a layered accumulation of deduction rather than a single guess.
-The detective's notebook works as the core puzzle tool rather than a souvenir, guiding visitors to record clues on site, cross-reference witness statements, and verify their conclusions in the science lab zone, turning wall-panel reading into active evidence-gathering. The mystery resolves on a single sheet of paper revealing the truth of the case, and the closing zone uses reinforced lighting and sound to make that reveal the emotional high point of the experience.
-#### After Closing
-Once the exhibition ended, we tore down the set walls, props, and electrical wiring and returned the site to venue management. After the Taipei teardown, some reusable components were packaged, transported, and refurbished for direct use at the Kaohsiung venue, so the same precisely calculated exhibition logic didn't need to be recalculated from zero for the second city.
-
+### Outcome
+Zero system failures across the run. Licensor inspection passed on the first attempt with no resubmissions.
 
 ---
 
-## Detention
+## Universe — 500 Pieces of LED Kinetic Light
 
-*Reality Experience*
+**Source:** https://letsuan.com/project-led-kinetic  
+**Client:** Grandview Mall Science Museum  
+**Location:** Canton (Guangzhou), China  
+**Year:** 2024  
+**Category:** Exhibition Design, Installation Art, Interactive Multimedia, Construction
 
+### Summary
+Design and technical planning for a large-scale kinetic lighting installation of 500 independently winched LED fixtures, controlled by a single software system. The work functions as both functional illumination and the primary visual centerpiece of the science museum space, synchronized with music and narration to convey astronomical concepts.
 
-Source: https://letsuan.com/project-detention-pier2
-
-
-**LOCATION:** Songshan Cultural and Creative Park, TaipeiThe Pier2 Art Center, Kaohsiung · **YEAR:** 2020–2021 · **AREA:** Songshan: 1,210 ㎡Pier2: 1,190.2 ㎡ · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
-
-
-#### Horror-Movie Logic Meets Fire-Code Logic
-The exhibition adapts Detention, the suspense-horror PC game Red Candle Games released in 2017 to widespread acclaim, marking the team's first attempt at turning a single-player game into a multi-layered immersive experience. A 991.737㎡ version of Cuihua High School was rebuilt from the ground up at Songshan Cultural and Creative Park, with a classroom zone, restroom zone, principal's office, music room, counseling room, infirmary, and the "Endless Corridor." Visitors take on the role of a reading-club member, stepping into the loop the game's protagonist, Fang Ray-shin, experiences.
-#### Sixty Years of Wear, Built From Scratch
-We collected genuine 1960s Taiwanese school-campus objects on the ground: a classic Tatung fan, a black rotary-dial telephone, an old dial radio, wooden double desks and chairs, a hand-crank alarm siren, propaganda-era slogan frames, and old-style censer altars. Anything we couldn't source was custom-fabricated based on historical research and finished with professional aging techniques, until material, color, and wear patterns were indistinguishable from real period artifacts.
-Even the chalk handwriting on the blackboard, the typeface of warning slogans like "Report Communist Spies," and the formatting of official documents were researched to match the era exactly.
-Walls were coated in cement paint using a slapping technique, a splatter technique, and high-pressure air-drying, layering up peeling walls, water stains, wall seepage, and grime. Wooden desks and chairs were aged with hand-carved scratches, scorching, and sandblasting. Metal window frames and filing cabinets got a dimensional rust-effect coating. Every aged surface was finished with a scratch-resistant clear protective coat, so the look wouldn't fade or chip during transport between venues or under heavy visitor contact.
-#### Fear That Doesn't Depend on What You Can See
-A 3D soundscape, delivered through multiple hidden directional speakers, placed radio static, distant footsteps, rain, a school bell, and a low-frequency heartbeat around the space to create psychological unease. A scent-engineering system used precision micro-vaporization diffusion to release damp aged wood, metallic blood, burning incense, and infirmary disinfectant into specific zones, triggering deep memory and fear directly.
-Pneumatic and infrared-triggered mechanisms responded to visitors' footsteps along the route, setting off flashing lights, doors and windows slamming shut, and falling objects. NPC actors worked from concealed hiding points and ambush routes, coordinated with lighting and sound so every scare landed; the timing of every mechanism and every ambush was choreographed and tested repeatedly, until the sound of a scream became the most authentic feedback in the whole experience.
-Classroom windows used real water-mist effects to simulate rain hitting glass, synced with cold air, scent, and sound. Select set walls and props were partially coated in fluorescent paint, switched under UV light to reveal hidden messages at specific story beats for a sudden jolt in the dark.
-#### A Bright Green Exit Sign, at War With the Whole Mood
-This was the real core challenge of the project. The game experience demanded extremely low light, a maze-like sense of enclosure, and large amounts of aged timber. Fire code demanded high-visibility exit signage, wide accessible circulation, and strictly fire-retardant materials. The two sets of requirements pulled in opposite directions, and we used four invisible-design techniques to hold onto the game's horror atmosphere in full while staying fully compliant.
-The exit signage came first: a bright green EXIT sign left on at full brightness would have wrecked the low-light mood entirely. We built a smart evacuation-lighting system that, under normal conditions, used DMX central control to bring exit signage down to the lowest illuminance the code allows, or used shrouded fixtures casting only a faint downward glow. The moment a sensor triggered or someone pressed the emergency button, every hidden fixture and every bright green exit sign in the venue switched to 100% emergency brightness within 0.1 seconds, and every electronic hidden door unlocked at once.
-Materials were the second conflict: the sheer volume of wood and vintage props failed Class-1 fire-retardancy requirements by default. Every wooden prop and finish material went through deep nano-fire-retardant impregnation, then got a Class-1 certified faux-flame-resistant composite coating on the surface, keeping the hand-aged texture intact while meeting code. Fabric props like curtains, student uniforms, and puppet-theater drapes went through colorless, odorless nano-fire-retardant impregnation and earned a national fire-retardant label.
-Circulation was the third conflict: the main route kept a clear width of 1.2 to 1.5m or more to meet public-venue evacuation standards, while the walls used staggered placement, hanging debris, and low-light dark corners to create the visual sense of a corridor barely wide enough for one person. Hidden inside the long corridor and the midpoint of major sets were disguised secret doors, blended into the aged wall surface, functioning as staff-only passages under normal conditions and swinging open directly for rapid evacuation in an emergency.
-Safety under low light was the fourth conflict: the entire zone kept a flat floor with no steps, any minor level changes were handled with gentle ramps, and baseboards carried an ultra-low-power LED strip at a wavelength that doesn't disrupt dark-adapted vision, preventing trips without breaking the darkness overhead.
-#### Result
-Four invisible-design solutions solved one contradiction: a frightening exhibition and a safe building didn't have to be a choice between the two.
-
+### Technical Planning
+Each fixture’s vertical position is controlled by its own winch; RGB LED modules handle color and brightness. All motion and lighting parameters are unified under specialized control software. Synchronization logic between winch motion paths and color transitions was developed so the array can form varied, layered spatial compositions rather than simple up-and-down movement, producing fine detail and dynamic tension.
 
 ---
 
-## From Dragon to Beast
+## Cat Art Museum — A Super-Healing World by Shu Yamamoto
 
-*Extinction and Radiation*
+**Source:** https://letsuan.com/project-cat-art  
+**Client:** Cat Art Museum  
+**Location:** Pingtung 1936 Tobacco Culture Base, Taiwan  
+**Year:** 2024  
+**Category:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
 
+### Summary
+Spatial design that translates Japanese artist Shu Yamamoto’s cat-themed paintings into three-dimensional immersive environments. Large saturated color zones, true-scale character figures, extended mural-and-furniture scenes, and continuous photo-point planning turned the visit into an active experience rather than passive viewing.
 
-Source: https://letsuan.com/project-dragon-to-beast
-
-
-**CLIENT:** National Museum of Natural Science · **LOCATION:** Taichung, Taiwan · **YEAR:** 2013 · **CATEGORY:** Exhibition Design, Construction
-
-
-#### 30 Meters of Fossil, 6 Meters of Wall
-From Dragon to Beast was the largest, highest-specification international exhibition the National Museum of Natural Science had staged to date. Over a hundred rare fossils crossed the sea from the Gansu Geological Museum and the Hezheng Paleozoological Museum, including the largest and most completely preserved sauropod dinosaur ever discovered in Asia, the 30-meter-long Yongjing Titanosaur, alongside more than 140 significant pieces from the museum's own collection, many displayed outside mainland China for the first time. We took on the full design-build contract: display structures, custom cases, lighting and visual integration, flooring, and outdoor weatherproofing, against international-grade preservation standards, a tight schedule, and a highly complex mix of cross-disciplinary trades.
-#### A Wall That Had to Stand on Its Own
-The Dragon Hall was the centerpiece of the exhibition, an independent display wall standing 6 meters tall that had to carry the enormous suspended load of the giant dinosaur fossil and its heavy steel armature entirely on its own, without leaning on or damaging the existing building structure. Precise structural center-of-gravity calculations and load-distribution analysis led us to a self-supporting freestanding structural method: the wall itself became a complete structural system, holding up a 30-meter dinosaur without ever leaning on a single beam or column of the museum.
-#### Sealed Once, No Second Chance
-Under international museum preservation standards, once the fossils were positioned, the display case glass had to be sealed in a single pass, and from that moment until the end of the exhibition it couldn't be opened again. That meant every light fixture's angle, every color temperature, the microclimate humidity control inside the case, and the flatness of every finish surface had to be exactly right before the seal went on. There was no adjusting afterward; every parameter had to be the final answer on the first attempt.
-#### Color as Geology
-More than seven dedicated color schemes and lighting systems, one per display case, used color and optics as a metaphor for different geological eras, clearly separating fossil groups and evolutionary stages so visitors could sense they were walking through a journey spanning hundreds of millions of years just from the shifts in light and tone, without reading a single wall panel in full.
-The floor got the same level of calculation: a high-strength raised timber flooring system with hidden LED light strips seamlessly embedded within it doubled as ambient exhibition lighting and safe wayfinding for large crowds, and the extended outdoor exhibition zone received additional high-standard moisture-proofing, UV resistance, and weatherproof coating to keep the wood flooring and display elements from warping or fading under prolonged sun and rain.
-#### A Collapse Near the Finish Line
-With installation nearly complete, an existing staircase, sealed off years earlier and unused for a long time, suddenly became structurally unstable, causing a localized floor collapse in the exhibition hall. We completed a safety-focused repair first, laying full carpet coverage over the area to keep the opening on schedule and circulation safe, and left the permanent structural repair for the museum to carry out through its standard procedures after the exhibition closed. The project was delivered with zero safety incidents and zero schedule delays, and the 30-meter dinosaur arrived in its hall exactly on time.
-
+### Approach
+Instead of a neutral white-box gallery, the space was divided into sequential saturated color zones (olive, caramel, lavender, magenta, indigo). Selected characters were reproduced at true scale with dedicated lighting and backdrops. Perspective-matched murals and physical props allowed visitors to sit inside the scenes. Every residual corner was pre-designed as a photo point.
 
 ---
 
-## Disaster Prevention Hall
+## La Fortuna Bordada — Taiwanese Embroidery in Madrid
 
-*921 Earthquake Museum of Taiwan*
+**Source:** https://letsuan.com/project-la-fortuna-bordada  
+**Client:** National Museum of History  
+**Location:** Museo Nacional de Artes Decorativas, Madrid, Spain  
+**Year:** 2017  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Logo Design
 
+### Summary
+Spatial planning and exhibition construction design for the first full presentation of Taiwanese embroidery within Spain’s national museum system. The entire project was delivered remotely: complete construction drawings were produced in Taiwan and executed by a local Spanish contractor. No Le Tsuan personnel were on site in Madrid.
 
-Source: https://letsuan.com/project-engineering-construction
+### Approach
+Dedicated case structures and garment-suspension systems were designed around the fragility and light sensitivity of embroidered artifacts. Custom acrylic stands were created for three-dimensional accessories. Key visuals translated auspicious embroidery motifs into a visual system readable by Western audiences. Drawings had to be fully self-explanatory because no on-site adjustment was possible.
 
-
-**LOCATION:** Taichung, Taiwan · **YEAR:** 2012 · **CATEGORY:** Construction
-
-
-At 1:47 in the morning on September 21, 1999, Taiwan was hit by its largest earthquake in a century. Central Taiwan lost buildings across a wide swath of the region, and the disaster exposed how unprepared both rescue agencies and the public were.
-Given Taiwan's geology and location, earthquakes, typhoons, and rockslides are bound to happen again, and preparation can't be treated as optional. The old saying holds: forewarned is forearmed, and prevention is worth more than any repair that comes after the fact. That is the founding purpose of the Disaster Prevention Hall: give visitors the knowledge to take refuge and respond, so a correct understanding of disaster prevention takes root before the next event arrives.
-#### Site Conditions
-The National Museum of Natural Science's 921 Earthquake Museum sits directly on the original site of the Chelungpu Fault. The building was designed and built around the ground-level offsets the fault's rupture had left behind, so its walls follow a curved line rather than a rectangular plan, and the floor slabs between zones differ in height by roughly 100 centimeters. Because that curvature and those level changes are part of the original architecture, construction couldn't correct them the way a normal building project would; every layout had to follow the existing curves and level shifts.
-It got more complicated from there: the original exhibition design had been drawn up from architectural plans alone, without anyone surveying the site in person, so the curved walls and floor offsets on paper diverged noticeably from what was actually there. Setting-out baselines couldn't be taken from the drawings at all. The crew ended up templating each zone by hand on site, matching the real curvature zone by zone, which became the project's central technical problem.
-#### Demolition and Measurement
-Work started with tearing out the existing exhibits, display walls, partitions, and fixtures. As each section came down, the crew measured and logged the actual wall curvature and floor-level offsets zone by zone, building the reference data that later setting-out and fit-out work would depend on. Nothing about the curved lines or level changes at the core of the building's original design was allowed to be altered in the process.
-#### Fit-Out
-With the drawings unreliable and the curvature and offsets impossible to correct or hide, the crew templated every zone directly against the real geometry. New display walls and circulation fixtures were built on free-standing frames that didn't attach to the existing curved structure; each zone got its own vertical and horizontal reference lines set out from actual conditions, which let the new work hold proper precision and safety margins even inside a curved, uneven shell.
-The roughly 100-centimeter floor offset was bridged with a combination of gentle ramps and stairs, keeping the level change itself visible as a piece of the building's original design rather than smoothing it away. The exhibition floor also carries a large run of angled laminated glass panels fixed with metal hardware, each pane individually adjusted to the real curvature of the walls and floor around it, which raised the bar on both construction precision and structural safety.
-Flooring throughout was replaced entirely with seamless, through-body vinyl imported from Sweden, colored consistently from surface to core, resistant to wear, with no seams for dirt to collect in, built to take heavy sustained foot traffic while meeting the slip-resistance and cleaning standards a public educational venue needs.
-#### Result
-Once construction wrapped, the building, built originally around the fault's own ground-level offsets, held a full set of interactive disaster-prevention exhibits without losing its curved walls or level changes, letting the architecture's own design vocabulary sit in the same space as its educational content. The idea behind disaster-prevention education, preparing before disaster strikes, is now something visitors absorb directly through the building and the exhibits inside it, learning to respond to earthquakes, typhoons, and other hazards.
-
+### Outcome
+All 74 groups of artifacts were installed with correct dimensions and presentation through a single complete set of construction documents.
 
 ---
 
-## Fullchamp
+## The Missing Scientist — Electromagnetic Horizon II
 
-*Brochure Design*
+**Source:** https://letsuan.com/project-missing-scientist  
+**Client:** National Museum of Natural Science  
+**Location:** Chelungpu Fault Preservation Park, Nantou, Taiwan  
+**Year:** 2023–Present  
+**Category:** Curatorial Project, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction
 
+### Summary
+Major update of a permanent electromagnetic-physics exhibition hall. Most existing structure and circulation were retained under budget constraints; selected interactive pieces were re-skinned and re-narrated, while new installations (including a motorized waveform theater) were added. Work proceeded under pandemic personnel limits and involved 12 specialist partners.
 
-Source: https://letsuan.com/project-fullchamp-brochure
-
-
-**CLIENT:** Fullchamp · **YEAR:** 2010 · **CATEGORY:** Graphic Design, Visual Design, Typography
-
-
-Fullchamp's brand identity and company brochure were designed by Le Tsuan's in-house team, carrying the company's identity through into a cohesive set of print collateral.
-
-
----
-
-## Wind, and Geothermal Energy Converge in a Single Pavilion
-
-*TCCGE Green Energy Vision Pavilion*
-
-
-Source: https://letsuan.com/project-green-energy
-
-
-**CLIENT:** TCCGE · **LOCATION:** Changhua, Taiwan · **YEAR:** 2022–Present · **CATEGORY:** Curatorial Project, Exhibition Design, Interior Design, Installation Art, Interactive Multimedia, Construction
-
-
-Taiwan Cement Green Energy Corporation was set up in 2018 as a wholly owned subsidiary of the Taiwan Cement Group, tasked with building out the group's renewable energy business across solar, wind, and geothermal investment and development. By the end of 2019 the company had finished a 12.1MW solar array and a 7.2MW wind farm at Changbin. Around that same time, we were brought in to turn an adjacent space at the site into a public-facing exhibition hall, the Green Energy Vision Hall, built around the guiding statement "The future is worth it" and structured as a journey from interior to rooftop, from the mechanical to the organic.
-#### Life and Cement, Grown Together
-At the center of the exhibition sits a welcoming installation measuring 235 to 270 centimeters, in which plant life grows directly out of a cement structure, giving physical form to the idea of life and cement bound up together. It works as more than an entrance piece: it anchors the whole hall conceptually, framing the question of how a cement manufacturer builds, from its existing industrial base, toward a lasting commitment to environment and life.
-The design proposal drew on Walter Benjamin's observation that in the face of life we hold no answers, only questions and the stories told while confronting them. That set the tone for the whole hall, which unfolds through narrative rather than lecturing visitors on energy facts, leaving room for people to explore at their own pace.
-#### Entrance Sequence
-The visitor route opens with a ceremonial corridor where rotating projected imagery asks who we are, where we come from, and where we are going. Taiwan Cement's shift from a traditional cement business toward renewable energy is framed here as an ongoing attempt to resolve problems between people, and between people and their environment. The sequence keeps its information density low on purpose, favoring atmosphere and emotional tone so visitors already feel connected to the subject before they reach the main exhibition space.
-#### Finding Energy in the Environment
-The core exhibition follows the logic of finding energy within the environment, unfolding zone by zone. The Energy Discovery Zone pairs a touch-interactive whiteboard with documentary footage tracing the Changbin plant's history from construction onward, using contextual graphics and text to build an understanding of how energy exists in nature.
-The Real-Time Power and Renewable Energy Learning Zone links to the live energy monitoring center on the second floor and adds touch-based graphic interpretation, introducing renewable types such as biomass, hydro, tidal, and wave power alongside how each is developing in different countries. In the Household Electricity and Power Transmission Zone, sensor-activated lighting compares how much power different appliances draw, while the space explains AC/DC conversion and smart grid distribution; Kinect gesture detection combined with AR turns the abstract idea of electricity into something visitors can physically try.
-The Solar, Wind, and Geothermal Zone lays out physical samples, cutaway models, and tablet-based games that explain how each of the three technologies generates power, with games supporting both solo play and two-player competition. A holographic interactive display cabinet lets visitors trigger three-dimensional animations at the press of a button, covering application scenarios for solar, wind, and geothermal energy and giving concrete shape to the idea of a green energy home.
-The route closes in the Future Outlook Zone, built around seed banking and the carbon cycle, circling back to the exhibition's central line: "The future is worth it."
-#### Onto the Roof
-The narrative doesn't stop indoors. We also developed the rooftop into an outdoor viewing platform, giving visitors a vantage point over Taiwan Cement's working renewable energy site along with a dedicated photo spot.
-#### Materials
-Interior scenic surfaces rely heavily on board-formed concrete paired with woodwork, held up by a hot-dip galvanized C-channel steel structure that frames the three-dimensional feature walls. Zone D adds mirror-finished stainless steel spheres and blackened iron lettering to reinforce the forward-looking visual language. Multimedia work spans commercial touchscreens, a 270-degree infrared-touch holographic projection system, Kinect sensing devices, and custom interactive software, tying hardware, software, and spatial design into one connected system rather than a row of separate exhibits.
-What started as a single installation of cement and living plants at the entrance carries through to a breathing green landscape on the roof, and across that arc, the Green Energy Vision Hall reads less as an exhibition and more as an enterprise renewing its dialogue with the environment it operates in.
-
+### Notable Installation
+The Wave Dance Theater suspends dozens of independently motorized spheres that trace transverse and longitudinal waves in real time, with integrated AR identification. Ceiling structure was reinforced and a new truss system installed to carry the load.
 
 ---
 
-## Enriching Hakka Settlements
+## R.O.C. Air Force Academy 90th Founding Anniversary — Corridor of Light
 
-*Camphor Industry Special Exhibition*
+**Source:** https://letsuan.com/project-air-force-academy  
+**Client:** R.O.C. Air Force Academy  
+**Location:** Kaohsiung, Taiwan  
+**Year:** 2019  
+**Area:** 396.6948 ㎡  
+**Category:** Curation, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction
 
-
-Source: https://letsuan.com/project-hakka-culture
-
-
-**LOCATION:** Miaoli, Taiwan · **YEAR:** 2012 · **CATEGORY:** Exhibition Design, Construction
-
-
-#### Thirty Days, One Camphor Memory Hall
-Thirty days. That's all the time there was between curatorial finalization and completion for the opening special exhibition of the Hakka Cultural Development Center's "Hidden Riches of the Hakka Villages" series, which took camphor as its subject. Taiwan once supplied 70 percent of the world's camphor; camphor, sugar, and tea were long called Taiwan's three treasures, and the Hakka villages of central and northern Taiwan formed the core production region.
-The exhibition recreated the full chain of the industry, from harvesting and processing through to global trade, and extended into the transformation of Sanyi woodcarving, the Duck Box Treasure craft, and mask-based cultural creativity. We led the overall construction, turning academic research into something visitors could walk into, smell, and touch, on that thirty-day clock.
-#### Why We Skipped Paint
-Painting can only happen on site, and beyond slowing the schedule and generating dust that's hard to control, the smell would have competed with the camphor scent the whole exhibition was built around, leaving visitors smelling paint instead of camphor wood. So for the special-exhibit zone's partition system, we moved all the carpentry into factory-based modular prefabrication and left only assembly for the site, using laminate finishes across every surface instead of the traditional on-site spray-aging process. That took the most time-consuming, hardest-to-control, and most easily ruined step off site entirely.
-The floor kept the museum's existing surface with a dark vinyl tile overlay defining the exhibition zone, and the accessible circulation width stayed at 120 centimeters or more throughout. At the entrance, a camphor sawdust scent basin paired with a low-speed, silent fan diffuser sends the camphor's volatile scent through the entire hall rather than just the doorway, so visitors are inside the smell before they've read a single panel.
-#### Handling What a Century Left Behind
-The artifact cases are museum-grade: solid-wood mortise-and-tenon bases with low-iron, low-reflection glass at over 91 percent transmittance, so glare doesn't get in the way of reading the objects. Passive humidity-control boxes inside manage the microclimate for organic artifacts like the Japanese-colonial-era ledgers and camphor crystals, materials that are damaged by both damp and dryness and need the humidity to settle on its own rather than being forced by outside control.
-The exhibition shows real camphor wood at different processing stages, from raw cut blocks to the crushed feedstock used just before distillation, alongside actual Sanyi camphor-wood carvings and other craft pieces, tracing the material's path from raw wood to industrial technique to craft. Photographic panels lay out the full camphor-shed and distillation process, and a 1:10 scale model of a camphor-shed work scene compresses the division of labor across logging, gathering, and distillation into something visitors can take in at a glance.
-#### Light, Held to a Standard
-The zone runs on 3000K warm-white lighting, with track lights and 15-degree narrow-beam spotlights on the artifacts, illuminance held between 50 and 150 lux, the fixed range for paper-artifact preservation with no margin either way.
-The camphor-tree feature zone is built from real camphor material sourced from a nearby camphor factory, showing the material from whole timber down to crushed feedstock, lit with wall-wash fixtures to create a dappled forest-light effect that makes the zone both a visual centerpiece and a working teaching aid on the processing chain. The timeline wall and the "Hakka Settlements and Camphor-Producing Regions" map use UV direct printing with an anti-glare film, and the interpretive panels use acid-free mounting with dimensional cut lettering, so nothing warps or discolors over a long run.
-The whole schedule was built around the center's opening date, with night-shift work and zone-by-zone enclosed construction; display cases were pre-assembled at the factory and only brought in for final installation, which kept dust from reaching the museum's other permanent exhibits. A full round of illuminance, temperature-and-humidity, and emergency-evacuation testing was completed before the doors opened. Thirty days, and a museum-grade exhibition holding artifact preservation, industrial storytelling, and immersive experience together, all under a deadline that had already been announced to the public.
-
+### Summary
+Curatorial and design-build exhibition presenting ninety years of Academy history. Circulation follows chronological narrative; a continuous timeline wall, wing-form ceiling lighting, high-transparency artifact cases, and central aircraft models and immersive scenes give the history physical presence.
 
 ---
 
-## Opening Day, and Not One of the 93 Fossils Could Be Late
+## See the Ministry of Culture — One History. Six Departments. Countless Everyday Moments.
 
-*Jehol Biota*
+**Source:** https://letsuan.com/project-art-gallery-culture  
+**Client:** Ministry of Culture  
+**Year:** 2019  
+**Category:** Curation, Exhibition Design, Graphic Design, Interactive Multimedia, Construction
 
-
-Source: https://letsuan.com/project-jehol-biota
-
-
-**CLIENT:** National Museum of Natural Science · **LOCATION:** Taichung, Taiwan · **YEAR:** 2019–2020 · **AREA:** 991.737㎡ · **CATEGORY:** Construction
-
-
-991.737 square meters, 93 fossil specimens, and an opening date that had already been announced to the public and international partners before the fit-out even started. That was the frame for the Jehol Biota Special Exhibition at the National Museum of Natural Science, which brought rare fossils from western Liaoning, China, dating back roughly 125 million years to the early Cretaceous, jointly curated with the NMNS Education Foundation and the Beijing Museum of Natural History. It marked the formal Taiwan debut of one of the twentieth century's most significant paleontological discoveries.
-The exhibition was organized into three zones, "Entering the Jehol Biota," "Encountering the Jehol Biota," and "Witnessing the Evidence of Flight," and the 93 specimens included Scansoriopteryx and Microraptor gui. Among the highlights: China's first mummified Psittacosaurus fossil with clearly preserved skin impressions, the exhibition's largest specimen in a Jinzhousaurus fossil, and a Microraptor gui specimen with its feather melanin granules fully intact, evidence that matters directly to the study of how dinosaurs evolved into birds.
-We served as the construction contractor, converting the museum's existing hall into a professional display environment that met international academic-collaboration standards and fossil-preservation requirements.
-#### What the Fit-Out Had to Carry
-These were precious fossil artifacts on international loan, so the venue had to meet the baseline temperature, humidity, seismic, and dust-control conditions required for museum-grade artifact display, keeping the loaned material safe and intact for the run of the show. The fit-out was also built zone by zone to match the exhibition's entering-encountering-witnessing narrative structure, so visitors would work through the science of the Jehol Biota step by step. Most specimens needed dedicated display cases and interpretive graphic systems, and every decision had to hold artifact-preservation standards and visual presentation in balance, since neither one could be allowed to compromise the other.
-#### Working Backward From a Fixed Date
-This was an international academic collaboration, and the opening date had already been made public, which left no room to slip. We worked backward from that fixed point: how long installation would take, how long the fossil specimens would need to arrive, how long positioning the display cases would take, compressing the entire fit-out into that window while still leaving enough buffer to guarantee the show would open on time regardless of what went wrong along the way. All 93 fossils, some of them hundreds of millions of years old, showed up exactly on schedule in their new home in Taiwan.
-
+### Summary
+Curatorial concept treating the Ministry’s history and current structure as a packaging die-line that visitors “unwrap.” The entire exhibition was executed as non-fixed, freestanding construction to avoid triggering interior-alteration review of the building’s occupancy permit. Six departmental multimedia stations provide layered policy information; an exit interactive collects public input.
 
 ---
 
-## Just Only
+## Highlights of NMH — Collection Exhibition
 
-*Environment Protection Brochure*
+**Source:** https://letsuan.com/project-nmh-highlights  
+**Client:** National Museum of History  
+**Location:** Taipei, Taiwan  
+**Year:** 2015  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
 
-
-Source: https://letsuan.com/project-just-only-environment
-
-
-**CLIENT:** Just Only Environment Protection · **YEAR:** 2010 · **CATEGORY:** Graphic Design, Visual Design, Typography, Brochure, Website
-
-
-Just Only Environment Protection's brochure, typography, and website were designed by Le Tsuan's in-house team as part of the brand's collateral.
-
+### Summary
+Complete renewal of the museum’s last indoor permanent exhibition before major renovation, delivered in six months inside a legally protected palace-style building that could not be structurally altered. National Treasure and Important Ancient Artifact conservation standards were met throughout. Engineered-stone casework, airtight humidity-controlled cases, and tiered LED/fiber-optic lighting were installed with minimal dust impact on adjacent operating galleries.
 
 ---
 
-## La Fortuna Bordada
+## Energy Taiwan 2022 — Ørsted Exhibition Stand
 
-Source: https://letsuan.com/project-la-fortuna-bordada
+**Source:** https://letsuan.com/project-orsted-energy  
+**Client:** Ørsted  
+**Location:** Taipei Nangang Exhibition Center  
+**Year:** 2022  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Event, Construction
 
-
-**LOCATION:** Madrid, Spain · **YEAR:** 2017 · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Logo Design
-
-
-#### Never Once on Site
-"La Fortuna Bordada: Taiwanese Embroidery from the Collection of the National Museum of History" opened at Spain's Museo Nacional de Artes Decorativas, the first time Taiwanese embroidery craft has been shown in full within Spain's national museum system, made possible after two years of work by Taiwan's Representative Office in Spain. The National Museum of History holds nearly a thousand pieces of Taiwanese clothing and everyday embroidery dating from the latter half of the nineteenth century onward, and this show selected 74 groups from that collection, presented under two themes: everyday dress and accessories, and officials' rank badges. We handled the spatial planning and exhibition construction design for the show. Across the entire project, though, we never had a single person on the ground in Madrid.
-#### Design in Taiwan, Delivered as Drawings
-With the artifacts needing international shipping and the venue on the other side of the world, we worked in a design-in-Taiwan, deliver-by-drawings model. The full spatial plan and every piece of display-fixture design was completed on the Taiwan side, then converted into a complete set of construction drawings and handed to a local Spanish contractor to build and install.
-There was no way to stand on site and supervise, and no way to go back the next day and fix something that didn't work, so the drawings had to spell out every detail on their own. They were the only language we had to communicate with the construction team in Spain.
-#### What the Display Stands Had to Account For
-Embroidered artifacts are fragile, sensitive to light damage, and can't hold up under long-term hanging tension, so we designed dedicated case structures and a garment-suspension system around those limits. Small three-dimensional accessories like purses, embroidered shoes, and children's caps each have their own shape, so we designed acrylic display stands individually for each category, custom-fitting the support structure to the contour of every piece. All of that had to be resolved completely at the design stage, since once the pieces reached Spain there was no room left to adjust anything.
-The key visuals and printed graphics translated the auspicious symbolism carried by the flowers, fruit, birds, and animals in the embroidery patterns into a visual storytelling system Western audiences could read intuitively, so cultural distance never got in the way of understanding.
-This is one of the few overseas museum projects we've delivered entirely through drawings. We were never on site, and yet through a single complete set of construction documents, all 74 groups of embroidered artifacts were hung and cased in Madrid with every dimension in place.
-
+### Summary
+Trade-show pavilion that converted a central structural column into a realistic offshore wind-turbine tower complete with climbing-ladder imagery of a maintenance engineer. Brand narrative, data walls, living green wall, and multiple LED surfaces were organized around this anchor. Sustainable and recyclable materials were used throughout.
 
 ---
 
-## Universe
+## Wind and Geothermal Energy — TCCGE Green Energy Vision Pavilion
 
-*500 Pieces of LED Kinetic Light*
+**Source:** https://letsuan.com/project-green-energy  
+**Client:** TCCGE  
+**Location:** Changhua, Taiwan  
+**Year:** 2022–Present  
+**Category:** Curatorial Project, Exhibition Design, Interior Design, Installation Art, Interactive Multimedia, Construction
 
-
-Source: https://letsuan.com/project-led-kinetic
-
-
-**CLIENT:** Grandview Mall Science Museum · **LOCATION:** Canton, China · **YEAR:** 2024 · **CATEGORY:** Exhibition Design, Installation Art, Interactive Multimedia, Construction
-
-
-500 kinetic LED fixtures, one winch system per fixture, and a single piece of control software tying it all together, that's the mechanical core of "Cosmos," the dynamic lighting installation we designed for the Science Museum at Guangzhou's Grandview Mall. It works double duty as functional illumination and as the space's visual focal point, and it's paired with music and narration to guide visitors toward an intuitive understanding of astronomical knowledge. We handled the design planning for the lighting installation on this project.
-#### Concept
-The installation takes the vastness of the cosmos as its central image. The 500-fixture array translates astronomical phenomena into a visualized language of light and shadow, and inside a setting woven from sound and light, visitors pick up on the movement of celestial bodies and the abstract scale of the universe without needing it explained to them.
-#### Technical Planning
-Each fixture's vertical position is controlled by its own winch, while LED RGB modules handle color and brightness, both folded into the same specialized control software. During design, we worked out the synchronization logic between the winches' motion paths and the lighting's color transitions, so the array could build varied, layered forms and light effects under precise choreography rather than just moving up and down, which is what gives the piece its combination of fine detail and dynamic tension.
-
+### Summary
+Public-facing exhibition hall for Taiwan Cement Green Energy telling the story of the company’s transition into renewable energy. Narrative moves from interior zones (energy discovery, real-time power, household electricity, solar/wind/geothermal, future outlook) onto a rooftop observation platform overlooking the working renewable-energy site. Central installation of plants growing from cement structure anchors the concept of life and industry together.
 
 ---
 
-## Seeing is Believing?
+## 8.5 ping: A Museum on Wheels — Mobile Museum Container
 
-*Masters of Marine Illusion: Mimicry & Camouflage*
+**Source:** https://letsuan.com/project-mobile-museum  
+**Client:** National Museum of History  
+**Year:** 2019  
+**Area:** 28.27 ㎡  
+**Category:** Exhibition Design, Graphic Design, Visual Design, Construction
 
-
-Source: https://letsuan.com/project-marine-illusion
-
-
-**CLIENT:** Taichung Aquarium · **LOCATION:** Taichung, Taiwan · **YEAR:** 2026 · **CATEGORY:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
-
-
-A mimic octopus can flatten itself, bend its arms, and change color enough to pass for a flounder, a lionfish, or a sea snake to a predator swimming past. That kind of trick is what "Masters of Marine Illusion: Mimicry & Camouflage" set out to explain, using 7 species including the mimic octopus and the pharaoh cuttlefish to walk visitors through the two most sophisticated survival strategies in marine biology: camouflage, which is the art of disappearing, and mimicry, which is the art of being mistaken for something else.
-The exhibition space at Taichung Aquarium measures just 68 square meters, so before exhibition design could even start, simply fitting the story in became the first problem to solve.
-#### Taking Space Back From the Walls
-Rather than compress the visitor path to make room for displays, we went after the walls instead. Every new wall structure uses an ultra-thin lining method, fitted to the millimeter against the existing shell. The thinner the wall, the more of the central floor could go to circulation and to the core motion-sensing interactive zone, which kept the flow moving during peak traffic and kept standing room open throughout. 68 square meters turned from a constraint into something closer to a calculated surplus.
-#### Steps Instead of a Flat Wall
-Once the walls receded, a new problem showed up: flush displays read as flat and a little monotonous. The aquarium tanks in the core camouflage zone were designed in a stepped, cascading arrangement instead, with staggered heights that work for both adult and child sightlines at once, letting crowds spread out naturally without directional signage forcing it. The tiered surfaces, horizontal and vertical, absorbed the signage, graphics, and indirect wall-wash lighting into one continuous reading experience across the tanks, the habitats, and the content. In the darkened space, the steps gave the light a rhythm, and visitors' feet tended to follow it without quite meaning to.
-#### Everything Hidden, Nothing Exposed
-This was the hardest engineering problem on the project, since a space this small has no room for a single visible line. Wiring for the life-support systems, lighting controls, and motion sensors is embedded entirely inside hidden channels within the thin wall assembly, leaving no cabling visible anywhere, so the deep-sea immersion never breaks over a stray wire.
-Screens, speakers, sensors, and projectors are all recessed and mounted flush, taking up no circulation space at all. Power for the tanks' life support, filtration, and temperature control runs on its own circuit, kept separate from the interactive and AV systems, with concealed heat dissipation and maintenance access built in from the start, since the display had to look right and still be serviceable years later, and neither could come at the other's expense.
-#### Building Green for an Exhibition About the Ocean
-Since the exhibition is fundamentally about marine conservation, we carried that principle into the construction itself. From the wall substrate and surface coatings to the trim and the full-space wall graphics, every material carries international environmental certification. The wall graphics run on eco-certified non-woven fabric, holding both the Green Building Material Label and international healthy-building-material certification aligned with LEED and WELL, made from recycled fiber, tested to Class 1 fire retardancy under CNS7614 A3125, and certified formaldehyde-free. Structure through to surface graphics, the build meets low-emission, low-off-gassing, recyclable standards throughout.
-#### Lighting for the Animals, Not Just the Visitors
-The space runs on low-ambient, high-contrast mood lighting, with deep-sea blue at #00183A as the base tone, accented only by lines of fluorescent cyan and warning yellow marking focal points. That choice wasn't only about atmosphere; it also kept bright light from stressing the living specimens in the tanks. Where a visitor's eyes land in that light was already decided before they walked in: not the wall, not the equipment behind it, but the animals caught mid-camouflage or mid-mimicry.
-
+### Summary
+Interior fit-out of a 40-foot shipping container converted into Taiwan’s permanent mobile museum vehicle. Eight interactive exhibit units plus full circulation were packed into 28.27 ㎡ while preserving the container’s ability to open, close, and travel. Vehicle structural and MEP upgrades preceded interior fabrication.
 
 ---
 
-## The Missing Scientist
+## From Dragon to Beast — Extinction and Radiation
 
-*Electromagnetic Horizon II*
+**Source:** https://letsuan.com/project-dragon-to-beast  
+**Client:** National Museum of Natural Science  
+**Location:** Taichung, Taiwan  
+**Year:** 2013  
+**Category:** Exhibition Design, Construction
 
-
-Source: https://letsuan.com/project-missing-scientist
-
-
-**CLIENT:** National Museum of Natural Science · **LOCATION:** Nantou, Taiwan · **YEAR:** 2023–Present · **CATEGORY:** Curatorial Project, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction
-
-
-#### Six Years Later, A New Story on the Same Floor
-On the second floor of the Geology Science Hall at the Chelungpu Fault Preservation Park sits a science exhibit that spent six years explaining to the public why a high-voltage transmission tower isn't something to fear. By 2023 it needed to become someone new. "Electromagnetic Horizon II: The Missing Scientist" reopened on the same site, though this was never a full teardown. Across eight zones, deciding what stays and what makes way for the new story was the question the project had to answer from day one.
-We took on this professional services procurement project as the party responsible for producing and updating the electromagnetic physics exhibits, exhibition design, and site construction, from mobilization through final acceptance, working through the constraints of the pandemic, to carry the entire floor from Version 1.0 into 2.0.
-#### Keeping What's Worth Keeping
-Unroll the demolition plan and only a small portion of the museum is actually circled for work. That wasn't purely a design decision. Public-sector tender budgets are finite, and a full teardown was never on the table, so we left most of the existing structure and circulation untouched. Every new design had to find its place within the existing skeleton, delivering the greatest possible transformation within a limited budget rather than clearing the floor and starting fresh.
-The Tesla coil and infinity mirror wall at the entrance make the clearest case. Neither piece was broken, and tearing them out would have been wasteful, so we preserved their function as interactive teaching tools and redesigned their outer shell and narrative framing. Visitors are drawn naturally into the story of "The Missing Scientist" the moment they walk in, without realizing they're standing in front of equipment that's been there for six years.
-The "Current War" light projection followed the same logic: the projection content stayed exactly as it was, and we simply repositioned Edison and Tesla, the two old rivals of scientific history, so the foundational knowledge between the old and new zones wouldn't break in half.
-The row of columns in the optics zone had originally been the design's biggest headache, blocking sightlines, blocking circulation, impossible to route around. We stopped trying to route around them and turned the columns into the exhibit itself instead, redesigning the circulation around them with infrared thermal imaging: as visitors walk behind a column, the screen ahead reveals the heat signature of their own body. What was once a constraint became the one moment in the zone that makes people stop.
-#### A Waveform You Can Finally Look Up and See
-The Wave Dance Theater is the most technically demanding installation in this project. Dozens of individually motorized spheres hang from the ceiling structure, each independently raised and lowered, synchronized by program to trace the curve of transverse and longitudinal waves across a continuously shifting field of height. For the first time, visitors can look up and actually see a waveform that used to live only in a physics textbook.
-Before any of that could happen, we had to answer the most basic question: could the ceiling even bear the load? We reinforced the existing ceiling structure and built a truss system to carry the suspended weight of dozens of motors and spheres, then completed positioning, wiring, and connection testing for every single point. The installation closed with an integrated AR feature that lets visitors identify the difference between transverse and longitudinal waves in real time. One installation ended up covering three disciplines at once: structural reinforcement, precision mechanical installation, and hardware-software integration.
-#### Old Equipment Learns New Tricks
-After six years, not everything in the exhibition hall was still holding up. Interactive multimedia pieces on radiation introduction, radiation shielding, and "Play with Electromagnetic Waves" had stopped functioning properly, and the measurement equipment in the household appliance testing zone had aged past reliable accuracy. Rather than replace the content outright, we updated the software and recalibrated each piece individually, so these installations, which had already guided countless families through their first encounter with electromagnetism, could keep telling the science correctly.
-The LEGO Junior Makers zone got an unplanned bonus. Beyond the STEAM building activities for children, we commissioned professional LEGO builders to construct brick sculptures above the exhibit area: the Chelungpu Fault Preservation Park's mascot, the museum's signature architecture, and Nikola Tesla himself. A simple hands-on space for families gained a second life as a piece of park identity and science history on display, and became, alongside the building activities, a new spot where people stop to take photos.
-#### The Work Nobody Sees
-Some of the work never makes it onto an exhibit list but still has to get done. The entire floor was refinished in epoxy, a job we deliberately scheduled apart from the main construction window to keep dust and fumes from interfering with other trades. All the graphic panels, large-format prints, and the entrance identity were also fully updated to match the new VIS visual system, so visitors feel the shift in tone and mystery the moment they step through the door.
-Running underneath the entire schedule was a challenge that never appeared on any drawing: the pandemic. Public health restrictions limited how freely we could deploy personnel and operate on site, forcing us to rework the sequencing of nearly every task. Demolition, layout, material review, partition and carpentry work, electrical routing, playback system integration testing, model installation, lighting calibration, carpet laying: all of it interlocking, all of it harder to coordinate under pandemic constraints. We still completed the full acceptance inspection within the scheduled timeframe.
-#### 12 Partners
-This project was never something one team could carry alone. Specialized demolition, licensed environmental waste removal, glazing, multimedia installation, large-format print application, and metal fabrication drew on 12 partner contractors, each holding their piece of the sequence. The museum's curatorial team confirmed the exhibition content and interactive software specifications, and the design team joined us for playback system positioning tests.
-
+### Summary
+Full design-build for a major international fossil exhibition, including a self-supporting 6-meter display wall carrying a 30-meter sauropod fossil and armature without loading the museum structure. Display cases were sealed in a single pass under international preservation standards; multiple color-and-lighting schemes differentiated geological eras.
 
 ---
 
-## 8.5 ping: A Museum on Wheels
+## Tokyo Ghost Hospital
 
-*Kool Beasts Are Coming – Mobile Museum Container Renovation*
+**Source:** https://letsuan.com/project-tokyo-ghost-hospital  
+**Client:** Toei Animation  
+**Location:** National Taiwan Science Education Center, Taipei  
+**Year:** 2015  
+**Area:** 1,200+ ㎡  
+**Category:** Exhibition Design, Construction
 
-
-Source: https://letsuan.com/project-mobile-museum
-
-
-**CLIENT:** National Museum of History · **YEAR:** 2019 · **CATEGORY:** Exhibition Design, Graphic Design, Visual Design, Construction
-
-
-#### 12.03 Meters, Eight Worlds
-The container's interior measures 12.03m long by 2.35m wide, a floor area of roughly 28.27 square meters, about 8.5 ping. Fitting eight full exhibit units and a complete circulation path into that footprint meant every dimension and layout decision had to be calculated with precision, with no inch to waste.
-Since 2001, the National Museum of History has operated Taiwan's first permanent mobile museum vehicle, converting a 40-foot shipping container into a traveling exhibition platform that carries the museum's collection to schools and communities across the island.
-In 2017, the museum re-fitted its existing container vehicle to launch "Kool Beasts Are Coming: A Fantastical Journey Between the Real and the Imagined," built around national treasures and important artifacts from the collection: a zoomorphic vessel stand, a green-glazed pottery ox, and a tri-color glazed horse, combined with imagery of the Four Guardian Beasts and the twelve zodiac animals. Digital interactivity and traditional cultural education were packed into a single space that can drive itself to you.
-#### The Vehicle Came First
-The existing container vehicle was towed first to a flatbed yard in Chiayi for structural repair, an MEP system upgrade, and an air-conditioning replacement. Only once the base vehicle was in working order was it transported to a woodworking facility in Houli for interior fabrication. Display props and sculptural elements were CNC-machined, with metalwork completed on site to finish the assembly and installation of the full display system. This wasn't interior-design logic so much as fixing a vehicle to a usable standard before exhibition design got to have an opinion.
-#### Designing Around a Door That Still Has to Close
-At the far end of the circulation, a curved partition wall defines a self-contained AR interactive game zone, its surface extending the mythical-beast illustration motif, with color-blocked zones guiding visitors through each unit in sequence. The container still had to function as a container: it needed to open, close, and be transported, so exhibition design couldn't follow the logic of a fixed venue.
-The placement of every display case, multimedia device, light fixture, and electrical system had to work within the swing range of the container doors and the space constraints of the vehicle in its packed-down state, delivering a complete display experience when open while making sure nothing collided or blocked the doors from closing when it was time to move.
-#### Eight Units, Eight Solutions
-All eight exhibit units were, in the end, solving the same problem: how to fit that many different kinds of interaction into 28.27 square meters without any of them crowding each other out.
-The cleverest solution belongs to "Kool Beasts Revealed: The Magic of 3D Printing," which displays 3D-printed replicas of the zoomorphic vessel stand, the tri-color horse, and the green-glazed ox alongside interpretive text, audio guides, and a video on the production process. Because the container space is so tight, the audio guide was designed around the image of a paper-cup phone: visitors have to lean in close to the device to hear it, which keeps sound from leaking out and disturbing others while playing on the nostalgic charm of early communication devices, turning a spatial constraint into an interactive idea.
-The other seven zones each found their own solution. "Animals, Real and Imagined" links tiger, turtle, and deer with mythical creatures like the qilin, phoenix, and dragon through different collection materials. A kiosk learning zone pairs picture quizzes with puzzles. "Puzzle Zoo" uses tangram pieces to build animal shapes. "Words in the Making" lets visitors experience how pictographs evolved into written characters. "Mirror, Mirror, Coolest Beast" uses AR to trigger animation. "I'm the Star" offers three motion-sensing games. "Rubbings to Take Home" lets visitors collect stamped rubbings of the Four Guardian Beasts. Whatever solved each unit's puzzle still had to fit inside a container that opens, closes, and drives away.
-
+### Summary
+On-site construction of Toei’s touring physical horror experience across two floors. Two parallel timelines (modern hospital and Taisho-era clinic) were built under zero-drilling rules. Freestanding walls had to remain stable against frightened visitors pushing and grabbing while never anchoring into the building. Full teardown and restoration followed the run.
 
 ---
 
-## Highlights of NMH
-
-*Collection Exhibition*
-
-
-Source: https://letsuan.com/project-nmh-highlights
-
-
-**CLIENT:** National Museum of History · **LOCATION:** Taipei, Taiwan · **YEAR:** 2015 · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
-
-
-#### Scope
-This was the last indoor permanent exhibition before the museum closed for renovation, succeeding the former Chinese Antiquities from the Collection. The scope covered Rooms 301 to 303 on the third floor: a complete renewal of the permanent gallery delivered in six months, inside a legally protected palace-style building where the structure could not be altered, with the display re-selected from a collection of more than sixty thousand objects, including 5 National Treasures and 42 Important Ancient Artifacts.
-#### Background
-The National Museum of History was the first national museum established in postwar Taiwan. The present building, demolished and rebuilt in 1971, is a palace-style structure of five floors above ground and one below, four given to galleries and offices, one to storage. After a third-floor display hall was added in 1967, the museum expanded repeatedly until it reached seven times its founding footprint, and space approached saturation.
-In 2007 the building itself was registered as a historic structure, and the structure could no longer be modified. Until the major upgrade began in 2018, this was the museum's only indoor permanent exhibition. The core of the collection came from objects moved to Taiwan from the Henan Museum in 1949 and works returned after the war: bronzes and jades excavated at Xinzheng, Anyang and Huixian, Luoyang tri-color pottery, and coins of successive dynasties.
-#### Challenge
-Within six months the entire existing permanent exhibition had to be deinstalled, inventoried, returned to storage, stripped out, rebuilt and reopened. The conditions were fixed: no structural alteration, no dust or formaldehyde emission that could affect the special exhibitions still operating on adjacent floors, and full compliance, throughout, with the conservation standards set by the Cultural Heritage Preservation Act for National Treasure-grade objects.
-The real variable turned out to be the building itself. Demolition peeled back decades of accumulated fit-out: joinery, partitions and finishes from different eras wrapped over one another, with undocumented services from successive periods running inside the walls. Once stripped to the structure, existing water damage came to light. No drawing set matched the building as found. Every wall taken down was another box opened blind, and both design and method had to be revised day by day as demolition advanced.
-#### Design Strategy
-The chronological survey was abandoned in favor of three lines of inquiry, life, wisdom and worldview, which drove both selection and zoning. Objects were separated by material and fragility, with National Treasures and Important Ancient Artifacts given their own zones; bronzes and jades sit in low-center-of-gravity cases, ceramics in grouped displays. Enclosed tall cases were replaced by suspended cases in low-reflection glass, and circulation was reset as a one-way loop, clearing the congestion in the two side wings and restoring visual depth to a palace-style building with small window openings. Lighting was fully replaced with adjustable LED track lighting and in-case fiber optics under a tiered control regime: below 150 lux for general objects, below 50 lux for textiles and works on paper, with UV filters throughout.
-#### Deinstallation and Inventory
-Following the collections department's established procedure, each object was catalogued, condition-checked, photographed and returned to storage, then repositioned according to the new narrative structure.
-#### Full Rebuild of the Display Cases
-The original enclosed timber cases were stripped out and their structure retained, with the interiors rebuilt as airtight humidity-controlled cases. Glazing was replaced with low-reflection laminated glass and all linings changed to acid-free materials.
-#### Engineered Stone Casework
-Case plinths, object mounts, shelf cladding and skirting details were all rebuilt in engineered stone. The material is non-porous, non-absorbent and mold-resistant, with no formaldehyde or acetic acid emission, meeting the low-emission requirement for conservation-grade casework. It is also dense and solid, with high compressive strength, preventing the mount deflection that heavy objects such as bronzes cause under long-term display. Sections were CNC-prefabricated off site and seam-ground on site, which allowed fast, low-dust assembly within the six-month program without disrupting the operating galleries on adjacent floors.
-#### Microclimate Control
-In accordance with collection care standards, each case was fitted with a dial hygrometer and an electronic temperature and humidity logger, served by a 24-hour continuous dehumidification system holding 50 percent plus or minus 5 percent relative humidity and 22 plus or minus 2 degrees Celsius. Air conditioning and in-case dehumidification were kept separate to prevent condensation at start-up and shutdown.
-#### Graphics and Interpretation
-Interpretation was rebuilt across three levels, zone theme, group text and individual label, in Chinese and English. Labels were changed to acid-free board with an acrylic laminate, and typography was standardized to a sans-serif face, improving both legibility and preservation.
-Delivered under the twin constraints of a protected historic building and an exceptionally short program, the project renewed a permanent exhibition to National Treasure-grade conservation standards and established the display and conservation prototype the museum used up to the major 2018-2024 renovation. The exhibition opened on 4 November 2014 and ran until the museum closed for renovation in 2018, the only indoor permanent exhibition of that period.
-
-
----
-
-## NMNS TELDAP
-
-*Digital Archives Exhibition*
-
-
-Source: https://letsuan.com/project-nmns-teldap
-
-
-**CLIENT:** National Museum of Natural Science · **LOCATION:** Taichung, Taiwan · **YEAR:** 2013 · **CATEGORY:** Construction
-
-
-#### A Counter That Had to Look Like It Grew There
-As part of the "Digital Archives and Digital Learning" national science and technology program's permanent service point inside the museum, we took on the spatial construction for the "Digital Archives @ Learning" service area, turning what had been a flat information counter into a physical service node with real presence, where visitors can browse the archive collections and explore digital learning resources right on site.
-The design uses a large curved volume as the main structure of the service area, with a curved timber base echoing the museum's existing arc-shaped circulation language, so the service counter reads as a visual focal point in the space as much as a functional object. A suspended, petal-shaped circular light fixture overhead reinforces the area's identity and its sense of technology.
-#### Built Without a Visible Joint
-The service area floor uses raised-flooring construction, accommodating reserved MEP routing and on-site leveling requirements. Walls and display cases are finished entirely in laminate, balancing wear resistance with overall visual consistency.
-The counter itself is built using a curved timber-jointing method, cut and laminated section by section on site from multiple layers of plywood to form a continuous curved structure, then wrapped entirely in engineered stone precisely cut and fitted to the curve for a seamless, monolithic finish. Sections of the front elevation use custom-fabricated S-curved laminated ultra-clear glass, or low-iron glass, with parts requiring a secondary curving process to take final shape. That step is difficult on its own, and it still had to fit precisely and seamlessly against the curved timber, which demanded rigorous control over both material selection and on-site sequencing.
-The service area also integrates several touch-screen inquiry stations and information panels, letting visitors search the archive database and take part in interactive digital-learning content.
-#### A Gap the Drawings Never Showed
-During construction, we found a roughly 120-centimeter discrepancy between the construction drawings and the actual dimensions on site. This wasn't a rounding error but a gap large enough to throw off the entire curved structure. After remeasuring the site, we corrected the relevant component dimensions and setting-out baselines in real time, so the curved structure and overall form still came together on schedule. The original keyboard-tray design also turned out to be limited in real use, so we reviewed and adjusted its structural configuration on the spot, improving the operating angle and storage efficiency for users.
-The service area is now fully integrated with the interactive inquiry stations, handling service, guidance, and hands-on experience in one continuous piece of furniture, with a circulation design that echoes the museum's existing spatial language.
-
-
----
-
-## Eternal Notre-Dame
-
-*International Debut of the VR Immersive Exhibition in Taiwan*
-
-
-Source: https://letsuan.com/project-notre-dame
-
-
-**CLIENT:** HTC · **LOCATION:** Kaohsiung, Taiwan · **YEAR:** 2023-2024 · **AREA:** 720.64㎡ · **CATEGORY:** Exhibition Design, Installation Art, Interactive Multimedia, Construction
-
-
-#### The Numbers Behind Twelve Days
-Working to the specifications provided by the French technical team, we were responsible for exhibition spatial planning, construction drawing production, and wall-graphic print finishing, while also serving as the construction contractor handling all on-site engineering requirements.
-12 days from site handover to completion. 720.64 square meters of total exhibition area. 500 meters of curved-facade printing. Working heights of 6 and 10 meters for walls and fixtures. Over 100 VR devices running simultaneously. A permitted light-level variance of just 5 percent.
-Those six numbers frame the real question behind Eternal Notre-Dame: how do you rebuild the weight of a 69-meter Gothic cathedral inside a public venue where you're not allowed to drill a single hole?
-#### What the Exhibition Is
-Following the 2019 fire at Notre-Dame de Paris, digital technology stepped in. Virtual reality now lets visitors walk into the cathedral and experience its splendor firsthand while restoration work continues and the public cannot visit in person. Eternal Notre-Dame is a freely explorable VR journey: visitors create their own avatar, encounter other explorers, and view up close the Portal of the Last Judgment, the altar, the vaults, the rose windows, and the great organ. The 45-minute immersive experience closes with an elevator ride up the 69-meter bell tower, immersing visitors in the resonance of the bells before they step outside to look out over the Paris that Victor Hugo once wrote about.
-The project was developed through a partnership between Orange, the Diocese of Paris, and the institution overseeing the cathedral's restoration, and produced by Excurio together with HTC VIVE and VIVE Arts. It premiered in Paris in January 2022 before making its Taiwan debut at the National Science and Technology Museum in Kaohsiung, the first stop of its Asia tour.
-This exhibition's nature is unusual: visitors physically walk through the space while wearing VR equipment, so every basic engineering condition on site, network, spatial positioning, flooring, walls, lighting, had to be brought into line with the specifications set by the international technical team, item by item. Any single miss could cause the VR system's positioning to fail and break the experience. Working to the French technical team's specifications, we converted the venue's existing space into an environment that met the operational requirements of the VR system.
-#### Walls That Could Not Be Drilled
-The exhibition hall walls reach 6 meters, and the original building structure's regulations prohibited drilling or fastening. On-site space was also limited, with no room reserved for a construction corridor, so work had to happen as close to the walls as possible. We adopted a non-destructive freestanding and support-based construction method to complete the light-blocking, partition, and equipment-support structures, finishing the spatial division without damaging the original building. When the venue carried out its on-site inspection afterward, the walls and structural surfaces showed no drilling or fastening marks at all. This method can be extended to other historic venues or public buildings where construction is otherwise prohibited.
-#### Ten Meters Up, With Fireproofing That Couldn't Be Touched
-Lighting fixtures had to go on steel structural beams 10 meters up, beams that could not be fastened into and whose surfaces were already finished with fireproof foam that could not be damaged. We suspended the fixtures rather than locking them down, a method that damaged neither the steel structure nor the fireproofing material, balancing high-altitude work safety with structural protection. Afterward we confirmed the steel structure and fireproof foam surfaces showed no damage.
-#### Five Hundred Meters, No Seams Allowed
-The venue's surrounding curved facade runs about 500 meters in total length and 600 centimeters in height. We produced and finished the print graphics based on image material supplied by the French side and carried out the on-site installation. Because of the curved geometry and the extreme format length, both the graphic production and the on-site installation had to be precisely aligned, especially where the ends met. After completion, we compared image continuity section by section and found no visible seams or misalignment at the joints.
-#### A Five Percent Margin That Decided Whether the VR System Worked at All
-VR headsets and spatial sensors are extremely sensitive to ambient light. Across the entire 720.64-square-meter venue, lighting had to remain even, with brightness variance held under 5 percent, or the VR headsets' spatial-recognition precision would suffer. We still had to provide enough light for visitors to store belongings and put on equipment before entering, so the work meant balancing dark-field conditions against circulation safety. After completion, we measured the entire venue with a light meter and confirmed the values stayed within range.
-#### A Fire Door That Couldn't Confuse the Sensors
-Partition walls required swing doors leading directly to the fire escape route, but if the door hardware produced reflections or signal interference, it would throw off the VR system's positioning. We found a solution compatible with both requirements, and after completion, we inspected the evacuation route together with the fire department and confirmed no signal interference from the door hardware during VR system testing.
-#### Over 100 Devices, No Tripped Breakers
-The exhibition used a wearable format combining a head-mounted display with a backpack computer, with a total device count exceeding 100 sets requiring simultaneous rotational charging. We calculated the charging power required for each set, summed it into a total electrical load, and planned circuits and outlet configuration accordingly. Observing electrical conditions across the venue during peak periods afterward, no breaker tripped.
-#### A Shared Elevator and a Typhoon, Still Twelve Days
-Material and equipment transport had to share an elevator with other exhibition spaces, with no independent scheduling possible. Construction also coincided with Typhoon Khanun, which prompted a work-and-school suspension in Kaohsiung and briefly slowed progress. We coordinated a transport schedule with the venue in advance, and after the typhoon passed, worked with the venue's facilities office on an accelerated schedule, completing all pre-opening preparation within the originally scheduled construction period. From site handover to completion, the entire project took just 12 days.
-#### Building for an Earthquake That Might Not Come
-Taiwan sits in a seismic zone, so the non-fixed freestanding structures, support frames, and suspended lighting fixtures within the venue had to account for stability and safety factors during an earthquake at both the design and construction stages. All relevant structural designs were evaluated and planned according to the seismic safety-factor requirements of building codes.
-#### Coordination
-During construction, we coordinated and confirmed matters on site with multiple parties: VR system positioning and environmental-condition specifications with the French technical team, Excurio and HTC VIVE; elevator scheduling, construction-corridor constraints, and structural-protection matters with the venue's facilities office; and the swing doors and evacuation-route configuration with the fire department. Every engineering item was completed in compliance with the requirements of all these regulatory bodies at once. The exhibition met the international technical team's specification requirements and opened successfully in Kaohsiung as the first stop of its Asia tour.
-
-
----
-
-## Offshore Wind O&M Building
-
-*Learning Center Decorating Modifications*
-
-
-Source: https://letsuan.com/project-offshore-wind
-
-
-**CLIENT:** Ørsted · **LOCATION:** Taichung, Taiwan · **YEAR:** 2022–Present · **CATEGORY:** Curatorial Project, Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
-
-
-#### Turning Idle Corridors Into a Learning Center
-By reclaiming corridors and underutilized areas within the existing building, we redefined circulation and function, transforming a low-utilization space that had previously served only as a staff dining area into a multi-purpose learning center that integrates training, brand storytelling, and visitor reception. The renovation used sustainable materials throughout, in keeping with the building's LEED certification.
-#### Existing Conditions
-The original space saw concentrated, single-purpose use limited to specific hours. Elsewhere in the building, corridors and scattered leftover areas remained poorly utilized, lacking circulation planning and serving neither corporate image nor training functions.
-#### Design Strategy
-Working within the existing structure, we consolidated the previously dispersed learning center resources into the main space through selective partitioning and functional reorganization. Corridors and residual areas were folded into the plan as well, transformed into a continuous brand-storytelling circulation path, with a branded photo wall installed at a key node so the space itself becomes a complete brand communication interface. Sustainable materials were used throughout the renovation, aligning the interior fit-out with the building's LEED certification and keeping the interior consistent with the building's broader sustainability positioning.
-#### Exhibition Narrative
-Along the circulation path, the narrative unfolds Ørsted's corporate history, its investment footprint in Taiwan's wind farms, Taiwan's world-class wind resource advantages, Ørsted's global presence, its environmental sustainability commitments, and the current status of wind power deployment, before arriving at a branded photo wall where visitors can capture a keepsake image bearing the company's identity.
-#### Functional Program
-The space accommodates corporate image display, policy communication, employee training, presentations, remote conferencing, client reception, and group visits, flexibly supporting both small internal courses and external guided tours.
-#### Outcomes
-The formerly idle space and corridors were reconfigured into a high-frequency, narratively rich multi-purpose venue. Overall spatial efficiency improved, along with both internal training capacity and external reception capability. The sustainable materials echo the building's LEED certification and carry Ørsted's core commitment to environmental sustainability through from function to material selection.
-
-
----
-
-## Energy Taiwan 2022
-
-*Ørsted Exhibition Stand*
-
-
-Source: https://letsuan.com/project-orsted-energy
-
-
-**CLIENT:** Ørsted · **LOCATION:** Taipei, Taiwan · **YEAR:** 2022 · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Visual Design, Event, Construction
-
-
-#### A Column in the Middle of the Floor
-An existing structural column stood right in the middle of the site, the kind of obstacle every curatorial team eventually runs into. Rather than avoiding or hiding it, we chose to reinterpret it as an offshore wind turbine tower, wrapping it in custom paint and formwork, turning a purely negative structural constraint into the most visually charged installation along the booth's central axis.
-A realistic climbing ladder was mounted along the column's side, and using on-site engineering photographs supplied by Ørsted, we composited the figure of a maintenance engineer in orange safety-harness gear climbing high up the ladder.
-From a distance it was realistic enough that visitors momentarily mistook it for an actual person performing maintenance work at height, bringing the most routine yet most demanding reality of offshore wind work directly into the exhibition space and turning operations and maintenance from an abstract term into a tangible figure suspended in mid-air.
-Beneath the surface of the sea, turbine foundations sit quietly rooted in the seabed; above the surface, the blades keep turning, converting the power of the wind into electricity for homes everywhere. Ørsted holds to the belief that it is building a world that runs entirely on green energy, and brought this ocean-born power into its booth at the 2022 Taiwan International Energy Week. We took on the design planning, construction, and overall visual direction for this project, letting a temporary exhibition space carry the weight of six years of the company's commitment to Taiwan.
-#### A Narrative Built Around the Tower
-With this tower as its anchor, the narrow booth site was given a clear narrative rhythm. At the entrance, a solid-timber beam frame formed a welcoming archway, with a large illuminated brand logo and a light box shaped like a turbine blade greeting visitors first, announcing the start of a journey about wind and sea.
-The circulation used an angled approach to draw visitors deeper into the space, passing a meeting and lounge area, a brand video wall, and a main data wall, before finally reaching the main stage, completing a reading path from the brand's founding vision to its industrial track record.
-At the far end of the booth stood a living green wall, quietly echoing the message of loving one's home: wind power comes from the sea and ultimately returns to this protected home on land.
-#### Five Stories Along the Wall
-During the design stage, we planned the content architecture alongside the space, translating Ørsted's corporate track record into five stories laid out along the circulation path. "Global Experience, Rooted in Taiwan" uses infographics to trace the company's journey from a global presence to the Taiwan Strait. "Taiwan's Only Locally Trained O&M Team" documents the journey from blueprint to launch of the world's first custom-built Taiwanese service operation vessel and O&M center, echoing the composited climbing figure on the tower column.
-"ReCoral Coral Restoration Feasibility Study" turns the perspective beneath the waves, telling how offshore wind foundations quietly become potential habitat for coral regeneration. The "Wind Power Supplier Support Fund" traces the training path of ninety-two technicians receiving advanced welding training and eighty personnel earning GWO international safety certification.
-"The Wind Rises in Changhua" closes the sequence with the faces and stories of ten local and newly relocated workers in Changhua, bringing this sweeping industrial narrative back down to real individual people.
-#### Color as Brand System
-The booth's visual system followed Ørsted's corporate identity guidelines throughout, building its spatial color plan around the brand's primary color, blue, and its supporting colors, purple and yellow. Blue, the base tone of ocean and sky, anchors the main wall, framing the earth-motif backdrop and brand tagline and letting the brand video play quietly across the LCD screen.
-Purple settles into the weight of the data wall, carrying figures like cumulative installed capacity, wind-farm distribution maps, and Asia-Pacific locations, turning the company's footprint into a readable landscape. Yellow animates the volume's facade, paired with the safety-harness imagery on the tower column, making the professionalism and courage of the job site tangible.
-Together the three colors form a condensed brand universe that visitors can read without a single word.
-#### Sustainability Built Into the Materials
-During construction, we made sure sustainability showed up in the booth's own material makeup, not just in what it talked about. Wall substrates used green-building-certified products such as plywood finished with wood-grain veneer and PVC print output, and all solid-timber components used recyclable, reusable material. The green wall at the far end was built from real living plants.
-The climbing-ladder structure on the tower's surface, along with the composite ratio and mounting height of the photographs supplied by Ørsted, were tested and adjusted repeatedly on site to get the most realistic visual effect and the most reasonable proportions when viewed from the main circulation path.
-#### The Screens Behind the Story
-The booth featured two large 500 by 300 centimeter LED video walls as its primary display interface, presenting the brand's key visuals and data-wall content respectively and reinforcing visual reach from a distance across the exhibition floor. A standing 150 by 50 by 400 centimeter LED unit served as a supplementary display at a circulation node.
-The space also included 43-inch, 55-inch, and 85-inch LCD displays and a 200 by 120 centimeter LED display wall, all carrying energy-efficiency certification. The large LED video walls also supported live presentation playback during the event, serving as the visual platform for on-site forums and topic discussions.
-From the paint finish and formwork on the column, to the compositing, output, and mounting of the photographs, to the on-site assembly of the timber structure and the placement of every exhibit prop, every step of construction was checked against the original design proposal for proportion, material, and lighting effect.
-#### Three Days
-During the exhibition, the booth hosted an opening ceremony, a biodiversity forum, an executive conversation called Hygge with Per, a recruitment-themed talk, and other events, while the large LED video walls played presentations on topics like the Ørsted Supplier Support Fund's GWO talent-development grants, drawing a steady stream of industry professionals, job seekers, and media. At the opening ceremony, guests were led by tour staff past the column that had been given new life, looking up at the strikingly realistic figure high above as they stepped into the story of Ørsted's deep commitment to Taiwan.
-
-
----
-
-## Securities Company Office
-
-*A Contemporary, High-End Workplace*
-
-
-Source: https://letsuan.com/project-securities-office
-
-
-**CLIENT:** Securities Company · **LOCATION:** New Taipei City, Taiwan · **SIZE:** 200 ㎡ · **CATEGORY:** Interior Design, Construction
-
-
-Located in the Banqiao District of New Taipei City, this new office was designed around a contemporary, high-end feel. Quality finishes carry that tone throughout, including a feature curved wall and custom-made handles at the entrance. The office now houses a dedicated waiting area, a kitchen and breakout area, a boardroom, executive offices, and an open-plan workstation area. Construction was handled by Le Tsuan's in-house team.
-
-
----
-
-## INCIDENT IN CONAN EXHIBIT
-
-*Congratulatory Exhibit “Conan Exhibit”*
-
-
-Source: https://letsuan.com/project-serialization-anniversary
-
-
-**LOCATION:** Taipei, Taiwan · **YEAR:** 2015-2016 · **CATEGORY:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
-
-
-#### The Two Who'd Never Shared a Panel, Standing Together at the Door
-Detective Conan has run in serialization in Japan since 1994, and this 20th-anniversary overseas touring exhibition landed in Taipei's Huashan 1914 Creative Park in late 2015, inside Warehouses C and D of the East Zone 2 building. We handled the spatial design and full design-build contract, bringing the original Japanese exhibition content over 100% intact and redesigning the visitor circulation and zone layout around the existing warehouse volume, so the original story and interactive puzzle mechanics could be recreated inside a Taiwanese venue.
-At the entrance stood a life-size "Conan x Shinichi" figure specially commissioned from creator Gosho Aoyama, breaking the 20-year rule that the two characters had never once appeared together in the same space; beside it, every manga cover published across those 20 years let visitors see the series' full timeline the moment they walked in.
-#### A Protected Warehouse, Zero Nails Allowed
-Warehouses C and D fall under cultural heritage protection. Under the site's usage regulations, exhibition construction was prohibited from drilling, fastening, or fixing anything to the existing structure; every wall, ceiling, and floor surface had to stay in its original state. We built the set walls and display fixtures on a fully zero-penetration, freestanding structural system, distributing the load through weighted bases and support frames so the building itself never took a single point of damage. The warehouse floor also had level changes we had to address during circulation planning, using gentle ramps and raised flooring to bridge the transitions and keep the route both smooth and accessible.
-#### Turning Flat Panels Into a Wall
-The exhibition drew heavily on panel artwork from the original manga, and our job was converting those flat comic-strip images into large-scale three-dimensional display pieces, character-introduction walls and story walls, paired with life-size figures to recreate the spatial feel of each scene. Production ran from scanning and cross-checking the original artwork, through image restoration and full-scale output, to cutting and assembling the wall substrates and finally calibrating every figure's position against its wall graphics. The sheer volume in each zone, combined with the demand for detail, made this the most time-consuming item on the schedule and the one that needed the most lead time.
-#### Four Rooms, Each Sealed Off in Its Own Way
-The Mouri Detective Agency was rebuilt as a mysterious crime scene, complete with bloodstains, signs of struggle, and interactive sound effects like a ringing telephone and television footage; photography was banned in this zone to protect the puzzle's secrecy.
-The Crime-Solving Techniques zone translated classic mystery-solving methods from the manga into hands-on scientific demonstrations visitors could operate themselves.
-The Gosho Aoyama manuscript gallery unveiled the author's treasured hand-drawn pages, including one drawn specifically for this anniversary, under gallery-grade lighting and casework.
-The Classic Scenes gallery used life-size figures to recreate four iconic moments: the tension of Conan's standoff with the Black Organization, the romance of Conan the LOVE STORY, the dazzling showdown between Kaito Kid and Conan, and the friendship of the Junior Detective League, each set apart as its own space for visitors to photograph.
-#### Built Between Two Kinds of Can't
-Every set piece, prop, and printed graphic had to match the official materials supplied by the Japanese licensor exactly, reviewed and cross-checked before any of it could be built, down to the exact size and color code of a single poster. On one side sat a protected heritage warehouse that couldn't be touched; on the other, licensed materials that couldn't be altered. Twenty years of Conan's world came together entirely within those two constraints.
-
-
----
-
-## Five Thousand Years of Silence
-
-*Story telling by the ancient people*
-
-
-Source: https://letsuan.com/project-story-telling
-
-
-**LOCATION:** Taichung, Taiwan · **YEAR:** 2020 · **CATEGORY:** Construction
-
-
-#### A Renovation Next Door, With Old Exhibits Still in the Room
-This update to the permanent exhibition in the Anthropology Hall at the National Museum of Natural Science, titled Story-Telling by the Ancient People, presents the latest research on the Paleolithic culture of Baxian Cave on the east coast, the Neolithic Beinan and Chilin cultures, and the Dapenkeng, Niumatou, Damaling, Yingpu, and Fanziyuan cultures of central Taiwan.
-The exhibition's centerpiece is the Anhe Mother and Child, one of Taiwan's most significant archaeological discoveries. Within the Dapenkeng cultural layer of the Anhe site, 48 sets of tightly arranged human remains form the earliest known burial ground yet discovered in central Taiwan. The M13 and M15 specimens were found with extensive grave goods, the male specimen M46 wore a shark-tooth-shaped jade ornament, and a mother and infant were buried together; all four are treated as representative examples of the burial ground.
-#### Demolition Next to Exhibits That Had to Stay
-This was a partial update within a single permanent exhibition zone. Some exhibits stayed in place while others were demolished and rebuilt, and the fixtures and cases left standing sat directly next to the ongoing demolition work, with vibration and dust as the most immediate threats. Construction had to hold these risks to an absolute minimum so the demolition and new work never damaged the exhibits and collection items left in place.
-The old exhibition structure also contained large amounts of FRP, plaster, and wire-mesh composite material. Once removed, that material could only be handled by a contractor holding a valid environmental disposal license, and because only a limited number of qualified contractors exist, scheduling the demolition and removal took considerably longer than simply arranging for someone to clear it out.
-#### Bronze, Then Colour, Then Time
-The entrance display platform was finished with a special antique-bronze lacquer, so visitors sense the bronze-and-jade timeframe of the show through material and colour before they read a single label. The exhibition is organized into thematic zones by archaeological era, with wall colour distinguishing the Beinan culture, the Dapenkeng culture, and the others, linked by a curved circulation path that moves visitors through each cultural unit in chronological order.
-#### Cases Built to the Object, Not the Other Way Around
-Display cases vary in form depending on what they hold: wood-framed glass shelving cases for ceramics and jade ornaments and other small pieces, circular glass-domed pedestals for single featured artifacts such as pottery vessels, and multi-tiered recessed wall cases for layering items of different sizes. An "Archaeological Conservation Lab," separated from the visitor path by a glass curtain wall, lets people watch actual preservation and restoration work in progress. Floor-projection interactive devices and a large-scale animated video wall, paired with physical displays of fossilized skeletal specimens, bring the atmosphere of an archaeological dig and prehistoric ecological scenes in front of the visitor.
-
+## Offshore Wind O&M Building — Learning Center
+
+**Source:** https://letsuan.com/project-offshore-wind  
+**Client:** Ørsted  
+**Location:** Taichung, Taiwan  
+**Year:** 2022–Present  
+**Category:** Curatorial Project, Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
+
+### Summary
+Conversion of underused corridors and staff areas inside Ørsted’s O&M building into a multi-purpose learning center and brand-storytelling route. Sustainable materials aligned with the building’s LEED certification. Functions include training, presentations, client reception, and guided visits.
 
 ---
 
 ## Green Energy Education Observation Platform
 
-*Changhua Coastal Industrial Park*
+**Source:** https://letsuan.com/project-tccge-deck  
+**Client:** TCCGE  
+**Location:** Changhua Coastal Industrial Park  
+**Year:** 2022–Present  
+**Category:** Exhibition Design, Interior Design, Visual Design, Construction
 
-
-Source: https://letsuan.com/project-tccge-deck
-
-
-**CLIENT:** TCCGE · **LOCATION:** Changhua, Taiwan · **YEAR:** 2022–Present · **CATEGORY:** Exhibition Design, Interior Design, Visual Design, Construction
-
-
-#### Salt, Chemical Gas, and UV, All Acting on the Same Materials
-This rooftop observation platform sits in the Changhua coastal industrial park, overlooking a solar farm. Through hands-on wind- and solar-power education exhibits, visitors move from looking to understanding: interactive simulation devices let people directly experience how wind and light become electricity, while a fully operational solar farm unfolds in front of them. Renewable energy becomes a scene you can see and touch rather than an abstract idea.
-The site sits right against the coastline and close to a chemical industrial zone, so the environmental conditions are far harsher than a typical project. Salt damage, corrosive chemical gases, and intense UV exposure all act on the same materials at once, and we had to confront that from the design stage; the landscape planting, the soil formula, and the materials for the education exhibits were all re-evaluated and tested before we used them here.
-#### Waterproofing Comes Before Planting, Not After
-Rooftop landscaping has an order that can't be reversed. We started with waterproofing the roof deck against long-term standing water or irrigation, then planned the drainage system so excess water could drain away rather than pool on the roof, then installed automatic irrigation to meet the plants' water needs under coastal wind and heat. Only after all of that did plant selection and the green space itself come into the picture.
-#### Plants That Can Survive More Than One Season
-Salt mist eats through the root systems of ordinary plants, so we chose salt-tolerant, wind-resistant native coastal species already adapted to poor soil. The soil itself can't withstand long-term salt-alkali buildup either, so the growing medium was reinforced specifically for drainage and salt-alkali resistance, letting plants survive over years rather than a single season.
-#### 304 Stainless Steel Is Only Half the Answer
-The housing and structural elements of the interactive teaching devices are built from 304 stainless steel with a fluorocarbon-coated finish, but material specification alone doesn't guarantee weather resistance. What decides success or failure is execution: any scratch or damage left behind by fastening tools has to be fully re-coated, with no gap left exposed, because salt-induced corrosion finds its way in most easily through exactly these kinds of small surface flaws. Every fastening point and every recoat is what actually determines whether this platform holds up against the coastal climate.
-
+### Summary
+Rooftop observation and education platform overlooking a solar farm in a high-salt, chemically exposed coastal industrial zone. Waterproofing, drainage, and irrigation were completed before planting. Salt-tolerant native species and reinforced growing medium were specified. Interactive teaching devices used 304 stainless steel with continuous fluorocarbon coating, including on-site touch-up of every fastening point.
 
 ---
 
-## Traveling Temple
+## Jehol Biota
 
-*Tibetan Thangka Art Exhibition*
+**Source:** https://letsuan.com/project-jehol-biota  
+**Client:** National Museum of Natural Science  
+**Location:** Taichung, Taiwan  
+**Year:** 2019–2020  
+**Area:** 991.737 ㎡  
+**Category:** Construction
 
-
-Source: https://letsuan.com/project-tibetan-thangka
-
-
-**LOCATION:** Taipei, Taiwan · **YEAR:** 2015 · **CATEGORY:** Exhibition Design, Interior Design, Graphic Design, Logo Design, Construction
-
-
-#### A Scroll That Rolls Up, and a Corridor Nobody Could Close Off
-A thangka, in Tibetan, means a scroll painting mounted in silk that can be rolled up for storage; its origins run deep and it carries the distinctive brightness and religious content of Tibetan Buddhist culture.
-We handled the on-site construction of "Traveling Temple: Tibetan Thangka Art Exhibition" at its National Chiang Kai-shek Memorial Hall venue, completing the display and image-system integration of thangka artifacts from the Rebgong region of Qinghai, China, inside the Cai Yu Gallery. The name "Traveling Temple" comes from Rebgong thangka culture itself, moving with faith and spreading across regions, and our task was to rebuild a spiritual environment inside the gallery where visitors could pause and feel something close to a place of worship.
-#### An Open Corridor, Not a Room With a Door
-This was the most basic constraint of the whole project: the Cai Yu Gallery is an open-plan circulation space rather than a standalone exhibition room, so foot traffic can reach the display pieces directly. Thangkas are painted on silk or cloth, fragile and easily affected by touch and environmental conditions, so we encased every single piece in high-transparency acrylic, achieving physical protection without compromising the viewing experience or the colour fidelity of the paintings.
-#### Several Metres of Silk, Held Up by Nothing but Tension
-Several pieces were large thangka banners spanning several metres wide. We used a suspended display method, planning hanging points and tension control along an overhead track system so the silk and cloth artifacts hung flat without being pulled out of shape by their own weight.
-Floor area was limited, so the physical thangka pieces, circulation guidance, and a video-projection zone all had to fit inside the existing footprint; we calculated the spacing between pieces, the visitor route, and crowd pacing to avoid crowding while keeping the distance religious art needs. Large banners, framed vertical thangkas, and documentary photography of Rebgong's artists and residents, three different display formats, were also zoned along the route to balance visual rhythm against protection distance.
-#### Walls That Could Come Down Afterward
-To meet the venue's spatial conditions and the artifacts' hanging requirements, we built dedicated, demountable display partition walls inside the existing site to carry the suspension track, lighting, and fixtures, fully removable and restorable once the show closed, with no impact on the original building. As a short-run special exhibition inside the Cai Yu Gallery, construction worked within the venue's existing architectural conditions, circulation regulations, and exhibition timeline, completing the full display and equipment installation on a limited schedule and in a limited space.
-
+### Summary
+Fit-out for an international fossil exhibition of 93 specimens from the Jehol Biota, delivered against a publicly announced opening date. Museum-grade temperature, humidity, seismic, and dust-control conditions were met for internationally loaned material.
 
 ---
 
-## Two eras, one immersive scare in the dark
+## Amazing Homeland — Cheng-Hsiung Chen’s Collection of Taiwanese Indigenous Artifacts
 
-*Tokyo Ghost Hospital*
+**Source:** https://letsuan.com/project-amazing-homeland  
+**Client:** National Museum of History  
+**Location:** Taipei, Taiwan  
+**Year:** 2017  
+**Category:** Exhibition Design, Graphic Design, Visual Design, Construction
 
-
-Source: https://letsuan.com/project-tokyo-ghost-hospital
-
-
-**LOCATION:** Taipei, Taiwan · **YEAR:** 2015 · **AREA:** 1,200+㎡ · **CATEGORY:** Exhibition Design, Construction
-
-
-#### 1,200+ Square Metres, Two Floors, Zero Drilling
-We handled the on-site construction of Tokyo Ghost Hospital's Taiwan run, bringing TOEI Company's physical horror experience, refined over more than a decade of touring across Japan, to life across two floors of the west-wing special exhibition rooms at the National Taiwan Science Education Center, and completing the full teardown and restoration once the run ended. The exhibition spans the museum's 7th and 8th floors and covers more than 1,200 square metres.
-#### Two Timelines Under One Roof
-The exhibition is built around two parallel timelines. The Modern Hospital recreates a present-day clinic, records room, ER, and operating theatre; the Past Hospital pulls visitors back to a Taisho-era clinic in Shinjuku, rebuilding a traditional doji entryway, tatami rooms, and garden. A storyline threads the two halls together, leading visitors to uncover the secret of a missing girl named SAKURA. The circulation design had to satisfy the pacing of that narrative while managing large crowds entering in controlled batches across the two floors.
-#### Two Eras of Materials on One Job Site
-Working from the Japanese team's set designs and Taisho-era architectural research, and using props and set pieces manufactured by the original Japanese studio, we built the modern clinical scenes and the traditional Japanese-style scenes inside the existing exhibition halls. That meant handling materials and construction methods spanning two eras and two completely different styles at the same time, on the same site.
-TOEI's standards for scene fidelity were exacting: the texture of the building materials, the colour of the aging treatment, the hardware fittings, down to the smallest set dressing, all had to faithfully capture the period feel of both Taisho-era Japanese architecture and a modern medical facility, and every detail had to pass the Japanese team's set-authenticity review before it counted as finished.
-#### More Than Ten Actors, Timed to the Millisecond
-Multiple sets of micro-switches were installed throughout the space, linking wind, scent, lighting, and sound effects, each precisely triggered along the visitor route to build an immersive horror experience in the dark. Each zone also had its own hidden passages and mechanisms, choreographed with the positioning, ambush points, and entrance timing of a cast of more than 10 professional actors, delivering multi-point, multi-character scare pacing within a limited footprint, while balancing performer safety against narrative tension.
-#### Walls That Couldn't Touch the Building, Yet Had to Take the Hit
-This was the hardest constraint in the entire project. Museum regulations prohibited any partition or set wall from being drilled or fastened into the building's original walls, floor, or ceiling; every structure had to be built purely from components supporting each other in a freestanding system, with zero contact on the existing building.
-But in the dark, frightened visitors instinctively push against walls and grab at props, which is a completely normal reaction. So these walls had to do two contradictory things at once: rely on the building for nothing, while still holding up against visitors pushing and grabbing at them in a moment of fright.
-We reinforced the structural load capacity of every non-fixed wall and every touchable prop, meeting visitor safety, scene realism, and long-term durability across the full run, all without ever anchoring into the original building.
-#### Built, Run, Then Erased
-With the exhibition spanning two special-exhibit rooms across the 7th and 8th floors, engineering plans also had to work around the existing building structure, fire-safety circulation, and visitor-flow control points, so the immersive experience and the venue's safety code could both hold true at once. Construction also had to accommodate the museum's operating schedule and its existing electrical and fire-safety systems, completing the full build within a fixed timeframe. After the run ended, from June 27 to September 13, 2015, we carried out a full teardown of the exhibition space and restored the special-exhibit rooms to their original condition for the museum's future use.
-
+### Summary
+Low-illuminance museum exhibition built around the objects. Suspended garment gallery, monumental woven terminus feature, dark immersive basketry-and-pottery corridor, and a final sanctuary of full-height vitrines. Lighting strategy: low ambient + high-precision accent.
 
 ---
 
-## The Hunt of the Celestial Court
+## Points of Light in Grayscale — Ørsted Pavilion, 2023 Changhua Flower Festival
 
-*Wang Ye Worship in Donggang*
+**Source:** https://letsuan.com/project-changhua-flower  
+**Client:** Ørsted / Changhua County Government  
+**Location:** Changhua, Taiwan  
+**Year:** 2023  
+**Category:** Graphic Design, Construction, Garden Design
 
-
-Source: https://letsuan.com/project-wang-ye-donggang
-
-
-**CLIENT:** National Museum of Natural Science · **LOCATION:** Taichung, Taiwan · **YEAR:** 2012 · **CATEGORY:** Exhibition Design, Construction
-
-
-#### Seven Days, One Deity's Court
-Wang Ye worship traces back a thousand years to the Song Dynasty, centred on the ritual of daitian xunshou, patrolling on heaven's behalf to drive out plague and disease. The place where the deity is enshrined is called the daitianfu, or Celestial Court, and the patrol itself is a periodic ceremonial rite.
-Donggang, a port town in Pingtung, is known for its centuries-old Wang Ye Boat Burning Festival, held once every three years; Donglong Temple, founded in 1706, saw the festival inscribed as a National Important Intangible Cultural Heritage in 2010.
-The centrepiece of this exhibition was a small ceremonial boat built by Donglong Temple in 1994, together with a reconstructed Celestial Court, both supplied for display by Donglong Temple in Donggang, Pingtung. We had seven days from mobilization to final acceptance.
-#### Fire Code First, Then the Temple
-We handled the timber construction for the Celestial Court's main structure, light partitions, and ceiling detailing, along with fabricating and installing the display platforms and base structures for the ceremonial boat and other artifacts. The board material used was CNS Class-1 fire-retardant plywood, meeting the museum's fire code; this wasn't ordinary exhibition carpentry, it was built to a specification that had to clear a national museum's review.
-The boat's display platform has steel reinforcement built in for load capacity and horizontal stability. The lighting uses LED track fixtures with a colour rendering index above 90, with each fixture's beam angle adjusted individually to suit the artifact it lit. The power supply runs on independent circuits, meeting the required safety load factor and residual-current protection.
-#### Three Phases in Seven Days
-Work on site followed the approved construction drawings and setting-out, using zone-based construction to reduce dust impact, with a daily construction log and photo record, incoming material inspected piece by piece. The schedule was coordinated with both the museum and Donglong Temple through three controlled phases: mobilization, installation, and acceptance, all conducted under full site-safety compliance, with fire extinguishing equipment on hand and the museum's night-construction rules fully observed. On March 16, 2012, the Celestial Court opened exactly on schedule.
-
+### Summary
+Corporate pavilion on an awkward leftover corner of the flower-festival site. Existing concrete piers were adopted as the foundation for the main feature wall. High-saturation winter planting made the pavilion the brightest point in the park and a popular photo destination.
 
 ---
 
 ## The Westernmost Point of Taiwan
 
-*23°06'02.7"N 120°02'09.0"E*
+**Source:** https://letsuan.com/project-westernmost-point  
+**Client:** Tourism Bureau of Tainan City Government  
+**Location:** Dintouer Sandbank, Tainan  
+**Year:** 2022  
+**Category:** Installation Art, Construction
 
-
-Source: https://letsuan.com/project-westernmost-point
-
-
-**CLIENT:** Tourism Bureau of Tainan City Government · **LOCATION:** Tainan, Taiwan · **YEAR:** 2022 · **CATEGORY:** Installation Art, Construction
-
-
-#### A Landmark on Ground That Won't Hold Still
-The site sits at the threshold between sandbar and surf, with no solid ground beneath it, fully exposed to sea wind, salt spray, and intense UV. Our task was to create a landmark on this unstable terrain that could resist time. The design composes a walkable montage tunnel from a sequence of mask panels, light as paper yet architectural in scale, each face carved with a distinct character. Their perforated boundaries choreograph a delicate interplay between privacy and gaze.
-#### Light, Shadow, and the Act of Walking Through
-We designed the act of viewing as circulation itself. The angle and height of each panel are calibrated to the solar path and prevailing wind direction. In the morning, oblique light slices through and guides a slow procession forward. In the afternoon, overlapping shadows compel visitors to pause. At dusk, the entire tunnel is pierced by the afterglow, human silhouettes and paper-cut shadows merging into one, and the circulation becomes a passage from light into darkness, and back out into the sea and sky.
-#### All 304, No Breach
-To withstand the extreme saline environment, the project uses an all-304 stainless steel system. From the primary structure and mask panels to every bolt, stud, and screw, all hardware is fabricated in 304 stainless steel, eliminating galvanic corrosion caused by dissimilar metal contact. Every component is finished with a fluorocarbon coating (PVDF) for weather resistance, UV resistance, and long-term colour retention. Components are factory-finished with the coating before being transported to site; any micro-abrasions or breaches incurred during fastening are touched up on-site with colour-matched fluorocarbon paint, keeping the coating film continuous and defect-free so every joint can withstand salt-laden corrosion for years to come.
-The result translates the intricate lexicon of traditional paper-cutting into a spatial experience built to hold up, structurally and visually, under high-specification metal craftsmanship.
-
+### Summary
+Landmark installation on unstable coastal ground fully exposed to salt, wind, and UV. A walkable sequence of perforated mask panels forms a light-and-shadow tunnel calibrated to solar path and prevailing wind. Entire structural and fastening system in 304 stainless steel with continuous fluorocarbon coating.
 
 ---
 
-## The World of Semiconductors
+## The World of Semiconductors — TSMC × National Museum of Natural Science
 
-*TSMC × National Museum of Natural Science*
+**Source:** https://letsuan.com/project-world-semiconductors  
+**Client:** TSMC  
+**Location:** Taichung, Taiwan  
+**Year:** 2021  
+**Category:** Visual Design, Event, Construction
 
-
-Source: https://letsuan.com/project-world-semiconductors
-
-
-**CLIENT:** TSMC · **LOCATION:** Taichung, Taiwan · **YEAR:** 2021 · **CATEGORY:** Visual Design, Event, Construction
-
-
-#### A Ceremony Stage Built Into a Corridor Entrance
-The TSMC Charity Foundation donated "The World of Semiconductors" gallery to the National Museum of Natural Science, and the opening ceremony was staged at the entrance of the museum's existing visitor corridor, where we built a curved backdrop wall, a raised stage, and the lighting and sound systems for the event. The venue is a publicly owned cultural heritage space, and the museum set one condition for the entire project: don't damage the existing walls or flooring, and restore everything completely once the event is over.
-#### Building Around Visitors Who Never Stopped Walking Through
-The original corridor had to remain open for visitor traffic throughout, so we sectioned off the construction zone with temporary fencing and fully enclosed hoarding, keeping enough clear width for visitors to pass through, with alternate wayfinding signage and on-site staff to guide them. Assembly and rigging of the larger structures were scheduled entirely during closed hours; during open hours, only the finished appearance was maintained, with no high-risk work carried out at all.
-#### A Curved Wall That Never Touched the Real One
-The curved backdrop wall had to match the gallery's architectural form yet couldn't be fastened to the existing wall at all.
-We used an independent frame system, assembled on site into its curved shape, entirely self-supporting and carrying its own load, with zero attachment to the museum's original wall structure. Where the frame met the floor, it was stabilized with removable counterweight bases; no expansion bolts, no nail guns, nothing requiring drilling was used. In places where the site's curvature was complex enough to need the frame to rest partially against an existing wall for positioning, only soft cushioning pads were used as a buffer, never direct force against the painted surface.
-The printed graphics were secured to the frame with hook-and-loop fastener, clamps, or straps.
-#### A Stage Built Like Blocks
-The raised stage used a fully custom, timber, brick-module-style construction: individual timber units were pre-cut in a factory workshop, then locked together on site with mortise-and-tenon joints, bolts, and quick-release hardware, never making fixed contact with the original floor.
-Every module's base was fitted with an adjustable levelling shim and non-slip rubber feet, using the module's own weight and shim adjustment to achieve stability and level correction, with no ground anchors, no expansion bolts, and no drilling. Because the stage's shape echoed the curved backdrop rather than a standard rectangle, every module had to be test-fitted on site against its irregular outline, confirming tight seams, no height differences, and no exposed fasteners, so visitors wouldn't trip.
-Once assembled, the structure went through a shake test and a localized load test before it was cleared for use. The projector sat in a concealed floor-level configuration, housed inside a reserved equipment bay built into the stage structure itself, with no contact with the original floor.
-#### The Real Inspection Happened After Teardown
-Once the ceremony ended, we followed a clear teardown schedule to remove every temporary structure, counterweight, and cable as quickly as possible. Warning signage and safety personnel were present on site throughout construction, and the stage's load capacity, module connections, and projector housing were all safety-checked before use. The real inspection came after teardown: a walkthrough of the original corridor, walls, and floor, confirming no scratches, no adhesive residue, and no drilling marks, jointly verified by the museum and the construction team, with photographic documentation taken both before and after construction.
-
+### Summary
+Temporary ceremony stage and curved backdrop built inside a public museum corridor that had to remain open to visitors. Fully freestanding, zero-drilling construction with removable counterweights. Complete teardown left no marks on walls or floor.
 
 ---
 
-## Experience the Yokai World
+## Five Thousand Years of Silence — Story-telling by the Ancient People
 
-*100 Stories of Yokai Exhibition*
+**Source:** https://letsuan.com/project-story-telling  
+**Client:** National Museum of Natural Science  
+**Location:** Taichung, Taiwan  
+**Year:** 2020  
+**Category:** Construction
 
+### Summary
+Partial update of the Anthropology Hall permanent exhibition while adjacent exhibits remained in place. Vibration and dust control were critical. New cases were sized to the objects; an archaeological conservation lab visible through glass and floor-projection interactives were added.
 
-Source: https://letsuan.com/project-yokai-world
+---
 
+## Enriching Hakka Settlements — Camphor Industry Special Exhibition
 
-**CLIENT:** Mizuki Production (水木プロダクション) · **LOCATION:** Taipei, Taiwan · **YEAR:** 2022–2023 · **AREA:** 958.68㎡ · **CATEGORY:** Exhibition Design, Construction
+**Source:** https://letsuan.com/project-hakka-culture  
+**Location:** Taiwan Hakka Culture Development Center, Miaoli  
+**Year:** 2012  
+**Category:** Exhibition Design, Construction
 
+### Summary
+Opening special exhibition completed in thirty days. Factory-prefabricated laminate partitions avoided on-site painting that would have competed with the camphor scent central to the experience. Museum-grade cases, passive humidity control, and 50–150 lux artifact lighting met preservation standards.
 
-#### 958.68 Square Metres, Zero Nails, One Chance to Pass Inspection
-To mark the 100th birthday of Mizuki Shigeru, creator of GeGeGe no Kitaro and Japan's foremost yokai scholar, Mizuki Production chose Taiwan as the first stop for this centennial exhibition.
-The venue sat inside a building under strict heritage-conservation regulations, so from day one the engineering team wasn't asking how to build, it was asking how to build somewhere nobody was allowed to touch.
-The goal was a fully immersive dark-exhibit environment across 958.68 square metres, built under a zero-penetration constraint and a brutally compressed schedule, to "100% international-grade design fidelity": high-density FRP composite sculptural sets, multi-zone automated trigger mechanisms, and a fully integrated audio-lighting-electrical system for a dark-field environment, all expected to pass on-site inspection by Mizuki Production's own supervisory team in a single round.
-#### The Weight Had to Carry Itself
-Drilling or any invasive damage to the venue's walls and foundation was off the table entirely, a hard rule of heritage preservation with zero room to negotiate. We used a self-supporting steel-and-timber frame combined with a modular raised floor system, transferring the multi-ton load of the sets and utilities onto an entirely independent load-bearing structure, so the heritage building never bore a single point of structural contact from start to finish.
-Dark exhibits demand narrow, maze-like circulation, so all structural and surface materials were fire-retardant grade board and fabric, with emergency evacuation signage and concealed fire-safety equipment integrated directly into the set design. Code compliance and visual integrity both had to hold at once.
-#### Sensors Nobody Sees, a Jolt Everybody Feels
-The exhibit hall conceals a substantial number of dynamic surprise mechanisms. Infrared (PIR) sensors, microwave sensors, and high-sensitivity pressure pads all have their sensing points buried deep inside the walls and set pieces, so visitors never see a sensor, only feel the jolt the instant they walk past one.
-The moment a visitor steps into a preset zone, a microcontroller (MCU) triggers pneumatic or electric mechanisms in real time, paired with low-latency strobe lighting and directional multichannel audio, for a millisecond-scale impact.
-With tens of thousands of trigger cycles a day throughout the run, every mechanical component was fitted with industrial-grade shock absorption and high-wear parts, built to be triggered every day for the entire run without failing.
-#### Darkness Was Solved Before Anything Else Could Be
-The original venue had its own existing light-pollution issues. We started at the highest point of the building and worked down, blacking out every wall and blocking any leak of outside light to get the absolute darkness a dark exhibit needs; nothing downstream, from zone-based light control to sensor precision, works without that step first.
-High- and low-voltage wiring, pneumatic lines, and controllers were all routed through maintenance corridors built inside the set pieces, with concealed access points reserved so on-site maintenance never compromises the visual completeness.
-With multiple immersive themed spaces sitting right next to each other, sound and light bleed easily between zones, so we contained each theme zone's audio and lighting inside its own boundary using low-colour-temperature directional spotlighting, mirrored optical reflection, and zone-based sound-pressure control.
-#### Building Through a Pandemic
-Construction happened to run right through COVID-19 restrictions. Health management for on-site personnel and total headcount control on the venue all had to follow government pandemic regulations, labor capacity was limited, and the schedule was compressed to something close to unreasonable. We adopted 24-hour phased construction, separating the mobilization windows for carpentry, mechanism automation, low-voltage systems, and set-finish spraying by trade, so people were never over-concentrated in the same space at the same time. Within a timeline squeezed this tightly, neither construction progress nor quality control gave.
-#### Passed the First Time
-Mizuki Production holds extremely high standards for IP fidelity, yokai character proportions, exact paint colour codes, and overall atmosphere, and sent its own team of Japanese specialists to Taiwan to supervise and inspect the venue in person. Backed by precise drawing-translation capability and mature aging-and-weathering paint craftsmanship, we made millimetre-level adjustments on site in real time, following the Japanese team's direction, and passed the licensor's high-standard inspection in a single round, with no resubmissions and nothing redone.
-#### What Was Left Standing
-Across the entire run, the automated triggers, lighting, and acoustic systems maintained zero failures, and Mizuki Production's own on-site supervisory review also passed on the first attempt. The result covers a cross-border IP-licensed exhibition, construction inside a heritage site, mechanical-and-electrical automation, and dark-exhibit engineering, all in one project, in a building nobody was allowed to touch.
+---
+
+## Disaster Prevention Hall — 921 Earthquake Museum of Taiwan
+
+**Source:** https://letsuan.com/project-engineering-construction  
+**Location:** Taichung, Taiwan  
+**Year:** 2012  
+**Category:** Construction
+
+### Summary
+Fit-out inside the 921 Earthquake Museum, a building whose curved walls and 100 cm floor-level offsets follow the Chelungpu Fault rupture. All new work was free-standing and templated to the actual geometry because drawings did not match site conditions.
+
+---
+
+## Traveling Temple — Tibetan Thangka Art Exhibition
+
+**Source:** https://letsuan.com/project-tibetan-thangka  
+**Location:** National Chiang Kai-shek Memorial Hall, Taipei  
+**Year:** 2015  
+**Category:** Exhibition Design, Interior Design, Graphic Design, Logo Design, Construction
+
+### Summary
+Display of Rebgong thangkas inside an open circulation gallery. Every piece was protected in high-transparency acrylic. Large banners used tensioned overhead track suspension. Demountable partition walls carried tracks and lighting and were fully removable after the run.
+
+---
+
+## The Hunt of the Celestial Court — Wang Ye Worship in Donggang
+
+**Source:** https://letsuan.com/project-wang-ye-donggang  
+**Client:** National Museum of Natural Science  
+**Location:** Taichung, Taiwan  
+**Year:** 2012  
+**Category:** Exhibition Design, Construction
+
+### Summary
+Seven-day construction of a reconstructed Celestial Court and display platform for a ceremonial boat from Donglong Temple. CNS Class-1 fire-retardant plywood and independent power circuits met museum fire-code review.
+
+---
+
+## The Lawn Needed More Protection Than the Artwork Did — 2013 Asian Art Biennial
+
+**Source:** https://letsuan.com/project-asian-art-biennial  
+**Client:** National Taiwan Museum of Fine Arts  
+**Location:** Taichung, Taiwan  
+**Year:** 2013–2014  
+**Category:** Construction
+
+### Summary
+On-site fabrication and installation of ten outdoor light-box works by LuxuryLogico. Custom low-disturbance bases and careful cabling protected the museum lawn; approximately 90% of materials were specified for recyclability after teardown.
+
+---
+
+## NMNS TELDAP — Digital Archives Exhibition
+
+**Source:** https://letsuan.com/project-nmns-teldap  
+**Client:** National Museum of Natural Science  
+**Location:** Taichung, Taiwan  
+**Year:** 2013  
+**Category:** Construction
+
+### Summary
+Construction of a permanent digital-archives service counter with continuous curved timber-and-engineered-stone form and integrated touch inquiry stations. A 120 cm discrepancy between drawings and site was corrected in real time during fabrication.
+
+---
+
+## INCIDENT IN CONAN EXHIBIT — Congratulatory Exhibit “Conan Exhibit”
+
+**Source:** https://letsuan.com/project-serialization-anniversary  
+**Client:** Shogakukan Inc.  
+**Location:** Huashan 1914 Creative Park, Taipei  
+**Year:** 2015–2016  
+**Category:** Exhibition Design, Graphic Design, Visual Design, Installation Art, Construction
+
+### Summary
+20th-anniversary Detective Conan overseas exhibition. Full design-build inside heritage-protected warehouses under zero-penetration rules. Life-size Conan × Shinichi figure (specially commissioned) and complete manga-cover timeline at entrance. Sets and graphics matched official Japanese materials exactly.
+
+---
+
+## Securities Company Office — A Contemporary, High-End Workplace
+
+**Source:** https://letsuan.com/project-securities-office  
+**Client:** Securities Company  
+**Location:** Banqiao, New Taipei City  
+**Area:** 200 ㎡  
+**Category:** Interior Design, Construction
+
+### Summary
+Contemporary office interior including waiting area, kitchen/breakout, boardroom, executive offices, and open workstations. Feature curved wall and custom entrance handles. Construction by Le Tsuan’s in-house team.
+
+---
+
+## Brief / Graphic Design Archives
+
+### Fullchamp — Brochure Design
+
+**Source:** https://letsuan.com/project-fullchamp-brochure  
+**Client:** Fullchamp  
+**Year:** 2010  
+**Category:** Graphic Design, Visual Design, Typography
+
+Brand-identity and company-brochure project executed by the in-house team.
+
+### Just Only — Environment Protection Brochure
+
+**Source:** https://letsuan.com/project-just-only-environment  
+**Client:** Just Only Environment Protection  
+**Year:** 2010  
+**Category:** Graphic Design, Visual Design, Typography, Brochure, Website
+
+Brochure, typography, and website design as part of the brand’s collateral.

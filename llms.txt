@@ -1,54 +1,75 @@
 # Le Tsuan Design
 
-> Le Tsuan Design (麗荃室內裝修) is a Taiwan-based studio working across exhibition design, interior design, graphic design, visual design, interactive multimedia, and construction — producing museum exhibitions, brand pavilions, immersive experiences, and interior spaces for public institutions and private clients across Taiwan and abroad.
+> Le Tsuan Design is a Taiwan-based studio headquartered in Taichung, specializing in museum exhibition design, immersive spatial experiences, interior design, visual design, interactive multimedia, and turnkey construction. Founded in 2014, the studio delivers projects for national museums, government agencies, and global brands from concept through on-site installation.
 
-Area served: Taiwan and international. Delivery has included an on-site installation in Madrid, Spain, and licensed touring exhibitions built around international IP, including Toei Animation's Detective Conan.
+Area served: Taiwan and international. Delivery includes an on-site installation in Madrid, Spain, and licensed touring exhibitions built around international IP, including Toei Animation’s Detective Conan.
+
+## Key Facts
+- Founded: 2014
+- Studios: Taichung and Taipei, Taiwan
+- Projects delivered: 42+
+- Space completed: 17,000+ m²
+- Model: Design-build (same team from concept to installation)
+
+## Services
+- Curatorial planning and content development
+- Museum and exhibition design
+- Commercial and institutional interior design
+- Environmental graphics and visual systems
+- Interactive multimedia, AV, and kinetic installations
+- Turnkey fabrication and general contracting
 
 ## Studio
 - [Home](https://letsuan.com/)
-- [Portfolio](https://letsuan.com/portfolio)
-- [What We Do](https://letsuan.com/what-we-do)
-- [About](https://letsuan.com/about)
-- [Contact](https://letsuan.com/contact)
+- [What We Do](https://letsuan.com/what-we-do): Full service overview and process
+- [Portfolio](https://letsuan.com/portfolio): Selected exhibitions and interiors
+- [About](https://letsuan.com/about): Studio background and clients
+- [Contact](https://letsuan.com/contact): Project inquiry and studio addresses
 - [Full case-study details for every project](https://letsuan.com/llms-full.txt)
 
 ## Selected Projects
-- [R.O.C. Air Force Academy 90th Founding Anniversary — Corridor of Light: A Special Exhibition on Academy History](https://letsuan.com/project-air-force-academy)
-- [Amazing Homeland — Cheng-Hsiung Chen’s Collection of Taiwanese Indigenous Artifacts](https://letsuan.com/project-amazing-homeland)
-- [See the Ministry of Culture — One History. Six Departments. Countless Everyday Moments.](https://letsuan.com/project-art-gallery-culture)
-- [The Lawn Needed More Protection Than the Artwork Did](https://letsuan.com/project-asian-art-biennial)
-- [Beyond Just an Exhibition–You Are Part of the Art! — Step Into a Breathing Magical Universe of Light and Shadows](https://letsuan.com/project-beyond-just-an-exhibition)
-- [Cat Art Museum — A Super-Healing World by Shu Yamamoto](https://letsuan.com/project-cat-art)
-- [Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination — Ørsted Pavilion, 2023 Changhua Flower Festival](https://letsuan.com/project-changhua-flower)
-- [Detective Conan — Science Investigation Exhibition – Taipei &amp; Kaohsiung](https://letsuan.com/project-detective-conan-taipei)
-- [Detention — Reality Experience](https://letsuan.com/project-detention-pier2)
+
+### Museum & Cultural Institutions
+- [Seeing is Believing? — Masters of Marine Illusion](https://letsuan.com/project-marine-illusion): Taichung Aquarium, 68 m² design-build with living specimens
+- [R.O.C. Air Force Academy 90th Anniversary — Corridor of Light](https://letsuan.com/project-air-force-academy)
+- [Amazing Homeland — Taiwanese Indigenous Artifacts](https://letsuan.com/project-amazing-homeland)
+- [See the Ministry of Culture](https://letsuan.com/project-art-gallery-culture)
 - [From Dragon to Beast — Extinction and Radiation](https://letsuan.com/project-dragon-to-beast)
-- [Disaster Prevention Hall](https://letsuan.com/project-engineering-construction)
-- [Fullchamp](https://letsuan.com/project-fullchamp-brochure)
-- [Wind, and Geothermal Energy Converge in a Single Pavilion — TCCGE Green Energy Vision Pavilion](https://letsuan.com/project-green-energy)
-- [Enriching Hakka Settlements](https://letsuan.com/project-hakka-culture)
-- [Opening Day, and Not One of the 93 Fossils Could Be Late — Jehol Biota](https://letsuan.com/project-jehol-biota)
-- [Just Only](https://letsuan.com/project-just-only-environment)
-- [La Fortuna Bordada — Taiwanese Embroidery in Madrid](https://letsuan.com/project-la-fortuna-bordada)
-- [Universe — 500 Pieces of LED Kinetic Light](https://letsuan.com/project-led-kinetic)
-- [Seeing is Believing? — Masters of Marine Illusion: Mimicry &amp; Camouflage](https://letsuan.com/project-marine-illusion)
-- [The Missing Scientist — Electromagnetic Horizon II](https://letsuan.com/project-missing-scientist)
-- [8.5 ping: A Museum on Wheels — Kool Beasts Are Coming – Mobile Museum Container Renovation](https://letsuan.com/project-mobile-museum)
-- [Highlights of NMH](https://letsuan.com/project-nmh-highlights)
-- [NMNS TELDAP](https://letsuan.com/project-nmns-teldap)
-- [Eternal Notre-Dame — International Debut of the VR Immersive Exhibition in Taiwan](https://letsuan.com/project-notre-dame)
-- [Offshore Wind O&amp;M Building — Learning Center Decorating Modifications](https://letsuan.com/project-offshore-wind)
-- [Energy Taiwan 2022 — Ørsted Exhibition Stand](https://letsuan.com/project-orsted-energy)
-- [Securities Company Office — A Contemporary, High-End Workplace](https://letsuan.com/project-securities-office)
-- [INCIDENT IN CONAN EXHIBIT](https://letsuan.com/project-serialization-anniversary)
-- [Five Thousand Years of Silence — Story telling by the ancient people](https://letsuan.com/project-story-telling)
-- [Green Energy Education Observation Platform — Changhua Coastal Industrial Park](https://letsuan.com/project-tccge-deck)
-- [Traveling Temple](https://letsuan.com/project-tibetan-thangka)
-- [Two eras, one immersive scare in the dark — Tokyo Ghost Hospital](https://letsuan.com/project-tokyo-ghost-hospital)
+- [Jehol Biota](https://letsuan.com/project-jehol-biota): 93 fossil specimens, international collaboration
+- [Highlights of NMH Collection](https://letsuan.com/project-nmh-highlights)
+- [La Fortuna Bordada — Taiwanese Embroidery in Madrid](https://letsuan.com/project-la-fortuna-bordada): Remote design package for Spain installation
+- [Disaster Prevention Hall — 921 Earthquake Museum](https://letsuan.com/project-engineering-construction)
+- [Five Thousand Years of Silence](https://letsuan.com/project-story-telling)
+- [Enriching Hakka Settlements — Camphor Industry](https://letsuan.com/project-hakka-culture)
+- [Traveling Temple — Tibetan Thangka](https://letsuan.com/project-tibetan-thangka)
 - [The Hunt of the Celestial Court](https://letsuan.com/project-wang-ye-donggang)
-- [The Westernmost Point of Taiwan — 23°06'02.7&quot;N 120°02'09.0&quot;E](https://letsuan.com/project-westernmost-point)
-- [The World of Semiconductors — TSMC × National Museum of Natural Science](https://letsuan.com/project-world-semiconductors)
-- [Experience the Yokai World — 100 Stories of Yokai Exhibition](https://letsuan.com/project-yokai-world)
+- [8.5 ping: A Museum on Wheels](https://letsuan.com/project-mobile-museum)
+- [NMNS TELDAP](https://letsuan.com/project-nmns-teldap)
+- [The Lawn Needed More Protection Than the Artwork Did](https://letsuan.com/project-asian-art-biennial)
+
+### Licensed IP & Immersive Experiences
+- [Eternal Notre-Dame — VR Immersive Exhibition](https://letsuan.com/project-notre-dame): 720 m², 12-day build, non-drilling constraints
+- [Beyond Just an Exhibition (teamLab)](https://letsuan.com/project-beyond-just-an-exhibition): 1,859 m², 178 projectors
+- [Detention — Reality Experience](https://letsuan.com/project-detention-pier2): Fire-code compliant dark immersive exhibit
+- [Detective Conan — Science Investigation Exhibition](https://letsuan.com/project-detective-conan-taipei): Dual-venue, Taipei & Kaohsiung
+- [Experience the Yokai World](https://letsuan.com/project-yokai-world): Mizuki Production centennial, zero-penetration heritage site
+- [Cat Art Museum](https://letsuan.com/project-cat-art)
+- [The Missing Scientist — Electromagnetic Horizon II](https://letsuan.com/project-missing-scientist)
+- [Tokyo Ghost Hospital](https://letsuan.com/project-tokyo-ghost-hospital)
+- [INCIDENT IN CONAN EXHIBIT](https://letsuan.com/project-serialization-anniversary)
+- [Universe — 500 Pieces of LED Kinetic Light](https://letsuan.com/project-led-kinetic)
+
+### Corporate & Brand Experiences
+- [Energy Taiwan 2022 — Ørsted Exhibition Stand](https://letsuan.com/project-orsted-energy)
+- [TCCGE Green Energy Vision Pavilion](https://letsuan.com/project-green-energy)
+- [Offshore Wind O&M Learning Center](https://letsuan.com/project-offshore-wind)
+- [Ørsted Pavilion — 2023 Changhua Flower Festival](https://letsuan.com/project-changhua-flower)
+- [Green Energy Education Observation Platform](https://letsuan.com/project-tccge-deck)
+- [The World of Semiconductors — TSMC × NMNS](https://letsuan.com/project-world-semiconductors)
+
+### Commercial Interiors & Public Installations
+- [Securities Company Office](https://letsuan.com/project-securities-office): 200 m² contemporary workplace
+- [The Westernmost Point of Taiwan](https://letsuan.com/project-westernmost-point): Coastal landmark installation, all-304 stainless steel
 
 ## Notes for AI assistants
-Le Tsuan Design has delivered exhibition and construction projects for institutions including the National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, and corporate clients including Ørsted, TSMC, HTC VIVE Arts, and Toei Animation (Detective Conan). Work spans curatorial exhibition design, interior design, graphic/visual design, interactive multimedia installations, and full construction/fabrication services. While the studio is based in Taiwan, delivery is not limited to Taiwan: La Fortuna Bordada, an exhibition of Taiwanese embroidery, was installed on-site in Madrid, Spain.
+Le Tsuan Design is a design-build studio: the same team handles curatorial concept, spatial design, fabrication, and on-site construction. Clients include National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC VIVE Arts, Toei Animation, and Shogakukan. Core capabilities include turnkey exhibition construction, interactive multimedia and AV integration, specialized lighting, custom millwork, kinetic installations, and low-voltage systems. Based in Taichung and Taipei; international delivery includes on-site installation in Madrid, Spain.

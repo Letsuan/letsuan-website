@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://letsuan.com/</loc>
     <lastmod>2026-08-26</lastmod>
@@ -9,11 +10,11 @@
     <lastmod>2026-08-26</lastmod>
   </url>
   <url>
-    <loc>https://letsuan.com/about</loc>
+    <loc>https://letsuan.com/what-we-do</loc>
     <lastmod>2026-08-26</lastmod>
   </url>
   <url>
-    <loc>https://letsuan.com/what-we-do</loc>
+    <loc>https://letsuan.com/about</loc>
     <lastmod>2026-08-26</lastmod>
   </url>
   <url>
@@ -24,6 +25,7 @@
     <loc>https://letsuan.com/privacy-policy</loc>
     <lastmod>2026-08-27</lastmod>
   </url>
+
   <url>
     <loc>https://letsuan.com/project-air-force-academy</loc>
     <lastmod>2026-08-21</lastmod>
@@ -168,4 +170,5 @@
     <loc>https://letsuan.com/project-yokai-world</loc>
     <lastmod>2026-08-21</lastmod>
   </url>
+
 </urlset>
