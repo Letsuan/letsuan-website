@@ -15,6 +15,13 @@
 - Space completed: 17,000+ m²
 - Primary clients: National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC VIVE Arts, Toei Animation, Shogakukan, Mizuki Production
 
+## Core Technical Competencies & Specializations
+- **Zero-Penetration & Heritage Building Construction**: Free-standing structural frameworks, tensioned mounting, and counterweight systems that comply with strict non-drilling preservation rules (Huashan 1914, Songshan Cultural Park, Pier-2, National Museum of History, Chiang Kai-shek Memorial Hall).
+- **High-Density AV & Interactive Integration**: Node-by-node load calculations for large projector arrays (170+ units), free-roaming VR charging infrastructure (100+ headsets), motion sensors, pneumatic/IR triggers, DMX lighting choreography, and automated kinetic installations.
+- **Museum-Grade Conservation Engineering**: Constant-humidity micro-environment display cases, optical-fiber / low-lux preservation lighting (50–150 lux), airtight case sealing, Class-1 fire-retardant material fabrication.
+- **Harsh Environment & Coastal Engineering**: Anti-corrosion fluorocarbon coatings, 304 stainless steel structures, salt-tolerant coastal landscape planning, and installations designed for high UV and wind exposure.
+- **Design-Build Delivery**: Single team responsible for curatorial concept, spatial design, fabrication, MEP coordination, and on-site installation under compressed schedules and complex constraints.
+
 ---
 
 ## Seeing is Believing? — Masters of Marine Illusion: Mimicry & Camouflage
@@ -158,6 +165,22 @@ Self-supporting steel-and-timber frame with modular raised floor transferred all
 
 ### Outcome
 Zero system failures across the run. Licensor inspection passed on the first attempt with no resubmissions.
+
+---
+
+## Universe — 500 Pieces of LED Kinetic Light
+
+**Source:** https://letsuan.com/project-led-kinetic  
+**Client:** Grandview Mall Science Museum  
+**Location:** Canton (Guangzhou), China  
+**Year:** 2024  
+**Category:** Exhibition Design, Installation Art, Interactive Multimedia, Construction
+
+### Summary
+Design and technical planning for a large-scale kinetic lighting installation of 500 independently winched LED fixtures, controlled by a single software system. The work functions as both functional illumination and the primary visual centerpiece of the science museum space, synchronized with music and narration to convey astronomical concepts.
+
+### Technical Planning
+Each fixture’s vertical position is controlled by its own winch; RGB LED modules handle color and brightness. All motion and lighting parameters are unified under specialized control software. Synchronization logic between winch motion paths and color transitions was developed so the array can form varied, layered spatial compositions rather than simple up-and-down movement, producing fine detail and dynamic tension.
 
 ---
 
@@ -515,7 +538,7 @@ Construction of a permanent digital-archives service counter with continuous cur
 **Source:** https://letsuan.com/project-securities-office  
 **Client:** Securities Company  
 **Location:** Banqiao, New Taipei City  
-**Size:** 200 ㎡  
+**Area:** 200 ㎡  
 **Category:** Interior Design, Construction
 
 ### Summary
@@ -523,22 +546,22 @@ Contemporary office interior including waiting area, kitchen/breakout, boardroom
 
 ---
 
-## Fullchamp — Brochure Design
+## Brief / Graphic Design Archives
+
+### Fullchamp — Brochure Design
 
 **Source:** https://letsuan.com/project-fullchamp-brochure  
 **Client:** Fullchamp  
 **Year:** 2010  
 **Category:** Graphic Design, Visual Design, Typography
 
-Brief brand-identity and company-brochure project executed by the in-house team.
+Brand-identity and company-brochure project executed by the in-house team.
 
----
-
-## Just Only — Environment Protection Brochure
+### Just Only — Environment Protection Brochure
 
 **Source:** https://letsuan.com/project-just-only-environment  
 **Client:** Just Only Environment Protection  
 **Year:** 2010  
 **Category:** Graphic Design, Visual Design, Typography, Brochure, Website
 
-Brief brochure, typography, and website design as part of the brand’s collateral.
+Brochure, typography, and website design as part of the brand’s collateral.
