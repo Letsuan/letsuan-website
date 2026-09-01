@@ -6,6 +6,10 @@ export interface HeroSlide {
   href: string;
   realImg: string;
   alt: string;
+  personImg?: string;
+  personAlt?: string;
+  personWidth?: number;
+  personHeight?: number;
 }
 
 export interface Project {
@@ -22,7 +26,7 @@ export interface Project {
 }
 
 export const heroSlides: HeroSlide[] = [
-  { num: '01', category: 'EXHIBITION', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', href: './project-marine-illusion', realImg: './images/marine-illusion-03-opt-letsuan-design.jpg', meta: 'Taichung Aquarium', alt: 'Two visitors viewing illuminated aquarium display cases beneath an Ocean Mimic Master introductory screen in a dim blue-lit gallery' },
+  { num: '01', category: 'EXHIBITION', title: 'Wind, and Geothermal Energy Converge in a Single Pavilion', subtitle: 'TCCGE Green Energy Vision Pavilion', href: './project-green-energy', realImg: './images/green-energy-vision-pavilion-tiered-concrete-planter-wall-no-figure-letsuan-design.jpg', meta: 'TCCGE', alt: 'Tiered concrete planter wall with cascading greenery at the Green Energy Vision Pavilion entrance', personImg: './images/green-energy-vision-pavilion-woman-cutout-letsuan-design.png', personAlt: 'Woman in tan cape coat, side profile, cut out', personWidth: 1984, personHeight: 1280 },
   { num: '02', category: 'EXHIBITION', title: 'You Are Part of the Art', subtitle: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition', realImg: './images/ocean-mimic-hero-opt-letsuan-design.jpg', meta: 'teamLab', alt: 'Visitors walking through an immersive floor-to-wall projection of pink and blue floral bursts and rippling water patterns' },
   { num: '03', category: 'EXHIBITION', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art', realImg: './images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', meta: 'Cat Art Museum', alt: 'Visitors browsing framed cat-parody reinterpretations of classical paintings in the olive-green and yellow gallery rooms' },
 ];
