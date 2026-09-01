@@ -4,33 +4,48 @@ import { avifPath } from '../utils/images';
 ---
 
 <section id="pf-hero">
-  {heroSlides.map((slide, i) => (
-    <div class:list={['pf-hero-layer', { 'is-active': i === 0 }]} data-idx={i} style={`z-index:${i === 0 ? 2 : 1};transform:translateY(${i === 0 ? 0 : 100}%)`}>
-      <div class="pf-hero-img-wrap">
-        <picture>
-          <source type="image/avif" srcset={avifPath(slide.realImg)} />
-          <img
-            class="pf-hero-img"
-            alt={slide.alt}
-            src={slide.realImg}
-            decoding="async"
-            fetchpriority={i === 0 ? 'high' : undefined}
-          />
-        </picture>
-      </div>
-      <div class="pf-hero-overlay pf-hero-overlay-1"></div>
-      <div class="pf-hero-overlay pf-hero-overlay-2"></div>
-      <div class="pf-hero-overlay pf-hero-overlay-3"></div>
-      <div class="pf-hero-content">
-        <div class="pf-hero-eyebrow">{slide.num} / {slide.category}</div>
-        <div class="pf-hero-title">{slide.title}</div>
-        <div class="pf-hero-row">
-          <p class="pf-hero-subtitle">{slide.subtitle}</p>
-          <a href={slide.href} class="pf-hero-cta">VIEW PROJECT <span>→</span></a>
+  {heroSlides.map((slide, i) => {
+    const isActive = i === 0;
+    return (
+      <div class:list={['pf-hero-layer', { 'is-active': isActive }]} data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
+        <div class="pf-hero-img-wrap">
+          <picture>
+            <source type="image/avif" srcset={avifPath(slide.realImg)} />
+            <img
+              class="pf-hero-img"
+              alt={slide.alt}
+              src={slide.realImg}
+              decoding="async"
+              fetchpriority={i === 0 ? 'high' : undefined}
+            />
+          </picture>
+        </div>
+        <div class="pf-hero-overlay pf-hero-overlay-1"></div>
+        <div class="pf-hero-overlay pf-hero-overlay-2"></div>
+        <div class="pf-hero-overlay pf-hero-overlay-3"></div>
+        <div class="pf-hero-content">
+          <div class="pf-hero-eyebrow-mask">
+            <span class:list={['pf-reveal-eyebrow', { 'is-revealed': isActive }]}>{slide.num} / {slide.category}</span>
+          </div>
+          <h2 class="pf-hero-title">
+            <span class="pf-hero-title-mask">
+              <span class:list={['pf-reveal-title', { 'is-revealed': isActive }]}>{slide.title}</span>
+            </span>
+          </h2>
+          <div class="pf-hero-row">
+            <div class="pf-hero-subtitle-mask">
+              <p class:list={['pf-hero-subtitle', 'pf-reveal-subtitle', { 'is-revealed': isActive }]}>{slide.subtitle}</p>
+            </div>
+            <div class="pf-hero-cta-mask">
+              <div class:list={['pf-reveal-cta', { 'is-revealed': isActive }]}>
+                <a href={slide.href} class="pf-hero-cta">VIEW PROJECT <span>→</span></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  ))}
+    );
+  })}
 
   <div class="pf-hero-dots">
     {heroSlides.map((slide, i) => (
@@ -85,10 +100,11 @@ import { avifPath } from '../utils/images';
     object-fit: cover;
     object-position: center 55%;
     display: block;
+    transform: scale(1.16);
     transition: transform 3s ease-out;
   }
   .pf-hero-layer.is-active .pf-hero-img {
-    transform: scale(1.16);
+    transform: scale(1);
   }
   .pf-hero-overlay {
     position: absolute;
@@ -120,21 +136,46 @@ import { avifPath } from '../utils/images';
   .pf-hero-content > * {
     max-width: 1200px;
   }
-  .pf-hero-eyebrow {
+  .pf-hero-eyebrow-mask {
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    margin-bottom: 16px;
+  }
+  .pf-reveal-eyebrow {
+    display: block;
     font-family: 'Oswald', sans-serif;
     font-size: 12px;
     letter-spacing: 0.25em;
     opacity: 0.65;
-    margin-bottom: 16px;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-eyebrow.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    transform: translateY(0%);
   }
   .pf-hero-title {
+    margin: 0;
+    pointer-events: auto;
+  }
+  .pf-hero-title-mask {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.2em;
+  }
+  .pf-reveal-title {
+    display: block;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: clamp(40px, 8vw, 120px);
     line-height: 0.9;
     letter-spacing: -0.03em;
-    margin: 0;
-    pointer-events: auto;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-title.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+    transform: translateY(0%);
   }
   .pf-hero-row {
     margin-top: 28px;
@@ -142,6 +183,10 @@ import { avifPath } from '../utils/images';
     align-items: center;
     gap: 32px;
     flex-wrap: wrap;
+  }
+  .pf-hero-subtitle-mask {
+    overflow: hidden;
+    padding-bottom: 0.2em;
   }
   .pf-hero-subtitle {
     font-family: 'Oswald', sans-serif;
@@ -151,6 +196,26 @@ import { avifPath } from '../utils/images';
     line-height: 1.2;
     max-width: 34ch;
     margin: 0;
+    display: block;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-hero-subtitle.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    transform: translateY(0%);
+  }
+  .pf-hero-cta-mask {
+    overflow: hidden;
+    padding-bottom: 0.2em;
+  }
+  .pf-reveal-cta {
+    display: flex;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-cta.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s;
+    transform: translateY(0%);
   }
   .pf-hero-cta {
     pointer-events: auto;
@@ -306,7 +371,16 @@ import { avifPath } from '../utils/images';
   const total = layers.length;
   let active = 0;
   let auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  let autoTimer: ReturnType<typeof setInterval> | null = null;
+  let transitioning = false;
+  let autoTimer: ReturnType<typeof setTimeout> | null = null;
+  let textTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function setRevealed(layer: HTMLElement, revealed: boolean) {
+    layer.querySelector('.pf-reveal-eyebrow')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-reveal-title')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-hero-subtitle')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-reveal-cta')?.classList.toggle('is-revealed', revealed);
+  }
 
   function applyAutoUI() {
     autoToggle.classList.toggle('is-on', auto);
@@ -317,23 +391,37 @@ import { avifPath } from '../utils/images';
   }
 
   function maybeStartAuto() {
-    if (autoTimer) clearInterval(autoTimer);
+    if (autoTimer) clearTimeout(autoTimer);
     if (!auto) return;
-    autoTimer = setInterval(() => goTo((active + 1) % total), 5000);
+    autoTimer = setTimeout(() => goTo((active + 1) % total), 5000);
   }
 
   function goTo(idx: number) {
-    if (idx === active) return;
-    layers[active].style.zIndex = '1';
-    layers[active].style.transform = idx > active || (active === total - 1 && idx === 0) ? 'translateY(-100%)' : 'translateY(100%)';
-    layers[active].classList.remove('is-active');
-    active = idx;
-    layers[active].style.zIndex = '2';
-    layers[active].style.transform = 'translateY(0%)';
-    layers[active].classList.add('is-active');
-    dots.forEach((dot, i) => dot.querySelector('.pf-dot')?.classList.toggle('is-active', i === active));
-    counter.textContent = `${String(active + 1).padStart(2, '0')} — ${String(total).padStart(2, '0')}`;
-    progress.style.transform = `scaleX(${(active + 1) / total})`;
+    if (idx === active || transitioning) return;
+    const entering = layers[idx];
+    entering.style.transition = 'none';
+    entering.style.transform = 'translateY(100%)';
+    void entering.offsetHeight;
+    entering.style.transition = '';
+
+    transitioning = true;
+    setRevealed(layers[active], false);
+    if (textTimer) clearTimeout(textTimer);
+    textTimer = setTimeout(() => {
+      layers[active].style.zIndex = '1';
+      layers[active].style.transform = 'translateY(-100%)';
+      layers[active].classList.remove('is-active');
+      active = idx;
+      layers[active].style.zIndex = '2';
+      layers[active].style.transform = 'translateY(0%)';
+      layers[active].classList.add('is-active');
+      setRevealed(layers[active], true);
+      transitioning = false;
+      dots.forEach((dot, i) => dot.querySelector('.pf-dot')?.classList.toggle('is-active', i === active));
+      counter.textContent = `${String(active + 1).padStart(2, '0')} — ${String(total).padStart(2, '0')}`;
+      progress.style.transform = `scaleX(${(active + 1) / total})`;
+      maybeStartAuto();
+    }, 320);
   }
 
   dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.idx))));
