@@ -51,7 +51,7 @@ export const slides: Slide[] = [
     subtitleLine1: 'Every project starts with a story',
     subtitleLine2: 'we want people to feel.',
     ctaLabel: 'OUR STORY',
-    href: './about',
+    href: './portfolio',
     realImg: './images/letsuan-hero-slide1-marine-illusion-bg-letsuan-design.jpg',
     bgWidth: 4560,
     bgHeight: 3440,
