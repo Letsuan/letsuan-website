@@ -26,7 +26,7 @@ export const organizationJsonLd = {
         {
           '@type': 'PostalAddress',
           streetAddress: '3F., No. 62, Sec. 6, Yanping N. Rd.',
-          addressLocality: 'Shihlin District, Taipei City',
+          addressLocality: 'Shilin District, Taipei City',
           addressRegion: 'Taipei',
           postalCode: '111069',
           addressCountry: 'TW',
