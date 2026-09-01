@@ -5,7 +5,7 @@ import { avifPath } from '../utils/images';
 
 <section id="pf-hero">
   {heroSlides.map((slide, i) => (
-    <div class="pf-hero-layer" data-idx={i} style={`z-index:${i === 0 ? 2 : 1};transform:translateY(${i === 0 ? 0 : 100}%)`}>
+    <div class:list={['pf-hero-layer', { 'is-active': i === 0 }]} data-idx={i} style={`z-index:${i === 0 ? 2 : 1};transform:translateY(${i === 0 ? 0 : 100}%)`}>
       <div class="pf-hero-img-wrap">
         <picture>
           <source type="image/avif" srcset={avifPath(slide.realImg)} />
@@ -99,11 +99,10 @@ import { avifPath } from '../utils/images';
     object-fit: cover;
     object-position: center 55%;
     display: block;
-    transition: transform 6s ease-out;
+    transition: transform 3s ease-out;
   }
-  .pf-hero-layer[style*='z-index:2'] .pf-hero-img,
-  .pf-hero-layer[style*='z-index:2'] .pf-hero-person-img {
-    transform: scale(1.06);
+  .pf-hero-layer.is-active .pf-hero-img {
+    transform: scale(1.16);
   }
   .pf-hero-person-box {
     position: absolute;
@@ -116,7 +115,6 @@ import { avifPath } from '../utils/images';
     object-fit: cover;
     object-position: center 55%;
     display: block;
-    transition: transform 6s ease-out;
   }
   .pf-hero-overlay {
     position: absolute;
@@ -354,9 +352,11 @@ import { avifPath } from '../utils/images';
     if (idx === active) return;
     layers[active].style.zIndex = '1';
     layers[active].style.transform = idx > active || (active === total - 1 && idx === 0) ? 'translateY(-100%)' : 'translateY(100%)';
+    layers[active].classList.remove('is-active');
     active = idx;
     layers[active].style.zIndex = '2';
     layers[active].style.transform = 'translateY(0%)';
+    layers[active].classList.add('is-active');
     dots.forEach((dot, i) => dot.querySelector('.pf-dot')?.classList.toggle('is-active', i === active));
     counter.textContent = `${String(active + 1).padStart(2, '0')} — ${String(total).padStart(2, '0')}`;
     progress.style.transform = `scaleX(${(active + 1) / total})`;
