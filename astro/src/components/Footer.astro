@@ -25,8 +25,8 @@ const { background = '#0A0A0A' } = Astro.props;
     <div>
       <div class="ltsuan-footer-heading">STUDIO</div>
       <div class="ltsuan-footer-links">
-        <span class="ltsuan-footer-static">Taichung Studio<br />6F.-1, No. 85, Sec. 1, Huamei W. St.<br />West District, Taichung City 403020, Taiwan</span>
-        <span class="ltsuan-footer-static">Taipei Studio<br />3F., No. 62, Sec. 6, Yanping N. Rd.<br />Shilin District, Taipei City 111069, Taiwan</span>
+        <span class="ltsuan-footer-static ltsuan-footer-address">Taichung Studio<br />6F.-1, No. 85, Sec. 1, Huamei W. St.<br />West District, Taichung City 403020, Taiwan</span>
+        <span class="ltsuan-footer-static ltsuan-footer-address">Taipei Studio<br />3F., No. 62, Sec. 6, Yanping N. Rd.<br />Shilin District, Taipei City 111069, Taiwan</span>
         <a href="tel:+886423215956" class="ltsuan-footer-link">+886 4 2321 5956</a>
       </div>
     </div>
@@ -102,6 +102,11 @@ const { background = '#0A0A0A' } = Astro.props;
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+  }
+  .ltsuan-footer-address {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
   }
   .ltsuan-footer-cta-title {
     font-family: 'Oswald', sans-serif;
