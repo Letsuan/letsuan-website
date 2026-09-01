@@ -18,20 +18,6 @@ import { avifPath } from '../utils/images';
           />
         </picture>
       </div>
-      {slide.personImg && (
-        <div class="pf-hero-person-box">
-          <picture>
-            <img
-              class="pf-hero-person-img"
-              alt={slide.personAlt}
-              src={slide.personImg}
-              width={slide.personWidth}
-              height={slide.personHeight}
-              decoding="async"
-            />
-          </picture>
-        </div>
-      )}
       <div class="pf-hero-overlay pf-hero-overlay-1"></div>
       <div class="pf-hero-overlay pf-hero-overlay-2"></div>
       <div class="pf-hero-overlay pf-hero-overlay-3"></div>
@@ -103,18 +89,6 @@ import { avifPath } from '../utils/images';
   }
   .pf-hero-layer.is-active .pf-hero-img {
     transform: scale(1.16);
-  }
-  .pf-hero-person-box {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-  }
-  .pf-hero-person-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 55%;
-    display: block;
   }
   .pf-hero-overlay {
     position: absolute;
