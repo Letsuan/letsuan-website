@@ -7,13 +7,29 @@ import ServicesGrid from '../components/ServicesGrid.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import { organizationJsonLd } from '../data/organization';
 
-const title = 'Le Tsuan Design | Museum Exhibition Design & Design-Build Studio in Taiwan';
+const title = 'Le Tsuan Design | Museum Exhibition Design, Taiwan';
 const description = 'Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Same team from concept to installation. 42+ projects, 17,000+ m² delivered since 2014.';
 const canonical = 'https://letsuan.com/';
 const ogImage = 'https://letsuan.com/assets/logo.png';
+
+const faqs = [
+  { q: 'What does Le Tsuan Design do?', a: 'Le Tsuan Design is a Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences and interior construction. The same team carries a project from curatorial concept and spatial design through fabrication and on-site installation.' },
+  { q: "Where are Le Tsuan Design's studios located?", a: 'Le Tsuan Design has studios in Taichung and Taipei, and delivers projects nationwide and internationally.' },
+  { q: 'Which organizations has Le Tsuan Design worked with?', a: 'Le Tsuan Design has delivered projects for national museums, government agencies and global brands, including the National Museum of Natural Science, National Museum of History, TSMC, HTC and Ørsted.' },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={organizationJsonLd}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]}>
   <div class="ltsuan-page">
     <Nav active="home" />
 
@@ -30,6 +46,18 @@ const ogImage = 'https://letsuan.com/assets/logo.png';
 
     <ServicesGrid />
     <PortfolioPreview />
+
+    <section id="faq">
+      <h2 class="ltsuan-faq-title">Frequently Asked Questions</h2>
+      <div class="ltsuan-faq-list">
+        {faqs.map((f) => (
+          <div class="ltsuan-faq-item">
+            <h3 class="ltsuan-faq-q">{f.q}</h3>
+            <p class="ltsuan-faq-a">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
     <Footer />
   </div>
@@ -80,5 +108,36 @@ const ogImage = 'https://letsuan.com/assets/logo.png';
     font-size: 15px;
     line-height: 1.55;
     opacity: 0.92;
+  }
+  #faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 6vw 150px;
+  }
+  .ltsuan-faq-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 44px);
+    margin: 0 0 36px;
+    color: #f0e9de;
+  }
+  .ltsuan-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .ltsuan-faq-q {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #f0e9de;
+  }
+  .ltsuan-faq-a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(240, 233, 222, 0.6);
+    margin: 0;
   }
 </style>
