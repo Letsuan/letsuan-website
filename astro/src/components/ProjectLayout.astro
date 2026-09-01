@@ -13,6 +13,7 @@ export interface RelatedProject {
 export interface ProjectImage {
   src: string;
   alt: string;
+  plain?: boolean;
 }
 
 interface Props {
@@ -122,7 +123,7 @@ const shareUrl = encodeURIComponent(canonical);
 
       <div class="ltsuan-detail-right">
         {images.map((img) => (
-          <div class="ltsuan-thin-scroll ltsuan-detail-img-wrap">
+          <div class:list={['ltsuan-thin-scroll', 'ltsuan-detail-img-wrap', { 'ltsuan-detail-img-wrap-plain': img.plain }]}>
             <picture>
               <source srcset={avifPath(img.src)} type="image/avif" />
               <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="lazy" decoding="async" />
@@ -437,6 +438,9 @@ const shareUrl = encodeURIComponent(canonical);
   }
   .ltsuan-detail-img-wrap:hover .ltsuan-detail-img {
     filter: brightness(1);
+  }
+  .ltsuan-detail-img-wrap-plain .ltsuan-detail-img {
+    filter: none;
   }
   .ltsuan-detail-watermark {
     position: fixed;
