@@ -3,5 +3,5 @@ export function breakZhTitle(title: string): string {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
-  return escaped.replace(/(，|––)/g, '$1<br />');
+  return escaped.replace(/(，|–)/g, '$1<br />');
 }
