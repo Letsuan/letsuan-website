@@ -31,8 +31,8 @@ export const heroSlides = [
   },
   {
     num: '03',
-    titleLine1: 'One Team',
-    titleLine2: 'Start to Finish',
+    titleLine1: '同一雙手打造空間與故事',
+    titleLine2: '',
     subtitleLine1: 'Nothing lost in translation.',
     subtitleLine2: '',
     ctaLabel: 'HOW WE WORK',
