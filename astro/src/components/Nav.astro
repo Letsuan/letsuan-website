@@ -3,8 +3,9 @@ import { navMenuItems, navFeaturedItems } from '../data/homepage';
 
 interface Props {
   active: string;
+  zhHref?: string;
 }
-const { active } = Astro.props;
+const { active, zhHref = '/coming-soon' } = Astro.props;
 ---
 
 <nav class="ltsuan-nav" id="ltsuan-nav">
@@ -15,7 +16,7 @@ const { active } = Astro.props;
     <div class="ltsuan-nav-right">
       <div class="ltsuan-nav-lang">
         <span class="ltsuan-nav-lang-pill ltsuan-nav-lang-active">EN</span>
-        <a href="/coming-soon" class="ltsuan-nav-lang-pill ltsuan-nav-lang-inactive">中文</a>
+        <a href={zhHref} class="ltsuan-nav-lang-pill ltsuan-nav-lang-inactive">中文</a>
       </div>
       <button id="ltsuan-menu-btn" class="ltsuan-menu-btn" aria-expanded="false" aria-controls="ltsuan-menu-overlay">
         <span id="ltsuan-menu-label">MENU</span>
