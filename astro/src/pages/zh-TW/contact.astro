@@ -1,0 +1,274 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = 'Le Tsuan Design | Contact Us';
+const description = 'Get in touch with Le Tsuan Design about your next exhibition, interior or construction project, based in Taichung, Taiwan.';
+const canonical = 'https://letsuan.com/contact';
+const ogImage = 'https://letsuan.com/assets/logo.png';
+
+const faqs = [
+  {
+    group: 'SERVICES & SCOPE',
+    items: [
+      { q: 'What services does Le Tsuan Design provide?', a: 'We provide end-to-end exhibition, interior, and visual design — from curatorial concept and spatial planning through graphic design, fabrication, and on-site construction. Most projects are delivered as a single point of contact from concept to installation.' },
+      { q: 'What types of clients and projects do you work with?', a: 'We work primarily with museums, government agencies, and corporate clients on exhibitions, permanent galleries, brand environments, and public installations — as well as smaller-scale interior and graphic design projects.' },
+      { q: 'Do you work outside Taiwan?', a: "Yes. While most of our work is based in Taiwan, we've delivered projects internationally, including exhibitions in Spain." },
+    ],
+  },
+  {
+    group: 'HOW WE WORK',
+    items: [
+      { q: 'How do you start a new project?', a: "Every project begins with understanding the site, the audience, and the client's goals, followed by concept development, then detailed design and engineering before construction begins." },
+      { q: 'Do you handle construction and fabrication, or only design?', a: 'We handle both. Our in-house team manages design development through construction, fabrication, and installation, so the same team that designs the space also builds it.' },
+      { q: 'Do you provide 3D visualizations or concept renderings before construction?', a: 'Yes. Every project moves through concept renderings and 3D visualizations before fabrication begins, so clients can review and approve the design intent ahead of construction.' },
+      { q: 'How long does a typical project take?', a: 'Timelines vary by scope — a small fitment project can take one to two months, while a large-scale museum exhibition with custom fabrication typically takes six months to a year from concept to opening.' },
+    ],
+  },
+  {
+    group: 'TERMS & PRACTICALITIES',
+    items: [
+      { q: 'What is the typical project budget range?', a: "We don't publish set pricing — every project is scoped and quoted individually based on size, materials, and construction complexity. Get in touch with your project details for an estimate." },
+      { q: 'Do you sign NDAs or protect client confidentiality?', a: 'Yes. We routinely sign NDAs for government and corporate clients, and treat all project materials — briefs, budgets, and unreleased content — as confidential throughout and after the engagement.' },
+      { q: 'Do you provide maintenance after an exhibition or installation is completed?', a: 'Yes. Maintenance is included during the warranty period, and we continue to offer paid maintenance support on a case-by-case basis after the warranty expires.' },
+    ],
+  },
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.flatMap((g) => g.items).map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
+const email = 'info@letsuan.com';
+---
+
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]}>
+  <div class="ltsuan-page">
+    <Nav active="contact" zhHref="/zh-TW/portfolio" />
+
+    <section id="hero">
+      <h1 class="ltsuan-h1">Let's Talk About Your Space.</h1>
+      <p class="ltsuan-lead">Tell us about your project — we'll get back to you within two business days of your submission.</p>
+    </section>
+
+    <section id="contact-body">
+      <div class="ltsuan-contact-col">
+        <div>
+          <div class="ltsuan-eyebrow">STUDIO — TAICHUNG</div>
+          <p class="ltsuan-address">6F.-1, No. 85, Sec. 1, Huamei W. St., West Dist., Taichung City 403020, Taiwan</p>
+        </div>
+        <div>
+          <div class="ltsuan-eyebrow">STUDIO — TAIPEI</div>
+          <p class="ltsuan-address">3F., No. 62, Sec. 6, Yanping N. Rd., Shilin Dist., Taipei City 111069, Taiwan</p>
+        </div>
+        <div>
+          <div class="ltsuan-eyebrow">TEL</div>
+          <a href="tel:+886423215956" class="ltsuan-plain-link">+886 4 2321 5956</a>
+        </div>
+        <div>
+          <div class="ltsuan-eyebrow">EMAIL</div>
+          <a href={`mailto:${email}`} class="ltsuan-plain-link">{email}</a>
+        </div>
+        <div>
+          <div class="ltsuan-eyebrow">SOCIAL</div>
+          <a href="https://www.facebook.com/LETSUANDESIGN" class="ltsuan-plain-link">Facebook</a>
+        </div>
+        <div class="ltsuan-respond-box">
+          <div class="ltsuan-respond-eyebrow">HOW WE RESPOND</div>
+          <p class="ltsuan-respond-copy">Every form submission below is emailed straight to our team, and we reply within two business days. Project details and budget figures are kept confidential — we routinely sign NDAs for government and corporate clients.</p>
+        </div>
+      </div>
+      <div class="ltsuan-form-col">
+        <div class="ltsuan-tally">
+          <iframe data-tally-src="https://tally.so/embed/ja47ME?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" title="Contact form"></iframe>
+        </div>
+        <p class="ltsuan-form-fallback">Trouble loading the form? Email us directly at <a href={`mailto:${email}`} class="ltsuan-accent-link">{email}</a>.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 class="ltsuan-faq-h2">FAQ</h2>
+      {faqs.map((group) => (
+        <div class="ltsuan-faq-group">
+          <div class="ltsuan-faq-group-label">{group.group}</div>
+          <div class="ltsuan-faq-grid">
+            {group.items.map((item) => (
+              <div>
+                <h3 class="ltsuan-faq-q">{item.q}</h3>
+                <p class="ltsuan-faq-a">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <Footer />
+  </div>
+</Layout>
+
+<script>
+  const s = document.createElement('script');
+  s.src = 'https://tally.so/widgets/embed.js';
+  s.onload = () => {
+    // @ts-ignore
+    if (window.Tally) window.Tally.loadEmbeds();
+  };
+  document.body.appendChild(s);
+</script>
+
+<style>
+  .ltsuan-page {
+    background: var(--ltsuan-bg);
+  }
+  #hero {
+    padding: 220px 56px 70px 79px;
+    border-bottom: 1px solid rgba(244, 239, 232, 0.08);
+  }
+  .ltsuan-h1 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(40px, 5.4vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+  }
+  .ltsuan-lead {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(30px, 2.4vw, 40px);
+    line-height: 1.19;
+    color: rgba(244, 239, 232, 0.6);
+    margin: 0;
+    max-width: 40ch;
+  }
+  #contact-body {
+    padding: 90px 56px 160px 79px;
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+  .ltsuan-contact-col {
+    flex: 1;
+    min-width: min(280px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .ltsuan-eyebrow {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 232, 0.6);
+    margin-bottom: 10px;
+  }
+  .ltsuan-address {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    color: rgba(244, 239, 232, 0.85);
+  }
+  .ltsuan-plain-link {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .ltsuan-respond-box {
+    padding: 24px;
+    background: #141414;
+    border: 1px solid rgba(244, 239, 232, 0.08);
+  }
+  .ltsuan-respond-eyebrow {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--ltsuan-accent);
+    margin-bottom: 12px;
+  }
+  .ltsuan-respond-copy {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.7);
+    margin: 0;
+  }
+  .ltsuan-form-col {
+    flex: 1.5;
+    min-width: min(320px, 100%);
+  }
+  .ltsuan-tally {
+    background: #141414;
+    border: 1px solid rgba(244, 239, 232, 0.08);
+    padding: 8px;
+    position: relative;
+    min-height: 200px;
+  }
+  .ltsuan-tally iframe {
+    width: 100%;
+    min-height: 640px;
+    border: none;
+  }
+  .ltsuan-form-fallback {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(244, 239, 232, 0.55);
+    margin: 14px 0 0;
+  }
+  .ltsuan-accent-link {
+    color: var(--ltsuan-accent);
+  }
+  #faq {
+    padding: 0 56px 160px 79px;
+  }
+  .ltsuan-faq-h2 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    color: var(--ltsuan-accent);
+    margin: 0 0 40px;
+  }
+  .ltsuan-faq-group {
+    max-width: 1200px;
+    margin-bottom: 44px;
+  }
+  .ltsuan-faq-group-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgba(244, 239, 232, 0.5);
+    margin: 0 0 20px;
+  }
+  .ltsuan-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+    gap: 40px 48px;
+  }
+  .ltsuan-faq-q {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 19px;
+    margin: 0 0 10px;
+  }
+  .ltsuan-faq-a {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.65);
+    margin: 0;
+  }
+</style>
