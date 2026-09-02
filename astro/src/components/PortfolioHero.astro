@@ -370,7 +370,7 @@ import { avifPath } from '../utils/images';
 
   const total = layers.length;
   let active = 0;
-  let auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let auto = true;
   let transitioning = false;
   let autoTimer: ReturnType<typeof setTimeout> | null = null;
   let textTimer: ReturnType<typeof setTimeout> | null = null;

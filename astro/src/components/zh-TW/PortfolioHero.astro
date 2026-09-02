@@ -370,7 +370,7 @@ import { avifPath } from '../../utils/images';
 
   const total = layers.length;
   let active = 0;
-  let auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let auto = true;
   let transitioning = false;
   let autoTimer: ReturnType<typeof setTimeout> | null = null;
   let textTimer: ReturnType<typeof setTimeout> | null = null;
@@ -432,22 +432,19 @@ import { avifPath } from '../../utils/images';
   });
 
   const PARALLAX_STRENGTH = 18;
-  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduceMotion) {
-    hero.addEventListener('mousemove', (e: MouseEvent) => {
-      const rect = hero.getBoundingClientRect();
-      const px = (e.clientX - rect.left) / rect.width - 0.5;
-      const py = (e.clientY - rect.top) / rect.height - 0.5;
-      const wrap = layers[active].querySelector<HTMLElement>('.pf-hero-img-wrap');
-      if (wrap) {
-        wrap.style.transform = `translate3d(${(-px * PARALLAX_STRENGTH).toFixed(1)}px, ${(-py * PARALLAX_STRENGTH).toFixed(1)}px, 0)`;
-      }
-    });
-    hero.addEventListener('mouseleave', () => {
-      const wrap = layers[active].querySelector<HTMLElement>('.pf-hero-img-wrap');
-      if (wrap) wrap.style.transform = 'translate3d(0, 0, 0)';
-    });
-  }
+  hero.addEventListener('mousemove', (e: MouseEvent) => {
+    const rect = hero.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    const wrap = layers[active].querySelector<HTMLElement>('.pf-hero-img-wrap');
+    if (wrap) {
+      wrap.style.transform = `translate3d(${(-px * PARALLAX_STRENGTH).toFixed(1)}px, ${(-py * PARALLAX_STRENGTH).toFixed(1)}px, 0)`;
+    }
+  });
+  hero.addEventListener('mouseleave', () => {
+    const wrap = layers[active].querySelector<HTMLElement>('.pf-hero-img-wrap');
+    if (wrap) wrap.style.transform = 'translate3d(0, 0, 0)';
+  });
 
   applyAutoUI();
   maybeStartAuto();
