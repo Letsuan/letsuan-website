@@ -1,0 +1,1 @@
+import"./Nav.astro_astro_type_script_index_0_lang.CCa5noVQ.js";import"./hoisted.CYCKlcg7.js";const d=document.createElement("script");d.src="https://tally.so/widgets/embed.js";d.onload=()=>{window.Tally&&window.Tally.loadEmbeds()};document.body.appendChild(d);

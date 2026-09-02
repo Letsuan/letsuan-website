@@ -1,5 +1,11 @@
 ---
-import { slides, responsiveSrcset, avifPath } from '../data/homepage';
+import { slides as defaultSlides, responsiveSrcset, avifPath } from '../data/homepage';
+import type { Slide } from '../data/homepage';
+
+interface Props {
+  slides?: Slide[];
+}
+const { slides = defaultSlides } = Astro.props;
 
 const beamTwinkles = [
   { style: 'left:8%;transform:rotate(3deg);animation-duration:3.4s;animation-delay:0s' },

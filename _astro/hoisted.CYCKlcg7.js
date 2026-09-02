@@ -1,0 +1,1 @@
+import"./Nav.astro_astro_type_script_index_0_lang.CCa5noVQ.js";const t=document.getElementById("ltsuan-footer-cta");t&&/\/contact(?:[?#]|$)/.test(window.location.pathname)&&(t.href="mailto:"+["info","letsuan.com"].join("@"),t.textContent="Email Us");
