@@ -42,6 +42,7 @@ interface Props {
   homeLabel?: string;
   relatedLabel?: string;
   detailLabel?: string;
+  noTitleBreak?: boolean;
 }
 
 const {
@@ -69,6 +70,7 @@ const {
   homeLabel = 'HOME',
   relatedLabel = 'RELATED PROJECTS',
   detailLabel = 'PROJECT DETAIL',
+  noTitleBreak = false,
 } = Astro.props;
 
 const shareUrl = encodeURIComponent(canonical);
@@ -90,7 +92,7 @@ const shareUrl = encodeURIComponent(canonical);
           <span>{eyebrowLeft}</span><span class="ltsuan-detail-eyebrow-rule"></span><span>{eyebrowRight}</span>
         </div>
         <h1 class="ltsuan-detail-h1">
-          <span set:html={breakZhTitle(h1Main)} />
+          <span set:html={noTitleBreak ? h1Main : breakZhTitle(h1Main)} />
           {h1Sub && <span class="ltsuan-detail-h1-sub">{h1Sub}</span>}
         </h1>
         <div class="ltsuan-detail-meta-grid">
