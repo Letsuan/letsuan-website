@@ -1,6 +1,7 @@
 ---
 import { categories, projects } from '../../data/portfolio-zh';
 import { avifPath } from '../../utils/images';
+import { breakZhTitle } from '../../utils/text';
 ---
 
 <section id="filters">
@@ -30,11 +31,7 @@ import { avifPath } from '../../utils/images';
         <div class="ltsuan-pf-text pf-card-text">
           <div>
             {p.meta && <p class="pf-card-meta">{p.meta}</p>}
-            <h2 class="pf-card-title">
-              {p.title.split('，').map((part, i, arr) => (
-                i < arr.length - 1 ? <>{part}，<br /></> : part
-              ))}
-            </h2>
+            <h2 class="pf-card-title" set:html={breakZhTitle(p.title)} />
             <p class="pf-card-subtitle">{p.subtitle}</p>
           </div>
         </div>

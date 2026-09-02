@@ -1,6 +1,7 @@
 ---
 import { heroSlides } from '../../data/portfolio-zh';
 import { avifPath } from '../../utils/images';
+import { breakZhTitle } from '../../utils/text';
 ---
 
 <section id="pf-hero">
@@ -26,11 +27,7 @@ import { avifPath } from '../../utils/images';
         <div class="pf-hero-content">
           <h2 class="pf-hero-title">
             <span class="pf-hero-title-mask">
-              <span class:list={['pf-reveal-title', { 'is-revealed': isActive }]}>
-                {slide.title.split('，').map((part, i, arr) => (
-                  i < arr.length - 1 ? <>{part}，<br /></> : part
-                ))}
-              </span>
+              <span class:list={['pf-reveal-title', { 'is-revealed': isActive }]} set:html={breakZhTitle(slide.title)} />
             </span>
           </h2>
           <div class="pf-hero-row">

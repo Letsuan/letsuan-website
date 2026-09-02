@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { avifPath } from '../utils/images';
+import { breakZhTitle } from '../utils/text';
 
 export interface MetaField {
   label: string;
@@ -89,7 +90,7 @@ const shareUrl = encodeURIComponent(canonical);
           <span>{eyebrowLeft}</span><span class="ltsuan-detail-eyebrow-rule"></span><span>{eyebrowRight}</span>
         </div>
         <h1 class="ltsuan-detail-h1">
-          {h1Main}
+          <span set:html={breakZhTitle(h1Main)} />
           {h1Sub && <span class="ltsuan-detail-h1-sub">{h1Sub}</span>}
         </h1>
         <div class="ltsuan-detail-meta-grid">
