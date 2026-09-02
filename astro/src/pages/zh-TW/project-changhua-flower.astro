@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 灰階中的亮點";
+const description = "灰階中的亮點 — 從畸零基地到打卡地標––2023彰化花卉博覽會 Ørsted 展區";
+const canonical = "https://letsuan.com/zh-TW/project-changhua-flower";
+const ogImage = "https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-changhua-flower" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "灰階中的亮點", "description": "灰階中的亮點 — 從畸零基地到打卡地標––2023彰化花卉博覽會 Ørsted 展區", "url": "https://letsuan.com/zh-TW/project-changhua-flower", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2023", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "灰階中的亮點", "item": "https://letsuan.com/zh-TW/project-changhua-flower"}]}];
+const eyebrowLeft = "活動 — 2023";
+const eyebrowRight = "溪州公園";
+const h1Main = "灰階中的亮點";
+const h1Sub = "從畸零基地到打卡地標––2023彰化花卉博覽會 Ørsted 展區";
+const metaFields = [{"label": "業主", "value": "沃旭能源／彰化縣政府"}, {"label": "地點", "value": "彰化，臺灣"}, {"label": "年份", "value": "2023"}, {"label": "類別", "value": "平面設計、工程施作、園藝設計"}];
+const bodyHtml = "<h2>沒人要的畸零角落，變成全園最多人排隊拍照的地方</h2>\n<h2>副標：Ørsted沃旭能源｜2023彰化花卉博覽會企業展區</h2>\n<p>沃旭能源參與「2023彰化花卉博覽會」的企業展區，以「風動綠色・永續彰化」為策展主軸。分配到的基地，是園區裡一處條件受限的畸零角落––既存水泥階與水泥墩結構卡在那裡，動線跟陳列規劃都被這些硬體限制卡死。</p>\n<h2>把嫌棄的水泥墩，變成牆的地基</h2>\n<p>我們沒有選擇繞開這些既存結構，而是把水泥墩重新定義為主形象牆的固定基礎––這個決定同時解決了兩件事：戶外展示長期承受風雨侵蝕、氣候變化造成的結構安全疑慮，有了現成的混凝土基礎當靠山；而這些原本嫌棄的硬體限制，也順勢整合進整體景觀敘事裡，變成結構效能跟空間美學的雙重解答。</p>\n<p>植栽計畫也有自己的難題：展期正好碰上冬季花期淡季，能選的花材品項有限。我們比對研究後，選定色彩喜氣的灌木類植栽取代傳統應景花卉，再考量冬季常見的陰霾天候––環境明度整體偏低––刻意採取高彩度、高明度的視覺配色策略，讓展區在一片灰階基調中形成強烈對比，意外成了全園最亮眼的一塊。植栽牆面搭配沃旭大彰化離岸風場的意象背板，把企業的永續價值，轉譯成觀眾看得懂、感受得到的空間語彙。</p>\n<p>最終，這個條件受限的畸零基地，成了春節期間全園最具人氣的拍照打卡地標––結構限制沒有被繞過，而是被直接蓋進了牆裡。</p>";
+const relatedProjects = [{"href": "./project-orsted-energy", "label": "與風共榮"}, {"href": "./project-air-force-academy", "label": "九十年的天空，值得被好好述說"}, {"href": "./project-world-semiconductors", "label": "半導體的世界"}];
+const nextHref = "./project-yokai-world";
+const images = [{"src": "../images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg", "alt": "Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination — Ørsted Pavilion curved feature wall with wind turbines and ocean mural at dusk"}, {"src": "../images/changhua-flower-xizhou-park-pathway-with-concrete-planters-letsuan-design.jpg", "alt": "Xizhou Park pathway with concrete planters and glass building"}, {"src": "../images/changhua-flower-orsted-pavilion-feature-wall-among-flower-letsuan-design.jpg", "alt": "Ørsted Pavilion feature wall among flower beds at sunset"}, {"src": "../images/changhua-flower-qr-code-signage-post-among-flower-letsuan-design.jpg", "alt": "QR code signage post among flower beds"}, {"src": "../images/changhua-flower-child-flying-a-kite-in-front-letsuan-design.jpg", "alt": "Child flying a kite in front of Ørsted feature wall"}, {"src": "../images/changhua-flower-zodiac-rabbit-cutout-signage-among-flower-letsuan-design.jpg", "alt": "Zodiac rabbit cutout signage among flower beds"}, {"src": "../images/changhua-flower-orsted-branding-sign-with-clownfish-cutout-letsuan-design.jpg", "alt": "Ørsted branding sign with clownfish cutout among plants"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

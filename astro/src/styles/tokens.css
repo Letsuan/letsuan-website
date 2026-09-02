@@ -8,7 +8,7 @@ body {
   margin: 0;
   background: var(--ltsuan-bg);
   color: var(--ltsuan-text);
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Noto Sans TC', sans-serif;
 }
 a {
   color: var(--ltsuan-accent);

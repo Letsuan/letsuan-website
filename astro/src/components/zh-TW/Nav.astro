@@ -1,0 +1,324 @@
+---
+import { navMenuItems, navFeaturedItems } from '../../data/homepage-zh';
+
+interface Props {
+  active: string;
+  enHref?: string;
+}
+const { active, enHref = '/' } = Astro.props;
+---
+
+<nav class="ltsuan-nav" id="ltsuan-nav">
+  <div class="ltsuan-nav-inner">
+    <a href="/zh-TW/" class="ltsuan-nav-logo-link">
+      <img src="/assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" class="ltsuan-nav-logo" width="178" height="21" />
+    </a>
+    <div class="ltsuan-nav-right">
+      <div class="ltsuan-nav-lang">
+        <a href={enHref} class="ltsuan-nav-lang-pill ltsuan-nav-lang-inactive">EN</a>
+        <span class="ltsuan-nav-lang-pill ltsuan-nav-lang-active">中文</span>
+      </div>
+      <button id="ltsuan-menu-btn" class="ltsuan-menu-btn" aria-expanded="false" aria-controls="ltsuan-menu-overlay">
+        <span id="ltsuan-menu-label">選單</span>
+        <span class="ltsuan-menu-bars">
+          <span id="ltsuan-bar1" class="ltsuan-menu-bar"></span>
+          <span id="ltsuan-bar2" class="ltsuan-menu-bar"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="ltsuan-menu-overlay" class="ltsuan-menu-overlay">
+  <div class="ltsuan-menu-overlay-inner">
+    <div class="ltsuan-menu-grid">
+      <div class="ltsuan-menu-links">
+        {navMenuItems.map((item) => (
+          <a
+            href={item.href}
+            class:list={['ltsuan-menu-link', { 'is-active': item.key === active }]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+      <div class="ltsuan-menu-featured">
+        <div class="ltsuan-menu-featured-label">精選</div>
+        <div class="ltsuan-menu-featured-list">
+          {navFeaturedItems.map((f) => (
+            <a href={f.href} class="ltsuan-menu-featured-item">
+              <span class="ltsuan-menu-featured-num">{f.num}</span>
+              <span>
+                <span class="ltsuan-menu-featured-title">{f.title}</span>
+                <span class="ltsuan-menu-featured-meta">{f.meta}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="ltsuan-menu-footer">
+      <span>Le Tsuan Design Studio — Since 2014</span>
+      <span>© 2026 LE TSUAN DESIGN</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ltsuan-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 56px;
+    background: rgba(10, 10, 10, 0.15);
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    height: 45px;
+  }
+  .ltsuan-nav.is-scrolled {
+    background: rgba(10, 10, 10, 0.92);
+  }
+  .ltsuan-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  .ltsuan-nav-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .ltsuan-nav-logo {
+    height: 25.5px;
+    width: auto;
+    display: block;
+    margin-left: 23px;
+  }
+  .ltsuan-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .ltsuan-nav-lang {
+    display: flex;
+    gap: 6px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+  }
+  .ltsuan-nav-lang-pill {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+  .ltsuan-nav-lang-active {
+    background: #8cc81e;
+    color: #0a0a0a;
+  }
+  .ltsuan-nav-lang-inactive {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .ltsuan-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: #f4efe8;
+    cursor: pointer;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    padding: 14px 4px;
+    min-height: 44px;
+  }
+  .ltsuan-menu-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 20px;
+  }
+  .ltsuan-menu-bar {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #f4efe8;
+    transition: transform 0.3s ease;
+  }
+  .ltsuan-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(10, 10, 10, 0.97);
+    backdrop-filter: blur(12px);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .ltsuan-menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .ltsuan-menu-overlay-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 56px 64px 79px;
+    overflow: auto;
+  }
+  .ltsuan-menu-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+  }
+  .ltsuan-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 27px;
+  }
+  .ltsuan-menu-link {
+    display: block;
+    padding: 4px 0;
+    text-decoration: none;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(28px, 5.2vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    color: #f4efe8;
+    opacity: 0.9;
+  }
+  .ltsuan-menu-link.is-active {
+    color: #8cc81e;
+    opacity: 1;
+  }
+  .ltsuan-menu-link:hover {
+    color: #8cc81e;
+    opacity: 1;
+  }
+  .ltsuan-menu-featured {
+    padding-top: 12px;
+  }
+  .ltsuan-menu-featured-label {
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+  }
+  .ltsuan-menu-featured-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .ltsuan-menu-featured-item {
+    display: flex;
+    gap: 16px;
+    text-decoration: none;
+    color: #f4efe8;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+    transition: opacity 0.2s ease;
+  }
+  .ltsuan-menu-featured-item:hover {
+    opacity: 0.6;
+  }
+  .ltsuan-menu-featured-num {
+    font-size: 15px;
+    opacity: 0.4;
+    margin-top: 4px;
+  }
+  .ltsuan-menu-featured-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .ltsuan-menu-featured-meta {
+    display: block;
+    font-size: 15px;
+    opacity: 0.5;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+  }
+  .ltsuan-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  @media (max-width: 719px) {
+    .ltsuan-nav {
+      padding: 14px 12px;
+    }
+    .ltsuan-nav-logo {
+      height: 17px;
+    }
+    .ltsuan-nav-right {
+      gap: 6px;
+    }
+    .ltsuan-nav-lang {
+      gap: 4px;
+    }
+    .ltsuan-nav-lang-pill {
+      padding: 14px 8px;
+    }
+    .ltsuan-menu-btn {
+      gap: 6px;
+      padding: 14px 2px;
+    }
+    .ltsuan-menu-overlay-inner {
+      padding: 100px 24px 40px 35px;
+    }
+    .ltsuan-menu-grid {
+      grid-template-columns: 1fr;
+    }
+    .ltsuan-menu-link {
+      font-size: clamp(26px, 9vw, 40px);
+    }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('ltsuan-nav');
+  const onScroll = () => {
+    nav?.classList.toggle('is-scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const menuBtn = document.getElementById('ltsuan-menu-btn');
+  const menuLabel = document.getElementById('ltsuan-menu-label');
+  const overlay = document.getElementById('ltsuan-menu-overlay');
+  const bar1 = document.getElementById('ltsuan-bar1');
+  const bar2 = document.getElementById('ltsuan-bar2');
+  let open = false;
+  menuBtn?.addEventListener('click', () => {
+    open = !open;
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuLabel!.textContent = open ? '關閉' : '選單';
+    overlay?.classList.toggle('is-open', open);
+    bar1!.style.transform = open ? 'rotate(45deg) translateY(2.5px)' : 'none';
+    bar2!.style.transform = open ? 'rotate(-45deg) translateY(-2.5px)' : 'none';
+  });
+</script>

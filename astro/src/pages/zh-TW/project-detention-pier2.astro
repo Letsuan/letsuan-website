@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 返校";
+const description = "返校 — 實境體驗展";
+const canonical = "https://letsuan.com/zh-TW/project-detention-pier2";
+const ogImage = "https://letsuan.com/images/detention-pier2-detention-reality-experience-metal-wall-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-detention-pier2" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "返校", "description": "返校 — 實境體驗展", "url": "https://letsuan.com/zh-TW/project-detention-pier2", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/detention-pier2-detention-reality-experience-metal-wall-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2020–2021", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "返校", "item": "https://letsuan.com/zh-TW/project-detention-pier2"}]}];
+const eyebrowLeft = "展覽 — 2021";
+const eyebrowRight = "松山文創園區、駁二藝術特區";
+const h1Main = "返校";
+const h1Sub = "實境體驗展";
+const metaFields = [{"label": "業主", "value": "松山文創園區、駁二藝術特區"}, {"label": "地點", "value": "台北、高雄，臺灣"}, {"label": "年份", "value": "2020–2021"}, {"label": "面積", "value": "松山文創園區：1,210 ㎡、駁二藝術特區：1,190.2 ㎡"}, {"label": "類別", "value": "展覽設計、室內設計、平面設計、視覺設計、工程施作"}];
+const bodyHtml = "<h2>恐怖片的邏輯，遇上消防法規的邏輯</h2>\n<h2>副標：返校實境體驗展｜991.737㎡，一場在消防法規縫隙裡蓋出來的恐懼</h2>\n<p>本展改編自赤燭遊戲2017年推出、造成轟動熱賣的懸疑恐怖PC遊戲《返校》，是團隊首次嘗試把單機遊戲轉化為多層次的沉浸式體驗展覽。991.737㎡的翠華中學，重新在松山文創園區長了出來，設有教室區、廁所區、校長室、音樂教室、輔導室、保健室與「無盡走廊」，訪客扮演讀書會成員，走進女主角方芮欣所經歷的循環之中。</p>\n<h2>先讓一整間校園，長出六十年的痕跡</h2>\n<p>我們實地採集1960年代臺灣校園物件––大同傳統風扇、黑漆撥號電話、轉盤式舊收音機、木製雙人課桌椅、手搖警報器、威權時期的標語框與舊式香爐神壇。真的找不到的年代物件，就依考證資料重新打樣，再用專業仿舊工藝處理，確保材質、色澤與磨損痕跡跟真實文物無異，連黑板上的粉筆字跡、「檢舉匪諜」這類警語字體、公文書寫格式，都得嚴格考證那個年代該有的樣子。牆體用水泥漆塗佈搭配拍打法、潑灑法與高壓風乾，堆疊出走廊壁面剝落、水痕、壁癌與油污感；木質課桌椅經人工刮痕、燒灼、噴砂做舊；金屬鐵窗與檔案櫃做立體鏽蝕塗料處理––所有做舊牆面最外層都塗覆防刮透明保護漆，確保巡迴搬運或大量遊客觸碰時不掉色、不破損。</p>\n<h2>讓觀眾害怕的，不只是眼睛看到的</h2>\n<p>立體聲景用多通道隱藏式定向喇叭，把收音機雜訊、遠處腳步聲、雨聲、校園鐘聲與低頻心跳聲做空間定位，製造出強烈的心理不安感；氣味工程透過微量氣化擴散系統，在特定區域精準施放老舊木材潮濕味、金屬血腥味、線香焚燒味與保健室消毒水味，直接觸發大腦深層記憶與恐懼。氣壓與紅外線自動化機關配合遊客動線踩踏感應，觸發閃燈、門窗自動砰關、跌落物件；NPC演員的隱蔽避難點與突襲動線，配合聲光引導達到最佳驚嚇效果––機關觸發時機與演員突襲節奏都經過精密設計與反覆測試，讓「尖叫聲」成為整場體驗最真實的情緒回饋。教室窗戶用實體水霧產生雨滴拍打效果，搭配冷風、氣味與聲響多重聯動；部分場景牆面與道具局部塗佈螢光顏料，搭配UV光源切換，在特定劇情段落顯現隱藏訊息，於暗黑環境中製造突如其來的視覺衝擊。</p>\n<h2>亮綠色逃生燈，跟這場展覽的靈魂互相矛盾</h2>\n<p>這才是整個案子最核心的難題：遊戲體驗要求極低照度、迷宮封閉感、大量陳舊木料；消防法規卻要求高明亮度指示、無障礙寬敞動線、嚴格防焰材質––兩邊完全對立。我們用四套「隱形設計手法」，在完全符合法規的前提下，維持住100%的遊戲恐怖感。</p>\n<p>逃生指示燈是第一個矛盾點：亮綠色的EXIT燈，只要一直亮著，就會毀掉整個低照度氛圍。我們做了智能疏散照明系統––平時透過DMX中央連動控制，把逃生指示燈照度降到法規許可的最低極限，或採用遮罩式結構、只向下投射極微弱的引導光；一旦感應器觸發或有人按下緊急按鈕，全場所有隱藏式照明與亮綠色避難指示燈，會在0.1秒內自動切換成100%緊急全亮狀態，同時自動解鎖所有電子暗門。第二個矛盾點是材質：大量木質與復古道具，天生就不符合防焰一級規範。我們把所有木質道具與裝修材料送去做奈米防焰藥劑深層浸漬處理，表面再加飾防焰一級認證的仿真難燃複合材料塗層，完整保留手工做舊的質感與紋理，同時滿足法規；窗簾、學生制服、布袋戲台布幔這類布料道具，也全數送去做無色無味的奈米防焰藥劑浸漬，取得國家防焰標籤。第三個矛盾是動線：主動線淨寬維持在1.2到1.5m以上，符合公共場所疏散標準，但牆面透過錯位擺設、懸掛廢棄物與低照度暗角，在視覺上營造出只能容納單人通過的狹窄壓迫感；長走廊與大型場景中段，還藏著跟做舊牆面融為一體的偽裝暗門，平時是演職人員的通道，緊急時能直接向外推開快速疏散。第四個矛盾是低光源下的安全––全區保持無階梯的平地面，微幅高低差都用緩坡處理，牆角踢腳板嵌入波長不破壞暗視覺的極低功率微光LED帶，既防止遊客絆倒，又不會破壞頭頂那片精心維持的黑暗。</p>\n<p>四道隱形設計，解開的是同一個矛盾：一場真正嚇人的展覽，跟一座真正安全的建築，從來不是二選一。</p>";
+const relatedProjects = [{"href": "./project-detective-conan-taipei", "label": "名偵探柯南"}, {"href": "./project-nmh-highlights", "label": "館藏精選文物展"}, {"href": "./project-tibetan-thangka", "label": "移動寺廟"}];
+const nextHref = "./project-story-telling";
+const images = [{"src": "../images/detention-pier2-detention-reality-experience-metal-wall-letsuan-design.jpg", "alt": "Detention Reality Experience metal wall texture with lighting detail"}, {"src": "../images/detention-pier2-hospital-bed-scene-with-eye-chart-letsuan-design.jpg", "alt": "Hospital bed scene with eye chart light box"}, {"src": "../images/detention-pier2-recreated-office-desk-with-green-bankers-letsuan-design.jpg", "alt": "Recreated office desk with green banker's lamp and rotary phone"}, {"src": "../images/detention-pier2-dark-corridor-with-double-doors-letsuan-design.jpg", "alt": "Dark corridor with double doors and torn paper on walls"}, {"src": "../images/detention-pier2-recreated-bathroom-sink-area-with-dripping-letsuan-design.jpg", "alt": "Recreated bathroom sink area with dripping faucets and graffiti mirror"}, {"src": "../images/detention-pier2-guard-walking-down-corridor-lined-letsuan-design.jpg", "alt": "Guard walking down corridor lined with hanging puppets and lantern"}, {"src": "../images/detention-pier2-ceiling-of-hanging-traditional-puppets-letsuan-design.jpg", "alt": "Ceiling of hanging traditional puppets and red lantern"}, {"src": "../images/detention-pier2-museum-style-display-case-with-cultural-letsuan-design.jpg", "alt": "Museum-style display case with cultural artifacts"}, {"src": "../images/detention-pier2-rusted-cell-door-latch-detail-letsuan-design.jpg", "alt": "Rusted cell door latch detail"}, {"src": "../images/detention-pier2-iron-shackles-hanging-on-concrete-wall-letsuan-design.jpg", "alt": "Iron shackles hanging on concrete wall"}, {"src": "../images/detention-pier2-recreated-prison-guard-room-with-desk-letsuan-design.jpg", "alt": "Recreated prison guard room with desk lamp and radio"}, {"src": "../images/detention-pier2-visitors-watching-projection-screen-inside-letsuan-design.jpg", "alt": "Visitors watching projection screen inside dark exhibit room"}, {"src": "../images/detention-pier2-red-exhibition-wall-introducing-the-detention-letsuan-design.jpg", "alt": "Red exhibition wall introducing the Detention game story with character art"}, {"src": "../images/detention-pier2-red-history-timeline-wall-with-display-letsuan-design.jpg", "alt": "Red history timeline wall with display cases"}, {"src": "../images/detention-reality-experience-songshan-01-letsuan-design.jpg", "alt": "Detention Pier2 mask scene"}, {"src": "../images/detention-reality-experience-songshan-02-letsuan-design.jpg", "alt": "Detention Pier2 signage"}, {"src": "../images/detention-reality-experience-songshan-03-letsuan-design.jpg", "alt": "Detention Pier2 immersive scene wide view"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

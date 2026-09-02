@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 證券公司辦公室";
+const description = "證券公司辦公室 — 現代辦公空間";
+const canonical = "https://letsuan.com/zh-TW/project-securities-office";
+const ogImage = "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-securities-office" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "證券公司辦公室", "description": "證券公司辦公室 — 現代辦公空間", "url": "https://letsuan.com/zh-TW/project-securities-office", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "證券公司辦公室", "item": "https://letsuan.com/zh-TW/project-securities-office"}]}];
+const eyebrowLeft = "室內設計 — 2022";
+const eyebrowRight = "新北市";
+const h1Main = "證券公司辦公室";
+const h1Sub = "現代辦公空間";
+const metaFields = [{"label": "業主", "value": "證券公司"}, {"label": "地點", "value": "新北市，臺灣"}, {"label": "年份", "value": ""}, {"label": "類別", "value": "室內設計、工程施作、室內裝修業登記"}];
+const bodyHtml = "<p>位於新北市板橋區，本案以當代、高質感為基調，打造證券公司辦公空間。入口特色弧形牆與訂製把手定下低調優雅的第一印象；空間配置含專屬等候區、茶水休憩區、會議室、主管辦公室、開放式辦公區與高階電信機房。建材與細部全程把關，由樂全設計自有工程團隊施作完成。</p>";
+const relatedProjects = [{"href": "./project-world-semiconductors", "label": "半導體的世界"}, {"href": "./project-detention-pier2", "label": "返校"}, {"href": "./project-orsted-energy", "label": "與風共榮"}];
+const nextHref = "./project-tccge-deck";
+const images = [{"src": "../images/securities-company-office-design-02-letsuan-design.jpg", "alt": "Securities Company Office waiting area"}, {"src": "../images/securities-company-office-design-01-letsuan-design.jpg", "alt": "Securities Company Office entrance"}, {"src": "../images/securities-company-office-design-03-letsuan-design.jpg", "alt": "Securities Company Office boardroom"}, {"src": "../images/securities-company-office-design-04-letsuan-design.jpg", "alt": "Securities Company Office workstation"}, {"src": "../images/securities-company-office-design-05-letsuan-design.jpg", "alt": "Securities Company Office corridor"}, {"src": "../images/securities-company-office-design-06-letsuan-design.jpg", "alt": "Securities Company Office executive room"}, {"src": "../images/securities-company-office-design-07-letsuan-design.jpg", "alt": "Securities Company Office feature wall"}, {"src": "../images/securities-company-office-design-08-letsuan-design.jpg", "alt": "Securities Company Office reception view"}, {"src": "../images/securities-company-office-design-09-letsuan-design.jpg", "alt": "Securities Company Office renovation in progress"}, {"src": "../images/securities-company-office-design-10-letsuan-design.jpg", "alt": "Securities Company Office renovation detail, wall finishing"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

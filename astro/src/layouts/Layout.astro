@@ -7,24 +7,30 @@ interface Props {
   canonical: string;
   ogImage: string;
   jsonLd: object | object[];
+  lang?: string;
+  alternateHrefs?: { hreflang: string; href: string }[];
 }
 
-const { title, description, canonical, ogImage, jsonLd } = Astro.props;
+const { title, description, canonical, ogImage, jsonLd, lang = 'en', alternateHrefs = [] } = Astro.props;
 const jsonLdBlocks = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
+{alternateHrefs.map((a) => (
+  <link rel="alternate" hreflang={a.hreflang} href={a.href} />
+))}
 <meta name="robots" content="index, follow" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
@@ -32,7 +38,7 @@ const jsonLdBlocks = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 <meta property="og:url" content={canonical} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:site_name" content="Le Tsuan Design" />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content={ogLocale} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />

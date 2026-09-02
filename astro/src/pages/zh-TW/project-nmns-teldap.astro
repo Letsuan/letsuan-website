@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 科博館數位典藏";
+const description = "科博館數位典藏 — 數位典藏展";
+const canonical = "https://letsuan.com/zh-TW/project-nmns-teldap";
+const ogImage = "https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-nmns-teldap" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "科博館數位典藏", "description": "科博館數位典藏 — 數位典藏展", "url": "https://letsuan.com/zh-TW/project-nmns-teldap", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2013", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "科博館數位典藏", "item": "https://letsuan.com/zh-TW/project-nmns-teldap"}]}];
+const eyebrowLeft = "展覽 — 2013";
+const eyebrowRight = "國立自然科學博物館";
+const h1Main = "科博館數位典藏";
+const h1Sub = "數位典藏展";
+const metaFields = [{"label": "業主", "value": "國立自然科學博物館"}, {"label": "地點", "value": "台中，臺灣"}, {"label": "年份", "value": "2013"}, {"label": "類別", "value": "工程施作"}];
+const bodyHtml = "<h2>弧線是圓的，落差不是</h2>\n<p>科博館數位典藏服務區</p>\n<p>配合「數位典藏與數位學習國家型科技計畫」在館內設置的常設服務據點，我們承接「數位典藏＠學習」服務區的空間工程，把原本平面化的資訊櫃檯，轉化為一個有流動感的實體服務節點，讓民眾能就近查詢典藏內容、體驗數位學習資源。空間設計以大弧形量體作為服務區主結構，木作曲面基座呼應館內既有的圓弧動線語彙，讓服務櫃檯不只是機能物件，也成為空間裡的視覺焦點––頂部懸吊的葉片狀圓形燈罩造型，則強化了這個區域的識別性與科技感。</p>\n<h2>一體成形的弧形櫃檯，容不下一絲接縫</h2>\n<p>服務區地坪採架高地板工程，配合機電線路預留與現場水平調整需求；牆面與展示櫃體全面採用美耐板貼飾，兼顧耐磨性與整體視覺一致性。服務櫃檯主體以木作曲面拼接工法打底，現場逐段裁切、貼合多層夾板構築出連續弧形結構，表面再整體包覆人造石，配合曲面造型精準裁切拼接，呈現無接縫的一體成形質感。立面局部採用膠合超級白玻璃（低鐵玻璃）訂製S型彎弧玻璃，部分區段須經二次彎弧加工方能成形––加工難度極高，還得跟木作曲面精準貼合、無縫銜接，對材料選用與現場工序掌控要求相當嚴謹。服務區同時整合多組觸控查詢站與資訊看板，供民眾操作查詢典藏資料庫、參與數位學習互動內容。</p>\n<h2>120公分的落差，圖紙上看不出來</h2>\n<p>施工過程中，我們發現施工圖跟現場實際尺寸有約120公分的落差––這不是小數點誤差，是足以讓整套弧形結構對不起來的差距。經現場複測後，我們即時修正相關構件尺寸與放樣基準，確保弧形結構與整體造型仍能如期銜接完成。原始鍵盤架的設計，在實際操作動線上也有所侷限，我們同步檢討調整了它的結構配置，改善使用者的操作角度與空間收納效益。</p>\n<p>服務區與互動查詢站整合為一體，兼具服務、導覽、體驗三種功能，動線設計呼應館內既有的空間語彙，融入整體展示環境。</p>";
+const relatedProjects = [{"href": "./project-story-telling", "label": "五千年的沉默"}, {"href": "./project-wang-ye-donggang", "label": "代天巡狩"}, {"href": "./project-dragon-to-beast", "label": "從龍到獸"}];
+const nextHref = "./project-hakka-culture";
+const images = [{"src": "../images/nmns-teldap-digital-archives-01-letsuan-design.jpg", "alt": "NMNS TELDAP exhibit space"}, {"src": "../images/nmns-teldap-digital-archives-03-letsuan-design.jpg", "alt": "NMNS TELDAP interactive learning"}, {"src": "../images/nmns-teldap-digital-archives-02-letsuan-design.jpg", "alt": "NMNS TELDAP display"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

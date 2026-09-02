@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 草皮比作品更需要被保護";
+const description = "草皮比作品更需要被保護 — 2013亞洲藝術雙年展";
+const canonical = "https://letsuan.com/zh-TW/project-asian-art-biennial";
+const ogImage = "https://letsuan.com/images/asian-art-biennial-01-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-asian-art-biennial" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "草皮比作品更需要被保護", "description": "草皮比作品更需要被保護 — 2013亞洲藝術雙年展", "url": "https://letsuan.com/zh-TW/project-asian-art-biennial", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/asian-art-biennial-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2013-2014", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "草皮比作品更需要被保護", "item": "https://letsuan.com/zh-TW/project-asian-art-biennial"}]}];
+const eyebrowLeft = "展覽 — 2013";
+const eyebrowRight = "國立臺灣美術館";
+const h1Main = "草皮比作品更需要被保護";
+const h1Sub = "2013亞洲藝術雙年展";
+const metaFields = [{"label": "業主", "value": "國立臺灣美術館"}, {"label": "地點", "value": "台中，臺灣"}, {"label": "年份", "value": "2013-2014"}, {"label": "類別", "value": "工程施作"}];
+const bodyHtml = "<h2>2013亞洲藝術雙年展《I LOVE TAIWAN》｜10座燈箱裝置，與一片不能受傷的草皮</h2>\n<p>2013年，藝術家團隊LuxuryLogico參與國立臺灣美術館主辦的「2013亞洲藝術雙年展：日常生活」，以《I LOVE TAIWAN》為題，用大量燈箱裝置把這句臺灣人朗朗上口的口號，轉化為一件散布於戶外草坪上、尺寸可變的裝置藝術作品。我們負責這件戶外藝術品的現場施工製作。</p>\n<h2>草皮，是最脆弱也最重要的舞台</h2>\n<p>這件作品的展示基地是國美館戶外的大片草坪，草皮既是作品的背景，也是作品呈現效果的一部分––燈箱錯落佇立於綠地之上，入夜點亮，形成一片光的語景。這次施工核心的要求只有一個：完成大量燈箱的固定與配線，同時絕不能傷害草坪本身。這代表我們沒辦法用一般戶外工程慣用的重型機具進場、大範圍開挖基礎，或是留下裸露泥地與碾壓痕跡––草坪的完整性，直接關係到作品的美感，也關係到國美館園區日常維護的責任。</p>\n<h2>怎麼蓋，才不留痕跡</h2>\n<p>面對這個限制，我們掌握了幾個現場原則：每一件燈箱的立柱與底座，我們選擇不澆置混凝土，改為設計專屬的底部基礎構件來承重與支撐，採低擾動的固定方式，避免大面積開挖；10座燈箱之間的電源線路，盡量沿既有硬鋪面或以地下淺埋方式處理，減少反覆在草皮上拖拉施工；捨棄大型機具，改以人力與小型工具分批、分區施作，讓每一區草皮承受的踩踏與載重都控制在可恢復的範圍內；主要動線與工作區域鋪設大面積帆布，把人員走動、工具堆放與材料運送全部隔在帆布之上，草皮完全不直接承受踩踏與載重。裝置定位完成後，逐區檢視草皮狀態，針對局部壓痕、土層鬆動的地方回填整平，確保開展前草坪維持原有的平整。考量展期結束後的拆除，燈箱結構與相關材料採用可回收率約90%的組件與工法，展覽落幕後能大量重複利用或回收，減少一次性戶外裝置對環境造成的負擔。</p>\n<p>在兼顧展覽效果與場地保護的前提下，這件由10座燈箱組成的《I LOVE TAIWAN》，順利在國美館戶外草坪上完成佈設，白日隱身於綠意之間，入夜後點亮成一片文字光海。好的展場施工，不只是把作品「立起來」，更要在有限的條件下，把基地原有的樣貌完整地保留下來。</p>";
+const relatedProjects = [{"href": "./project-yokai-world", "label": "ゲゲゲの鬼太郎"}, {"href": "./project-westernmost-point", "label": "臺灣極西點"}, {"href": "./project-detention-pier2", "label": "返校"}];
+const nextHref = "./project-nmns-teldap";
+const images = [{"src": "../images/asian-art-biennial-i-love-taiwan-zhuyin-entrance-sign-letsuan-design.jpg", "alt": "The Lawn Needed More Protection Than the Artwork Did — Illuminated Zhuyin phonetic symbols spelling out 'I LOVE TAIWAN' at the National Taiwan Museum of Fine Arts entrance at night, part of the 2013 Asian Art Biennial"}, {"src": "../images/asian-art-biennial-02-letsuan-design.jpg", "alt": "Illuminated Zhuyin phonetic symbols spelling 'I LOVE TAIWAN' on the museum lawn at night, with the National Taiwan Museum of Fine Arts building and 2013 Asian Art Biennial banner behind"}, {"src": "../images/asian-art-biennial-love-taiwan-led-light-installation-on-lawn-letsuan-design.jpg", "alt": "Illuminated LED light installation spelling 'I Love Taiwan' in Zhuyin phonetic script on the lawn at night"}, {"src": "../images/asian-art-biennial-03-letsuan-design.jpg", "alt": "Construction process: a worker hand-digs a shallow cable trench (left) while light-box materials are laid out on the lawn (right), avoiding heavy machinery to protect the grass"}, {"src": "../images/asian-art-biennial-04-letsuan-design.jpg", "alt": "Steel post frames and coiled cabling for the light-box installations laid out on the museum lawn before assembly"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

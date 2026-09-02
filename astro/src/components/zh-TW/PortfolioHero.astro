@@ -1,0 +1,436 @@
+---
+import { heroSlides } from '../../data/portfolio-zh';
+import { avifPath } from '../../utils/images';
+---
+
+<section id="pf-hero">
+  {heroSlides.map((slide, i) => {
+    const isActive = i === 0;
+    return (
+      <div class:list={['pf-hero-layer', { 'is-active': isActive }]} data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
+        <div class="pf-hero-img-wrap">
+          <picture>
+            <source type="image/avif" srcset={avifPath(slide.realImg)} />
+            <img
+              class="pf-hero-img"
+              alt={slide.alt}
+              src={slide.realImg}
+              decoding="async"
+              fetchpriority={i === 0 ? 'high' : undefined}
+            />
+          </picture>
+        </div>
+        <div class="pf-hero-overlay pf-hero-overlay-1"></div>
+        <div class="pf-hero-overlay pf-hero-overlay-2"></div>
+        <div class="pf-hero-overlay pf-hero-overlay-3"></div>
+        <div class="pf-hero-content">
+          <div class="pf-hero-eyebrow-mask">
+            <span class:list={['pf-reveal-eyebrow', { 'is-revealed': isActive }]}>{slide.num} / {slide.category}</span>
+          </div>
+          <h2 class="pf-hero-title">
+            <span class="pf-hero-title-mask">
+              <span class:list={['pf-reveal-title', { 'is-revealed': isActive }]}>{slide.title}</span>
+            </span>
+          </h2>
+          <div class="pf-hero-row">
+            <div class="pf-hero-subtitle-mask">
+              <p class:list={['pf-hero-subtitle', 'pf-reveal-subtitle', { 'is-revealed': isActive }]}>{slide.subtitle}</p>
+            </div>
+            <div class="pf-hero-cta-mask">
+              <div class:list={['pf-reveal-cta', { 'is-revealed': isActive }]}>
+                <a href={slide.href} class="pf-hero-cta">查看專案 <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  })}
+
+  <div class="pf-hero-dots">
+    {heroSlides.map((slide, i) => (
+      <button class="pf-dot-btn" data-idx={i} aria-label={`前往投影片：${slide.title}`}>
+        <span class:list={['pf-dot', { 'is-active': i === 0 }]}></span>
+      </button>
+    ))}
+  </div>
+
+  <div class="pf-hero-bar">
+    <div class="pf-hero-auto-group">
+      <span class="pf-hero-auto-label">自動</span>
+      <button id="pf-auto-toggle" class="pf-auto-toggle is-on" aria-label="切換自動輪播" aria-pressed="true">
+        <span id="pf-auto-knob" class="pf-auto-knob is-on"></span>
+      </button>
+      <span id="pf-auto-status" class="pf-hero-auto-status">開啟</span>
+    </div>
+    <div class="pf-hero-counter-group">
+      <span id="pf-counter" class="pf-hero-counter">01 — {String(heroSlides.length).padStart(2, '0')}</span>
+      <div class="pf-hero-progress-track">
+        <div id="pf-progress" class="pf-hero-progress" style={`transform:scaleX(${(1 / heroSlides.length).toFixed(3)})`}></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #pf-hero {
+    position: relative;
+    height: 100svh;
+    min-height: 640px;
+    overflow: hidden;
+    background: var(--ltsuan-bg);
+  }
+  .pf-hero-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    transition: transform 1.1s cubic-bezier(0.76, 0, 0.24, 1);
+    backface-visibility: hidden;
+  }
+  .pf-hero-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .pf-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+    display: block;
+    transform: scale(1.16);
+    transition: transform 3s ease-out;
+  }
+  .pf-hero-layer.is-active .pf-hero-img {
+    transform: scale(1);
+  }
+  .pf-hero-overlay {
+    position: absolute;
+    inset: 0;
+  }
+  .pf-hero-overlay-1 {
+    background: rgba(0, 0, 0, 0.28);
+    transition: background 0.5s ease;
+  }
+  .pf-hero-overlay-1:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .pf-hero-overlay-2 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.05) 55%, rgba(0, 0, 0, 0.1) 100%);
+  }
+  .pf-hero-overlay-3 {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, transparent 55%, transparent 100%);
+  }
+  .pf-hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 56px;
+  }
+  .pf-hero-content > * {
+    max-width: 1200px;
+  }
+  .pf-hero-eyebrow-mask {
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    margin-bottom: 16px;
+  }
+  .pf-reveal-eyebrow {
+    display: block;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    opacity: 0.65;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-eyebrow.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    transform: translateY(0%);
+  }
+  .pf-hero-title {
+    margin: 0;
+    pointer-events: auto;
+  }
+  .pf-hero-title-mask {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.2em;
+  }
+  .pf-reveal-title {
+    display: block;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(40px, 8vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-title.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+    transform: translateY(0%);
+  }
+  .pf-hero-row {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .pf-hero-subtitle-mask {
+    overflow: hidden;
+    padding-bottom: 0.2em;
+  }
+  .pf-hero-subtitle {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    opacity: 0.8;
+    line-height: 1.2;
+    max-width: 34ch;
+    margin: 0;
+    display: block;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-hero-subtitle.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+    transform: translateY(0%);
+  }
+  .pf-hero-cta-mask {
+    overflow: hidden;
+    padding-bottom: 0.2em;
+  }
+  .pf-reveal-cta {
+    display: flex;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100%);
+  }
+  .pf-reveal-cta.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s;
+    transform: translateY(0%);
+  }
+  .pf-hero-cta {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid rgba(244, 239, 232, 0.3);
+    padding: 0 26px;
+    height: 42px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--ltsuan-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .pf-hero-cta:hover {
+    color: var(--ltsuan-accent);
+  }
+  .pf-hero-dots {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    z-index: 10;
+  }
+  .pf-dot-btn {
+    width: 32px;
+    height: 44px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pf-dot {
+    width: 1px;
+    height: 18px;
+    background: rgba(244, 239, 232, 0.3);
+    transition: all 0.3s ease;
+    display: block;
+  }
+  .pf-dot.is-active {
+    height: 44px;
+    background: var(--ltsuan-text);
+  }
+  .pf-hero-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 56px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(244, 239, 232, 0.1);
+  }
+  .pf-hero-auto-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pf-hero-auto-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+  .pf-auto-toggle {
+    position: relative;
+    width: 38px;
+    height: 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 239, 232, 0.15);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+  .pf-auto-toggle.is-on {
+    border-color: rgba(244, 239, 232, 0.4);
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .pf-auto-knob {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    background: var(--ltsuan-text);
+    border-radius: 50%;
+    transition: left 0.25s ease;
+  }
+  .pf-auto-knob.is-on {
+    left: 19px;
+  }
+  .pf-hero-auto-status {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    opacity: 1;
+  }
+  .pf-hero-auto-status.is-off {
+    opacity: 0.4;
+  }
+  .pf-hero-counter-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .pf-hero-counter {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+  }
+  .pf-hero-progress-track {
+    width: 110px;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .pf-hero-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--ltsuan-text);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+</style>
+
+<script>
+  const hero = document.getElementById('pf-hero')!;
+  const layers = Array.from(hero.querySelectorAll<HTMLElement>('.pf-hero-layer'));
+  const dots = Array.from(hero.querySelectorAll<HTMLButtonElement>('.pf-dot-btn'));
+  const progress = document.getElementById('pf-progress')!;
+  const counter = document.getElementById('pf-counter')!;
+  const autoToggle = document.getElementById('pf-auto-toggle')!;
+  const autoKnob = document.getElementById('pf-auto-knob')!;
+  const autoStatus = document.getElementById('pf-auto-status')!;
+
+  const total = layers.length;
+  let active = 0;
+  let auto = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let transitioning = false;
+  let autoTimer: ReturnType<typeof setTimeout> | null = null;
+  let textTimer: ReturnType<typeof setTimeout> | null = null;
+
+  function setRevealed(layer: HTMLElement, revealed: boolean) {
+    layer.querySelector('.pf-reveal-eyebrow')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-reveal-title')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-hero-subtitle')?.classList.toggle('is-revealed', revealed);
+    layer.querySelector('.pf-reveal-cta')?.classList.toggle('is-revealed', revealed);
+  }
+
+  function applyAutoUI() {
+    autoToggle.classList.toggle('is-on', auto);
+    autoKnob.classList.toggle('is-on', auto);
+    autoStatus.textContent = auto ? '開啟' : '關閉';
+    autoStatus.classList.toggle('is-off', !auto);
+    autoToggle.setAttribute('aria-pressed', String(auto));
+  }
+
+  function maybeStartAuto() {
+    if (autoTimer) clearTimeout(autoTimer);
+    if (!auto) return;
+    autoTimer = setTimeout(() => goTo((active + 1) % total), 5000);
+  }
+
+  function goTo(idx: number) {
+    if (idx === active || transitioning) return;
+    const entering = layers[idx];
+    entering.style.transition = 'none';
+    entering.style.transform = 'translateY(100%)';
+    void entering.offsetHeight;
+    entering.style.transition = '';
+
+    transitioning = true;
+    setRevealed(layers[active], false);
+    if (textTimer) clearTimeout(textTimer);
+    textTimer = setTimeout(() => {
+      layers[active].style.zIndex = '1';
+      layers[active].style.transform = 'translateY(-100%)';
+      layers[active].classList.remove('is-active');
+      active = idx;
+      layers[active].style.zIndex = '2';
+      layers[active].style.transform = 'translateY(0%)';
+      layers[active].classList.add('is-active');
+      setRevealed(layers[active], true);
+      transitioning = false;
+      dots.forEach((dot, i) => dot.querySelector('.pf-dot')?.classList.toggle('is-active', i === active));
+      counter.textContent = `${String(active + 1).padStart(2, '0')} — ${String(total).padStart(2, '0')}`;
+      progress.style.transform = `scaleX(${(active + 1) / total})`;
+      maybeStartAuto();
+    }, 320);
+  }
+
+  dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.idx))));
+  autoToggle.addEventListener('click', () => {
+    auto = !auto;
+    applyAutoUI();
+    maybeStartAuto();
+  });
+
+  applyAutoUI();
+  maybeStartAuto();
+</script>

@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 館藏精選文物展";
+const description = "館藏精選文物展 — 館藏展";
+const canonical = "https://letsuan.com/zh-TW/project-nmh-highlights";
+const ogImage = "https://letsuan.com/images/nmh-collection-highlights-06-letsuan-design.png";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-nmh-highlights" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "館藏精選文物展", "description": "館藏精選文物展 — 館藏展", "url": "https://letsuan.com/zh-TW/project-nmh-highlights", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/nmh-collection-highlights-06-letsuan-design.png", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2015", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "館藏精選文物展", "item": "https://letsuan.com/zh-TW/project-nmh-highlights"}]}];
+const eyebrowLeft = "展覽 — 2015";
+const eyebrowRight = "國立歷史博物館";
+const h1Main = "館藏精選文物展";
+const h1Sub = "館藏展";
+const metaFields = [{"label": "業主", "value": "國立歷史博物館"}, {"label": "地點", "value": "台北，臺灣"}, {"label": "年份", "value": "2015"}, {"label": "類別", "value": "展覽設計、室內設計、平面設計、視覺設計、工程施作"}];
+const bodyHtml = "<p>史博館封館整修前的最後一檔室內常設展，接替原「館藏華夏文物展」。範圍為三樓301至303室––在一棟受法定保護、不得更動結構的宮殿式建築內，以半年工期完成常設展的全面更新，自六萬餘件典藏中重新選件，其中包含5件國寶與42件重要古物。</p>\n<h2>背景</h2>\n<p>國立歷史博物館是臺灣戰後成立的第一座國家級博物館。現有館舍為1971年拆除重建的宮殿式建築，地上五層、地下一層，四層供展覽與辦公，一層作為庫房。1967年增建三樓陳列室後，館舍歷經數次擴充，規模已達創館之初的七倍，空間趨於飽和；2007年建築本體登錄為歷史建築，結構自此不得更動。在2018年啟動大規模升級改造之前，本展是館內唯一的室內常設展。</p>\n<p>典藏核心來自1949年自河南博物館遷台的文物與戰後歸還藏品––新鄭、安陽、輝縣出土的青銅與玉器，洛陽唐三彩，以及歷代錢幣。</p>\n<h2>挑戰</h2>\n<p>半年內，必須完成原常設展的全數撤展、清點入庫、拆除、重裝與開展。前提是：不得更動結構，不得產生粉塵與甲醛逸散影響鄰層仍在營運的特展，同時全程符合文化資產保存法對國寶級文物的保存標準。</p>\n<p>真正的變數來自建築本身。拆除逐層揭開歷年疊加的裝修––不同年代的木作、隔板與飾面互相包覆，牆體內並存著各時期增設、卻未曾被記錄的管線；拆至結構面後，又出現既有的舊漏水痕跡。全案沒有一份與現況相符的圖說，每拆一道牆都像開一次盲盒；設計與工法只能隨拆除進度逐日修正。</p>\n<h2>設計策略</h2>\n<p>1. 敘事重整： 捨棄通史式陳列，以「生活、智慧、世界觀」三條軸線重新選件與分區。</p>\n<p>2. 分區邏輯： 依材質與脆弱度分流，國寶與重要古物獨立設區；青銅與玉器採低重心櫃，陶器採群組式陳列。</p>\n<p>3. 動線與視覺： 封閉式高櫃改為低反射玻璃懸浮櫃，動線改為單向迴遊，解除兩翼側廳的回堵，讓小開窗的宮殿式建築重新取得視覺穿透。</p>\n<p>4. 燈光： 全面更換為可調式LED軌道燈搭配櫃內光纖燈，分級控光––一般文物低於150 lux，織品與紙質低於50 lux，全數加裝UV濾片。</p>\n<h2>工程與保存 - 本案關鍵</h2>\n<p>撤展與盤點</p>\n<p>依典藏組既有流程逐件造冊、狀況檢視、攝影紀錄後入庫，再依新的敘事軸線重新配置展件。</p>\n<h2>展示櫃全面改造</h2>\n<p>拆除原木作封閉櫃、保留既有結構，內部改為氣密恆濕櫃；玻璃更換為低反射夾層玻璃，內襯全面改用無酸材料。</p>\n<h2>關鍵工法：人造石櫃體</h2>\n<p>櫃體底座、文物托台、層板包覆與踢腳收邊，全面改用人造石。</p>\n<p>保存性： 無孔隙、不吸濕、不發霉、無甲醛醋酸逸散，符合保存級櫃體低逸散要求。</p>\n<p>結構性： 高密度實心、抗壓耐重，避免青銅器等重型文物在長期陳列下造成托面下陷。</p>\n<p>施工性： 工廠CNC預製、現場無縫研磨拼接，半年工期內快速、低粉塵組裝，不影響營運中之鄰層展區。</p>\n<p>微環境控制</p>\n<p>依文物保存作業規範，安裝指針式濕度計 + 電子式溫濕度紀錄器，配置24H連續除濕系統，櫃內維持相對濕度50%±5%、溫度22±2°C。空調與櫃內除濕分離，避免開關機結露。</p>\n<h2>圖文系統</h2>\n<p>說明重建為三個層級：大區主題、組說明、單件說明，中英對照。說明牌改為無酸卡紙搭配壓克力夾層，字體全面改為無襯線體，同時提升易讀性與保存性。</p>\n<p>在受保護的歷史建築與極短工期的雙重限制下，完成一檔符合國寶級保存標準的常設展更新，並為館舍2018至2024年大整建前的展示與保存作業建立原型。展覽自2014年11月4日開放，持續至2018年閉館整建，是該時期館內唯一的室內常設展。</p>";
+const relatedProjects = [{"href": "./project-detention-pier2", "label": "返校"}, {"href": "./project-detective-conan-taipei", "label": "名偵探柯南"}, {"href": "./project-tccge-deck", "label": "綠能教育觀景平台"}];
+const nextHref = "./project-wang-ye-donggang";
+const images = [{"src": "../images/nmh-collection-highlights-distant-hallway-letsuan-design.jpg", "alt": "Visitor walking down a warm-lit minimalist gallery corridor lined with illuminated display niches"}, {"src": "../images/nmh-collection-highlights-06-letsuan-design.png", "alt": "Highlights of NMH — Visitor walking past illuminated glass display niches holding ceramic and bronze pieces"}, {"src": "../images/nmh-collection-highlights-01-letsuan-design.png", "alt": "Painted pottery horses and figures in a glass case beside an interactive touchscreen kiosk"}, {"src": "../images/nmh-collection-highlights-bronze-case-letsuan-design.jpg", "alt": "Bronze ritual vessels displayed in a low-reflection glass case"}, {"src": "../images/nmh-collection-highlights-03-letsuan-design.jpg", "alt": "Visitors photographing bronze and ceramic vessels along a curved gallery of low display cases"}, {"src": "../images/nmh-collection-highlights-04-letsuan-design.jpg", "alt": "Painted pottery equestrian and seated figures in an angled glass display case"}, {"src": "../images/nmh-collection-highlights-05-letsuan-design.jpg", "alt": "Painted pottery figures and a horse on tiered platforms inside a freestanding glass case"}, {"src": "../images/nmh-collection-highlights-02-letsuan-design.jpg", "alt": "Bronze ritual vessel in a freestanding illuminated case at a gallery corner, with further displays beyond"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

@@ -1,0 +1,217 @@
+---
+interface Props {
+  background?: string;
+}
+const { background = '#0A0A0A' } = Astro.props;
+---
+
+<footer class="ltsuan-footer" style={`background:${background}`}>
+  <div class="ltsuan-footer-grid">
+    <div>
+      <a href="/zh-TW/" class="ltsuan-footer-logo-link">
+        <img src="/assets/letsuan-logotype-white.svg" alt="Le Tsuan Design" class="ltsuan-footer-logo" />
+      </a>
+      <p class="ltsuan-footer-blurb">一間位於台灣的室內、展覽與視覺設計工作室——打造沉浸式空間與品牌體驗。</p>
+    </div>
+    <div>
+      <div class="ltsuan-footer-heading">探索</div>
+      <div class="ltsuan-footer-links">
+        <a href="/zh-TW/" class="ltsuan-footer-link">首頁</a>
+        <a href="/zh-TW/portfolio" class="ltsuan-footer-link">作品集</a>
+        <a href="/about" class="ltsuan-footer-link">關於我們</a>
+        <a href="/what-we-do" class="ltsuan-footer-link">我們的做法</a>
+      </div>
+    </div>
+    <div>
+      <div class="ltsuan-footer-heading">工作室</div>
+      <div class="ltsuan-footer-links">
+        <span class="ltsuan-footer-static ltsuan-footer-address"><span class="ltsuan-footer-studio-name">台中工作室</span><br />403020 台中市西區華美西街一段85號6樓之1</span>
+        <span class="ltsuan-footer-static ltsuan-footer-address"><span class="ltsuan-footer-studio-name">台北工作室</span><br />111069 台北市士林區延平北路六段62號3樓</span>
+        <a href="tel:+886423215956" class="ltsuan-footer-link">+886 4 2321 5956</a>
+      </div>
+    </div>
+    <div>
+      <div class="ltsuan-footer-heading">保持聯繫</div>
+      <p class="ltsuan-footer-cta-title">告訴我們你的專案</p>
+      <p class="ltsuan-footer-cta-copy">分享你的專案細節，我們會在兩個工作天內回覆。</p>
+      <a id="ltsuan-footer-cta" href="/contact" class="ltsuan-footer-cta-btn">聯絡我們</a>
+    </div>
+  </div>
+  <div class="ltsuan-footer-bottom">
+    <div class="ltsuan-footer-social">
+      <a href="https://www.facebook.com/LETSUANDESIGN" aria-label="Facebook" target="_blank" rel="noopener" class="ltsuan-footer-social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#f4efe8"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+    </div>
+    <div class="ltsuan-footer-legal">
+      <span>© 2026 麗荃室內裝修有限公司 版權所有。</span>
+      <span>室內裝修從業者登記字號 40E2007328</span>
+      <a href="/privacy-policy" class="ltsuan-footer-privacy">隱私權政策</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ltsuan-footer {
+    color: rgba(244, 239, 232, 0.85);
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    padding: 72px 56px 32px 79px;
+    border-top: 1px solid rgba(244, 239, 232, 0.08);
+  }
+  .ltsuan-footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .ltsuan-footer-logo-link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 14px;
+    text-decoration: none;
+  }
+  .ltsuan-footer-logo {
+    height: 30px;
+    display: block;
+  }
+  .ltsuan-footer-blurb {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.6);
+    max-width: 320px;
+    margin: 0;
+  }
+  .ltsuan-footer-heading {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.6);
+    margin-bottom: 16px;
+  }
+  .ltsuan-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ltsuan-footer-link,
+  .ltsuan-footer-static {
+    color: rgba(244, 239, 232, 0.75);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .ltsuan-footer-address {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .ltsuan-footer-studio-name {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.6);
+    margin-bottom: 4px;
+  }
+  .ltsuan-footer-cta-title {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #f4efe8;
+    margin: 0 0 10px;
+  }
+  .ltsuan-footer-cta-copy {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(244, 239, 232, 0.6);
+    margin: 0 0 14px;
+  }
+  .ltsuan-footer-cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(244, 239, 232, 0.3);
+    border-radius: 999px;
+    color: #f4efe8;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .ltsuan-footer-bottom {
+    max-width: 1280px;
+    margin: 56px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(244, 239, 232, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 13px;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-footer-social {
+    display: flex;
+    gap: 12px;
+  }
+  .ltsuan-footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 239, 232, 0.2);
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+  }
+  .ltsuan-footer-social-link:hover {
+    border-color: #8cc81e;
+  }
+  .ltsuan-footer-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+  }
+  .ltsuan-footer-privacy {
+    color: rgba(244, 239, 232, 0.6);
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  @media (max-width: 899px) {
+    .ltsuan-footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 719px) {
+    .ltsuan-footer {
+      padding-left: 35px;
+    }
+  }
+  @media (max-width: 559px) {
+    .ltsuan-footer {
+      padding: 48px 24px 24px 35px;
+    }
+    .ltsuan-footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .ltsuan-footer-legal {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+</style>
+
+<script>
+  const cta = document.getElementById('ltsuan-footer-cta') as HTMLAnchorElement | null;
+  if (cta && /\/contact(?:[?#]|$)/.test(window.location.pathname)) {
+    cta.href = 'mailto:' + ['info', 'letsuan.com'].join('@');
+    cta.textContent = '寄信給我們';
+  }
+</script>

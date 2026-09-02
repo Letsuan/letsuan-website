@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 原鄉驚艷";
+const description = "原鄉驚艷 — 陳正雄臺灣原住民文物收藏展";
+const canonical = "https://letsuan.com/zh-TW/project-amazing-homeland";
+const ogImage = "https://letsuan.com/images/amazing-homeland-indigenous-garment-display-wall-with-hanging-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-amazing-homeland" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "原鄉驚艷", "description": "原鄉驚艷 — 陳正雄臺灣原住民文物收藏展", "url": "https://letsuan.com/zh-TW/project-amazing-homeland", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/amazing-homeland-indigenous-garment-display-wall-with-hanging-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2017", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "原鄉驚艷", "item": "https://letsuan.com/zh-TW/project-amazing-homeland"}]}];
+const eyebrowLeft = "展覽 — 2017";
+const eyebrowRight = "國立歷史博物館";
+const h1Main = "原鄉驚艷";
+const h1Sub = "陳正雄臺灣原住民文物收藏展";
+const metaFields = [{"label": "業主", "value": "國立歷史博物館"}, {"label": "地點", "value": "台北，臺灣"}, {"label": "年份", "value": "2017"}, {"label": "類別", "value": "展覽設計、平面設計、視覺設計、工程施作"}];
+const bodyHtml = "<p>光，是這場展覽最溫柔的敘事者。</p>\n<p>展場刻意壓低環境照度，讓視線從裝飾雜訊裡退開，每一件文物都落在自己的光池裡。空間規劃以「物件為主、空間為輔」為原則，展覽設計不搶戲，只把工藝本身推到最前。</p>\n<h2>01 服飾展區——懸浮的光之劇場</h2>\n<p>長袍以張力懸吊系統吊掛，細鋼索將布料托在米白主牆前方，呈現輕盈漂浮感。每件服飾各配一盞抗眩聚光燈，角度精準打出玻璃珠、刺繡貼布與毛皮的立體光澤。說明牌刻意壓低、精簡，不與展件爭奪注意力。</p>\n<h2>02 終點意象——織紋即身份</h2>\n<p>動線末端立起一面通高傳統織毯，紅、黑、藍綠交織的菱形圖樣鋪滿整面牆，成為全展最強的視覺句點，也直接回應策展核心：織紋，是穿在身上的身份識別。</p>\n<h2>03 籃陶展區——生活感的沉浸廊道</h2>\n<p>空間轉入深色沉浸式廊道。霧黑地坪搭配深紫灰牆面，低對比色調讓文物本身的自然色成為主角。一側以OSB層架陳列籃具、木臼等日常器物，層架下方嵌暖色3000K線形燈，由下往上洗光，在肅穆基調裡補一層生活溫度；另一側玻璃櫃與獨立基座陳列陶罐，黑底座上各打一盞聚光，像舞台上的演員。黑色伸縮圍欄引導動線，兼顧文物保護與觀展節奏。</p>\n<h2>04 雕塑與精品陶展區——時間的靜室</h2>\n<p>最終展區以連續通高玻璃櫃對應深色反射地坪，空間被拉出沉靜的景深。石雕、陶偶與器皿各有微型聚光與懸吊說明牌，觀眾像走在一條時間長廊裡。低環境光與銳利重點光的對比，把每件文物承載的歷史重量壓實。</p>\n<h2>設計語彙</h2>\n<p>照明策略採「低環境照度＋高精準重點光」。材質以黑鋼基座、深木地坪、米白牆面、OSB層架構成一致的博物館邏輯：暗空間、亮物件，再以層架暖光細節平衡肅穆與溫度，讓注意力始終回到物件本身。</p>";
+const relatedProjects = [{"href": "./project-cat-art", "label": "貓美術館"}, {"href": "./project-missing-scientist", "label": "消失的科學家，藏在限制裡的設計"}, {"href": "./project-hakka-culture", "label": "藏富客庄"}];
+const nextHref = "./project-detective-conan-taipei";
+const images = [{"src": "../images/amazing-homeland-indigenous-garment-display-wall-with-hanging-letsuan-design.jpg", "alt": "Amazing Homeland — Indigenous garment display wall with hanging textiles"}, {"src": "../images/amazing-homeland-glass-display-corridor-with-archaeological-letsuan-design.jpg", "alt": "Glass display corridor with archaeological artifacts"}, {"src": "../images/amazing-homeland-wood-carving-and-textile-artifact-display-letsuan-design.jpg", "alt": "Wood carving and textile artifact display shelves"}, {"src": "../images/amazing-homeland-museum-corridor-woven-basket-displays-visitors-letsuan-design.jpg", "alt": "Museum corridor with woven baskets and vessels on wall-mounted shelving, visitors viewing glass display cases and information panels"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

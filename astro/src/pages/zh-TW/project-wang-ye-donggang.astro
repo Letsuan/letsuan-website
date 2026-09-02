@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 代天巡狩";
+const description = "代天巡狩 — 東港迎王特展";
+const canonical = "https://letsuan.com/zh-TW/project-wang-ye-donggang";
+const ogImage = "https://letsuan.com/images/wang-ye-worship-donggang-01-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-wang-ye-donggang" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "代天巡狩", "description": "代天巡狩 — 東港迎王特展", "url": "https://letsuan.com/zh-TW/project-wang-ye-donggang", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/wang-ye-worship-donggang-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2012", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "代天巡狩", "item": "https://letsuan.com/zh-TW/project-wang-ye-donggang"}]}];
+const eyebrowLeft = "展覽 — 2012";
+const eyebrowRight = "國立自然科學博物館";
+const h1Main = "代天巡狩";
+const h1Sub = "東港迎王特展";
+const metaFields = [{"label": "業主", "value": "國立自然科學博物館"}, {"label": "地點", "value": "台中，臺灣"}, {"label": "年份", "value": "2012"}, {"label": "類別", "value": "展覽設計、工程施作"}];
+const bodyHtml = "<h2>7天，把一座代天府搬進博物館</h2>\n<h2>代天巡狩：東港迎王特展｜當百年信仰遇上博物館級消防規範</h2>\n<p>王爺信仰溯源宋朝千年，核心是代天巡狩、驅除疫病，奉祀處稱代天府，巡狩則是定期性科儀。東港是屏東的港鎮，以百年歷史的三年一科迎王祭典著稱，東隆宮創建於1706年，這項祭典2010年獲列為國家重要無形文化遺產。這場展覽的核心展品，是東隆宮1994年打造的小型王船，以及重建的代天府，全部由屏東東港東隆宮提供到現場展出。</p>\n<h2>把廟蓋進博物館，得先過消防這關</h2>\n<p>我們負責代天府重建主結構、輕隔間與天花造型的木作工程，以及王船與各項文物的展示台座、基座結構製作與安裝。用的板材是CNS耐燃一級合板，符合博物館的消防規範––這不是一般的展場木作，是要通過國家級博物館審核的規格。王船展示台座內藏鋼構補強，確保荷重與水平穩定；照明採用LED軌道燈，演色性CRI&gt;90，依文物屬性逐一調整投射角度；電力採獨立迴路配置，符合安全負載係數與漏電保護。</p>\n<p>現場依核准的施工圖說放樣施作，採分區施工降低粉塵影響，每日填寫施工日報、拍照記錄，材料進場逐一檢驗，配合館方與東隆宮的時程，走完進場、安裝、驗收三階段管制，全程符合工安規範、配置滅火設備，並落實博物館夜間施工規定。</p>\n<p>從進場到驗收，我們只有7天。2012年3月16日，代天府準時開展––三百年的信仰，跟七天的工期，最後在同一天對齊。</p>";
+const relatedProjects = [{"href": "./project-story-telling", "label": "五千年的沉默"}, {"href": "./project-nmns-teldap", "label": "科博館數位典藏"}, {"href": "./project-dragon-to-beast", "label": "從龍到獸"}];
+const nextHref = "./project-just-only-environment";
+const images = [{"src": "../images/wang-ye-worship-donggang-01-letsuan-design.jpg", "alt": "The Hunt of the Celestial Court — Wang Ye Worship in Donggang exhibition"}, {"src": "../images/wang-ye-worship-donggang-02-letsuan-design.png", "alt": "Wang Ye Worship exhibition layout"}, {"src": "../images/wang-ye-worship-donggang-03-letsuan-design.jpg", "alt": "Wang Ye Worship exhibition carvings"}, {"src": "../images/wang-ye-worship-donggang-04-letsuan-design.jpg", "alt": "Wang Ye Worship exhibition boat"}, {"src": "../images/wang-ye-worship-donggang-05-letsuan-design.jpg", "alt": "Wang Ye Worship exhibition deity altar"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

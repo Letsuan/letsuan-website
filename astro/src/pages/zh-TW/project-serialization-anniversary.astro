@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 名偵探柯南";
+const description = "名偵探柯南 — 連載20周年紀念";
+const canonical = "https://letsuan.com/zh-TW/project-serialization-anniversary";
+const ogImage = "https://letsuan.com/images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-serialization-anniversary" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "名偵探柯南", "description": "名偵探柯南 — 連載20周年紀念", "url": "https://letsuan.com/zh-TW/project-serialization-anniversary", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2015-2016", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "名偵探柯南", "item": "https://letsuan.com/zh-TW/project-serialization-anniversary"}]}];
+const eyebrowLeft = "展覽 — 2016";
+const eyebrowRight = "華山1914文化創意產業園區";
+const h1Main = "名偵探柯南";
+const h1Sub = "連載20周年紀念";
+const metaFields = [{"label": "業主", "value": "株式會社小學館"}, {"label": "地點", "value": "台北，臺灣"}, {"label": "年份", "value": "2015-2016"}, {"label": "類別", "value": "展覽設計、平面設計、視覺設計、裝置藝術、工程施作"}];
+const bodyHtml = "<h2>在一座不能碰的倉庫裡，把柯南的世界搬進來</h2>\n<h2>名偵探柯南連載20週年紀念展｜零侵入結構，與一整面漫畫變成的牆</h2>\n<p>名偵探柯南自1994年於日本連載以來，這是原廠20週年紀念的海外巡迴展覽版本，2015年底登陸台北華山1914文創園區。我們負責這場展覽的空間設計與工程統包，把日本原版展覽內容100%移植來台，並依據東二館C+D倉庫既有的建築量體，重新規劃參觀動線與分區配置，讓原作情節與互動解謎機制，能在臺灣場館裡完整重現。</p>\n<h2>倉庫是古蹟，我們連一根釘子都不能釘</h2>\n<p>華山1914文創園區東二館C+D倉庫屬於文化資產保存範疇––依場地使用辦法規定，展場工程不得在既有結構體上鑽孔、鎖固，或以任何方式固著，所有牆體、天花與地坪都必須維持原始狀態。我們全面採用零侵入自立式結構系統，搭建場景牆體與展示設施，重量以底座配重與支撐架分散承載，不對建築本體造成一絲損傷。倉庫原始地坪還存在高低差，我們在動線規劃階段同步處理地坪銜接，用緩坡與墊高地板進行過渡，確保參觀動線平順，也符合無障礙通行需求。</p>\n<h2>把一格一格的漫畫，變成一面能走進去的牆</h2>\n<p>這場展大量取材自原作漫畫的分格畫面，我們要把平面連環圖，轉製成人物介紹牆、情節牆這類大尺寸立體展示物件，再搭配等身人物公仔還原場景的空間感。製作流程包含原稿掃描比對、圖像修復與放樣輸出、牆體基材裁切組裝，以及公仔與牆面圖文的空間定位校準––每個區塊的數量都很龐大，細節要求又高，這也是整個工期規劃裡最耗時、最需要提前算好的一項。</p>\n<h2>四段經典場景，一個入口先破了設定</h2>\n<p>入口處放置作者青山剛昌特別訂製的「柯南╳新一」等身尺寸人偶，打破了漫畫連載20年來兩人從未同時出現在同一空間的設定；一旁同時展示連載20年來全部的漫畫封面，讓觀眾一踏進展場，就先看見這部作品走過的完整時間軸，作為進入敘事的起點。經典的毛利偵探事務所被打造成神祕凶案現場，融入血跡、打鬥痕跡，搭配電話鈴聲、電視影像等互動音效強化臨場感––這區禁止攝影，以維持謎題的保密性。犯罪手法解密區則把原作中經典的懸疑犯罪技巧，轉化成科學驗證與互動實物體驗，讓觀眾親手操作理解解謎巧思背後的原理。青山剛昌手稿區公開了作者歷年珍貴的手繪稿件，包含專為這次20週年紀念繪製的特別畫作，展示採藝術展規格的燈光與展櫃配置。經典場景重現區則以等身人物公仔還原四段原作經典：柯南對決黑衣組織的緊張氛圍、Conan the LOVE STORY的浪漫回憶、怪盜基德與柯南的華麗交手、少年偵探團之間的友情––各自獨立成一個空間單元，供觀眾拍照留念。</p>\n<p>展場所有場景陳設、道具與圖文輸出，都必須以日本授權方提供的官方素材為準，經審核比對後才能施作––連牆上一張海報的尺寸、色號都不能自己決定。一邊是不能碰的古蹟倉庫，一邊是不能改的日方素材，這場展覽從頭到尾，都是在兩種「不能」之間，把柯南連載20年的世界完整地立了起來。</p>";
+const relatedProjects = [{"href": "./project-cat-art", "label": "貓美術館"}, {"href": "./project-detention-pier2", "label": "返校"}, {"href": "./project-detective-conan-taipei", "label": "名偵探柯南"}];
+const nextHref = "./project-tibetan-thangka";
+const images = [{"src": "../images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg", "alt": "INCIDENT IN CONAN EXHIBIT — Conan Exhibit exterior keyhole cube installation"}, {"src": "../images/conan-anniv-conan-exhibit-ivy-covered-venue-signage-booth-letsuan-design.jpg", "alt": "Conan Exhibit ivy-covered venue signage booth"}, {"src": "../images/conan-anniv-mouri-detective-agency-manga-panel-wall-letsuan-design.jpg", "alt": "Mouri Detective Agency manga panel wall"}, {"src": "../images/conan-anniv-mouri-agency-vermouth-manga-collage-wall-letsuan-design.jpg", "alt": "Manga panel collage wall featuring Vermouth and the Mouri Detective Agency storyline"}, {"src": "../images/conan-anniv-yellow-character-wall-visitor-viewing-letsuan-design.jpg", "alt": "Visitor viewing a yellow character-introduction wall covered in manga cutout portraits"}, {"src": "../images/conan-anniv-conan-the-love-story-zone-letsuan-design.jpg", "alt": "Conan the LOVE STORY zone with manga panels"}, {"src": "../images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg", "alt": "Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform"}, {"src": "../images/conan-anniv-kaito-kid-moonlit-rooftop-diorama-letsuan-design.jpg", "alt": "Life-size Kaito Kid and Conan figures on a moonlit rooftop diorama with city skyline backdrop"}, {"src": "../images/conan-anniv-life-size-figures-of-conans-supporting-cast-letsuan-design.jpg", "alt": "Life-size figures of Conan's supporting cast"}, {"src": "../images/conan-anniv-shinichi-ran-figures-cherry-blossom-scene-letsuan-design.jpg", "alt": "Life-size figures of Shinichi and Ran standing together beneath a cherry blossom backdrop"}, {"src": "../images/conan-anniv-cherry-blossom-scene-with-life-size-figures-letsuan-design.jpg", "alt": "Cherry blossom scene with life-size figures"}, {"src": "../images/conan-anniv-zero-penetration-set-wall-construction-in-letsuan-design.jpg", "alt": "Zero-penetration set wall construction in progress"}, {"src": "../images/conan-anniv-fabrication-workshop-building-the-exhibition-letsuan-design.jpg", "alt": "Fabrication workshop building the exhibition set walls"}, {"src": "../images/conan-anniv-le-tsuan-design-workshop-panel-fabrication-letsuan-design.jpg", "alt": "Le Tsuan Design workshop panel fabrication"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

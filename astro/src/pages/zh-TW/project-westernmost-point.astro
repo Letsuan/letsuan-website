@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 臺灣極西點";
+const description = "臺灣極西點 — 北緯23°06'02.7\"，東經120°02'09.0\"";
+const canonical = "https://letsuan.com/zh-TW/project-westernmost-point";
+const ogImage = "https://letsuan.com/images/westernmost-point-taiwan-01-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-westernmost-point" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "臺灣極西點", "description": "臺灣極西點 — 北緯23°06'02.7\"，東經120°02'09.0\"", "url": "https://letsuan.com/zh-TW/project-westernmost-point", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/westernmost-point-taiwan-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2022", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "臺灣極西點", "item": "https://letsuan.com/zh-TW/project-westernmost-point"}]}];
+const eyebrowLeft = "裝置藝術 — 2022";
+const eyebrowRight = "頂頭額沙洲";
+const h1Main = "臺灣極西點";
+const h1Sub = "北緯23°06'02.7\"，東經120°02'09.0\"";
+const metaFields = [{"label": "業主", "value": "台南市政府觀光旅遊局"}, {"label": "地點", "value": "台南，臺灣"}, {"label": "年份", "value": "2022"}, {"label": "類別", "value": "裝置藝術、工程施作"}];
+const bodyHtml = "<p>在國土的盡頭，豎起一座會呼吸的空間。</p>\n<p>基地落在沙洲與浪線之間，腳下沒有穩固地層，海風、鹽霧與強烈紫外線同時作用。我們的任務，是在這片不穩定的地形上，做出一座能扛住時間的地標裝置。</p>\n<p>設計以一系列面具面板組成可步行的蒙太奇隧道——輕如紙、尺度卻屬建築。每片面容刻出不同性格，鏤空邊界在遮蔽與對望之間形成細緻的視線遊戲。觀展本身被設計成動線：面板角度與高度對應太陽軌跡與盛行風向。早晨斜光切開通道，引導緩慢前行；午後重疊的影子讓人停下；黃昏時整段隧道被餘暉穿透，人影與剪紙影融為一體，動線變成從光走進暗、再走回海天的通道。</p>\n<p>全系統採用304不鏽鋼：主結構、面板到每一顆螺栓、螺柱、螺絲，避免異種金屬接觸造成的電蝕。表面施以氟碳烤漆（PVDF），兼具耐候、抗UV與長期色澤穩定。構件於工廠完成烤漆後進場；鎖固過程產生的微小刮痕，現場以同色氟碳漆補覆，確保塗膜連續無破口，讓每一個接點都能在鹽害環境下撐過年歲。</p>\n<p>這件作品把傳統剪紙的細密語彙，轉寫成在高規格金屬工藝下，結構與視覺都能站得住的空間體驗。</p>";
+const relatedProjects = [{"href": "./project-led-kinetic", "label": "宇宙"}, {"href": "./project-notre-dame", "label": "永恆聖母院"}, {"href": "./project-marine-illusion", "label": "眼見為憑？"}];
+const nextHref = "./project-securities-office";
+const images = [{"src": "../images/westernmost-point-friends-polaroid-photo-letsuan-design.jpg", "alt": "Polaroid-style photo of three friends posing at The Westernmost Point of Taiwan sculpture, dated 2022/6/9", "plain": true}, {"src": "../images/westernmost-point-taiwan-04-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan silhouette"}, {"src": "../images/westernmost-point-taiwan-07-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan paper-cutting installation in progress"}, {"src": "../images/westernmost-point-taiwan-02-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan tunnel"}, {"src": "../images/westernmost-point-taiwan-03-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan pattern"}, {"src": "../images/westernmost-point-taiwan-05-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan night view"}, {"src": "../images/westernmost-point-taiwan-06-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan structure"}, {"src": "../images/westernmost-point-taiwan-08-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan structural framework detail"}, {"src": "../images/westernmost-point-taiwan-09-letsuan-design.jpg", "alt": "Westernmost Point of Taiwan final view"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

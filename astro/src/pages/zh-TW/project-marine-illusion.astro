@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | 眼見為憑？";
+const description = "眼見為憑？ — 海洋幻術師：擬態與偽裝";
+const canonical = "https://letsuan.com/zh-TW/project-marine-illusion";
+const ogImage = "https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-marine-illusion" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "眼見為憑？", "description": "眼見為憑？ — 海洋幻術師：擬態與偽裝", "url": "https://letsuan.com/zh-TW/project-marine-illusion", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2026", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "眼見為憑？", "item": "https://letsuan.com/zh-TW/project-marine-illusion"}]}];
+const eyebrowLeft = "展覽 — 2026";
+const eyebrowRight = "台中海洋館";
+const h1Main = "眼見為憑？";
+const h1Sub = "海洋幻術師：擬態與偽裝";
+const metaFields = [{"label": "業主", "value": "台中海洋館"}, {"label": "地點", "value": "台中，臺灣"}, {"label": "年份", "value": "2026"}, {"label": "類別", "value": "展覽設計、平面設計、視覺設計、裝置藝術、工程施作"}];
+const bodyHtml = "<p>68㎡，說大不大。但在台中海洋館這方小小展區裡，要完整說完海洋生物兩大頂尖生存戰術––以「消失」為目的的偽裝，與以「被誤認」為精髓的擬態––容納擬態章魚、虎斑烏賊等7類生物的生存智慧，光是「怎麼把東西塞進去」就是第一道課題，還沒開始談展示設計。</p>\n<h2>把牆吃掉，把空間讓出來</h2>\n<p>面對基地條件的先天侷限，我們沒有選擇壓縮動線來換取展示面積，而是反過來，把腦筋動到牆上。所有新建牆體採薄型化貼牆工法，以毫米為單位緊貼既有結構退讓––牆越薄，中央能留給參觀動線與核心體感互動遊戲區的面積就越大。這道退讓確保了尖峰人流的迴游動線與無障礙駐足空間，讓68㎡不再是限制，而是被精算過的餘裕。</p>\n<h2>把平面的無聊，做成階梯</h2>\n<p>牆退了，新的問題出現：貼牆展示容易讓畫面變得又平又悶。我們把核心的偽裝策略展區，設計成階梯狀錯層排列的水族箱體––錯層高度同時照顧到成人與孩童的視角，人潮自然分流，不需要動線標示去硬性引導。階梯創造出的立體檯面與垂直面，順勢整合了圖文解說與間接光洗牆，讓缸體、造景、知識內容變成一體式的閱讀動線；暗環境裡，光影隨著階梯產生連續的韻律感，觀眾的腳步，會不自覺跟著光走。</p>\n<h2>毫米之間，藏著整套機電系統</h2>\n<p>這是整個案子裡最關鍵的工程整合課題––小空間，容不下任何一條明線。活體維生系統、燈光控制、體感互動感應器的管線，全數預埋於薄型牆體內的隱蔽式線槽，現場零明線，深海沉浸感才不會被一條裸露的電線打斷。螢幕、喇叭、感應器、投影機，全部採嵌入式、齊平化安裝，不佔用一吋走道空間。活體生態缸體的維生、過濾、溫控用電，則與互動裝置、影音設備各自獨立成迴路，同步預留隱藏式散熱與維修口––展示的美感，跟日後好不好維修，兩件事必須同時成立，缺一不可。</p>\n<h2>連牆，都要環保</h2>\n<p>呼應這個展覽真正想說的事––海洋生態保育––我們把這個原則也用回了工程本身。從牆體基材、表面塗裝、收邊材料，到全區牆面圖文輸出，全數選用具國際認證的綠建材：牆面輸出採用環保不織布，同時取得健康綠建材標章與國際健康建築材料認證（LEED/WELL規範），以回收再生纖維製造，通過CNS7614 A3125防焰一級檢測、不含甲醛。從結構到視覺輸出，整個工程做到低逸散、可回收––蓋這個展場的過程，本身就是一次對海洋友善的實踐。</p>\n<h2>連燈光，都要為生物著想</h2>\n<p>空間採低亮度、高對比的情境控光，以深海藍（#00183A）為基底，只用螢光青與警告黃線性光源勾勒視覺焦點––這不只是氛圍營造，更是為了不讓強光對缸內活體生物造成緊迫。觀眾的目光，最終該落在哪裡，這道光其實早已經幫忙決定好了：不是牆，不是機電，是那些正在偽裝、正在擬態的生物本身。</p>\n<p>從退牆的毫米級計算，到藏在牆裡的整套機電系統，再到連燈光都為生物著想––這個展覽最厲害的偽裝，或許是把所有工程痕跡都藏了起來，只留下68㎡裡，那些真正該被看見的生命。</p>";
+const relatedProjects = [{"href": "./project-la-fortuna-bordada", "label": "美麗與吉祥"}, {"href": "./project-missing-scientist", "label": "消失的科學家，藏在限制裡的設計"}, {"href": "./project-westernmost-point", "label": "臺灣極西點"}];
+const nextHref = "./project-cat-art";
+const images = [{"src": "../images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg", "alt": "Seeing is Believing? — Masters of Marine Illusion exhibition panorama with visitors viewing aquarium tanks"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-octopus-mural-letsuan-design.jpg", "alt": "Masters of Marine Illusion octopus mural entrance wall"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-visitor-letsuan-design.jpg", "alt": "Masters of Marine Illusion visitor interacting with Ocean Mimic Master game"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-visitor-viewing-letsuan-design.jpg", "alt": "Masters of Marine Illusion visitor viewing tiered aquarium display"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-display-case-letsuan-design.jpg", "alt": "Masters of Marine Illusion display case detail"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-thin-wall-lining-letsuan-design.jpg", "alt": "Masters of Marine Illusion thin-wall lining installation in progress"}, {"src": "../images/marine-illusion-masters-of-marine-illusion-aquarium-tank-letsuan-design.jpg", "alt": "Masters of Marine Illusion aquarium tank installation detail"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

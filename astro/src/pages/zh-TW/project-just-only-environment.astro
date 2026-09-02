@@ -1,0 +1,48 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "Le Tsuan Design | Just Only";
+const description = "Just Only — 環保型錄";
+const canonical = "https://letsuan.com/zh-TW/project-just-only-environment";
+const ogImage = "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-just-only-environment" },
+  { hreflang: "zh-TW", href: canonical },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Just Only", "description": "Just Only — 環保型錄", "url": "https://letsuan.com/zh-TW/project-just-only-environment", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2010", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Just Only", "item": "https://letsuan.com/zh-TW/project-just-only-environment"}]}];
+const eyebrowLeft = "平面設計 — 2010";
+const eyebrowRight = "臺灣";
+const h1Main = "Just Only";
+const h1Sub = "環保型錄";
+const metaFields = [{"label": "業主", "value": "Just Only環境保護"}, {"label": "地點", "value": ""}, {"label": "年份", "value": "2010"}, {"label": "類別", "value": "平面設計、視覺設計、字體設計、型錄設計、網站設計"}];
+const bodyHtml = "<p>為 Just Only 環境保護品牌規劃型錄、字體與網站視覺。以簡潔、可讀的設計語言傳達環保理念，讓平面與數位介面維持一致的品牌調性。</p>";
+const relatedProjects = [{"href": "./project-fullchamp-brochure", "label": "Fullchamp"}, {"href": "./project-amazing-homeland", "label": "原鄉驚艷"}, {"href": "./project-art-gallery-culture", "label": "看見文化部"}];
+const nextHref = "./project-fullchamp-brochure";
+const images = [{"src": "../images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg", "alt": "Just Only — Paper Pulp Mold Technology brochure cover with folded panel detail"}, {"src": "../images/just-only-environment-brochure-spread-showing-inspection-reports-letsuan-design.jpg", "alt": "Brochure spread showing inspection reports and manufacturing process"}, {"src": "../images/just-only-environment-brochure-spread-showing-paper-pulp-mold-letsuan-design.jpg", "alt": "Brochure spread showing paper pulp mold tableware product catalog"}, {"src": "../images/just-only-environment-brochure-back-cover-with-blue-gradient-letsuan-design.jpg", "alt": "Brochure back cover with blue gradient and Paper Pulp Mold Tableware branding"}, {"src": "../images/just-only-environment-brochure-spread-showing-patterned-paper-pulp-letsuan-design.jpg", "alt": "Brochure spread showing patterned paper pulp plates and bowls"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>

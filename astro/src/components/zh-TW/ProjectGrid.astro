@@ -1,0 +1,215 @@
+---
+import { categories, projects } from '../../data/portfolio-zh';
+import { avifPath } from '../../utils/images';
+---
+
+<section id="filters">
+  {categories.map((cat) => (
+    <button class:list={['pf-filter-btn', { 'is-active': cat === categories[0] }]} data-cat={cat} aria-pressed={cat === categories[0] ? 'true' : 'false'}>
+      {cat}
+    </button>
+  ))}
+</section>
+
+<section id="project-grid">
+  <div class="pf-grid">
+    {projects.map((p) => (
+      <a
+        href={p.href}
+        class="ltsuan-pf-card pf-card"
+        data-categories={p.categories.join('|')}
+      >
+        <picture>
+          <source type="image/avif" srcset={avifPath(p.thumbImg ?? p.realImg)} />
+          <img class="ltsuan-pf-img pf-card-img" alt={p.alt} src={p.thumbImg ?? p.realImg} loading="lazy" decoding="async" />
+        </picture>
+        <div class="pf-card-shade"></div>
+        <div class="pf-card-shade-bottom"></div>
+        <span class="pf-card-corner pf-card-corner-tl"></span>
+        <span class="pf-card-corner pf-card-corner-tr"></span>
+        <div class="ltsuan-pf-text pf-card-text">
+          <div>
+            {p.meta && <p class="pf-card-meta">{p.meta}</p>}
+            <h2 class="pf-card-title">{p.title}</h2>
+            <p class="pf-card-subtitle">{p.subtitle}</p>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style is:global>
+  .ltsuan-pf-img {
+    filter: brightness(0.55);
+    transform: scale(1.1);
+    transition: filter 0.6s ease, transform 1.2s ease;
+  }
+  .ltsuan-pf-text {
+    opacity: 0.92;
+    transition: opacity 0.35s ease;
+  }
+  .ltsuan-pf-card:hover .ltsuan-pf-img {
+    filter: brightness(1.25);
+    transform: scale(1);
+  }
+  .ltsuan-pf-card:hover .ltsuan-pf-text {
+    opacity: 1;
+  }
+</style>
+
+<style>
+  #filters {
+    padding: 25px 56px 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .pf-filter-btn {
+    padding: 9px 18px;
+    border: 1px solid rgba(244, 239, 232, 0.2);
+    background: transparent;
+    color: rgba(244, 239, 232, 0.7);
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+    cursor: pointer;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .pf-filter-btn.is-active {
+    border-color: var(--ltsuan-accent);
+    background: var(--ltsuan-accent);
+    color: var(--ltsuan-bg);
+  }
+  #project-grid {
+    padding: 44px 0 0;
+  }
+  .pf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .pf-card {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--ltsuan-bg);
+  }
+  .pf-card.is-hidden {
+    display: none;
+  }
+  .pf-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .pf-card-shade {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+  }
+  .pf-card-shade-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0));
+    pointer-events: none;
+  }
+  .pf-card-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .pf-card-corner-tl {
+    top: 14px;
+    left: 14px;
+    border-top: 1px solid var(--ltsuan-blueprint);
+    border-left: 1px solid var(--ltsuan-blueprint);
+  }
+  .pf-card-corner-tr {
+    top: 14px;
+    right: 14px;
+    border-top: 1px solid var(--ltsuan-blueprint);
+    border-right: 1px solid var(--ltsuan-blueprint);
+  }
+  .pf-card-text {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+  .pf-card-meta {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ltsuan-accent);
+    margin: 0 0 6px;
+  }
+  .pf-card-title {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .pf-card-subtitle {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    opacity: 0.65;
+    margin: 8px 0 0;
+    line-height: 1.6;
+  }
+</style>
+
+<script>
+  const filterBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('.pf-filter-btn'));
+  const cards = Array.from(document.querySelectorAll<HTMLAnchorElement>('.pf-card'));
+  const allWorksLabel = filterBtns[0]?.dataset.cat ?? '';
+
+  function applyFilter(filter: string) {
+    filterBtns.forEach((btn) => {
+      const active = btn.dataset.cat === filter;
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+    cards.forEach((card) => {
+      const cats = (card.dataset.categories || '').split('|');
+      const visible = filter === allWorksLabel || cats.includes(filter);
+      card.classList.toggle('is-hidden', !visible);
+    });
+  }
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.cat!));
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const catParam = params.get('cat');
+  const validCats = filterBtns.map((b) => b.dataset.cat);
+  if (catParam && validCats.includes(catParam)) {
+    applyFilter(catParam);
+  }
+</script>

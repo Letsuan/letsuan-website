@@ -1,0 +1,23 @@
+{
+  "client": "業主",
+  "location": "地點",
+  "year": "年份",
+  "area": "面積",
+  "category": "類別",
+  "close": "關閉",
+  "back": "回作品集",
+  "next": "下一個專案",
+  "home": "首頁",
+  "related": "相關專案",
+  "detail": "專案詳情",
+  "portfolioBreadcrumb": "作品集",
+  "catAll": "全部作品",
+  "catExhibition": "展覽設計",
+  "catInterior": "室內設計",
+  "catVisual": "視覺設計",
+  "catEvent": "活動",
+  "archiveEyebrow": "作品典藏",
+  "portfolioHeadline": "讓空間蛻變為體驗的作品。",
+  "portfolioSubcopy": "精選麗荃設計在台灣各地完成的展覽、室內與視覺設計案例。",
+  "viewProject": "查看專案"
+}
