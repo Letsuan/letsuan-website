@@ -30,7 +30,11 @@ import { avifPath } from '../../utils/images';
         <div class="ltsuan-pf-text pf-card-text">
           <div>
             {p.meta && <p class="pf-card-meta">{p.meta}</p>}
-            <h2 class="pf-card-title">{p.title}</h2>
+            <h2 class="pf-card-title">
+              {p.title.split('，').map((part, i, arr) => (
+                i < arr.length - 1 ? <>{part}，<br /></> : part
+              ))}
+            </h2>
             <p class="pf-card-subtitle">{p.subtitle}</p>
           </div>
         </div>
