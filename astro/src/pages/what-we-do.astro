@@ -83,7 +83,7 @@ const processSteps = [
 ];
 
 const capabilities = [
-  { title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'Experience the Yokai World' },
+  { id: 'heritage-non-invasive-construction', title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'Experience the Yokai World' },
   { title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: 'INCIDENT IN CONAN EXHIBIT' },
   { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.', img: '/images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', alt: 'Immersive projection room with a wraparound calibration grid mapped across curved walls and floor, ceiling rigged with rows of projectors, technicians testing the setup', evidenceHref: './project-beyond-just-an-exhibition', evidenceLabel: 'Beyond Just an Exhibition–You Are Part of the Art!' },
   { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.', img: '/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg', imgPosition: 'center 30%', alt: 'Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design', evidenceHref: './project-marine-illusion', evidenceLabel: 'Masters of Marine Illusion' },
@@ -121,7 +121,7 @@ const capabilities = [
       </div>
       <div class="ltsuan-core-grid">
         {coreServiceMeta.map((svc) => (
-          <div class="ltsuan-core-card">
+          <div class="ltsuan-core-card" id={`service-${svc.id}`}>
             <div class="ltsuan-core-img-wrap">
               <picture>
                 <source srcset={avifPath(svc.realImg)} type="image/avif" />
@@ -158,7 +158,7 @@ const capabilities = [
       </div>
       <div class="ltsuan-capabilities-grid">
         {capabilities.map((cap) => (
-          <div class="ltsuan-cap-card">
+          <div class="ltsuan-cap-card" id={cap.id}>
             <CornerFrame size={10} opacity={0.55} />
             <div class="ltsuan-cap-img-wrap">
               <picture>

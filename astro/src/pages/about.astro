@@ -97,6 +97,41 @@ const services = [
         <div style="height:40px"></div>
       </section>
 
+      <section id="services">
+        <div class="ltsuan-reveal ltsuan-services-head">
+          <h2 class="ltsuan-section-h2">Services</h2>
+          <div class="ltsuan-section-counter">01&nbsp;/&nbsp;05</div>
+        </div>
+        <div class="ltsuan-services-grid">
+          {services.map((svc, i) => (
+            <div class:list={['ltsuan-svc-card', { 'ltsuan-svc-card-accent': i === 0 }]}>
+              <CornerFrame size={10} opacity={0.55} />
+              <div class="ltsuan-svc-img-wrap">
+                <picture>
+                  <source srcset={avifPath(svc.img)} type="image/avif" />
+                  <img alt={svc.alt} src={svc.img} style={`object-position:${svc.imgPosition || 'center'}`} class="ltsuan-svc-img" loading="lazy" decoding="async" />
+                </picture>
+              </div>
+              <h3 class="ltsuan-svc-title">{svc.title}</h3>
+              <p class="ltsuan-svc-desc">{svc.desc}</p>
+              <a href={svc.evidenceHref} class="ltsuan-svc-evidence">{svc.evidenceLabel} →</a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="record">
+        <div class="ltsuan-reveal ltsuan-stats-band">
+          {stats.map((st) => (
+            <div class="ltsuan-stat-tile">
+              <div class="ltsuan-stat-value">{st.value}</div>
+              <div class="ltsuan-stat-label">{st.label}</div>
+              <p class="ltsuan-stat-desc">{st.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="studio">
         <div class="ltsuan-reveal ltsuan-studio-copy">
           <div class="ltsuan-eyebrow">THE STUDIO</div>
@@ -104,19 +139,6 @@ const services = [
           <p class="ltsuan-body-copy">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install, keeping every detail in service of the same idea.</p>
           <p class="ltsuan-body-copy">We scale the team to the project, bringing in licensed architects, fire-safety engineers, civil engineers and quality-control inspectors as each site and regulatory requirement demands.</p>
           <p class="ltsuan-body-copy ltsuan-body-copy-last">The project never changes hands between design and construction.</p>
-        </div>
-      </section>
-
-      <section id="record">
-        <div class="ltsuan-reveal ltsuan-stats-grid">
-          {stats.map((st) => (
-            <div class="ltsuan-stat-card">
-              <CornerFrame size={10} opacity={0.55} />
-              <div class="ltsuan-stat-value">{st.value}</div>
-              <div class="ltsuan-stat-label">{st.label}</div>
-              <p class="ltsuan-stat-desc">{st.desc}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -159,29 +181,6 @@ const services = [
             <a href="./portfolio" class="ltsuan-see-work-link">See our work with them →</a>
             <p class="ltsuan-license-note">Licensed Interior Decorator (Registration No. 40E2007328). We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
           </div>
-        </div>
-      </section>
-
-      <section id="services">
-        <div class="ltsuan-reveal ltsuan-services-head">
-          <h2 class="ltsuan-section-h2">Services</h2>
-          <div class="ltsuan-section-counter">01&nbsp;/&nbsp;05</div>
-        </div>
-        <div class="ltsuan-services-grid">
-          {services.map((svc) => (
-            <div class="ltsuan-svc-card">
-              <CornerFrame size={10} opacity={0.55} />
-              <div class="ltsuan-svc-img-wrap">
-                <picture>
-                  <source srcset={avifPath(svc.img)} type="image/avif" />
-                  <img alt={svc.alt} src={svc.img} style={`object-position:${svc.imgPosition || 'center'}`} class="ltsuan-svc-img" loading="lazy" decoding="async" />
-                </picture>
-              </div>
-              <h3 class="ltsuan-svc-title">{svc.title}</h3>
-              <p class="ltsuan-svc-desc">{svc.desc}</p>
-              <a href={svc.evidenceHref} class="ltsuan-svc-evidence">{svc.evidenceLabel} →</a>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -317,41 +316,59 @@ const services = [
     margin-bottom: 0;
   }
   #record {
-    padding: 36px 60px 44px 79px;
+    padding: 56px 60px;
     border-bottom: 1px solid var(--ltsuan-line);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 26px, rgba(142, 195, 31, 0.05) 26px, rgba(142, 195, 31, 0.05) 27px);
   }
-  .ltsuan-stats-grid {
+  .ltsuan-stats-band {
     display: grid;
-    gap: 16px;
     grid-template-columns: repeat(4, 1fr);
   }
   @media (max-width: 900px) {
-    .ltsuan-stats-grid {
+    .ltsuan-stats-band {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: 32px;
     }
   }
   @media (max-width: 560px) {
-    .ltsuan-stats-grid {
+    .ltsuan-stats-band {
       grid-template-columns: 1fr;
+      row-gap: 28px;
     }
   }
-  .ltsuan-stat-card {
+  .ltsuan-stat-tile {
     position: relative;
-    background: var(--ltsuan-panel);
-    padding: 16px;
+    padding: 0 28px;
+    border-left: 1px solid var(--ltsuan-line);
+  }
+  .ltsuan-stat-tile:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-stat-tile:nth-child(odd) {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+  @media (max-width: 560px) {
+    .ltsuan-stat-tile {
+      padding-left: 0;
+      border-left: none;
+    }
   }
   .ltsuan-stat-value {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 400;
-    font-size: clamp(28px, 3vw, 38px);
+    font-size: clamp(32px, 3.4vw, 46px);
     color: var(--ltsuan-accent);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .ltsuan-stat-label {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 14px;
     color: var(--ltsuan-text);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .ltsuan-stat-desc {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -442,7 +459,6 @@ const services = [
   }
   #services {
     padding: 64px 60px 70px 79px;
-    background: var(--ltsuan-panel);
     border-bottom: 1px solid var(--ltsuan-line);
   }
   .ltsuan-services-head {
@@ -468,12 +484,26 @@ const services = [
   .ltsuan-services-grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 900px) {
+    .ltsuan-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .ltsuan-services-grid {
+      grid-template-columns: 1fr;
+    }
   }
   .ltsuan-svc-card {
     position: relative;
     background: var(--ltsuan-panel);
     padding: 24px;
+  }
+  .ltsuan-svc-card-accent {
+    background: linear-gradient(165deg, rgba(142, 195, 31, 0.16), var(--ltsuan-panel) 70%);
+    box-shadow: inset 0 0 0 1px rgba(142, 195, 31, 0.35);
   }
   .ltsuan-svc-img-wrap {
     position: relative;
