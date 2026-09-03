@@ -9,7 +9,7 @@ export const organizationJsonLd = {
       url: 'https://letsuan.com/',
       logo: 'https://letsuan.com/assets/logo.png',
       image: 'https://letsuan.com/assets/logo.png',
-      description: '麗荃室內裝修（Le Tsuan Design）是一間位於臺灣台中與台北的專業設計與工程工作室，專精於博物館展示設計、文化場館策展、商業室內設計與全案工程施作。Taiwan-based studio specializing in interior, exhibition, visual design and construction, with studios in Taichung and Taipei.',
+      description: '麗荃室內裝修（Le Tsuan Design）是一間位於臺灣臺中與台北的專業設計與工程工作室，專精於博物館展示設計、文化場館策展、商業室內設計與全案工程施作。Taiwan-based studio specializing in interior, exhibition, visual design and construction, with studios in Taichung and Taipei.',
       foundingDate: '2014',
       telephone: '+886-4-2321-5956',
       email: 'info@letsuan.com',
