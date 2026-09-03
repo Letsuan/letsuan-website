@@ -70,9 +70,9 @@ export const navMenuItems = [
   { key: 'interior', label: '室內設計', href: '/zh-TW/portfolio?cat=室內設計' },
   { key: 'visual', label: '視覺設計', href: '/zh-TW/portfolio?cat=視覺設計' },
   { key: 'event', label: '活動', href: '/zh-TW/portfolio?cat=活動' },
-  { key: 'about', label: '關於我們', href: '/about' },
-  { key: 'what-we-do', label: '我們的做法', href: '/what-we-do' },
-  { key: 'contact', label: '聯絡我們', href: '/contact' },
+  { key: 'about', label: '關於我們', href: '/zh-TW/about' },
+  { key: 'what-we-do', label: '我們的做法', href: '/zh-TW/what-we-do' },
+  { key: 'contact', label: '聯絡我們', href: '/zh-TW/contact' },
 ];
 
 export const navFeaturedItems = [
