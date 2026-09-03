@@ -97,6 +97,10 @@ const beamTwinkles = [
         <div class="ltsuan-hero-overlay ltsuan-hero-overlay-3"></div>
         <div class="ltsuan-hero-overlay ltsuan-hero-overlay-4"></div>
 
+        {slide.particles && (
+          <canvas class="ltsuan-hero-petals" data-particles={JSON.stringify(slide.particles)}></canvas>
+        )}
+
         <div class="ltsuan-hero-content-wrap">
           <div class="ltsuan-hero-container">
             <div class="ltsuan-hero-text">
@@ -282,6 +286,15 @@ const beamTwinkles = [
     animation-name: ltsuanBeamTwinkle;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+  }
+
+  .ltsuan-hero-petals {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 
   .ltsuan-hero-content-wrap {
@@ -945,6 +958,141 @@ const beamTwinkles = [
       if (bgWrap) bgWrap.style.transform = 'scale(1.05)';
     }
   });
+
+  interface PetalConfig {
+    count: number;
+    sizeMin: number;
+    sizeMax: number;
+    colors: string[];
+    speedMin: number;
+    speedMax: number;
+    centerConcentration: boolean;
+    concentration?: number;
+    opacityBase: number;
+  }
+
+  interface Petal {
+    x: number;
+    y: number;
+    r: number;
+    speed: number;
+    drift: number;
+    phase: number;
+    opacity: number;
+    color: string;
+    rot: number;
+    rotSpeed: number;
+    shape: 'petal' | 'dot';
+  }
+
+  function initPetalCanvas(canvas: HTMLCanvasElement) {
+    const config: PetalConfig = JSON.parse(canvas.dataset.particles || '{}');
+    const concentration = config.concentration ?? 60;
+    const ctx = canvas.getContext('2d', { alpha: true });
+    if (!ctx) return;
+
+    let petals: Petal[] = [];
+
+    function spawnX(width: number): number {
+      if (!config.centerConcentration) return Math.random() * width;
+      if (Math.random() < 0.7) {
+        const spread = width * (concentration / 100);
+        return width / 2 + (Math.random() - 0.5) * spread;
+      }
+      return Math.random() * width;
+    }
+
+    function generate(width: number, height: number) {
+      const next: Petal[] = [];
+      for (let i = 0; i < config.count; i++) {
+        const x = spawnX(width);
+        let opacity = config.opacityBase * (0.6 + Math.random() * 0.4);
+        if (config.centerConcentration) {
+          if (x < width * 0.15 || x > width * 0.85) opacity *= 0.5;
+          else if (Math.abs(x - width / 2) > width * (concentration / 100) / 2) opacity *= 0.55;
+        }
+        next.push({
+          x,
+          y: Math.random() * height - height * 0.2,
+          r: config.sizeMin + Math.random() * (config.sizeMax - config.sizeMin),
+          speed: config.speedMin + Math.random() * (config.speedMax - config.speedMin),
+          drift: (Math.random() - 0.5) * 0.6,
+          phase: Math.random() * Math.PI * 2,
+          opacity,
+          color: config.colors[Math.floor(Math.random() * config.colors.length)],
+          rot: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 1.5,
+          shape: Math.random() < 0.7 ? 'petal' : 'dot',
+        });
+      }
+      petals = next;
+    }
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = canvas.clientWidth * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+      generate(canvas.clientWidth, canvas.clientHeight);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    let lastTime = performance.now();
+    const tick = (now: number) => {
+      const dt = Math.min(33, now - lastTime) / 16.666;
+      lastTime = now;
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      ctx!.clearRect(0, 0, w, h);
+      for (const p of petals) {
+        p.y += p.speed * dt;
+        p.x += Math.sin(p.phase) * 0.3 * dt + p.drift * dt * 0.1;
+        p.phase += 0.015 * dt;
+        p.rot += p.rotSpeed * dt * 0.5;
+
+        if (p.y > h + 20) {
+          p.y = -20;
+          p.x = spawnX(w);
+          if (config.centerConcentration && (p.x < w * 0.15 || p.x > w * 0.85)) {
+            p.opacity *= 0.8;
+          } else {
+            p.opacity = config.opacityBase * (0.6 + Math.random() * 0.4);
+          }
+        }
+        if (p.x < -20) p.x = w + 20;
+        if (p.x > w + 20) p.x = -20;
+
+        ctx!.save();
+        ctx!.globalAlpha = p.opacity;
+        ctx!.translate(p.x, p.y);
+        ctx!.rotate((p.rot * Math.PI) / 180);
+        if (p.shape === 'petal') {
+          ctx!.fillStyle = p.color;
+          ctx!.beginPath();
+          ctx!.ellipse(0, 0, p.r * 1.8, p.r * 0.9, 0, 0, Math.PI * 2);
+          ctx!.fill();
+          ctx!.globalAlpha = p.opacity * 0.6;
+          ctx!.fillStyle = '#ffffff';
+          ctx!.beginPath();
+          ctx!.ellipse(-p.r * 0.3, -p.r * 0.2, p.r * 0.5, p.r * 0.2, 0, 0, Math.PI * 2);
+          ctx!.fill();
+        } else {
+          ctx!.fillStyle = p.color;
+          ctx!.shadowColor = p.color;
+          ctx!.shadowBlur = p.r * 2.5;
+          ctx!.beginPath();
+          ctx!.arc(0, 0, p.r, 0, Math.PI * 2);
+          ctx!.fill();
+        }
+        ctx!.restore();
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  hero.querySelectorAll<HTMLCanvasElement>('.ltsuan-hero-petals').forEach(initPetalCanvas);
 
   maybeStartAuto();
 </script>

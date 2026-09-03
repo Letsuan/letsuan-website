@@ -24,6 +24,17 @@ export interface Slide {
   introAlt?: string;
   introBgWidth?: number;
   introBgHeight?: number;
+  particles?: {
+    count: number;
+    sizeMin: number;
+    sizeMax: number;
+    colors: string[];
+    speedMin: number;
+    speedMax: number;
+    centerConcentration: boolean;
+    concentration?: number;
+    opacityBase: number;
+  };
 }
 
 export interface Service {
