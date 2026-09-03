@@ -86,8 +86,8 @@ export const slides: Slide[] = [
     href: './about',
     particles: {
       count: 108,
-      sizeMin: 0.8,
-      sizeMax: 2.5,
+      sizeMin: 0.6,
+      sizeMax: 4.2,
       colors: ['#7ec8e3', '#a0d8ff', '#c2e6ff', '#6bb6d6'],
       speedMin: 0.25,
       speedMax: 0.9,
