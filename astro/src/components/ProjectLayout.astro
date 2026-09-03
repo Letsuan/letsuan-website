@@ -43,6 +43,9 @@ interface Props {
   relatedLabel?: string;
   detailLabel?: string;
   noTitleBreak?: boolean;
+  ctaHeadline?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 const {
@@ -71,6 +74,9 @@ const {
   relatedLabel = 'RELATED PROJECTS',
   detailLabel = 'PROJECT DETAIL',
   noTitleBreak = false,
+  ctaHeadline = lang === 'zh-TW' ? '有專案想討論？' : 'Have a project in mind?',
+  ctaLabel = lang === 'zh-TW' ? '聯絡我們' : 'Get in Touch',
+  ctaHref = './contact',
 } = Astro.props;
 
 const shareUrl = encodeURIComponent(canonical);
@@ -104,6 +110,11 @@ const shareUrl = encodeURIComponent(canonical);
           ))}
         </div>
         <div class="ltsuan-detail-body" set:html={bodyHtml} />
+
+        <div class="ltsuan-detail-cta">
+          <p class="ltsuan-detail-cta-headline">{ctaHeadline}</p>
+          <a href={ctaHref} class="ltsuan-detail-cta-btn">{ctaLabel}</a>
+        </div>
 
         {relatedProjects.length > 0 && (
           <div class="ltsuan-detail-related">
@@ -331,6 +342,38 @@ const shareUrl = encodeURIComponent(canonical);
   }
   .ltsuan-detail-body :global(p:last-child) {
     margin-bottom: 0;
+  }
+  .ltsuan-detail-cta {
+    margin-top: 44px;
+    padding: 28px;
+    border: 1px solid var(--ltsuan-detail-border);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .ltsuan-detail-cta-headline {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .ltsuan-detail-cta-btn {
+    flex-shrink: 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: var(--ltsuan-detail-bg);
+    background: var(--ltsuan-detail-link);
+    padding: 13px 26px;
+    border-radius: 999px;
+    transition: background 0.2s ease;
+  }
+  .ltsuan-detail-cta-btn:hover {
+    background: var(--ltsuan-detail-accent);
   }
   .ltsuan-detail-related {
     margin-top: 44px;
