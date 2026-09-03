@@ -26,7 +26,8 @@
 
 ## Seeing is Believing? — Masters of Marine Illusion: Mimicry & Camouflage
 
-**Source:** https://letsuan.com/project-marine-illusion  
+**Source:** https://letsuan.com/project-marine-illusion
+**Chinese version:** https://letsuan.com/zh-TW/project-marine-illusion  
 **Client:** Taichung Aquarium  
 **Location:** Taichung, Taiwan  
 **Year:** 2026  
@@ -49,7 +50,8 @@ Wall substrates, coatings, trim, and full-space graphics carried international e
 
 ## Eternal Notre-Dame — International Debut of the VR Immersive Exhibition in Taiwan
 
-**Source:** https://letsuan.com/project-notre-dame  
+**Source:** https://letsuan.com/project-notre-dame
+**Chinese version:** https://letsuan.com/zh-TW/project-notre-dame  
 **Client:** HTC / National Science and Technology Museum  
 **Location:** Kaohsiung, Taiwan  
 **Year:** 2023–2024  
@@ -76,15 +78,16 @@ The exhibition met the international technical team’s specifications, passed v
 
 ## Beyond Just an Exhibition — You Are Part of the Art! (teamLab)
 
-**Source:** https://letsuan.com/project-beyond-just-an-exhibition  
+**Source:** https://letsuan.com/project-beyond-just-an-exhibition
+**Chinese version:** https://letsuan.com/zh-TW/project-beyond-just-an-exhibition  
 **Client:** teamLab  
 **Location:** National Taiwan Science Education Center, Taipei  
 **Year:** 2024  
-**Area:** 1,859.126 ㎡  
+**Area:** 1,785.126 ㎡
 **Category:** Exhibition Design, Installation Art, Event
 
 ### Summary
-Full spatial planning, construction drawings, and general contracting for teamLab Future Park Taipei. A 1,859 m² floor was fitted with 178 projectors plus blending processors, sensors, and terminals in 14 days. The team remained on site through the full run and completed teardown and clearance within seven days of closing.
+Full spatial planning, construction drawings, and general contracting for teamLab Future Park Taipei. A 1,785 m² floor was fitted with 178 projectors plus blending processors, sensors, and terminals in 14 days. The team remained on site through the full run and completed teardown and clearance within seven days of closing.
 
 ### Key Engineering Challenges
 - Projectors, speakers, and sensors suspended from truss below the 8th-floor slab; load distribution calculated node by node
@@ -103,7 +106,8 @@ The exhibition operated successfully through its run. Full dismantling and site 
 
 ## Detention — Reality Experience
 
-**Source:** https://letsuan.com/project-detention-pier2  
+**Source:** https://letsuan.com/project-detention-pier2
+**Chinese version:** https://letsuan.com/zh-TW/project-detention-pier2  
 **Location:** Songshan Cultural and Creative Park, Taipei / The Pier-2 Art Center, Kaohsiung  
 **Year:** 2020–2021  
 **Area:** Songshan 1,210 ㎡ / Pier-2 1,190.2 ㎡  
@@ -125,7 +129,8 @@ A frightening dark exhibit and a code-compliant public venue were delivered as a
 
 ## Detective Conan — Science Investigation Exhibition (Taipei & Kaohsiung)
 
-**Source:** https://letsuan.com/project-detective-conan-taipei  
+**Source:** https://letsuan.com/project-detective-conan-taipei
+**Chinese version:** https://letsuan.com/zh-TW/project-detective-conan-taipei  
 **Client:** Shogakukan Inc.  
 **Location:** National Taiwan Science Education Center, Taipei / National Science and Technology Museum, Kaohsiung  
 **Year:** 2019–2020  
@@ -144,7 +149,8 @@ Consistent IP fidelity was maintained across two buildings. Reusable components 
 
 ## Experience the Yokai World — 100 Stories of Yokai Exhibition
 
-**Source:** https://letsuan.com/project-yokai-world  
+**Source:** https://letsuan.com/project-yokai-world
+**Chinese version:** https://letsuan.com/zh-TW/project-yokai-world  
 **Client:** Mizuki Production  
 **Location:** Huashan Creative Park, Taipei  
 **Year:** 2022–2023  
@@ -170,7 +176,8 @@ Zero system failures across the run. Licensor inspection passed on the first att
 
 ## Universe — 500 Pieces of LED Kinetic Light
 
-**Source:** https://letsuan.com/project-led-kinetic  
+**Source:** https://letsuan.com/project-led-kinetic
+**Chinese version:** https://letsuan.com/zh-TW/project-led-kinetic  
 **Client:** Grandview Mall Science Museum  
 **Location:** Canton (Guangzhou), China  
 **Year:** 2024  
@@ -186,7 +193,8 @@ Each fixture’s vertical position is controlled by its own winch; RGB LED modul
 
 ## Cat Art Museum — A Super-Healing World by Shu Yamamoto
 
-**Source:** https://letsuan.com/project-cat-art  
+**Source:** https://letsuan.com/project-cat-art
+**Chinese version:** https://letsuan.com/zh-TW/project-cat-art  
 **Client:** Cat Art Museum  
 **Location:** Pingtung 1936 Tobacco Culture Base, Taiwan  
 **Year:** 2024  
@@ -202,7 +210,8 @@ Instead of a neutral white-box gallery, the space was divided into sequential sa
 
 ## La Fortuna Bordada — Taiwanese Embroidery in Madrid
 
-**Source:** https://letsuan.com/project-la-fortuna-bordada  
+**Source:** https://letsuan.com/project-la-fortuna-bordada
+**Chinese version:** https://letsuan.com/zh-TW/project-la-fortuna-bordada  
 **Client:** National Museum of History  
 **Location:** Museo Nacional de Artes Decorativas, Madrid, Spain  
 **Year:** 2017  
@@ -221,10 +230,12 @@ All 74 groups of artifacts were installed with correct dimensions and presentati
 
 ## The Missing Scientist — Electromagnetic Horizon II
 
-**Source:** https://letsuan.com/project-missing-scientist  
+**Source:** https://letsuan.com/project-missing-scientist
+**Chinese version:** https://letsuan.com/zh-TW/project-missing-scientist  
 **Client:** National Museum of Natural Science  
 **Location:** Chelungpu Fault Preservation Park, Nantou, Taiwan  
-**Year:** 2023–Present  
+**Year:** 2023–Present
+**Area:** 860 ㎡
 **Category:** Curatorial Project, Exhibition Design, Graphic Design, Visual Design, Interactive Multimedia, Construction
 
 ### Summary
@@ -237,7 +248,8 @@ The Wave Dance Theater suspends dozens of independently motorized spheres that t
 
 ## R.O.C. Air Force Academy 90th Founding Anniversary — Corridor of Light
 
-**Source:** https://letsuan.com/project-air-force-academy  
+**Source:** https://letsuan.com/project-air-force-academy
+**Chinese version:** https://letsuan.com/zh-TW/project-air-force-academy  
 **Client:** R.O.C. Air Force Academy  
 **Location:** Kaohsiung, Taiwan  
 **Year:** 2019  
@@ -251,7 +263,8 @@ Curatorial and design-build exhibition presenting ninety years of Academy histor
 
 ## See the Ministry of Culture — One History. Six Departments. Countless Everyday Moments.
 
-**Source:** https://letsuan.com/project-art-gallery-culture  
+**Source:** https://letsuan.com/project-art-gallery-culture
+**Chinese version:** https://letsuan.com/zh-TW/project-art-gallery-culture  
 **Client:** Ministry of Culture  
 **Year:** 2019  
 **Category:** Curation, Exhibition Design, Graphic Design, Interactive Multimedia, Construction
@@ -263,7 +276,8 @@ Curatorial concept treating the Ministry’s history and current structure as a 
 
 ## Highlights of NMH — Collection Exhibition
 
-**Source:** https://letsuan.com/project-nmh-highlights  
+**Source:** https://letsuan.com/project-nmh-highlights
+**Chinese version:** https://letsuan.com/zh-TW/project-nmh-highlights  
 **Client:** National Museum of History  
 **Location:** Taipei, Taiwan  
 **Year:** 2015  
@@ -276,7 +290,8 @@ Complete renewal of the museum’s last indoor permanent exhibition before major
 
 ## Energy Taiwan 2022 — Ørsted Exhibition Stand
 
-**Source:** https://letsuan.com/project-orsted-energy  
+**Source:** https://letsuan.com/project-orsted-energy
+**Chinese version:** https://letsuan.com/zh-TW/project-orsted-energy  
 **Client:** Ørsted  
 **Location:** Taipei Nangang Exhibition Center  
 **Year:** 2022  
@@ -289,7 +304,8 @@ Trade-show pavilion that converted a central structural column into a realistic 
 
 ## Wind and Geothermal Energy — TCCGE Green Energy Vision Pavilion
 
-**Source:** https://letsuan.com/project-green-energy  
+**Source:** https://letsuan.com/project-green-energy
+**Chinese version:** https://letsuan.com/zh-TW/project-green-energy  
 **Client:** TCCGE  
 **Location:** Changhua, Taiwan  
 **Year:** 2022–Present  
@@ -302,7 +318,8 @@ Public-facing exhibition hall for Taiwan Cement Green Energy telling the story o
 
 ## 8.5 ping: A Museum on Wheels — Mobile Museum Container
 
-**Source:** https://letsuan.com/project-mobile-museum  
+**Source:** https://letsuan.com/project-mobile-museum
+**Chinese version:** https://letsuan.com/zh-TW/project-mobile-museum  
 **Client:** National Museum of History  
 **Year:** 2019  
 **Area:** 28.27 ㎡  
@@ -315,7 +332,8 @@ Interior fit-out of a 40-foot shipping container converted into Taiwan’s perma
 
 ## From Dragon to Beast — Extinction and Radiation
 
-**Source:** https://letsuan.com/project-dragon-to-beast  
+**Source:** https://letsuan.com/project-dragon-to-beast
+**Chinese version:** https://letsuan.com/zh-TW/project-dragon-to-beast  
 **Client:** National Museum of Natural Science  
 **Location:** Taichung, Taiwan  
 **Year:** 2013  
@@ -328,7 +346,8 @@ Full design-build for a major international fossil exhibition, including a self-
 
 ## Tokyo Ghost Hospital
 
-**Source:** https://letsuan.com/project-tokyo-ghost-hospital  
+**Source:** https://letsuan.com/project-tokyo-ghost-hospital
+**Chinese version:** https://letsuan.com/zh-TW/project-tokyo-ghost-hospital  
 **Client:** Toei Animation  
 **Location:** National Taiwan Science Education Center, Taipei  
 **Year:** 2015  
@@ -342,10 +361,12 @@ On-site construction of Toei’s touring physical horror experience across two f
 
 ## Offshore Wind O&M Building — Learning Center
 
-**Source:** https://letsuan.com/project-offshore-wind  
+**Source:** https://letsuan.com/project-offshore-wind
+**Chinese version:** https://letsuan.com/zh-TW/project-offshore-wind  
 **Client:** Ørsted  
-**Location:** Taichung, Taiwan  
-**Year:** 2022–Present  
+**Location:** Taichung, Taiwan
+**Year:** 2022–Present
+**Area:** 231.4 ㎡
 **Category:** Curatorial Project, Exhibition Design, Interior Design, Graphic Design, Visual Design, Construction
 
 ### Summary
@@ -355,7 +376,8 @@ Conversion of underused corridors and staff areas inside Ørsted’s O&M buildin
 
 ## Green Energy Education Observation Platform
 
-**Source:** https://letsuan.com/project-tccge-deck  
+**Source:** https://letsuan.com/project-tccge-deck
+**Chinese version:** https://letsuan.com/zh-TW/project-tccge-deck  
 **Client:** TCCGE  
 **Location:** Changhua Coastal Industrial Park  
 **Year:** 2022–Present  
@@ -368,7 +390,8 @@ Rooftop observation and education platform overlooking a solar farm in a high-sa
 
 ## Jehol Biota
 
-**Source:** https://letsuan.com/project-jehol-biota  
+**Source:** https://letsuan.com/project-jehol-biota
+**Chinese version:** https://letsuan.com/zh-TW/project-jehol-biota  
 **Client:** National Museum of Natural Science  
 **Location:** Taichung, Taiwan  
 **Year:** 2019–2020  
@@ -382,7 +405,8 @@ Fit-out for an international fossil exhibition of 93 specimens from the Jehol Bi
 
 ## Amazing Homeland — Cheng-Hsiung Chen’s Collection of Taiwanese Indigenous Artifacts
 
-**Source:** https://letsuan.com/project-amazing-homeland  
+**Source:** https://letsuan.com/project-amazing-homeland
+**Chinese version:** https://letsuan.com/zh-TW/project-amazing-homeland  
 **Client:** National Museum of History  
 **Location:** Taipei, Taiwan  
 **Year:** 2017  
@@ -395,7 +419,8 @@ Low-illuminance museum exhibition built around the objects. Suspended garment ga
 
 ## Points of Light in Grayscale — Ørsted Pavilion, 2023 Changhua Flower Festival
 
-**Source:** https://letsuan.com/project-changhua-flower  
+**Source:** https://letsuan.com/project-changhua-flower
+**Chinese version:** https://letsuan.com/zh-TW/project-changhua-flower  
 **Client:** Ørsted / Changhua County Government  
 **Location:** Changhua, Taiwan  
 **Year:** 2023  
@@ -408,7 +433,8 @@ Corporate pavilion on an awkward leftover corner of the flower-festival site. Ex
 
 ## The Westernmost Point of Taiwan
 
-**Source:** https://letsuan.com/project-westernmost-point  
+**Source:** https://letsuan.com/project-westernmost-point
+**Chinese version:** https://letsuan.com/zh-TW/project-westernmost-point  
 **Client:** Tourism Bureau of Tainan City Government  
 **Location:** Dintouer Sandbank, Tainan  
 **Year:** 2022  
@@ -421,10 +447,12 @@ Landmark installation on unstable coastal ground fully exposed to salt, wind, an
 
 ## The World of Semiconductors — TSMC × National Museum of Natural Science
 
-**Source:** https://letsuan.com/project-world-semiconductors  
+**Source:** https://letsuan.com/project-world-semiconductors
+**Chinese version:** https://letsuan.com/zh-TW/project-world-semiconductors  
 **Client:** TSMC  
-**Location:** Taichung, Taiwan  
-**Year:** 2021  
+**Location:** Taichung, Taiwan
+**Year:** 2021
+**Area:** 240 ㎡
 **Category:** Visual Design, Event, Construction
 
 ### Summary
@@ -434,7 +462,8 @@ Temporary ceremony stage and curved backdrop built inside a public museum corrid
 
 ## Five Thousand Years of Silence — Story-telling by the Ancient People
 
-**Source:** https://letsuan.com/project-story-telling  
+**Source:** https://letsuan.com/project-story-telling
+**Chinese version:** https://letsuan.com/zh-TW/project-story-telling  
 **Client:** National Museum of Natural Science  
 **Location:** Taichung, Taiwan  
 **Year:** 2020  
@@ -447,7 +476,8 @@ Partial update of the Anthropology Hall permanent exhibition while adjacent exhi
 
 ## Enriching Hakka Settlements — Camphor Industry Special Exhibition
 
-**Source:** https://letsuan.com/project-hakka-culture  
+**Source:** https://letsuan.com/project-hakka-culture
+**Chinese version:** https://letsuan.com/zh-TW/project-hakka-culture  
 **Location:** Taiwan Hakka Culture Development Center, Miaoli  
 **Year:** 2012  
 **Category:** Exhibition Design, Construction
@@ -459,7 +489,8 @@ Opening special exhibition completed in thirty days. Factory-prefabricated lamin
 
 ## Disaster Prevention Hall — 921 Earthquake Museum of Taiwan
 
-**Source:** https://letsuan.com/project-engineering-construction  
+**Source:** https://letsuan.com/project-engineering-construction
+**Chinese version:** https://letsuan.com/zh-TW/project-engineering-construction  
 **Location:** Taichung, Taiwan  
 **Year:** 2012  
 **Category:** Construction
@@ -471,8 +502,10 @@ Fit-out inside the 921 Earthquake Museum, a building whose curved walls and 100 
 
 ## Traveling Temple — Tibetan Thangka Art Exhibition
 
-**Source:** https://letsuan.com/project-tibetan-thangka  
-**Location:** National Chiang Kai-shek Memorial Hall, Taipei  
+**Source:** https://letsuan.com/project-tibetan-thangka
+**Chinese version:** https://letsuan.com/zh-TW/project-tibetan-thangka
+**Client:** Mongolian and Tibetan Affairs Commission
+**Location:** National Chiang Kai-shek Memorial Hall, Taipei
 **Year:** 2015  
 **Category:** Exhibition Design, Interior Design, Graphic Design, Logo Design, Construction
 
@@ -483,7 +516,8 @@ Display of Rebgong thangkas inside an open circulation gallery. Every piece was 
 
 ## The Hunt of the Celestial Court — Wang Ye Worship in Donggang
 
-**Source:** https://letsuan.com/project-wang-ye-donggang  
+**Source:** https://letsuan.com/project-wang-ye-donggang
+**Chinese version:** https://letsuan.com/zh-TW/project-wang-ye-donggang  
 **Client:** National Museum of Natural Science  
 **Location:** Taichung, Taiwan  
 **Year:** 2012  
@@ -496,7 +530,8 @@ Seven-day construction of a reconstructed Celestial Court and display platform f
 
 ## The Lawn Needed More Protection Than the Artwork Did — 2013 Asian Art Biennial
 
-**Source:** https://letsuan.com/project-asian-art-biennial  
+**Source:** https://letsuan.com/project-asian-art-biennial
+**Chinese version:** https://letsuan.com/zh-TW/project-asian-art-biennial  
 **Client:** National Taiwan Museum of Fine Arts  
 **Location:** Taichung, Taiwan  
 **Year:** 2013–2014  
@@ -509,7 +544,8 @@ On-site fabrication and installation of ten outdoor light-box works by LuxuryLog
 
 ## NMNS TELDAP — Digital Archives Exhibition
 
-**Source:** https://letsuan.com/project-nmns-teldap  
+**Source:** https://letsuan.com/project-nmns-teldap
+**Chinese version:** https://letsuan.com/zh-TW/project-nmns-teldap  
 **Client:** National Museum of Natural Science  
 **Location:** Taichung, Taiwan  
 **Year:** 2013  
@@ -522,7 +558,8 @@ Construction of a permanent digital-archives service counter with continuous cur
 
 ## INCIDENT IN CONAN EXHIBIT — Congratulatory Exhibit “Conan Exhibit”
 
-**Source:** https://letsuan.com/project-serialization-anniversary  
+**Source:** https://letsuan.com/project-serialization-anniversary
+**Chinese version:** https://letsuan.com/zh-TW/project-serialization-anniversary  
 **Client:** Shogakukan Inc.  
 **Location:** Huashan 1914 Creative Park, Taipei  
 **Year:** 2015–2016  
@@ -535,7 +572,8 @@ Construction of a permanent digital-archives service counter with continuous cur
 
 ## Securities Company Office — A Contemporary, High-End Workplace
 
-**Source:** https://letsuan.com/project-securities-office  
+**Source:** https://letsuan.com/project-securities-office
+**Chinese version:** https://letsuan.com/zh-TW/project-securities-office  
 **Client:** Securities Company  
 **Location:** Banqiao, New Taipei City  
 **Area:** 200 ㎡  
@@ -550,7 +588,8 @@ Contemporary office interior including waiting area, kitchen/breakout, boardroom
 
 ### Fullchamp — Brochure Design
 
-**Source:** https://letsuan.com/project-fullchamp-brochure  
+**Source:** https://letsuan.com/project-fullchamp-brochure
+**Chinese version:** https://letsuan.com/zh-TW/project-fullchamp-brochure  
 **Client:** Fullchamp  
 **Year:** 2010  
 **Category:** Graphic Design, Visual Design, Typography
@@ -559,7 +598,8 @@ Brand-identity and company-brochure project executed by the in-house team.
 
 ### Just Only — Environment Protection Brochure
 
-**Source:** https://letsuan.com/project-just-only-environment  
+**Source:** https://letsuan.com/project-just-only-environment
+**Chinese version:** https://letsuan.com/zh-TW/project-just-only-environment  
 **Client:** Just Only Environment Protection  
 **Year:** 2010  
 **Category:** Graphic Design, Visual Design, Typography, Brochure, Website
