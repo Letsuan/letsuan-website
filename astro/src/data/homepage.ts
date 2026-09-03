@@ -18,6 +18,8 @@ export interface Slide {
   personHeight?: number;
   titleLineHeight?: number;
   subtitleLineHeight?: number;
+  titleFontScale?: number;
+  ctaMarginTop?: string;
 }
 
 export interface Service {

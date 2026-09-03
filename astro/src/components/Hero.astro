@@ -84,7 +84,10 @@ const beamTwinkles = [
         <div class="ltsuan-hero-content-wrap">
           <div class="ltsuan-hero-container">
             <div class="ltsuan-hero-text">
-              <h1 class="ltsuan-hero-title" style={slide.titleLineHeight ? `line-height:${slide.titleLineHeight}` : undefined}>
+              <h1 class="ltsuan-hero-title" style={[
+                slide.titleLineHeight ? `line-height:${slide.titleLineHeight}` : '',
+                slide.titleFontScale ? `--ltsuan-title-scale:${slide.titleFontScale}` : '',
+              ].filter(Boolean).join(';') || undefined}>
                 <span class="ltsuan-hero-title-line-mask">
                   <span class:list={['ltsuan-reveal-line1', { 'is-revealed': isActive }]}>{slide.titleLine1}</span>
                 </span>
@@ -103,7 +106,7 @@ const beamTwinkles = [
                   )}
                 </p>
               </div>
-              <div class="ltsuan-hero-cta-wrap">
+              <div class="ltsuan-hero-cta-wrap" style={slide.ctaMarginTop ? `margin-top:${slide.ctaMarginTop}` : undefined}>
                 <div class:list={['ltsuan-reveal-button', { 'is-revealed': isActive }]}>
                   <a href={slide.href} class="ltsuan-hero-cta">
                     <span>{slide.ctaLabel}</span>
@@ -287,7 +290,7 @@ const beamTwinkles = [
     letter-spacing: -0.02em;
     margin: 0;
     pointer-events: auto;
-    font-size: clamp(40px, 8vw, 120px);
+    font-size: calc(clamp(40px, 8vw, 120px) * var(--ltsuan-title-scale, 1));
   }
   .ltsuan-hero-title-line-mask {
     display: block;
@@ -383,7 +386,7 @@ const beamTwinkles = [
 
   @media (min-width: 1280px) and (max-width: 1699px) {
     .ltsuan-hero-title {
-      font-size: clamp(40px, 6vw, 88px);
+      font-size: calc(clamp(40px, 6vw, 88px) * var(--ltsuan-title-scale, 1));
     }
   }
   @media (min-width: 1700px) {
@@ -391,7 +394,7 @@ const beamTwinkles = [
       max-width: 50%;
     }
     .ltsuan-hero-title {
-      font-size: clamp(120px, 6.2vw, 145px);
+      font-size: calc(clamp(120px, 6.2vw, 145px) * var(--ltsuan-title-scale, 1));
     }
     .ltsuan-hero-container {
       max-width: 1500px;
@@ -402,7 +405,7 @@ const beamTwinkles = [
       max-width: 50%;
     }
     .ltsuan-hero-title {
-      font-size: clamp(120px, 6.2vw, 165px);
+      font-size: calc(clamp(120px, 6.2vw, 165px) * var(--ltsuan-title-scale, 1));
     }
     .ltsuan-hero-container {
       max-width: 1750px;
