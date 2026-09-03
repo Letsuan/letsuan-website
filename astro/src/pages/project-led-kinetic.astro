@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Universe";
 const description = "Universe: 500 Pieces of LED Kinetic Light. Exhibition Design for Grandview Mall Science Museum in Canton, China, 2024 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-led-kinetic";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-led-kinetic" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/universe-led-kinetic-light-01-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Universe — 500 Pieces LED Kinetic Light", "description": "A high-end dynamic installation of 500 kinetic lighting units, conveying astronomical knowledge through light and music.", "url": "https://letsuan.com/project-led-kinetic", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/universe-led-kinetic-light-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2024", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Universe — 500 Pieces LED Kinetic Light", "item": "https://letsuan.com/project-led-kinetic"}]}];
 const eyebrowLeft = "EXHIBITION — 2024";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/universe-led-kinetic-light-01-letsuan-design.j
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

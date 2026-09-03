@@ -10,6 +10,11 @@ import { organizationJsonLd } from '../data/organization';
 const title = 'Le Tsuan Design | Museum Exhibition Design, Taiwan';
 const description = 'Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Same team from concept to installation. 42+ projects, 17,000+ m² delivered since 2014.';
 const canonical = 'https://letsuan.com/';
+const alternateHrefs = [
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'zh-TW', href: 'https://letsuan.com/zh-TW/' },
+  { hreflang: 'x-default', href: canonical },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const faqs = [
@@ -29,7 +34,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="home" zhHref="/zh-TW/" />
 

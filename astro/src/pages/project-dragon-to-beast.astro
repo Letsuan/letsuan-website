@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | From Dragon to Beast";
 const description = "From Dragon to Beast: Extinction and Radiation. Exhibition Design for National Museum of Natural Science in Taichung, Taiwan, 2013 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-dragon-to-beast";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-dragon-to-beast" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "From Dragon to Beast: Extinction and Radiation", "description": "Dinosaur and mammal fossils from Gansu, China, National Museum of Natural Science.", "url": "https://letsuan.com/project-dragon-to-beast", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2013", "hasPart": [{"@type": "CreativeWork", "name": "Core Techniques and Technical Highlights"}, {"@type": "CreativeWork", "name": "On-Site Crisis Response and Safety Management"}], "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "From Dragon to Beast: Extinction and Radiation", "item": "https://letsuan.com/project-dragon-to-beast"}]}];
 const eyebrowLeft = "EXHIBITION — 2013";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/dragon-to-beast-sauropod-skeletons-being-insta
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

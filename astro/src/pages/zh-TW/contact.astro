@@ -6,7 +6,12 @@ import { organizationJsonLd } from '../../data/organization';
 
 const title = '麗荃室內裝修 | Contact Us';
 const description = 'Get in touch with Le Tsuan Design about your next exhibition, interior or construction project, based in Taichung, Taiwan.';
-const canonical = 'https://letsuan.com/contact';
+const canonical = 'https://letsuan.com/zh-TW/contact';
+const alternateHrefs = [
+  { hreflang: 'en', href: 'https://letsuan.com/contact' },
+  { hreflang: 'zh-TW', href: canonical },
+  { hreflang: 'x-default', href: 'https://letsuan.com/contact' },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const faqs = [
@@ -50,7 +55,7 @@ const faqJsonLd = {
 const email = 'info@letsuan.com';
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="contact" enHref="/contact" />
 

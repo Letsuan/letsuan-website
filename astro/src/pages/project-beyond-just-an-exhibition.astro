@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Beyond Just an Exhibition";
 const description = "Beyond Just an Exhibition–You Are Part of the Art!: Step Into a Breathing Magical Universe of Light and Shadows. Exhibition Design — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-beyond-just-an-exhibition";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-beyond-just-an-exhibition" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Beyond Just an Exhibition—You Are Part of the Art", "description": "Step Into a Breathing Magical Universe of Light and Shadows.", "url": "https://letsuan.com/project-beyond-just-an-exhibition", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2020-01-01", "dateModified": "2026-08-06", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Beyond Just an Exhibition—You Are Part of the Art", "item": "https://letsuan.com/project-beyond-just-an-exhibition"}]}];
 const eyebrowLeft = "EXHIBITION — 2024";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/beyond-exhibition-visitors-interacting-with-pu
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

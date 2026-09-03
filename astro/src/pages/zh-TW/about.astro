@@ -8,7 +8,12 @@ import { avifPath } from '../../utils/images';
 
 const title = '麗荃室內裝修 | About the Studio';
 const description = 'Le Tsuan Design is a Taichung, Taiwan-based studio specializing in interior, exhibition, visual design and construction.';
-const canonical = 'https://letsuan.com/about';
+const canonical = 'https://letsuan.com/zh-TW/about';
+const alternateHrefs = [
+  { hreflang: 'en', href: 'https://letsuan.com/about' },
+  { hreflang: 'zh-TW', href: canonical },
+  { hreflang: 'x-default', href: 'https://letsuan.com/about' },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const pageJsonLd = {
@@ -16,7 +21,7 @@ const pageJsonLd = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://letsuan.com/about#webpage',
+      '@id': 'https://letsuan.com/zh-TW/about#webpage',
       url: canonical,
       name: title,
       description,
@@ -26,7 +31,7 @@ const pageJsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://letsuan.com/' },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://letsuan.com/zh-TW/' },
         { '@type': 'ListItem', position: 2, name: 'About', item: canonical },
       ],
     },
@@ -66,7 +71,7 @@ const services = [
 ];
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="about" enHref="/about" />
 

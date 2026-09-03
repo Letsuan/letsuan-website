@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Green Energy Observation Platform";
 const description = "Green Energy Education Observation Platform: Changhua Coastal Industrial Park. Exhibition Design for TCCGE in Changhua, Taiwan, 2022–Present — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-tccge-deck";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-tccge-deck" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Green Energy Education Observation Platform — Changhua Coastal Industrial Park", "description": "A rooftop viewing platform with wind and solar interactive exhibits.", "url": "https://letsuan.com/project-tccge-deck", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2021", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Green Energy Education Observation Platform — Changhua Coastal Industrial Park", "item": "https://letsuan.com/project-tccge-deck"}]}];
 const eyebrowLeft = "EXHIBITION — 2022–Present";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/tccge-observation-deck-zhangbin-01-letsuan-des
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

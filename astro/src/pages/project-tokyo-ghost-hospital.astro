@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Two eras, one immersive scare in the dark";
 const description = "Two eras, one immersive scare in the dark: Tokyo Ghost Hospital. Exhibition Design in Taipei, Taiwan, 2015 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-tokyo-ghost-hospital";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-tokyo-ghost-hospital" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/tokyo-ghost-hospital-exhibition-08-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Tokyo Ghost Hospital Exhibition", "description": "A Japanese-designed horror experience by TOEI, over 1,200 square meters.", "url": "https://letsuan.com/project-tokyo-ghost-hospital", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/tokyo-ghost-hospital-exhibition-08-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2015", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Tokyo Ghost Hospital Exhibition", "item": "https://letsuan.com/project-tokyo-ghost-hospital"}]}];
 const eyebrowLeft = "EXHIBITION — 2015";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/tokyo-ghost-hospital-exhibition-08-letsuan-des
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

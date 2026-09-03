@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Detective Conan";
 const description = "Detective Conan: Science Investigation Exhibition – Taipei & Kaohsiung. Exhibition Design in National Taiwan Science Education Center, Taipei — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-detective-conan-taipei";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-detective-conan-taipei" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/detective-conan-taipei-01-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Detective Conan Exhibition", "description": "Science Investigation Exhibition — National Taiwan Science Education Center, Taipei, and National Science and Technology Museum, Kaohsiung.", "url": "https://letsuan.com/project-detective-conan-taipei", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/detective-conan-taipei-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2018", "hasPart": [{"@type": "CreativeWork", "name": "Spatial Circulation Design"}, {"@type": "CreativeWork", "name": "Wall Construction & Scene Engineering"}, {"@type": "CreativeWork", "name": "Exhibit & Interactive Device Engineering"}, {"@type": "CreativeWork", "name": "Puzzle & Deduction Mechanic Design"}, {"@type": "CreativeWork", "name": "Lighting & MEP Engineering"}, {"@type": "CreativeWork", "name": "Crowd Analysis & Flow-Management Engineering"}, {"@type": "CreativeWork", "name": "Teardown & Restoration Engineering"}], "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Detective Conan Exhibition", "item": "https://letsuan.com/project-detective-conan-taipei"}]}];
 const eyebrowLeft = "EXHIBITION — 2019";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/detective-conan-taipei-01-letsuan-design.jpg",
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

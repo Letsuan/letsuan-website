@@ -7,11 +7,16 @@ import { organizationJsonLd } from '../data/organization';
 const title = 'Privacy Policy | Le Tsuan Design';
 const description = 'Privacy policy for Le Tsuan Design — how we collect, use, and protect information submitted through our website.';
 const canonical = 'https://letsuan.com/privacy-policy';
+const alternateHrefs = [
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'zh-TW', href: 'https://letsuan.com/zh-TW/privacy-policy' },
+  { hreflang: 'x-default', href: canonical },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 const email = 'info@letsuan.com';
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={organizationJsonLd}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={organizationJsonLd} alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="" zhHref="/zh-TW/privacy-policy" />
 

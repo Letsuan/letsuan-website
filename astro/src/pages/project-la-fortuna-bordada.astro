@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | La Fortuna Bordada";
 const description = "La Fortuna Bordada: Taiwanese indigenous costume exhibition at the Museo Nacional de Historia, Madrid. Exhibition Design — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-la-fortuna-bordada";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-la-fortuna-bordada" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/la-fortuna-bordada-gallery-corridor-embroidered-garment-panels-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "La Fortuna Bordada", "description": "Taiwanese embroidered garments, Museo Nacional de Artes Decorativas, Madrid.", "url": "https://letsuan.com/project-la-fortuna-bordada", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/la-fortuna-bordada-gallery-corridor-embroidered-garment-panels-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2017", "hasPart": [{"@type": "CreativeWork", "name": "\"Beauty and Auspiciousness: Embroidery from the Collection of the National Museum of History\" Opens at Spain's National Museum of Decorative Arts"}], "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "La Fortuna Bordada — Taiwanese Embroidery", "item": "https://letsuan.com/project-la-fortuna-bordada"}]}];
 const eyebrowLeft = "EXHIBITION — 2017";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/la-fortuna-bordada-exhibition-banner-museo-ent
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

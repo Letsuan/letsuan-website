@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | The World of Semiconductors";
 const description = "The World of Semiconductors: TSMC × National Museum of Natural Science. Visual Design for TSMC in Taichung,Taiwan, 2021 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-world-semiconductors";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-world-semiconductors" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/world-of-semiconductors-01-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "The World of Semiconductors — TSMC & NMNS", "description": "An exhibition presented with TSMC at the National Museum of Natural Science.", "url": "https://letsuan.com/project-world-semiconductors", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/world-of-semiconductors-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2021", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "The World of Semiconductors — TSMC & NMNS", "item": "https://letsuan.com/project-world-semiconductors"}]}];
 const eyebrowLeft = "EVENT — 2021";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/world-of-semiconductors-01-letsuan-design.jpg"
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

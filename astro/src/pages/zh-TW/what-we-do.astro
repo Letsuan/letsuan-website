@@ -32,7 +32,12 @@ const coreServiceCopy: Record<string, { headline: string; desc: string }> = {
 
 const title = '麗荃室內裝修 | Exhibition Design Process';
 const description = 'See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, engineered for heritage sites and high-precision environments.';
-const canonical = 'https://letsuan.com/what-we-do';
+const canonical = 'https://letsuan.com/zh-TW/what-we-do';
+const alternateHrefs = [
+  { hreflang: 'en', href: 'https://letsuan.com/what-we-do' },
+  { hreflang: 'zh-TW', href: canonical },
+  { hreflang: 'x-default', href: 'https://letsuan.com/what-we-do' },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const pageJsonLd = {
@@ -40,7 +45,7 @@ const pageJsonLd = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://letsuan.com/what-we-do#webpage',
+      '@id': 'https://letsuan.com/zh-TW/what-we-do#webpage',
       url: canonical,
       name: title,
       description,
@@ -49,7 +54,7 @@ const pageJsonLd = {
     },
     {
       '@type': 'OfferCatalog',
-      '@id': 'https://letsuan.com/what-we-do#catalog',
+      '@id': 'https://letsuan.com/zh-TW/what-we-do#catalog',
       name: 'Le Tsuan Design Services & Engineering Capabilities',
       provider: { '@id': 'https://letsuan.com/#organization' },
       itemListElement: [
@@ -89,7 +94,7 @@ const capabilities = [
 ];
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="what-we-do" enHref="/what-we-do" />
 

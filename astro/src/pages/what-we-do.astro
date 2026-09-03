@@ -33,6 +33,11 @@ const coreServiceCopy: Record<string, { headline: string; desc: string }> = {
 const title = 'Le Tsuan Design | Exhibition Design Process';
 const description = 'See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, engineered for heritage sites and high-precision environments.';
 const canonical = 'https://letsuan.com/what-we-do';
+const alternateHrefs = [
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'zh-TW', href: 'https://letsuan.com/zh-TW/what-we-do' },
+  { hreflang: 'x-default', href: canonical },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const pageJsonLd = {
@@ -89,7 +94,7 @@ const capabilities = [
 ];
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]} alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="what-we-do" zhHref="/zh-TW/what-we-do" />
 

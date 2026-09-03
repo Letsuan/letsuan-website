@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Seeing is Believing?";
 const description = "Seeing is Believing?: Masters of Marine Illusion: Mimicry & Camouflage. Exhibition Design for Taichung Aquarium in Taichung, Taiwan, 2026 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-marine-illusion";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-marine-illusion" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Masters of Marine Illusion: Mimicry & Camouflage", "description": "Masters of Marine Illusion: Mimicry & Camouflage — an exhibition on the ocean's most dangerous illusions, Taichung Aquarium. Built around the two most sophisticated visual strategies in marine biology — camouflage, the art of disappearing, and mimicry, the art of being mistaken for something else — this 68㎡ exhibition.", "url": "https://letsuan.com/project-marine-illusion", "image": "https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg", "creator": {"@id": "https://letsuan.com/#organization"}, "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2026", "hasPart": [{"@type": "CreativeWork", "name": "Design & Engineering Execution"}], "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Masters of Marine Illusion: Mimicry & Camouflage", "item": "https://letsuan.com/project-marine-illusion"}]}];
 const eyebrowLeft = "EXHIBITION — 2026";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/marine-illusion-visitors-exploring-the-masters
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

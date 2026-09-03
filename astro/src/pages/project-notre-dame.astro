@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Eternal Notre-Dame";
 const description = "Eternal Notre-Dame: International Debut of the VR Immersive Exhibition in Taiwan. Exhibition Design for HTC in Kaohsiung, Taiwan, 2023-2024 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-notre-dame";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-notre-dame" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Eternal Notre-Dame — Taiwan Debut", "description": "A VR immersive experience inside the cathedral undergoing reconstruction, making its Taiwan debut in Kaohsiung.", "url": "https://letsuan.com/project-notre-dame", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2023", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Eternal Notre-Dame — Taiwan Debut", "item": "https://letsuan.com/project-notre-dame"}]}];
 const eyebrowLeft = "EXHIBITION — 2023-2024";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/notre-dame-vr-group-letsuan-design.jpg", "alt"
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

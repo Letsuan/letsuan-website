@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | Experience the Yokai World";
 const description = "Experience the Yokai World: 100 Stories of Yokai Exhibition. Exhibition Design for Mizuki Production (水木プロダクション) in Taipei, Taiwan, 2022–2023 — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-yokai-world";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-yokai-world" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/yokai-world-exhibition-hero-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Experience the Yokai World — 100 Stories of Yokai", "description": "A centennial exhibition licensed from Japan's Mizuki Production, engineered as a zero-penetration heritage-site build with multi-zone automated triggers and full dark-exhibit AV/lighting integration, approved on first inspection by the licensor's on-site supervisory team.", "url": "https://letsuan.com/project-yokai-world", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/yokai-world-exhibition-hero-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2022-04-01", "dateModified": "2026-08-06", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "Experience the Yokai World — 100 Stories of Yokai", "item": "https://letsuan.com/project-yokai-world"}]}];
 const eyebrowLeft = "EXHIBITION — 2022–2023";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/yokai-world-exhibition-hero-letsuan-design.jpg
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}

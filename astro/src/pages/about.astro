@@ -9,6 +9,11 @@ import { avifPath } from '../utils/images';
 const title = 'Le Tsuan Design | About the Studio';
 const description = 'Le Tsuan Design is a Taichung, Taiwan-based studio specializing in interior, exhibition, visual design and construction.';
 const canonical = 'https://letsuan.com/about';
+const alternateHrefs = [
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'zh-TW', href: 'https://letsuan.com/zh-TW/about' },
+  { hreflang: 'x-default', href: canonical },
+];
 const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const pageJsonLd = {
@@ -66,7 +71,7 @@ const services = [
 ];
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]} alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="about" zhHref="/zh-TW/about" />
 

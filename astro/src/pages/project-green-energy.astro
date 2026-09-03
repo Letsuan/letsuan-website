@@ -5,6 +5,12 @@ import { organizationJsonLd } from '../data/organization';
 const title = "Le Tsuan Design | The Future Is Worth It";
 const description = "Wind, and Geothermal Energy Converge in a Single Pavilion: TCCGE Green Energy Vision Pavilion. Curatorial Project for TCCGE — Le Tsuan Design.";
 const canonical = "https://letsuan.com/project-green-energy";
+const alternateHrefs = [
+  { hreflang: "en", href: canonical },
+  { hreflang: "zh-TW", href: "https://letsuan.com/zh-TW/project-green-energy" },
+  { hreflang: "x-default", href: canonical },
+];
+
 const ogImage = "https://letsuan.com/images/green-energy-vision-pavilion-09-letsuan-design.jpg";
 const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "The Future Is Worth It — Green Energy Vision Pavilion", "description": "A pavilion communicating Taiwan's green-energy transition.", "url": "https://letsuan.com/project-green-energy", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/green-energy-vision-pavilion-09-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2022", "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://letsuan.com/"}, {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://letsuan.com/portfolio"}, {"@type": "ListItem", "position": 3, "name": "The Future Is Worth It — Green Energy Vision Pavilion", "item": "https://letsuan.com/project-green-energy"}]}];
 const eyebrowLeft = "EXHIBITION — 2022";
@@ -22,6 +28,7 @@ const images = [{"src": "./images/green-energy-vision-pavilion-tiered-concrete-p
   title={title}
   description={description}
   canonical={canonical}
+  alternateHrefs={alternateHrefs}
   ogImage={ogImage}
   jsonLd={jsonLd}
   eyebrowLeft={eyebrowLeft}
