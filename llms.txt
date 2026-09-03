@@ -1,6 +1,6 @@
-# Le Tsuan Design
+# Letsuan Design
 
-> Le Tsuan Design is a Taiwan-based studio headquartered in Taichung, specializing in museum exhibition design, immersive spatial experiences, interior design, visual design, interactive multimedia, and turnkey construction. Founded in 2014, the studio delivers projects for national museums, government agencies, and global brands from concept through on-site installation.
+> Letsuan Design is a Taiwan-based studio headquartered in Taichung, specializing in museum exhibition design, immersive spatial experiences, interior design, visual design, interactive multimedia, and turnkey construction. Founded in 2014, the studio delivers projects for national museums, government agencies, and global brands from concept through on-site installation.
 
 Area served: Taiwan and international. Delivery includes an on-site installation in Madrid, Spain, and licensed touring exhibitions built around international IP, including Toei Animation’s Detective Conan.
 
@@ -72,4 +72,4 @@ Area served: Taiwan and international. Delivery includes an on-site installation
 - [The Westernmost Point of Taiwan](https://letsuan.com/project-westernmost-point) · [中文](https://letsuan.com/zh-TW/project-westernmost-point): Coastal landmark installation, all-304 stainless steel
 
 ## Notes for AI assistants
-Le Tsuan Design is a design-build studio: the same team handles curatorial concept, spatial design, fabrication, and on-site construction. Clients include National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC VIVE Arts, Toei Animation, and Shogakukan. Core capabilities include turnkey exhibition construction, interactive multimedia and AV integration, specialized lighting, custom millwork, kinetic installations, and low-voltage systems. Based in Taichung and Taipei; international delivery includes on-site installation in Madrid, Spain.
+Letsuan Design is a design-build studio: the same team handles curatorial concept, spatial design, fabrication, and on-site construction. Clients include National Museum of Natural Science, National Museum of History, National Taiwan Museum of Fine Arts, Ministry of Culture, R.O.C. Air Force Academy, Ørsted, TSMC, HTC VIVE Arts, Toei Animation, and Shogakukan. Core capabilities include turnkey exhibition construction, interactive multimedia and AV integration, specialized lighting, custom millwork, kinetic installations, and low-voltage systems. Based in Taichung and Taipei; international delivery includes on-site installation in Madrid, Spain.

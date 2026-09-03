@@ -1,4 +1,4 @@
-# Le Tsuan Design — Full Project Case Studies
+# Letsuan Design — Full Project Case Studies
 
 > Complete technical write-ups for every project in the portfolio. Each entry includes client, location, year, category, area (when available), and the full design and engineering narrative. Sourced from the live project pages on letsuan.com.
 

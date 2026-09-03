@@ -29,6 +29,7 @@ const beamTwinkles = [
 <section id="hero" data-auto-ms={autoAdvanceMs}>
   {slides.map((slide, i) => {
     const isActive = i === 0;
+    const TitleTag = isActive ? 'h1' : 'div';
     const panClass = i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : 'ltsuan-slow-parallax';
     const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : i === 2 ? 'ltsuan-person-grow' : '';
     const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker' : '';
@@ -105,7 +106,7 @@ const beamTwinkles = [
         <div class="ltsuan-hero-content-wrap">
           <div class="ltsuan-hero-container">
             <div class="ltsuan-hero-text">
-              <h1 class="ltsuan-hero-title" style={[
+              <TitleTag class="ltsuan-hero-title" style={[
                 slide.titleLineHeight ? `line-height:${slide.titleLineHeight}` : '',
                 slide.titleFontScale ? `--ltsuan-title-scale:${slide.titleFontScale}` : '',
               ].filter(Boolean).join(';') || undefined}>
@@ -117,7 +118,7 @@ const beamTwinkles = [
                     <span class:list={['ltsuan-reveal-line2', { 'is-revealed': isActive }]}>{slide.titleLine2}</span>
                   </span>
                 )}
-              </h1>
+              </TitleTag>
               <div class="ltsuan-hero-subtitle-wrap">
                 <p class:list={['ltsuan-hero-subtitle', 'ltsuan-reveal-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
                   {slide.subtitleLine1}
