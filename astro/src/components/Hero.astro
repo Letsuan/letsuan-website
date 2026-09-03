@@ -785,8 +785,29 @@ const beamTwinkles = [
     100% {
       filter: brightness(0.78) contrast(1.35) saturate(1.05);
     }
-    50% {
+    8% {
+      filter: brightness(1.3) contrast(1.42) saturate(1.12);
+    }
+    17% {
+      filter: brightness(0.82) contrast(1.35) saturate(1.05);
+    }
+    33% {
+      filter: brightness(1.35) contrast(1.45) saturate(1.15);
+    }
+    41% {
+      filter: brightness(0.8) contrast(1.35) saturate(1.05);
+    }
+    58% {
+      filter: brightness(1.25) contrast(1.4) saturate(1.1);
+    }
+    66% {
+      filter: brightness(0.79) contrast(1.35) saturate(1.05);
+    }
+    84% {
       filter: brightness(1.2) contrast(1.4) saturate(1.1);
+    }
+    92% {
+      filter: brightness(0.78) contrast(1.35) saturate(1.05);
     }
   }
   @keyframes ltsuanIntroParallax {
@@ -1003,6 +1024,12 @@ const beamTwinkles = [
     if (!ctx) return;
 
     let petals: Petal[] = [];
+    // Petal radius is in CSS px, but the canvas spans the full hero width,
+    // which ranges from ~375px on phones to 2000px+ on wide desktops. Without
+    // this, the same raw radius covers a far bigger fraction of a narrow
+    // mobile frame than a wide one, so petals read as oversized on phones
+    // and tiny on desktop. Scale relative to a 1440px reference width.
+    let sizeScale = 1;
 
     function spawnX(width: number): number {
       if (!config.centerConcentration) return Math.random() * width;
@@ -1033,7 +1060,7 @@ const beamTwinkles = [
       return {
         x,
         y: spawnAtTop ? -20 : Math.random() * height - height * 0.2,
-        r: config.sizeMin + Math.pow(Math.random(), 1.6) * (config.sizeMax - config.sizeMin),
+        r: (config.sizeMin + Math.pow(Math.random(), 1.6) * (config.sizeMax - config.sizeMin)) * sizeScale,
         speed: config.speedMin + Math.random() * (config.speedMax - config.speedMin),
         drift: (Math.random() - 0.5) * 0.6,
         phase: Math.random() * Math.PI * 2,
@@ -1056,6 +1083,7 @@ const beamTwinkles = [
       canvas.width = canvas.clientWidth * dpr;
       canvas.height = canvas.clientHeight * dpr;
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+      sizeScale = Math.min(1.7, Math.max(0.42, canvas.clientWidth / 1440));
       generate(canvas.clientWidth, canvas.clientHeight);
     }
     resize();
