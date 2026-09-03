@@ -6,8 +6,8 @@ import CornerFrame from '../../components/CornerFrame.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { avifPath } from '../../utils/images';
 
-const title = '麗荃室內裝修 | About the Studio';
-const description = 'Le Tsuan Design is a Taichung, Taiwan-based studio specializing in interior, exhibition, visual design and construction.';
+const title = '麗荃室內裝修 | 關於我們';
+const description = '麗荃室內裝修是一間位於臺灣臺中的設計工作室，專注室內設計、展覽設計、視覺設計與工程建造。';
 const canonical = 'https://letsuan.com/zh-TW/about';
 const alternateHrefs = [
   { hreflang: 'en', href: 'https://letsuan.com/about' },
@@ -31,18 +31,18 @@ const pageJsonLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://letsuan.com/zh-TW/' },
-        { '@type': 'ListItem', position: 2, name: 'About', item: canonical },
+        { '@type': 'ListItem', position: 1, name: '首頁', item: 'https://letsuan.com/zh-TW/' },
+        { '@type': 'ListItem', position: 2, name: '關於我們', item: canonical },
       ],
     },
   ],
 };
 
 const faqs = [
-  { q: 'What does Le Tsuan Design specialise in?', a: 'Le Tsuan Design is a licensed interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan, specialising in museum-grade exhibitions, commercial interiors, visual identity systems and turn-key construction.' },
-  { q: 'When was Le Tsuan Design founded?', a: 'The studio was founded in 2014 and has delivered 42+ projects across museums, government agencies and global brands.' },
-  { q: 'Does Le Tsuan Design handle both design and construction?', a: 'Yes. The project never changes hands between design and construction. The same team stays involved from the first sketch to the final install.' },
-  { q: 'Is Le Tsuan Design a licensed interior decorator?', a: "Yes. We hold Interior Decorators' Registration No. 40E2007328 and handle professional renovation permit filing and review submissions on behalf of our clients." },
+  { q: '麗荃室內裝修專精哪些領域？', a: '麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，專精博物館等級的展覽、商業室內空間、視覺識別系統與統包工程。' },
+  { q: '麗荃室內裝修是什麼時候成立的？', a: '工作室成立於 2014 年，已為博物館、政府機關與國際品牌完成超過 42 件專案。' },
+  { q: '麗荃室內裝修是否同時負責設計與施工？', a: '是的，專案從設計到施工不會轉手，同一團隊從第一張草圖到最終安裝全程參與。' },
+  { q: '麗荃室內裝修是合法登記的室內裝修業者嗎？', a: '是的，我們持有室內裝修從業者登記字號 40E2007328，並代客戶處理專業裝修許可申請與審查送件。' },
 ];
 
 const faqJsonLd = {
@@ -56,18 +56,18 @@ const faqJsonLd = {
 };
 
 const stats = [
-  { value: '42+', label: 'Projects Delivered', desc: 'Museums, government agencies and global brands across Taiwan.' },
-  { value: '2014', label: 'Studio Founded', desc: 'A decade of narrative-led design, based in Taichung and Taipei.' },
-  { value: 'TW', label: 'Taichung · Taipei', desc: 'Based in Taiwan, delivering nationwide.' },
-  { value: '17,000+ m²', label: 'Space Delivered', desc: 'Sequenced and finished under our own site management, with specialist trades directly supervised.' },
+  { value: '42+', label: '已交付專案', desc: '博物館、政府機關與遍及全臺的國際品牌。' },
+  { value: '2014', label: '工作室成立', desc: '十年以敘事為核心的設計經驗，根植臺中與臺北。' },
+  { value: 'TW', label: '臺中・臺北', desc: '立足臺灣，服務遍及全臺。' },
+  { value: '17,000+ m²', label: '已交付空間面積', desc: '在自有工地管理下按部就班完工，專業工項皆直接監督。' },
 ];
 
 const services = [
-  { title: 'Curatorial Services', desc: 'From concept development to content research and narrative scripting, we give every exhibition a solid curatorial framework and point of view.', img: '/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: 'R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall', evidenceHref: './project-air-force-academy', evidenceLabel: 'R.O.C. Air Force Academy 90th Founding Anniversary' },
-  { title: 'Exhibition Design', desc: 'Narrative-led exhibitions for museums, aquariums and cultural venues, from storyline to set design to lighting.', img: '/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', alt: "Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting", evidenceHref: './project-cat-art', evidenceLabel: 'Cat Art Museum' },
-  { title: 'Interior Design', desc: 'Interiors for commercial, cultural and institutional spaces, planned around how people actually move and gather.', img: '/images/securities-company-office-design-02-letsuan-design.jpg', alt: 'Securities Company Office waiting area', evidenceHref: './project-securities-office', evidenceLabel: 'Securities Company Office' },
-  { title: 'Visual Design', desc: 'Identity systems, wayfinding and graphic environments that carry a brand consistently through physical space.', img: '/images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: 'The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance', evidenceHref: './project-westernmost-point', evidenceLabel: 'The Westernmost Point of Taiwan' },
-  { title: 'Construction', desc: 'In-house fabrication and site management that takes a design from drawing to a finished, durable build.', img: '/images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', alt: 'Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls', evidenceHref: './project-engineering-construction', evidenceLabel: 'Disaster Prevention Hall' },
+  { title: '策展服務', desc: '一場好的展覽，不只是把物件擺出來而已。我們從概念發展、內容研究到敘事腳本，為每一檔展覽打好策展框架，讓博物館或品牌在開幕當天就有一場真正站得住腳的展覽。', img: '/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: 'R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall', evidenceHref: './project-air-force-academy', evidenceLabel: '九十年的天空，值得被好好述說' },
+  { title: '展覽設計', desc: '一場展覽成不成功，取決於它如何引導訪客走過整個空間。我們把敘事、燈光與互動裝置當作同一套系統來設計，而不是各自獨立的廠商拼湊而成。', img: '/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', alt: "Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting", evidenceHref: './project-cat-art', evidenceLabel: '貓美術館' },
+  { title: '室內設計', desc: '商業與機構空間每天都有真實的人在裡面移動、使用，這正是我們設計時的出發點。身為持照室內裝修業者，我們會先規劃動線與空間配置，再處理裝修與材質。', img: '/images/securities-company-office-design-02-letsuan-design.jpg', alt: 'Securities Company Office waiting area', evidenceHref: './project-securities-office', evidenceLabel: '證券公司辦公室' },
+  { title: '視覺設計', desc: '品牌形象要能貫徹始終，從入口招牌到第六面指標，都得維持一致的樣貌。我們把識別系統、標示與環境圖像整合成同一套設計。', img: '/images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: 'The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance', evidenceHref: './project-westernmost-point', evidenceLabel: '臺灣極西點' },
+  { title: '工程建造', desc: '設計與工程一旦分屬不同公司，出狀況時往往互踢皮球。我們維持同一個團隊：自有的製作工廠與工地管理直接負責施作，專業工班則在我們的監督下進場作業。', img: '/images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', alt: 'Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls', evidenceHref: './project-engineering-construction', evidenceLabel: '防災教育館' },
 ];
 ---
 
@@ -78,9 +78,9 @@ const services = [
     <div class="ltsuan-about-main">
       <section id="hero">
         <div class="ltsuan-reveal ltsuan-hero-block">
-          <h1 class="ltsuan-hero-h1">Space and story,<br />built by the same hands.</h1>
-          <p class="ltsuan-hero-sub">Interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan — serving museums, government agencies and global brands since 2014.</p>
-          <a href="./portfolio" class="ltsuan-badge">VIEW<br />PORTFOLIO</a>
+          <h1 class="ltsuan-hero-h1">空間與故事，<br />出自同一雙手。</h1>
+          <p class="ltsuan-hero-sub">位於臺灣臺中與臺北的室內、展覽與視覺設計工作室——自 2014 年起服務博物館、政府機關與國際品牌。</p>
+          <a href="./portfolio" class="ltsuan-badge">查看<br />作品集</a>
         </div>
 
         <div class="ltsuan-hero-media">
@@ -99,11 +99,11 @@ const services = [
 
       <section id="studio">
         <div class="ltsuan-reveal ltsuan-studio-copy">
-          <div class="ltsuan-eyebrow">THE STUDIO</div>
-          <p class="ltsuan-body-copy">Le Tsuan Design is a licensed interior, exhibition and visual design studio based in Taichung and Taipei, Taiwan, delivering museum-grade exhibitions and commercial interiors since 2014. We work across museums, aquariums, cultural venues, corporate spaces and public installations, wherever a physical space needs to carry a message.</p>
-          <p class="ltsuan-body-copy">Our team moves fluidly between narrative design, spatial planning, graphic systems and on-site construction, which lets us stay involved from the first sketch to the final install, keeping every detail in service of the same idea.</p>
-          <p class="ltsuan-body-copy">We scale the team to the project, bringing in licensed architects, fire-safety engineers, civil engineers and quality-control inspectors as each site and regulatory requirement demands.</p>
-          <p class="ltsuan-body-copy ltsuan-body-copy-last">The project never changes hands between design and construction.</p>
+          <div class="ltsuan-eyebrow">工作室介紹</div>
+          <p class="ltsuan-body-copy">麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，自 2014 年起交付博物館等級的展覽與商業室內空間。我們的服務範圍涵蓋博物館、水族館、文化場館、企業空間與公共裝置，只要是需要傳達訊息的實體空間，都是我們的專業領域。</p>
+          <p class="ltsuan-body-copy">我們的團隊能自在地在敘事設計、空間規劃、視覺系統與現場施工之間切換，讓我們能從第一張草圖到最終安裝全程參與，確保每個細節都服務於同一個核心概念。</p>
+          <p class="ltsuan-body-copy">我們會依專案規模調整團隊組成，視個別基地與法規需求，納入持照建築師、消防技師、土木技師與品管人員。</p>
+          <p class="ltsuan-body-copy ltsuan-body-copy-last">專案從設計到施工，不會轉手。</p>
         </div>
       </section>
 
@@ -123,7 +123,7 @@ const services = [
       <section id="sustainability-clients">
         <div class="ltsuan-reveal ltsuan-split">
           <div>
-            <div class="ltsuan-eyebrow">SUSTAINABILITY</div>
+            <div class="ltsuan-eyebrow">永續</div>
             <div class="ltsuan-sustain-img-wrap">
               <picture>
                 <source srcset={avifPath('/images/green-energy-vision-pavilion-01-letsuan-design.jpg')} type="image/avif" />
@@ -131,13 +131,13 @@ const services = [
               </picture>
               <CornerFrame size={14} />
             </div>
-            <p class="ltsuan-body-copy-70">Sustainability runs through how we build: non-invasive structural systems that protect heritage sites and historic fabric.</p>
-            <p class="ltsuan-body-copy-70">Our green building material usage rate meets the current legal minimum of 60%, balancing environmental responsibility with client cost.</p>
-            <p class="ltsuan-body-copy-70 ltsuan-body-copy-last">As a licensed interior decorator, we apply the same regulatory and safety standards to our subcontractors that we apply to ourselves.</p>
+            <p class="ltsuan-body-copy-70">永續精神貫穿我們的施工方式：以零損傷結構系統保護古蹟場域與歷史構造。</p>
+            <p class="ltsuan-body-copy-70">我們的綠建材使用率符合現行法規最低 60% 的要求，在環境責任與業主成本間取得平衡。</p>
+            <p class="ltsuan-body-copy-70 ltsuan-body-copy-last">身為持照室內裝修業者，我們對協力廠商要求的法規與安全標準，與我們對自己的要求完全一致。</p>
           </div>
 
           <div>
-            <div class="ltsuan-eyebrow ltsuan-eyebrow-dim">SELECTED CLIENTS</div>
+            <div class="ltsuan-eyebrow ltsuan-eyebrow-dim">合作客戶</div>
             <div class="ltsuan-client-imgs">
               <div class="ltsuan-client-img-wrap">
                 <picture>
@@ -154,17 +154,17 @@ const services = [
                 <CornerFrame size={12} />
               </div>
             </div>
-            <p class="ltsuan-body-copy-70">We have partnered with 7+ government agencies and public institutions.</p>
-            <p class="ltsuan-client-list">National Museum of Natural Science · National Museum of History · National Taiwan Museum of Fine Arts · Ministry of Culture · R.O.C. Air Force Academy · Ørsted · TSMC · HTC · FedEx · Toei · Shogakukan · SinoPac Securities</p>
-            <a href="./portfolio" class="ltsuan-see-work-link">See our work with them →</a>
-            <p class="ltsuan-license-note">Licensed Interior Decorator (Registration No. 40E2007328). We handle professional renovation permit filing and review submissions on behalf of our clients.</p>
+            <p class="ltsuan-body-copy-70">我們已與 7 個以上的政府機關及公共機構合作。</p>
+            <p class="ltsuan-client-list">國立自然科學博物館・國立歷史博物館・國立臺灣美術館・文化部・空軍軍官學校・Ørsted・TSMC・HTC・FedEx・東映・小學館・永豐金證券</p>
+            <a href="./portfolio" class="ltsuan-see-work-link">查看我們與他們的合作案例 →</a>
+            <p class="ltsuan-license-note">持照室內裝修業者（登記字號 40E2007328）。我們代客戶處理專業裝修許可申請與審查送件。</p>
           </div>
         </div>
       </section>
 
       <section id="services">
         <div class="ltsuan-reveal ltsuan-services-head">
-          <h2 class="ltsuan-section-h2">Services</h2>
+          <h2 class="ltsuan-section-h2">服務項目</h2>
           <div class="ltsuan-section-counter">01&nbsp;/&nbsp;05</div>
         </div>
         <div class="ltsuan-services-grid">
@@ -187,7 +187,7 @@ const services = [
 
       <section id="faq">
         <div class="ltsuan-reveal">
-          <h2 class="ltsuan-section-h2 ltsuan-faq-title">Frequently Asked Questions</h2>
+          <h2 class="ltsuan-section-h2 ltsuan-faq-title">常見問題</h2>
           <div class="ltsuan-faq-list">
             {faqs.map((f) => (
               <div class="ltsuan-faq-item">

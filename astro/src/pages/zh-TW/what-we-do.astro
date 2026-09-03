@@ -5,33 +5,33 @@ import Footer from '../../components/zh-TW/Footer.astro';
 import CornerFrame from '../../components/CornerFrame.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { avifPath } from '../../utils/images';
-import { services as coreServiceMeta } from '../../data/homepage';
+import { services as coreServiceMeta } from '../../data/homepage-zh';
 
 const coreServiceCopy: Record<string, { headline: string; desc: string }> = {
   curatorial: {
-    headline: 'A good exhibition starts with a good point of view.',
-    desc: "We handle full curatorial planning: concept development, content research and narrative scripting for every exhibition. Twelve years working on museums and exhibitions has taught us how to set the thematic direction, translate research into content and work out the display logic, so visitors can follow the exhibition's argument as they walk through it.",
+    headline: '一場好的展覽，從一個好的觀點開始。',
+    desc: '我們負責完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。十二年博物館與展覽經驗，讓我們懂得如何訂出主題方向、把研究轉化為內容，並理清展示邏輯，讓訪客走過展場時能跟上展覽想說的論述。',
   },
   exhibition: {
-    headline: 'Space tells the story, and visitors walk into it.',
-    desc: 'For museums, aquariums and cultural venues, we design exhibitions built around a story. Storyline, spatial planning, lighting and interactive multimedia all work together to turn an abstract theme into a concrete design that visitors read as they move through the space, not from long blocks of wall text.',
+    headline: '空間訴說故事，訪客走進其中。',
+    desc: '為博物館、水族館與文化場館設計以故事為核心的展覽。敘事、空間規劃、燈光與互動多媒體共同運作，把抽象主題轉化為訪客走過空間就能讀懂的具體設計，而不是靠滿牆的文字說明。',
   },
   interior: {
-    headline: 'Spaces designed for people, not just for looks.',
-    desc: 'As a licensed interior decorator, we design commercial and institutional interiors around how people actually move and gather, not around appearance alone. Spatial zoning, circulation and material choices are all planned so people can move through the space and settle into it without friction.',
+    headline: '為人設計的空間，不只是好看而已。',
+    desc: '身為持照室內裝修業者，我們依照人們實際的移動與聚集方式來設計商業與機構室內空間，而不只是講究外觀。空間分區、動線與材質選擇都經過規劃，讓人們能順暢地走進、使用這個空間。',
   },
   visual: {
-    headline: 'A brand recognized in every corner.',
-    desc: 'We handle brand identity, corporate identity systems and wayfinding, plus the graphic environments that carry a brand consistently through physical space. Logo systems and environmental graphics, both inside and outside a venue, keep the same visual tone recognizable wherever a visitor looks.',
+    headline: '走到哪都認得出的品牌。',
+    desc: '我們負責品牌識別、企業識別系統與指標設計，以及讓品牌貫穿實體空間的圖像環境。無論場館內外，logo 系統與環境圖像都維持一致的視覺調性，讓訪客一眼就能認出。',
   },
   construction: {
-    headline: 'From groundbreaking to handover, our own team stays on it.',
-    desc: 'We handle exhibition-site engineering from design drawings through to completion, including construction and display fabrication. Our team does the in-house fabrication and site management directly; specialized trades are carried out by partner teams under our direct supervision. We oversee material selection, scheduling and quality control throughout, and the finished space matches the drawings and holds up under long-term use.',
+    headline: '從動工到交付，自有團隊全程在場。',
+    desc: '我們負責展場工程從設計圖到完工的全部過程，包含施工與展示製作。自有團隊直接進行製作與工地管理，專業工項則由合作團隊在我們直接監督下執行。我們全程把關材料選用、進度排程與品質管控，確保完工空間與圖面相符，並經得起長期使用。',
   },
 };
 
-const title = '麗荃室內裝修 | Exhibition Design Process';
-const description = 'See how Le Tsuan Design delivers museum-grade exhibitions through a five-stage process, engineered for heritage sites and high-precision environments.';
+const title = '麗荃室內裝修 | 展覽設計流程';
+const description = '了解麗荃室內裝修如何透過五階段流程交付博物館等級的展覽，因應古蹟場域與高精度環境需求量身打造工程規劃。';
 const canonical = 'https://letsuan.com/zh-TW/what-we-do';
 const alternateHrefs = [
   { hreflang: 'en', href: 'https://letsuan.com/what-we-do' },
@@ -55,42 +55,42 @@ const pageJsonLd = {
     {
       '@type': 'OfferCatalog',
       '@id': 'https://letsuan.com/zh-TW/what-we-do#catalog',
-      name: 'Le Tsuan Design Services & Engineering Capabilities',
+      name: '麗荃室內裝修服務與工程能力',
       provider: { '@id': 'https://letsuan.com/#organization' },
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exhibition Design', description: 'Narrative-led exhibitions and immersive installations for museums and cultural venues.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design', description: 'Commercial and institutional interiors designed around how people actually move and gather.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual Design', description: 'Identity systems, wayfinding and environmental graphics that carry a brand through physical space.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Construction', description: 'In-house fabrication and site management that takes a design from drawing to reality.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Heritage & Non-Invasive Construction', description: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IP-Licensed Exhibition Delivery', description: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dark-Exhibit & AV Integration', description: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'High-Precision Environmental Control', description: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Structural & Seismic Engineering', description: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compressed-Schedule Site Management', description: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'In-House Fabrication & Waste Management', description: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '展覽設計', description: '為博物館與文化場館打造敘事導向的展覽與沉浸式裝置。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '室內設計', description: '依照人們實際的移動與聚集方式規劃的商業與機構室內空間。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '視覺設計', description: '透過識別系統、指標與環境圖像，讓品牌貫穿實體空間。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '工程建造', description: '自有製作團隊與工地管理，將設計從圖面化為實體。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '古蹟與零損傷工程', description: '為受保護建物與古蹟場域設計的自立式、零穿孔結構系統，在不觸碰原始構造的前提下，承載完整的景觀與機電設備荷重。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IP 授權展覽執行', description: '依授權方規範執行：角色還原度、官方指定色號與完工品質，皆透過現場直接督導與驗收把關。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '暗展場與影音整合', description: '全暗場處理、分區燈光，結合隱藏式配線與機械傳動的多區感應觸發自動化系統。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '高精度環境控制', description: '針對 VR、影音與互動系統，以嚴謹數值公差打造均勻照度、隔音效果與感應敏感度兼具的環境。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '結構與耐震工程', description: '自立式與懸吊結構自設計階段起，即依當地耐震安全係數進行設計與評估。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '壓縮工期現場管理', description: '分階段跨工種排程與多方協調，在共用通道、天候與法規審查等現實限制下，如期達成固定開幕日。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '自有製作與廢棄物管理', description: '單元與裝置於自有工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。每個工地都遵循正式的分類回收流程。' } },
       ],
     },
   ],
 };
 
 const processSteps = [
-  { num: '01', title: 'Brief & Feasibility', desc: 'Site survey, code and structural constraints, and client requirements assessed before a single drawing is made.' },
-  { num: '02', title: 'Concept & Engineering Design', desc: 'Design and structural engineering developed in parallel, so the concept is buildable within site and code constraints from day one.' },
-  { num: '03', title: 'Fabrication & Testing', desc: 'In-house fabrication with mechanical, lighting and AV systems tested before anything leaves the workshop.' },
-  { num: '04', title: 'Site Installation', desc: 'Scheduled, trade-by-trade installation under our own site management, coordinated with venue operations and any third-party inspectors.' },
-  { num: '05', title: 'Handover & QA', desc: 'Final walkthrough, documentation and sign-off with the client and, where applicable, the licensor or regulatory authority.' },
+  { num: '01', title: '需求與可行性評估', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認。' },
+  { num: '02', title: '概念與工程設計', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作。' },
+  { num: '03', title: '製作與測試', desc: '自有工廠製作，機電、燈光與影音系統在出廠前完成測試。' },
+  { num: '04', title: '現場安裝', desc: '在自有工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合。' },
+  { num: '05', title: '驗收與交付', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序。' },
 ];
 
 const capabilities = [
-  { id: 'heritage-non-invasive-construction', title: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and historic sites, engineered to carry full scenic and MEP loads without touching the original fabric.', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'Experience the Yokai World' },
-  { title: 'IP-Licensed Exhibition Delivery', desc: 'Execution to licensor specification: character fidelity, official colour codes, and finish quality verified through direct on-site supervision and sign-off.', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: 'INCIDENT IN CONAN EXHIBIT' },
-  { title: 'Dark-Exhibit & AV Integration', desc: 'Full blackout treatment, zoned lighting, and multi-zone sensor-triggered automation integrated with concealed wiring and mechanical actuation.', img: '/images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', alt: 'Immersive projection room with a wraparound calibration grid mapped across curved walls and floor, ceiling rigged with rows of projectors, technicians testing the setup', evidenceHref: './project-beyond-just-an-exhibition', evidenceLabel: 'Beyond Just an Exhibition–You Are Part of the Art!' },
-  { title: 'High-Precision Environmental Control', desc: 'Lighting uniformity, acoustic isolation, and sensor-sensitive environments engineered to tight numerical tolerances for VR, AV and interactive systems.', img: '/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg', imgPosition: 'center 30%', alt: 'Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design', evidenceHref: './project-marine-illusion', evidenceLabel: 'Masters of Marine Illusion' },
-  { title: 'Structural & Seismic Engineering', desc: 'Freestanding and suspended structures designed and evaluated against local seismic safety factors from the design stage onward.', img: '/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg', alt: 'From Dragon to Beast — Sauropod skeletons being installed in outdoor courtyard', evidenceHref: './project-dragon-to-beast', evidenceLabel: 'From Dragon to Beast' },
-  { title: 'Compressed-Schedule Site Management', desc: 'Phased, cross-trade scheduling and multi-party coordination to hit fixed opening dates under real-world constraints such as shared access, weather, and regulatory windows.', img: '/images/notre-dame-profile-line-letsuan-design.jpg', imgPosition: 'center 15%', alt: 'Three visitors in profile wearing VR headsets and backpacks against a black-and-white graphic mural', evidenceHref: './project-notre-dame', evidenceLabel: 'Eternal Notre-Dame VR Exhibition' },
-  { title: 'In-House Fabrication & Waste Management', desc: 'Units and fixtures are fabricated in our own workshop and brought in for assembly, keeping materials and labor accountable end to end and reducing on-site waste and disruption. Every site follows a formal waste-sorting and recycling protocol.', img: '/images/mobile-museum-exhibition-01-letsuan-design.jpg', alt: '8.5 ping: A Museum on Wheels — Mobile Museum vehicle', evidenceHref: './project-mobile-museum', evidenceLabel: 'Mobile Museum Vehicle Fabrication' },
-  { title: 'Remote International Delivery', desc: 'Complete construction documentation precise enough to guide fabrication, display design and installation without any on-site supervision, for exhibitions built and installed entirely by a local crew abroad.', img: '/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg', alt: 'La Fortuna Bordada exhibition banner at the Museo Nacional de Artes Decorativas entrance', evidenceHref: './project-la-fortuna-bordada', evidenceLabel: 'La Fortuna Bordada — Madrid' },
+  { id: 'heritage-non-invasive-construction', title: '古蹟與零損傷工程', desc: '為受保護建物與古蹟場域設計的自立式、零穿孔結構系統，在不觸碰原始構造的前提下，承載完整的景觀與機電設備荷重。', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'ゲゲゲの鬼太郎' },
+  { title: 'IP 授權展覽執行', desc: '依授權方規範執行：角色還原度、官方指定色號與完工品質，皆透過現場直接督導與驗收把關。', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: '名偵探柯南' },
+  { title: '暗展場與影音整合', desc: '全暗場處理、分區燈光，結合隱藏式配線與機械傳動的多區感應觸發自動化系統。', img: '/images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', alt: 'Immersive projection room with a wraparound calibration grid mapped across curved walls and floor, ceiling rigged with rows of projectors, technicians testing the setup', evidenceHref: './project-beyond-just-an-exhibition', evidenceLabel: '不只是展覽–你就是藝術的一部分！' },
+  { title: '高精度環境控制', desc: '針對 VR、影音與互動系統，以嚴謹數值公差打造均勻照度、隔音效果與感應敏感度兼具的環境。', img: '/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg', imgPosition: 'center 30%', alt: 'Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Le Tsuan Design', evidenceHref: './project-marine-illusion', evidenceLabel: '眼見為憑？' },
+  { title: '結構與耐震工程', desc: '自立式與懸吊結構自設計階段起，即依當地耐震安全係數進行設計與評估。', img: '/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg', alt: 'From Dragon to Beast — Sauropod skeletons being installed in outdoor courtyard', evidenceHref: './project-dragon-to-beast', evidenceLabel: '從龍到獸' },
+  { title: '壓縮工期現場管理', desc: '分階段跨工種排程與多方協調，在共用通道、天候與法規審查等現實限制下，如期達成固定開幕日。', img: '/images/notre-dame-profile-line-letsuan-design.jpg', imgPosition: 'center 15%', alt: 'Three visitors in profile wearing VR headsets and backpacks against a black-and-white graphic mural', evidenceHref: './project-notre-dame', evidenceLabel: '永恆聖母院' },
+  { title: '自有製作與廢棄物管理', desc: '單元與裝置於自有工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。每個工地都遵循正式的分類回收流程。', img: '/images/mobile-museum-exhibition-01-letsuan-design.jpg', alt: '8.5 ping: A Museum on Wheels — Mobile Museum vehicle', evidenceHref: './project-mobile-museum', evidenceLabel: '8.5坪的博物館' },
+  { title: '海外遠端交付', desc: '提供精確到位的完整施工文件，讓海外當地團隊無需現場督導，即可完成製作、展示設計與安裝。', img: '/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg', alt: 'La Fortuna Bordada exhibition banner at the Museo Nacional de Artes Decorativas entrance', evidenceHref: './project-la-fortuna-bordada', evidenceLabel: '美麗與吉祥' },
 ];
 ---
 
@@ -101,10 +101,10 @@ const capabilities = [
     <section id="process">
       <div class="ltsuan-reveal ltsuan-process-block">
         <div class="ltsuan-process-copy">
-          <h1 class="ltsuan-h1">Giving Form to Space.</h1>
-          <p class="ltsuan-lead">From site survey to final handover, the same team carries every stage: feasibility, design, fabrication and installation. Complex knowledge becomes understandable. Experience unfolds naturally.</p>
+          <h1 class="ltsuan-h1">賦予空間具體樣貌。</h1>
+          <p class="ltsuan-lead">從現地會勘到最終交付，同一團隊全程負責可行性評估、設計、製作與安裝每個階段，讓複雜的專業知識變得容易理解，體驗自然而然展開。</p>
         </div>
-        <a href="./portfolio" class="ltsuan-badge">VIEW<br />PORTFOLIO</a>
+        <a href="./portfolio" class="ltsuan-badge">查看<br />作品集</a>
       </div>
       <div class="ltsuan-hero-media">
         <picture>
@@ -117,7 +117,7 @@ const capabilities = [
 
     <section id="core-services">
       <div class="ltsuan-reveal">
-        <h2 class="ltsuan-section-h2">Five services. One accountable studio.</h2>
+        <h2 class="ltsuan-section-h2">五項服務，一個團隊全程負責。</h2>
       </div>
       <div class="ltsuan-core-grid">
         {coreServiceMeta.map((svc) => (
@@ -137,7 +137,7 @@ const capabilities = [
     </section>
 
     <section id="process-steps">
-      <h2 class="ltsuan-process-h2">From brief to handover, one accountable team.</h2>
+      <h2 class="ltsuan-process-h2">從需求確認到交付，同一團隊負責到底。</h2>
       <div class="ltsuan-process-grid">
         <div class="ltsuan-process-line"></div>
         {processSteps.map((step) => (
@@ -153,8 +153,8 @@ const capabilities = [
 
     <section id="services">
       <div class="ltsuan-reveal">
-        <h2 class="ltsuan-section-h2">Built to withstand what the site<br />the client and the code demand.</h2>
-        <p class="ltsuan-section-intro">Le Tsuan Design specialises in heritage non-invasive construction, IP-licensed exhibition delivery, dark-exhibit AV integration and high-precision environmental control for museums and cultural venues across Taiwan and internationally.</p>
+        <h2 class="ltsuan-section-h2">禁得起基地、業主<br />與法規三方考驗的工程。</h2>
+        <p class="ltsuan-section-intro">麗荃室內裝修專精古蹟零損傷工程、IP 授權展覽執行、暗展場影音整合，以及高精度環境控制，服務對象涵蓋臺灣及海外的博物館與文化場館。</p>
       </div>
       <div class="ltsuan-capabilities-grid">
         {capabilities.map((cap) => (
