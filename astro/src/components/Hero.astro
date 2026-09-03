@@ -4,8 +4,9 @@ import type { Slide } from '../data/homepage';
 
 interface Props {
   slides?: Slide[];
+  autoAdvanceMs?: number;
 }
-const { slides = defaultSlides } = Astro.props;
+const { slides = defaultSlides, autoAdvanceMs = 5000 } = Astro.props;
 
 const beamTwinkles = [
   { style: 'left:8%;transform:rotate(3deg);animation-duration:3.4s;animation-delay:0s' },
@@ -25,7 +26,7 @@ const beamTwinkles = [
 ];
 ---
 
-<section id="hero">
+<section id="hero" data-auto-ms={autoAdvanceMs}>
   {slides.map((slide, i) => {
     const isActive = i === 0;
     const panClass = i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : 'ltsuan-slow-parallax';
@@ -875,10 +876,12 @@ const beamTwinkles = [
     counterLabel.textContent = `SCROLL — ${String(active + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
   }
 
+  const autoAdvanceMs = Number(hero.dataset.autoMs) || 5000;
+
   function maybeStartAuto() {
     if (autoTimer) clearTimeout(autoTimer);
     if (!auto) return;
-    autoTimer = setTimeout(() => changeSlide((active + 1) % total), 5000);
+    autoTimer = setTimeout(() => changeSlide((active + 1) % total), autoAdvanceMs);
   }
 
   function changeSlide(idx: number) {
