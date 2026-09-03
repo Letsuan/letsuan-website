@@ -1,0 +1,49 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { organizationJsonLd } from '../../data/organization';
+
+const title = "麗荃室內裝修 | 風動台灣";
+const description = "風動台灣：沃旭永續風潮展 — 2024第四屆台灣氣候行動博覽會，以環保瓦楞紙打造95%可回收的展館";
+const canonical = "https://letsuan.com/zh-TW/project-orsted-climate-expo";
+const ogImage = "https://letsuan.com/images/orsted-climate-expo-2024-01-letsuan-design.jpg";
+const alternateHrefs = [
+  { hreflang: "en", href: "https://letsuan.com/project-orsted-climate-expo" },
+  { hreflang: "zh-TW", href: canonical },
+  { hreflang: "x-default", href: "https://letsuan.com/project-orsted-climate-expo" },
+];
+const jsonLd = [organizationJsonLd, {"@context": "https://schema.org", "@type": "CreativeWork", "name": "風動台灣：沃旭永續風潮展", "description": "風動台灣：沃旭永續風潮展 — 2024第四屆台灣氣候行動博覽會，以環保瓦楞紙打造95%可回收的展館", "url": "https://letsuan.com/zh-TW/project-orsted-climate-expo", "creator": {"@id": "https://letsuan.com/#organization"}, "image": "https://letsuan.com/images/orsted-climate-expo-2024-01-letsuan-design.jpg", "author": {"@id": "https://letsuan.com/#organization"}, "datePublished": "2024", "hasPart": [{"@type": "CreativeWork", "name": "專案背景"}, {"@type": "CreativeWork", "name": "設計思考：讓結構去說故事"}, {"@type": "CreativeWork", "name": "製作難題：當一張紙要在平地上站起來"}, {"@type": "CreativeWork", "name": "材料工藝：從一張紙到一座展館的精準轉譯"}, {"@type": "CreativeWork", "name": "實際成果：95%可回收，不只是數字"}], "isPartOf": {"@id": "https://letsuan.com/#website"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://letsuan.com/zh-TW/"}, {"@type": "ListItem", "position": 2, "name": "作品集", "item": "https://letsuan.com/zh-TW/portfolio"}, {"@type": "ListItem", "position": 3, "name": "風動台灣：沃旭永續風潮展", "item": "https://letsuan.com/zh-TW/project-orsted-climate-expo"}]}];
+const eyebrowLeft = "活動 — 2024";
+const eyebrowRight = "國立自然科學博物館，台中";
+const h1Main = "風動台灣";
+const h1Sub = "沃旭永續風潮展－2024第四屆台灣氣候行動博覽會";
+const metaFields = [{"label": "業主", "value": "沃旭能源 Ørsted"}, {"label": "地點", "value": "台中，臺灣"}, {"label": "年份", "value": "2024"}, {"label": "類別", "value": "展覽設計、裝置藝術、平面設計、工程施作"}];
+const bodyHtml = "<h2>專案背景</h2>\n<p>2024 第四屆台灣氣候行動博覽會以「勇敢淨零，共創更好」為主題，沃旭能源首次參與，希望將大彰化 1.82GW 離岸風場累積的綠能知識，轉化為親子友善的互動體驗，讓抽象的離岸風電走進一般家庭的日常理解。</p>\n<p>對我們來說，這不只是一個展覽製作案，而是一個命題：如果展覽談的是永續，展覽本身能不能就是永續的示範？</p>\n<h2>設計思考：讓結構去說故事</h2>\n<p>我們從兩個維度思考這座展館。第一是品牌一致性。沃旭談的是能源轉型與海洋保育，如果用傳統木作加上 PVC 貼皮去呈現海洋，本身就是一種矛盾。瓦楞紙的溫潤手感與紙質紋理，天生帶有自然、親切的特質，比冰冷的合成材質更貼近我們想傳達的「海」與「永續」。</p>\n<p>第二是空間引導性。科博館現場是開放式大廳，沒有牆面可以依附，人流是穿透式的，訪客隨時可能路過而不停留。我們因此設計了 L 型包圍式動線，外低內高：外側用九大神獸立牌與低矮的黃色互動牆吸引目光與拍照，把人先留住；內側則以 2.5 公尺高的藍紫色主視覺牆承載知識內容，包括風機與台北 101 的高度對比、海面到海底的生態分層。這樣的高低配置自然形成一個半開放的教室，讓觀眾走進來，而不只是路過。</p>\n<h2>製作難題：當一張紙要在平地上站起來</h2>\n<p>這是本案最困難的地方，也是我們價值最高的地方。</p>\n<p>瓦楞紙很輕、可回收，但也意味著剛性不足、怕潮、側向支撐弱。而現場條件相當嚴苛：科博館是磨石子地板，不能打釘、不能架設重型支架，展體還要承受親子家庭的觸摸與倚靠，上方甚至要內嵌燈箱。</p>\n<p>傳統做法是用木角材去撐紙，但那就失去了環保的意義。我們的解法，是把包裝設計裡的結構工藝，放大一百倍，搬到展場上使用。我們放棄外加支架，改為設計隱藏式結構：主牆內部採雙層瓦楞與蜂巢板的複合結構，底部設計三角摺疊腳座與配重空腔，轉角處則以多層榫卯卡榫互相咬合，讓板材靠自身的摺疊與力學去支撐自己，達到無釘、無膠、無鐵件的自立。</p>\n<p>博物館現場的施工時間短、禁粉塵、禁噪音，我們的卡榫式設計讓現場組裝像是在組裝一座大型模型，主體 4 小時內即可完成，撤場僅需 2 小時，大幅降低對館舍日常運作的干擾。</p>\n<h2>材料工藝：從一張紙到一座展館的精準轉譯</h2>\n<p>永續不是把材質換掉就好，而是整條加工鏈的重新思考。</p>\n<p>主結構採用高強度環保瓦楞紙與蜂巢紙板，印刷全面使用大豆油墨。大豆油墨不含揮發性有機溶劑，色彩飽和度高，後端回收時也更容易脫墨，不會污染紙漿。這是石化油墨做不到的。</p>\n<p>切割工法則是關鍵細節：我們全數採用 CNC 震動刀切割，而非雷射切割。雷射切割會燒焦紙邊，產生焦痕與氣味，燒焦處更無法再回收；CNC 震動刀切口乾淨、無異味，誤差控制在 0.5 毫米內，確保每一個卡榫、每一道折線都能精準接合，這也是整座展體能否穩定站立的基礎。</p>\n<h2>實際成果：95%可回收，不只是數字</h2>\n<p>成果反映在三個層面。</p>\n<p>環境成果上，我們做到 95% 展館可回收。除了大會統一提供的不織布地毯之外，其餘展體、立牌、互動轉盤、翻牌裝置皆為瓦楞紙製作，燈具則是公司重複利用的庫存件。展後所有紙材全數回收，再製成水果外箱，現場零木作廢棄物，真正落實從搖籃到搖籃的循環設計。</p>\n<p>體驗成果上，展館在三天展期中成為人流最集中的親子互動區，整合「騎腳踏車發電」「風電轉盤問答」「大風吹翻牌」三個互動機制，有效將生硬的離岸風電知識，轉化為可遊戲化的學習體驗。</p>\n<p>品牌成果上，展館本身成為沃旭 ESG 論述的最佳證據，獲沃旭官方網站與工商時報、中時新聞網等媒體報導。對客戶而言，這不只是一場展覽，而是一次可以被報導、被拍照、被記住的永續行動。</p>\n<p>永續，不只是展覽要傳達的理念，也可以是展覽本身的製作方式。這正是我們想透過這個案子，與下一個客戶分享的事。</p>";
+const relatedProjects = [{"href": "./project-orsted-energy", "label": "與風共榮"}, {"href": "./project-changhua-flower", "label": "灰階中的亮點"}, {"href": "./project-offshore-wind", "label": "離岸風電運維中心"}];
+const nextHref = "./project-orsted-energy";
+const images = [{"src": "../images/orsted-climate-expo-2024-01-letsuan-design.jpg", "alt": "訪客與學生聚集在沃旭展館入口，藍色主牆上的地球圖像與「鏡頭看這邊」的拍照裝置招牌"}, {"src": "../images/orsted-climate-expo-2024-02-letsuan-design.jpg", "alt": "訪客在藍色地球主牆前排隊參觀，身著黑色套裝的工作人員站在展板旁"}, {"src": "../images/orsted-climate-expo-2024-03-letsuan-design.jpg", "alt": "訪客聚集在紫色風電資訊牆前，一旁是瓦楞紙海洋怪獸立牌與彩色轉盤圖版"}];
+---
+
+<ProjectLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+  eyebrowLeft={eyebrowLeft}
+  eyebrowRight={eyebrowRight}
+  h1Main={h1Main}
+  h1Sub={h1Sub}
+  metaFields={metaFields}
+  bodyHtml={bodyHtml}
+  relatedProjects={relatedProjects}
+  nextHref={nextHref}
+  images={images}
+  lang="zh-TW"
+  alternateHrefs={alternateHrefs}
+  closeLabel="關閉"
+  backLabel="回作品集"
+  nextLabel="下一個專案"
+  homeLabel="首頁"
+  relatedLabel="相關專案"
+  detailLabel="專案詳情"
+/>
