@@ -48,6 +48,22 @@ const beamTwinkles = [
               fetchpriority={i === 0 ? 'high' : undefined}
             />
           </picture>
+          {slide.introImg && (
+            <picture class="ltsuan-hero-bg-picture ltsuan-hero-intro-bg">
+              <source type="image/avif" srcset={responsiveSrcset(slide.introImg, 'avif', slide.introBgWidth || slide.bgWidth)} sizes="115vw" />
+              <img
+                class="ltsuan-hero-bg-img ltsuan-hero-intro-img"
+                alt={slide.introAlt || ''}
+                src={slide.introImg}
+                srcset={responsiveSrcset(slide.introImg, 'jpg', slide.introBgWidth || slide.bgWidth)}
+                sizes="115vw"
+                width={slide.introBgWidth || slide.bgWidth}
+                height={slide.introBgHeight || slide.bgHeight}
+                decoding="async"
+                fetchpriority={i === 0 ? 'high' : undefined}
+              />
+            </picture>
+          )}
           {i === 1 && (
             <>
               {beamTwinkles.map((beam) => (
@@ -91,9 +107,11 @@ const beamTwinkles = [
                 <span class="ltsuan-hero-title-line-mask">
                   <span class:list={['ltsuan-reveal-line1', { 'is-revealed': isActive }]}>{slide.titleLine1}</span>
                 </span>
-                <span class="ltsuan-hero-title-line-mask ltsuan-hero-title-line2-mask">
-                  <span class:list={['ltsuan-reveal-line2', { 'is-revealed': isActive }]}>{slide.titleLine2}</span>
-                </span>
+                {slide.titleLine2 && (
+                  <span class="ltsuan-hero-title-line-mask ltsuan-hero-title-line2-mask">
+                    <span class:list={['ltsuan-reveal-line2', { 'is-revealed': isActive }]}>{slide.titleLine2}</span>
+                  </span>
+                )}
               </h1>
               <div class="ltsuan-hero-subtitle-wrap">
                 <p class:list={['ltsuan-hero-subtitle', 'ltsuan-reveal-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
@@ -749,6 +767,32 @@ const beamTwinkles = [
       filter: brightness(1.2) contrast(1.4) saturate(1.1);
     }
   }
+  @keyframes ltsuanIntroParallax {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1.4%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes ltsuanIntroFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .ltsuan-hero-intro-bg {
+    pointer-events: none;
+    animation: ltsuanIntroFadeOut 0.9s ease-in-out 2.5s forwards;
+  }
+  .ltsuan-hero-intro-img {
+    animation: ltsuanIntroParallax 2.5s ease-in-out 1;
+  }
   .ltsuan-slow-parallax {
     animation: ltsuanSlowParallax 9s ease-in-out infinite alternate;
   }
@@ -834,6 +878,8 @@ const beamTwinkles = [
 
     restartAnimation(entering.querySelector('.ltsuan-hero-bg-img'));
     restartAnimation(entering.querySelector('.ltsuan-hero-person-img'));
+    restartAnimation(entering.querySelector('.ltsuan-hero-intro-bg'));
+    restartAnimation(entering.querySelector('.ltsuan-hero-intro-img'));
 
     transitioning = true;
     setRevealed(layers[active], false);
