@@ -461,6 +461,14 @@ const beamTwinkles = [
       object-position: 46% 15% !important;
     }
   }
+  @media (max-width: 600px) {
+    .ltsuan-hero-title {
+      font-size: calc(clamp(30px, 10vw, 44px) * var(--ltsuan-title-scale, 1));
+    }
+    .ltsuan-hero-subtitle {
+      font-size: clamp(16px, 4.5vw, 22px);
+    }
+  }
   @media (min-width: 901px) and (max-width: 1699px) {
     .ltsuan-hero-person-worker {
       left: 25% !important;
