@@ -1,11 +1,19 @@
 ---
-import { featuredProjects, avifPath } from '../data/homepage';
+import { featuredProjects as defaultFeaturedProjects, avifPath } from '../data/homepage';
+import type { FeaturedProject } from '../data/homepage';
+
+interface Props {
+  featuredProjects?: FeaturedProject[];
+  title?: string;
+  viewAllLabel?: string;
+}
+const { featuredProjects = defaultFeaturedProjects, title = 'Selected Work', viewAllLabel = 'View full portfolio →' } = Astro.props;
 ---
 
 <section id="portfolio">
   <div class="ltsuan-section-head">
-    <h2 class="ltsuan-section-title">Selected Work</h2>
-    <a href="./portfolio" class="ltsuan-section-link">View full portfolio →</a>
+    <h2 class="ltsuan-section-title">{title}</h2>
+    <a href="./portfolio" class="ltsuan-section-link">{viewAllLabel}</a>
   </div>
   <div class="ltsuan-portfolio-grid">
     {featuredProjects.map((p) => (

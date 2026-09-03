@@ -1,12 +1,20 @@
 ---
-import { services, avifPath } from '../data/homepage';
+import { services as defaultServices, avifPath } from '../data/homepage';
+import type { Service } from '../data/homepage';
+
+interface Props {
+  services?: Service[];
+  title?: string;
+  viewAllLabel?: string;
+}
+const { services = defaultServices, title = 'What We Do', viewAllLabel = 'See our full process →' } = Astro.props;
 ---
 
 <section id="services">
   <div class="ltsuan-services-inner">
     <div class="ltsuan-section-head">
-      <h2 class="ltsuan-section-title">What We Do</h2>
-      <a href="./what-we-do" class="ltsuan-section-link">See our full process →</a>
+      <h2 class="ltsuan-section-title">{title}</h2>
+      <a href="./what-we-do" class="ltsuan-section-link">{viewAllLabel}</a>
     </div>
     <div class="ltsuan-services-grid">
       {services.map((svc) => (

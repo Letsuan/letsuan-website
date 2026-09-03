@@ -6,7 +6,7 @@ import Hero from '../../components/Hero.astro';
 import ServicesGrid from '../../components/ServicesGrid.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import { organizationJsonLd } from '../../data/organization';
-import { heroSlides } from '../../data/homepage-zh';
+import { heroSlides, services, featuredProjects } from '../../data/homepage-zh';
 
 const title = '麗荃室內裝修 | Museum Exhibition Design, Taiwan';
 const description = 'Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Same team from concept to installation. 42+ projects, 17,000+ m² delivered since 2014.';
@@ -46,12 +46,13 @@ const faqJsonLd = {
         <div class="ltsuan-about-eyebrow">我們的理念</div>
         <p class="ltsuan-about-headline">設計空間的團隊，同時也是打造空間的團隊。</p>
         <p class="ltsuan-about-copy">從第一張草圖到最終安裝，單一窗口全程負責，從設計到完工維持同一個標準。</p>
-        <p class="ltsuan-about-copy ltsuan-about-copy-extra">Le Tsuan Design is a Taiwan-based design-build studio specializing in museum exhibition design, immersive experiences, and interior construction. Founded in 2014 with studios in Taichung and Taipei, the same team carries projects from curatorial concept and spatial design through fabrication and on-site installation. Over 42 projects and 17,000+ m² delivered for national museums, government agencies, and global brands including Ørsted, TSMC, HTC VIVE Arts, and Toei Animation.</p>
+        <p class="ltsuan-about-copy ltsuan-about-copy-extra">麗荃室內裝修是位於台灣的設計與工程整合公司，專注博物館展覽設計、沉浸式體驗與室內工程建造。成立於 2014 年，於台中與台北設有作業所，由同一團隊負責從策展概念、空間設計，到製作與現場安裝的完整專案流程。</p>
+        <p class="ltsuan-about-copy ltsuan-about-copy-extra">截至目前，已完成 42 件以上專案，累計交付面積超過 17,000 平方公尺，服務對象涵蓋國家級博物館、政府機關，以及 Ørsted、TSMC、HTC VIVE Arts 與東映動畫、FedEx 等國際品牌。</p>
       </div>
     </section>
 
-    <ServicesGrid />
-    <PortfolioPreview />
+    <ServicesGrid services={services} title="我們的服務" viewAllLabel="查看完整流程 →" />
+    <PortfolioPreview featuredProjects={featuredProjects} title="精選作品" viewAllLabel="查看完整作品集 →" />
 
     <section id="faq">
       <h2 class="ltsuan-faq-title">Frequently Asked Questions</h2>
@@ -79,6 +80,11 @@ const faqJsonLd = {
     display: flex;
     justify-content: flex-start;
   }
+  @media (max-width: 900px) {
+    #about {
+      padding: 100px 24px 80px;
+    }
+  }
   .ltsuan-about-inner {
     max-width: 920px;
   }
@@ -93,20 +99,22 @@ const faqJsonLd = {
     text-align: left;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(32px, 4.6vw, 58px);
+    font-size: clamp(13px, 4.3vw, 46px);
     line-height: 1.18;
     letter-spacing: -0.01em;
     margin: 0 0 20px;
     color: #f0e9de;
+    white-space: nowrap;
   }
   .ltsuan-about-copy {
     text-align: left;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: clamp(16px, 1.6vw, 20px);
+    font-size: clamp(9px, 2.9vw, 18px);
     line-height: 1.6;
     margin: 0;
     color: rgba(240, 233, 222, 0.55);
     max-width: 600px;
+    white-space: nowrap;
   }
   .ltsuan-about-copy-extra {
     margin-top: 24px;
@@ -114,6 +122,7 @@ const faqJsonLd = {
     font-size: 15px;
     line-height: 1.55;
     opacity: 0.92;
+    white-space: normal;
   }
   #faq {
     max-width: 900px;
