@@ -39,3 +39,6 @@ Allow: /
 Sitemap: https://letsuan.com/sitemap.xml
 # LLMs Context Reference
 # https://letsuan.com/llms.txt
+
+# IndexNow key location
+# https://letsuan.com/eac7018a891945a76b914aae79869d063706516cdeb0fa179ebf8a50c1c9255a.txt
