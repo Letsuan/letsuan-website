@@ -93,7 +93,7 @@ const beamTwinkles = [
                 </span>
               </h1>
               <div class="ltsuan-hero-subtitle-wrap">
-                <p class:list={['ltsuan-hero-subtitle', 'ltsuan-reveal-subtitle', { 'is-revealed': isActive }]}>
+                <p class:list={['ltsuan-hero-subtitle', 'ltsuan-reveal-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
                   {slide.subtitleLine1}
                   {slide.subtitleLine2 && (
                     <>

@@ -17,6 +17,7 @@ export interface Slide {
   personWidth?: number;
   personHeight?: number;
   titleLineHeight?: number;
+  subtitleLineHeight?: number;
 }
 
 export interface Service {
