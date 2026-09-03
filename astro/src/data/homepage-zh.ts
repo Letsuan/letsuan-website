@@ -3,6 +3,7 @@ export const heroSlides = [
     num: '01',
     titleLine1: '造境入心',
     titleLine2: '',
+    titleLineHeight: 1.01,
     subtitleLine1: '每個專案，',
     subtitleLine2: '都從一則觸動人心的故事開始',
     ctaLabel: '實績案例',
