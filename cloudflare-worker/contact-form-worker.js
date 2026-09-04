@@ -1,5 +1,5 @@
 const TO_ADDRESS = 'info@letsuan.com';
-const FROM_ADDRESS = 'contact-form@letsuan.com'; // must be on a domain you've verified for sending
+const FROM_ADDRESS = 'info@letsuan.com'; // must be verified as a sending address in Cloudflare Email
 
 function escapeHtml(s) {
   return String(s)

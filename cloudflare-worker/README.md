@@ -24,8 +24,7 @@ with your real Site Key.
 ## 2. Enable Email Service and verify the sending address
 
 1. Cloudflare dashboard → your zone (`letsuan.com`) → **Email** → **Email Service** (or Email Routing, if that's what it's still called in your dashboard)
-2. Verify a sending address on the domain — e.g. `contact-form@letsuan.com` (the `FROM_ADDRESS` constant in `contact-form-worker.js`). It does not need to be a real inbox; it just needs to be verified for sending.
-3. Make sure `info@letsuan.com` (the `TO_ADDRESS`) is a working inbox you check — it's just the destination, so it doesn't need separate "verification" as a sender.
+2. Verify `info@letsuan.com` as a **sending** address (the `FROM_ADDRESS` constant in `contact-form-worker.js` — it's also the `TO_ADDRESS`, so submissions are sent from and to the same inbox).
 
 ## 3. Install Wrangler and log in (one-time, on your machine)
 
