@@ -36,7 +36,7 @@ export default {
       return json({ success: false, error: 'Invalid request body' }, 400);
     }
 
-    const { firstName, lastName, phone, email, company, question, turnstileToken } = payload;
+    const { firstName, lastName, phone, email, company, location, question, requiresNda, turnstileToken } = payload;
 
     if (!firstName || !lastName || !email || !question) {
       return json({ success: false, error: 'Missing required fields' }, 400);
@@ -57,8 +57,10 @@ export default {
       `Email: ${email}`,
       `Phone: ${phone || '(not provided)'}`,
       `Company: ${company || '(not provided)'}`,
+      `Location / Venue: ${location || '(not provided)'}`,
+      `Requires NDA: ${requiresNda ? 'Yes' : 'No'}`,
       '',
-      'Question:',
+      'Project Details:',
       question,
     ].join('\n');
 
@@ -68,7 +70,9 @@ export default {
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Phone:</strong> ${escapeHtml(phone || '(not provided)')}</p>
       <p><strong>Company:</strong> ${escapeHtml(company || '(not provided)')}</p>
-      <p><strong>Question:</strong></p>
+      <p><strong>Location / Venue:</strong> ${escapeHtml(location || '(not provided)')}</p>
+      <p><strong>Requires NDA:</strong> ${requiresNda ? 'Yes' : 'No'}</p>
+      <p><strong>Project Details:</strong></p>
       <p>${escapeHtml(question).replace(/\n/g, '<br>')}</p>
     `;
 
