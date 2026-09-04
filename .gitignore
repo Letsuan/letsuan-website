@@ -20,3 +20,6 @@ CLAUDE.md
 PRODUCT.md
 DESIGN.md
 checklist-new-project-page.md
+
+# Wrangler local build cache/state (not part of the deployed site)
+cloudflare-worker/.wrangler/
