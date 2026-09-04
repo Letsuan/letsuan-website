@@ -449,9 +449,12 @@ const email = 'info@letsuan.com';
     margin: 0 0 20px;
   }
   .ltsuan-faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 40px 48px;
+  }
+  .ltsuan-faq-grid > div {
+    flex: 1 1 340px;
   }
   .ltsuan-faq-q {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
