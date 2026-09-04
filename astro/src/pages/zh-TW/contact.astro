@@ -95,51 +95,51 @@ const email = 'info@letsuan.com';
         <form id="ltsuan-contact-form" class="ltsuan-form">
           <div class="ltsuan-form-row">
             <div class="ltsuan-field">
-              <label for="firstName">First name<span aria-hidden="true">*</span></label>
+              <label for="firstName">名字<span aria-hidden="true">*</span></label>
               <input id="firstName" name="firstName" type="text" required />
             </div>
             <div class="ltsuan-field">
-              <label for="lastName">Last name<span aria-hidden="true">*</span></label>
+              <label for="lastName">姓氏<span aria-hidden="true">*</span></label>
               <input id="lastName" name="lastName" type="text" required />
             </div>
           </div>
           <div class="ltsuan-form-row">
             <div class="ltsuan-field">
-              <label for="phone">Phone number</label>
+              <label for="phone">電話號碼</label>
               <input id="phone" name="phone" type="tel" />
             </div>
             <div class="ltsuan-field">
-              <label for="formEmail">Email<span aria-hidden="true">*</span></label>
+              <label for="formEmail">電子郵件<span aria-hidden="true">*</span></label>
               <input id="formEmail" name="email" type="email" required />
             </div>
           </div>
           <div class="ltsuan-form-row">
             <div class="ltsuan-field">
-              <label for="company">Company</label>
+              <label for="company">公司</label>
               <input id="company" name="company" type="text" />
             </div>
             <div class="ltsuan-field">
-              <label for="location">Location / Venue</label>
+              <label for="location">地點 / 場館</label>
               <input id="location" name="location" type="text" />
             </div>
           </div>
           <div class="ltsuan-field">
-            <label for="question">Project Details<span aria-hidden="true">*</span></label>
+            <label for="question">專案細節<span aria-hidden="true">*</span></label>
             <textarea id="question" name="question" rows="5" required></textarea>
           </div>
           <label class="ltsuan-checkbox">
             <input type="checkbox" id="requiresNda" name="requiresNda" />
-            <span>This project requires NDA</span>
+            <span>本專案需要簽署保密協議（NDA）</span>
           </label>
           <label class="ltsuan-checkbox">
             <input type="checkbox" id="privacyConsent" name="privacyConsent" required />
-            <span>I agree to the <a href="/zh-TW/privacy-policy" class="ltsuan-accent-link">privacy policy</a> and consent to Letsuan Design processing my information for this inquiry.<span aria-hidden="true">*</span></span>
+            <span>我同意<a href="/zh-TW/privacy-policy" class="ltsuan-accent-link">隱私權政策</a>，並同意麗荃室內裝修為此次詢問處理我的個人資料。<span aria-hidden="true">*</span></span>
           </label>
           <div class="cf-turnstile" data-sitekey="0x4AAAAAAEmzrdImQn4O-6za" data-callback="ltsuanTurnstileDone"></div>
-          <button type="submit" class="ltsuan-form-submit">Submit <span aria-hidden="true">→</span></button>
+          <button type="submit" class="ltsuan-form-submit">送出 <span aria-hidden="true">→</span></button>
           <p id="ltsuan-form-status" class="ltsuan-form-status" role="status" aria-live="polite"></p>
         </form>
-        <p class="ltsuan-form-fallback">Trouble loading the form? Email us directly at <a href={`mailto:${email}`} class="ltsuan-accent-link">{email}</a>.</p>
+        <p class="ltsuan-form-fallback">表單無法載入嗎？請直接寄信至 <a href={`mailto:${email}`} class="ltsuan-accent-link">{email}</a>。</p>
       </div>
     </section>
 
@@ -178,12 +178,12 @@ const email = 'info@letsuan.com';
     e.preventDefault();
     const data = new FormData(form);
     if (!data.get('privacyConsent')) {
-      status.textContent = 'Please agree to the privacy policy to continue.';
+      status.textContent = '請先同意隱私權政策才能繼續。';
       status.className = 'ltsuan-form-status is-error';
       return;
     }
     if (!turnstileToken) {
-      status.textContent = 'Please complete the verification above.';
+      status.textContent = '請先完成上方的人機驗證。';
       status.className = 'ltsuan-form-status is-error';
       return;
     }
@@ -201,7 +201,7 @@ const email = 'info@letsuan.com';
     };
 
     submitBtn.disabled = true;
-    status.textContent = 'Sending…';
+    status.textContent = '傳送中…';
     status.className = 'ltsuan-form-status';
 
     try {
@@ -212,7 +212,7 @@ const email = 'info@letsuan.com';
       });
       const result = await res.json();
       if (result.success) {
-        status.textContent = "Thanks — we'll get back to you within two business days.";
+        status.textContent = '謝謝您的訊息，我們會在兩個工作天內回覆您。';
         status.className = 'ltsuan-form-status is-success';
         form.reset();
         // @ts-ignore
@@ -222,7 +222,7 @@ const email = 'info@letsuan.com';
         throw new Error(result.error || 'Submission failed');
       }
     } catch (err) {
-      status.textContent = 'Something went wrong — please email us directly instead.';
+      status.textContent = '發生錯誤，請直接寄信給我們。';
       status.className = 'ltsuan-form-status is-error';
     } finally {
       submitBtn.disabled = false;
