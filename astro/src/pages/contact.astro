@@ -92,9 +92,39 @@ const email = 'info@letsuan.com';
         </div>
       </div>
       <div class="ltsuan-form-col">
-        <div class="ltsuan-tally">
-          <iframe data-tally-src="https://tally.so/embed/ja47ME?alignLeft=1&hideTitle=1&transparentBackground=1" loading="lazy" title="Contact form"></iframe>
-        </div>
+        <form id="ltsuan-contact-form" class="ltsuan-form" novalidate>
+          <div class="ltsuan-form-row">
+            <div class="ltsuan-field">
+              <label for="firstName">First name<span aria-hidden="true">*</span></label>
+              <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="ltsuan-field">
+              <label for="lastName">Last name<span aria-hidden="true">*</span></label>
+              <input id="lastName" name="lastName" type="text" required />
+            </div>
+          </div>
+          <div class="ltsuan-form-row">
+            <div class="ltsuan-field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+            <div class="ltsuan-field">
+              <label for="formEmail">Email<span aria-hidden="true">*</span></label>
+              <input id="formEmail" name="email" type="email" required />
+            </div>
+          </div>
+          <div class="ltsuan-field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" />
+          </div>
+          <div class="ltsuan-field">
+            <label for="question">Your question<span aria-hidden="true">*</span></label>
+            <textarea id="question" name="question" rows="5" required></textarea>
+          </div>
+          <div class="cf-turnstile" data-sitekey="0x0000000000000000000000" data-callback="ltsuanTurnstileDone"></div>
+          <button type="submit" class="ltsuan-form-submit">Submit <span aria-hidden="true">→</span></button>
+          <p id="ltsuan-form-status" class="ltsuan-form-status" role="status" aria-live="polite"></p>
+        </form>
         <p class="ltsuan-form-fallback">Trouble loading the form? Email us directly at <a href={`mailto:${email}`} class="ltsuan-accent-link">{email}</a>.</p>
       </div>
     </section>
@@ -120,14 +150,63 @@ const email = 'info@letsuan.com';
   </div>
 </Layout>
 
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
-  const s = document.createElement('script');
-  s.src = 'https://tally.so/widgets/embed.js';
-  s.onload = () => {
-    // @ts-ignore
-    if (window.Tally) window.Tally.loadEmbeds();
-  };
-  document.body.appendChild(s);
+  let turnstileToken = '';
+  // @ts-ignore
+  window.ltsuanTurnstileDone = (token: string) => { turnstileToken = token; };
+
+  const form = document.getElementById('ltsuan-contact-form') as HTMLFormElement;
+  const status = document.getElementById('ltsuan-form-status')!;
+  const submitBtn = form.querySelector('.ltsuan-form-submit') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!turnstileToken) {
+      status.textContent = 'Please complete the verification above.';
+      status.className = 'ltsuan-form-status is-error';
+      return;
+    }
+
+    const data = new FormData(form);
+    const payload = {
+      firstName: data.get('firstName'),
+      lastName: data.get('lastName'),
+      phone: data.get('phone'),
+      email: data.get('email'),
+      company: data.get('company'),
+      question: data.get('question'),
+      turnstileToken,
+    };
+
+    submitBtn.disabled = true;
+    status.textContent = 'Sending…';
+    status.className = 'ltsuan-form-status';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json();
+      if (result.success) {
+        status.textContent = "Thanks — we'll get back to you within two business days.";
+        status.className = 'ltsuan-form-status is-success';
+        form.reset();
+        // @ts-ignore
+        if (window.turnstile) window.turnstile.reset();
+        turnstileToken = '';
+      } else {
+        throw new Error(result.error || 'Submission failed');
+      }
+    } catch (err) {
+      status.textContent = 'Something went wrong — please email us directly instead.';
+      status.className = 'ltsuan-form-status is-error';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
 </script>
 
 <style>
@@ -212,17 +291,79 @@ const email = 'info@letsuan.com';
     flex: 1.5;
     min-width: min(320px, 100%);
   }
-  .ltsuan-tally {
+  .ltsuan-form {
     background: #141414;
     border: 1px solid rgba(244, 239, 232, 0.08);
-    padding: 8px;
-    position: relative;
-    min-height: 200px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
-  .ltsuan-tally iframe {
-    width: 100%;
-    min-height: 640px;
+  .ltsuan-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .ltsuan-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .ltsuan-field label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-field label span {
+    color: var(--ltsuan-accent);
+    margin-left: 2px;
+  }
+  .ltsuan-field input,
+  .ltsuan-field textarea {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    color: var(--ltsuan-text);
+    background: #0a0a0a;
+    border: 1px solid rgba(244, 239, 232, 0.15);
+    padding: 10px 12px;
+    resize: vertical;
+  }
+  .ltsuan-field input:focus,
+  .ltsuan-field textarea:focus {
+    outline: none;
+    border-color: var(--ltsuan-accent);
+  }
+  .ltsuan-form-submit {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: #0a0a0a;
+    background: var(--ltsuan-accent);
     border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  .ltsuan-form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .ltsuan-form-status {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    margin: 0;
+    min-height: 1.4em;
+  }
+  .ltsuan-form-status.is-success {
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-form-status.is-error {
+    color: #e0645a;
   }
   .ltsuan-form-fallback {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;

@@ -1,0 +1,16 @@
+name = "letsuan-contact-form"
+main = "contact-form-worker.js"
+compatibility_date = "2026-01-01"
+
+# Route this Worker on the site's own domain, so the form's fetch() call
+# is same-origin (no CORS needed) and no separate subdomain is required.
+routes = [
+  { pattern = "letsuan.com/api/contact", zone_name = "letsuan.com" }
+]
+
+[[send_email]]
+name = "EMAIL"
+
+# Set the Turnstile secret key as a Worker secret (not in this file):
+#   wrangler secret put TURNSTILE_SECRET_KEY
+# Get it from the Cloudflare dashboard: Turnstile > (your widget) > Secret Key.
