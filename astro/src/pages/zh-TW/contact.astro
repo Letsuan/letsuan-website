@@ -4,8 +4,8 @@ import Nav from '../../components/zh-TW/Nav.astro';
 import Footer from '../../components/zh-TW/Footer.astro';
 import { organizationJsonLd } from '../../data/organization';
 
-const title = '麗荃室內裝修 | Contact Us';
-const description = 'Get in touch with Letsuan Design about your next exhibition, interior or construction project, based in Taichung, Taiwan.';
+const title = '麗荃室內裝修 | 聯絡我們';
+const description = '歡迎與麗荃室內裝修聯繫，討論您下一個展覽、室內設計或工程專案，我們的工作室位於台灣台中。';
 const canonical = 'https://letsuan.com/zh-TW/contact';
 const alternateHrefs = [
   { hreflang: 'en', href: 'https://letsuan.com/contact' },
@@ -16,28 +16,28 @@ const ogImage = 'https://letsuan.com/assets/logo.png';
 
 const faqs = [
   {
-    group: 'SERVICES & SCOPE',
+    group: '服務範圍',
     items: [
-      { q: 'What services does Letsuan Design provide?', a: 'We provide end-to-end exhibition, interior, and visual design — from curatorial concept and spatial planning through graphic design, fabrication, and on-site construction. Most projects are delivered as a single point of contact from concept to installation.' },
-      { q: 'What types of clients and projects do you work with?', a: 'We work primarily with museums, government agencies, and corporate clients on exhibitions, permanent galleries, brand environments, and public installations — as well as smaller-scale interior and graphic design projects.' },
-      { q: 'Do you work outside Taiwan?', a: "Yes. While most of our work is based in Taiwan, we've delivered projects internationally, including exhibitions in Spain." },
+      { q: '麗荃室內裝修提供哪些服務？', a: '我們提供從策展概念、空間規劃到平面設計、製作與現場施工的全流程展覽、室內與視覺設計服務。大多數專案都由單一窗口從概念發展到安裝完成，全程負責到底。' },
+      { q: '你們主要服務哪些類型的客戶與專案？', a: '我們主要與博物館、政府機關及企業客戶合作，執行展覽、常設展廳、品牌空間與公共裝置等專案，也承接較小型的室內設計與平面設計案。' },
+      { q: '你們有承接台灣以外的專案嗎？', a: '有的。雖然大多數專案都在台灣進行，我們也曾執行過國際專案，包括在西班牙的展覽。' },
     ],
   },
   {
-    group: 'HOW WE WORK',
+    group: '工作方式',
     items: [
-      { q: 'How do you start a new project?', a: "Every project begins with understanding the site, the audience, and the client's goals, followed by concept development, then detailed design and engineering before construction begins." },
-      { q: 'Do you handle construction and fabrication, or only design?', a: 'We handle both. Our in-house team manages design development through construction, fabrication, and installation, so the same team that designs the space also builds it.' },
-      { q: 'Do you provide 3D visualizations or concept renderings before construction?', a: 'Yes. Every project moves through concept renderings and 3D visualizations before fabrication begins, so clients can review and approve the design intent ahead of construction.' },
-      { q: 'How long does a typical project take?', a: 'Timelines vary by scope — a small fitment project can take one to two months, while a large-scale museum exhibition with custom fabrication typically takes six months to a year from concept to opening.' },
+      { q: '你們如何展開一個新專案？', a: '每個專案都從了解場地、觀眾與客戶目標開始，接著進行概念發展，再到細部設計與工程規劃，最後才進入施工階段。' },
+      { q: '你們也負責施工與製作，還是只做設計？', a: '兩者我們都負責。我們的內部團隊全程管理從設計發展、施工、製作到安裝，也就是設計空間的團隊，同時也是實際動手搭建的團隊。' },
+      { q: '施工前會提供3D視覺化或概念渲染圖嗎？', a: '會的。每個專案在進入製作前，都會經過概念渲染圖與3D視覺化的階段，讓客戶能夠審核並確認設計方向後再開始施工。' },
+      { q: '一般專案需要多長時間？', a: '時程依專案規模而定——小型裝修專案可能只需一到兩個月，而大型客製化製作的博物館展覽，從概念發想到開幕通常需要半年到一年。' },
     ],
   },
   {
-    group: 'TERMS & PRACTICALITIES',
+    group: '條款與實務細節',
     items: [
-      { q: 'What is the typical project budget range?', a: "We don't publish set pricing — every project is scoped and quoted individually based on size, materials, and construction complexity. Get in touch with your project details for an estimate." },
-      { q: 'Do you sign NDAs or protect client confidentiality?', a: 'Yes. We routinely sign NDAs for government and corporate clients, and treat all project materials — briefs, budgets, and unreleased content — as confidential throughout and after the engagement.' },
-      { q: 'Do you provide maintenance after an exhibition or installation is completed?', a: 'Yes. Maintenance is included during the warranty period, and we continue to offer paid maintenance support on a case-by-case basis after the warranty expires.' },
+      { q: '一般專案的預算範圍大約是多少？', a: '我們不公開制式報價——每個專案都會依規模、材料與施工複雜度個別評估與報價。歡迎與我們聯繫，提供專案細節以取得估價。' },
+      { q: '你們會簽署NDA保密協議，保護客戶機密嗎？', a: '會的。我們經常為政府機關與企業客戶簽署NDA保密協議，並在合作期間及結束後，將所有專案資料——包含簡報、預算與尚未公開的內容——視為機密處理。' },
+      { q: '展覽或裝置完工後，你們有提供後續維護嗎？', a: '有的。保固期內包含維護服務，保固期滿後我們仍會依個案提供付費維護支援。' },
     ],
   },
 ];
@@ -60,35 +60,35 @@ const email = 'info@letsuan.com';
     <Nav active="contact" enHref="/contact" />
 
     <section id="hero">
-      <h1 class="ltsuan-h1">Let's Talk About Your Space.</h1>
-      <p class="ltsuan-lead">Tell us about your project — we'll get back to you within two business days of your submission.</p>
+      <h1 class="ltsuan-h1">讓我們聊聊您的空間。</h1>
+      <p class="ltsuan-lead">告訴我們您的專案——送出後我們會在兩個工作天內回覆您。</p>
     </section>
 
     <section id="contact-body">
       <div class="ltsuan-contact-col">
         <div>
-          <div class="ltsuan-eyebrow">STUDIO — TAICHUNG</div>
-          <p class="ltsuan-address">6F.-1, No. 85, Sec. 1, Huamei W. St., West Dist., Taichung City 403020, Taiwan</p>
+          <div class="ltsuan-eyebrow">工作室 — 台中</div>
+          <p class="ltsuan-address">403020 台中市西區華美西街一段85號6樓之1</p>
         </div>
         <div>
-          <div class="ltsuan-eyebrow">STUDIO — TAIPEI</div>
-          <p class="ltsuan-address">3F., No. 62, Sec. 6, Yanping N. Rd., Shilin Dist., Taipei City 111069, Taiwan</p>
+          <div class="ltsuan-eyebrow">工作室 — 台北</div>
+          <p class="ltsuan-address">111069 台北市士林區延平北路六段62號3樓</p>
         </div>
         <div>
-          <div class="ltsuan-eyebrow">TEL</div>
+          <div class="ltsuan-eyebrow">電話</div>
           <a href="tel:+886423215956" class="ltsuan-plain-link">+886 4 2321 5956</a>
         </div>
         <div>
-          <div class="ltsuan-eyebrow">EMAIL</div>
+          <div class="ltsuan-eyebrow">電子郵件</div>
           <a href={`mailto:${email}`} class="ltsuan-plain-link">{email}</a>
         </div>
         <div>
-          <div class="ltsuan-eyebrow">SOCIAL</div>
+          <div class="ltsuan-eyebrow">社群</div>
           <a href="https://www.facebook.com/LETSUANDESIGN" class="ltsuan-plain-link">Facebook</a>
         </div>
         <div class="ltsuan-respond-box">
-          <div class="ltsuan-respond-eyebrow">HOW WE RESPOND</div>
-          <p class="ltsuan-respond-copy">Every form submission below is emailed straight to our team, and we reply within two business days. Project details and budget figures are kept confidential — we routinely sign NDAs for government and corporate clients.</p>
+          <div class="ltsuan-respond-eyebrow">我們如何回覆</div>
+          <p class="ltsuan-respond-copy">以下表單送出後會直接寄送至我們的團隊信箱，我們會在兩個工作天內回覆。專案細節與預算資訊將保密處理——我們經常為政府機關與企業客戶簽署NDA保密協議。</p>
         </div>
       </div>
       <div class="ltsuan-form-col">
