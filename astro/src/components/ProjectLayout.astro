@@ -46,7 +46,6 @@ interface Props {
   ctaHeadline?: string;
   ctaLabel?: string;
   ctaHref?: string;
-  theme?: 'light' | 'dark';
 }
 
 const {
@@ -78,18 +77,16 @@ const {
   ctaHeadline = lang === 'zh-TW' ? '有專案想討論？' : 'Have a project in mind?',
   ctaLabel = lang === 'zh-TW' ? '聯絡我們' : 'Get in Touch',
   ctaHref = './contact',
-  theme = 'light',
 } = Astro.props;
 
 const shareUrl = encodeURIComponent(canonical);
-const isDark = theme === 'dark';
 ---
 
 <Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={jsonLd} lang={lang} alternateHrefs={alternateHrefs}>
-  <div class:list={['ltsuan-detail', { 'ltsuan-detail-dark': isDark }]}>
+  <div class="ltsuan-detail">
     <header class="ltsuan-detail-header">
       <div class="ltsuan-detail-header-inner">
-        <a href={`${portfolioHref}#project-grid`} class="ltsuan-detail-logo-link"><img class="ltsuan-detail-logo" src={isDark ? '/assets/letsuan-logotype-white.svg' : '/assets/letsuan-logotype-navy.svg'} alt="Letsuan Design" /></a>
+        <a href={`${portfolioHref}#project-grid`} class="ltsuan-detail-logo-link"><img class="ltsuan-detail-logo" src="/assets/letsuan-logotype-navy.svg" alt="Letsuan Design" /></a>
         <div class="ltsuan-detail-label">{detailLabel}</div>
         <a href={portfolioHref} class="ltsuan-detail-close">{closeLabel} <span>✕</span></a>
       </div>
@@ -191,33 +188,6 @@ const isDark = theme === 'dark';
   body a:hover {
     color: #555;
   }
-  /* Dark theme variant — matches the homepage's own dark background (tokens.css --ltsuan-bg),
-     opted into per-page via the `theme="dark"` ProjectLayout prop. */
-  :root:has(.ltsuan-detail-dark) {
-    --ltsuan-detail-bg: #0a0a0a;
-    --ltsuan-detail-text: #f4efe8;
-    --ltsuan-detail-link: #8cc81e;
-    --ltsuan-detail-border: rgba(244, 239, 232, 0.15);
-  }
-  :root:has(.ltsuan-detail-dark) body a:hover {
-    color: #a8dc4a;
-  }
-  :root:has(.ltsuan-detail-dark) .ltsuan-detail-header {
-    background: rgba(10, 10, 10, 0.9);
-  }
-  :root:has(.ltsuan-detail-dark) .ltsuan-detail-eyebrow-rule {
-    background: rgba(244, 239, 232, 0.3);
-  }
-  :root:has(.ltsuan-detail-dark) .ltsuan-detail-body,
-  :root:has(.ltsuan-detail-dark) .ltsuan-detail-body :global(h2) {
-    color: var(--ltsuan-detail-text);
-  }
-  :root:has(.ltsuan-detail-dark) .ltsuan-thin-scroll {
-    scrollbar-color: rgba(244, 239, 232, 0.3) transparent;
-  }
-  :root:has(.ltsuan-detail-dark) .ltsuan-thin-scroll::-webkit-scrollbar-thumb {
-    background: rgba(244, 239, 232, 0.3);
-  }
 </style>
 
 <style>
@@ -250,7 +220,7 @@ const isDark = theme === 'dark';
   .ltsuan-detail-header-inner {
     max-width: 1700px;
     margin: 0 auto;
-    padding: 16px 56px;
+    padding: 16px 56px 16px 79px;
     height: 45px;
     display: flex;
     align-items: center;
@@ -283,7 +253,7 @@ const isDark = theme === 'dark';
   .ltsuan-detail-grid {
     max-width: 1700px;
     margin: 0 auto;
-    padding: 0 56px;
+    padding: 0 56px 0 79px;
     display: grid;
     grid-template-columns: 42% 58%;
     gap: 0;
@@ -328,7 +298,6 @@ const isDark = theme === 'dark';
     letter-spacing: -0.01em;
     margin-top: 27px;
     opacity: 0.9;
-    white-space: pre-line;
   }
   .ltsuan-detail-meta-grid {
     display: grid;
@@ -561,7 +530,7 @@ const isDark = theme === 'dark';
       display: none;
     }
     .ltsuan-detail-header-inner {
-      padding: 14px 12px !important;
+      padding: 14px 12px 14px 35px !important;
     }
     .ltsuan-detail-logo {
       height: 17px !important;

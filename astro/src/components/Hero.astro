@@ -33,9 +33,10 @@ const beamTwinkles = [
     const panClass = i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : 'ltsuan-slow-parallax';
     const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : i === 2 ? 'ltsuan-person-grow' : '';
     const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker' : '';
+    const bgWrapClass = i === 2 ? 'ltsuan-bg-disc-spin' : '';
     return (
       <div class="ltsuan-hero-layer" data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
-        <div class="ltsuan-hero-bg-wrap">
+        <div class:list={['ltsuan-hero-bg-wrap', bgWrapClass]}>
           <picture class="ltsuan-hero-bg-picture">
             <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="115vw" />
             <img
@@ -853,6 +854,23 @@ const beamTwinkles = [
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards, none;
   }
+  @keyframes ltsuanDiscSpinIn {
+    0% {
+      transform: scale(0.4) rotate(-260deg);
+      opacity: 0;
+    }
+    45% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.05) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  .ltsuan-bg-disc-spin {
+    transform-origin: center center;
+    animation: ltsuanDiscSpinIn 2.2s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  }
 </style>
 
 <script>
@@ -917,6 +935,7 @@ const beamTwinkles = [
     entering.style.transition = '';
 
     restartAnimation(entering.querySelector('.ltsuan-hero-bg-img'));
+    restartAnimation(entering.querySelector('.ltsuan-hero-bg-wrap'));
     restartAnimation(entering.querySelector('.ltsuan-hero-person-img'));
     restartAnimation(entering.querySelector('.ltsuan-hero-intro-bg'));
     restartAnimation(entering.querySelector('.ltsuan-hero-intro-img'));
