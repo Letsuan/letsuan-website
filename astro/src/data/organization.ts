@@ -67,7 +67,7 @@ export const organizationJsonLd = {
         'VR Immersive Space Integration',
         'Licensed Interior Decoration',
       ],
-      sameAs: ['https://www.facebook.com/LETSUANDESIGN', 'https://www.pinterest.com/0dda73c174216f4b382b84257cf744/'],
+      sameAs: ['https://www.facebook.com/LETSUANDESIGN', 'https://www.pinterest.com/Letsuan_Design/'],
     },
     {
       '@type': 'WebSite',
