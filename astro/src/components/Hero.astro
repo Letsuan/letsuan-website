@@ -38,13 +38,13 @@ const beamTwinkles = [
       <div class="ltsuan-hero-layer" data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
         <div class:list={['ltsuan-hero-bg-wrap', bgWrapClass]}>
           <picture class="ltsuan-hero-bg-picture">
-            <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="115vw" />
+            <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="(max-width: 900px) 180vw, 115vw" />
             <img
               class:list={['ltsuan-hero-bg-img', panClass]}
               alt={slide.alt}
               src={slide.realImg}
               srcset={responsiveSrcset(slide.realImg, 'jpg', slide.bgWidth)}
-              sizes="115vw"
+              sizes="(max-width: 900px) 180vw, 115vw"
               width={slide.bgWidth}
               height={slide.bgHeight}
               decoding="async"
@@ -53,13 +53,13 @@ const beamTwinkles = [
           </picture>
           {slide.introImg && (
             <picture class="ltsuan-hero-bg-picture ltsuan-hero-intro-bg">
-              <source type="image/avif" srcset={responsiveSrcset(slide.introImg, 'avif', slide.introBgWidth || slide.bgWidth)} sizes="115vw" />
+              <source type="image/avif" srcset={responsiveSrcset(slide.introImg, 'avif', slide.introBgWidth || slide.bgWidth)} sizes="(max-width: 900px) 180vw, 115vw" />
               <img
                 class="ltsuan-hero-bg-img ltsuan-hero-intro-img"
                 alt={slide.introAlt || ''}
                 src={slide.introImg}
                 srcset={responsiveSrcset(slide.introImg, 'jpg', slide.introBgWidth || slide.bgWidth)}
-                sizes="115vw"
+                sizes="(max-width: 900px) 180vw, 115vw"
                 width={slide.introBgWidth || slide.bgWidth}
                 height={slide.introBgHeight || slide.bgHeight}
                 decoding="async"
@@ -461,6 +461,9 @@ const beamTwinkles = [
     .ltsuan-hero-person-worker .ltsuan-hero-person-img {
       object-fit: cover !important;
       object-position: 46% 15% !important;
+    }
+    .ltsuan-hero-layer[data-idx='0'] .ltsuan-hero-bg-img {
+      object-position: 75% 55%;
     }
   }
   @media (max-width: 600px) {
