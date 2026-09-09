@@ -58,6 +58,7 @@ const email = 'info@letsuan.com';
   <div class="ltsuan-page">
     <Nav active="contact" enHref="/contact" />
 
+    <div class="ltsuan-container">
     <section id="hero">
       <h1 class="ltsuan-h1">讓我們聊聊您的空間。</h1>
       <p class="ltsuan-lead">告訴我們您的專案，送出後我們會在兩個工作天內回覆您。</p>
@@ -158,6 +159,7 @@ const email = 'info@letsuan.com';
         </div>
       ))}
     </section>
+    </div>
 
     <Footer />
   </div>
@@ -233,8 +235,18 @@ const email = 'info@letsuan.com';
   .ltsuan-page {
     background: var(--ltsuan-bg);
   }
+  .ltsuan-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-container {
+      padding: 0 40px;
+    }
+  }
   #hero {
-    padding: 220px 56px 70px 79px;
+    padding: 220px 0 70px;
     border-bottom: 1px solid rgba(244, 239, 232, 0.08);
   }
   .ltsuan-h1 {
@@ -255,7 +267,7 @@ const email = 'info@letsuan.com';
     white-space: nowrap;
   }
   #contact-body {
-    padding: 90px 56px 160px 79px;
+    padding: 90px 0 160px;
     display: flex;
     gap: 64px;
     flex-wrap: wrap;
@@ -425,7 +437,7 @@ const email = 'info@letsuan.com';
     color: var(--ltsuan-accent);
   }
   #faq {
-    padding: 0 56px 160px 79px;
+    padding: 0 0 160px;
   }
   .ltsuan-faq-h2 {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
