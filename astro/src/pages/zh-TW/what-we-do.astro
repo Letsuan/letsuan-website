@@ -84,6 +84,7 @@ const capabilities = [
   <div class="ltsuan-page">
     <Nav active="what-we-do" enHref="/what-we-do" />
 
+    <div class="ltsuan-container">
     <section id="hero">
       <div class="ltsuan-eyebrow">
         <span class="ltsuan-eyebrow-pill">Since 2014 — Design to Installation</span>
@@ -290,6 +291,7 @@ const capabilities = [
         </div>
       </div>
     </section>
+    </div>
 
     <div class="ltsuan-bottom-bar"></div>
   </div>
@@ -335,25 +337,39 @@ const capabilities = [
 
 <style is:global>
   :root {
-    --ltsuan-bg: #0b1526;
-    --ltsuan-panel: #101b33;
-    --ltsuan-accent: #8ec31f;
-    --ltsuan-accent-hover: #a8dc4a;
-    --ltsuan-line: rgba(244, 239, 232, 0.12);
+    --ltsuan-bg: #0a0a0a;
+    --ltsuan-panel: #141414;
+    --ltsuan-accent: #8cc81e;
+    --ltsuan-accent-hover: #9dd42a;
+    --ltsuan-line: rgba(244, 239, 232, 0.06);
     --ltsuan-dim: rgba(244, 239, 232, 0.6);
-    --ltsuan-blueprint: #c9d6e8;
   }
 </style>
 
 <style>
   .ltsuan-page {
     background: var(--ltsuan-bg);
+    color: #f4efe8;
+  }
+  .ltsuan-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-container {
+      padding: 0 40px;
+    }
   }
 
   /* Hero */
   #hero {
-    padding: 110px 60px 56px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+    padding: 56px 0 64px;
+  }
+  @media (min-width: 768px) {
+    #hero {
+      padding: 96px 0 112px;
+    }
   }
   .ltsuan-eyebrow {
     margin-bottom: 32px;
@@ -537,8 +553,13 @@ const capabilities = [
 
   /* Why section */
   #why {
-    padding: 56px 60px 56px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #why {
+      padding: 96px 0;
+    }
   }
   .ltsuan-why-grid {
     display: grid;
@@ -612,7 +633,7 @@ const capabilities = [
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 15px;
     line-height: 1.8;
-    color: rgba(142, 195, 31, 0.9);
+    color: rgba(140, 200, 30, 0.9);
   }
   .ltsuan-why-cols {
     margin-top: 32px;
@@ -682,8 +703,13 @@ const capabilities = [
 
   /* Services */
   #services {
-    padding: 56px 60px 56px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #services {
+      padding: 80px 0;
+    }
   }
   .ltsuan-section-stat {
     margin-bottom: 40px;
@@ -800,10 +826,6 @@ const capabilities = [
     height: 1px;
     width: 100%;
     background: rgba(244, 239, 232, 0.06);
-    transition: background-color 0.3s ease;
-  }
-  .ltsuan-service-card:hover .ltsuan-service-rule {
-    background: rgba(142, 195, 31, 0.2);
   }
   .ltsuan-service-headline {
     margin: 12px 0 0;
@@ -815,8 +837,13 @@ const capabilities = [
 
   /* Process */
   #process-steps {
-    padding: 56px 60px 56px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #process-steps {
+      padding: 80px 0;
+    }
   }
   .ltsuan-process-heading {
     margin-bottom: 40px;
@@ -1030,9 +1057,13 @@ const capabilities = [
 
   /* Capabilities */
   #capabilities {
-    padding: 56px 60px 56px 79px;
-    background: var(--ltsuan-panel);
-    border-bottom: 1px solid var(--ltsuan-line);
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #capabilities {
+      padding: 80px 0;
+    }
   }
   .ltsuan-section-h2 {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -1138,7 +1169,13 @@ const capabilities = [
 
   /* CTA */
   #contact {
-    padding: 72px 60px 96px 79px;
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 64px 0;
+  }
+  @media (min-width: 768px) {
+    #contact {
+      padding: 112px 0;
+    }
   }
   .ltsuan-cta {
     max-width: 920px;
@@ -1282,17 +1319,5 @@ const capabilities = [
     width: 100%;
     opacity: 0.8;
     background: linear-gradient(to right, #0a0a0a, var(--ltsuan-accent), #0a0a0a);
-  }
-
-  @media (max-width: 719px) {
-    #hero,
-    #why,
-    #services,
-    #process-steps,
-    #capabilities,
-    #contact {
-      padding-left: 35px;
-      padding-right: 24px;
-    }
   }
 </style>
