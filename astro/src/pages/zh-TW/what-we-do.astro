@@ -93,8 +93,8 @@ const capabilities = [
       </div>
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
-          <h1 class="ltsuan-h1">賦予空間<br /><span class="ltsuan-h1-accent">具體樣貌</span><span class="ltsuan-h1-dot"></span></h1>
-          <p class="ltsuan-lead">從現地會勘到最終交付，同一團隊全程負責可行性評估、設計、製作與安裝每個階段，讓複雜的專業知識變得容易理解，體驗自然而然展開。</p>
+          <h1 class="ltsuan-h1" data-hero-h1>賦予空間<br /><span class="ltsuan-h1-accent">具體樣貌</span><span class="ltsuan-h1-dot"></span></h1>
+          <p class="ltsuan-lead" data-hero-lead>從現地會勘到最終交付，同一團隊全程負責可行性評估、設計、製作與安裝每個階段，讓複雜的專業知識變得容易理解，體驗自然而然展開。</p>
         </div>
         <div class="ltsuan-hero-panel">
           <div class="ltsuan-hero-card">
@@ -330,6 +330,15 @@ const capabilities = [
     btn.addEventListener('mouseenter', () => setStep(i));
     btn.addEventListener('focus', () => setStep(i));
   });
+
+  const heroH1 = document.querySelector<HTMLElement>('[data-hero-h1]');
+  const heroLead = document.querySelector<HTMLElement>('[data-hero-lead]');
+  function syncLeadWidth() {
+    if (!heroH1 || !heroLead) return;
+    heroLead.style.maxWidth = `${heroH1.getBoundingClientRect().width}px`;
+  }
+  syncLeadWidth();
+  window.addEventListener('resize', syncLeadWidth);
 </script>
 
 <script type="application/json" id="ltsuan-process-data" set:html={JSON.stringify(processSteps)} />
@@ -415,6 +424,8 @@ const capabilities = [
     }
   }
   .ltsuan-h1 {
+    width: fit-content;
+    max-width: 100%;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
     font-size: clamp(45px, 6vw, 85px);
@@ -435,6 +446,7 @@ const capabilities = [
     vertical-align: middle;
   }
   .ltsuan-lead {
+    box-sizing: border-box;
     margin: 32px 0 0;
     max-width: 100%;
     padding-left: 20px;
