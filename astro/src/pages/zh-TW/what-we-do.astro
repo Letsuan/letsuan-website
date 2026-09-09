@@ -86,11 +86,6 @@ const capabilities = [
 
     <div class="ltsuan-container">
     <section id="hero">
-      <div class="ltsuan-eyebrow">
-        <span class="ltsuan-eyebrow-pill">Since 2014 — Design to Installation</span>
-        <span class="ltsuan-eyebrow-line"></span>
-        <span class="ltsuan-eyebrow-text">Museum Exhibition Design & Build Studio</span>
-      </div>
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
           <h1 class="ltsuan-h1" data-hero-h1>賦予空間<br /><span class="ltsuan-h1-accent">具體樣貌</span><span class="ltsuan-h1-dot"></span></h1>
@@ -342,14 +337,17 @@ const capabilities = [
   window.addEventListener('resize', syncLeadWidth);
 
   const detailBox = document.querySelector<HTMLElement>('.ltsuan-process-detail');
+  const detailHead = document.querySelector<HTMLElement>('.ltsuan-process-detail-head');
   function syncDetailDescWidth() {
-    if (!detailDesc || !detailBox || buttons.length < 4) return;
+    if (!detailDesc || !detailBox || !detailHead || buttons.length < 4) return;
     const boxRect = detailBox.getBoundingClientRect();
     const boxPaddingLeft = parseFloat(getComputedStyle(detailBox).paddingLeft);
     const startRect = buttons[1].getBoundingClientRect();
     const endRect = buttons[3].getBoundingClientRect();
-    detailDesc.style.marginLeft = `${startRect.left - boxRect.left - boxPaddingLeft}px`;
+    const insetLeft = `${startRect.left - boxRect.left - boxPaddingLeft}px`;
+    detailDesc.style.marginLeft = insetLeft;
     detailDesc.style.width = `${endRect.right - startRect.left}px`;
+    detailHead.style.marginLeft = insetLeft;
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
@@ -391,39 +389,6 @@ const capabilities = [
   @media (min-width: 768px) {
     #hero {
       padding: 96px 0 112px;
-    }
-  }
-  .ltsuan-eyebrow {
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: rgba(244, 239, 232, 0.4);
-  }
-  .ltsuan-eyebrow-pill {
-    display: inline-flex;
-    height: 24px;
-    align-items: center;
-    border-radius: 999px;
-    border: 1px solid var(--ltsuan-line);
-    padding: 0 12px;
-  }
-  .ltsuan-eyebrow-line {
-    display: none;
-    height: 1px;
-    width: 48px;
-    background: var(--ltsuan-line);
-  }
-  .ltsuan-eyebrow-text {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    .ltsuan-eyebrow-line,
-    .ltsuan-eyebrow-text {
-      display: inline-block;
     }
   }
   .ltsuan-hero-grid {
@@ -1284,6 +1249,10 @@ const capabilities = [
     margin-top: 64px;
     border-top: 1px solid rgba(244, 239, 232, 0.06);
     padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
   .ltsuan-cta-social {
     display: flex;
@@ -1300,7 +1269,6 @@ const capabilities = [
     border: 1px solid rgba(244, 239, 232, 0.2);
   }
   .ltsuan-cta-cityline {
-    margin-top: 24px;
     text-align: center;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 11px;
@@ -1308,7 +1276,6 @@ const capabilities = [
     color: rgba(244, 239, 232, 0.4);
   }
   .ltsuan-cta-address {
-    margin-top: 8px;
     text-align: center;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 11px;
@@ -1316,7 +1283,6 @@ const capabilities = [
     color: rgba(244, 239, 232, 0.3);
   }
   .ltsuan-cta-legal {
-    margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
