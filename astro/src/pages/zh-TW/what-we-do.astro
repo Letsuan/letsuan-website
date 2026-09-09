@@ -2,36 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/zh-TW/Nav.astro';
 import Footer from '../../components/zh-TW/Footer.astro';
-import CornerFrame from '../../components/CornerFrame.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { avifPath } from '../../utils/images';
-import { services as coreServiceMeta } from '../../data/homepage-zh';
 
-const coreServiceCopy: Record<string, { headline: string; desc: string }> = {
-  curatorial: {
-    headline: '一場好的展覽，從一個好的觀點開始。',
-    desc: '我們負責完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。十二年博物館與展覽經驗，讓我們懂得如何訂出主題方向、把研究轉化為內容，並理清展示邏輯，讓訪客走過展場時能跟上展覽想說的論述。',
-  },
-  exhibition: {
-    headline: '空間訴說故事，訪客走進其中。',
-    desc: '為博物館、水族館與文化場館設計以故事為核心的展覽。敘事、空間規劃、燈光與互動多媒體共同運作，把抽象主題轉化為訪客走過空間就能讀懂的具體設計，而不是靠滿牆的文字說明。',
-  },
-  interior: {
-    headline: '為人設計的空間，不只是好看而已。',
-    desc: '身為持照室內裝修業者，我們依照人們實際的移動與聚集方式來設計商業與機構室內空間，而不只是講究外觀。空間分區、動線與材質選擇都經過規劃，讓人們能順暢地走進、使用這個空間。',
-  },
-  visual: {
-    headline: '走到哪都認得出的品牌。',
-    desc: '我們負責品牌識別、企業識別系統與指標設計，以及讓品牌貫穿實體空間的圖像環境。無論場館內外，logo 系統與環境圖像都維持一致的視覺調性，讓訪客一眼就能認出。',
-  },
-  construction: {
-    headline: '從動工到交付，自有團隊全程在場。',
-    desc: '我們負責展場工程從設計圖到完工的全部過程，包含施工與展示製作。自有團隊直接進行製作與工地管理，專業工項則由合作團隊在我們直接監督下執行。我們全程把關材料選用、進度排程與品質管控，確保完工空間與圖面相符，並經得起長期使用。',
-  },
-};
-
-const title = '麗荃室內裝修 | 展覽設計流程';
-const description = '了解麗荃室內裝修如何透過五階段流程交付博物館等級的展覽，因應古蹟場域與高精度環境需求量身打造工程規劃。';
+const title = '麗荃室內裝修 | 我們的做法';
+const description = '麗荃室內裝修為何堅持設計施工一體：六大核心服務、五階段流程與八項工程能力，皆由同一團隊從概念到開幕全程負責。';
 const canonical = 'https://letsuan.com/zh-TW/what-we-do';
 const alternateHrefs = [
   { hreflang: 'en', href: 'https://letsuan.com/what-we-do' },
@@ -58,39 +33,51 @@ const pageJsonLd = {
       name: '麗荃室內裝修服務與工程能力',
       provider: { '@id': 'https://letsuan.com/#organization' },
       itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '策展服務', description: '完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '展覽設計', description: '為博物館與文化場館打造敘事導向的展覽與沉浸式裝置。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '室內設計', description: '依照人們實際的移動與聚集方式規劃的商業與機構室內空間。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '視覺設計', description: '透過識別系統、指標與環境圖像，讓品牌貫穿實體空間。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '工程建造', description: '自有製作團隊與工地管理，將設計從圖面化為實體。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '多媒體互動設計', description: '感應觸發、投影與互動螢幕等多媒體裝置的技術規劃與軟硬體整合。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '古蹟與零損傷工程', description: '為受保護建物與古蹟場域設計的自立式、零穿孔結構系統，在不觸碰原始構造的前提下，承載完整的景觀與機電設備荷重。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'IP 授權展覽執行', description: '依授權方規範執行：角色還原度、官方指定色號與完工品質，皆透過現場直接督導與驗收把關。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '暗展場與影音整合', description: '全暗場處理、分區燈光，結合隱藏式配線與機械傳動的多區感應觸發自動化系統。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '高精度環境控制', description: '針對 VR、影音與互動系統，以嚴謹數值公差打造均勻照度、隔音效果與感應敏感度兼具的環境。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '結構與耐震工程', description: '自立式與懸吊結構自設計階段起，即依當地耐震安全係數進行設計與評估。' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '壓縮工期現場管理', description: '分階段跨工種排程與多方協調，在共用通道、天候與法規審查等現實限制下，如期達成固定開幕日。' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '自有製作與廢棄物管理', description: '單元與裝置於自有工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。每個工地都遵循正式的分類回收流程。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '製作與廢棄物管理', description: '單元與裝置於工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '海外遠端交付', description: '提供精確到位的完整施工文件，讓海外當地團隊無需現場督導，即可完成製作、展示設計與安裝。' } },
       ],
     },
   ],
 };
 
 const processSteps = [
-  { num: '01', title: '需求與可行性評估', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認。' },
-  { num: '02', title: '概念與工程設計', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作。' },
-  { num: '03', title: '製作與測試', desc: '自有工廠製作，機電、燈光與影音系統在出廠前完成測試。' },
-  { num: '04', title: '現場安裝', desc: '在自有工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合。' },
-  { num: '05', title: '驗收與交付', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序。' },
+  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。' },
+  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。' },
+  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。' },
+  { id: '04', en: 'On-site Installation', zh: '工程安裝', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。' },
+  { id: '05', en: 'Handover', zh: '驗收與交付', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。' },
+];
+
+const services = [
+  { n: '01', zh: '策展服務', en: 'Curatorial Services', headline: '一場好的展覽，從一個好的觀點開始。', desc: '我們負責完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。十二年博物館與展覽經驗，讓我們懂得如何訂出主題方向、把研究轉化為內容，並理清展示邏輯。', img: '/images/curatorial-services-team-reviewing-concept-letsuan-design.jpg', alt: '策展團隊圍桌檢視展覽概念草稿' },
+  { n: '02', zh: '展覽設計', en: 'Exhibition Design', headline: '空間訴說故事，訪客走進其中。', desc: '為博物館、水族館與文化場館設計以故事為核心的展覽。敘事、空間規劃、燈光與互動多媒體共同運作，把抽象主題轉化為訪客走過空間就能讀懂的具體設計。', img: '/images/exhibition-design-museum-gallery-corridor-letsuan-design.jpg', alt: '博物館展覽廊道空間設計' },
+  { n: '03', zh: '室內設計', en: 'Interior Design', headline: '為人設計的空間，不只是好看而已。', desc: '身為持照室內裝修業者，我們依照人們實際的移動與聚集方式來設計商業與機構室內空間。空間分區、動線與材質選擇都經過規劃，讓人們能順暢地走進、使用這個空間。', img: '/images/interior-design-executive-office-letsuan-design.jpg', alt: '企業辦公室室內設計空間' },
+  { n: '04', zh: '視覺設計', en: 'Visual Design', headline: '走到哪都認得出的品牌。', desc: '我們把客戶的品牌識別、企業識別系統與指標設計，實現在真實的空間裡。從入口招牌到場館內外的環境圖像，logo 系統與視覺調性都忠實延續客戶的品牌樣貌。', img: '/images/visual-design-wayfinding-signage-letsuan-design.jpg', alt: '場館指標與環境視覺設計' },
+  { n: '05', zh: '工程建造', en: 'Construction', headline: '從動工到交付，團隊全程在場。', desc: '我們負責展場工程從設計圖到完工的全部過程，包含施工與展示製作。團隊直接進行製作與工地管理，專業工項則由合作團隊在我們直接監督下執行。', img: '/images/construction-site-supervisor-reviewing-plans-letsuan-design.jpg', alt: '工地主管於施工現場檢視圖面' },
+  { n: '06', zh: '多媒體互動設計', en: 'Multimedia & Interactive Design', headline: '讓展示與觀眾即時互動，而不只是被動觀看。', desc: '我們規劃感應觸發、投影與互動螢幕等多媒體裝置，讓內容隨著觀眾的動作與停留即時回應。技術規劃、內容腳本與軟硬體整合由同一團隊負責，確保現場穩定運作。', img: '/images/multimedia-interactive-touch-table-exhibit-letsuan-design.jpg', alt: '訪客操作互動觸控展示桌' },
 ];
 
 const capabilities = [
-  { id: 'heritage-non-invasive-construction', title: '古蹟與零損傷工程', desc: '為受保護建物與古蹟場域設計的自立式、零穿孔結構系統，在不觸碰原始構造的前提下，承載完整的景觀與機電設備荷重。', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'ゲゲゲの鬼太郎' },
-  { title: 'IP 授權展覽執行', desc: '依授權方規範執行：角色還原度、官方指定色號與完工品質，皆透過現場直接督導與驗收把關。', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: '名偵探柯南' },
-  { title: '暗展場與影音整合', desc: '全暗場處理、分區燈光，結合隱藏式配線與機械傳動的多區感應觸發自動化系統。', img: '/images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', alt: 'Immersive projection room with a wraparound calibration grid mapped across curved walls and floor, ceiling rigged with rows of projectors, technicians testing the setup', evidenceHref: './project-beyond-just-an-exhibition', evidenceLabel: '不只是展覽–你就是藝術的一部分！' },
-  { title: '高精度環境控制', desc: '針對 VR、影音與互動系統，以嚴謹數值公差打造均勻照度、隔音效果與感應敏感度兼具的環境。', img: '/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg', imgPosition: 'center 30%', alt: 'Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Letsuan Design', evidenceHref: './project-marine-illusion', evidenceLabel: '眼見為憑？' },
-  { title: '結構與耐震工程', desc: '自立式與懸吊結構自設計階段起，即依當地耐震安全係數進行設計與評估。', img: '/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg', alt: 'From Dragon to Beast — Sauropod skeletons being installed in outdoor courtyard', evidenceHref: './project-dragon-to-beast', evidenceLabel: '從龍到獸' },
-  { title: '壓縮工期現場管理', desc: '分階段跨工種排程與多方協調，在共用通道、天候與法規審查等現實限制下，如期達成固定開幕日。', img: '/images/notre-dame-profile-line-letsuan-design.jpg', imgPosition: 'center 15%', alt: 'Three visitors in profile wearing VR headsets and backpacks against a black-and-white graphic mural', evidenceHref: './project-notre-dame', evidenceLabel: '永恆聖母院' },
-  { title: '自有製作與廢棄物管理', desc: '單元與裝置於自有工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。每個工地都遵循正式的分類回收流程。', img: '/images/mobile-museum-exhibition-01-letsuan-design.jpg', alt: '8.5 ping: A Museum on Wheels — Mobile Museum vehicle', evidenceHref: './project-mobile-museum', evidenceLabel: '8.5坪的博物館' },
-  { title: '海外遠端交付', desc: '提供精確到位的完整施工文件，讓海外當地團隊無需現場督導，即可完成製作、展示設計與安裝。', img: '/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg', alt: 'La Fortuna Bordada exhibition banner at the Museo Nacional de Artes Decorativas entrance', evidenceHref: './project-la-fortuna-bordada', evidenceLabel: '美麗與吉祥' },
+  { zh: '古蹟與零損傷工程', en: 'Heritage & Non-Invasive Construction', desc: '為受保護建物與古蹟場域設計的自立式、零穿孔結構系統，在不觸碰原始構造的前提下，承載完整的景觀與機電設備荷重。', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'ゲゲゲの鬼太郎' },
+  { zh: 'IP 授權展覽執行', en: 'IP-Licensed Exhibitions', desc: '依授權方規範執行：角色還原度、官方指定色號與完工品質，皆透過現場直接督導與驗收把關。', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: '名偵探柯南' },
+  { zh: '暗展場與影音整合', en: 'Blackout & AV Integration', desc: '全暗場處理、分區燈光，結合隱藏式配線與機械傳動的多區感應觸發自動化系統。', img: '/images/immersive-projection-mapping-grid-installation-letsuan-design.jpg', alt: 'Immersive projection room with a wraparound calibration grid mapped across curved walls and floor, ceiling rigged with rows of projectors, technicians testing the setup', evidenceHref: './project-beyond-just-an-exhibition', evidenceLabel: '不只是展覽–你就是藝術的一部分！' },
+  { zh: '高精度環境控制', en: 'Precision Environmental Control', desc: '針對 VR、影音與互動系統，以嚴謹數值公差打造均勻照度、隔音效果與感應敏感度兼具的環境。', img: '/images/notre-dame-profile-line-letsuan-design.jpg', imgPosition: 'center 15%', alt: 'Three visitors in profile wearing VR headsets and backpacks against a black-and-white graphic mural', evidenceHref: './project-notre-dame', evidenceLabel: '永恆聖母院' },
+  { zh: '結構與耐震工程', en: 'Structural & Seismic Engineering', desc: '自立式與懸吊結構自設計階段起，即依當地耐震安全係數進行設計與評估。', img: '/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg', alt: 'From Dragon to Beast — Sauropod skeletons being installed in outdoor courtyard', evidenceHref: './project-dragon-to-beast', evidenceLabel: '從龍到獸' },
+  { zh: '壓縮工期現場管理', en: 'Compressed-Timeline Site Management', desc: '分階段跨工種排程與多方協調，在共用通道、天候與法規審查等現實限制下，如期達成固定開幕日。', img: '/images/wang-ye-worship-donggang-01-letsuan-design.jpg', alt: '天狩神兵——東港迎王祭展覽', evidenceHref: './project-wang-ye-donggang', evidenceLabel: '東港迎王特展' },
+  { zh: '製作與廢棄物管理', en: 'In-House Fabrication & Waste Management', desc: '單元與裝置於工廠製作後運至現場組裝，讓材料與人力全程可追溯，並降低現場廢棄物與干擾。', img: '/images/offshore-wind-om-learning-center-01-letsuan-design.jpg', alt: '離岸風電運維中心——會議室牆面為沃旭「Love your home」地球壁畫，前方為會議桌', evidenceHref: './project-offshore-wind', evidenceLabel: '風動台灣' },
+  { zh: '海外遠端交付', en: 'Remote International Delivery', desc: '提供精確到位的完整施工文件，讓海外當地團隊無需現場督導，即可完成製作、展示設計與安裝。', img: '/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg', alt: 'La Fortuna Bordada exhibition banner at the Museo Nacional de Artes Decorativas entrance', evidenceHref: './project-la-fortuna-bordada', evidenceLabel: '美麗與吉祥' },
 ];
 ---
 
@@ -98,79 +85,190 @@ const capabilities = [
   <div class="ltsuan-page">
     <Nav active="what-we-do" enHref="/what-we-do" />
 
-    <section id="process">
-      <div class="ltsuan-reveal ltsuan-process-block">
-        <div class="ltsuan-process-copy">
-          <h1 class="ltsuan-h1">賦予空間具體樣貌。</h1>
+    <section id="hero">
+      <div class="ltsuan-eyebrow">
+        <span class="ltsuan-eyebrow-pill">Since 2014 — Design to Installation</span>
+        <span class="ltsuan-eyebrow-line"></span>
+        <span class="ltsuan-eyebrow-text">Museum Exhibition Design & Build Studio</span>
+      </div>
+      <div class="ltsuan-hero-grid">
+        <div class="ltsuan-hero-copy">
+          <h1 class="ltsuan-h1">賦予空間<br /><span class="ltsuan-h1-accent">具體樣貌</span><span class="ltsuan-h1-dot"></span></h1>
           <p class="ltsuan-lead">從現地會勘到最終交付，同一團隊全程負責可行性評估、設計、製作與安裝每個階段，讓複雜的專業知識變得容易理解，體驗自然而然展開。</p>
         </div>
-        <a href="./portfolio" class="ltsuan-badge">查看<br />作品集</a>
-      </div>
-      <div class="ltsuan-hero-media">
-        <picture>
-          <source srcset={avifPath('/images/centered-sparkler-hand-letsuan-design.jpg')} type="image/avif" />
-          <img src="/images/centered-sparkler-hand-letsuan-design.jpg" alt="Hand holding a lit sparkler against a bokeh light backdrop" class="ltsuan-hero-img" />
-        </picture>
-        <CornerFrame size={16} />
+        <div class="ltsuan-hero-panel">
+          <div class="ltsuan-hero-card">
+            <div class="ltsuan-hero-card-doc"></div>
+            <div class="ltsuan-hero-card-tag">
+              <span class="ltsuan-hero-card-tag-label">LE TSUAN / 2024</span>
+              <span class="ltsuan-hero-card-tag-rule"></span>
+              <span class="ltsuan-hero-card-tag-dot"></span>
+            </div>
+            <div class="ltsuan-hero-card-foot">
+              <span>Fig.01 — Spatial Narrative Study</span>
+              <span class="ltsuan-hero-card-badge">Taichung Studio</span>
+            </div>
+          </div>
+          <div class="ltsuan-hero-captions">
+            <p>從可行性評估到驗收交付，五個關鍵節點無縫銜接。</p>
+            <p>Five stages, one accountable team, start to finish.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="core-services">
-      <div class="ltsuan-reveal">
-        <h2 class="ltsuan-section-h2">五項服務，一個團隊全程負責。</h2>
-      </div>
-      <div class="ltsuan-core-grid">
-        {coreServiceMeta.map((svc) => (
-          <div class="ltsuan-core-card" id={`service-${svc.id}`}>
-            <div class="ltsuan-core-img-wrap">
-              <picture>
-                <source srcset={avifPath(svc.realImg)} type="image/avif" />
-                <img alt={svc.alt} src={svc.realImg} class="ltsuan-core-img" loading="lazy" decoding="async" />
-              </picture>
+    <section id="why">
+      <div class="ltsuan-why-grid">
+        <div class="ltsuan-stat">
+          <div class="ltsuan-stat-row">
+            <div class="ltsuan-stat-num">12+</div>
+            <div class="ltsuan-stat-meta">
+              <div class="ltsuan-stat-label">YEARS</div>
+              <div class="ltsuan-stat-rule"></div>
+              <div class="ltsuan-stat-sub">年<br />博物館<br />現場</div>
             </div>
-            <h3 class="ltsuan-core-title">{svc.title}</h3>
-            <p class="ltsuan-core-headline">{coreServiceCopy[svc.id].headline}</p>
-            <p class="ltsuan-core-desc">{coreServiceCopy[svc.id].desc}</p>
+          </div>
+          <p class="ltsuan-stat-caption">EST. 2014 — CONTINUOUS PRACTICE</p>
+        </div>
+        <div class="ltsuan-why-copy">
+          <h2 class="ltsuan-why-h2">為什麼堅持 <span class="ltsuan-pill">設計施工一體</span>？<br />因為圖面是想像，現場才是體驗。</h2>
+          <p class="ltsuan-why-highlight">一個燈光角度的偏差、展櫃與牆面 5mm 的誤差，就是一段故事的失真。圖面無法解決現場的問題，只有同一個團隊，才能讓當初的敘事在現場不被妥協。</p>
+          <div class="ltsuan-why-cols">
+            <div class="ltsuan-why-text">
+              <p>許多展覽在圖面上很美，到了現場卻走了味。往往是因為策展、設計、施工分屬不同廠商，責任分散，最後的落差，只能由觀眾承擔。</p>
+              <p>麗荃選擇了一條更重、也更負責的路，從策展框架到開幕前最後一次走場點燈，由同一個團隊負責到底。木作、鐵件、燈光與多媒體，皆由同一群人整合製作與現場校準。</p>
+              <p>當圖面與現場由同一群人守護，敘事才不會在工地裡走散，展覽才能如承諾般被完整體驗。</p>
+            </div>
+            <div class="ltsuan-why-card-col">
+              <div class="ltsuan-why-card">
+                <div class="ltsuan-why-card-label">ONE TEAM ACCOUNTABILITY</div>
+                <p class="ltsuan-why-card-body">同一團隊，從概念到開幕。<br /><span>Single point of responsibility — from curatorial framework to final walkthrough.</span></p>
+              </div>
+              <div class="ltsuan-why-tags">
+                <span>製作整合</span>
+                <span>現場組裝</span>
+                <span>燈光整合</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="ltsuan-section-stat">
+        <div class="ltsuan-stat-num">6</div>
+        <div class="ltsuan-stat-meta">
+          <div class="ltsuan-stat-label">SERVICES</div>
+          <div class="ltsuan-stat-rule"></div>
+          <div class="ltsuan-stat-sub">六大<br />核心<br />服務項目</div>
+        </div>
+      </div>
+      <div class="ltsuan-services-grid">
+        {services.map((svc) => (
+          <div class="ltsuan-service-card" id={`service-${svc.n}`}>
+            <div class="ltsn-panel">
+              <picture>
+                <source srcset={avifPath(svc.img)} type="image/avif" />
+                <img alt={svc.alt} src={svc.img} class="ltsuan-service-img" loading="lazy" decoding="async" />
+              </picture>
+              <span class="ltsuan-service-img-en">{svc.en.toLowerCase()}</span>
+              <span class="ltsuan-service-img-mark">✳</span>
+            </div>
+            <div class="ltsuan-service-title-row">
+              <span class="ltsuan-service-n">{svc.n}</span>
+              <span class="ltsuan-service-dot"></span>
+              <h3 class="ltsuan-service-zh">{svc.zh}</h3>
+            </div>
+            <div class="ltsuan-service-en">{svc.en}</div>
+            <p class="ltsuan-service-desc">{svc.desc}</p>
+            <div class="ltsuan-service-foot">
+              <div class="ltsuan-service-rule"></div>
+              <p class="ltsuan-service-headline">{svc.headline}</p>
+            </div>
           </div>
         ))}
       </div>
     </section>
 
     <section id="process-steps">
-      <h2 class="ltsuan-process-h2">從需求確認到交付，同一團隊負責到底。</h2>
-      <div class="ltsuan-process-grid">
-        <div class="ltsuan-process-line"></div>
+      <div class="ltsuan-process-heading">
+        <h2 class="ltsuan-process-h2">流程</h2>
+        <span class="ltsuan-process-sub">從需求確認到交付，同一個團隊負責到底</span>
+      </div>
+
+      <div class="ltsuan-process-tracker" data-process-tracker>
+        <div class="ltsuan-process-line-track"></div>
+        <div class="ltsuan-process-line-fill" data-process-fill></div>
+        <div class="ltsuan-process-buttons">
+          {processSteps.map((step, i) => (
+            <button type="button" class="ltsuan-process-btn" data-step-id={step.id} data-step-index={i} aria-current={i === 0 ? 'step' : undefined}>
+              <span class="ltsuan-process-ring">
+                <span class="ltsuan-process-dot"></span>
+              </span>
+              <span class="ltsuan-process-btn-zh">{step.zh}</span>
+              <span class="ltsuan-process-btn-en">{step.en}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="ltsuan-process-detail">
+        <div class="ltsuan-process-detail-head">
+          <span class="ltsuan-process-detail-id" data-process-detail-id>01</span>
+          <span class="ltsuan-process-detail-rule"></span>
+          <span class="ltsuan-process-detail-en" data-process-detail-en>FEASIBILITY</span>
+        </div>
+        <p class="ltsuan-process-detail-desc" data-process-detail-desc>{processSteps[0].desc}</p>
+      </div>
+
+      <div class="ltsuan-process-mobile">
+        <div class="ltsuan-process-mobile-line"></div>
         {processSteps.map((step) => (
-          <div>
-            <div class="ltsuan-tick"></div>
-            <div class="ltsuan-step-num">{step.num}</div>
-            <h3 class="ltsuan-step-title">{step.title}</h3>
-            <p class="ltsuan-step-desc">{step.desc}</p>
-          </div>
+          <details class="ltsuan-process-mobile-item">
+            <summary>
+              <span class="ltsuan-process-mobile-dot"></span>
+              <span class="ltsuan-process-mobile-zh">{step.zh}</span>
+              <span class="ltsuan-process-mobile-en">{step.en}</span>
+            </summary>
+            <p>{step.desc}</p>
+          </details>
         ))}
       </div>
     </section>
 
-    <section id="services">
+    <section id="capabilities">
       <div class="ltsuan-reveal">
         <h2 class="ltsuan-section-h2">禁得起基地、業主<br />與法規三方考驗的工程。</h2>
         <p class="ltsuan-section-intro">麗荃室內裝修專精古蹟零損傷工程、IP 授權展覽執行、暗展場影音整合，以及高精度環境控制，服務對象涵蓋臺灣及海外的博物館與文化場館。</p>
       </div>
       <div class="ltsuan-capabilities-grid">
         {capabilities.map((cap) => (
-          <div class="ltsuan-cap-card" id={cap.id}>
-            <CornerFrame size={10} opacity={0.55} />
-            <div class="ltsuan-cap-img-wrap">
-              <picture>
-                <source srcset={avifPath(cap.img)} type="image/avif" />
-                <img alt={cap.alt} src={cap.img} style={`object-position:${cap.imgPosition || 'center'}`} class="ltsuan-cap-img" loading="lazy" decoding="async" />
-              </picture>
-            </div>
-            <h3 class="ltsuan-cap-title">{cap.title}</h3>
+          <div class="ltsuan-cap-card">
+            <h3 class="ltsuan-cap-title">{cap.zh}</h3>
+            <div class="ltsuan-cap-en">{cap.en}</div>
             <p class="ltsuan-cap-desc">{cap.desc}</p>
-            <a href={cap.evidenceHref} class="ltsuan-cap-evidence">{cap.evidenceLabel} →</a>
+            <div class="ltsuan-cap-foot">
+              <div class="ltsuan-cap-rule"><span class="ltsuan-cap-glow"></span></div>
+              <a href={cap.evidenceHref} class="ltsuan-cap-evidence"><span>{cap.evidenceLabel}</span><span class="ltsuan-cap-arrow">↗</span></a>
+            </div>
           </div>
         ))}
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="ltsuan-cta">
+        <div class="ltsuan-cta-pill"><span class="ltsuan-cta-dot"></span>NEW PROJECTS FOR 2026 — OPEN</div>
+        <h2 class="ltsuan-cta-h2">來聊聊你的<br />下一個展覽。</h2>
+        <p class="ltsuan-cta-copy">不管是常設展、特展還是品牌館，我們總是先問：觀眾會如何走進這個故事，又如何帶著記憶<span class="ltsuan-nowrap">離開？</span></p>
+        <div class="ltsuan-cta-actions">
+          <a href="mailto:info@letsuan.com?subject=展覽諮詢 / Exhibition Inquiry" class="ltsuan-cta-btn">
+            <span>info@letsuan.com</span>
+            <span class="ltsuan-cta-btn-arrow">↗</span>
+          </a>
+          <div class="ltsuan-cta-note">我們會在兩個工作天內回覆您</div>
+        </div>
       </div>
     </section>
 
@@ -180,7 +278,41 @@ const capabilities = [
 
 <script>
   import '../../scripts/reveal';
+
+  const tracker = document.querySelector<HTMLElement>('[data-process-tracker]');
+  const fill = document.querySelector<HTMLElement>('[data-process-fill]');
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.ltsuan-process-btn'));
+  const detailId = document.querySelector<HTMLElement>('[data-process-detail-id]');
+  const detailEn = document.querySelector<HTMLElement>('[data-process-detail-en]');
+  const detailDesc = document.querySelector<HTMLElement>('[data-process-detail-desc]');
+  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; desc: string }>;
+
+  function setStep(index: number) {
+    const step = steps[index];
+    if (!step || !tracker || !fill) return;
+    fill.style.width = `${((index + 1) / steps.length) * 100}%`;
+    buttons.forEach((btn, i) => {
+      const passed = i <= index;
+      btn.classList.toggle('is-current', i === index);
+      btn.classList.toggle('is-passed', passed);
+      if (i === index) btn.setAttribute('aria-current', 'step');
+      else btn.removeAttribute('aria-current');
+    });
+    if (detailId) detailId.textContent = step.id;
+    if (detailEn) detailEn.textContent = step.en.toUpperCase();
+    if (detailDesc) detailDesc.textContent = step.desc;
+  }
+
+  setStep(0);
+
+  buttons.forEach((btn, i) => {
+    btn.addEventListener('click', () => setStep(i));
+    btn.addEventListener('mouseenter', () => setStep(i));
+    btn.addEventListener('focus', () => setStep(i));
+  });
 </script>
+
+<script type="application/json" id="ltsuan-process-data" set:html={JSON.stringify(processSteps)} />
 
 <style is:global>
   :root {
@@ -198,181 +330,685 @@ const capabilities = [
   .ltsuan-page {
     background: var(--ltsuan-bg);
   }
-  #process {
-    padding: 110px 60px 60px 79px;
+
+  /* Hero */
+  #hero {
+    padding: 110px 60px 56px 79px;
     border-bottom: 1px solid var(--ltsuan-line);
   }
-  .ltsuan-process-block {
-    position: relative;
+  .ltsuan-eyebrow {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: rgba(244, 239, 232, 0.4);
   }
-  .ltsuan-process-copy {
-    margin-bottom: 36px;
-    max-width: 900px;
+  .ltsuan-eyebrow-pill {
+    display: inline-flex;
+    height: 24px;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid var(--ltsuan-line);
+    padding: 0 12px;
+  }
+  .ltsuan-eyebrow-line {
+    display: none;
+    height: 1px;
+    width: 48px;
+    background: var(--ltsuan-line);
+  }
+  .ltsuan-eyebrow-text {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-eyebrow-line,
+    .ltsuan-eyebrow-text {
+      display: inline-block;
+    }
+  }
+  .ltsuan-hero-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-hero-grid {
+      grid-template-columns: 1fr;
+    }
   }
   .ltsuan-h1 {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(40px, 5.4vw, 88px);
-    line-height: 1.02;
-    letter-spacing: -0.01em;
-    margin: 0 0 16px;
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .ltsuan-h1-accent {
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-h1-dot {
+    display: inline-flex;
+    width: 0.34em;
+    height: 0.34em;
+    margin-left: 0.1em;
+    border-radius: 50%;
+    border: 0.035em solid #f4efe8;
+    vertical-align: middle;
   }
   .ltsuan-lead {
+    margin: 32px 0 0;
+    max-width: 36ch;
+    padding-left: 20px;
+    border-left: 1px solid rgba(140, 200, 30, 0.5);
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(20px, 2vw, 28px);
-    line-height: 1.3;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
     color: var(--ltsuan-dim);
-    margin: 0;
-    max-width: 52ch;
   }
-  .ltsuan-badge {
+  .ltsuan-hero-panel {
+    padding-top: 24px;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-hero-panel {
+      padding-top: 0;
+    }
+  }
+  .ltsuan-hero-card {
+    position: relative;
+    aspect-ratio: 4 / 3.4;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 17px;
+    background: #141414;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+  .ltsuan-hero-card-doc {
     position: absolute;
-    top: 0;
+    inset: 8%;
+    border-radius: 3px;
+    background: #0a0a0a;
+    border: 1px solid rgba(244, 239, 232, 0.04);
+  }
+  .ltsuan-hero-card-doc::after {
+    content: '';
+    position: absolute;
+    bottom: 14%;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag {
+    position: absolute;
+    right: 22%;
+    top: 30%;
+    height: 44%;
+    width: 28%;
+    min-width: 90px;
+    border-radius: 7px;
+    background: #1c1c1c;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    padding: 12px;
+  }
+  .ltsuan-hero-card-tag-label {
+    position: absolute;
+    left: 14%;
+    top: 18%;
+    font-size: 7px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .ltsuan-hero-card-tag-rule {
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    top: 34%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag-dot {
+    position: absolute;
+    left: 14%;
+    bottom: 18%;
+    height: 28%;
+    width: 1px;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-hero-card-foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     right: 0;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 1px solid var(--ltsuan-line);
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--ltsuan-text);
-    text-decoration: none;
+    justify-content: space-between;
+    padding: 16px 20px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
   }
-  .ltsuan-hero-media {
-    position: relative;
-    overflow: hidden;
-    height: clamp(280px, 36vw, 460px);
+  .ltsuan-hero-card-foot > span:first-child {
+    color: rgba(244, 239, 232, 0.4);
   }
-  .ltsuan-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 60%;
-    display: block;
-    filter: brightness(0.88) saturate(1.08);
+  .ltsuan-hero-card-badge {
+    border-radius: 999px;
+    background: var(--ltsuan-accent);
+    padding: 4px 10px;
+    color: #0a0a0a;
   }
-  #core-services {
+  .ltsuan-hero-captions {
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+    font-size: 10px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-hero-captions p {
+    margin: 0;
+    max-width: 20ch;
+  }
+
+  /* Why section */
+  #why {
     padding: 56px 60px 56px 79px;
     border-bottom: 1px solid var(--ltsuan-line);
   }
-  .ltsuan-core-grid {
+  .ltsuan-why-grid {
     display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-why-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-stat-row {
+    display: flex;
+    align-items: flex-start;
     gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
-  .ltsuan-core-card {
+  .ltsuan-stat-num {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(64px, 8vw, 96px);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+    min-width: 1.1em;
+    color: #ffffff;
+  }
+  .ltsuan-stat-meta {
+    padding-top: 12px;
+  }
+  .ltsuan-stat-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+  }
+  .ltsuan-stat-rule {
+    margin-top: 4px;
+    height: 1px;
+    width: 40px;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-stat-sub {
+    margin-top: 12px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .ltsuan-stat-caption {
+    margin: 32px 0 0;
+    max-width: 26ch;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-why-h2 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .ltsuan-pill {
+    display: inline-block;
+    border-radius: 999px;
+    border: 1px solid var(--ltsuan-accent);
+    color: var(--ltsuan-accent);
+    padding: 2px 12px;
+    font-size: 0.9em;
+  }
+  .ltsuan-why-highlight {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(142, 195, 31, 0.9);
+  }
+  .ltsuan-why-cols {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+  }
+  @media (max-width: 720px) {
+    .ltsuan-why-cols {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-why-text {
+    text-align: justify;
+  }
+  .ltsuan-why-text p {
+    margin: 0 0 16px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(244, 239, 232, 0.8);
+  }
+  .ltsuan-why-text p:last-child {
+    margin-bottom: 0;
+  }
+  .ltsuan-why-card-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .ltsuan-why-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 11px;
     background: var(--ltsuan-panel);
-    padding: 24px;
+    padding: 20px;
   }
-  .ltsuan-core-img-wrap {
+  .ltsuan-why-card-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-why-card-body {
+    margin: 12px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .ltsuan-why-card-body span {
+    color: rgba(244, 239, 232, 0.5);
+  }
+  .ltsuan-why-tags {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    flex-wrap: wrap;
+  }
+  .ltsuan-why-tags span {
+    border-radius: 999px;
+    border: 1px solid var(--ltsuan-line);
+    padding: 6px 12px;
+  }
+
+  /* Services */
+  #services {
+    padding: 56px 60px 56px 79px;
+    border-bottom: 1px solid var(--ltsuan-line);
+  }
+  .ltsuan-section-stat {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ltsuan-section-stat .ltsuan-stat-num {
+    font-size: clamp(64px, 8vw, 96px);
+  }
+  .ltsuan-services-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1024px) {
+    .ltsuan-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .ltsuan-services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-service-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    background: var(--ltsuan-panel);
+    padding: 28px;
+  }
+  .ltsn-panel {
     position: relative;
-    height: 140px;
+    margin: -28px -28px 24px;
+    height: 150px;
     overflow: hidden;
-    margin-bottom: 16px;
+    background: #0a0e1a;
+    filter: brightness(0.85);
+    transition: filter 0.35s ease;
   }
-  .ltsuan-core-img {
+  .ltsuan-service-card:hover .ltsn-panel {
+    filter: brightness(1.2);
+  }
+  .ltsuan-service-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    filter: brightness(0.85) saturate(1.05);
+    object-position: center 30%;
   }
-  .ltsuan-core-title {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 400;
+  .ltsuan-service-img-en {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-service-img-mark {
+    position: absolute;
+    bottom: 10px;
+    right: 14px;
     font-size: 17px;
-    margin: 0 0 8px;
+    color: rgba(244, 239, 232, 0.65);
   }
-  .ltsuan-core-headline {
+  .ltsuan-service-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .ltsuan-service-n {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 20px;
     color: var(--ltsuan-accent);
-    margin: 0 0 10px;
   }
-  .ltsuan-core-desc {
+  .ltsuan-service-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(244, 239, 232, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  .ltsuan-service-card:hover .ltsuan-service-dot {
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-service-zh {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 13px;
-    line-height: 1.65;
-    color: rgba(244, 239, 232, 0.6);
+    font-weight: 400;
+    font-size: 18px;
     margin: 0;
   }
+  .ltsuan-service-en {
+    margin-top: 4px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-service-desc {
+    margin: 20px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(244, 239, 232, 0.7);
+  }
+  .ltsuan-service-foot {
+    margin-top: auto;
+    padding-top: 32px;
+  }
+  .ltsuan-service-rule {
+    height: 1px;
+    width: 100%;
+    background: rgba(244, 239, 232, 0.06);
+    transition: background-color 0.3s ease;
+  }
+  .ltsuan-service-card:hover .ltsuan-service-rule {
+    background: rgba(142, 195, 31, 0.2);
+  }
+  .ltsuan-service-headline {
+    margin: 12px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ltsuan-accent);
+  }
+
+  /* Process */
   #process-steps {
     padding: 56px 60px 56px 79px;
     border-bottom: 1px solid var(--ltsuan-line);
   }
+  .ltsuan-process-heading {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 16px;
+  }
   .ltsuan-process-h2 {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    font-size: clamp(24px, 2.6vw, 32px);
-    margin: 0 0 40px;
-    max-width: 44ch;
+    font-weight: 400;
+    font-size: clamp(28px, 3vw, 32px);
+    margin: 0;
   }
-  .ltsuan-process-grid {
-    display: grid;
-    gap: 24px;
+  .ltsuan-process-sub {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-process-tracker {
     position: relative;
-    grid-template-columns: repeat(5, 1fr);
+    display: none;
   }
-  @media (max-width: 900px) {
-    .ltsuan-process-grid {
-      grid-template-columns: repeat(2, 1fr);
+  @media (min-width: 768px) {
+    .ltsuan-process-tracker {
+      display: block;
     }
   }
-  @media (max-width: 560px) {
-    .ltsuan-process-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  @media (max-width: 640px) {
-    .ltsuan-badge {
-      position: static !important;
-      margin: 20px 0 0 !important;
-    }
-  }
-  .ltsuan-process-line {
+  .ltsuan-process-line-track {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
+    top: 11px;
     height: 1px;
-    background: var(--ltsuan-blueprint);
-    opacity: 0.3;
+    background: rgba(244, 239, 232, 0.1);
   }
-  .ltsuan-tick {
-    width: 1px;
-    height: 14px;
-    background: var(--ltsuan-blueprint);
-    opacity: 0.5;
-    margin-bottom: 10px;
+  .ltsuan-process-line-fill {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    height: 1px;
+    background: var(--ltsuan-accent);
+    width: 20%;
+    transition: width 0.7s ease;
   }
-  .ltsuan-step-num {
+  .ltsuan-process-buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .ltsuan-process-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.1em;
+  }
+  .ltsuan-process-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 239, 232, 0.15);
+    background: #0a0a0a;
+    transition: all 0.3s ease;
+  }
+  .ltsuan-process-btn:hover .ltsuan-process-ring {
+    border-color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-ring {
+    transform: scale(1.1);
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-ring {
+    border-color: var(--ltsuan-accent);
+  }
+  .ltsuan-process-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(244, 239, 232, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-dot {
+    background: var(--ltsuan-accent);
+    box-shadow: 0 0 6px 1px rgba(140, 200, 30, 0.6);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-dot {
+    box-shadow: 0 0 10px 3px rgba(140, 200, 30, 0.9);
+  }
+  .ltsuan-process-btn-zh {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(244, 239, 232, 0.5);
+    transition: color 0.3s ease;
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-btn-zh {
+    color: rgba(244, 239, 232, 0.8);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-btn-zh {
+    color: #f4efe8;
+  }
+  .ltsuan-process-btn-en {
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.35);
+  }
+  .ltsuan-process-detail {
+    display: none;
+    max-width: 720px;
+    margin: 40px auto 0;
+    border-radius: 11px;
+    background: var(--ltsuan-panel);
+    padding: 32px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-process-detail {
+      display: block;
+    }
+  }
+  .ltsuan-process-detail-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ltsuan-process-detail-id {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
     color: var(--ltsuan-accent);
-    margin-bottom: 12px;
   }
-  .ltsuan-step-title {
+  .ltsuan-process-detail-rule {
+    height: 1px;
+    width: 32px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-process-detail-en {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-process-detail-desc {
+    margin: 16px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 400;
     font-size: 17px;
-    margin: 0 0 10px;
+    line-height: 1.7;
   }
-  .ltsuan-step-desc {
+  .ltsuan-process-mobile {
+    position: relative;
+    padding-left: 24px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-process-mobile {
+      display: none;
+    }
+  }
+  .ltsuan-process-mobile-line {
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-process-mobile-item {
+    padding: 12px 0;
+  }
+  .ltsuan-process-mobile-item summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    list-style: none;
+  }
+  .ltsuan-process-mobile-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .ltsuan-process-mobile-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ltsuan-accent);
+    flex-shrink: 0;
+  }
+  .ltsuan-process-mobile-zh {
+    font-size: 14px;
+  }
+  .ltsuan-process-mobile-en {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-process-mobile-item p {
+    margin: 10px 0 0 24px;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 13px;
     line-height: 1.7;
     color: rgba(244, 239, 232, 0.6);
-    margin: 0;
   }
-  #services {
+
+  /* Capabilities */
+  #capabilities {
     padding: 56px 60px 56px 79px;
     background: var(--ltsuan-panel);
     border-bottom: 1px solid var(--ltsuan-line);
@@ -409,53 +1045,179 @@ const capabilities = [
     }
   }
   .ltsuan-cap-card {
-    position: relative;
-    background: var(--ltsuan-panel);
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    background: #141414;
     padding: 24px;
-  }
-  .ltsuan-cap-img-wrap {
-    position: relative;
-    height: 120px;
-    overflow: hidden;
-    margin-bottom: 16px;
-  }
-  .ltsuan-cap-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: filter 0.35s ease;
-    filter: brightness(0.8) saturate(1.1);
-    transform: scale(1.15);
-  }
-  .ltsuan-cap-card:hover .ltsuan-cap-img {
-    filter: brightness(1) saturate(1.15);
   }
   .ltsuan-cap-title {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.3;
-    min-height: calc(1.3em * 2);
-    margin: 0 0 8px;
+    margin: 0;
+  }
+  .ltsuan-cap-en {
+    margin-top: 4px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.4);
   }
   .ltsuan-cap-desc {
+    margin: 20px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 13px;
-    line-height: 1.6;
-    color: rgba(244, 239, 232, 0.55);
-    margin: 0;
+    line-height: 1.8;
+    color: rgba(244, 239, 232, 0.7);
     text-align: left;
   }
+  .ltsuan-cap-foot {
+    margin-top: auto;
+    padding-top: 32px;
+  }
+  .ltsuan-cap-rule {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: rgba(244, 239, 232, 0.06);
+  }
+  .ltsuan-cap-glow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--ltsuan-accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.45s ease;
+  }
+  .ltsuan-cap-card:hover .ltsuan-cap-glow {
+    transform: scaleX(1);
+  }
   .ltsuan-cap-evidence {
-    display: inline-flex;
+    margin-top: 12px;
+    display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 14px;
+    justify-content: space-between;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.06em;
+    font-size: 11px;
+    letter-spacing: 0.14em;
     color: var(--ltsuan-accent);
     text-decoration: none;
+  }
+  .ltsuan-cap-arrow {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+  .ltsuan-cap-card:hover .ltsuan-cap-arrow {
+    opacity: 1;
+  }
+
+  /* CTA */
+  #contact {
+    padding: 72px 60px 96px 79px;
+  }
+  .ltsuan-cta {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ltsuan-cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid var(--ltsuan-line);
+    padding: 4px 12px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-h2 {
+    margin: 32px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .ltsuan-cta-copy {
+    max-width: 42ch;
+    margin: 24px auto 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-nowrap {
+    white-space: nowrap;
+  }
+  .ltsuan-cta-actions {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-cta-actions {
+      flex-direction: row;
+    }
+  }
+  .ltsuan-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 999px;
+    background: var(--ltsuan-accent);
+    padding: 14px 28px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: background-color 0.2s ease, gap 0.2s ease;
+  }
+  .ltsuan-cta-btn:hover {
+    background: var(--ltsuan-accent-hover);
+    gap: 16px;
+  }
+  .ltsuan-cta-btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-note {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+
+  @media (max-width: 719px) {
+    #hero,
+    #why,
+    #services,
+    #process-steps,
+    #capabilities,
+    #contact {
+      padding-left: 35px;
+      padding-right: 24px;
+    }
   }
 </style>
