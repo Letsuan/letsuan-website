@@ -254,7 +254,7 @@ const capabilities = [
     <section id="contact">
       <div class="ltsuan-cta">
         <div class="ltsuan-cta-pill"><span class="ltsuan-cta-dot"></span>NEW PROJECTS FOR 2026 — OPEN</div>
-        <h2 class="ltsuan-cta-h2">來聊聊你的<br />下一個展覽。</h2>
+        <h2 class="ltsuan-cta-h2">來聊聊您的<br />下一個想法</h2>
         <p class="ltsuan-cta-copy">無論展覽形式為何，我們的思考起點不變：如何引導觀眾走入敘事，並讓體驗成為被帶走的記憶</p>
         <div class="ltsuan-cta-actions">
           <a href="https://letsuan.com/zh-TW/contact" class="ltsuan-cta-btn">
@@ -351,6 +351,17 @@ const capabilities = [
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
+
+  function syncStatRuleWidths() {
+    document.querySelectorAll<HTMLElement>('.ltsuan-stat-meta').forEach((meta) => {
+      const label = meta.querySelector<HTMLElement>('.ltsuan-stat-label');
+      const rule = meta.querySelector<HTMLElement>('.ltsuan-stat-rule');
+      if (!label || !rule) return;
+      rule.style.width = `${label.getBoundingClientRect().width}px`;
+    });
+  }
+  syncStatRuleWidths();
+  window.addEventListener('resize', syncStatRuleWidths);
 </script>
 
 <script type="application/json" id="ltsuan-process-data" set:html={JSON.stringify(processSteps)} />
@@ -954,7 +965,7 @@ const capabilities = [
   .ltsuan-process-detail-head {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
   }
   .ltsuan-process-detail-id {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -964,7 +975,7 @@ const capabilities = [
   }
   .ltsuan-process-detail-rule {
     height: 1px;
-    width: 32px;
+    width: 16px;
     background: rgba(244, 239, 232, 0.1);
   }
   .ltsuan-process-detail-en {

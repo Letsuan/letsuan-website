@@ -88,7 +88,7 @@ const capabilities = [
     <section id="hero">
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
-          <h1 class="ltsuan-h1" data-hero-h1>Giving Space<br /><span class="ltsuan-h1-accent">Concrete Form</span><span class="ltsuan-h1-dot"></span></h1>
+          <h1 class="ltsuan-h1" data-hero-h1>Giving Space<br /><span class="ltsuan-h1-accent">Concrete Form</span></h1>
           <p class="ltsuan-lead" data-hero-lead>From the first site survey to final handover, one team stays accountable for every stage: feasibility, design, fabrication, and installation. That keeps complex work easy to follow, so the experience unfolds naturally.</p>
         </div>
         <div class="ltsuan-hero-panel">
@@ -347,6 +347,17 @@ const capabilities = [
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
+
+  function syncStatRuleWidths() {
+    document.querySelectorAll<HTMLElement>('.ltsuan-stat-meta').forEach((meta) => {
+      const label = meta.querySelector<HTMLElement>('.ltsuan-stat-label');
+      const rule = meta.querySelector<HTMLElement>('.ltsuan-stat-rule');
+      if (!label || !rule) return;
+      rule.style.width = `${label.getBoundingClientRect().width}px`;
+    });
+  }
+  syncStatRuleWidths();
+  window.addEventListener('resize', syncStatRuleWidths);
 </script>
 
 <script type="application/json" id="ltsuan-process-data" set:html={JSON.stringify(processSteps)} />
@@ -410,15 +421,6 @@ const capabilities = [
   }
   .ltsuan-h1-accent {
     color: var(--ltsuan-accent);
-  }
-  .ltsuan-h1-dot {
-    display: inline-flex;
-    width: 0.34em;
-    height: 0.34em;
-    margin-left: 0.1em;
-    border-radius: 50%;
-    border: 0.035em solid #f4efe8;
-    vertical-align: middle;
   }
   .ltsuan-lead {
     box-sizing: border-box;
@@ -937,7 +939,7 @@ const capabilities = [
   .ltsuan-process-detail-head {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
   }
   .ltsuan-process-detail-id {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -947,7 +949,7 @@ const capabilities = [
   }
   .ltsuan-process-detail-rule {
     height: 1px;
-    width: 32px;
+    width: 16px;
     background: rgba(244, 239, 232, 0.1);
   }
   .ltsuan-process-detail-en {
