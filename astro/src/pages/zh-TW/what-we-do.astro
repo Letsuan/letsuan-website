@@ -290,7 +290,7 @@ const capabilities = [
   function setStep(index: number) {
     const step = steps[index];
     if (!step || !tracker || !fill) return;
-    fill.style.width = `${((index + 1) / steps.length) * 100}%`;
+    fill.style.transform = `scaleX(${(index + 1) / steps.length})`;
     buttons.forEach((btn, i) => {
       const passed = i <= index;
       btn.classList.toggle('is-current', i === index);
@@ -840,9 +840,11 @@ const capabilities = [
     left: 0;
     top: 11px;
     height: 1px;
+    width: 100%;
     background: var(--ltsuan-accent);
-    width: 20%;
-    transition: width 0.7s ease;
+    transform-origin: left;
+    transform: scaleX(0.2);
+    transition: transform 0.7s ease;
   }
   .ltsuan-process-buttons {
     position: relative;
