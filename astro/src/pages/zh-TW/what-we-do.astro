@@ -282,6 +282,7 @@ const capabilities = [
             </a>
           </div>
           <div class="ltsuan-cta-cityline">臺中事務所、臺北製作所　｜　+886 4 2321 5956</div>
+          <div class="ltsuan-cta-address">403020 臺中市西區華美西街一段85號6樓之1　｜　111069 臺北市士林區延平北路六段62號3樓</div>
           <div class="ltsuan-cta-legal">
             <span>© 2026 麗荃室內裝修有限公司 版權所有。</span>
             <span>室內裝修從業者登記字號 40E2007328</span>
@@ -339,6 +340,19 @@ const capabilities = [
   }
   syncLeadWidth();
   window.addEventListener('resize', syncLeadWidth);
+
+  const detailBox = document.querySelector<HTMLElement>('.ltsuan-process-detail');
+  function syncDetailDescWidth() {
+    if (!detailDesc || !detailBox || buttons.length < 4) return;
+    const boxRect = detailBox.getBoundingClientRect();
+    const boxPaddingLeft = parseFloat(getComputedStyle(detailBox).paddingLeft);
+    const startRect = buttons[1].getBoundingClientRect();
+    const endRect = buttons[3].getBoundingClientRect();
+    detailDesc.style.marginLeft = `${startRect.left - boxRect.left - boxPaddingLeft}px`;
+    detailDesc.style.width = `${endRect.right - startRect.left}px`;
+  }
+  syncDetailDescWidth();
+  window.addEventListener('resize', syncDetailDescWidth);
 </script>
 
 <script type="application/json" id="ltsuan-process-data" set:html={JSON.stringify(processSteps)} />
@@ -1292,6 +1306,14 @@ const capabilities = [
     font-size: 11px;
     letter-spacing: 0.1em;
     color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-address {
+    margin-top: 8px;
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(244, 239, 232, 0.3);
   }
   .ltsuan-cta-legal {
     margin-top: 16px;
