@@ -101,7 +101,7 @@ import { avifPath } from '../utils/images';
     object-position: center 55%;
     display: block;
     transform: scale(1.16);
-    transition: transform 3s ease-out;
+    transition: transform 3s ease-out, object-position 0.3s ease;
   }
   .pf-hero-layer.is-active .pf-hero-img {
     transform: scale(1);
@@ -279,7 +279,16 @@ import { avifPath } from '../utils/images';
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     border-top: 1px solid rgba(244, 239, 232, 0.1);
+  }
+  @media (max-width: 640px) {
+    .pf-hero-bar {
+      padding: 0 24px;
+    }
+    .pf-hero-progress-track {
+      width: 60px;
+    }
   }
   .pf-hero-auto-group {
     display: flex;
@@ -355,6 +364,11 @@ import { avifPath } from '../utils/images';
     background: var(--ltsuan-text);
     transform-origin: left;
     transition: transform 0.5s ease;
+  }
+  @media (max-width: 720px) {
+    .pf-hero-layer[data-idx="0"] .pf-hero-img {
+      object-position: 75% 55%;
+    }
   }
 </style>
 

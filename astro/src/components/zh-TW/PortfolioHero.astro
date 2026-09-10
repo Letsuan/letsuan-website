@@ -280,7 +280,16 @@ import { breakZhTitle } from '../../utils/text';
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     border-top: 1px solid rgba(244, 239, 232, 0.1);
+  }
+  @media (max-width: 640px) {
+    .pf-hero-bar {
+      padding: 0 24px;
+    }
+    .pf-hero-progress-track {
+      width: 60px;
+    }
   }
   .pf-hero-auto-group {
     display: flex;
@@ -356,6 +365,11 @@ import { breakZhTitle } from '../../utils/text';
     background: var(--ltsuan-text);
     transform-origin: left;
     transition: transform 0.5s ease;
+  }
+  @media (max-width: 720px) {
+    .pf-hero-layer[data-idx="0"] .pf-hero-img {
+      object-position: 75% 55%;
+    }
   }
 </style>
 
