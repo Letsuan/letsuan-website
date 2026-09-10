@@ -171,7 +171,7 @@ const shareUrl = encodeURIComponent(canonical);
 </Layout>
 
 <script>
-  const MOBILE_QUERY = window.matchMedia('(max-width: 860px)');
+  const MOBILE_QUERY = window.matchMedia('(max-width: 1024px)');
 
   function distribute<T>(items: T[], groupCount: number): T[][] {
     const groups: T[][] = [];
@@ -248,7 +248,7 @@ const shareUrl = encodeURIComponent(canonical);
   body a:hover {
     color: #555;
   }
-  @media (max-width: 860px) {
+  @media (max-width: 1024px) {
     .ltsuan-mixed-strip {
       display: flex;
       flex-direction: column;
@@ -592,7 +592,7 @@ const shareUrl = encodeURIComponent(canonical);
     user-select: none;
     letter-spacing: 0.05em;
   }
-  @media (max-width: 860px) {
+  @media (max-width: 1024px) {
     .ltsuan-detail-grid {
       grid-template-columns: 1fr !important;
       padding: 0 !important;
