@@ -288,11 +288,21 @@ const email = 'info@letsuan.com';
     margin: 0;
     white-space: nowrap;
   }
+  @media (max-width: 900px) {
+    .ltsuan-lead {
+      white-space: normal;
+    }
+  }
   #contact-body {
     padding: 90px 0 160px;
     display: flex;
     gap: 64px;
     flex-wrap: wrap;
+  }
+  @media (max-width: 860px) {
+    #contact-body {
+      flex-direction: column;
+    }
   }
   .ltsuan-contact-col {
     flex: 1;
