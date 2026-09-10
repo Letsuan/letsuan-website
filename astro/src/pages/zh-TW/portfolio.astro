@@ -1,7 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/zh-TW/Nav.astro';
-import Footer from '../../components/zh-TW/Footer.astro';
 import PortfolioHero from '../../components/zh-TW/PortfolioHero.astro';
 import ProjectGrid from '../../components/zh-TW/ProjectGrid.astro';
 import { organizationJsonLd } from '../../data/organization';
@@ -53,8 +52,41 @@ const pageJsonLd = {
 
     <ProjectGrid />
 
-    <div class="pf-spacer"></div>
-    <Footer background="var(--ltsuan-bg)" />
+    <section id="contact">
+      <div class="ltsuan-cta">
+        <div class="ltsuan-cta-pill"><span class="ltsuan-cta-dot"></span>NEW PROJECTS FOR 2026 — OPEN</div>
+        <h2 class="ltsuan-cta-h2">來聊聊您的<br />下一個想法</h2>
+        <p class="ltsuan-cta-copy">無論展覽形式為何，我們的思考起點不變：如何引導觀眾走入敘事，並讓體驗成為被帶走的記憶</p>
+        <div class="ltsuan-cta-actions">
+          <a href="https://letsuan.com/zh-TW/contact" class="ltsuan-cta-btn">
+            <span>info@letsuan.com</span>
+            <span class="ltsuan-cta-btn-arrow">↗</span>
+          </a>
+          <div class="ltsuan-cta-note">我們會在兩個工作天內回覆您</div>
+        </div>
+
+        <div class="ltsuan-cta-footer">
+          <div class="ltsuan-cta-social">
+            <a href="https://www.facebook.com/LETSUANDESIGN" target="_blank" rel="noopener" aria-label="Facebook" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.pinterest.com/Letsuan_Design/" target="_blank" rel="noopener" aria-label="Pinterest" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.332 1.361-.052.219-.173.265-.4.16-1.492-.694-2.424-2.874-2.424-4.625 0-3.767 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.897 0 4.116-2.595 7.428-6.199 7.428-1.211 0-2.349-.629-2.738-1.373 0 0-.599 2.282-.744 2.84-.269 1.037-.997 2.336-1.484 3.129 1.118.346 2.303.53 3.532.53 6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/letsuan-design/" target="_blank" rel="noopener" aria-label="LinkedIn" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454c.98 0 1.775-.773 1.775-1.729V1.729C24 .774 23.205 0 22.225 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.433c-1.144 0-2.067-.926-2.067-2.065 0-1.138.923-2.065 2.067-2.065 1.14 0 2.064.927 2.064 2.065 0 1.139-.923 2.065-2.064 2.065zM20.452 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.137 1.447-2.137 2.941v5.665H9.359V9h3.412v1.561h.049c.475-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286z"/></svg>
+            </a>
+          </div>
+          <div class="ltsuan-cta-cityline">臺中事務所、臺北製作所　｜　+886 4 2321 5956</div>
+          <div class="ltsuan-cta-address">403020 臺中市西區華美西街一段85號6樓之1　｜　111069 臺北市士林區延平北路六段62號3樓</div>
+          <div class="ltsuan-cta-legal">
+            <span>© 2026 麗荃室內裝修有限公司 版權所有。</span>
+            <span>室內裝修從業者登記字號 40E2007328</span>
+            <a href="./privacy-policy">隱私權政策</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>
 
@@ -63,10 +95,7 @@ const pageJsonLd = {
     background: var(--ltsuan-bg);
   }
   :global(:root) {
-    --ltsuan-bg: #0b1526;
-    --ltsuan-accent: #8ec31f;
-    --ltsuan-accent-hover: #a8dc4a;
-    --ltsuan-blueprint: #c9d6e8;
+    --ltsuan-blueprint: rgba(244, 239, 232, 0.3);
   }
   #intro {
     padding: 170px 56px 63px;
@@ -97,7 +126,157 @@ const pageJsonLd = {
     max-width: 600px;
     margin: 0;
   }
-  .pf-spacer {
-    height: 64px;
+  /* CTA (identical to what-we-do) */
+  #contact {
+    border-top: 1px solid rgba(244, 239, 232, 0.06);
+    padding: 64px 56px;
+  }
+  @media (min-width: 768px) {
+    #contact {
+      padding: 112px 56px;
+    }
+  }
+  .ltsuan-cta {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ltsuan-cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 239, 232, 0.06);
+    padding: 4px 12px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-h2 {
+    margin: 32px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .ltsuan-cta-copy {
+    max-width: 42ch;
+    margin: 24px auto 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-cta-actions {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-cta-actions {
+      flex-direction: row;
+    }
+  }
+  .ltsuan-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 999px;
+    background: var(--ltsuan-accent);
+    padding: 14px 28px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: background-color 0.2s ease, gap 0.2s ease;
+  }
+  .ltsuan-cta-btn:hover {
+    background: var(--ltsuan-accent-hover);
+    gap: 16px;
+  }
+  .ltsuan-cta-btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-note {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-cta-footer {
+    margin-top: 64px;
+    border-top: 1px solid rgba(244, 239, 232, 0.06);
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .ltsuan-cta-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .ltsuan-cta-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 239, 232, 0.2);
+  }
+  .ltsuan-cta-cityline {
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-address {
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-cta-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 8px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(244, 239, 232, 0.25);
+  }
+  .ltsuan-cta-legal a {
+    color: rgba(244, 239, 232, 0.25);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .ltsuan-cta-legal a:hover {
+    color: rgba(244, 239, 232, 0.6);
   }
 </style>
