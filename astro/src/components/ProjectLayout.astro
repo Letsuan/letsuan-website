@@ -170,6 +170,66 @@ const shareUrl = encodeURIComponent(canonical);
   <div class="ltsuan-detail-watermark">LT260807A</div>
 </Layout>
 
+<script>
+  const MOBILE_QUERY = window.matchMedia('(max-width: 860px)');
+
+  function distribute<T>(items: T[], groupCount: number): T[][] {
+    const groups: T[][] = [];
+    let idx = 0;
+    for (let i = 0; i < groupCount; i++) {
+      const remaining = groupCount - i;
+      const take = Math.ceil((items.length - idx) / remaining);
+      groups.push(items.slice(idx, idx + take));
+      idx += take;
+    }
+    return groups;
+  }
+
+  function setupMixedGallery() {
+    const body = document.querySelector<HTMLElement>('.ltsuan-detail-body');
+    const rightCol = document.querySelector<HTMLElement>('.ltsuan-detail-right');
+    if (!body || !rightCol) return;
+
+    const originalWraps = Array.from(rightCol.querySelectorAll<HTMLElement>('.ltsuan-detail-img-wrap'));
+    if (originalWraps.length === 0) return;
+
+    function restore() {
+      document.querySelectorAll<HTMLElement>('.ltsuan-mixed-strip').forEach((strip) => strip.remove());
+      originalWraps.forEach((w) => rightCol!.appendChild(w));
+    }
+
+    function apply() {
+      restore();
+      const h2s = Array.from(body!.querySelectorAll<HTMLElement>('h2'));
+      if (h2s.length === 0) return;
+      const groups = distribute(originalWraps, h2s.length);
+
+      function makeStrip(group: HTMLElement[]): HTMLElement | null {
+        if (group.length === 0) return null;
+        const strip = document.createElement('div');
+        strip.className = 'ltsuan-mixed-strip';
+        group.forEach((w) => strip.appendChild(w));
+        return strip;
+      }
+
+      h2s.forEach((h2, i) => {
+        const strip = makeStrip(groups[i]);
+        if (strip) h2.before(strip);
+      });
+    }
+
+    function sync() {
+      if (MOBILE_QUERY.matches) apply();
+      else restore();
+    }
+
+    sync();
+    MOBILE_QUERY.addEventListener('change', sync);
+  }
+
+  setupMixedGallery();
+</script>
+
 <style is:global>
   :root {
     --ltsuan-detail-bg: #fafaf9;
@@ -187,6 +247,17 @@ const shareUrl = encodeURIComponent(canonical);
   }
   body a:hover {
     color: #555;
+  }
+  @media (max-width: 860px) {
+    .ltsuan-mixed-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 28px 0;
+    }
+    .ltsuan-mixed-strip .ltsuan-detail-img-wrap {
+      width: 100%;
+    }
   }
 </style>
 
@@ -539,11 +610,52 @@ const shareUrl = encodeURIComponent(canonical);
       position: static !important;
       height: auto !important;
       border-right: none !important;
-      border-bottom: 1px solid var(--ltsuan-detail-border);
       padding: 32px 24px !important;
+      order: 2;
     }
     .ltsuan-detail-right {
-      padding: 32px 24px !important;
+      order: 1;
+      padding: 20px 0 20px 24px !important;
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 20px !important;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      border-bottom: 1px solid var(--ltsuan-detail-border);
+    }
+    .ltsuan-detail-img-wrap {
+      flex: 0 0 auto;
+      width: 82vw;
+      aspect-ratio: 4 / 3;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
+    .ltsuan-detail-img-wrap .ltsuan-detail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ltsuan-detail-img-wrap-plain {
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0efec;
+    }
+    .ltsuan-detail-img-wrap-plain .ltsuan-detail-img {
+      width: auto;
+      height: auto;
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+    }
+    .ltsuan-detail-right::after {
+      content: '';
+      flex: 0 0 24px;
+    }
+    .ltsuan-detail-right:empty {
+      display: none !important;
+      border-bottom: none;
     }
   }
 </style>
