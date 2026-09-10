@@ -352,6 +352,20 @@ const faqJsonLd = {
   syncStatRuleWidths();
   window.addEventListener('resize', syncStatRuleWidths);
 
+  function syncEsgHeadingAlign() {
+    const label = document.querySelector<HTMLElement>('#record .ltsuan-stat-label');
+    const h2 = document.querySelector<HTMLElement>('.ltsuan-esg-h2');
+    if (!label || !h2) return;
+    if (window.innerWidth <= 900) {
+      h2.style.width = '';
+      return;
+    }
+    const width = label.getBoundingClientRect().right - h2.getBoundingClientRect().left;
+    if (width > 0) h2.style.width = `${width}px`;
+  }
+  syncEsgHeadingAlign();
+  window.addEventListener('resize', syncEsgHeadingAlign);
+
   // ESG process-tracker (mirrors the What We Do "流程" section)
   function splitParagraphClient(text: string) {
     const m = text.match(/^(第[一二三]|此外)([，,])/);
