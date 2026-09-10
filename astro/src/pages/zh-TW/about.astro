@@ -1,8 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/zh-TW/Nav.astro';
-import Footer from '../../components/zh-TW/Footer.astro';
-import CornerFrame from '../../components/CornerFrame.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { avifPath } from '../../utils/images';
 
@@ -15,6 +13,80 @@ const alternateHrefs = [
   { hreflang: 'x-default', href: 'https://letsuan.com/about' },
 ];
 const ogImage = 'https://letsuan.com/assets/logo.png';
+
+const stats = [
+  { value: '42+', label: '已交付專案', desc: '博物館、政府機關與遍及全臺的國際品牌。' },
+  { value: '2014', label: '公司成立', desc: '十年以敘事為核心的設計經驗，根植臺中與臺北。' },
+  { value: 'TW', label: '臺中・臺北', desc: '立足臺灣，服務遍及全臺。' },
+  { value: '17,000+ m²', label: '已交付空間面積', desc: '在自有工地管理下按部就班完工，專業工項皆直接監督。' },
+];
+
+function splitParagraph(text: string) {
+  const m = text.match(/^(第[一二三]|此外)([，,])/);
+  if (!m) return { marker: null as string | null, rest: text };
+  return { marker: m[1], rest: text.slice(m[0].length) };
+}
+
+const esgItems = [
+  {
+    num: '01',
+    en: 'ENVIRONMENT',
+    zh: '環境',
+    enLabel: 'Environmental',
+    title: '為場域的長期健康而施工',
+    labels: { 1: '零損傷結構系統', 2: '綠建材與節能工法', 3: '資源再利用與減廢' } as Record<number, string>,
+    paragraphs: [
+      '我們接手的許多場域，本身就是資產。特別是古蹟、歷史建築與老屋，其構造一旦被破壞，就無法回復。因此，比起施工的方便性，我們更優先考量基地與構造物的長期健康。',
+      '第一，我們以「零損傷結構系統」為原則。所有設計都從現況測繪與構造盤點開始，透過可逆式工法、非破壞性固定、分散荷重與分區保護，盡可能避免對既有梁柱、磚牆、地坪與歷史痕跡的不可逆傷害。每一處固定點，都必須能被完整復原。',
+      '第二，在建材與工法上，我們以現行法規要求的 60% 綠建材使用率為最低門檻，並在此之上持續提升配比。我們優先選用低甲醛、低揮發性有機化合物、可回收再生，以及符合台灣在地生產的健康建材。同時導入節能工法，例如高效率 LED 照明與迴路控制、變頻空調與循環對策、自然採光與通風路徑的重新整理、隔熱與氣密的細節處理，這些節能工法落實在日常使用中，讓住戶與使用者實際感受得到差異。',
+      '第三，我們實踐資源的再利用與減廢。從舊料的評估再利用、廢料的分類回收，到施工過程中的粉塵與噪音控制，我們在環境責任與業主成本之間，計算的是生命週期成本，而不是一次性的材料差價，目標是取得可被長期維持的平衡。',
+    ],
+  },
+  {
+    num: '02',
+    en: 'SOCIAL',
+    zh: '社會',
+    enLabel: 'Social',
+    title: '安全標準，沒有內外之分',
+    labels: { 3: '工程保險與保障' } as Record<number, string>,
+    paragraphs: [
+      '一個工地是否永續，要看最弱勢的人是否被保護。',
+      '我們對現場人員的職業安全與協力廠商的勞動條件，負起同等責任。身為持照的室內裝修業者，我們要求協力廠商遵守的法規與安全標準，與我們對自身團隊的要求完全一致，沒有內外之分。',
+      '這份標準落實在每日的執行中，包含每日勤前教育與工具箱會議、墜落與感電防護、粉塵與噪音防護、動火與高空作業的申請與監護、承攬商的教育訓練與資格查核。我們同步要求合理的工時、完整的勞健保與勞退、零欠薪與零非法聘僱。這份承諾，延伸到工地上的每一位工作者。',
+      '此外，所有大型專案皆額外投保工程安全險，例如：營造綜合保險、雇主意外責任險與第三人意外責任險等等...。這麼做的用意，是讓業主、使用者與現場團隊在意外發生前，就已經處於受完整保障的狀態。',
+    ],
+  },
+  {
+    num: '03',
+    en: 'GOVERNANCE',
+    zh: '治理',
+    enLabel: 'Governance',
+    title: '讓合規，成為可被追蹤的流程',
+    labels: { 1: '資訊公開透明', 2: '專業代辦合規', 3: '流程完整可追蹤' } as Record<number, string>,
+    paragraphs: [
+      '裝修產業最常見的糾紛，都來自於事前沒說清楚。我們選擇把責任在事前就說清楚。',
+      '第一，資訊公開透明。我們主動公開室內裝修業登記字號、公司登記資訊與專業技術人員資格，業主隨時可查驗。',
+      '第二，專業代辦合規。我們為業主代辦專業裝修許可申請與審查送件，從圖說製作、結構安全、消防避難、無障礙與分間牆檢討，到送件與現場查驗，全程由我們負責。讓設計的創意，始終在合法的框架內被實現。',
+      '第三，流程完整可追蹤。從申請到查驗，所有合規程序、材料證明、施工紀錄、檢驗照片與保固文件，皆完整留存並提供雲端備份，清楚可追蹤。合約、追加減與保固範圍，皆以書面載明，所有承諾都留下可被檢驗的紀錄。',
+    ],
+  },
+];
+
+const esgStepsData = esgItems.map((item) => ({
+  id: item.num,
+  zh: item.zh,
+  en: item.enLabel,
+  title: item.title,
+  labels: item.labels,
+  paragraphs: item.paragraphs,
+}));
+
+const faqs = [
+  { q: '麗荃室內裝修專精哪些領域？', a: '麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，專精博物館等級的展覽、商業室內空間、視覺識別系統與統包工程。' },
+  { q: '麗荃室內裝修是什麼時候成立的？', a: '公司成立於 2014 年，已為博物館、政府機關與國際品牌完成超過 42 件專案。' },
+  { q: '麗荃室內裝修是否同時負責設計與施工？', a: '是的，專案從設計到施工不會轉手，同一團隊從草圖階段到完工安裝都親自參與。' },
+  { q: '麗荃室內裝修是合法登記的室內裝修業者嗎？', a: '是的，我們持有室內裝修從業者登記字號 40E2007328，並代客戶處理專業裝修許可申請與審查送件。' },
+];
 
 const pageJsonLd = {
   '@context': 'https://schema.org',
@@ -38,13 +110,6 @@ const pageJsonLd = {
   ],
 };
 
-const faqs = [
-  { q: '麗荃室內裝修專精哪些領域？', a: '麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，專精博物館等級的展覽、商業室內空間、視覺識別系統與統包工程。' },
-  { q: '麗荃室內裝修是什麼時候成立的？', a: '工作室成立於 2014 年，已為博物館、政府機關與國際品牌完成超過 42 件專案。' },
-  { q: '麗荃室內裝修是否同時負責設計與施工？', a: '是的，專案從設計到施工不會轉手，同一團隊從第一張草圖到最終安裝全程參與。' },
-  { q: '麗荃室內裝修是合法登記的室內裝修業者嗎？', a: '是的，我們持有室內裝修從業者登記字號 40E2007328，並代客戶處理專業裝修許可申請與審查送件。' },
-];
-
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -54,239 +119,912 @@ const faqJsonLd = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
-
-const stats = [
-  { value: '42+', label: '已交付專案', desc: '博物館、政府機關與遍及全臺的國際品牌。' },
-  { value: '2014', label: '工作室成立', desc: '十年以敘事為核心的設計經驗，根植臺中與臺北。' },
-  { value: 'TW', label: '臺中・臺北', desc: '立足臺灣，服務遍及全臺。' },
-  { value: '17,000+ m²', label: '已交付空間面積', desc: '在自有工地管理下按部就班完工，專業工項皆直接監督。' },
-];
-
-const services = [
-  { title: '策展服務', desc: '一場好的展覽，不只是把物件擺出來而已。我們從概念發展、內容研究到敘事腳本，為每一檔展覽打好策展框架，讓博物館或品牌在開幕當天就有一場真正站得住腳的展覽。', img: '/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: 'R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall', evidenceHref: './project-air-force-academy', evidenceLabel: '九十年的天空，值得被好好述說' },
-  { title: '展覽設計', desc: '一場展覽成不成功，取決於它如何引導訪客走過整個空間。我們把敘事、燈光與互動裝置當作同一套系統來設計，而不是各自獨立的廠商拼湊而成。', img: '/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', imgPosition: 'center 40%', alt: "Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting", evidenceHref: './project-cat-art', evidenceLabel: '貓美術館' },
-  { title: '室內設計', desc: '商業與機構空間每天都有真實的人在裡面移動、使用，這正是我們設計時的出發點。身為持照室內裝修業者，我們會先規劃動線與空間配置，再處理裝修與材質。', img: '/images/securities-company-office-design-02-letsuan-design.jpg', alt: 'Securities Company Office waiting area', evidenceHref: './project-securities-office', evidenceLabel: '證券公司辦公室' },
-  { title: '視覺設計', desc: '品牌形象要能貫徹始終，從入口招牌到第六面指標，都得維持一致的樣貌。我們把識別系統、標示與環境圖像整合成同一套設計。', img: '/images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: 'The Westernmost Point of Taiwan — Westernmost Point of Taiwan entrance', evidenceHref: './project-westernmost-point', evidenceLabel: '臺灣極西點' },
-  { title: '工程建造', desc: '設計與工程一旦分屬不同公司，出狀況時往往互踢皮球。我們維持同一個團隊：自有的製作工廠與工地管理直接負責施作，專業工班則在我們的監督下進場作業。', img: '/images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg', alt: 'Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls', evidenceHref: './project-engineering-construction', evidenceLabel: '防災教育館' },
-];
 ---
 
 <Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="about" enHref="/about" />
 
-    <div class="ltsuan-about-main">
-      <section id="hero">
-        <div class="ltsuan-reveal ltsuan-hero-block">
-          <h1 class="ltsuan-hero-h1">空間與故事，<br />出自同一雙手。</h1>
-          <p class="ltsuan-hero-sub">位於臺灣臺中與臺北的室內、展覽與視覺設計工作室——自 2014 年起服務博物館、政府機關與國際品牌。</p>
-          <a href="./portfolio" class="ltsuan-badge">查看<br />作品集</a>
+    <div class="ltsuan-container">
+    <section id="hero">
+      <div class="ltsuan-hero-grid">
+        <div class="ltsuan-hero-copy">
+          <h1 class="ltsuan-h1" data-hero-h1>空間與故事，<br /><span class="ltsuan-h1-accent">出自同一雙手</span>。</h1>
+          <p class="ltsuan-lead" data-hero-lead>位於臺灣臺中與臺北的室內、展覽與視覺設計工作室，自 2014 年起服務博物館、政府機關與國際品牌，從草圖發想到現場安裝，全程參與。</p>
         </div>
-
-        <div class="ltsuan-hero-media">
-          <picture>
-            <source srcset={avifPath('/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg')} type="image/avif" />
-            <img
-              src="/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg"
-              alt="Visitors exploring the Masters of Marine Illusion exhibition at Taichung Aquarium, an interior and exhibition design project by Letsuan Design"
-              class="ltsuan-hero-img"
-            />
-          </picture>
-          <CornerFrame size={16} />
-        </div>
-        <div style="height:40px"></div>
-      </section>
-
-      <section id="studio">
-        <div class="ltsuan-reveal ltsuan-studio-copy">
-          <div class="ltsuan-eyebrow">工作室介紹</div>
-          <p class="ltsuan-body-copy">麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，自 2014 年起交付博物館等級的展覽與商業室內空間。我們的服務範圍涵蓋博物館、水族館、文化場館、企業空間與公共裝置，只要是需要傳達訊息的實體空間，都是我們的專業領域。</p>
-          <p class="ltsuan-body-copy">我們的團隊能自在地在敘事設計、空間規劃、視覺系統與現場施工之間切換，讓我們能從第一張草圖到最終安裝全程參與，確保每個細節都服務於同一個核心概念。</p>
-          <p class="ltsuan-body-copy">我們會依專案規模調整團隊組成，視個別基地與法規需求，納入持照建築師、消防技師、土木技師與品管人員。</p>
-          <p class="ltsuan-body-copy ltsuan-body-copy-last">專案從設計到施工，不會轉手。</p>
-        </div>
-      </section>
-
-      <section id="record">
-        <div class="ltsuan-reveal ltsuan-stats-grid">
-          {stats.map((st) => (
-            <div class="ltsuan-stat-card">
-              <CornerFrame size={10} opacity={0.55} />
-              <div class="ltsuan-stat-value">{st.value}</div>
-              <div class="ltsuan-stat-label">{st.label}</div>
-              <p class="ltsuan-stat-desc">{st.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="sustainability-clients">
-        <div class="ltsuan-reveal ltsuan-split">
-          <div>
-            <div class="ltsuan-eyebrow">永續</div>
-            <div class="ltsuan-sustain-img-wrap">
-              <picture>
-                <source srcset={avifPath('/images/green-energy-vision-pavilion-01-letsuan-design.jpg')} type="image/avif" />
-                <img src="/images/green-energy-vision-pavilion-01-letsuan-design.jpg" alt="Green Energy Vision pavilion, an interior design project by Letsuan Design demonstrating non-invasive sustainable construction" class="ltsuan-sustain-img" />
-              </picture>
-              <CornerFrame size={14} />
-            </div>
-            <p class="ltsuan-body-copy-70">永續精神貫穿我們的施工方式：以零損傷結構系統保護古蹟場域與歷史構造。</p>
-            <p class="ltsuan-body-copy-70">我們的綠建材使用率符合現行法規最低 60% 的要求，在環境責任與業主成本間取得平衡。</p>
-            <p class="ltsuan-body-copy-70 ltsuan-body-copy-last">身為持照室內裝修業者，我們對協力廠商要求的法規與安全標準，與我們對自己的要求完全一致。</p>
-          </div>
-
-          <div>
-            <div class="ltsuan-eyebrow ltsuan-eyebrow-dim">合作客戶</div>
-            <div class="ltsuan-client-imgs">
-              <div class="ltsuan-client-img-wrap">
-                <picture>
-                  <source srcset={avifPath('/images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.jpg')} type="image/avif" />
-                  <img src="/images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.jpg" alt="Gallery corridor at a Hakka culture exhibition, an exhibition design project by Letsuan Design" class="ltsuan-client-img" />
-                </picture>
-                <CornerFrame size={12} />
-              </div>
-              <div class="ltsuan-client-img-wrap">
-                <picture>
-                  <source srcset={avifPath('/images/asian-art-biennial-02-letsuan-design.jpg')} type="image/avif" />
-                  <img src="/images/asian-art-biennial-02-letsuan-design.jpg" alt="Asian Art Biennial installation, an exhibition design project by Letsuan Design" class="ltsuan-client-img" />
-                </picture>
-                <CornerFrame size={12} />
-              </div>
-            </div>
-            <p class="ltsuan-body-copy-70">我們已與 7 個以上的政府機關及公共機構合作。</p>
-            <p class="ltsuan-client-list">國立自然科學博物館・國立歷史博物館・國立臺灣美術館・文化部・空軍軍官學校・Ørsted・TSMC・HTC・FedEx・東映・小學館・永豐金證券</p>
-            <a href="./portfolio" class="ltsuan-see-work-link">查看我們與他們的合作案例 →</a>
-            <p class="ltsuan-license-note">持照室內裝修業者（登記字號 40E2007328）。我們代客戶處理專業裝修許可申請與審查送件。</p>
+        <div class="ltsuan-hero-panel">
+          <div class="ltsuan-hero-photo">
+            <picture>
+              <source srcset={avifPath('/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg')} type="image/avif" />
+              <img src="/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg" alt="訪客在昏暗藍光展廳中觀看海洋擬態大師導覽螢幕下方的發光水族展示櫃" class="ltsuan-hero-photo-img" />
+            </picture>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="services">
-        <div class="ltsuan-reveal ltsuan-services-head">
-          <h2 class="ltsuan-section-h2">服務項目</h2>
-          <div class="ltsuan-section-counter">01&nbsp;/&nbsp;05</div>
-        </div>
-        <div class="ltsuan-services-grid">
-          {services.map((svc) => (
-            <div class="ltsuan-svc-card">
-              <CornerFrame size={10} opacity={0.55} />
-              <div class="ltsuan-svc-img-wrap">
-                <picture>
-                  <source srcset={avifPath(svc.img)} type="image/avif" />
-                  <img alt={svc.alt} src={svc.img} style={`object-position:${svc.imgPosition || 'center'}`} class="ltsuan-svc-img" loading="lazy" decoding="async" />
-                </picture>
-              </div>
-              <h3 class="ltsuan-svc-title">{svc.title}</h3>
-              <p class="ltsuan-svc-desc">{svc.desc}</p>
-              <a href={svc.evidenceHref} class="ltsuan-svc-evidence">{svc.evidenceLabel} →</a>
+    <section id="record">
+      <div class="ltsuan-why-grid">
+        <div class="ltsuan-stat">
+          <div class="ltsuan-stat-row">
+            <div class="ltsuan-stat-num">{stats[0].value}</div>
+            <div class="ltsuan-stat-meta">
+              <div class="ltsuan-stat-label">PROJECTS</div>
+              <div class="ltsuan-stat-rule"></div>
+              <div class="ltsuan-stat-sub">已交<br />付專案</div>
             </div>
-          ))}
+          </div>
+          <p class="ltsuan-stat-caption">EST. 2014 — TAICHUNG &amp; TAIPEI</p>
         </div>
-      </section>
-
-      <section id="faq">
-        <div class="ltsuan-reveal">
-          <h2 class="ltsuan-section-h2 ltsuan-faq-title">常見問題</h2>
-          <div class="ltsuan-faq-list">
-            {faqs.map((f) => (
-              <div class="ltsuan-faq-item">
-                <h3 class="ltsuan-faq-q">{f.q}</h3>
-                <p class="ltsuan-faq-a">{f.a}</p>
+        <div class="ltsuan-why-copy">
+          <h2 class="ltsuan-why-h2">公司簡介</h2>
+          <div class="ltsuan-why-text">
+            <p>麗荃室內裝修是一間持照的室內、展覽與視覺設計工作室，位於臺灣臺中與臺北，自 2014 年起交付博物館等級的展覽與商業室內空間。我們的服務範圍涵蓋博物館、水族館、文化場館、企業空間與公共裝置，只要是需要傳達訊息的實體空間，都是我們的專業領域。</p>
+            <p>團隊能自在地在敘事設計、空間規劃、視覺系統與現場施工之間切換，確保每個細節都存在於同一個核心概念。</p>
+            <p>依專案規模調整團隊組成，視個別專案需求，納入持照建築師、消防技師、土木技師與品管人員、多媒體程式設計師。</p>
+          </div>
+          <div class="ltsuan-stats-mini-grid">
+            {stats.slice(1).map((st) => (
+              <div class="ltsuan-stats-mini-card">
+                <div class="ltsuan-stats-mini-value">{st.value}</div>
+                <div class="ltsuan-stats-mini-label">{st.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <Footer background="#0B1526" />
+    <section id="sustainability">
+      <div class="ltsuan-esg-eyebrow">
+        <span class="ltsuan-esg-eyebrow-rule"></span>
+        <span class="ltsuan-esg-eyebrow-text">ESG / SUSTAINABILITY</span>
+      </div>
+
+      <div class="ltsuan-esg-intro-grid">
+        <h2 class="ltsuan-esg-h2">永續，<br />是系統性的<br />實踐</h2>
+        <div class="ltsuan-esg-intro-copy">
+          <p class="ltsuan-esg-lead-highlight">我們將永續，定義為 ESG 的系統性實踐，而非僅是選用環保建材。</p>
+          <p class="ltsuan-esg-lead-text">在室內裝修產業，永續常被簡化為一張綠建材標章。對我們而言，這遠遠不夠。永續是必須落實在每一個設計決策、材料選擇與工程執行中的基本標準，而非額外選項或加價升級。它關乎場域能否被長久使用，現場的人能否被安全對待，以及業主的權益能否被制度完整保障。</p>
+        </div>
+      </div>
+
+      <div class="ltsuan-process-tracker" data-esg-tracker>
+        <div class="ltsuan-process-line-track"></div>
+        <div class="ltsuan-process-line-fill" data-esg-fill></div>
+        <div class="ltsuan-process-buttons" data-esg-buttons>
+          {esgItems.map((item, i) => (
+            <button type="button" class="ltsuan-process-btn" data-step-index={i} aria-current={i === 0 ? 'step' : undefined}>
+              <span class="ltsuan-process-ring">
+                <span class="ltsuan-process-dot"></span>
+              </span>
+              <span class="ltsuan-process-btn-zh">{item.zh}</span>
+              <span class="ltsuan-process-btn-en">{item.enLabel}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div class="ltsuan-process-detail">
+        <div class="ltsuan-process-detail-inner">
+          <div class="ltsuan-process-detail-head">
+            <span class="ltsuan-process-detail-id" data-esg-detail-id>{esgItems[0].num}</span>
+            <span class="ltsuan-process-detail-rule"></span>
+            <span class="ltsuan-process-detail-en" data-esg-detail-en>{esgItems[0].enLabel.toUpperCase()}</span>
+          </div>
+          <h3 class="ltsuan-esg-detail-title" data-esg-detail-title>{esgItems[0].title}</h3>
+          <div class="ltsuan-process-detail-desc" data-esg-detail-desc>
+            {esgItems[0].paragraphs.map((p, pi) => {
+              const { marker, rest } = splitParagraph(p);
+              const label = esgItems[0].labels[pi];
+              if (marker && label) {
+                return (
+                  <div class="ltsuan-esg-point">
+                    <div class="ltsuan-esg-point-head">
+                      <span class="ltsuan-esg-para-marker">{marker}</span>
+                      <span class="ltsuan-esg-point-label">{label}</span>
+                    </div>
+                    <p>{rest}</p>
+                  </div>
+                );
+              }
+              return <p class={pi === 0 ? 'ltsuan-esg-para-lead' : ''}>{p}</p>;
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div class="ltsuan-process-mobile">
+        <div class="ltsuan-process-mobile-line"></div>
+        {esgItems.map((item) => (
+          <details class="ltsuan-process-mobile-item">
+            <summary>
+              <span class="ltsuan-process-mobile-dot"></span>
+              <span class="ltsuan-process-mobile-zh">{item.zh}</span>
+              <span class="ltsuan-process-mobile-en">{item.enLabel}</span>
+            </summary>
+            <h4 class="ltsuan-esg-mobile-title">{item.title}</h4>
+            {item.paragraphs.map((p, pi) => {
+              const { marker, rest } = splitParagraph(p);
+              const label = item.labels[pi];
+              if (marker && label) {
+                return (
+                  <div class="ltsuan-esg-point">
+                    <div class="ltsuan-esg-point-head">
+                      <span class="ltsuan-esg-para-marker">{marker}</span>
+                      <span class="ltsuan-esg-point-label">{label}</span>
+                    </div>
+                    <p>{rest}</p>
+                  </div>
+                );
+              }
+              return <p class={pi === 0 ? 'ltsuan-esg-para-lead' : ''}>{p}</p>;
+            })}
+          </details>
+        ))}
+      </div>
+
+      <p class="ltsuan-esg-close">對我們而言，永續是風險管理，不是成本。<br />它是對場域的尊重，對人的保護，以及對制度的負責。<br />當這三件事被同時做好，設計才有機會真正長久。</p>
+    </section>
+
+    <section id="clients">
+      <div class="ltsuan-eyebrow ltsuan-eyebrow-dim">合作客戶</div>
+      <p class="ltsuan-split-text">我們與政府機關、公共機構及國際品牌合作。</p>
+      <p class="ltsuan-client-list">文化部・交通部觀光署・矯正署・空軍軍官學校・國立自然科學博物館・國立歷史博物館・國立臺灣美術館・國立自然科學工藝館・Ørsted・FedEx・東映・小學館・永豐金證券・興陽能源</p>
+      <a href="./portfolio" class="ltsuan-see-work-link"><span>查看我們與他們的合作案例</span><span class="ltsuan-see-work-arrow">↗</span></a>
+    </section>
+
+    <section id="faq">
+      <div class="ltsuan-process-heading">
+        <h2 class="ltsuan-process-h2">常見問題</h2>
+      </div>
+      <div class="ltsuan-faq-grid">
+        {faqs.map((f) => (
+          <div class="ltsuan-faq-item">
+            <h3 class="ltsuan-faq-q">{f.q}</h3>
+            <p class="ltsuan-faq-a">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="ltsuan-cta">
+        <div class="ltsuan-cta-pill"><span class="ltsuan-cta-dot"></span>NEW PROJECTS FOR 2026 — OPEN</div>
+        <h2 class="ltsuan-cta-h2">來聊聊您的<br />下一個想法</h2>
+        <p class="ltsuan-cta-copy">無論展覽形式為何，我們的思考起點不變：如何引導觀眾走入敘事，並讓體驗成為被帶走的記憶</p>
+        <div class="ltsuan-cta-actions">
+          <a href="https://letsuan.com/zh-TW/contact" class="ltsuan-cta-btn">
+            <span>info@letsuan.com</span>
+            <span class="ltsuan-cta-btn-arrow">↗</span>
+          </a>
+          <div class="ltsuan-cta-note">我們會在兩個工作天內回覆您</div>
+        </div>
+
+        <div class="ltsuan-cta-footer">
+          <div class="ltsuan-cta-social">
+            <a href="https://www.facebook.com/LETSUANDESIGN" target="_blank" rel="noopener" aria-label="Facebook" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.pinterest.com/Letsuan_Design/" target="_blank" rel="noopener" aria-label="Pinterest" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.332 1.361-.052.219-.173.265-.4.16-1.492-.694-2.424-2.874-2.424-4.625 0-3.767 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.897 0 4.116-2.595 7.428-6.199 7.428-1.211 0-2.349-.629-2.738-1.373 0 0-.599 2.282-.744 2.84-.269 1.037-.997 2.336-1.484 3.129 1.118.346 2.303.53 3.532.53 6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/letsuan-design/" target="_blank" rel="noopener" aria-label="LinkedIn" class="ltsuan-cta-social-link">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#f4efe8"><path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454c.98 0 1.775-.773 1.775-1.729V1.729C24 .774 23.205 0 22.225 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.433c-1.144 0-2.067-.926-2.067-2.065 0-1.138.923-2.065 2.067-2.065 1.14 0 2.064.927 2.064 2.065 0 1.139-.923 2.065-2.064 2.065zM20.452 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.137 1.447-2.137 2.941v5.665H9.359V9h3.412v1.561h.049c.475-.9 1.637-1.85 3.37-1.85 3.601 0 4.266 2.37 4.266 5.455v6.286z"/></svg>
+            </a>
+          </div>
+          <div class="ltsuan-cta-cityline">臺中事務所、臺北製作所　｜　+886 4 2321 5956</div>
+          <div class="ltsuan-cta-address">403020 臺中市西區華美西街一段85號6樓之1　｜　111069 臺北市士林區延平北路六段62號3樓</div>
+          <div class="ltsuan-cta-legal">
+            <span>© 2026 麗荃室內裝修有限公司 版權所有。</span>
+            <span>室內裝修從業者登記字號 40E2007328</span>
+            <a href="./privacy-policy">隱私權政策</a>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
+
+    <div class="ltsuan-bottom-bar"></div>
   </div>
 </Layout>
 
 <script>
   import '../../scripts/reveal';
+
+  const heroH1 = document.querySelector<HTMLElement>('[data-hero-h1]');
+  const heroLead = document.querySelector<HTMLElement>('[data-hero-lead]');
+  function syncLeadWidth() {
+    if (!heroH1 || !heroLead) return;
+    heroLead.style.maxWidth = `${heroH1.getBoundingClientRect().width}px`;
+  }
+  syncLeadWidth();
+  window.addEventListener('resize', syncLeadWidth);
+
+  function syncStatRuleWidths() {
+    document.querySelectorAll<HTMLElement>('.ltsuan-stat-meta').forEach((meta) => {
+      const label = meta.querySelector<HTMLElement>('.ltsuan-stat-label');
+      const rule = meta.querySelector<HTMLElement>('.ltsuan-stat-rule');
+      if (!label || !rule) return;
+      rule.style.width = `${label.getBoundingClientRect().width}px`;
+    });
+  }
+  syncStatRuleWidths();
+  window.addEventListener('resize', syncStatRuleWidths);
+
+  // ESG process-tracker (mirrors the What We Do "流程" section)
+  function splitParagraphClient(text: string) {
+    const m = text.match(/^(第[一二三]|此外)([，,])/);
+    if (!m) return { marker: null as string | null, rest: text };
+    return { marker: m[1], rest: text.slice(m[0].length) };
+  }
+
+  const esgTrack = document.querySelector<HTMLElement>('.ltsuan-process-line-track');
+  const esgFill = document.querySelector<HTMLElement>('[data-esg-fill]');
+  const esgButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-esg-buttons] .ltsuan-process-btn'));
+  const esgDetailId = document.querySelector<HTMLElement>('[data-esg-detail-id]');
+  const esgDetailEn = document.querySelector<HTMLElement>('[data-esg-detail-en]');
+  const esgDetailTitle = document.querySelector<HTMLElement>('[data-esg-detail-title]');
+  const esgDetailDesc = document.querySelector<HTMLElement>('[data-esg-detail-desc]');
+  const esgSteps = JSON.parse(document.getElementById('ltsuan-esg-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title: string; labels: Record<number, string>; paragraphs: string[] }>;
+  let esgCurrentIndex = 0;
+
+  function syncEsgFillWidth() {
+    if (!esgTrack || !esgFill) return;
+    if (esgCurrentIndex === esgButtons.length - 1) {
+      esgFill.style.transform = 'scaleX(1)';
+      return;
+    }
+    const targetRing = esgButtons[esgCurrentIndex]?.querySelector<HTMLElement>('.ltsuan-process-ring');
+    if (!targetRing) return;
+    const trackRect = esgTrack.getBoundingClientRect();
+    const ringRect = targetRing.getBoundingClientRect();
+    const ringCenterX = (ringRect.left + ringRect.right) / 2;
+    if (trackRect.width === 0) return;
+    const fraction = (ringCenterX - trackRect.left) / trackRect.width;
+    esgFill.style.transform = `scaleX(${Math.max(0, fraction)})`;
+  }
+
+  function setEsgStep(index: number) {
+    const step = esgSteps[index];
+    if (!step) return;
+    esgCurrentIndex = index;
+    esgButtons.forEach((btn, i) => {
+      const passed = i <= index;
+      btn.classList.toggle('is-current', i === index);
+      btn.classList.toggle('is-passed', passed);
+      if (i === index) btn.setAttribute('aria-current', 'step');
+      else btn.removeAttribute('aria-current');
+    });
+    syncEsgFillWidth();
+    if (esgDetailId) esgDetailId.textContent = step.id;
+    if (esgDetailEn) esgDetailEn.textContent = step.en.toUpperCase();
+    if (esgDetailTitle) esgDetailTitle.textContent = step.title;
+    if (esgDetailDesc) {
+      esgDetailDesc.innerHTML = '';
+      step.paragraphs.forEach((p, pi) => {
+        const { marker, rest } = splitParagraphClient(p);
+        const label = step.labels[pi];
+        if (marker && label) {
+          const wrap = document.createElement('div');
+          wrap.className = 'ltsuan-esg-point';
+          const head = document.createElement('div');
+          head.className = 'ltsuan-esg-point-head';
+          const markerSpan = document.createElement('span');
+          markerSpan.className = 'ltsuan-esg-para-marker';
+          markerSpan.textContent = marker;
+          const labelSpan = document.createElement('span');
+          labelSpan.className = 'ltsuan-esg-point-label';
+          labelSpan.textContent = label;
+          head.appendChild(markerSpan);
+          head.appendChild(labelSpan);
+          const el = document.createElement('p');
+          el.textContent = rest;
+          wrap.appendChild(head);
+          wrap.appendChild(el);
+          esgDetailDesc.appendChild(wrap);
+        } else {
+          const el = document.createElement('p');
+          if (pi === 0) el.className = 'ltsuan-esg-para-lead';
+          el.textContent = p;
+          esgDetailDesc.appendChild(el);
+        }
+      });
+    }
+  }
+
+  setEsgStep(0);
+
+  esgButtons.forEach((btn, i) => {
+    btn.addEventListener('click', () => setEsgStep(i));
+    btn.addEventListener('mouseenter', () => setEsgStep(i));
+    btn.addEventListener('focus', () => setEsgStep(i));
+  });
+
+  window.addEventListener('resize', syncEsgFillWidth);
 </script>
+
+<script type="application/json" id="ltsuan-esg-data" set:html={JSON.stringify(esgStepsData)} />
 
 <style is:global>
   :root {
-    --ltsuan-bg: #0b1526;
-    --ltsuan-panel: #101b33;
-    --ltsuan-accent: #8ec31f;
-    --ltsuan-accent-hover: #a8dc4a;
-    --ltsuan-line: rgba(244, 239, 232, 0.12);
+    --ltsuan-bg: #0a0a0a;
+    --ltsuan-panel: #141414;
+    --ltsuan-accent: #8cc81e;
+    --ltsuan-accent-hover: #9dd42a;
+    --ltsuan-line: rgba(244, 239, 232, 0.06);
     --ltsuan-dim: rgba(244, 239, 232, 0.6);
-    --ltsuan-blueprint: #c9d6e8;
   }
 </style>
 
 <style>
   .ltsuan-page {
     background: var(--ltsuan-bg);
-    position: relative;
+    color: #f4efe8;
   }
+  .ltsuan-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-container {
+      padding: 0 40px;
+    }
+  }
+
+  /* Hero */
   #hero {
-    padding: 110px 60px 0 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+    padding: 88px 0 64px;
   }
-  .ltsuan-hero-block {
-    position: relative;
-    max-width: 900px;
-    margin-bottom: 36px;
+  @media (min-width: 768px) {
+    #hero {
+      padding: 96px 0 112px;
+    }
   }
-  .ltsuan-hero-h1 {
+  .ltsuan-hero-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-h1 {
+    width: fit-content;
+    max-width: 100%;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(36px, 6vw, 72px);
-    line-height: 1.05;
+    font-size: clamp(38px, 5.4vw, 72px);
+    line-height: 1.1;
     letter-spacing: -0.02em;
-    margin: 0 0 20px;
+    margin: 0;
   }
-  .ltsuan-hero-sub {
+  .ltsuan-h1-accent {
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-lead {
+    box-sizing: border-box;
+    margin: 32px 0 0;
+    max-width: 100%;
+    padding-left: 20px;
+    border-left: 1px solid rgba(140, 200, 30, 0.5);
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(17px, 1.6vw, 20px);
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
     color: var(--ltsuan-dim);
-    margin: 0;
-    max-width: 46ch;
   }
-  .ltsuan-badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 1px solid var(--ltsuan-line);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    color: var(--ltsuan-text);
-    text-decoration: none;
+  .ltsuan-hero-panel {
+    padding-top: 24px;
   }
-  .ltsuan-hero-media {
+  @media (max-width: 900px) {
+    .ltsuan-hero-panel {
+      padding-top: 0;
+    }
+  }
+  .ltsuan-hero-photo {
     position: relative;
+    aspect-ratio: 4 / 3.4;
+    width: 100%;
     overflow: hidden;
-    height: clamp(280px, 36vw, 460px);
+    border-radius: 17px;
+    background: #141414;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 0, 0, 0.25);
   }
-  .ltsuan-hero-img {
+  .ltsuan-hero-photo-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    filter: brightness(0.88) saturate(1.08);
+    object-position: center 35%;
   }
-  #studio {
-    padding: 24px 60px 44px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
+
+  /* Record / why-style section */
+  #record {
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
   }
-  .ltsuan-studio-copy {
+  @media (min-width: 768px) {
+    #record {
+      padding: 96px 0;
+    }
+  }
+  .ltsuan-why-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-why-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-stat-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ltsuan-stat-num {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(64px, 8vw, 96px);
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+    min-width: 1.7em;
+    text-align: right;
+    color: #ffffff;
+  }
+  .ltsuan-stat-meta {
+    padding-top: 12px;
+  }
+  .ltsuan-stat-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+  }
+  .ltsuan-stat-rule {
+    margin-top: 4px;
+    height: 1px;
+    width: 40px;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-stat-sub {
+    margin-top: 12px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .ltsuan-stat-caption {
+    margin: 32px 0 0;
+    max-width: 26ch;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-why-h2 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .ltsuan-why-highlight {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(140, 200, 30, 0.9);
+  }
+  .ltsuan-why-text {
+    margin-top: 32px;
+    text-align: justify;
+  }
+  .ltsuan-why-text p {
+    margin: 0 0 16px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(244, 239, 232, 0.8);
+  }
+  .ltsuan-why-text p:last-child {
+    margin-bottom: 0;
+  }
+  .ltsuan-stats-mini-grid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .ltsuan-stats-mini-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .ltsuan-stats-mini-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 11px;
+    background: var(--ltsuan-panel);
+    padding: 16px;
+  }
+  .ltsuan-stats-mini-value {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-stats-mini-label {
+    margin-top: 6px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    color: rgba(244, 239, 232, 0.6);
+  }
+
+  /* ESG section */
+  #sustainability {
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #sustainability {
+      padding: 80px 0;
+    }
+  }
+  .ltsuan-esg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .ltsuan-esg-eyebrow-rule {
+    height: 1px;
+    width: 32px;
+    background: rgba(244, 239, 232, 0.2);
+  }
+  .ltsuan-esg-eyebrow-text {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: rgba(244, 239, 232, 0.5);
+  }
+  .ltsuan-esg-intro-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 900px) {
+    .ltsuan-esg-intro-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  .ltsuan-esg-h2 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-size: clamp(32px, 4.5vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .ltsuan-esg-lead-highlight {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #f4efe8;
+    margin: 0 0 12px;
+  }
+  .ltsuan-esg-lead-text {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    color: rgba(244, 239, 232, 0.8);
+    margin: 0;
+    text-align: justify;
+  }
+  #sustainability .ltsuan-process-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #sustainability .ltsuan-process-btn {
+    align-items: center;
+    text-align: center;
+  }
+  .ltsuan-process-detail-inner {
     max-width: 640px;
+    margin: 0 auto;
+  }
+  .ltsuan-esg-detail-title {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(19px, 2vw, 23px);
+    line-height: 1.4;
+    color: #f4efe8;
+  }
+  .ltsuan-process-detail-desc {
+    color: rgba(244, 239, 232, 0.8);
+  }
+  .ltsuan-process-detail-desc p {
+    margin: 0 0 16px;
+  }
+  .ltsuan-process-detail-desc > p:last-child {
+    margin-bottom: 0;
+  }
+  .ltsuan-esg-point {
+    margin: 0 0 24px;
+  }
+  .ltsuan-esg-point:last-child {
+    margin-bottom: 0;
+  }
+  .ltsuan-esg-point-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ltsuan-esg-point-label {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #f4efe8;
+  }
+  .ltsuan-esg-point p {
+    padding-left: 14px;
+    border-left: 2px solid rgba(140, 200, 30, 0.35);
+    margin: 0;
+  }
+  .ltsuan-esg-para-marker {
+    display: inline-block;
+    color: var(--ltsuan-accent);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .ltsuan-esg-mobile-title {
+    margin: 10px 0 0 24px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #f4efe8;
+  }
+  .ltsuan-process-mobile .ltsuan-esg-mobile-title + p,
+  .ltsuan-process-mobile .ltsuan-esg-mobile-title + .ltsuan-esg-point {
+    margin-top: 8px;
+  }
+  .ltsuan-process-mobile .ltsuan-esg-point,
+  .ltsuan-process-mobile .ltsuan-esg-para-lead {
+    margin-left: 24px;
+    margin-top: 8px;
+  }
+  .ltsuan-esg-close {
+    margin-top: 40px;
+    padding-left: 32px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(140, 200, 30, 0.9);
+    max-width: 68ch;
+  }
+
+  /* Process tracker (mirrors What We Do "流程" section) */
+  .ltsuan-process-heading {
+    margin-bottom: 40px;
+  }
+  .ltsuan-process-h2 {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3vw, 32px);
+    margin: 0;
+  }
+  .ltsuan-process-tracker {
+    position: relative;
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-process-tracker {
+      display: block;
+    }
+  }
+  .ltsuan-process-line-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 11px;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-process-line-fill {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    height: 1px;
+    width: 100%;
+    background: var(--ltsuan-accent);
+    transform-origin: left;
+    transform: scaleX(0.333);
+    transition: transform 0.7s ease;
+  }
+  .ltsuan-process-buttons {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .ltsuan-process-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+  }
+  .ltsuan-process-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 239, 232, 0.15);
+    background: #0a0a0a;
+    transition: all 0.3s ease;
+  }
+  .ltsuan-process-btn:hover .ltsuan-process-ring {
+    border-color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-ring {
+    transform: scale(1.1);
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-ring {
+    border-color: var(--ltsuan-accent);
+  }
+  .ltsuan-process-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(244, 239, 232, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-dot {
+    background: var(--ltsuan-accent);
+    box-shadow: 0 0 6px 1px rgba(140, 200, 30, 0.6);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-dot {
+    box-shadow: 0 0 10px 3px rgba(140, 200, 30, 0.9);
+  }
+  .ltsuan-process-btn-zh {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(244, 239, 232, 0.5);
+    transition: color 0.3s ease;
+  }
+  .ltsuan-process-btn.is-passed .ltsuan-process-btn-zh {
+    color: rgba(244, 239, 232, 0.8);
+  }
+  .ltsuan-process-btn.is-current .ltsuan-process-btn-zh {
+    color: #f4efe8;
+  }
+  .ltsuan-process-btn-en {
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.35);
+  }
+  .ltsuan-process-detail {
+    display: none;
+    margin: 40px 0 0;
+    border-radius: 11px;
+    background: var(--ltsuan-panel);
+    padding: 32px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-process-detail {
+      display: block;
+    }
+  }
+  .ltsuan-process-detail-head {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .ltsuan-process-detail-id {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-process-detail-rule {
+    height: 1px;
+    width: 4px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-process-detail-en {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-process-detail-desc {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+  }
+  .ltsuan-process-mobile {
+    position: relative;
+    padding-left: 24px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-process-mobile {
+      display: none;
+    }
+  }
+  .ltsuan-process-mobile-line {
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-process-mobile-item {
+    padding: 12px 0;
+  }
+  .ltsuan-process-mobile-item summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    list-style: none;
+  }
+  .ltsuan-process-mobile-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .ltsuan-process-mobile-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ltsuan-accent);
+    flex-shrink: 0;
+  }
+  .ltsuan-process-mobile-zh {
+    font-size: 14px;
+  }
+  .ltsuan-process-mobile-en {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-process-mobile-item p {
+    margin: 10px 0 0 24px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.6);
+  }
+
+  /* Clients */
+  #clients {
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) {
+    #clients {
+      padding: 80px 0;
+    }
   }
   .ltsuan-eyebrow {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -294,262 +1032,231 @@ const services = [
     font-weight: 400;
     letter-spacing: 0.15em;
     color: var(--ltsuan-accent);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   .ltsuan-eyebrow-dim {
-    color: var(--ltsuan-dim);
+    color: rgba(244, 239, 232, 0.5);
   }
-  .ltsuan-body-copy {
+  .ltsuan-split-text {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 14px;
-    line-height: 1.6;
-    color: rgba(244, 239, 232, 0.75);
-    margin: 0 0 10px;
-  }
-  .ltsuan-body-copy-70 {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.8;
     color: rgba(244, 239, 232, 0.7);
-    margin: 0 0 10px;
-  }
-  .ltsuan-body-copy-last {
-    margin-bottom: 0;
-  }
-  #record {
-    padding: 36px 60px 44px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
-  }
-  .ltsuan-stats-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media (max-width: 900px) {
-    .ltsuan-stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (max-width: 560px) {
-    .ltsuan-stats-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .ltsuan-stat-card {
-    position: relative;
-    background: var(--ltsuan-panel);
-    padding: 16px;
-  }
-  .ltsuan-stat-value {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 400;
-    font-size: clamp(28px, 3vw, 38px);
-    color: var(--ltsuan-accent);
-    margin-bottom: 6px;
-  }
-  .ltsuan-stat-label {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 14px;
-    color: var(--ltsuan-text);
-    margin-bottom: 6px;
-  }
-  .ltsuan-stat-desc {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    color: rgba(244, 239, 232, 0.55);
-    margin: 0;
-  }
-  #sustainability-clients {
-    padding: 64px 60px 56px 79px;
-    border-bottom: 1px solid var(--ltsuan-line);
-  }
-  .ltsuan-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 44px;
-  }
-  @media (max-width: 640px) {
-    .ltsuan-split {
-      grid-template-columns: 1fr !important;
-    }
-    .ltsuan-badge {
-      position: static !important;
-      margin: 20px 0 0 !important;
-    }
-    #sustainability-clients,
-    #hero,
-    #studio,
-    #record,
-    #services {
-      padding-left: 24px !important;
-      padding-right: 24px !important;
-    }
-  }
-  .ltsuan-sustain-img-wrap {
-    position: relative;
-    overflow: hidden;
-    height: 160px;
-    margin-bottom: 18px;
-  }
-  .ltsuan-sustain-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.85) saturate(1.1);
-  }
-  .ltsuan-client-imgs {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-  .ltsuan-client-img-wrap {
-    position: relative;
-    overflow: hidden;
-    height: 160px;
-  }
-  .ltsuan-client-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.85) saturate(1.1);
+    margin: 0 0 12px;
   }
   .ltsuan-client-list {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.9;
-    color: rgba(244, 239, 232, 0.6);
-    margin: 0 0 14px;
+    color: rgba(244, 239, 232, 0.5);
+    margin: 0 0 16px;
+    max-width: 760px;
   }
   .ltsuan-see-work-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 14px;
-    color: var(--ltsuan-accent);
-    text-decoration: none;
-  }
-  .ltsuan-license-note {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
-    line-height: 1.6;
-    color: var(--ltsuan-dim);
-    margin: 14px 0 0;
-  }
-  #services {
-    padding: 64px 60px 70px 79px;
-    background: var(--ltsuan-panel);
-    border-bottom: 1px solid var(--ltsuan-line);
-  }
-  .ltsuan-services-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  .ltsuan-section-h2 {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 400;
-    font-size: clamp(28px, 3.6vw, 42px);
-    margin: 0;
-  }
-  .ltsuan-section-counter {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 13px;
-    letter-spacing: 0.1em;
-    color: var(--ltsuan-dim);
-  }
-  .ltsuan-services-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-  .ltsuan-svc-card {
-    position: relative;
-    background: var(--ltsuan-panel);
-    padding: 24px;
-  }
-  .ltsuan-svc-img-wrap {
-    position: relative;
-    height: 120px;
-    overflow: hidden;
-    margin-bottom: 16px;
-  }
-  .ltsuan-svc-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: filter 0.35s ease;
-    filter: brightness(0.8) saturate(1.1);
-    transform: scale(1.15);
-  }
-  .ltsuan-svc-card:hover .ltsuan-svc-img {
-    filter: brightness(1) saturate(1.15);
-  }
-  .ltsuan-svc-title {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.3;
-    min-height: calc(1.3em * 2);
-    margin: 0 0 8px;
-  }
-  .ltsuan-svc-desc {
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 13px;
-    line-height: 1.6;
-    color: rgba(244, 239, 232, 0.55);
-    margin: 0;
-    text-align: left;
-  }
-  .ltsuan-svc-evidence {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 14px;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
     letter-spacing: 0.06em;
     color: var(--ltsuan-accent);
     text-decoration: none;
   }
+  .ltsuan-see-work-arrow {
+    opacity: 0.7;
+  }
+
+  /* FAQ */
   #faq {
-    padding: 64px 60px 80px 79px;
-    max-width: 900px;
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 56px 0;
   }
-  .ltsuan-faq-title {
-    margin-bottom: 36px;
+  @media (min-width: 768px) {
+    #faq {
+      padding: 80px 0;
+    }
   }
-  .ltsuan-faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
+  .ltsuan-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 48px;
+  }
+  @media (max-width: 640px) {
+    .ltsuan-faq-grid {
+      grid-template-columns: 1fr;
+    }
   }
   .ltsuan-faq-q {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    margin: 0 0 8px;
-    color: #f4efe8;
+    font-size: 17px;
+    margin: 0 0 10px;
   }
   .ltsuan-faq-a {
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 14px;
-    line-height: 1.6;
-    color: rgba(244, 239, 232, 0.75);
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.65);
     margin: 0;
   }
-  @media (max-width: 640px) {
-    #faq {
-      padding-left: 24px !important;
-      padding-right: 24px !important;
+
+  /* CTA (identical to what-we-do) */
+  #contact {
+    border-top: 1px solid var(--ltsuan-line);
+    padding: 64px 0;
+  }
+  @media (min-width: 768px) {
+    #contact {
+      padding: 112px 0;
     }
+  }
+  .ltsuan-cta {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ltsuan-cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid var(--ltsuan-line);
+    padding: 4px 12px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-h2 {
+    margin: 32px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .ltsuan-cta-copy {
+    max-width: 42ch;
+    margin: 24px auto 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-cta-actions {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  @media (min-width: 768px) {
+    .ltsuan-cta-actions {
+      flex-direction: row;
+    }
+  }
+  .ltsuan-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 999px;
+    background: var(--ltsuan-accent);
+    padding: 14px 28px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: background-color 0.2s ease, gap 0.2s ease;
+  }
+  .ltsuan-cta-btn:hover {
+    background: var(--ltsuan-accent-hover);
+    gap: 16px;
+  }
+  .ltsuan-cta-btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-cta-note {
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-cta-footer {
+    margin-top: 64px;
+    border-top: 1px solid rgba(244, 239, 232, 0.06);
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .ltsuan-cta-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .ltsuan-cta-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 239, 232, 0.2);
+  }
+  .ltsuan-cta-cityline {
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 232, 0.4);
+  }
+  .ltsuan-cta-address {
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(244, 239, 232, 0.3);
+  }
+  .ltsuan-cta-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 8px;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: rgba(244, 239, 232, 0.25);
+  }
+  .ltsuan-cta-legal a {
+    color: rgba(244, 239, 232, 0.25);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .ltsuan-cta-legal a:hover {
+    color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-bottom-bar {
+    height: 4px;
+    width: 100%;
+    opacity: 0.8;
+    background: linear-gradient(to right, #0a0a0a, var(--ltsuan-accent), #0a0a0a);
   }
 </style>
