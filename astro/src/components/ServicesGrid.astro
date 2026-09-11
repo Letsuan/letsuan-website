@@ -1,6 +1,7 @@
 ---
-import { services as defaultServices, avifPath } from '../data/homepage';
+import { services as defaultServices } from '../data/homepage';
 import type { Service } from '../data/homepage';
+import { responsiveSrcset } from '../utils/images';
 
 interface Props {
   services?: Service[];
@@ -21,7 +22,7 @@ const { services = defaultServices, title = 'What We Do', viewAllLabel = 'See ou
         <a href={svc.href} class="ltsuan-service-card">
           <div class="ltsuan-service-image-wrap">
             <picture>
-              <source type="image/avif" srcset={avifPath(svc.realImg)} />
+              <source type="image/avif" srcset={responsiveSrcset(svc.realImg, 'avif', svc.imgWidth, [600])} sizes="(max-width: 640px) 90vw, 400px" />
               <img
                 class="ltsuan-service-image"
                 alt={svc.alt}

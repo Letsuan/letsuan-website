@@ -1,6 +1,7 @@
 ---
-import { featuredProjects as defaultFeaturedProjects, avifPath } from '../data/homepage';
+import { featuredProjects as defaultFeaturedProjects } from '../data/homepage';
 import type { FeaturedProject } from '../data/homepage';
+import { responsiveSrcset } from '../utils/images';
 
 interface Props {
   featuredProjects?: FeaturedProject[];
@@ -20,7 +21,7 @@ const { featuredProjects = defaultFeaturedProjects, title = 'Selected Work', vie
       <a href={p.href} class="ltsuan-portfolio-card">
         <div class="ltsuan-portfolio-image-wrap">
           <picture>
-            <source type="image/avif" srcset={avifPath(p.realImg)} />
+            <source type="image/avif" srcset={responsiveSrcset(p.realImg, 'avif', p.imgWidth, [600])} sizes="(max-width: 640px) 90vw, 400px" />
             <img
               class="ltsuan-portfolio-image"
               alt={p.alt}
