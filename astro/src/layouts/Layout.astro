@@ -9,9 +9,10 @@ interface Props {
   jsonLd: object | object[];
   lang?: string;
   alternateHrefs?: { hreflang: string; href: string }[];
+  preloadImage?: { href: string; imagesrcset?: string; imagesizes?: string; type?: string };
 }
 
-const { title, description, canonical, ogImage, jsonLd, lang = 'en', alternateHrefs = [] } = Astro.props;
+const { title, description, canonical, ogImage, jsonLd, lang = 'en', alternateHrefs = [], preloadImage } = Astro.props;
 const jsonLdBlocks = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 ---
@@ -25,6 +26,9 @@ const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 <meta name="p:domain_verify" content="17275a29eb00bffa436bf31cfe607e33" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+{preloadImage && (
+  <link rel="preload" as="image" href={preloadImage.href} imagesrcset={preloadImage.imagesrcset} imagesizes={preloadImage.imagesizes} type={preloadImage.type} fetchpriority="high" />
+)}
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 <title>{title}</title>

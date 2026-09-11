@@ -7,6 +7,15 @@ import ServicesGrid from '../../components/ServicesGrid.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { heroSlides, services, featuredProjects } from '../../data/homepage-zh';
+import { responsiveSrcset } from '../../utils/images';
+
+const heroSlide0 = heroSlides[0];
+const preloadImage = {
+  href: heroSlide0.realImg,
+  imagesrcset: responsiveSrcset(heroSlide0.realImg, 'avif', heroSlide0.bgWidth),
+  imagesizes: '(max-width: 900px) 180vw, 115vw',
+  type: 'image/avif',
+};
 
 const title = '麗荃室內裝修 | 博物館展覽設計・台灣';
 const description = '位於台灣的設計與工程整合公司，專注博物館展覽設計、沉浸式體驗與室內工程建造，同一團隊從概念發展到完工安裝全程負責。成立於 2014 年，已完成 42 件以上專案，交付面積超過 17,000 平方公尺。';
@@ -35,7 +44,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs} preloadImage={preloadImage}>
   <div class="ltsuan-page">
     <Nav active="home" enHref="/" />
 
