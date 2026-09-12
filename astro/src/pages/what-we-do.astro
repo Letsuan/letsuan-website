@@ -52,11 +52,11 @@ const pageJsonLd = {
 };
 
 const processSteps = [
-  { id: '01', en: 'Feasibility', zh: 'Feasibility', desc: "Before a single line is drawn, we complete the site survey, review code and structural constraints, and confirm client requirements, mapping site conditions and the budget ceiling up front so the design phase never runs into a scheme that turns out to be unbuildable." },
-  { id: '02', en: 'Design & Engineering', zh: 'Design & Engineering', desc: 'Design and structural engineering run in parallel, so the concept is buildable within site and code constraints from day one. Architectural, structural, and MEP drawings are cross-checked together, cutting the risk of conflicts surfacing during construction and sending drawings back to the drawing board.' },
-  { id: '03', en: 'Fabrication & Testing', zh: 'Fabrication & Testing', desc: 'We fabricate everything in-house, testing mechanical, lighting, and AV systems before anything leaves the workshop. Every unit goes through trial assembly and quality checks before shipping, so problems get solved in the workshop rather than on site.' },
-  { id: '04', en: 'On-site Installation', zh: 'On-site Installation', desc: "We install trade by trade on schedule under our own site management, coordinating with venue operations and any third-party inspectors. Progress and quality are managed in step, so drawings and the built result stay consistent at every handoff between trades." },
-  { id: '05', en: 'Handover', zh: 'Handover', desc: "We close with a final walkthrough, documentation, and sign-off with the client, completing any licensor or regulatory procedures along the way and leaving behind a complete maintenance manual and a point of contact, so there's someone to call for day-to-day operations after opening." },
+  { id: '01', en: 'Feasibility', zh: 'Feasibility', title: 'Sorting and translating field surveys, artifacts, oral histories, and scientific data.', desc: "Before a single line is drawn, we complete the site survey, review code and structural constraints, and confirm client requirements, mapping site conditions and the budget ceiling up front so the design phase never runs into a scheme that turns out to be unbuildable.", outcome: 'By the end of this stage: a clear list of constraints and a budget ceiling.' },
+  { id: '02', en: 'Design & Engineering', zh: 'Design & Engineering', title: 'Starting from the core question to define the narrative framework.', desc: 'Design and structural engineering run in parallel, so the concept is buildable within site and code constraints from day one. Architectural, structural, and MEP drawings are cross-checked together, cutting the risk of conflicts surfacing during construction and sending drawings back to the drawing board.', outcome: 'By the end of this stage: complete, buildable drawings and a structural scheme.' },
+  { id: '03', en: 'Fabrication & Testing', zh: 'Fabrication & Testing', title: '', desc: 'We fabricate everything in-house, testing mechanical, lighting, and AV systems before anything leaves the workshop. Every unit goes through trial assembly and quality checks before shipping, so problems get solved in the workshop rather than on site.', outcome: 'By the end of this stage: units tested and verified before they leave the workshop.' },
+  { id: '04', en: 'On-site Installation', zh: 'On-site Installation', title: 'The same team handles on-site assembly, keeping drawings and reality aligned.', desc: "We install trade by trade on schedule under our own site management, coordinating with venue operations and any third-party inspectors. Progress and quality are managed in step, so drawings and the built result stay consistent at every handoff between trades.", outcome: 'By the end of this stage: progress control that keeps drawings and the site consistent.' },
+  { id: '05', en: 'Opening Handover', zh: 'Opening Handover', title: 'One final walkthrough to fine-tune the pacing of light and text.', desc: "We close with a final walkthrough, documentation, and sign-off with the client, completing any licensor or regulatory procedures along the way and leaving behind a complete maintenance manual and a point of contact, so there's someone to call for day-to-day operations after opening.", outcome: 'By the end of this stage: a maintenance manual and an ongoing point of contact.' },
 ];
 
 const services = [
@@ -64,7 +64,7 @@ const services = [
   { n: '02', zh: 'Exhibition Design', en: 'Exhibition Design', headline: 'Space tells the story, and visitors walk into it.', desc: 'We design story-driven exhibitions for museums, aquariums, and cultural venues. Narrative, spatial planning, lighting, and interactive multimedia work together to turn an abstract theme into a concrete design that visitors can read simply by moving through the space.', img: '/images/exhibition-design-museum-gallery-corridor-letsuan-design.jpg', alt: 'Museum exhibition gallery corridor space design' },
   { n: '03', zh: 'Interior Design', en: 'Interior Design', headline: 'Spaces designed for people, not just for looks.', desc: 'As a licensed interior decorator, we design commercial and institutional interiors around how people actually move and gather. Zoning, circulation, and material choices are all planned so people can move through the space and use it without friction.', img: '/images/interior-design-executive-office-letsuan-design.jpg', alt: 'Corporate office interior design space' },
   { n: '04', zh: 'Visual Design', en: 'Visual Design', headline: 'A brand recognizable wherever you look.', desc: "We bring a client's brand identity, corporate identity system, and wayfinding design into real space. From the entrance signage to the environmental graphics inside and outside the venue, the logo system and visual tone stay faithful to the client's brand.", img: '/images/visual-design-wayfinding-signage-letsuan-design.jpg', alt: 'Venue wayfinding signage and environmental visual design' },
-  { n: '05', zh: 'Construction', en: 'Construction', headline: 'From groundbreaking to handover, the team stays on site.', desc: 'We handle exhibition-site engineering from design drawings through to completion, including construction and display fabrication. Our team runs fabrication and site management directly; specialized trades are carried out by partner teams under our direct supervision.', img: '/images/construction-site-supervisor-reviewing-plans-letsuan-design.jpg', alt: 'Construction site supervisor reviewing drawings on site' },
+  { n: '05', zh: 'Construction', en: 'Construction', headline: 'From groundbreaking to handover, the team stays on site.', desc: 'Our team handles exhibition-site engineering from design drawings through to completion, including construction and display fabrication. Our team runs fabrication and site management directly; specialized trades are carried out by partner teams under our direct supervision.', img: '/images/construction-site-supervisor-reviewing-plans-letsuan-design.jpg', alt: 'Construction site supervisor reviewing drawings on site' },
   { n: '06', zh: 'Multimedia & Interactive Design', en: 'Multimedia & Interactive Design', headline: "Exhibits that respond to visitors in real time, not just something to watch.", desc: "We plan sensor-triggered, projection, and interactive-screen installations, so content responds in real time to a visitor's movement and dwell time. Technical planning, content scripting, and hardware/software integration are handled by the same team, keeping everything running reliably on site.", img: '/images/multimedia-interactive-touch-table-exhibit-letsuan-design.jpg', alt: 'Visitor operating an interactive touch-table exhibit' },
 ];
 
@@ -88,30 +88,17 @@ const capabilities = [
     <section id="hero">
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
-          <h1 class="ltsuan-h1" data-hero-h1>Giving Space<br /><span class="ltsuan-h1-accent">Concrete Form</span></h1>
+          <h1 class="ltsuan-h1" data-hero-h1>Here,<br /><span class="ltsuan-h1-nowrap">it's not just a display of objects.</span><br /><span class="ltsuan-h1-accent">It's letting people<br />walk into the story.</span></h1>
           <p class="ltsuan-hero-tagline-en" data-hero-tagline>We design how people move through ideas.</p>
-          <p class="ltsuan-lead" data-hero-lead>From the first site survey to final handover, one team stays accountable for every stage: feasibility, design, fabrication, and installation. That keeps complex work easy to follow, so the experience unfolds naturally.</p>
+          <p class="ltsuan-lead" data-hero-lead>An exhibition doesn't succeed because its objects are rare. It succeeds by what visitors carry away when they leave: the understanding, the feeling.<br />Letsuan Design starts from circulation, light, and narrative, turning knowledge into an experience you can walk through.</p>
         </div>
         <div class="ltsuan-hero-panel">
           <div class="ltsuan-hero-card">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.avif 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.avif 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.avif 1430w"
-                sizes="(max-width: 900px) 92vw, 40vw"
-              />
-              <img
-                class="ltsuan-hero-card-photo"
-                src="/images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg"
-                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.jpg 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.jpg 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg 1430w"
-                sizes="(max-width: 900px) 92vw, 40vw"
-                width="1430"
-                height="1402"
-                alt="Letsuan Design team reviewing architectural floor plans and sketches on a glass wall"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </picture>
+            <div class="ltsuan-hero-card-doc"></div>
+            <div class="ltsuan-hero-card-tag">
+              <span class="ltsuan-hero-card-tag-rule"></span>
+              <span class="ltsuan-hero-card-tag-dot"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +118,8 @@ const capabilities = [
           <p class="ltsuan-stat-caption">EST. 2014 — CONTINUOUS PRACTICE</p>
         </div>
         <div class="ltsuan-why-copy">
-          <h2 class="ltsuan-why-h2">Why insist on <span class="ltsuan-pill">integrated design-build?</span><br />Because drawings are imagination, and the site is the experience.</h2>
+          <h2 class="ltsuan-why-h2">Don't let the story get lost on the construction floor.</h2>
+          <p class="ltsuan-why-subhead">Why insist on integrated design-build? Because drawings are imagination, and the site is the experience.</p>
           <p class="ltsuan-why-highlight">A hairsbreadth of misalignment in a lighting angle, a sliver of a gap between a case and the wall: each is a hole in the story. Drawings never make it to the site. Only one team, staying on it end to end, can keep that story intact once it's built.</p>
           <div class="ltsuan-why-cols">
             <div class="ltsuan-why-text">
@@ -147,7 +135,7 @@ const capabilities = [
               <div class="ltsuan-why-tags">
                 <span>Fabrication Integration</span>
                 <span>On-Site Assembly</span>
-                <span>Lighting Integration</span>
+                <span>MEP &amp; Lighting Integration</span>
               </div>
             </div>
           </div>
@@ -217,7 +205,9 @@ const capabilities = [
           <span class="ltsuan-process-detail-rule"></span>
           <span class="ltsuan-process-detail-en" data-process-detail-en>FEASIBILITY</span>
         </div>
+        <p class="ltsuan-process-detail-title" data-process-detail-title hidden={!processSteps[0].title}>{processSteps[0].title}</p>
         <p class="ltsuan-process-detail-desc" data-process-detail-desc>{processSteps[0].desc}</p>
+        <p class="ltsuan-process-detail-outcome" data-process-detail-outcome>{processSteps[0].outcome}</p>
       </div>
 
       <div class="ltsuan-process-mobile">
@@ -228,7 +218,9 @@ const capabilities = [
               <span class="ltsuan-process-mobile-dot"></span>
               <span class="ltsuan-process-mobile-zh">{step.zh}</span>
             </summary>
+            {step.title && <p class="ltsuan-process-mobile-title">{step.title}</p>}
             <p>{step.desc}</p>
+            <p class="ltsuan-process-mobile-outcome">{step.outcome}</p>
           </details>
         ))}
       </div>
@@ -302,8 +294,10 @@ const capabilities = [
   const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.ltsuan-process-btn'));
   const detailId = document.querySelector<HTMLElement>('[data-process-detail-id]');
   const detailEn = document.querySelector<HTMLElement>('[data-process-detail-en]');
+  const detailTitle = document.querySelector<HTMLElement>('[data-process-detail-title]');
   const detailDesc = document.querySelector<HTMLElement>('[data-process-detail-desc]');
-  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; desc: string }>;
+  const detailOutcome = document.querySelector<HTMLElement>('[data-process-detail-outcome]');
+  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title?: string; desc: string; outcome?: string }>;
 
   function setStep(index: number) {
     const step = steps[index];
@@ -318,7 +312,12 @@ const capabilities = [
     });
     if (detailId) detailId.textContent = step.id;
     if (detailEn) detailEn.textContent = step.en.toUpperCase();
+    if (detailTitle) {
+      detailTitle.textContent = step.title || '';
+      detailTitle.hidden = !step.title;
+    }
     if (detailDesc) detailDesc.textContent = step.desc;
+    if (detailOutcome) detailOutcome.textContent = step.outcome || '';
   }
 
   setStep(0);
@@ -347,9 +346,15 @@ const capabilities = [
     const startRect = buttons[1].getBoundingClientRect();
     const endRect = buttons[3].getBoundingClientRect();
     const insetLeft = `${startRect.left - boxRect.left - boxPaddingLeft}px`;
+    const width = `${endRect.right - startRect.left}px`;
     detailDesc.style.marginLeft = insetLeft;
-    detailDesc.style.width = `${endRect.right - startRect.left}px`;
+    detailDesc.style.width = width;
     detailHead.style.marginLeft = insetLeft;
+    if (detailTitle) detailTitle.style.marginLeft = insetLeft;
+    if (detailOutcome) {
+      detailOutcome.style.marginLeft = insetLeft;
+      detailOutcome.style.width = width;
+    }
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
@@ -428,6 +433,9 @@ const capabilities = [
   .ltsuan-h1-accent {
     color: var(--ltsuan-accent);
   }
+  .ltsuan-h1-nowrap {
+    white-space: nowrap;
+  }
   .ltsuan-hero-tagline-en {
     margin: 18px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
@@ -467,13 +475,57 @@ const capabilities = [
     background: #141414;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 0, 0, 0.25);
   }
-  .ltsuan-hero-card-photo {
+  .ltsuan-hero-card-doc {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
+    inset: 8%;
+    border-radius: 3px;
+    background: #0a0a0a;
+    border: 1px solid rgba(244, 239, 232, 0.04);
+  }
+  .ltsuan-hero-card-doc::after {
+    content: '';
+    position: absolute;
+    bottom: 14%;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag {
+    position: absolute;
+    right: 22%;
+    top: 30%;
+    height: 44%;
+    width: 28%;
+    min-width: 90px;
+    border-radius: 7px;
+    background: #1c1c1c;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    padding: 12px;
+  }
+  .ltsuan-hero-card-tag-label {
+    position: absolute;
+    left: 14%;
+    top: 18%;
+    font-size: 7px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .ltsuan-hero-card-tag-rule {
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    top: 34%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag-dot {
+    position: absolute;
+    left: 14%;
+    bottom: 18%;
+    height: 28%;
+    width: 1px;
+    background: var(--ltsuan-accent);
   }
   .ltsuan-hero-card-foot {
     position: absolute;
@@ -564,6 +616,7 @@ const capabilities = [
   }
   .ltsuan-stat-caption {
     margin: 32px 0 0;
+    padding-left: calc(0.66 * clamp(64px, 8vw, 96px));
     max-width: 26ch;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 11px;
@@ -579,6 +632,14 @@ const capabilities = [
   }
   .ltsuan-pill {
     color: var(--ltsuan-accent);
+  }
+  .ltsuan-why-subhead {
+    margin: 14px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.6;
+    color: var(--ltsuan-text);
   }
   .ltsuan-why-highlight {
     margin: 16px 0 0;
@@ -770,7 +831,7 @@ const capabilities = [
   .ltsuan-service-headline {
     margin: 12px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
     color: var(--ltsuan-accent);
   }
@@ -928,11 +989,31 @@ const capabilities = [
     letter-spacing: 0.18em;
     color: rgba(244, 239, 232, 0.4);
   }
+  .ltsuan-process-detail-title {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ltsuan-accent);
+  }
   .ltsuan-process-detail-desc {
     margin: 16px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 17px;
     line-height: 1.7;
+  }
+  .ltsuan-process-detail-title:not([hidden]) + .ltsuan-process-detail-desc {
+    margin-top: 8px;
+  }
+  .ltsuan-process-detail-outcome {
+    margin: 20px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(244, 239, 232, 0.1);
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.55);
   }
   .ltsuan-process-mobile {
     position: relative;
@@ -981,6 +1062,19 @@ const capabilities = [
     font-size: 13px;
     line-height: 1.7;
     color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-process-mobile-item p.ltsuan-process-mobile-title {
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-process-mobile-title + p {
+    margin-top: 4px;
+  }
+  .ltsuan-process-mobile-item p.ltsuan-process-mobile-outcome {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(244, 239, 232, 0.08);
+    font-size: 12px;
+    color: rgba(244, 239, 232, 0.5);
   }
 
   /* Capabilities */

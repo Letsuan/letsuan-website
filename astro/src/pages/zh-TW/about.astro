@@ -383,6 +383,15 @@ const faqJsonLd = {
   const esgSteps = JSON.parse(document.getElementById('ltsuan-esg-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title: string; labels: Record<number, string>; paragraphs: string[] }>;
   let esgCurrentIndex = 0;
 
+  // Astro scopes component styles with a data-astro-cid-* attribute added at build time.
+  // Elements created here via the DOM API never get that attribute, so scoped styles
+  // (flex layout, accent colors) silently fail to apply unless we copy it over by hand.
+  const esgScopeAttr = esgDetailDesc && Array.from(esgDetailDesc.attributes).find((a) => a.name.startsWith('data-astro-cid-'))?.name;
+  function scopeEl<T extends HTMLElement>(el: T): T {
+    if (esgScopeAttr) el.setAttribute(esgScopeAttr, '');
+    return el;
+  }
+
   function syncEsgFillWidth() {
     if (!esgTrack || !esgFill) return;
     if (esgCurrentIndex === esgButtons.length - 1) {
@@ -420,25 +429,25 @@ const faqJsonLd = {
         const { marker, rest } = splitParagraphClient(p);
         const label = step.labels[pi];
         if (marker && label) {
-          const wrap = document.createElement('div');
+          const wrap = scopeEl(document.createElement('div'));
           wrap.className = 'ltsuan-esg-point';
-          const head = document.createElement('div');
+          const head = scopeEl(document.createElement('div'));
           head.className = 'ltsuan-esg-point-head';
-          const markerSpan = document.createElement('span');
+          const markerSpan = scopeEl(document.createElement('span'));
           markerSpan.className = 'ltsuan-esg-para-marker';
           markerSpan.textContent = marker;
-          const labelSpan = document.createElement('span');
+          const labelSpan = scopeEl(document.createElement('span'));
           labelSpan.className = 'ltsuan-esg-point-label';
           labelSpan.textContent = label;
           head.appendChild(markerSpan);
           head.appendChild(labelSpan);
-          const el = document.createElement('p');
+          const el = scopeEl(document.createElement('p'));
           el.textContent = rest;
           wrap.appendChild(head);
           wrap.appendChild(el);
           esgDetailDesc.appendChild(wrap);
         } else {
-          const el = document.createElement('p');
+          const el = scopeEl(document.createElement('p'));
           if (pi === 0) el.className = 'ltsuan-esg-para-lead';
           el.textContent = p;
           esgDetailDesc.appendChild(el);
@@ -698,6 +707,7 @@ const faqJsonLd = {
     align-items: center;
     gap: 12px;
     margin-bottom: 24px;
+    padding-left: calc(0.66 * clamp(64px, 8vw, 96px));
   }
   .ltsuan-esg-eyebrow-rule {
     height: 1px;
