@@ -9,34 +9,46 @@ interface Props {
 const { slides = defaultSlides, autoAdvanceMs = 5000 } = Astro.props;
 
 const beamTwinkles = [
-  { style: 'left:8%;transform:rotate(3deg);animation-duration:3.4s;animation-delay:0s' },
-  { style: 'left:19%;transform:rotate(3deg);animation-duration:4.1s;animation-delay:1.6s' },
-  { style: 'left:33%;transform:rotate(3deg);animation-duration:3.8s;animation-delay:.6s' },
-  { style: 'left:61%;animation-duration:3.6s;animation-delay:1.1s' },
-  { style: 'left:76%;animation-duration:4.3s;animation-delay:3s' },
-  { style: 'left:90%;animation-duration:3.9s;animation-delay:2s' },
-  { style: 'left:4%;width:9.8px;transform:rotate(3deg);animation-duration:2.9s;animation-delay:1.3s' },
-  { style: 'left:15%;width:9.8px;transform:rotate(3deg);animation-duration:3.7s;animation-delay:2.7s' },
-  { style: 'left:26%;width:9.8px;transform:rotate(3deg);animation-duration:3.1s;animation-delay:.2s' },
-  { style: 'left:44%;width:9.8px;transform:rotate(0deg);animation-duration:4.4s;animation-delay:1.9s' },
-  { style: 'left:56%;width:9.8px;transform:rotate(0deg);animation-duration:2.6s;animation-delay:.9s' },
-  { style: 'left:69%;width:9.8px;animation-duration:3.9s;animation-delay:3.3s' },
-  { style: 'left:84%;width:9.8px;animation-duration:3.3s;animation-delay:.4s' },
-  { style: 'left:97%;width:9.8px;animation-duration:4.7s;animation-delay:2.2s' },
+  { style: 'left:8%;transform:rotate(3deg);--beam-duration:3.4s;--beam-delay:0s' },
+  { style: 'left:19%;transform:rotate(3deg);--beam-duration:4.1s;--beam-delay:1.6s' },
+  { style: 'left:33%;transform:rotate(3deg);--beam-duration:3.8s;--beam-delay:.6s' },
+  { style: 'left:61%;--beam-duration:3.6s;--beam-delay:1.1s' },
+  { style: 'left:76%;--beam-duration:4.3s;--beam-delay:3s' },
+  { style: 'left:90%;--beam-duration:3.9s;--beam-delay:2s' },
+  { style: 'left:4%;width:9.8px;transform:rotate(3deg);--beam-duration:2.9s;--beam-delay:1.3s' },
+  { style: 'left:15%;width:9.8px;transform:rotate(3deg);--beam-duration:3.7s;--beam-delay:2.7s' },
+  { style: 'left:26%;width:9.8px;transform:rotate(3deg);--beam-duration:3.1s;--beam-delay:.2s' },
+  { style: 'left:44%;width:9.8px;transform:rotate(0deg);--beam-duration:4.4s;--beam-delay:1.9s' },
+  { style: 'left:56%;width:9.8px;transform:rotate(0deg);--beam-duration:2.6s;--beam-delay:.9s' },
+  { style: 'left:69%;width:9.8px;--beam-duration:3.9s;--beam-delay:3.3s' },
+  { style: 'left:84%;width:9.8px;--beam-duration:3.3s;--beam-delay:.4s' },
+  { style: 'left:97%;width:9.8px;--beam-duration:4.7s;--beam-delay:2.2s' },
 ];
+
+const speedStreakColors = ['#ffffff', '#bfe4ff', '#7ec8e3', '#ffd98a'];
+const speedStreaks = Array.from({ length: 14 }, () => {
+  const width = (Math.random() * 3.2 + 0.3).toFixed(2);
+  const left = (Math.random() * 100).toFixed(1);
+  const color = speedStreakColors[Math.floor(Math.random() * speedStreakColors.length)];
+  const duration = (Math.random() * 1.1 + 0.9).toFixed(2);
+  const delay = (Math.random() * 2.6).toFixed(2);
+  const brightness = (Math.random() * 0.9 + 0.5).toFixed(2);
+  return {
+    style: `left:${left}%;width:${width}px;--streak-color:${color};--streak-brightness:${brightness};--streak-duration:${duration}s;--streak-delay:${delay}s`,
+  };
+});
 ---
 
 <section id="hero" data-auto-ms={autoAdvanceMs}>
   {slides.map((slide, i) => {
     const isActive = i === 0;
     const TitleTag = isActive ? 'h1' : 'div';
-    const panClass = i === 2 ? 'ltsuan-pan-lr ltsuan-zoom-in' : 'ltsuan-slow-parallax';
-    const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : i === 2 ? 'ltsuan-person-grow' : '';
-    const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker' : '';
-    const bgWrapClass = i === 2 ? 'ltsuan-bg-disc-spin' : '';
+    const panClass = i === 2 ? 'ltsuan-hero3-reveal' : 'ltsuan-slow-parallax';
+    const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : '';
+    const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker ltsuan-hero3-person-flyin' : '';
     return (
       <div class="ltsuan-hero-layer" data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
-        <div class:list={['ltsuan-hero-bg-wrap', bgWrapClass]}>
+        <div class="ltsuan-hero-bg-wrap">
           <picture class="ltsuan-hero-bg-picture">
             <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="(max-width: 900px) 180vw, 115vw" />
             <img
@@ -74,6 +86,13 @@ const beamTwinkles = [
               ))}
             </>
           )}
+          {i === 2 && (
+            <div class="ltsuan-hero-intro-streaks">
+              {speedStreaks.map((streak) => (
+                <div class="ltsuan-speed-streak" style={streak.style}></div>
+              ))}
+            </div>
+          )}
         </div>
 
         {slide.personImg && (
@@ -106,7 +125,7 @@ const beamTwinkles = [
 
         <div class="ltsuan-hero-content-wrap">
           <div class="ltsuan-hero-container">
-            <div class="ltsuan-hero-text">
+            <div class:list={['ltsuan-hero-text', { 'ltsuan-hero3-text-flyin': i === 2 }]}>
               <TitleTag class="ltsuan-hero-title" style={[
                 slide.titleLineHeight ? `line-height:${slide.titleLineHeight}` : '',
                 slide.titleFontScale ? `--ltsuan-title-scale:${slide.titleFontScale}` : '',
@@ -121,7 +140,7 @@ const beamTwinkles = [
                 )}
               </TitleTag>
               <div class="ltsuan-hero-subtitle-wrap">
-                <p class:list={['ltsuan-hero-subtitle', 'ltsuan-reveal-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
+                <p class:list={['ltsuan-hero-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
                   {slide.subtitleLine1}
                   {slide.subtitleLine2 && (
                     <>
@@ -214,6 +233,7 @@ const beamTwinkles = [
     position: absolute;
     inset: 0;
     transform: scale(1.05);
+    transition: transform 0.2s ease-out;
   }
   .ltsuan-hero-bg-picture {
     display: block;
@@ -287,6 +307,8 @@ const beamTwinkles = [
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 35%, #000 65%, transparent 100%);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 35%, rgba(255, 255, 255, 0.9) 65%, rgba(255, 255, 255, 0) 100%);
     animation-name: ltsuanBeamTwinkle;
+    animation-duration: var(--beam-duration);
+    animation-delay: var(--beam-delay);
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
@@ -387,6 +409,26 @@ const beamTwinkles = [
   .ltsuan-reveal-button.is-revealed {
     transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.8s;
     transform: translateY(0%);
+  }
+  .ltsuan-hero-layer[data-idx='2'] .ltsuan-reveal-line1,
+  .ltsuan-hero-layer[data-idx='2'] .ltsuan-reveal-line2,
+  .ltsuan-hero-layer[data-idx='2'] .ltsuan-hero-subtitle,
+  .ltsuan-hero-layer[data-idx='2'] .ltsuan-reveal-button {
+    transition: none;
+    transform: translateY(0);
+  }
+  @keyframes ltsuanHero3TextFlyIn {
+    0% {
+      transform: translateY(60vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .ltsuan-hero3-text-flyin {
+    animation: ltsuanHero3TextFlyIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s 1 both;
   }
   .ltsuan-hero-cta {
     pointer-events: auto;
@@ -753,14 +795,6 @@ const beamTwinkles = [
       opacity: 1;
     }
   }
-  @keyframes ltsuanPanLR {
-    0% {
-      object-position: 85% 45%;
-    }
-    100% {
-      object-position: 15% 45%;
-    }
-  }
   @keyframes ltsuanSlowParallax {
     0% {
       transform: scale(1);
@@ -769,13 +803,22 @@ const beamTwinkles = [
       transform: scale(1.05);
     }
   }
-  @keyframes ltsuanZoomIn {
+  @keyframes ltsuanHero3BaseReveal {
     0% {
-      transform: scale(1) translateY(0);
+      transform: scale(1.22);
+    }
+    75% {
+      transform: scale(1.05);
     }
     100% {
-      transform: scale(0.96) translateY(0);
+      transform: scale(1);
     }
+  }
+  .ltsuan-hero3-reveal {
+    filter: blur(2.53px);
+    will-change: transform;
+    backface-visibility: hidden;
+    animation: ltsuanHero3BaseReveal 6s linear 3s 1 both;
   }
   @keyframes ltsuanPersonGrow {
     0% {
@@ -803,15 +846,24 @@ const beamTwinkles = [
       filter: brightness(0.8) contrast(1.35) saturate(1.05);
     }
   }
-  @keyframes ltsuanIntroParallax {
+  @keyframes ltsuanIntroSlideDownShake {
     0% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
-    50% {
-      transform: translateY(-1.4%);
+    15% {
+      transform: translateX(-1.2%);
+    }
+    35% {
+      transform: translateX(1%);
+    }
+    55% {
+      transform: translateX(-0.6%);
+    }
+    75% {
+      transform: translateX(0.4%);
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
   @keyframes ltsuanIntroFadeOut {
@@ -824,23 +876,50 @@ const beamTwinkles = [
   }
   .ltsuan-hero-intro-bg {
     pointer-events: none;
-    animation: ltsuanIntroFadeOut 0.9s ease-in-out 2.5s forwards;
+    animation: ltsuanIntroFadeOut 1.3s ease-in-out 3s forwards;
+  }
+  .ltsuan-hero-intro-streaks {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    animation: ltsuanIntroFadeOut 1.3s ease-in-out 3s forwards;
+  }
+  .ltsuan-speed-streak {
+    position: absolute;
+    top: -25%;
+    height: 150%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: brightness(var(--streak-brightness));
+    background: linear-gradient(180deg, transparent 0%, transparent 55%, var(--streak-color) 100%);
+    animation-name: ltsuanStreakRun;
+    animation-duration: var(--streak-duration);
+    animation-delay: var(--streak-delay);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes ltsuanStreakRun {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
   }
   .ltsuan-hero-intro-img {
-    animation: ltsuanIntroParallax 2.5s ease-in-out 1;
+    animation: ltsuanIntroSlideDownShake 3s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
   }
   .ltsuan-slow-parallax {
     animation: ltsuanSlowParallax 9s ease-in-out infinite alternate;
-  }
-  .ltsuan-pan-lr {
-    animation: ltsuanPanLR 5s ease-in-out 1 forwards;
-  }
-  .ltsuan-zoom-in {
-    animation: ltsuanZoomIn 5s ease-out 1 forwards;
-  }
-  .ltsuan-person-grow {
-    animation: ltsuanPersonGrow 5s ease-out 1 forwards;
-    transform-origin: center bottom;
   }
   .ltsuan-person-grow-glow {
     transform-origin: center bottom;
@@ -851,22 +930,8 @@ const beamTwinkles = [
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards, none;
   }
-  @keyframes ltsuanDiscSpinIn {
-    0% {
-      transform: scale(0.4) rotate(-260deg);
-      opacity: 0;
-    }
-    45% {
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1.05) rotate(0deg);
-      opacity: 1;
-    }
-  }
-  .ltsuan-bg-disc-spin {
-    transform-origin: center center;
-    animation: ltsuanDiscSpinIn 2.2s cubic-bezier(0.22, 1, 0.36, 1) 1 both;
+  .ltsuan-hero3-person-flyin {
+    animation: ltsuanHero3TextFlyIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s 1 both;
   }
 </style>
 
@@ -920,7 +985,9 @@ const beamTwinkles = [
   function maybeStartAuto() {
     if (autoTimer) clearTimeout(autoTimer);
     if (!auto) return;
-    autoTimer = setTimeout(() => changeSlide((active + 1) % total), autoAdvanceMs);
+    const isSlide3 = layers[active].dataset.idx === '2';
+    const delay = isSlide3 ? 9000 : autoAdvanceMs;
+    autoTimer = setTimeout(() => changeSlide((active + 1) % total), delay);
   }
 
   function changeSlide(idx: number) {
@@ -932,10 +999,13 @@ const beamTwinkles = [
     entering.style.transition = '';
 
     restartAnimation(entering.querySelector('.ltsuan-hero-bg-img'));
-    restartAnimation(entering.querySelector('.ltsuan-hero-bg-wrap'));
+    const enteringBgWrap = entering.querySelector<HTMLElement>('.ltsuan-hero-bg-wrap');
+    if (enteringBgWrap) enteringBgWrap.style.transform = '';
     restartAnimation(entering.querySelector('.ltsuan-hero-person-img'));
     restartAnimation(entering.querySelector('.ltsuan-hero-intro-bg'));
     restartAnimation(entering.querySelector('.ltsuan-hero-intro-img'));
+    restartAnimation(entering.querySelector('.ltsuan-hero-intro-streaks'));
+    entering.querySelectorAll<HTMLElement>('.ltsuan-speed-streak').forEach(restartAnimation);
 
     transitioning = true;
     setRevealed(layers[active], false);
@@ -946,6 +1016,8 @@ const beamTwinkles = [
       active = idx;
       layers[active].style.zIndex = '2';
       layers[active].style.transform = 'translateY(0%)';
+      restartAnimation(layers[active].querySelector('.ltsuan-hero-person-box'));
+      restartAnimation(layers[active].querySelector('.ltsuan-hero3-text-flyin'));
       setRevealed(layers[active], true);
       transitioning = false;
       updateDots();
@@ -978,14 +1050,8 @@ const beamTwinkles = [
       parallaxRAF = null;
       const activeLayer = layers[active];
       const idx = Number(activeLayer.dataset.idx);
-      const personBox = activeLayer.querySelector<HTMLElement>('.ltsuan-hero-person-box');
-      if (idx === 2 && personBox) {
-        personBox.style.transition = 'transform .2s ease-out';
-        personBox.style.transform = `translate(${(nx * -15.4).toFixed(1)}px, ${(ny * -11).toFixed(1)}px)`;
-      }
       const bgWrap = activeLayer.querySelector<HTMLElement>('.ltsuan-hero-bg-wrap');
       if (idx === 2 && bgWrap) {
-        bgWrap.style.transition = 'transform .2s ease-out';
         bgWrap.style.transform = `translate(${(nx * -6.6).toFixed(1)}px, ${(ny * -5.5).toFixed(1)}px) scale(1.05)`;
       }
     });
@@ -995,8 +1061,6 @@ const beamTwinkles = [
     const activeLayer = layers[active];
     const idx = Number(activeLayer.dataset.idx);
     if (idx === 2) {
-      const personBox = activeLayer.querySelector<HTMLElement>('.ltsuan-hero-person-box');
-      if (personBox) personBox.style.transform = 'translate(0px, 0px)';
       const bgWrap = activeLayer.querySelector<HTMLElement>('.ltsuan-hero-bg-wrap');
       if (bgWrap) bgWrap.style.transform = 'scale(1.05)';
     }
