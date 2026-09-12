@@ -89,7 +89,6 @@ const capabilities = [
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
           <h1 class="ltsuan-h1" data-hero-h1>Here,<br /><span class="ltsuan-h1-nowrap">it's not just a display of objects.</span><br /><span class="ltsuan-h1-accent">It's letting people<br />walk into the story.</span></h1>
-          <p class="ltsuan-hero-tagline-en" data-hero-tagline>We design how people move through ideas.</p>
           <p class="ltsuan-lead" data-hero-lead>An exhibition doesn't succeed because its objects are rare. It succeeds by what visitors carry away when they leave: the understanding, the feeling.<br />Letsuan Design starts from circulation, light, and narrative, turning knowledge into an experience you can walk through.</p>
         </div>
         <div class="ltsuan-hero-panel">
@@ -415,6 +414,9 @@ const capabilities = [
     gap: 32px;
     align-items: start;
   }
+  .ltsuan-hero-copy {
+    margin-top: clamp(36px, 4.8vw, 68px);
+  }
   @media (max-width: 900px) {
     .ltsuan-hero-grid {
       grid-template-columns: 1fr;
@@ -425,7 +427,7 @@ const capabilities = [
     max-width: 100%;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: clamp(45px, 6vw, 85px);
+    font-size: clamp(36px, 4.8vw, 68px);
     line-height: 1.08;
     letter-spacing: -0.02em;
     margin: 0;
@@ -435,15 +437,6 @@ const capabilities = [
   }
   .ltsuan-h1-nowrap {
     white-space: nowrap;
-  }
-  .ltsuan-hero-tagline-en {
-    margin: 18px 0 0;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 15px;
-    letter-spacing: 0.02em;
-    color: rgba(244, 239, 232, 0.55);
   }
   .ltsuan-lead {
     box-sizing: border-box;
@@ -839,11 +832,11 @@ const capabilities = [
   /* Process */
   #process-steps {
     border-top: 1px solid var(--ltsuan-line);
-    padding: 56px 0;
+    padding: 28px 0 56px;
   }
   @media (min-width: 768px) {
     #process-steps {
-      padding: 80px 0;
+      padding: 40px 0 80px;
     }
   }
   .ltsuan-process-heading {
@@ -1080,11 +1073,11 @@ const capabilities = [
   /* Capabilities */
   #capabilities {
     border-top: 1px solid var(--ltsuan-line);
-    padding: 56px 0;
+    padding: 28px 0 56px;
   }
   @media (min-width: 768px) {
     #capabilities {
-      padding: 80px 0;
+      padding: 40px 0 80px;
     }
   }
   .ltsuan-section-h2 {
