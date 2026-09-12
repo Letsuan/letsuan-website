@@ -264,7 +264,7 @@ const faqJsonLd = {
         ))}
       </div>
 
-      <p class="ltsuan-esg-close">對我們而言，永續是風險管理，不是成本。<br /><br />它是對場域的尊重、對人的保護，以及對制度的負責。<br /><br />當這三件事被同一雙手同時做好，設計才有機會真正長久。</p>
+      <p class="ltsuan-esg-close">對我們而言，永續是風險管理，不是成本。<br />它是對場域的尊重、對人的保護，以及對制度的負責。<br />當這三件事被同一雙手同時做好，設計才有機會真正長久。</p>
     </section>
 
     <section id="clients">
@@ -511,6 +511,9 @@ const faqJsonLd = {
     gap: 32px;
     align-items: start;
   }
+  .ltsuan-hero-copy {
+    margin-top: calc(2 * clamp(38px, 5.4vw, 72px));
+  }
   @media (max-width: 900px) {
     .ltsuan-hero-grid {
       grid-template-columns: 1fr;
@@ -531,7 +534,7 @@ const faqJsonLd = {
   }
   .ltsuan-lead {
     box-sizing: border-box;
-    margin: 32px 0 0;
+    margin: 56px 0 0;
     max-width: 100%;
     padding-left: 20px;
     border-left: 1px solid rgba(140, 200, 30, 0.5);
