@@ -88,16 +88,30 @@ const capabilities = [
     <section id="hero">
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
-          <h1 class="ltsuan-h1" data-hero-h1>賦予空間<br /><span class="ltsuan-h1-accent">具體樣貌</span><span class="ltsuan-h1-dot"></span></h1>
-          <p class="ltsuan-lead" data-hero-lead>從現地會勘到最終交付，同一團隊全程負責可行性評估、設計、製作與安裝每個階段，讓複雜的專業知識變得容易理解，體驗自然而然展開。</p>
+          <h1 class="ltsuan-h1" data-hero-h1>展覽，<br />不只是物件的陳列。<br /><span class="ltsuan-h1-accent">而是讓人<br />走進故事裡。</span></h1>
+          <p class="ltsuan-hero-tagline-en" data-hero-tagline>We design how people move through ideas.</p>
+          <p class="ltsuan-lead" data-hero-lead>一個展覽的成功，不在於展品多稀有，而在於觀眾離開時，帶走了什麼樣的理解與感受。麗荃從動線、光與敘事出發，讓知識成為可被行走的體驗。</p>
         </div>
         <div class="ltsuan-hero-panel">
           <div class="ltsuan-hero-card">
-            <div class="ltsuan-hero-card-doc"></div>
-            <div class="ltsuan-hero-card-tag">
-              <span class="ltsuan-hero-card-tag-rule"></span>
-              <span class="ltsuan-hero-card-tag-dot"></span>
-            </div>
+            <picture>
+              <source
+                type="image/avif"
+                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.avif 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.avif 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.avif 1430w"
+                sizes="(max-width: 900px) 92vw, 40vw"
+              />
+              <img
+                class="ltsuan-hero-card-photo"
+                src="/images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg"
+                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.jpg 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.jpg 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg 1430w"
+                sizes="(max-width: 900px) 92vw, 40vw"
+                width="1430"
+                height="1402"
+                alt="麗荃室內裝修團隊在玻璃牆前討論建築平面圖與設計草稿"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -427,6 +441,15 @@ const capabilities = [
     border: 0.035em solid #f4efe8;
     vertical-align: middle;
   }
+  .ltsuan-hero-tagline-en {
+    margin: 18px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: rgba(244, 239, 232, 0.55);
+  }
   .ltsuan-lead {
     box-sizing: border-box;
     margin: 32px 0 0;
@@ -457,57 +480,13 @@ const capabilities = [
     background: #141414;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 0, 0, 0.25);
   }
-  .ltsuan-hero-card-doc {
+  .ltsuan-hero-card-photo {
     position: absolute;
-    inset: 8%;
-    border-radius: 3px;
-    background: #0a0a0a;
-    border: 1px solid rgba(244, 239, 232, 0.04);
-  }
-  .ltsuan-hero-card-doc::after {
-    content: '';
-    position: absolute;
-    bottom: 14%;
-    left: 12%;
-    right: 12%;
-    height: 1px;
-    background: rgba(244, 239, 232, 0.1);
-  }
-  .ltsuan-hero-card-tag {
-    position: absolute;
-    right: 22%;
-    top: 30%;
-    height: 44%;
-    width: 28%;
-    min-width: 90px;
-    border-radius: 7px;
-    background: #1c1c1c;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
-    padding: 12px;
-  }
-  .ltsuan-hero-card-tag-label {
-    position: absolute;
-    left: 14%;
-    top: 18%;
-    font-size: 7px;
-    letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.4);
-  }
-  .ltsuan-hero-card-tag-rule {
-    position: absolute;
-    left: 14%;
-    right: 14%;
-    top: 34%;
-    height: 1px;
-    background: rgba(244, 239, 232, 0.1);
-  }
-  .ltsuan-hero-card-tag-dot {
-    position: absolute;
-    left: 14%;
-    bottom: 18%;
-    height: 28%;
-    width: 1px;
-    background: var(--ltsuan-accent);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
   }
   .ltsuan-hero-card-foot {
     position: absolute;
