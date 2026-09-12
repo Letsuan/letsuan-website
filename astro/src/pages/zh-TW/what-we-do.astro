@@ -52,11 +52,11 @@ const pageJsonLd = {
 };
 
 const processSteps = [
-  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', title: '田野、文物、口述與科學資料的梳理與轉譯', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。' },
-  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', title: '從核心提問出發，定義敘事框架', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。' },
-  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', title: '', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。' },
-  { id: '04', en: 'On-site Installation', zh: '工程安裝', title: '同一團隊進場組裝，確保圖面與現場一致', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。' },
-  { id: '05', en: 'Handover', zh: '開幕交付', title: '最後一次走查，調整光與文字的呼吸', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。' },
+  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', title: '田野、文物、口述與科學資料的梳理與轉譯', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。', outcome: '這階段結束時：清楚的限制清單與預算天花板。' },
+  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', title: '從核心提問出發，定義敘事框架', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。', outcome: '這階段結束時：可施作的完整圖面與結構方案。' },
+  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', title: '', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。', outcome: '這階段結束時：出廠前已測試完成的單元。' },
+  { id: '04', en: 'On-site Installation', zh: '工程安裝', title: '同一團隊進場組裝，確保圖面與現場一致', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。', outcome: '這階段結束時：圖面與現場一致的進度控管。' },
+  { id: '05', en: 'Handover', zh: '開幕交付', title: '最後一次走查，調整光與文字的呼吸', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。', outcome: '這階段結束時：維護手冊與後續維護窗口。' },
 ];
 
 const services = [
@@ -208,6 +208,7 @@ const capabilities = [
         </div>
         <p class="ltsuan-process-detail-title" data-process-detail-title hidden={!processSteps[0].title}>{processSteps[0].title}</p>
         <p class="ltsuan-process-detail-desc" data-process-detail-desc>{processSteps[0].desc}</p>
+        <p class="ltsuan-process-detail-outcome" data-process-detail-outcome>{processSteps[0].outcome}</p>
       </div>
 
       <div class="ltsuan-process-mobile">
@@ -221,6 +222,7 @@ const capabilities = [
             </summary>
             {step.title && <p class="ltsuan-process-mobile-title">{step.title}</p>}
             <p>{step.desc}</p>
+            <p class="ltsuan-process-mobile-outcome">{step.outcome}</p>
           </details>
         ))}
       </div>
@@ -297,7 +299,8 @@ const capabilities = [
   const detailEn = document.querySelector<HTMLElement>('[data-process-detail-en]');
   const detailTitle = document.querySelector<HTMLElement>('[data-process-detail-title]');
   const detailDesc = document.querySelector<HTMLElement>('[data-process-detail-desc]');
-  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title?: string; desc: string }>;
+  const detailOutcome = document.querySelector<HTMLElement>('[data-process-detail-outcome]');
+  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title?: string; desc: string; outcome?: string }>;
 
   function setStep(index: number) {
     const step = steps[index];
@@ -317,6 +320,7 @@ const capabilities = [
       detailTitle.hidden = !step.title;
     }
     if (detailDesc) detailDesc.textContent = step.desc;
+    if (detailOutcome) detailOutcome.textContent = step.outcome || '';
   }
 
   setStep(0);
@@ -345,10 +349,15 @@ const capabilities = [
     const startRect = buttons[1].getBoundingClientRect();
     const endRect = buttons[3].getBoundingClientRect();
     const insetLeft = `${startRect.left - boxRect.left - boxPaddingLeft}px`;
+    const width = `${endRect.right - startRect.left}px`;
     detailDesc.style.marginLeft = insetLeft;
-    detailDesc.style.width = `${endRect.right - startRect.left}px`;
+    detailDesc.style.width = width;
     detailHead.style.marginLeft = insetLeft;
     if (detailTitle) detailTitle.style.marginLeft = insetLeft;
+    if (detailOutcome) {
+      detailOutcome.style.marginLeft = insetLeft;
+      detailOutcome.style.width = width;
+    }
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
@@ -1013,6 +1022,15 @@ const capabilities = [
   .ltsuan-process-detail-title:not([hidden]) + .ltsuan-process-detail-desc {
     margin-top: 8px;
   }
+  .ltsuan-process-detail-outcome {
+    margin: 20px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(244, 239, 232, 0.1);
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(244, 239, 232, 0.55);
+  }
   .ltsuan-process-mobile {
     position: relative;
     padding-left: 24px;
@@ -1071,6 +1089,13 @@ const capabilities = [
   }
   .ltsuan-process-mobile-title + p {
     margin-top: 4px;
+  }
+  .ltsuan-process-mobile-item p.ltsuan-process-mobile-outcome {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(244, 239, 232, 0.08);
+    font-size: 12px;
+    color: rgba(244, 239, 232, 0.5);
   }
 
   /* Capabilities */
