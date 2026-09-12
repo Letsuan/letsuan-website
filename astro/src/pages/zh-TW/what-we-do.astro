@@ -52,20 +52,20 @@ const pageJsonLd = {
 };
 
 const processSteps = [
-  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。' },
-  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。' },
-  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。' },
-  { id: '04', en: 'On-site Installation', zh: '工程安裝', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。' },
-  { id: '05', en: 'Handover', zh: '驗收與交付', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。' },
+  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', title: '田野、文物、口述與科學資料的梳理與轉譯', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。' },
+  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', title: '從核心提問出發，定義敘事框架', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。' },
+  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', title: '', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。' },
+  { id: '04', en: 'On-site Installation', zh: '工程安裝', title: '同一團隊進場組裝，確保圖面與現場一致', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。' },
+  { id: '05', en: 'Handover', zh: '開幕交付', title: '最後一次走查，調整光與文字的呼吸', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。' },
 ];
 
 const services = [
-  { n: '01', zh: '策展服務', en: 'Curatorial Services', headline: '一場好的展覽，從一個好的觀點開始。', desc: '我們負責完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。十二年博物館與展覽經驗，讓我們懂得如何訂出主題方向、把研究轉化為內容，並理清展示邏輯。', img: '/images/curatorial-services-team-reviewing-concept-letsuan-design.jpg', alt: '策展團隊圍桌檢視展覽概念草稿' },
+  { n: '01', zh: '策展服務', en: 'Curatorial Services', headline: '一場好的展覽，從一個好的觀點開始。', desc: '完整的策展規劃：概念發展、內容研究，以及每一檔展覽的敘事腳本撰寫。十二年博物館與展覽經驗，讓我們懂得如何訂出主題方向、把研究轉化為內容，並理清展示邏輯。', img: '/images/curatorial-services-team-reviewing-concept-letsuan-design.jpg', alt: '策展團隊圍桌檢視展覽概念草稿' },
   { n: '02', zh: '展覽設計', en: 'Exhibition Design', headline: '空間訴說故事，訪客走進其中。', desc: '為博物館、水族館與文化場館設計以故事為核心的展覽。敘事、空間規劃、燈光與互動多媒體共同運作，把抽象主題轉化為訪客走過空間就能讀懂的具體設計。', img: '/images/exhibition-design-museum-gallery-corridor-letsuan-design.jpg', alt: '博物館展覽廊道空間設計' },
   { n: '03', zh: '室內設計', en: 'Interior Design', headline: '為人設計的空間，不只是好看而已。', desc: '身為持照室內裝修業者，我們依照人們實際的移動與聚集方式來設計商業與機構室內空間。空間分區、動線與材質選擇都經過規劃，讓人們能順暢地走進、使用這個空間。', img: '/images/interior-design-executive-office-letsuan-design.jpg', alt: '企業辦公室室內設計空間' },
-  { n: '04', zh: '視覺設計', en: 'Visual Design', headline: '走到哪都認得出的品牌。', desc: '我們把客戶的品牌識別、企業識別系統與指標設計，實現在真實的空間裡。從入口招牌到場館內外的環境圖像，logo 系統與視覺調性都忠實延續客戶的品牌樣貌。', img: '/images/visual-design-wayfinding-signage-letsuan-design.jpg', alt: '場館指標與環境視覺設計' },
-  { n: '05', zh: '工程建造', en: 'Construction', headline: '從動工到交付，團隊全程在場。', desc: '我們負責展場工程從設計圖到完工的全部過程，包含施工與展示製作。團隊直接進行製作與工地管理，專業工項則由合作團隊在我們直接監督下執行。', img: '/images/construction-site-supervisor-reviewing-plans-letsuan-design.jpg', alt: '工地主管於施工現場檢視圖面' },
-  { n: '06', zh: '多媒體互動設計', en: 'Multimedia & Interactive Design', headline: '讓展示與觀眾即時互動，而不只是被動觀看。', desc: '我們規劃感應觸發、投影與互動螢幕等多媒體裝置，讓內容隨著觀眾的動作與停留即時回應。技術規劃、內容腳本與軟硬體整合由同一團隊負責，確保現場穩定運作。', img: '/images/multimedia-interactive-touch-table-exhibit-letsuan-design.jpg', alt: '訪客操作互動觸控展示桌' },
+  { n: '04', zh: '視覺設計', en: 'Visual Design', headline: '走到哪都認得出的品牌。', desc: '把客戶的品牌識別、企業識別系統與指標設計，實現在真實的空間裡。從入口招牌到場館內外的環境圖像，logo 系統與視覺調性都忠實延續客戶的品牌樣貌。', img: '/images/visual-design-wayfinding-signage-letsuan-design.jpg', alt: '場館指標與環境視覺設計' },
+  { n: '05', zh: '工程建造', en: 'Construction', headline: '從動工到交付，團隊全程在場。', desc: '團隊負責展場工程從設計圖到完工的全部過程，包含施工與展示製作。團隊直接進行製作與工地管理，專業工項則由合作團隊在我們直接監督下執行。', img: '/images/construction-site-supervisor-reviewing-plans-letsuan-design.jpg', alt: '工地主管於施工現場檢視圖面' },
+  { n: '06', zh: '多媒體互動設計', en: 'Multimedia & Interactive Design', headline: '讓展示與觀眾即時互動，而不只是被動觀看。', desc: '規劃感應觸發、投影與互動螢幕等多媒體裝置，讓內容隨著觀眾的動作與停留即時回應。技術規劃、內容腳本與軟硬體整合由同一團隊負責，確保現場穩定運作。', img: '/images/multimedia-interactive-touch-table-exhibit-letsuan-design.jpg', alt: '訪客操作互動觸控展示桌' },
 ];
 
 const capabilities = [
@@ -88,30 +88,16 @@ const capabilities = [
     <section id="hero">
       <div class="ltsuan-hero-grid">
         <div class="ltsuan-hero-copy">
-          <h1 class="ltsuan-h1" data-hero-h1>展覽，<br />不只是物件的陳列。<br /><span class="ltsuan-h1-accent">而是讓人<br />走進故事裡。</span></h1>
-          <p class="ltsuan-hero-tagline-en" data-hero-tagline>We design how people move through ideas.</p>
+          <h1 class="ltsuan-h1" data-hero-h1>這裡，<br /><span class="ltsuan-h1-nowrap">不只是物件的陳列。</span><br /><span class="ltsuan-h1-accent">而是讓人<br />走進故事裡。</span></h1>
           <p class="ltsuan-lead" data-hero-lead>一個展覽的成功，不在於展品多稀有，而在於觀眾離開時，帶走了什麼樣的理解與感受。麗荃從動線、光與敘事出發，讓知識成為可被行走的體驗。</p>
         </div>
         <div class="ltsuan-hero-panel">
           <div class="ltsuan-hero-card">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.avif 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.avif 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.avif 1430w"
-                sizes="(max-width: 900px) 92vw, 40vw"
-              />
-              <img
-                class="ltsuan-hero-card-photo"
-                src="/images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg"
-                srcset="/images/what-we-do-hero-team-sketch-wall-letsuan-design-960w.jpg 960w, /images/what-we-do-hero-team-sketch-wall-letsuan-design-1920w.jpg 1920w, /images/what-we-do-hero-team-sketch-wall-letsuan-design.jpg 1430w"
-                sizes="(max-width: 900px) 92vw, 40vw"
-                width="1430"
-                height="1402"
-                alt="麗荃室內裝修團隊在玻璃牆前討論建築平面圖與設計草稿"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </picture>
+            <div class="ltsuan-hero-card-doc"></div>
+            <div class="ltsuan-hero-card-tag">
+              <span class="ltsuan-hero-card-tag-rule"></span>
+              <span class="ltsuan-hero-card-tag-dot"></span>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +117,8 @@ const capabilities = [
           <p class="ltsuan-stat-caption">EST. 2014 — CONTINUOUS PRACTICE</p>
         </div>
         <div class="ltsuan-why-copy">
-          <h2 class="ltsuan-why-h2">為什麼堅持 <span class="ltsuan-pill">設計施工一體？</span><br />因為圖面是想像，現場才是體驗。</h2>
+          <h2 class="ltsuan-why-h2">不讓敘事，在工地裡走散。</h2>
+          <p class="ltsuan-why-subhead">為什麼堅持 設計施工一體？因為圖面是想像，現場才是體驗。</p>
           <p class="ltsuan-why-highlight">燈光角度的毫釐之差，展櫃與牆面間的細微落差，都是敘事的破綻。圖面到不了現場，唯有同一個團隊，能讓當初的敘事在現場不被折損。</p>
           <div class="ltsuan-why-cols">
             <div class="ltsuan-why-text">
@@ -147,7 +134,7 @@ const capabilities = [
               <div class="ltsuan-why-tags">
                 <span>製作整合</span>
                 <span>現場組裝</span>
-                <span>燈光整合</span>
+                <span>機電燈光整合</span>
               </div>
             </div>
           </div>
@@ -219,6 +206,7 @@ const capabilities = [
           <span class="ltsuan-process-detail-rule"></span>
           <span class="ltsuan-process-detail-en" data-process-detail-en>FEASIBILITY</span>
         </div>
+        <p class="ltsuan-process-detail-title" data-process-detail-title hidden={!processSteps[0].title}>{processSteps[0].title}</p>
         <p class="ltsuan-process-detail-desc" data-process-detail-desc>{processSteps[0].desc}</p>
       </div>
 
@@ -231,6 +219,7 @@ const capabilities = [
               <span class="ltsuan-process-mobile-zh">{step.zh}</span>
               <span class="ltsuan-process-mobile-en">{step.en}</span>
             </summary>
+            {step.title && <p class="ltsuan-process-mobile-title">{step.title}</p>}
             <p>{step.desc}</p>
           </details>
         ))}
@@ -306,8 +295,9 @@ const capabilities = [
   const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('.ltsuan-process-btn'));
   const detailId = document.querySelector<HTMLElement>('[data-process-detail-id]');
   const detailEn = document.querySelector<HTMLElement>('[data-process-detail-en]');
+  const detailTitle = document.querySelector<HTMLElement>('[data-process-detail-title]');
   const detailDesc = document.querySelector<HTMLElement>('[data-process-detail-desc]');
-  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; desc: string }>;
+  const steps = JSON.parse(document.getElementById('ltsuan-process-data')?.textContent || '[]') as Array<{ id: string; en: string; zh: string; title?: string; desc: string }>;
 
   function setStep(index: number) {
     const step = steps[index];
@@ -322,6 +312,10 @@ const capabilities = [
     });
     if (detailId) detailId.textContent = step.id;
     if (detailEn) detailEn.textContent = step.en.toUpperCase();
+    if (detailTitle) {
+      detailTitle.textContent = step.title || '';
+      detailTitle.hidden = !step.title;
+    }
     if (detailDesc) detailDesc.textContent = step.desc;
   }
 
@@ -354,6 +348,7 @@ const capabilities = [
     detailDesc.style.marginLeft = insetLeft;
     detailDesc.style.width = `${endRect.right - startRect.left}px`;
     detailHead.style.marginLeft = insetLeft;
+    if (detailTitle) detailTitle.style.marginLeft = insetLeft;
   }
   syncDetailDescWidth();
   window.addEventListener('resize', syncDetailDescWidth);
@@ -441,14 +436,8 @@ const capabilities = [
     border: 0.035em solid #f4efe8;
     vertical-align: middle;
   }
-  .ltsuan-hero-tagline-en {
-    margin: 18px 0 0;
-    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 15px;
-    letter-spacing: 0.02em;
-    color: rgba(244, 239, 232, 0.55);
+  .ltsuan-h1-nowrap {
+    white-space: nowrap;
   }
   .ltsuan-lead {
     box-sizing: border-box;
@@ -458,7 +447,7 @@ const capabilities = [
     border-left: 1px solid rgba(140, 200, 30, 0.5);
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
     letter-spacing: 0.02em;
     color: var(--ltsuan-dim);
@@ -480,13 +469,57 @@ const capabilities = [
     background: #141414;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(0, 0, 0, 0.25);
   }
-  .ltsuan-hero-card-photo {
+  .ltsuan-hero-card-doc {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
+    inset: 8%;
+    border-radius: 3px;
+    background: #0a0a0a;
+    border: 1px solid rgba(244, 239, 232, 0.04);
+  }
+  .ltsuan-hero-card-doc::after {
+    content: '';
+    position: absolute;
+    bottom: 14%;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag {
+    position: absolute;
+    right: 22%;
+    top: 30%;
+    height: 44%;
+    width: 28%;
+    min-width: 90px;
+    border-radius: 7px;
+    background: #1c1c1c;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+    padding: 12px;
+  }
+  .ltsuan-hero-card-tag-label {
+    position: absolute;
+    left: 14%;
+    top: 18%;
+    font-size: 7px;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .ltsuan-hero-card-tag-rule {
+    position: absolute;
+    left: 14%;
+    right: 14%;
+    top: 34%;
+    height: 1px;
+    background: rgba(244, 239, 232, 0.1);
+  }
+  .ltsuan-hero-card-tag-dot {
+    position: absolute;
+    left: 14%;
+    bottom: 18%;
+    height: 28%;
+    width: 1px;
+    background: var(--ltsuan-accent);
   }
   .ltsuan-hero-card-foot {
     position: absolute;
@@ -577,6 +610,7 @@ const capabilities = [
   }
   .ltsuan-stat-caption {
     margin: 32px 0 0;
+    padding-left: calc(0.66 * clamp(64px, 8vw, 96px));
     max-width: 26ch;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 11px;
@@ -592,6 +626,14 @@ const capabilities = [
   }
   .ltsuan-pill {
     color: var(--ltsuan-accent);
+  }
+  .ltsuan-why-subhead {
+    margin: 14px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.6;
+    color: var(--ltsuan-text);
   }
   .ltsuan-why-highlight {
     margin: 16px 0 0;
@@ -790,7 +832,7 @@ const capabilities = [
   .ltsuan-service-headline {
     margin: 12px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.6;
     color: var(--ltsuan-accent);
   }
@@ -954,11 +996,22 @@ const capabilities = [
     letter-spacing: 0.18em;
     color: rgba(244, 239, 232, 0.4);
   }
+  .ltsuan-process-detail-title {
+    margin: 16px 0 0;
+    font-family: 'Oswald', 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ltsuan-accent);
+  }
   .ltsuan-process-detail-desc {
     margin: 16px 0 0;
     font-family: 'Oswald', 'Noto Sans TC', sans-serif;
     font-size: 17px;
     line-height: 1.7;
+  }
+  .ltsuan-process-detail-title:not([hidden]) + .ltsuan-process-detail-desc {
+    margin-top: 8px;
   }
   .ltsuan-process-mobile {
     position: relative;
@@ -1012,6 +1065,12 @@ const capabilities = [
     font-size: 13px;
     line-height: 1.7;
     color: rgba(244, 239, 232, 0.6);
+  }
+  .ltsuan-process-mobile-item p.ltsuan-process-mobile-title {
+    color: var(--ltsuan-accent);
+  }
+  .ltsuan-process-mobile-title + p {
+    margin-top: 4px;
   }
 
   /* Capabilities */
