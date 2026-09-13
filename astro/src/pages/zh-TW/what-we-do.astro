@@ -52,11 +52,11 @@ const pageJsonLd = {
 };
 
 const processSteps = [
-  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', title: '田野、文物、口述與科學資料的梳理與轉譯', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。', outcome: '這階段結束時：清楚的限制清單與預算天花板。' },
-  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', title: '從核心提問出發，定義敘事框架', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。', outcome: '這階段結束時：可施作的完整圖面與結構方案。' },
-  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', title: '', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。', outcome: '這階段結束時：出廠前已測試完成的單元。' },
-  { id: '04', en: 'On-site Installation', zh: '工程安裝', title: '同一團隊進場組裝，確保圖面與現場一致', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。', outcome: '這階段結束時：圖面與現場一致的進度控管。' },
-  { id: '05', en: 'Handover', zh: '開幕交付', title: '最後一次走查，調整光與文字的呼吸', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。', outcome: '這階段結束時：維護手冊與後續維護窗口。' },
+  { id: '01', en: 'Feasibility', zh: '需求與可行性評估', title: '田野、文物、口述與科學資料的梳理與轉譯', desc: '在動筆繪圖前，先完成現地會勘、法規與結構限制盤點，以及客戶需求確認，把基地條件與預算天花板一次盤點清楚，避免設計階段做出中途才發現無法施作的方案。', outcome: '第一階段結束：釐清專案限制，並確立預算上限。' },
+  { id: '02', en: 'Design & Engineering', zh: '概念與展示設計', title: '從核心提問出發，定義敘事框架', desc: '設計與結構工程同步進行，讓概念從第一天起就能在基地與法規限制內落地施作，建築、結構與機電圖面同步校對，降低施工階段才發現衝突、必須回頭改圖的風險。', outcome: '第二階段結束：提出可據以施作的完整圖面與結構方案。' },
+  { id: '03', en: 'Fabrication & Testing', zh: '製作與測試', title: '', desc: '工廠製作，機電、燈光與影音系統在出廠前完成測試，每個單元出廠前都經過組裝試運轉與品管檢核，把問題留在工廠解決，而不是留到現場才處理。', outcome: '第三階段結束：完成單元製作與出廠前測試。' },
+  { id: '04', en: 'On-site Installation', zh: '工程安裝', title: '同一團隊進場組裝，確保圖面與現場一致', desc: '在工地管理下依排程逐工種進場安裝，並與場館營運及第三方查驗單位協調配合，同步控管進度與品質，確保每個工種銜接時圖面與現場保持一致。', outcome: '第四階段結束：進場安裝施工，完成系統整合。' },
+  { id: '05', en: 'Handover', zh: '開幕交付', title: '最後一次走查，調整光與文字的呼吸', desc: '與客戶進行最終巡檢、文件建檔與簽署確認，如涉及授權方或主管機關，同步完成相關程序，並留存完整維護手冊與聯絡窗口，讓開幕後的日常維運也有人可以問。', outcome: '第五階段結束：交付場域，進行後續維護。' },
 ];
 
 const services = [
@@ -129,7 +129,7 @@ const capabilities = [
             <div class="ltsuan-why-card-col">
               <div class="ltsuan-why-card">
                 <div class="ltsuan-why-card-label">ONE TEAM ACCOUNTABILITY</div>
-                <p class="ltsuan-why-card-body">同一團隊，從概念到開幕。<br /><span>Single point of responsibility — from curatorial framework to final walkthrough.</span></p>
+                <p class="ltsuan-why-card-body">同一團隊，從概念到開幕。<br /><span>Single point of responsibility, from curatorial framework to final walkthrough.</span></p>
               </div>
               <div class="ltsuan-why-tags">
                 <span>製作整合</span>
@@ -230,7 +230,7 @@ const capabilities = [
     <section id="capabilities">
       <div class="ltsuan-reveal">
         <h2 class="ltsuan-section-h2">整合基地、業主與法規三方考驗的工程。</h2>
-        <p class="ltsuan-section-intro">麗荃室內裝修專精古蹟零損傷工程、IP 授權展覽執行、暗展場影音整合，以及高精度環境控制，服務對象涵蓋臺灣及海外的博物館與文化場館。</p>
+        <p class="ltsuan-section-intro">麗荃室內裝修長期深耕博物館與文化場館，核心專業涵蓋文資場域零損傷工程、國際IP授權展覽統籌執行、暗展場多媒體影音整合，以及高精度微環境控制。</p>
       </div>
       <div class="ltsuan-capabilities-grid">
         {capabilities.map((cap) => (
