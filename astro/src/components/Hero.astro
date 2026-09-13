@@ -350,8 +350,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   }
   .ltsuan-hero-title-line-mask {
     display: block;
-    overflow-x: visible;
-    overflow-y: hidden;
+    overflow: hidden;
     padding-bottom: 0.2em;
   }
   .ltsuan-hero-title-line2-mask {
@@ -362,7 +361,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     display: block;
     font-weight: 300;
     word-break: keep-all;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     transition: transform 0.14s ease-in;
     transform: translateY(100vh);
   }
@@ -377,8 +376,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   .ltsuan-hero-subtitle-wrap {
     margin-top: 15px;
     margin-bottom: 22px;
-    overflow-x: visible;
-    overflow-y: hidden;
+    overflow: hidden;
     padding-bottom: 0.2em;
   }
   .ltsuan-hero-subtitle {
@@ -391,7 +389,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     max-width: 36ch;
     line-height: 1.08;
     word-break: keep-all;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     display: block;
     transition: transform 0.14s ease-in;
     transform: translateY(100vh);
@@ -466,7 +464,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     opacity: 0.6;
   }
 
-  @media (min-width: 1280px) and (max-width: 1699px) {
+  @media (min-width: 901px) and (max-width: 1699px) {
     .ltsuan-hero-title {
       font-size: calc(clamp(40px, 6vw, 88px) * var(--ltsuan-title-scale, 1));
     }
