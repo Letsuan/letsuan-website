@@ -65,7 +65,7 @@ export const heroSlides = [
     bgHeight: 2160,
     alt: 'Curved museum exhibition hall with fossil skeletons displayed in glass cases along both sides of the corridor',
     introImg: '/images/letsuan-hero-slide3-speedstreak-bg-letsuan-design.jpg',
-    introAlt: 'Abstract vertical motion-blur light streaks in warm and cool tones',
+    introAlt: 'Abstract vertical motion-blur light streaks in blue tones',
     introBgWidth: 4944,
     introBgHeight: 4000,
     personImg: '/images/letsuan-hero-slide3-worker-cutout-letsuan-design.png',
