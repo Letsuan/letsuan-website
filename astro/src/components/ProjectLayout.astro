@@ -203,6 +203,7 @@ const preloadImage = images[0]
     function restore() {
       document.querySelectorAll<HTMLElement>('.ltsuan-mixed-strip').forEach((strip) => strip.remove());
       originalWraps.forEach((w) => rightCol!.appendChild(w));
+      rightCol!.classList.remove('ltsuan-detail-right-emptied');
     }
 
     function apply() {
@@ -223,6 +224,7 @@ const preloadImage = images[0]
         const strip = makeStrip(groups[i]);
         if (strip) h2.before(strip);
       });
+      rightCol!.classList.add('ltsuan-detail-right-emptied');
     }
 
     function sync() {
@@ -660,7 +662,7 @@ const preloadImage = images[0]
       content: '';
       flex: 0 0 24px;
     }
-    .ltsuan-detail-right:empty {
+    .ltsuan-detail-right.ltsuan-detail-right-emptied {
       display: none !important;
       border-bottom: none;
     }
