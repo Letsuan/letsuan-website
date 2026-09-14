@@ -1,44 +1,120 @@
+# ============================================
+# Letsuan Design - robots.txt
+# SEO + GEO / AI Search
+# ============================================
+
+# --------------------------------------------
+# Google AdSense / Mediabot
+# --------------------------------------------
 User-agent: Mediapartners-Google
 Disallow:
 
-# --- Block AI training crawlers (Model Training Only) ---
+
+# --------------------------------------------
+# AI crawlers - Model Training
+# Block model-training crawlers
+# --------------------------------------------
+
 User-agent: GPTBot
+Disallow: /
+
 User-agent: CCBot
+Disallow: /
+
 User-agent: ClaudeBot
+Disallow: /
+
 User-agent: anthropic-ai
+Disallow: /
+
 User-agent: Bytespider
+Disallow: /
+
 User-agent: FacebookBot
+Disallow: /
+
 User-agent: Applebot-Extended
+Disallow: /
+
 User-agent: cohere-ai
+Disallow: /
+
 User-agent: ImagesiftBot
+Disallow: /
+
 User-agent: img2dataset
+Disallow: /
+
 User-agent: omgilibot
+Disallow: /
+
 User-agent: Diffbot
+Disallow: /
+
 User-agent: AI2Bot
+Disallow: /
+
 User-agent: meta-externalagent
+Disallow: /
+
 User-agent: Timpibot
 Disallow: /
 
-# --- Allow AI search / answer engines (Citation & Retrieval) ---
+
+# --------------------------------------------
+# AI Search / Answer Engines
+# Allow retrieval for search, citations,
+# and answer generation
+# --------------------------------------------
+
 User-agent: ChatGPT-User
+Allow: /
+
 User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
 User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
 User-agent: GoogleOther
+Allow: /
+
 User-agent: YouBot
 Allow: /
 
-# --- General search engines ---
+
+# --------------------------------------------
+# General Search Engines
+# --------------------------------------------
+
 User-agent: *
 Disallow: /search
 Disallow: /share-widget
 Allow: /
 
-# --- Sitemaps & Machine-Readable Context ---
+
+# --------------------------------------------
+# Sitemap
+# --------------------------------------------
+
 Sitemap: https://letsuan.com/sitemap.xml
-# LLMs Context Reference
+
+
+# --------------------------------------------
+# LLM Context
+# --------------------------------------------
+
 # https://letsuan.com/llms.txt
 
-# IndexNow key location
+
+# --------------------------------------------
+# IndexNow
+# --------------------------------------------
+
 # https://letsuan.com/eac7018a891945a76b914aae79869d063706516cdeb0fa179ebf8a50c1c9255a.txt
