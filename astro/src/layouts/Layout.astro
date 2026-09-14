@@ -29,7 +29,12 @@ const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 {preloadImage && (
   <link rel="preload" as="image" href={preloadImage.href} imagesrcset={preloadImage.imagesrcset} imagesizes={preloadImage.imagesizes} type={preloadImage.type} fetchpriority="high" />
 )}
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<style>
+  @font-face { font-family: 'Oswald Fallback'; src: local('Arial'); ascent-override: 123%; descent-override: 31%; line-gap-override: 0%; size-adjust: 81%; }
+  @font-face { font-family: 'Noto Sans TC Fallback'; src: local('Microsoft JhengHei'), local('PingFang TC'), local('Heiti TC'); ascent-override: 108%; descent-override: 30%; line-gap-override: 0%; size-adjust: 100%; }
+</style>
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
