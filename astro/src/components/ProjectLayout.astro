@@ -80,9 +80,12 @@ const {
 } = Astro.props;
 
 const shareUrl = encodeURIComponent(canonical);
+const preloadImage = images[0]
+  ? { href: avifPath(images[0].src), type: 'image/avif' }
+  : undefined;
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={jsonLd} lang={lang} alternateHrefs={alternateHrefs}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={jsonLd} lang={lang} alternateHrefs={alternateHrefs} preloadImage={preloadImage}>
   <div class="ltsuan-detail">
     <header class="ltsuan-detail-header">
       <div class="ltsuan-detail-header-inner">
@@ -156,11 +159,15 @@ const shareUrl = encodeURIComponent(canonical);
       </div>
 
       <div class="ltsuan-detail-right">
-        {images.map((img) => (
+        {images.map((img, imgIndex) => (
           <div class:list={['ltsuan-thin-scroll', 'ltsuan-detail-img-wrap', { 'ltsuan-detail-img-wrap-plain': img.plain }]}>
             <picture>
               <source srcset={avifPath(img.src)} type="image/avif" />
-              <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="lazy" decoding="async" />
+              {imgIndex === 0 ? (
+                <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="eager" fetchpriority="high" decoding="async" />
+              ) : (
+                <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="lazy" decoding="async" />
+              )}
             </picture>
           </div>
         ))}
