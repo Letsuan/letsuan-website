@@ -6,13 +6,13 @@ import ServicesGrid from '../../components/ServicesGrid.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
 import { organizationJsonLd } from '../../data/organization';
 import { heroSlides, services, featuredProjects } from '../../data/homepage-zh';
-import { responsiveSrcset } from '../../utils/images';
+import { responsiveSrcset, avifPath } from '../../utils/images';
 
 const heroSlide0 = heroSlides[0];
 const preloadImage = {
-  href: heroSlide0.realImg,
+  href: avifPath(heroSlide0.realImg),
   imagesrcset: responsiveSrcset(heroSlide0.realImg, 'avif', heroSlide0.bgWidth),
-  imagesizes: '(max-width: 900px) 180vw, 115vw',
+  imagesizes: '100vw',
   type: 'image/avif',
 };
 

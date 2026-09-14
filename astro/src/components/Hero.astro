@@ -50,32 +50,34 @@ const speedStreaks = Array.from({ length: 14 }, () => {
       <div class="ltsuan-hero-layer" data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
         <div class="ltsuan-hero-bg-wrap">
           <picture class="ltsuan-hero-bg-picture">
-            <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="(max-width: 900px) 180vw, 115vw" />
+            <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.bgWidth)} sizes="100vw" />
             <img
               class:list={['ltsuan-hero-bg-img', panClass]}
               alt={slide.alt}
               src={slide.realImg}
               srcset={responsiveSrcset(slide.realImg, 'jpg', slide.bgWidth)}
-              sizes="(max-width: 900px) 180vw, 115vw"
+              sizes="100vw"
               width={slide.bgWidth}
               height={slide.bgHeight}
               decoding="async"
-              fetchpriority={i === 0 ? 'high' : undefined}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              fetchpriority={i === 0 ? 'high' : 'low'}
             />
           </picture>
           {slide.introImg && (
             <picture class="ltsuan-hero-bg-picture ltsuan-hero-intro-bg">
-              <source type="image/avif" srcset={responsiveSrcset(slide.introImg, 'avif', slide.introBgWidth || slide.bgWidth)} sizes="(max-width: 900px) 180vw, 115vw" />
+              <source type="image/avif" srcset={responsiveSrcset(slide.introImg, 'avif', slide.introBgWidth || slide.bgWidth)} sizes="100vw" />
               <img
                 class="ltsuan-hero-bg-img ltsuan-hero-intro-img"
                 alt={slide.introAlt || ''}
                 src={slide.introImg}
                 srcset={responsiveSrcset(slide.introImg, 'jpg', slide.introBgWidth || slide.bgWidth)}
-                sizes="(max-width: 900px) 180vw, 115vw"
+                sizes="100vw"
                 width={slide.introBgWidth || slide.bgWidth}
                 height={slide.introBgHeight || slide.bgHeight}
                 decoding="async"
-                fetchpriority={i === 0 ? 'high' : undefined}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchpriority={i === 0 ? 'high' : 'low'}
               />
             </picture>
           )}
