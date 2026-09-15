@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- ==================== English / Main Site ==================== -->
 
@@ -39,186 +39,1394 @@
   <url>
     <loc>https://letsuan.com/project-air-force-academy</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg</image:loc>
+      <image:title>R.O.C. Air Force Academy 90th Founding Anniversary — Eagle sculpture installation with archway feature wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-feature-wall-archway-with-eagle-sculptures-letsuan-design.jpg</image:loc>
+      <image:title>Feature wall archway with eagle sculptures and timeline panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-cockpit-simulator-interactive-exhibit-letsuan-design.jpg</image:loc>
+      <image:title>Cockpit simulator interactive exhibit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-overhead-view-of-exhibition-zone-layout-letsuan-design.jpg</image:loc>
+      <image:title>Overhead view of exhibition zone layout</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-roc-air-force-academy-feature-wall-letsuan-design.jpg</image:loc>
+      <image:title>R.O.C. Air Force Academy feature wall with orange lighting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-visitors-viewing-history-timeline-wall-letsuan-design.jpg</image:loc>
+      <image:title>Visitors viewing history timeline wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-eagle-sculptures-being-transported-to-site-letsuan-design.jpg</image:loc>
+      <image:title>Eagle sculptures being transported to site</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-construction-team-installing-archway-feature-letsuan-design.jpg</image:loc>
+      <image:title>Construction team installing archway feature wall</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-amazing-homeland</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-indigenous-garment-display-wall-with-hanging-letsuan-design.jpg</image:loc>
+      <image:title>Amazing Homeland — Indigenous garment display wall with hanging textiles</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-glass-display-corridor-with-archaeological-letsuan-design.jpg</image:loc>
+      <image:title>Glass display corridor with archaeological artifacts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-wood-carving-and-textile-artifact-display-letsuan-design.jpg</image:loc>
+      <image:title>Wood carving and textile artifact display shelves</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-museum-corridor-woven-basket-displays-visitors-letsuan-design.jpg</image:loc>
+      <image:title>Museum corridor with woven baskets and vessels on wall-mounted shelving, visitors viewing glass display cases and information panels</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-art-gallery-culture</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-ministry-of-culture-exhibition-ceiling-letsuan-design.jpg</image:loc>
+      <image:title>See the Ministry of Culture — Ministry of Culture exhibition ceiling and wall detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-curved-display-case-with-ceramic-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>Curved display case with ceramic artifacts and interactive panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-publications-and-book-exhibition-folded-wall-letsuan-design.jpg</image:loc>
+      <image:title>Publications and book exhibition folded wall panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-literature-and-book-exhibition-wall-detail-letsuan-design.jpg</image:loc>
+      <image:title>Literature and book exhibition wall detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-digital-culture-interactive-display-wall-letsuan-design.jpg</image:loc>
+      <image:title>Digital culture interactive display wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-display-case-with-cultural-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>Display case with cultural artifacts and laptop station</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-exhibition-hall-overview-with-wall-panels-letsuan-design.jpg</image:loc>
+      <image:title>Exhibition hall overview with wall panels and display cases</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-asian-art-biennial</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-i-love-taiwan-zhuyin-entrance-sign-letsuan-design.jpg</image:loc>
+      <image:title>The Lawn Needed More Protection Than the Artwork Did — Illuminated Zhuyin phonetic symbols spelling out 'I LOVE TAIWAN' at the National Taiwan Museum of Fine Arts entrance at night, part of the 2013 Asian Art Biennial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-02-letsuan-design.jpg</image:loc>
+      <image:title>Illuminated Zhuyin phonetic symbols spelling 'I LOVE TAIWAN' on the museum lawn at night, with the National Taiwan Museum of Fine Arts building and 2013 Asian Art Biennial banner behind</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-love-taiwan-led-light-installation-on-lawn-letsuan-design.jpg</image:loc>
+      <image:title>Illuminated LED light installation spelling 'I Love Taiwan' in Zhuyin phonetic script on the lawn at night</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-03-letsuan-design.jpg</image:loc>
+      <image:title>Construction process: a worker hand-digs a shallow cable trench (left) while light-box materials are laid out on the lawn (right), avoiding heavy machinery to protect the grass</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-04-letsuan-design.jpg</image:loc>
+      <image:title>Steel post frames and coiled cabling for the light-box installations laid out on the museum lawn before assembly</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-beyond-just-an-exhibition</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg</image:loc>
+      <image:title>Beyond Just an Exhibition–You Are Part of the Art! — Visitors interacting with Pulsating Valley floor projection among sunflowers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-sketch-flight-starry-sky-with-hand-drawn-letsuan-design.jpg</image:loc>
+      <image:title>Sketch Flight starry sky with hand-drawn birds and airplanes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-visitors-photographing-immersive-floral-letsuan-design.jpg</image:loc>
+      <image:title>Visitors photographing immersive floral projection walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-bouncing-valley-inflatable-light-ball-letsuan-design.jpg</image:loc>
+      <image:title>Bouncing Valley inflatable light-ball installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-child-and-parent-interacting-letsuan-design.jpg</image:loc>
+      <image:title>Child and parent interacting with A Table Where Little People Live</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-immersive-floral-wall-projection-with-letsuan-design.jpg</image:loc>
+      <image:title>Immersive floral wall projection with visitors</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-rainbow-and-world-map-immersive-wall-letsuan-design.jpg</image:loc>
+      <image:title>Rainbow and world map immersive wall with visitor workstations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-sunflower-field-immersive-room-with-visitors-letsuan-design.jpg</image:loc>
+      <image:title>Sunflower Field immersive room with visitors</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-grid-patterned-immersive-corridor-with-letsuan-design.jpg</image:loc>
+      <image:title>Grid-patterned immersive corridor with visitors</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-ceiling-truss-with-projectors-and-blending-letsuan-design.jpg</image:loc>
+      <image:title>Ceiling truss with projectors and blending processors during construction</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-cat-art</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg</image:loc>
+      <image:title>Cat Art Museum — Visitor viewing a gold-framed cat parody reinterpretation of Picasso's The Dream painting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg</image:loc>
+      <image:title>Starry Night mural reinterpreted with cat motifs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-gallery-corridor-with-cat-themed-letsuan-design.jpg</image:loc>
+      <image:title>Gallery corridor with cat-themed reinterpretations of classical portraits</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-yellow-gallery-corridor-with-renoir-style-cat-letsuan-design.jpg</image:loc>
+      <image:title>Yellow gallery corridor with Renoir-style cat paintings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-yellow-and-pink-gallery-corridor-letsuan-design.jpg</image:loc>
+      <image:title>Yellow and pink gallery corridor with framed cat artworks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-purple-gallery-corridor-with-framed-cat-letsuan-design.jpg</image:loc>
+      <image:title>Purple gallery corridor with framed cat artworks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-shu-yamamoto-09-letsuan-design.jpg</image:loc>
+      <image:title>Mona Lisa cat scene with visitor seated at desk</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-sculpted-cat-figures-recreating-sunday-letsuan-design.jpg</image:loc>
+      <image:title>Sculpted cat figures recreating Sunday Afternoon painting scene</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-mondrian-style-geometric-display-installation-letsuan-design.jpg</image:loc>
+      <image:title>Mondrian-style geometric display installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-sculpted-cat-figures-in-green-park-letsuan-design.jpg</image:loc>
+      <image:title>Sculpted cat figures in green park scene with umbrellas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-cat-themed-gallery-room-with-sculpted-cat-letsuan-design.jpg</image:loc>
+      <image:title>Cat-themed gallery room with sculpted cat figure and framed artworks</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-changhua-flower</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg</image:loc>
+      <image:title>Points of Light in Grayscale: Turning an Odd-Shaped Plot into a Destination — Ørsted Pavilion curved feature wall with wind turbines and ocean mural at dusk</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-xizhou-park-pathway-with-concrete-planters-letsuan-design.jpg</image:loc>
+      <image:title>Xizhou Park pathway with concrete planters and glass building</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-pavilion-feature-wall-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>Ørsted Pavilion feature wall among flower beds at sunset</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-qr-code-signage-post-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>QR code signage post among flower beds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-child-flying-a-kite-in-front-letsuan-design.jpg</image:loc>
+      <image:title>Child flying a kite in front of Ørsted feature wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-zodiac-rabbit-cutout-signage-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>Zodiac rabbit cutout signage among flower beds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-branding-sign-with-clownfish-cutout-letsuan-design.jpg</image:loc>
+      <image:title>Ørsted branding sign with clownfish cutout among plants</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-detective-conan-taipei</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-01-letsuan-design.jpg</image:loc>
+      <image:title>Detective Conan — Child visitor wearing a cap and headset leaning over crime-scene tape to inspect a clue with a magnifying pencil</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-05-letsuan-design-e3ab27a2.jpg</image:loc>
+      <image:title>Numbered clue board wall showing crime-scene evidence cards such as a Baumkuchen cake and a fruit knife</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-02-letsuan-design.jpg</image:loc>
+      <image:title>Keyhole-shaped zone signage for the Information-gathering and Crime Scene Inspection areas, with visitors browsing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-03-letsuan-design.jpg</image:loc>
+      <image:title>Visitors holding magnifying-glass card props behind crime-scene tape, investigating a chalk body outline and evidence desk</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-04-letsuan-design.jpg</image:loc>
+      <image:title>Recreated study scene with a life-size Conan cutout, bookshelves, evidence desk and numbered chalk body outline clues</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-04-letsuan-design-bd5d63d1.jpg</image:loc>
+      <image:title>Detective Conan Kaohsiung interactive device</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-mystery-cafe-information-gathering-station-letsuan-design.png</image:loc>
+      <image:title>Visitors investigating clues at a mystery cafe information-gathering station with a life-sized character cutout</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-06-letsuan-design.jpg</image:loc>
+      <image:title>Recreated Cafe Poirot dining room set with tables, chairs and shelves of dishware</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-05-letsuan-design.jpg</image:loc>
+      <image:title>Interrogation-room-style set with leather sofas, a desk with laptop, and large red Chinese character banners on the wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-03-letsuan-design-b739cea2.jpg</image:loc>
+      <image:title>Blue UV-lit interactive investigation booth with touchscreens asking 'What is the red stain really?' beside character cutouts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-16-letsuan-design.jpg</image:loc>
+      <image:title>Visitor using a UV flashlight to reveal a fingerprint clue on a wine bottle prop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-08-letsuan-design.jpg</image:loc>
+      <image:title>Three visitors pointing at an interactive touchscreen analyzing the true nature of a red stain</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-09-letsuan-design.jpg</image:loc>
+      <image:title>Character standee wall with Conan and cast dialogue speech bubbles about the exhibition mystery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-10-letsuan-design.jpg</image:loc>
+      <image:title>Conan and a blond-haired character figure statue wearing white gloves, displayed behind keep-out tape</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-02-letsuan-design-d8aed0bb.jpg</image:loc>
+      <image:title>Split before/after view: dim empty venue shell and workers on a scissor lift installing the city-skyline backdrop graphic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-11-letsuan-design.jpg</image:loc>
+      <image:title>Wall of enlarged manga panel montages from the Detective Conan story</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-12-letsuan-design.jpg</image:loc>
+      <image:title>Installation in progress: worker on a stepladder assembling modular wall panels in the unlit venue shell</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-13-letsuan-design.jpg</image:loc>
+      <image:title>Installation in progress: crew laying out and cutting plywood wall panels across the venue floor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-14-letsuan-design.jpg</image:loc>
+      <image:title>Installation in progress: crew assembling concrete-look wall modules and stacking plywood panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-15-letsuan-design.jpg</image:loc>
+      <image:title>Final installation touch-ups: worker finishing an interactive touchscreen station wall amid supply boxes</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-detention-pier2</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-detention-reality-experience-metal-wall-letsuan-design.jpg</image:loc>
+      <image:title>Detention Reality Experience metal wall texture with lighting detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-hospital-bed-scene-with-eye-chart-letsuan-design.jpg</image:loc>
+      <image:title>Hospital bed scene with eye chart light box</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-office-desk-with-green-bankers-letsuan-design.jpg</image:loc>
+      <image:title>Recreated office desk with green banker's lamp and rotary phone</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-dark-corridor-with-double-doors-letsuan-design.jpg</image:loc>
+      <image:title>Dark corridor with double doors and torn paper on walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-bathroom-sink-area-with-dripping-letsuan-design.jpg</image:loc>
+      <image:title>Recreated bathroom sink area with dripping faucets and graffiti mirror</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-guard-walking-down-corridor-lined-letsuan-design.jpg</image:loc>
+      <image:title>Guard walking down corridor lined with hanging puppets and lantern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-ceiling-of-hanging-traditional-puppets-letsuan-design.jpg</image:loc>
+      <image:title>Ceiling of hanging traditional puppets and red lantern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-museum-style-display-case-with-cultural-letsuan-design.jpg</image:loc>
+      <image:title>Museum-style display case with cultural artifacts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-rusted-cell-door-latch-detail-letsuan-design.jpg</image:loc>
+      <image:title>Rusted cell door latch detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-iron-shackles-hanging-on-concrete-wall-letsuan-design.jpg</image:loc>
+      <image:title>Iron shackles hanging on concrete wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-prison-guard-room-with-desk-letsuan-design.jpg</image:loc>
+      <image:title>Recreated prison guard room with desk lamp and radio</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-visitors-watching-projection-screen-inside-letsuan-design.jpg</image:loc>
+      <image:title>Visitors watching projection screen inside dark exhibit room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-red-exhibition-wall-introducing-the-detention-letsuan-design.jpg</image:loc>
+      <image:title>Red exhibition wall introducing the Detention game story with character art</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-red-history-timeline-wall-with-display-letsuan-design.jpg</image:loc>
+      <image:title>Red history timeline wall with display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-01-letsuan-design.jpg</image:loc>
+      <image:title>Detention Pier2 mask scene</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-02-letsuan-design.jpg</image:loc>
+      <image:title>Detention Pier2 signage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-03-letsuan-design.jpg</image:loc>
+      <image:title>Detention Pier2 immersive scene wide view</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-dragon-to-beast</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg</image:loc>
+      <image:title>From Dragon to Beast — Sauropod skeletons being installed in outdoor courtyard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-large-sauropod-skeleton-display-with-feature-letsuan-design.jpg</image:loc>
+      <image:title>Large sauropod skeleton display with feature walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-dinosaur-skeleton-exhibit-zone-with-map-letsuan-design.jpg</image:loc>
+      <image:title>Dinosaur skeleton exhibit zone with map display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-origin-development-mammals-entrance-letsuan-design.jpg</image:loc>
+      <image:title>Visitor photographing a small mammal skeleton display at the Origin and Development of Mammals exhibit entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-orange-exhibition-hall-illuminated-pathway-visitors-letsuan-design.png</image:loc>
+      <image:title>Visitors walking through orange-toned exhibition hall with illuminated floor pathways and skeleton display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-exhibition-zone-with-colorful-feature-walls-letsuan-design.jpg</image:loc>
+      <image:title>Exhibition zone with colorful feature walls and fossil display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-carnivora-skeleton-display-corner-letsuan-design.jpg</image:loc>
+      <image:title>Carnivora exhibition corner with orange walls displaying carnivore mammal skeletons and skulls in illuminated glass cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-african-mammal-exhibition-zone-with-skeleton-letsuan-design.jpg</image:loc>
+      <image:title>African mammal exhibition zone with skeleton displays</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-row-of-large-skull-fossils-letsuan-design.jpg</image:loc>
+      <image:title>Row of large skull fossils in glass display case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-prehistoric-mammal-skeleton-diorama-letsuan-design.jpg</image:loc>
+      <image:title>Prehistoric mammal skeleton mounts displayed against a painted savanna backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-skeleton-display-case-with-rhino-letsuan-design.jpg</image:loc>
+      <image:title>Skeleton display case with rhino and mammal fossils</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-rhinoceros-giraffe-skeleton-gallery-letsuan-design.jpg</image:loc>
+      <image:title>White rhinoceros and giraffe skeleton mounts on display, with the adjoining gallery visible beyond</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-mammal-skull-fossil-display-shelves-letsuan-design.jpg</image:loc>
+      <image:title>Rows of mammal skull and jawbone fossils displayed on illuminated shelves and in a glass case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-whale-skeletons-suspended-above-display-cases-letsuan-design.jpg</image:loc>
+      <image:title>Whale skeletons suspended above display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-mammal-fossil-gallery-with-illustrated-letsuan-design.jpg</image:loc>
+      <image:title>Mammal fossil gallery with illustrated backdrop panels</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-engineering-construction</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg</image:loc>
+      <image:title>Disaster Prevention Hall — Circular exhibition hall with central planter and panel walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-central-bamboo-planter-feature-with-letsuan-design.jpg</image:loc>
+      <image:title>Central bamboo planter feature with surrounding display panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-flood-myth-wall-panel-with-wave-textured-letsuan-design.jpg</image:loc>
+      <image:title>Flood myth wall panel with wave-textured relief</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-flood-exhibit-corridor-with-projection-letsuan-design.jpg</image:loc>
+      <image:title>Flood exhibit corridor with projection and glass display case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-column-display-with-glass-leaf-sculptures-letsuan-design.jpg</image:loc>
+      <image:title>Column display with glass leaf sculptures and disaster panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-curved-wall-with-flood-control-image-letsuan-design.jpg</image:loc>
+      <image:title>Curved wall with flood control image panels and Taiwan map graphic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-water-conservation-exhibit-panels-with-letsuan-design.jpg</image:loc>
+      <image:title>Water conservation exhibit panels with circular display windows</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-fullchamp-brochure</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-fullchamp-forged-metal-solutions-brochure-letsuan-design.jpg</image:loc>
+      <image:title>FullChamp Forged Metal Solutions brochure cover with truck imagery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-brochure-spread-showing-12000-ton-metal-letsuan-design.jpg</image:loc>
+      <image:title>Brochure spread showing 12000-ton metal forging press facility</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-brochure-spread-with-quality-guarantee-letsuan-design.jpg</image:loc>
+      <image:title>Brochure spread with quality guarantee and forging process robot imagery</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-green-energy</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-tiered-concrete-planter-wall-letsuan-design.jpg</image:loc>
+      <image:title>Wind, and Geothermal Energy Converge in a Single Pavilion — Tiered concrete planter wall with cascading greenery at the Green Energy Vision Pavilion entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-10-letsuan-design.jpg</image:loc>
+      <image:title>Entrance signage reading '台泥綠能願景館' (TCCGE Green Energy Vision Pavilion) with TCCGE and TCC logos</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-11-letsuan-design.jpg</image:loc>
+      <image:title>Projected animation display beside a plaque explaining the meaning of the TCC Green Energy logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-03-letsuan-design.jpg</image:loc>
+      <image:title>DC/AC current and wind power educational corridor with interactive touch panels at the Green Energy Vision Pavilion</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-01-letsuan-design.jpg</image:loc>
+      <image:title>Timeline wall with interactive touch panels tracing the history of electricity from the 19th to 21st century</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-02-letsuan-design.jpg</image:loc>
+      <image:title>Illuminated display panels explaining household electricity use and energy-saving tips</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-13-letsuan-design.jpg</image:loc>
+      <image:title>Illustrated wind turbine cutout display comparing a 508-meter turbine height against the Taipei 101 skyline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-07-letsuan-design.jpg</image:loc>
+      <image:title>Cross-section model of a wind turbine nacelle with numbered labels showing internal mechanical components</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-visitor-viewing-solar-energy-zone-letsuan-design.jpg</image:loc>
+      <image:title>Visitor viewing the Solar Energy exhibit zone, with solar panel samples and a wind turbine video screen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-06-letsuan-design.jpg</image:loc>
+      <image:title>Visitors touring the Geothermal Energy exhibit zone with a guide explaining the display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-12-letsuan-design.jpg</image:loc>
+      <image:title>Visitors gathered around an interactive solar power information display at Green Energy Vision Pavilion</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-08-letsuan-design.jpg</image:loc>
+      <image:title>Installation crew mounting display graphics and panels during construction of the exhibit corridor</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-hakka-culture</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-entrance-feature-wall-with-tree-cutout-letsuan-design.jpg</image:loc>
+      <image:title>Enriching Hakka Settlements — Entrance feature wall with tree cutout graphic and exhibition title</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-projection-screen-showing-archival-camphor-letsuan-design.jpg</image:loc>
+      <image:title>Projection screen showing archival camphor industry photograph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-camphor-tree-branch-display-with-wood-letsuan-design.jpg</image:loc>
+      <image:title>Camphor tree branch display with wood carving artifact showcase</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.jpg</image:loc>
+      <image:title>Gallery corridor with tree branch display and photo panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Hakka Culture Development Center closing view</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-jehol-biota</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>Opening Day, and Not One of the 93 Fossils Could Be Late — Jehol Biota exhibition case with bird fossil specimens and illustrations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition wall on pterosaur skeleton structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition corridor with fossil display panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>Curator installing a fossil specimen into a display case at Jehol Biota exhibition</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition entrance wall with fossil display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition map wall showing fossil site locations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition display with red cabinet and bird artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition gallery room with fossil display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-09-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition fossil display case detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-10-letsuan-design.jpg</image:loc>
+      <image:title>Jehol Biota exhibition wall on fossil biota formation and importance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>Painter finishing the Jehol Biota entrance wall mural during installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>Exhibition hall under construction ahead of the Jehol Biota opening</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-just-only-environment</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg</image:loc>
+      <image:title>Just Only — Paper Pulp Mold Technology brochure cover with folded panel detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-inspection-reports-letsuan-design.jpg</image:loc>
+      <image:title>Brochure spread showing inspection reports and manufacturing process</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-paper-pulp-mold-letsuan-design.jpg</image:loc>
+      <image:title>Brochure spread showing paper pulp mold tableware product catalog</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-back-cover-with-blue-gradient-letsuan-design.jpg</image:loc>
+      <image:title>Brochure back cover with blue gradient and Paper Pulp Mold Tableware branding</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-patterned-paper-pulp-letsuan-design.jpg</image:loc>
+      <image:title>Brochure spread showing patterned paper pulp plates and bowls</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-la-fortuna-bordada</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada exhibition banner at the Museo Nacional de Artes Decorativas entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-gallery-display-cases-embroidered-accessories-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada gallery with display cases of embroidered accessories</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-gallery-corridor-embroidered-garment-panels-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada gallery corridor with embroidered garment panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-display-case-embroidered-headwear-accessories-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada display case with embroidered headwear and accessories</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-framed-embroidery-panels-through-archway-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada framed embroidery panels seen through an archway</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-curators-inspecting-embroidered-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada curators inspecting embroidered artifacts in a display case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-exhibition-wall-embroidered-panels-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada exhibition wall of embroidered panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-wall-framed-rank-badge-embroidery-letsuan-design.jpg</image:loc>
+      <image:title>La Fortuna Bordada wall of framed rank badge embroidery with wall text</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-led-kinetic</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/universe-led-kinetic-light-01-letsuan-design.jpg</image:loc>
+      <image:title>Universe LED kinetic light installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/universe-led-kinetic-light-02-letsuan-design.jpg</image:loc>
+      <image:title>Universe kinetic light closeup</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-marine-illusion</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg</image:loc>
+      <image:title>Seeing is Believing? — Masters of Marine Illusion exhibition panorama with visitors viewing aquarium tanks</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-octopus-mural-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion octopus mural entrance wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-visitor-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion visitor interacting with Ocean Mimic Master game</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-visitor-viewing-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion visitor viewing tiered aquarium display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-display-case-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion display case detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-thin-wall-lining-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion thin-wall lining installation in progress</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-aquarium-tank-letsuan-design.jpg</image:loc>
+      <image:title>Masters of Marine Illusion aquarium tank installation detail</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-missing-scientist</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-visitor-viewing-curved-gallery-wall-letsuan-design.jpg</image:loc>
+      <image:title>The Missing Scientist — Visitor viewing curved gallery wall with electromagnetic theory graphics and illuminated display column</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-magnetic-levitation-display-case-letsuan-design.jpg</image:loc>
+      <image:title>Electromagnetic Horizon II magnetic levitation display case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-interactive-display-station-letsuan-design.jpg</image:loc>
+      <image:title>Visitors looking at an interactive electrical grid model display station</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-kinetic-exercise-game-area-letsuan-design.jpg</image:loc>
+      <image:title>Electromagnetic Horizon II kinetic exercise game area</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-solar-energy-display-letsuan-design.jpg</image:loc>
+      <image:title>Electromagnetic Horizon II solar energy display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-overhead-lighting-av-rigging-grid-letsuan-design.jpg</image:loc>
+      <image:title>Overhead lighting and AV rigging grid with projectors mounted above the exhibition space</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-mobile-museum</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>8.5 ping: A Museum on Wheels — Mobile Museum vehicle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Mobile Museum exhibit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-green-glazed-pottery-ox-artifact-display-case-letsuan-design.jpg</image:loc>
+      <image:title>Green-glazed pottery ox artifact displayed in a glass case at the mobile museum exhibition</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-girl-tangram-puzzle-zoo-letsuan-design.jpg</image:loc>
+      <image:title>Girl assembling pink tangram pieces into a fish shape at the Puzzle Zoo station</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>Mobile Museum interior</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-children-writing-pictographs-water-reveal-paper-letsuan-design.jpg</image:loc>
+      <image:title>Children dipping a hand in water to write pictographic characters on color-changing paper at the Words in the Making station</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-hallway-father-daughter-letsuan-design.jpg</image:loc>
+      <image:title>Family in the mobile museum hallway, a father carrying his daughter past the green Puzzle Zoo station</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-nmh-highlights</loc>
     <lastmod>2026-09-04</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-distant-hallway-letsuan-design.jpg</image:loc>
+      <image:title>Visitor walking down a warm-lit minimalist gallery corridor lined with illuminated display niches</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/matched_ambient_brighter_warm_4K.jpg</image:loc>
+      <image:title>Highlights of NMH — Visitor walking past illuminated glass display niches holding ceramic and bronze pieces</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-01-letsuan-design.png</image:loc>
+      <image:title>Painted pottery horses and figures in a glass case beside an interactive touchscreen kiosk</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-bronze-case-letsuan-design.jpg</image:loc>
+      <image:title>Bronze ritual vessels displayed in a low-reflection glass case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-03-letsuan-design.jpg</image:loc>
+      <image:title>Visitors photographing bronze and ceramic vessels along a curved gallery of low display cases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-04-letsuan-design.jpg</image:loc>
+      <image:title>Painted pottery equestrian and seated figures in an angled glass display case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-05-letsuan-design.jpg</image:loc>
+      <image:title>Painted pottery figures and a horse on tiered platforms inside a freestanding glass case</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-02-letsuan-design.jpg</image:loc>
+      <image:title>Bronze ritual vessel in a freestanding illuminated case at a gallery corner, with further displays beyond</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-nmns-teldap</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg</image:loc>
+      <image:title>NMNS TELDAP exhibit space</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-03-letsuan-design.jpg</image:loc>
+      <image:title>NMNS TELDAP interactive learning</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-02-letsuan-design.jpg</image:loc>
+      <image:title>NMNS TELDAP display</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-notre-dame</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg</image:loc>
+      <image:title>Eternal Notre-Dame — Four visitors wearing VR headsets and backpacks standing in front of a bold black-and-white graphic mural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-headsets-array-letsuan-design.jpg</image:loc>
+      <image:title>Rows of VR headsets lined up backstage ready for visitors</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-vr-users-letsuan-design.jpg</image:loc>
+      <image:title>Staff adjusting a visitor's VR headset strap while other visitors wear headsets nearby</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-rooftop-vr-letsuan-design.jpg</image:loc>
+      <image:title>VR scene showing visitors virtually kneeling on Notre-Dame cathedral's rooftop overlooking the Paris skyline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/eternal-notre-dame-vr-exhibition-2023-letsuan-design.jpg</image:loc>
+      <image:title>Visitors wearing VR headsets standing on a patterned floor beneath a bold black-and-white graphic mural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-profile-line-letsuan-design.jpg</image:loc>
+      <image:title>Three visitors in profile wearing VR headsets and backpacks against a black-and-white graphic mural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-construction-letsuan-design.jpg</image:loc>
+      <image:title>Installation in progress: workers on scissor lifts painting the black-and-white graphic mural wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-mural-install-letsuan-design.jpg</image:loc>
+      <image:title>Installation in progress: crew painting the large geometric mural using scissor lifts and ladders</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-offshore-wind</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-01-letsuan-design.jpg</image:loc>
+      <image:title>Offshore Wind O&amp;M Building — Meeting room with an Orsted 'Love your home' Earth mural on the wall behind a conference table</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-07-letsuan-design.jpg</image:loc>
+      <image:title>Corridor at the offshore wind exhibition with two visitors walking past a wall displaying Taiwan offshore wind farm capacity data in gigawatts</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-02-letsuan-design.jpg</image:loc>
+      <image:title>Curved illustrated wall panels explaining offshore wind farm operations, from coastal installation process to turbine maintenance timeline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-visitor-viewing-turbine-technology-timeline-wall-letsuan-design.jpg</image:loc>
+      <image:title>Visitor viewing offshore wind turbine technology timeline wall with video screen showing installation footage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-03-letsuan-design.jpg</image:loc>
+      <image:title>Curved exhibition corridor with a coastal wind farm installation diagram and video screens</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-07-letsuan-design.jpg</image:loc>
+      <image:title>Visitor viewing a curved exhibition wall about marine ecology near offshore turbine foundations</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-06-letsuan-design.jpg</image:loc>
+      <image:title>Entrance corridor with an Orsted Earth mural, a dotted wave-pattern doorway, and a wind farm photo mural</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-04-letsuan-design.jpg</image:loc>
+      <image:title>Visitor flipping an interactive flip-tag panel explaining how wind turbines generate electricity</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-08-letsuan-design.jpg</image:loc>
+      <image:title>Staircase beside a wall reading 'Let's create a world that runs entirely on green energy'</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-orsted-climate-expo</loc>
     <lastmod>2026-09-04</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-01-letsuan-design.jpg</image:loc>
+      <image:title>Visitors and students gathered at the Ørsted pavilion entrance, with an Earth graphic on the blue feature wall and a photo-booth character reading 'camera this way'</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-02-letsuan-design.jpg</image:loc>
+      <image:title>Visitors queue past the blue Earth feature wall at the Ørsted pavilion, with a staff member in a black suit standing beside the exhibit panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-03-letsuan-design.jpg</image:loc>
+      <image:title>Visitors gather at the purple wind-power information wall, with a cardboard sea-creature mascot and a colorful spinning info wheel</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-orsted-energy</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-01-letsuan-design.jpg</image:loc>
+      <image:title>Ørsted potted plant giveaway with brand tote at Energy Taiwan 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-02-letsuan-design.jpg</image:loc>
+      <image:title>Ørsted booth signage with technician on ladder at Energy Taiwan 2022</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-03-letsuan-design.jpg</image:loc>
+      <image:title>Visitor photographing Ørsted-branded ice cream at Energy Taiwan 2022</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-securities-office</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office waiting area</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-01-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-03-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office boardroom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-04-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office workstation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-05-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office corridor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-06-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office executive room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-07-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office feature wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-08-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office reception view</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-09-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office renovation in progress</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-10-letsuan-design.jpg</image:loc>
+      <image:title>Securities Company Office renovation detail, wall finishing</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-serialization-anniversary</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg</image:loc>
+      <image:title>INCIDENT IN CONAN EXHIBIT — Conan Exhibit exterior keyhole cube installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-exhibit-ivy-covered-venue-signage-booth-letsuan-design.jpg</image:loc>
+      <image:title>Conan Exhibit ivy-covered venue signage booth</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-mouri-detective-agency-manga-panel-wall-letsuan-design.jpg</image:loc>
+      <image:title>Mouri Detective Agency manga panel wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-mouri-agency-vermouth-manga-collage-wall-letsuan-design.jpg</image:loc>
+      <image:title>Manga panel collage wall featuring Vermouth and the Mouri Detective Agency storyline</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-yellow-character-wall-visitor-viewing-letsuan-design.jpg</image:loc>
+      <image:title>Visitor viewing a yellow character-introduction wall covered in manga cutout portraits</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-the-love-story-zone-letsuan-design.jpg</image:loc>
+      <image:title>Conan the LOVE STORY zone with manga panels</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg</image:loc>
+      <image:title>Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-kaito-kid-moonlit-rooftop-diorama-letsuan-design.jpg</image:loc>
+      <image:title>Life-size Kaito Kid and Conan figures on a moonlit rooftop diorama with city skyline backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-life-size-figures-of-conans-supporting-cast-letsuan-design.jpg</image:loc>
+      <image:title>Life-size figures of Conan's supporting cast</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-shinichi-ran-figures-cherry-blossom-scene-letsuan-design.jpg</image:loc>
+      <image:title>Life-size figures of Shinichi and Ran standing together beneath a cherry blossom backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-cherry-blossom-scene-with-life-size-figures-letsuan-design.jpg</image:loc>
+      <image:title>Cherry blossom scene with life-size figures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-zero-penetration-set-wall-construction-in-letsuan-design.jpg</image:loc>
+      <image:title>Zero-penetration set wall construction in progress</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-fabrication-workshop-building-the-exhibition-letsuan-design.jpg</image:loc>
+      <image:title>Fabrication workshop building the exhibition set walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-le-tsuan-design-workshop-panel-fabrication-letsuan-design.jpg</image:loc>
+      <image:title>Letsuan Design workshop panel fabrication</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-story-telling</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>Five Thousand Years of Silence — Story Telling by the Ancient People entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People gallery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-curved-gallery-with-visitors-display-cases-letsuan-design.jpg</image:loc>
+      <image:title>Visitors viewing archaeological artifact display cases in curved gallery with agricultural specimen wall and landscape backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People fossils</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-051-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People skeletons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People burial goods</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People fossil layer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People artifact</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-09-letsuan-design.jpg</image:loc>
+      <image:title>Story Telling by the Ancient People closing scene</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-tccge-deck</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg</image:loc>
+      <image:title>Green Energy Education Observation Platform — TCCGE Observation Deck platform</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-03-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck wind education</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-02-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck interactive teaching aid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-04-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck solar display</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-05-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck combined exhibit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-06-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck sunset closing view</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-07-letsuan-design.jpg</image:loc>
+      <image:title>TCCGE Observation Deck rooftop garden with wind turbine display</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-tibetan-thangka</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-visitor-viewing-scroll-row-white-gallery-letsuan-design.jpg</image:loc>
+      <image:title>Traveling Temple — Visitor viewing a row of hanging Tibetan thangka scrolls along the white gallery wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>Framed Tibetan thangka paintings hung along the exhibition corridor at Cai Yu Art Gallery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Large horizontal thangka mural depicting an assembly of Buddhist deities, mounted in the gallery corridor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>Installation team hanging thangka pieces from the overhead suspension track during construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>Construction progress: the team reviews the corridor layout, assembles display panels, and secures a thangka frame with a drill</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>Finished gallery corridor with large thangka murals on display, visitors viewing in the background</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>Documentary photographs of Rebgong thangka artists and residents, including a mother and child and an artist painting a thangka</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-tokyo-ghost-hospital</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>Two eras, one immersive scare in the dark — Tokyo Ghost Hospital effect</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital scene</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital passageway</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital corridor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital hallway</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital set-piece detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital finale</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-13-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital closing scene</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-entrance-queue-with-horror-signage-letsuan-design.jpg</image:loc>
+      <image:title>Queue entrance with Tokyo Ghost Hospital signage, stone archway and horror-themed wall graphics</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-8810-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital scene 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-909-letsuan-design.jpg</image:loc>
+      <image:title>Tokyo Ghost Hospital display</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-wang-ye-donggang</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-01-letsuan-design.jpg</image:loc>
+      <image:title>The Hunt of the Celestial Court — Wang Ye Worship in Donggang exhibition</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-02-letsuan-design.png</image:loc>
+      <image:title>Wang Ye Worship exhibition layout</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-03-letsuan-design.jpg</image:loc>
+      <image:title>Wang Ye Worship exhibition carvings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-04-letsuan-design.jpg</image:loc>
+      <image:title>Wang Ye Worship exhibition boat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-05-letsuan-design.jpg</image:loc>
+      <image:title>Wang Ye Worship exhibition deity altar</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-westernmost-point</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-friends-polaroid-photo-letsuan-design.jpg</image:loc>
+      <image:title>Polaroid-style photo of three friends posing at The Westernmost Point of Taiwan sculpture, dated 2022/6/9</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-04-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan silhouette</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-07-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan paper-cutting installation in progress</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-02-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan tunnel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-03-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan pattern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-05-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan night view</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-06-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan structure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-08-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan structural framework detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-09-letsuan-design.jpg</image:loc>
+      <image:title>Westernmost Point of Taiwan final view</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-world-semiconductors</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-01-letsuan-design.jpg</image:loc>
+      <image:title>The World of Semiconductors overview</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-02-letsuan-design.jpg</image:loc>
+      <image:title>The World of Semiconductors gallery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-03-letsuan-design.jpg</image:loc>
+      <image:title>The World of Semiconductors exhibit detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-04-letsuan-design.jpg</image:loc>
+      <image:title>The World of Semiconductors gallery entrance with mascot wall graphics, ready for the donation ceremony</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/project-yokai-world</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-hero-letsuan-design.jpg</image:loc>
+      <image:title>Experience the Yokai World — Yokai exhibition entrance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>Yokai exhibition zone</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>Yokai exhibition habitat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-13-letsuan-design.jpg</image:loc>
+      <image:title>Corridor lined with framed illustrated yokai story panels mounted on warm wood-trimmed walls</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-003-letsuan-design.jpg</image:loc>
+      <image:title>Yokai exhibition welcome installation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>Yokai exhibition interactive corner</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-005-letsuan-design.jpg</image:loc>
+      <image:title>Yokai exhibition maze zone</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>Yokai gathering photo wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>Yellow character-introduction wall panel featuring GeGeGe no Kitaro yokai characters and a 100th anniversary plaque</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-91-letsuan-design.jpg</image:loc>
+      <image:title>Yokai illustrated mural wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-04-letsuan-design-f779cada.jpg</image:loc>
+      <image:title>Yokai exhibition construction</image:title>
+    </image:image>
   </url>
 
 
@@ -260,186 +1468,1394 @@
   <url>
     <loc>https://letsuan.com/zh-TW/project-air-force-academy</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg</image:loc>
+      <image:title>空軍軍官學校建校九十週年校慶——老鷹雕塑裝置與拱門造型主牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-feature-wall-archway-with-eagle-sculptures-letsuan-design.jpg</image:loc>
+      <image:title>拱門造型主牆搭配老鷹雕塑與歷史軸線展板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-cockpit-simulator-interactive-exhibit-letsuan-design.jpg</image:loc>
+      <image:title>座艙模擬器互動展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-overhead-view-of-exhibition-zone-layout-letsuan-design.jpg</image:loc>
+      <image:title>展區配置空拍俯瞰</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-roc-air-force-academy-feature-wall-letsuan-design.jpg</image:loc>
+      <image:title>空軍軍官學校主牆搭配橘色燈光</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-visitors-viewing-history-timeline-wall-letsuan-design.jpg</image:loc>
+      <image:title>參觀民眾觀看歷史軸線牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-eagle-sculptures-being-transported-to-site-letsuan-design.jpg</image:loc>
+      <image:title>老鷹雕塑運送至展覽現場</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/air-force-academy-construction-team-installing-archway-feature-letsuan-design.jpg</image:loc>
+      <image:title>工程團隊安裝拱門造型主牆</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-amazing-homeland</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-indigenous-garment-display-wall-with-hanging-letsuan-design.jpg</image:loc>
+      <image:title>原鄉驚艷——原住民服飾展示牆，懸掛織品</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-glass-display-corridor-with-archaeological-letsuan-design.jpg</image:loc>
+      <image:title>玻璃展示廊道陳列考古文物</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-wood-carving-and-textile-artifact-display-letsuan-design.jpg</image:loc>
+      <image:title>木雕與織品文物展示架</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/amazing-homeland-museum-corridor-woven-basket-displays-visitors-letsuan-design.jpg</image:loc>
+      <image:title>展廳廊道陳列編織籃器與容器，民眾觀看玻璃展櫃與說明看板</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-art-gallery-culture</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-ministry-of-culture-exhibition-ceiling-letsuan-design.jpg</image:loc>
+      <image:title>看見文化部——展場天花與牆面細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-curved-display-case-with-ceramic-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>弧形展櫃陳列陶瓷文物與互動看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-publications-and-book-exhibition-folded-wall-letsuan-design.jpg</image:loc>
+      <image:title>出版品與書籍展示折牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-literature-and-book-exhibition-wall-detail-letsuan-design.jpg</image:loc>
+      <image:title>文學與書籍展示牆面細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-digital-culture-interactive-display-wall-letsuan-design.jpg</image:loc>
+      <image:title>數位文化互動展示牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-display-case-with-cultural-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>展櫃陳列文物並設有筆電互動站</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/art-gallery-culture-exhibition-hall-overview-with-wall-panels-letsuan-design.jpg</image:loc>
+      <image:title>展廳整體樣貌，牆面看板與展櫃</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-asian-art-biennial</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-i-love-taiwan-zhuyin-entrance-sign-letsuan-design.jpg</image:loc>
+      <image:title>草皮比作品更需要被保護——國立臺灣美術館入口夜間點燈的注音符號「我愛臺灣」裝置，2013亞洲藝術雙年展</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-02-letsuan-design.jpg</image:loc>
+      <image:title>美術館草皮上夜間點燈的注音符號「我愛臺灣」裝置，背景為國立臺灣美術館建築與2013亞洲藝術雙年展布條</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-love-taiwan-led-light-installation-on-lawn-letsuan-design.jpg</image:loc>
+      <image:title>草皮上夜間點燈的注音符號「我愛臺灣」LED燈飾裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-03-letsuan-design.jpg</image:loc>
+      <image:title>施工過程：工作人員徒手開挖淺層電纜溝（左），燈箱材料鋪設於草皮上（右），避免使用重型機具傷及草皮</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/asian-art-biennial-04-letsuan-design.jpg</image:loc>
+      <image:title>組裝前鋪設於草皮上的燈箱鋼構骨架與捲收電纜</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-beyond-just-an-exhibition</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg</image:loc>
+      <image:title>不只是展覽－你就是藝術的一部分！——民眾在向日葵花海間互動「悸動山谷」地板投影</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-sketch-flight-starry-sky-with-hand-drawn-letsuan-design.jpg</image:loc>
+      <image:title>手繪飛行速寫星空，搭配手繪鳥類與飛機圖案</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-visitors-photographing-immersive-floral-letsuan-design.jpg</image:loc>
+      <image:title>民眾拍攝沉浸式花卉投影牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-bouncing-valley-inflatable-light-ball-letsuan-design.jpg</image:loc>
+      <image:title>悸動谷地充氣光球裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-child-and-parent-interacting-letsuan-design.jpg</image:loc>
+      <image:title>親子互動「小人國餐桌」裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-immersive-floral-wall-projection-with-letsuan-design.jpg</image:loc>
+      <image:title>沉浸式花卉投影牆與參觀民眾</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-rainbow-and-world-map-immersive-wall-letsuan-design.jpg</image:loc>
+      <image:title>彩虹與世界地圖沉浸牆搭配互動工作站</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-sunflower-field-immersive-room-with-visitors-letsuan-design.jpg</image:loc>
+      <image:title>向日葵花海沉浸式空間與參觀民眾</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-grid-patterned-immersive-corridor-with-letsuan-design.jpg</image:loc>
+      <image:title>網格圖紋沉浸廊道與參觀民眾</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/beyond-exhibition-ceiling-truss-with-projectors-and-blending-letsuan-design.jpg</image:loc>
+      <image:title>施工期間天花桁架搭載投影機與訊號處理器</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-cat-art</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg</image:loc>
+      <image:title>貓美術館——民眾觀看金框裝裱、以貓咪重新詮釋畢卡索《夢》的作品</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-starry-night-mural-reinterpreted-with-cat-letsuan-design.jpg</image:loc>
+      <image:title>以貓咪主題重新詮釋《星夜》壁畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-gallery-corridor-with-cat-themed-letsuan-design.jpg</image:loc>
+      <image:title>展覽廊道陳列貓咪主題重新詮釋的經典肖像畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-yellow-gallery-corridor-with-renoir-style-cat-letsuan-design.jpg</image:loc>
+      <image:title>黃色展覽廊道陳列雷諾瓦風格的貓咪畫作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-yellow-and-pink-gallery-corridor-letsuan-design.jpg</image:loc>
+      <image:title>黃粉色展覽廊道陳列裱框貓咪畫作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-purple-gallery-corridor-with-framed-cat-letsuan-design.jpg</image:loc>
+      <image:title>紫色展覽廊道陳列裱框貓咪畫作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-shu-yamamoto-09-letsuan-design.jpg</image:loc>
+      <image:title>民眾坐在書桌前，一旁為貓咪版蒙娜麗莎場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-sculpted-cat-figures-recreating-sunday-letsuan-design.jpg</image:loc>
+      <image:title>貓咪雕塑重現《星期天的午後》畫作場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-mondrian-style-geometric-display-installation-letsuan-design.jpg</image:loc>
+      <image:title>蒙德里安風格幾何展示裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-sculpted-cat-figures-in-green-park-letsuan-design.jpg</image:loc>
+      <image:title>貓咪雕塑重現綠地公園場景，搭配陽傘</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/cat-art-cat-themed-gallery-room-with-sculpted-cat-letsuan-design.jpg</image:loc>
+      <image:title>貓咪主題展廳，陳列貓咪雕塑與裱框畫作</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-changhua-flower</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-pavilion-curved-feature-wall-letsuan-design.jpg</image:loc>
+      <image:title>從畸零基地到打卡地標——沃旭展館弧形主牆搭配風力機與海洋壁畫，夕陽時分</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-xizhou-park-pathway-with-concrete-planters-letsuan-design.jpg</image:loc>
+      <image:title>溪州公園步道搭配混凝土花槽與玻璃建築</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-pavilion-feature-wall-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>沃旭展館主牆座落於花海間，夕陽時分</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-qr-code-signage-post-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>花海間的QR code指標立柱</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-child-flying-a-kite-in-front-letsuan-design.jpg</image:loc>
+      <image:title>孩童在沃旭主牆前放風箏</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-zodiac-rabbit-cutout-signage-among-flower-letsuan-design.jpg</image:loc>
+      <image:title>花海間的生肖兔造型立牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/changhua-flower-orsted-branding-sign-with-clownfish-cutout-letsuan-design.jpg</image:loc>
+      <image:title>沃旭品牌標示搭配小丑魚造型裝置，植栽環繞</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-detective-conan-taipei</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-01-letsuan-design.jpg</image:loc>
+      <image:title>名偵探柯南科學搜查展——戴著帽子與耳機的孩童訪客彎腰靠近封鎖線，用放大鏡鉛筆檢視線索</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-05-letsuan-design-e3ab27a2.jpg</image:loc>
+      <image:title>編號線索板牆，展示年輪蛋糕、水果刀等犯罪現場證物卡</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-02-letsuan-design.jpg</image:loc>
+      <image:title>鑰匙孔造型分區標示，情報蒐集區與現場鑑識區，民眾瀏覽中</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-03-letsuan-design.jpg</image:loc>
+      <image:title>訪客手持放大鏡道具卡站在封鎖線後，調查粉筆人形輪廓與證物桌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-04-letsuan-design.jpg</image:loc>
+      <image:title>重現書房場景，柯南等身立牌、書架、證物桌與編號粉筆人形線索</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-04-letsuan-design-bd5d63d1.jpg</image:loc>
+      <image:title>名偵探柯南高雄場互動裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-mystery-cafe-information-gathering-station-letsuan-design.png</image:loc>
+      <image:title>訪客在神秘咖啡廳情報蒐集站前調查線索，搭配等身角色立牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-06-letsuan-design.jpg</image:loc>
+      <image:title>重現波羅咖啡廳用餐場景，桌椅與餐具陳列架</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-05-letsuan-design.jpg</image:loc>
+      <image:title>審訊室風格場景布置，皮沙發、附筆電辦公桌，牆上懸掛紅色大型字幅</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-03-letsuan-design-b739cea2.jpg</image:loc>
+      <image:title>藍色紫外線互動偵查亭，觸控螢幕提問「紅色汙漬究竟是什麼？」一旁擺放角色立牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-16-letsuan-design.jpg</image:loc>
+      <image:title>訪客使用紫外線手電筒，在酒瓶道具上找出指紋線索</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-08-letsuan-design.jpg</image:loc>
+      <image:title>三名訪客指著互動觸控螢幕，分析紅色汙漬的真相</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-09-letsuan-design.jpg</image:loc>
+      <image:title>角色立牌牆，柯南與夥伴們的對白泡泡，描述展覽謎題</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-10-letsuan-design.jpg</image:loc>
+      <image:title>柯南與金髮角色人形立像，戴著白手套，展示於封鎖線後</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-kaohsiung-02-letsuan-design-d8aed0bb.jpg</image:loc>
+      <image:title>施工前後對照：昏暗空蕩的場館空間，與工作人員站在剪式高空作業車上安裝城市天際線背景圖</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-11-letsuan-design.jpg</image:loc>
+      <image:title>放大版漫畫分格拼貼展示牆，取材自名偵探柯南劇情</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-12-letsuan-design.jpg</image:loc>
+      <image:title>施工進行中：工作人員站在梯子上組裝模組化牆板，場館尚未點燈</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-13-letsuan-design.jpg</image:loc>
+      <image:title>施工進行中：工作團隊在場館地面裁切與鋪設夾板牆板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-14-letsuan-design.jpg</image:loc>
+      <image:title>施工進行中：工作團隊組裝仿清水模牆體模組並堆疊夾板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detective-conan-taipei-15-letsuan-design.jpg</image:loc>
+      <image:title>最後施工細節收尾：工作人員在物料箱間完成互動觸控螢幕站台牆面</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-detention-pier2</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-detention-reality-experience-metal-wall-letsuan-design.jpg</image:loc>
+      <image:title>返校實境體驗展金屬牆面質感搭配燈光細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-hospital-bed-scene-with-eye-chart-letsuan-design.jpg</image:loc>
+      <image:title>重現病床場景，搭配視力檢查表燈箱</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-office-desk-with-green-bankers-letsuan-design.jpg</image:loc>
+      <image:title>重現辦公桌場景，綠色檯燈與轉盤電話</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-dark-corridor-with-double-doors-letsuan-design.jpg</image:loc>
+      <image:title>昏暗走廊，雙開門與牆面破碎紙張</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-bathroom-sink-area-with-dripping-letsuan-design.jpg</image:loc>
+      <image:title>重現浴室水槽場景，滴水水龍頭與塗鴉鏡面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-guard-walking-down-corridor-lined-letsuan-design.jpg</image:loc>
+      <image:title>警衛走過懸掛傳統戲偶與燈籠的走廊</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-ceiling-of-hanging-traditional-puppets-letsuan-design.jpg</image:loc>
+      <image:title>天花板懸掛傳統戲偶與紅色燈籠</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-museum-style-display-case-with-cultural-letsuan-design.jpg</image:loc>
+      <image:title>博物館風格展櫃陳列文化文物</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-rusted-cell-door-latch-detail-letsuan-design.jpg</image:loc>
+      <image:title>鏽蝕牢房門閂細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-iron-shackles-hanging-on-concrete-wall-letsuan-design.jpg</image:loc>
+      <image:title>鐵製腳鐐懸掛於水泥牆面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-recreated-prison-guard-room-with-desk-letsuan-design.jpg</image:loc>
+      <image:title>重現獄警值班室場景，桌燈與收音機</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-visitors-watching-projection-screen-inside-letsuan-design.jpg</image:loc>
+      <image:title>訪客在昏暗展間觀看投影螢幕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-red-exhibition-wall-introducing-the-detention-letsuan-design.jpg</image:loc>
+      <image:title>紅色展牆介紹《返校》遊戲故事，搭配角色美術圖</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-pier2-red-history-timeline-wall-with-display-letsuan-design.jpg</image:loc>
+      <image:title>紅色歷史軸線牆搭配展示櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-01-letsuan-design.jpg</image:loc>
+      <image:title>返校展面具場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-02-letsuan-design.jpg</image:loc>
+      <image:title>返校展指標標示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/detention-reality-experience-songshan-03-letsuan-design.jpg</image:loc>
+      <image:title>返校展沉浸式場景全景</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-dragon-to-beast</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-sauropod-skeletons-being-installed-in-outdoor-letsuan-design.jpg</image:loc>
+      <image:title>從龍到獸——蜥腳類恐龍骨骼於戶外中庭進行安裝</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-large-sauropod-skeleton-display-with-feature-letsuan-design.jpg</image:loc>
+      <image:title>大型蜥腳類恐龍骨骼展示搭配主題牆面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-dinosaur-skeleton-exhibit-zone-with-map-letsuan-design.jpg</image:loc>
+      <image:title>恐龍骨骼展區搭配地圖展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-origin-development-mammals-entrance-letsuan-design.jpg</image:loc>
+      <image:title>訪客拍攝哺乳類起源與演化展區入口的小型哺乳動物骨骼展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-orange-exhibition-hall-illuminated-pathway-visitors-letsuan-design.png</image:loc>
+      <image:title>訪客走過橘色調展廳，地面設有照明步道與骨骼展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-exhibition-zone-with-colorful-feature-walls-letsuan-design.jpg</image:loc>
+      <image:title>展區搭配彩色主題牆面與化石展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-carnivora-skeleton-display-corner-letsuan-design.jpg</image:loc>
+      <image:title>食肉目展區一隅，橘色牆面搭配燈光展櫃陳列食肉哺乳動物骨骼與頭骨</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-african-mammal-exhibition-zone-with-skeleton-letsuan-design.jpg</image:loc>
+      <image:title>非洲哺乳動物展區搭配骨骼展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-row-of-large-skull-fossils-letsuan-design.jpg</image:loc>
+      <image:title>玻璃展櫃陳列一排大型頭骨化石</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-prehistoric-mammal-skeleton-diorama-letsuan-design.jpg</image:loc>
+      <image:title>史前哺乳動物骨骼標本搭配草原場景背景畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-skeleton-display-case-with-rhino-letsuan-design.jpg</image:loc>
+      <image:title>骨骼展櫃陳列犀牛與哺乳動物化石</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-rhinoceros-giraffe-skeleton-gallery-letsuan-design.jpg</image:loc>
+      <image:title>白犀牛與長頸鹿骨骼標本展示，可見後方相鄰展廳</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-mammal-skull-fossil-display-shelves-letsuan-design.jpg</image:loc>
+      <image:title>照明展示架陳列多排哺乳動物頭骨與頜骨化石</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-whale-skeletons-suspended-above-display-cases-letsuan-design.jpg</image:loc>
+      <image:title>鯨魚骨骼懸掛於展櫃上方</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/dragon-to-beast-mammal-fossil-gallery-with-illustrated-letsuan-design.jpg</image:loc>
+      <image:title>哺乳動物化石展廳搭配插畫背景板</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-engineering-construction</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-circular-exhibition-hall-with-central-planter-letsuan-design.jpg</image:loc>
+      <image:title>防災教育館——圓形展廳搭配中央植栽與展板牆面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-central-bamboo-planter-feature-with-letsuan-design.jpg</image:loc>
+      <image:title>中央竹林造型植栽裝置，周圍環繞展示看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-flood-myth-wall-panel-with-wave-textured-letsuan-design.jpg</image:loc>
+      <image:title>洪水神話主題牆板，搭配波浪紋理浮雕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-flood-exhibit-corridor-with-projection-letsuan-design.jpg</image:loc>
+      <image:title>洪水主題展覽廊道，搭配投影與玻璃展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-column-display-with-glass-leaf-sculptures-letsuan-design.jpg</image:loc>
+      <image:title>柱體展示搭配玻璃葉片雕塑與防災看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-curved-wall-with-flood-control-image-letsuan-design.jpg</image:loc>
+      <image:title>弧形牆面搭配防洪意象看板與臺灣地圖圖像</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/engineering-construction-water-conservation-exhibit-panels-with-letsuan-design.jpg</image:loc>
+      <image:title>水資源保育展示看板搭配圓形展示窗</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-fullchamp-brochure</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-fullchamp-forged-metal-solutions-brochure-letsuan-design.jpg</image:loc>
+      <image:title>富春鍛造金屬解決方案型錄封面，搭配卡車意象</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-brochure-spread-showing-12000-ton-metal-letsuan-design.jpg</image:loc>
+      <image:title>型錄跨頁展示12,000噸鍛壓機設備</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/fullchamp-brochure-brochure-spread-with-quality-guarantee-letsuan-design.jpg</image:loc>
+      <image:title>型錄跨頁展示品質保證與鍛造流程機器人意象</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-green-energy</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-tiered-concrete-planter-wall-letsuan-design.jpg</image:loc>
+      <image:title>陽光、風力、地熱，在一座展館裡相遇——台泥綠能願景館入口層疊混凝土花牆，垂墜綠意</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-10-letsuan-design.jpg</image:loc>
+      <image:title>入口標示牌寫著「台泥綠能願景館」，搭配台泥集團與台泥標誌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-11-letsuan-design.jpg</image:loc>
+      <image:title>投影動畫展示，一旁看板說明台泥綠能標誌的意涵</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-03-letsuan-design.jpg</image:loc>
+      <image:title>直流／交流電與風力發電教育廊道，搭配互動觸控看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-01-letsuan-design.jpg</image:loc>
+      <image:title>時間軸展牆搭配互動觸控看板，訴說19至21世紀電力發展史</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-02-letsuan-design.jpg</image:loc>
+      <image:title>照明展板說明家庭用電與節能小知識</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-13-letsuan-design.jpg</image:loc>
+      <image:title>風力機剖面插畫展示，比較508公尺機組高度與台北101天際線</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-07-letsuan-design.jpg</image:loc>
+      <image:title>風力機機艙剖面模型，標號說明內部機械構造</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-visitor-viewing-solar-energy-zone-letsuan-design.jpg</image:loc>
+      <image:title>民眾觀看太陽能展區，陳列太陽能板樣品與風力機影片螢幕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-06-letsuan-design.jpg</image:loc>
+      <image:title>民眾參觀地熱能源展區，導覽人員解說展示內容</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-12-letsuan-design.jpg</image:loc>
+      <image:title>民眾聚集觀看太陽能互動資訊展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/green-energy-vision-pavilion-08-letsuan-design.jpg</image:loc>
+      <image:title>施工團隊安裝展示廊道的圖文看板</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-hakka-culture</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-entrance-feature-wall-with-tree-cutout-letsuan-design.jpg</image:loc>
+      <image:title>客家文化發展中心——入口主牆搭配樹形鏤空圖案與展覽標題</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-projection-screen-showing-archival-camphor-letsuan-design.jpg</image:loc>
+      <image:title>投影螢幕播放樟腦產業歷史影像</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-camphor-tree-branch-display-with-wood-letsuan-design.jpg</image:loc>
+      <image:title>樟樹枝幹裝置搭配木雕文物展示櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-gallery-corridor-with-tree-branch-display-letsuan-design.jpg</image:loc>
+      <image:title>展覽廊道搭配樹枝裝置與照片看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/hakka-culture-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>客家文化發展中心閉展場景</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-jehol-biota</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>開展那天，93件化石一件都不能遲到——熱河生物群展櫃陳列鳥類化石標本與插畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展牆，展示翼龍骨骼結構</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展覽廊道，搭配化石展示看板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>策展人員將化石標本安裝入展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展覽入口牆搭配化石展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展覽地圖牆，標示化石出土地點</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展示，紅色櫃體搭配鳥類藝術創作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展廳，陳列化石展櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-09-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群化石展櫃細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-10-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展牆，說明化石群形成與重要性</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>彩繪師完成熱河生物群入口牆壁畫施作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/jehol-biota-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>熱河生物群展覽開展前的施工中展廳</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-just-only-environment</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-paper-pulp-mold-technology-brochure-cover-letsuan-design.jpg</image:loc>
+      <image:title>Just Only——紙漿模造技術型錄封面，折頁細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-inspection-reports-letsuan-design.jpg</image:loc>
+      <image:title>型錄跨頁展示檢驗報告與製程</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-paper-pulp-mold-letsuan-design.jpg</image:loc>
+      <image:title>型錄跨頁展示紙漿模造餐具產品型錄</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-back-cover-with-blue-gradient-letsuan-design.jpg</image:loc>
+      <image:title>型錄封底搭配藍色漸層與紙漿模造餐具品牌識別</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/just-only-environment-brochure-spread-showing-patterned-paper-pulp-letsuan-design.jpg</image:loc>
+      <image:title>型錄跨頁展示紋理紙漿模造盤碗</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-la-fortuna-bordada</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-exhibition-banner-museo-entrance-letsuan-design.jpg</image:loc>
+      <image:title>西班牙國立裝飾藝術博物館入口的臺灣刺繡展布條</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-gallery-display-cases-embroidered-accessories-letsuan-design.jpg</image:loc>
+      <image:title>展廳陳列刺繡配件的展示櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-gallery-corridor-embroidered-garment-panels-letsuan-design.jpg</image:loc>
+      <image:title>展覽廊道陳列刺繡服飾展板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-display-case-embroidered-headwear-accessories-letsuan-design.jpg</image:loc>
+      <image:title>展示櫃陳列刺繡頭飾與配件</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-framed-embroidery-panels-through-archway-letsuan-design.jpg</image:loc>
+      <image:title>透過拱門望見裱框刺繡展板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-curators-inspecting-embroidered-artifacts-letsuan-design.jpg</image:loc>
+      <image:title>策展人員檢視展櫃中的刺繡文物</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-exhibition-wall-embroidered-panels-letsuan-design.jpg</image:loc>
+      <image:title>展牆陳列成排刺繡展板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/la-fortuna-bordada-wall-framed-rank-badge-embroidery-letsuan-design.jpg</image:loc>
+      <image:title>展牆陳列裱框官階徽章刺繡，搭配說明文字</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-led-kinetic</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/universe-led-kinetic-light-01-letsuan-design.jpg</image:loc>
+      <image:title>宇宙LED動態燈光裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/universe-led-kinetic-light-02-letsuan-design.jpg</image:loc>
+      <image:title>宇宙動態燈光裝置近拍</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-marine-illusion</loc>
     <lastmod>2026-09-04</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-visitors-exploring-the-masters-of-marine-letsuan-design.jpg</image:loc>
+      <image:title>眼見為憑？——海洋幻術師特展全景，民眾觀看水族箱展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-octopus-mural-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展章魚壁畫入口牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-visitor-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展民眾互動「海洋擬態大師」遊戲</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-visitor-viewing-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展民眾觀看階梯式水族展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-display-case-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展展櫃細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-thin-wall-lining-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展薄牆施作過程</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/marine-illusion-masters-of-marine-illusion-aquarium-tank-letsuan-design.jpg</image:loc>
+      <image:title>海洋幻術師特展水族箱安裝細節</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-missing-scientist</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-visitor-viewing-curved-gallery-wall-letsuan-design.jpg</image:loc>
+      <image:title>消失的科學家，藏在限制裡的設計——民眾觀看弧形展牆，牆上電磁理論圖文與照明展示柱</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-magnetic-levitation-display-case-letsuan-design.jpg</image:loc>
+      <image:title>電磁視界2.0磁浮展示櫃</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-interactive-display-station-letsuan-design.jpg</image:loc>
+      <image:title>民眾觀看互動電網模型展示站</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-kinetic-exercise-game-area-letsuan-design.jpg</image:loc>
+      <image:title>電磁視界2.0動態體感遊戲區</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-solar-energy-display-letsuan-design.jpg</image:loc>
+      <image:title>電磁視界2.0太陽能展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/missing-scientist-overhead-lighting-av-rigging-grid-letsuan-design.jpg</image:loc>
+      <image:title>展場上方燈光與影音懸吊系統，投影機架設於展區上方</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-mobile-museum</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>8.5坪的博物館——行動博物館車輛</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>行動博物館展示內容</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-green-glazed-pottery-ox-artifact-display-case-letsuan-design.jpg</image:loc>
+      <image:title>玻璃展櫃陳列行動博物館展出的綠釉陶牛文物</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-girl-tangram-puzzle-zoo-letsuan-design.jpg</image:loc>
+      <image:title>女孩在「拼圖動物園」站組裝粉色七巧板拼出魚形</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>行動博物館車廂內部</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-children-writing-pictographs-water-reveal-paper-letsuan-design.jpg</image:loc>
+      <image:title>孩童將手浸入水中，在「文字誕生」站的變色紙上書寫象形文字</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/mobile-museum-hallway-father-daughter-letsuan-design.jpg</image:loc>
+      <image:title>行動博物館車廂走道內的一家人，父親抱著女兒經過綠色拼圖動物園站</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-nmh-highlights</loc>
     <lastmod>2026-09-04</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-distant-hallway-letsuan-design.jpg</image:loc>
+      <image:title>訪客走過暖色調極簡展覽廊道，兩側為發光展示壁龕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/matched_ambient_brighter_warm_4K.jpg</image:loc>
+      <image:title>館藏精選文物展——訪客走過發光玻璃壁龕，內陳陶瓷與青銅文物</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-01-letsuan-design.png</image:loc>
+      <image:title>彩陶馬俑與人俑陳列於玻璃展櫃，一旁設有互動觸控導覽機</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-bronze-case-letsuan-design.jpg</image:loc>
+      <image:title>低反光玻璃展櫃陳列青銅禮器</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-03-letsuan-design.jpg</image:loc>
+      <image:title>訪客拍攝弧形展廊中低矮展櫃內的青銅與陶瓷器</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-04-letsuan-design.jpg</image:loc>
+      <image:title>斜角玻璃展櫃陳列彩陶騎馬俑與坐姿人俑</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-05-letsuan-design.jpg</image:loc>
+      <image:title>獨立玻璃展櫃陳列階梯展台上的彩陶人俑與陶馬</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmh-collection-highlights-02-letsuan-design.jpg</image:loc>
+      <image:title>展廳轉角獨立照明展櫃陳列青銅禮器，後方可見其他展示</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-nmns-teldap</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-01-letsuan-design.jpg</image:loc>
+      <image:title>數位典藏國家型計畫展區</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-03-letsuan-design.jpg</image:loc>
+      <image:title>數位典藏國家型計畫互動學習</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/nmns-teldap-digital-archives-02-letsuan-design.jpg</image:loc>
+      <image:title>數位典藏國家型計畫展示</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-notre-dame</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-vr-group-letsuan-design.jpg</image:loc>
+      <image:title>永恆聖母院——四位訪客身背背包、頭戴VR裝置，站在黑白對比圖文主牆前</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-headsets-array-letsuan-design.jpg</image:loc>
+      <image:title>後臺一排排整齊排列、準備供訪客使用的VR裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-vr-users-letsuan-design.jpg</image:loc>
+      <image:title>工作人員協助訪客調整VR裝置頭帶，一旁其他訪客也正配戴裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-rooftop-vr-letsuan-design.jpg</image:loc>
+      <image:title>VR畫面呈現訪客虛擬跪於聖母院屋頂，俯瞰巴黎天際線</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/eternal-notre-dame-vr-exhibition-2023-letsuan-design.jpg</image:loc>
+      <image:title>訪客頭戴VR裝置站在圖紋地板上，背景為黑白對比圖文主牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-profile-line-letsuan-design.jpg</image:loc>
+      <image:title>三位訪客側身背包配戴VR裝置，站在黑白對比圖文主牆前</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-construction-letsuan-design.jpg</image:loc>
+      <image:title>施工進行中：工作人員站在剪式高空作業車上為黑白對比壁畫牆上色</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/notre-dame-mural-install-letsuan-design.jpg</image:loc>
+      <image:title>施工進行中：團隊使用高空作業車與梯子繪製大型幾何壁畫</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-offshore-wind</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-01-letsuan-design.jpg</image:loc>
+      <image:title>離岸風電運維中心——會議室牆面為沃旭「Love your home」地球壁畫，前方為會議桌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-07-letsuan-design.jpg</image:loc>
+      <image:title>離岸風電展覽廊道，兩位訪客走過展示臺灣離岸風場裝置容量數據（吉瓦）的牆面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-02-letsuan-design.jpg</image:loc>
+      <image:title>弧形圖文展牆說明離岸風場運作，從沿海安裝流程到風機維護時程</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-visitor-viewing-turbine-technology-timeline-wall-letsuan-design.jpg</image:loc>
+      <image:title>訪客觀看離岸風機技術時間軸展牆，搭配播放安裝畫面的影音螢幕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-03-letsuan-design.jpg</image:loc>
+      <image:title>弧形展覽廊道，搭配沿海風場安裝示意圖與影音螢幕</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-07-letsuan-design.jpg</image:loc>
+      <image:title>訪客觀看弧形展牆，介紹離岸風機基座周邊海洋生態</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-06-letsuan-design.jpg</image:loc>
+      <image:title>入口廊道搭配沃旭地球壁畫、點狀波紋造型門洞與風場照片壁畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-04-letsuan-design.jpg</image:loc>
+      <image:title>訪客翻閱互動翻牌看板，了解風機發電原理</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/offshore-wind-om-learning-center-08-letsuan-design.jpg</image:loc>
+      <image:title>樓梯旁牆面寫著「一起打造完全仰賴綠能運作的世界」</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-orsted-climate-expo</loc>
     <lastmod>2026-09-04</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-01-letsuan-design.jpg</image:loc>
+      <image:title>訪客與學生聚集在沃旭展館入口，藍色主牆上的地球圖像與「鏡頭看這邊」的拍照裝置招牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-02-letsuan-design.jpg</image:loc>
+      <image:title>訪客在藍色地球主牆前排隊參觀，身著黑色套裝的工作人員站在展板旁</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/orsted-climate-expo-2024-03-letsuan-design.jpg</image:loc>
+      <image:title>訪客聚集在紫色風電資訊牆前，一旁是瓦楞紙海洋怪獸立牌與彩色轉盤圖版</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-orsted-energy</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-01-letsuan-design.jpg</image:loc>
+      <image:title>2022臺灣國際能源週沃旭攤位贈送盆栽並附贈品牌提袋</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-02-letsuan-design.jpg</image:loc>
+      <image:title>2022臺灣國際能源週沃旭攤位標示，技術人員站在梯子上</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/energy-taiwan-orsted-2022-03-letsuan-design.jpg</image:loc>
+      <image:title>訪客拍攝2022臺灣國際能源週沃旭品牌冰淇淋</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-securities-office</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-02-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室等候區</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-01-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室入口</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-03-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室會議室</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-04-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室工作站</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-05-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室廊道</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-06-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室主管辦公室</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-07-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室主牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-08-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室接待區視角</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-09-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室施工進行中</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/securities-company-office-design-10-letsuan-design.jpg</image:loc>
+      <image:title>證券公司辦公室施工細節，牆面收邊處理</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-serialization-anniversary</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-exhibit-exterior-keyhole-cube-letsuan-design.jpg</image:loc>
+      <image:title>名偵探柯南連載20周年紀念展——展場外觀鑰匙孔造型立方裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-exhibit-ivy-covered-venue-signage-booth-letsuan-design.jpg</image:loc>
+      <image:title>展場外觀爬藤覆蓋的活動標示亭</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-mouri-detective-agency-manga-panel-wall-letsuan-design.jpg</image:loc>
+      <image:title>毛利偵探事務所漫畫分格展示牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-mouri-agency-vermouth-manga-collage-wall-letsuan-design.jpg</image:loc>
+      <image:title>漫畫分格拼貼牆，取材自琴酒與毛利偵探事務所劇情</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-yellow-character-wall-visitor-viewing-letsuan-design.jpg</image:loc>
+      <image:title>訪客觀看黃色角色介紹牆，貼滿漫畫人物剪影</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-conan-the-love-story-zone-letsuan-design.jpg</image:loc>
+      <image:title>「Conan the LOVE STORY」展區搭配漫畫分格</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg</image:loc>
+      <image:title>安裝前拍攝的怪盜基德人形立牌，準備固定於屋頂平台</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-kaito-kid-moonlit-rooftop-diorama-letsuan-design.jpg</image:loc>
+      <image:title>等身尺寸怪盜基德與柯南人形立於月光屋頂場景，背景為城市天際線</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-life-size-figures-of-conans-supporting-cast-letsuan-design.jpg</image:loc>
+      <image:title>柯南夥伴群等身人形立牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-shinichi-ran-figures-cherry-blossom-scene-letsuan-design.jpg</image:loc>
+      <image:title>新一與蘭的等身人形立於櫻花背景前</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-cherry-blossom-scene-with-life-size-figures-letsuan-design.jpg</image:loc>
+      <image:title>櫻花場景搭配等身人形立牌</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-zero-penetration-set-wall-construction-in-letsuan-design.jpg</image:loc>
+      <image:title>零侵入式場景牆體施工進行中</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-fabrication-workshop-building-the-exhibition-letsuan-design.jpg</image:loc>
+      <image:title>製作工坊組裝展覽場景牆體</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/conan-anniv-le-tsuan-design-workshop-panel-fabrication-letsuan-design.jpg</image:loc>
+      <image:title>麗荃設計工坊進行牆面製作</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-story-telling</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>沉默的五千年——史前人類的故事展覽入口</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事展廳</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-curved-gallery-with-visitors-display-cases-letsuan-design.jpg</image:loc>
+      <image:title>訪客觀看弧形展廊的考古文物展櫃，搭配農耕標本牆與地景背景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事化石展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-051-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事骨骸展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事陪葬品展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事化石地層展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事文物展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/ancient-people-storytelling-exhibition-09-letsuan-design.jpg</image:loc>
+      <image:title>史前人類的故事閉展場景</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-tccge-deck</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-01-letsuan-design.jpg</image:loc>
+      <image:title>綠能教育觀景平台——彰濱觀景平台</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-03-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台風力發電教育展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-02-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台互動教具展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-04-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台太陽能展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-05-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台複合式展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-06-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台夕陽閉展景致</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tccge-observation-deck-zhangbin-07-letsuan-design.jpg</image:loc>
+      <image:title>彰濱觀景平台屋頂花園搭配風力機展示</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-tibetan-thangka</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-visitor-viewing-scroll-row-white-gallery-letsuan-design.jpg</image:loc>
+      <image:title>移動寺廟——訪客觀看白色展牆懸掛的一排藏傳唐卡卷軸</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>采玉藝廊展覽廊道懸掛裱框藏傳唐卡畫作</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>展覽廊道懸掛描繪佛教諸神會聚的大型橫幅唐卡壁畫</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>施工期間安裝團隊將唐卡作品懸掛於天花軌道系統</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>施工進度：團隊確認廊道配置、組裝展示面板，並以電鑽固定唐卡畫框</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>完工後的展覽廊道，懸掛大型唐卡壁畫，背景為觀展民眾</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tibetan-thangka-art-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>熱貢唐卡藝師與居民生活紀實攝影，包含母子與正在繪製唐卡的藝師</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-tokyo-ghost-hospital</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-08-letsuan-design.jpg</image:loc>
+      <image:title>跨時空敘事場景重現，完成一場黑暗中的沉浸式體驗——東京幽靈醫院效果</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-01-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院入口</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院通道</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-04-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院房間</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院走廊</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-02-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院廊道</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-06-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院場景細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院終章場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-13-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院閉展場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-entrance-queue-with-horror-signage-letsuan-design.jpg</image:loc>
+      <image:title>排隊入口搭配東京幽靈醫院標示、石造拱門與恐怖主題牆面圖案</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-8810-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院場景二</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/tokyo-ghost-hospital-exhibition-909-letsuan-design.jpg</image:loc>
+      <image:title>東京幽靈醫院展示</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-wang-ye-donggang</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-01-letsuan-design.jpg</image:loc>
+      <image:title>天狩神兵——東港迎王祭展覽</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-02-letsuan-design.png</image:loc>
+      <image:title>東港迎王祭展覽動線配置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-03-letsuan-design.jpg</image:loc>
+      <image:title>東港迎王祭展覽雕刻展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-04-letsuan-design.jpg</image:loc>
+      <image:title>東港迎王祭展覽王船展示</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/wang-ye-worship-donggang-05-letsuan-design.jpg</image:loc>
+      <image:title>東港迎王祭展覽神壇陳設</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-westernmost-point</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-friends-polaroid-photo-letsuan-design.jpg</image:loc>
+      <image:title>拍立得風格照片，三位友人於臺灣極西點裝置前合影，拍攝於2022年6月9日</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-04-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點剪影</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-07-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點剪紙裝置施工進行中</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-02-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點隧道意象</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-03-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點圖紋設計</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-05-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點夜間景致</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-06-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點結構造型</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-08-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點結構骨架細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/westernmost-point-taiwan-09-letsuan-design.jpg</image:loc>
+      <image:title>臺灣極西點完工樣貌</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-world-semiconductors</loc>
     <lastmod>2026-09-03</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-01-letsuan-design.jpg</image:loc>
+      <image:title>世界的半導體展覽全景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-02-letsuan-design.jpg</image:loc>
+      <image:title>世界的半導體展廳</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-03-letsuan-design.jpg</image:loc>
+      <image:title>世界的半導體展示細節</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/world-of-semiconductors-04-letsuan-design.jpg</image:loc>
+      <image:title>世界的半導體展廳入口，搭配吉祥物牆面圖樣，準備捐贈儀式</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://letsuan.com/zh-TW/project-yokai-world</loc>
     <lastmod>2026-09-14</lastmod>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-hero-letsuan-design.jpg</image:loc>
+      <image:title>體驗妖怪的世界——妖怪展覽入口</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-03-letsuan-design.jpg</image:loc>
+      <image:title>妖怪展覽展區</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-05-letsuan-design.jpg</image:loc>
+      <image:title>妖怪展覽棲地場景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-13-letsuan-design.jpg</image:loc>
+      <image:title>廊道懸掛裱框妖怪故事插畫展板，牆面採暖色木質裝修</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-003-letsuan-design.jpg</image:loc>
+      <image:title>妖怪展覽迎賓裝置</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-07-letsuan-design.jpg</image:loc>
+      <image:title>妖怪展覽互動角落</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-005-letsuan-design.jpg</image:loc>
+      <image:title>妖怪展覽迷宮區</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-11-letsuan-design.jpg</image:loc>
+      <image:title>妖怪集合合照牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-12-letsuan-design.jpg</image:loc>
+      <image:title>黃色角色介紹牆，展示鬼太郎系列妖怪角色與百年紀念牌匾</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-91-letsuan-design.jpg</image:loc>
+      <image:title>妖怪插畫壁畫牆</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://letsuan.com/images/yokai-world-exhibition-04-letsuan-design-f779cada.jpg</image:loc>
+      <image:title>妖怪展覽施工進行中</image:title>
+    </image:image>
   </url>
 
 </urlset>
