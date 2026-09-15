@@ -20,6 +20,7 @@ export interface Slide {
   subtitleLineHeight?: number;
   titleFontScale?: number;
   ctaMarginTop?: string;
+  tagLine?: string;
   introImg?: string;
   introAlt?: string;
   introBgWidth?: number;

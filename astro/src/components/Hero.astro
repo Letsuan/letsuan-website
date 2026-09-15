@@ -43,6 +43,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   {slides.map((slide, i) => {
     const isActive = i === 0;
     const TitleTag = isActive ? 'h1' : 'div';
+    const SubtitleTag = isActive ? 'h2' : 'p';
     const panClass = i === 2 ? 'ltsuan-hero3-reveal' : 'ltsuan-slow-parallax';
     const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : '';
     const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker ltsuan-hero3-person-flyin' : '';
@@ -142,7 +143,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
                 )}
               </TitleTag>
               <div class="ltsuan-hero-subtitle-wrap">
-                <p class:list={['ltsuan-hero-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
+                <SubtitleTag class:list={['ltsuan-hero-subtitle', { 'is-revealed': isActive }]} style={slide.subtitleLineHeight ? `line-height:${slide.subtitleLineHeight}` : undefined}>
                   {slide.subtitleLine1}
                   {slide.subtitleLine2 && (
                     <>
@@ -150,7 +151,10 @@ const speedStreaks = Array.from({ length: 14 }, () => {
                       {slide.subtitleLine2}
                     </>
                   )}
-                </p>
+                </SubtitleTag>
+                {slide.tagLine && (
+                  <p class:list={['ltsuan-hero-tagline', { 'is-revealed': isActive }]}>{slide.tagLine}</p>
+                )}
               </div>
               <div class="ltsuan-hero-cta-wrap" style={slide.ctaMarginTop ? `margin-top:${slide.ctaMarginTop}` : undefined}>
                 <div class:list={['ltsuan-reveal-button', { 'is-revealed': isActive }]}>
@@ -398,6 +402,21 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   }
   .ltsuan-hero-subtitle.is-revealed {
     transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.65s;
+    transform: translateY(0%);
+  }
+  .ltsuan-hero-tagline {
+    font-family: 'Noto Sans TC', 'Noto Sans TC Fallback', sans-serif;
+    font-size: clamp(13px, 1vw, 15px);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: rgba(244, 239, 232, 0.6);
+    margin: 10px 0 0;
+    max-width: 36ch;
+    transition: transform 0.14s ease-in;
+    transform: translateY(100vh);
+  }
+  .ltsuan-hero-tagline.is-revealed {
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.75s;
     transform: translateY(0%);
   }
   .ltsuan-hero-cta-wrap {

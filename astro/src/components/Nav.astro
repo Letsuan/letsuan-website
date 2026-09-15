@@ -3,9 +3,9 @@ import { navMenuItems, navFeaturedItems } from '../data/homepage';
 
 interface Props {
   active: string;
-  zhHref?: string;
+  zhHref: string;
 }
-const { active, zhHref = '/coming-soon' } = Astro.props;
+const { active, zhHref } = Astro.props;
 ---
 
 <nav class="ltsuan-nav" id="ltsuan-nav">

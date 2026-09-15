@@ -1,13 +1,14 @@
 export const heroSlides = [
   {
     num: '01',
-    titleLine1: '博物館展覽設計',
-    titleLine2: '沉浸式體驗・展覽工程',
+    titleLine1: '造境入心',
+    titleLine2: '',
     titleLineHeight: 1.01,
-    titleFontScale: 0.55,
+    titleFontScale: 0.8,
     subtitleLineHeight: 1.19,
-    subtitleLine1: '造境入心',
+    subtitleLine1: '展覽設計・博物館設計・沉浸式體驗',
     subtitleLine2: '',
+    tagLine: '展覽 / 博物館 / 沉浸式 / 空間 / 工程',
     ctaMarginTop: '-6px',
     ctaLabel: '實績案例',
     href: './portfolio',
