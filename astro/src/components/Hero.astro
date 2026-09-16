@@ -44,7 +44,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     const isActive = i === 0;
     const TitleTag = isActive ? 'h1' : 'div';
     const SubtitleTag = isActive ? 'h2' : 'p';
-    const panClass = i === 2 ? 'ltsuan-hero3-reveal' : 'ltsuan-slow-parallax';
+    const panClass = i === 2 ? 'ltsuan-hero3-reveal' : i === 0 ? 'ltsuan-hero1-reveal' : 'ltsuan-slow-parallax';
     const personZoomClass = i === 1 ? 'ltsuan-person-grow-glow' : '';
     const personBoxClass = i === 2 ? 'ltsuan-hero-person-worker ltsuan-hero3-person-flyin' : '';
     return (
@@ -846,6 +846,11 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   }
   .ltsuan-hero3-reveal {
     filter: blur(2.53px);
+    will-change: transform;
+    backface-visibility: hidden;
+    animation: ltsuanHero3BaseReveal 6s linear 3s 1 both;
+  }
+  .ltsuan-hero1-reveal {
     will-change: transform;
     backface-visibility: hidden;
     animation: ltsuanHero3BaseReveal 6s linear 3s 1 both;
