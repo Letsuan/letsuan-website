@@ -6,7 +6,7 @@ interface Props {
   slides?: Slide[];
   autoAdvanceMs?: number;
 }
-const { slides = defaultSlides, autoAdvanceMs = 5000 } = Astro.props;
+const { slides = defaultSlides, autoAdvanceMs = 9000 } = Astro.props;
 
 const beamTwinkles = [
   { style: 'left:8%;transform:rotate(3deg);--beam-duration:3.4s;--beam-delay:0s' },
@@ -1015,14 +1015,12 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     counterLabel.textContent = `SCROLL — ${String(active + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
   }
 
-  const autoAdvanceMs = Number(hero.dataset.autoMs) || 5000;
+  const autoAdvanceMs = Number(hero.dataset.autoMs) || 9000;
 
   function maybeStartAuto() {
     if (autoTimer) clearTimeout(autoTimer);
     if (!auto) return;
-    const isSlide3 = layers[active].dataset.idx === '2';
-    const delay = isSlide3 ? 9000 : autoAdvanceMs;
-    autoTimer = setTimeout(() => changeSlide((active + 1) % total), delay);
+    autoTimer = setTimeout(() => changeSlide((active + 1) % total), autoAdvanceMs);
   }
 
   function changeSlide(idx: number) {
