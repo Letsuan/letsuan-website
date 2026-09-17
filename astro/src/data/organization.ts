@@ -72,6 +72,16 @@ export const organizationJsonLd = {
         'https://www.pinterest.com/Letsuan_Design/',
         'https://www.linkedin.com/company/letsuan-design/',
       ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exhibition Design', serviceType: 'Exhibition Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design', serviceType: 'Interior Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual Design', serviceType: 'Visual Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Design-Build Construction', serviceType: 'Construction', provider: { '@id': 'https://letsuan.com/#organization' } } },
+        ],
+      },
     },
     {
       '@type': 'WebSite',
