@@ -15,6 +15,8 @@ export interface ProjectImage {
   src: string;
   alt: string;
   plain?: boolean;
+  width?: number;
+  height?: number;
 }
 
 interface Props {
@@ -164,9 +166,9 @@ const preloadImage = images[0]
             <picture>
               <source srcset={avifPath(img.src)} type="image/avif" />
               {imgIndex === 0 ? (
-                <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="eager" fetchpriority="high" decoding="async" />
+                <img src={img.src} alt={img.alt} width={img.width} height={img.height} class="ltsuan-detail-img" loading="eager" fetchpriority="high" decoding="async" />
               ) : (
-                <img src={img.src} alt={img.alt} class="ltsuan-detail-img" loading="lazy" decoding="async" />
+                <img src={img.src} alt={img.alt} width={img.width} height={img.height} class="ltsuan-detail-img" loading="lazy" decoding="async" />
               )}
             </picture>
           </div>

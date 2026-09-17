@@ -6,6 +6,8 @@ export interface HeroSlide {
   href: string;
   realImg: string;
   alt: string;
+  imgWidth: number;
+  imgHeight: number;
 }
 
 export interface Project {
@@ -22,9 +24,9 @@ export interface Project {
 }
 
 export const heroSlides: HeroSlide[] = [
-  { num: '01', category: 'EXHIBITION', title: 'The Future Is Worth It', subtitle: 'Wind, and Geothermal Energy Converge in a Single Pavilion', href: './project-green-energy', realImg: '/images/concrete-wall-plant-display-letsuan-design.jpg', meta: 'TCCGE', alt: 'Woman in tan cape coat looking up at the tiered concrete planter wall at the Green Energy Vision Pavilion entrance' },
-  { num: '02', category: 'EXHIBITION', title: 'You Are Part of the Art', subtitle: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition', realImg: '/images/ocean-mimic-hero-opt-letsuan-design.jpg', meta: 'teamLab', alt: 'Visitors walking through an immersive floor-to-wall projection of pink and blue floral bursts and rippling water patterns' },
-  { num: '03', category: 'EXHIBITION', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art', realImg: '/images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', meta: 'Cat Art Museum', alt: 'Visitors browsing framed cat-parody reinterpretations of classical paintings in the olive-green and yellow gallery rooms' },
+  { num: '01', category: 'EXHIBITION', title: 'The Future Is Worth It', subtitle: 'Wind, and Geothermal Energy Converge in a Single Pavilion', href: './project-green-energy', realImg: '/images/concrete-wall-plant-display-letsuan-design.jpg', meta: 'TCCGE', alt: 'Woman in tan cape coat looking up at the tiered concrete planter wall at the Green Energy Vision Pavilion entrance', imgWidth: 1984, imgHeight: 1280 },
+  { num: '02', category: 'EXHIBITION', title: 'You Are Part of the Art', subtitle: 'Step Into a Breathing Magical Universe of Light and Shadows', href: './project-beyond-just-an-exhibition', realImg: '/images/ocean-mimic-hero-opt-letsuan-design.jpg', meta: 'teamLab', alt: 'Visitors walking through an immersive floor-to-wall projection of pink and blue floral bursts and rippling water patterns', imgWidth: 1824, imgHeight: 1376 },
+  { num: '03', category: 'EXHIBITION', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', href: './project-cat-art', realImg: '/images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg', meta: 'Cat Art Museum', alt: 'Visitors browsing framed cat-parody reinterpretations of classical paintings in the olive-green and yellow gallery rooms', imgWidth: 1920, imgHeight: 1049 },
 ];
 
 export const categories = ['All Works', 'Exhibition Design', 'Interior Design', 'Visual Design', 'Event'];

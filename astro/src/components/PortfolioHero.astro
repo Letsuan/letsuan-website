@@ -1,6 +1,6 @@
 ---
 import { heroSlides } from '../data/portfolio';
-import { avifPath } from '../utils/images';
+import { avifPath, responsiveSrcset } from '../utils/images';
 ---
 
 <section id="pf-hero">
@@ -10,12 +10,17 @@ import { avifPath } from '../utils/images';
       <div class:list={['pf-hero-layer', { 'is-active': isActive }]} data-idx={i} style={`z-index:${isActive ? 2 : 1};transform:translateY(${isActive ? 0 : -100}%)`}>
         <div class="pf-hero-img-wrap">
           <picture>
-            <source type="image/avif" srcset={avifPath(slide.realImg)} />
+            <source type="image/avif" srcset={responsiveSrcset(slide.realImg, 'avif', slide.imgWidth, [960])} sizes="100vw" />
             <img
               class="pf-hero-img"
               alt={slide.alt}
               src={slide.realImg}
+              srcset={responsiveSrcset(slide.realImg, 'jpg', slide.imgWidth, [960])}
+              sizes="100vw"
+              width={slide.imgWidth}
+              height={slide.imgHeight}
               decoding="async"
+              loading={i === 0 ? 'eager' : 'lazy'}
               fetchpriority={i === 0 ? 'high' : undefined}
             />
           </picture>

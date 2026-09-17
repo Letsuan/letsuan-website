@@ -4,6 +4,7 @@ import Nav from '../components/Nav.astro';
 import PortfolioHero from '../components/PortfolioHero.astro';
 import ProjectGrid from '../components/ProjectGrid.astro';
 import { organizationJsonLd } from '../data/organization';
+import { projects } from '../data/portfolio';
 
 const title = 'Letsuan Design | Exhibition & Interior Portfolio';
 const description = 'Browse exhibition, interior and visual design projects by Letsuan Design, a Taiwan-based studio for museums, brands and public spaces.';
@@ -34,6 +35,24 @@ const pageJsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Portfolio', item: 'https://letsuan.com/portfolio' },
       ],
     },
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://letsuan.com/portfolio#collection',
+      url: 'https://letsuan.com/portfolio',
+      name: title,
+      isPartOf: { '@id': 'https://letsuan.com/#website' },
+      about: { '@id': 'https://letsuan.com/#organization' },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: projects.length,
+        itemListElement: projects.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: p.title,
+          url: `https://letsuan.com${p.href.replace(/^\./, '')}`,
+        })),
+      },
+    },
   ],
 };
 ---
@@ -48,6 +67,7 @@ const pageJsonLd = {
       <div class="pf-intro-eyebrow">ARCHIVE</div>
       <h1 class="pf-intro-title">Work That Turns Spaces Into Experiences.</h1>
       <p class="pf-intro-copy">A selection of exhibitions, interiors and visual environments delivered across Taiwan.</p>
+      <p class="pf-intro-copy">37 projects spanning exhibition design, interior design, visual identity and event work, for clients including national museums, government agencies and global brands such as Ørsted, TSMC and HTC VIVE Arts. Filter by category below, or open any project for the full design-to-installation case study.</p>
     </section>
 
     <ProjectGrid />

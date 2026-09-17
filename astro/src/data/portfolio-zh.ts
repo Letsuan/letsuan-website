@@ -6,6 +6,8 @@ export interface HeroSlide {
   href: string;
   realImg: string;
   alt: string;
+  imgWidth: number;
+  imgHeight: number;
 }
 
 export interface Project {
@@ -22,9 +24,9 @@ export interface Project {
 }
 
 export const heroSlides: HeroSlide[] = [
-  { num: "01", category: "展覽", title: "陽光、風力、地熱，在一座展館裡相遇", subtitle: "台泥綠能願景館", href: "./project-green-energy", realImg: "../images/concrete-wall-plant-display-letsuan-design.jpg", alt: "身穿駝色斗篷外套的女性抬頭望向台泥綠能願景館入口的層疊混凝土花牆" },
-  { num: "02", category: "展覽", title: "不只是展覽–你就是藝術的一部分！", subtitle: "走進呼吸中的光影魔幻宇宙", href: "./project-beyond-just-an-exhibition", realImg: "../images/ocean-mimic-hero-opt-letsuan-design.jpg", alt: "訪客走過粉藍色花卉綻放與水波紋沉浸式投影空間" },
-  { num: "03", category: "展覽", title: "貓美術館", subtitle: "山本修的超療癒世界", href: "./project-cat-art", realImg: "../images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg", alt: "訪客在橄欖綠與黃色展廳瀏覽以貓咪重新詮釋經典畫作的裱框作品" },
+  { num: "01", category: "展覽", title: "陽光、風力、地熱，在一座展館裡相遇", subtitle: "台泥綠能願景館", href: "./project-green-energy", realImg: "../images/concrete-wall-plant-display-letsuan-design.jpg", alt: "身穿駝色斗篷外套的女性抬頭望向台泥綠能願景館入口的層疊混凝土花牆", imgWidth: 1984, imgHeight: 1280 },
+  { num: "02", category: "展覽", title: "不只是展覽–你就是藝術的一部分！", subtitle: "走進呼吸中的光影魔幻宇宙", href: "./project-beyond-just-an-exhibition", realImg: "../images/ocean-mimic-hero-opt-letsuan-design.jpg", alt: "訪客走過粉藍色花卉綻放與水波紋沉浸式投影空間", imgWidth: 1824, imgHeight: 1376 },
+  { num: "03", category: "展覽", title: "貓美術館", subtitle: "山本修的超療癒世界", href: "./project-cat-art", realImg: "../images/cat-art-museum-parody-painting-gallery-with-visitors-letsuan-design.jpg", alt: "訪客在橄欖綠與黃色展廳瀏覽以貓咪重新詮釋經典畫作的裱框作品", imgWidth: 1920, imgHeight: 1049 },
 ];
 
 export const categories = ["全部作品", "展覽設計", "室內設計", "視覺設計", "活動"];

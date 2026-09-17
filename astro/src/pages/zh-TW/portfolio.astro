@@ -4,6 +4,7 @@ import Nav from '../../components/zh-TW/Nav.astro';
 import PortfolioHero from '../../components/zh-TW/PortfolioHero.astro';
 import ProjectGrid from '../../components/zh-TW/ProjectGrid.astro';
 import { organizationJsonLd } from '../../data/organization';
+import { projects } from '../../data/portfolio-zh';
 
 const title = '麗荃室內裝修 | 展覽與室內設計作品集';
 const description = '瀏覽麗荃設計的展覽、室內與視覺設計作品——一間服務博物館、品牌與公共空間的臺灣設計工作室。';
@@ -34,6 +35,24 @@ const pageJsonLd = {
         { '@type': 'ListItem', position: 2, name: '作品集', item: canonical },
       ],
     },
+    {
+      '@type': 'CollectionPage',
+      '@id': 'https://letsuan.com/zh-TW/portfolio#collection',
+      url: canonical,
+      name: title,
+      isPartOf: { '@id': 'https://letsuan.com/#website' },
+      about: { '@id': 'https://letsuan.com/#organization' },
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: projects.length,
+        itemListElement: projects.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: p.title,
+          url: `https://letsuan.com/zh-TW${p.href.replace(/^\./, '')}`,
+        })),
+      },
+    },
   ],
 };
 ---
@@ -48,6 +67,7 @@ const pageJsonLd = {
       <div class="pf-intro-eyebrow">作品典藏</div>
       <h1 class="pf-intro-title">讓空間，成為體驗。</h1>
       <p class="pf-intro-copy">精選麗荃室內裝修在各地完成的展覽、室內、視覺設計案例。</p>
+      <p class="pf-intro-copy">37 件作品橫跨展覽設計、室內設計、視覺識別與活動企劃，客戶包含國立博物館、政府機關，以及沃旭能源（Ørsted）、台積電（TSMC）、HTC VIVE Arts 等國際品牌。可依分類篩選，或點選任一作品查看從設計到完工的完整案例說明。</p>
     </section>
 
     <ProjectGrid />
