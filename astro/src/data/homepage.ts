@@ -158,7 +158,7 @@ export const navFeaturedItems = [
   { num: '02', title: 'Beyond Just an Exhibition—You Are Part of the Art!', meta: 'Step Into a Breathing Magical Universe of Light and Shadows', href: '/project-beyond-just-an-exhibition' },
   { num: '03', title: 'Eternal Notre-Dame', meta: 'International Debut of the VR Immersive Exhibition in Taiwan', href: '/project-notre-dame' },
   { num: '04', title: 'Cat Art Museum', meta: 'A Super-Healing World by Shu Yamamoto', href: '/project-cat-art' },
-  { num: '05', title: 'The Missing Scientist', meta: 'Electromagnetic Horizon II', href: '/project-missing-scientist' },
+  { num: '05', title: 'INCIDENT IN CONAN EXHIBIT', meta: 'Congratulatory Exhibit “Conan Exhibit”', href: '/project-serialization-anniversary' },
   { num: '06', title: 'Experience the Yokai World', meta: '100 Stories of Yokai Exhibition', href: '/project-yokai-world' },
-  { num: '07', title: 'Universe', meta: '500 Pieces of LED Kinetic Light', href: '/project-led-kinetic' },
+  { num: '07', title: 'Highlights of NMH', meta: 'Collection Exhibition', href: '/project-nmh-highlights' },
 ];
