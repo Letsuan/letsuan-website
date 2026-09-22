@@ -48,6 +48,30 @@ Wall substrates, coatings, trim, and full-space graphics carried international e
 
 ---
 
+## Know the Sea by Being Close to It — Central Taiwan Marine Conservation Education Center
+
+**Source:** https://letsuan.com/project-satoumi
+**Chinese version:** https://letsuan.com/zh-TW/project-satoumi
+**Client:** Ocean Conservation Administration, Ocean Affairs Council / National Museum of Natural Science
+**Location:** Taichung, Taiwan
+**Year:** 2024
+**Area:** 330 ㎡
+**Category:** Exhibition Design, Interior Design, Construction
+
+### Summary
+Design-build conversion of a former museum restaurant into a marine conservation education center built around three named Chinese white dolphins, the third center under the Ocean Affairs Council's "Homage to the Sea" initiative. Letsuan Design acted as general contractor for space planning, exhibition design, a science classroom, accessibility upgrades, and MEP work.
+
+### Challenge
+The space had been a restaurant and had to be converted to museum-grade exhibition and education use. Demolition exposed a 7cm+ floor-level gap against the exterior corridor, a mislocated water leak, an HVAC plant room adjacent to the planned office requiring both fire-rated and acoustic treatment, cut wiring circuits, and building-wide accessibility deficiencies triggered by the change-of-use permit review.
+
+### Approach
+The floor-level gap was corrected and the leak traced to its actual source (a planter drain head, not the suspected expansion joint) and repaired. Rock wool and added sound insulation resolved the HVAC room's fire and noise requirements. The men's restroom was reconfigured and the accessible restroom's door frame and wall were re-cut during museum closed days; a wheelchair lift resolved vertical accessibility where the existing stairwell could not be brought to code. The entire electrical system was rerun after early demolition cut existing circuits. To avoid routing construction materials through public visitor circulation, the team removed an upper-floor window and winched materials in from outside.
+
+### Exhibition Design
+Five exhibit units guide visitors from environmental context to individual animals: forest-river-sea and estuary ecology, a seasonally updated Taiwan cetacean intelligence wall, wetland ecology with stranded-specimen displays, a large-scale dolphin life-history table with suspended 1:1 models, and a water-curtain feature above the Dragon and Tiger Pond featuring three white dolphin models named after their real Ocean Conservation Administration IDs.
+
+---
+
 ## Eternal Notre-Dame — International Debut of the VR Immersive Exhibition in Taiwan
 
 **Source:** https://letsuan.com/project-notre-dame
