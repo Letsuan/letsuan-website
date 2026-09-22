@@ -110,7 +110,7 @@ const preloadImage = images[0]
           {metaFields.map((f) => (
             <div>
               <p class="ltsuan-detail-meta-label">{f.label}</p>
-              <p class="ltsuan-detail-meta-value">{f.value}</p>
+              <p class="ltsuan-detail-meta-value" set:html={f.value} />
             </div>
           ))}
         </div>
