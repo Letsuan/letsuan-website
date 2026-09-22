@@ -92,7 +92,7 @@ export const featuredProjects = [
 ];
 
 export const navMenuItems = [
-  { key: 'portfolio', label: '作品集', href: '/zh-TW/portfolio' },
+  { key: 'portfolio', label: '全部作品', href: '/zh-TW/portfolio' },
   { key: 'exhibition', label: '展覽設計', href: '/zh-TW/portfolio?cat=展覽設計' },
   { key: 'interior', label: '室內設計', href: '/zh-TW/portfolio?cat=室內設計' },
   { key: 'visual', label: '視覺設計', href: '/zh-TW/portfolio?cat=視覺設計' },

@@ -144,7 +144,7 @@ export const featuredProjects: FeaturedProject[] = [
 ];
 
 export const navMenuItems = [
-  { key: 'portfolio', label: 'Portfolio', href: '/portfolio' },
+  { key: 'portfolio', label: 'All Work', href: '/portfolio' },
   { key: 'exhibition', label: 'Exhibition Design', href: '/portfolio?cat=Exhibition+Design' },
   { key: 'interior', label: 'Interior Design', href: '/portfolio?cat=Interior+Design' },
   { key: 'visual', label: 'Visual Design', href: '/portfolio?cat=Visual+Design' },
