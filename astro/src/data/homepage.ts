@@ -148,7 +148,6 @@ export const navMenuItems = [
   { key: 'exhibition', label: 'Exhibition Design', href: '/portfolio?cat=Exhibition+Design' },
   { key: 'interior', label: 'Interior Design', href: '/portfolio?cat=Interior+Design' },
   { key: 'visual', label: 'Visual Design', href: '/portfolio?cat=Visual+Design' },
-  { key: 'event', label: 'Event', href: '/portfolio?cat=Event' },
   { key: 'about', label: 'About', href: '/about' },
   { key: 'what-we-do', label: 'What We Do', href: '/what-we-do' },
   { key: 'contact', label: 'Contact', href: '/contact' },
