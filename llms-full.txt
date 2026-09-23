@@ -8,7 +8,7 @@
 - Each project follows a consistent structure for easier parsing
 
 ## Studio Snapshot
-- Founded: 2014
+- In practice since: 2010 (renamed a licensed interior decoration company in 2014)
 - Studios: Taichung and Taipei, Taiwan
 - Delivery model: Design-build — the same team carries projects from concept through fabrication and on-site installation
 - Projects delivered: 42+

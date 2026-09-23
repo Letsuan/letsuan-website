@@ -77,7 +77,7 @@ export const heroSlides = [
 ];
 
 export const services = [
-  { id: 'curatorial', title: '策展服務', desc: '一場好的展覽，不只是把物件擺出來而已。我們從概念發展、內容研究到敘事腳本，為每一檔展覽打好策展框架，讓博物館或品牌在開幕當天就有一場真正站得住腳的展覽。十二年來為博物館與文化場館操刀策展，讓我們清楚知道展覽構想容易在哪裡出問題，也懂得提早發現、及時處理。', href: './project-air-force-academy', realImg: '/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: '空軍軍官學校九十週年校慶 — 鷹型雕塑裝置與拱形主牆', imgWidth: 800, imgHeight: 400 },
+  { id: 'curatorial', title: '策展服務', desc: '一場好的展覽，不只是把物件擺出來而已。我們從概念發展、內容研究到敘事腳本，為每一檔展覽打好策展框架，讓博物館或品牌在開幕當天就有一場真正站得住腳的展覽。自 2010 年起為博物館與文化場館操刀策展，讓我們清楚知道展覽構想容易在哪裡出問題，也懂得提早發現、及時處理。', href: './project-air-force-academy', realImg: '/images/air-force-academy-eagle-sculpture-installation-with-archway-letsuan-design.jpg', alt: '空軍軍官學校九十週年校慶 — 鷹型雕塑裝置與拱形主牆', imgWidth: 800, imgHeight: 400 },
   { id: 'exhibition', title: '展覽設計', desc: '一場展覽成不成功，取決於它如何引導訪客走過整個空間。我們把敘事、燈光與互動裝置當作同一套系統來設計，而不是各自獨立的廠商拼湊而成，讓博物館或水族館的訪客不需要靠滿牆的文字說明，也能跟上展覽的敘事節奏。', href: './project-cat-art', realImg: '/images/cat-art-dream-painting-cat-parody-with-visitor-letsuan-design.jpg', alt: '貓美術館 — 訪客欣賞金框貓咪版《夢》畫作重新詮釋', imgWidth: 1376, imgHeight: 1824 },
   { id: 'interior', title: '室內設計', desc: '商業與機構空間每天都有真實的人在裡面移動、使用，這正是我們設計時的出發點。身為持照室內裝修業者，我們會先規劃動線與空間配置，再處理裝修與材質，讓辦公室或公共空間真正符合使用者的行為模式，而不只是效果圖好看而已。', href: './project-securities-office', realImg: '/images/securities-company-office-design-02-letsuan-design.jpg', alt: '證券公司辦公室等候區', imgWidth: 750, imgHeight: 400 },
   { id: 'visual', title: '視覺設計', desc: '品牌形象要能貫徹始終，從入口招牌到第六面指標，都得維持一致的樣貌。我們把識別系統、標示與環境圖像整合成同一套設計，讓訪客從大門走到建築物最深處，都能認出同一個品牌。', href: './project-westernmost-point', realImg: '/images/westernmost-point-taiwan-01-letsuan-design.jpg', alt: '臺灣極西點 — 極西點入口意象', imgWidth: 800, imgHeight: 334 },
