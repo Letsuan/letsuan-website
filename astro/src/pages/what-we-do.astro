@@ -69,6 +69,10 @@ const services = [
   { n: '06', zh: 'Multimedia & Interactive Design', en: 'Multimedia & Interactive Design', headline: "Exhibits that respond to visitors in real time, not just something to watch.", desc: "We plan sensor-triggered, projection, and interactive-screen installations, so content responds in real time to a visitor's movement and dwell time. Technical planning, content scripting, and hardware/software integration are handled by the same team, keeping everything running reliably on site.", img: '/images/multimedia-interactive-touch-table-exhibit-letsuan-design.jpg', alt: 'Visitor operating an interactive touch-table exhibit' },
 ];
 
+// Named anchors so project pages can deep-link, e.g. what-we-do#service-construction.
+const serviceSlugs: Record<string, string> = { '01': 'curatorial', '02': 'exhibition', '03': 'interior', '04': 'visual', '05': 'construction', '06': 'multimedia' };
+const anchorSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 const capabilities = [
   { zh: 'Heritage & Non-Invasive Construction', en: 'Heritage & Non-Invasive Construction', desc: 'Free-standing, zero-penetration structural systems for protected buildings and heritage sites, engineered to carry full scenic and MEP loads without touching the original fabric.', img: '/images/yokai-world-exhibition-hero-letsuan-design.jpg', alt: 'Experience the Yokai World — Yokai exhibition entrance', evidenceHref: './project-yokai-world', evidenceLabel: 'Experience the Yokai World' },
   { zh: 'IP-Licensed Exhibitions', en: 'IP-Licensed Exhibitions', desc: 'Executed to licensor specification: character fidelity, official color codes, and finish quality, all verified through direct on-site supervision and sign-off.', img: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Photo of the Kaito Kid figure taken before installation, in preparation for fixing it onto the rooftop platform', evidenceHref: './project-serialization-anniversary', evidenceLabel: 'Incident in Conan Exhibit' },
@@ -154,7 +158,7 @@ const capabilities = [
       </div>
       <div class="ltsuan-services-grid">
         {services.map((svc) => (
-          <div class="ltsuan-service-card" id={`service-${svc.n}`}>
+          <div class="ltsuan-service-card" id={`service-${serviceSlugs[svc.n]}`}>
             <div class="ltsn-panel">
               <picture>
                 <source srcset={avifPath(svc.img)} type="image/avif" />
@@ -232,7 +236,7 @@ const capabilities = [
       </div>
       <div class="ltsuan-capabilities-grid">
         {capabilities.map((cap) => (
-          <div class="ltsuan-cap-card">
+          <div class="ltsuan-cap-card" id={anchorSlug(cap.en)}>
             <h3 class="ltsuan-cap-title">{cap.zh}</h3>
             <p class="ltsuan-cap-desc">{cap.desc}</p>
             <div class="ltsuan-cap-foot">
@@ -1103,6 +1107,11 @@ const capabilities = [
     .ltsuan-capabilities-grid {
       grid-template-columns: 1fr;
     }
+  }
+  /* Keep deep-linked cards clear of the fixed nav (~77px). */
+  .ltsuan-service-card,
+  .ltsuan-cap-card {
+    scroll-margin-top: 100px;
   }
   .ltsuan-cap-card {
     display: flex;

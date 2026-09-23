@@ -89,7 +89,7 @@ export const featuredProjects = [
   { id: 'ocean', title: '不只是展覽–你就是藝術的一部分！', subtitle: '走進呼吸中的光影魔幻宇宙', category: '展覽', year: '2024', href: './project-beyond-just-an-exhibition', realImg: '/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg', alt: '不只是展覽–你就是藝術的一部分！— 訪客在向日葵花海中與「脈動山谷」地面投影互動', imgWidth: 960, imgHeight: 425 },
   { id: 'notre-dame', title: '永恆聖母院', subtitle: 'VR沉浸式體驗展臺灣首度亮相', category: '展覽', year: '2023', href: './project-notre-dame', realImg: '/images/notre-dame-vr-users-letsuan-design.jpg', alt: '工作人員協助訪客調整VR頭戴裝置背帶，其他訪客在一旁配戴頭戴裝置', imgWidth: 960, imgHeight: 520 },
   { id: 'cat-art', title: '貓美術館', subtitle: '山本修的超療癒世界', category: '展覽', year: '2024', href: './project-cat-art', realImg: '/images/cat-art-mona-lisa-cat-scene-with-visitor-letsuan-design.jpg', alt: '訪客坐在書桌前的蒙娜麗莎貓咪場景', imgWidth: 800, imgHeight: 600 },
-  { id: 'nmh-highlights', title: '典藏瑰寶', subtitle: '館藏精選文物展', category: '展覽', year: '2015', href: './project-nmh-highlights', realImg: '/images/nmh-highlights-visitor-glass-display-niches-ceramic-bronze-letsuan-design.jpg', alt: '訪客走過發光玻璃壁龕，內陳陶瓷與青銅文物', imgWidth: 1920, imgHeight: 1284 },
+  { id: 'nmh-highlights', title: '典藏瑰寶', subtitle: '館藏精選文物展', category: '展覽', year: '2014', href: './project-nmh-highlights', realImg: '/images/nmh-highlights-visitor-glass-display-niches-ceramic-bronze-letsuan-design.jpg', alt: '訪客走過發光玻璃壁龕，內陳陶瓷與青銅文物', imgWidth: 1920, imgHeight: 1284 },
 ];
 
 export const navMenuItems = [
