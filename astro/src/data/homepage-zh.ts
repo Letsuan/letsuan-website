@@ -85,10 +85,11 @@ export const services = [
 ];
 
 export const featuredProjects = [
-  { id: 'marine-illusion', title: '眼見為憑？', subtitle: '海洋幻術師：擬態與偽裝', category: '展覽', year: '2026', href: './project-marine-illusion', realImg: '/images/marine-illusion-03-letsuan-design.jpg', alt: '兩位訪客在昏暗藍光展廳中觀看「海洋擬態大師」導覽螢幕下方的發光水族展示櫃', imgWidth: 1200, imgHeight: 905 },
+  { id: 'serialization-anniversary', title: '名偵探柯南', subtitle: '連載20周年紀念展', category: '展覽', year: '2016', href: './project-serialization-anniversary', realImg: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: '安裝前拍攝的怪盜基德人形立牌，準備固定於屋頂平台', imgWidth: 2160, imgHeight: 3840, objectPosition: 'center 35%' },
   { id: 'ocean', title: '不只是展覽–你就是藝術的一部分！', subtitle: '走進呼吸中的光影魔幻宇宙', category: '展覽', year: '2024', href: './project-beyond-just-an-exhibition', realImg: '/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg', alt: '不只是展覽–你就是藝術的一部分！— 訪客在向日葵花海中與「脈動山谷」地面投影互動', imgWidth: 960, imgHeight: 425 },
   { id: 'notre-dame', title: '永恆聖母院', subtitle: 'VR沉浸式體驗展臺灣首度亮相', category: '展覽', year: '2023', href: './project-notre-dame', realImg: '/images/notre-dame-vr-users-letsuan-design.jpg', alt: '工作人員協助訪客調整VR頭戴裝置背帶，其他訪客在一旁配戴頭戴裝置', imgWidth: 960, imgHeight: 520 },
   { id: 'cat-art', title: '貓美術館', subtitle: '山本修的超療癒世界', category: '展覽', year: '2024', href: './project-cat-art', realImg: '/images/cat-art-mona-lisa-cat-scene-with-visitor-letsuan-design.jpg', alt: '訪客坐在書桌前的蒙娜麗莎貓咪場景', imgWidth: 800, imgHeight: 600 },
+  { id: 'nmh-highlights', title: '典藏瑰寶', subtitle: '館藏精選文物展', category: '展覽', year: '2015', href: './project-nmh-highlights', realImg: '/images/nmh-highlights-visitor-glass-display-niches-ceramic-bronze-letsuan-design.jpg', alt: '訪客走過發光玻璃壁龕，內陳陶瓷與青銅文物', imgWidth: 1920, imgHeight: 1284 },
 ];
 
 export const navMenuItems = [

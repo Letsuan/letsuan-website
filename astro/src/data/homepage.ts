@@ -137,10 +137,11 @@ export const services: Service[] = [
 ];
 
 export const featuredProjects: FeaturedProject[] = [
-  { id: 'marine-illusion', title: 'Seeing is Believing?', subtitle: 'Masters of Marine Illusion: Mimicry & Camouflage', category: 'Exhibition', year: '2026', href: './project-marine-illusion', realImg: '/images/marine-illusion-03-letsuan-design.jpg', alt: 'Two visitors viewing illuminated aquarium display cases beneath an Ocean Mimic Master introductory screen in a dim blue-lit gallery', imgWidth: 1200, imgHeight: 905 },
+  { id: 'serialization-anniversary', title: 'Incident in Conan Exhibit', subtitle: '20-Year Serialization Congratulatory Exhibit', category: 'Exhibition', year: '2016', href: './project-serialization-anniversary', realImg: '/images/conan-anniv-kaito-kid-pre-installation-photo-letsuan-design.jpg', alt: 'Kaito Kid figure photographed before installation, ready to be fixed onto the rooftop platform', imgWidth: 2160, imgHeight: 3840, objectPosition: 'center 35%' },
   { id: 'ocean', title: 'Beyond Just an Exhibition—You Are Part of the Art!', subtitle: 'A Breathing Magical Universe of Light and Shadows', category: 'Exhibition', year: '2024', href: './project-beyond-just-an-exhibition', realImg: '/images/beyond-exhibition-visitors-interacting-with-pulsating-valley-letsuan-design.jpg', alt: 'Beyond Just an Exhibition–You Are Part of the Art! — Visitors interacting with Pulsating Valley floor projection among sunflowers', imgWidth: 960, imgHeight: 425 },
   { id: 'notre-dame', title: 'Eternal Notre-Dame', subtitle: 'A Free-Roaming VR Journey Through the Cathedral', category: 'Exhibition', year: '2023', href: './project-notre-dame', realImg: '/images/notre-dame-vr-users-letsuan-design.jpg', alt: "Staff adjusting a visitor's VR headset strap while other visitors wear headsets nearby", imgWidth: 960, imgHeight: 520 },
   { id: 'cat-art', title: 'Cat Art Museum', subtitle: 'A Super-Healing World by Shu Yamamoto', category: 'Exhibition', year: '2024', href: './project-cat-art', realImg: '/images/cat-art-mona-lisa-cat-scene-with-visitor-letsuan-design.jpg', alt: 'Mona Lisa cat scene with visitor seated at desk', imgWidth: 800, imgHeight: 600 },
+  { id: 'nmh-highlights', title: 'Highlights of NMH Collection', subtitle: 'Collection Exhibition', category: 'Exhibition', year: '2015', href: './project-nmh-highlights', realImg: '/images/nmh-highlights-visitor-glass-display-niches-ceramic-bronze-letsuan-design.jpg', alt: 'Visitor walking past illuminated glass display niches holding ceramic and bronze pieces', imgWidth: 1920, imgHeight: 1284 },
 ];
 
 export const navMenuItems = [
@@ -154,11 +155,11 @@ export const navMenuItems = [
 ];
 
 export const navFeaturedItems = [
-  { num: '01', title: 'Seeing is Believing?', meta: 'Masters of Marine Illusion: Mimicry & Camouflage', href: '/project-marine-illusion' },
+  { num: '01', title: 'Seeing Is Believing?', meta: 'Masters of Marine Illusion: Mimicry & Camouflage', href: '/project-marine-illusion' },
   { num: '02', title: 'Beyond Just an Exhibition—You Are Part of the Art!', meta: 'Step Into a Breathing Magical Universe of Light and Shadows', href: '/project-beyond-just-an-exhibition' },
   { num: '03', title: 'Eternal Notre-Dame', meta: 'International Debut of the VR Immersive Exhibition in Taiwan', href: '/project-notre-dame' },
   { num: '04', title: 'Cat Art Museum', meta: 'A Super-Healing World by Shu Yamamoto', href: '/project-cat-art' },
-  { num: '05', title: 'INCIDENT IN CONAN EXHIBIT', meta: 'Congratulatory Exhibit “Conan Exhibit”', href: '/project-serialization-anniversary' },
+  { num: '05', title: 'Incident in Conan Exhibit', meta: 'Congratulatory Exhibit “Conan Exhibit”', href: '/project-serialization-anniversary' },
   { num: '06', title: 'Experience the Yokai World', meta: '100 Stories of Yokai Exhibition', href: '/project-yokai-world' },
   { num: '07', title: 'Highlights of NMH', meta: 'Collection Exhibition', href: '/project-nmh-highlights' },
 ];
