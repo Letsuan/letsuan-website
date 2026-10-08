@@ -642,6 +642,12 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     justify-content: center;
     pointer-events: auto;
   }
+  /* Enlarge the tap area to ~44px without changing the dot's look */
+  .ltsuan-dot-btn::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+  }
   .ltsuan-dot-num {
     position: relative;
     z-index: 1;

@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/zh-TW/Nav.astro';
-import { organizationJsonLd } from '../../data/organization';
+import { organizationJsonLdZh } from '../../data/organization';
 
 const title = '麗荃室內裝修 | 聯絡我們';
 const description = '歡迎與麗荃室內裝修聯繫，討論您下一個展覽、室內設計或工程專案，我們的工作室位於台灣台中。';
@@ -53,7 +53,7 @@ const faqJsonLd = {
 const email = 'info@letsuan.com';
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLdZh, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="contact" enHref="/contact" />
 

@@ -8,11 +8,12 @@ interface Props {
   ogImage: string;
   jsonLd: object | object[];
   lang?: string;
+  robots?: string;
   alternateHrefs?: { hreflang: string; href: string }[];
   preloadImage?: { href: string; imagesrcset?: string; imagesizes?: string; type?: string };
 }
 
-const { title, description, canonical, ogImage, jsonLd, lang = 'en', alternateHrefs = [], preloadImage } = Astro.props;
+const { title, description, canonical, ogImage, jsonLd, lang = 'en', robots = 'index, follow', alternateHrefs = [], preloadImage } = Astro.props;
 const jsonLdBlocks = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 ---
@@ -44,7 +45,7 @@ const ogLocale = lang === 'zh-TW' ? 'zh_TW' : 'en_US';
 {alternateHrefs.map((a) => (
   <link rel="alternate" hreflang={a.hreflang} href={a.href} />
 ))}
-<meta name="robots" content="index, follow" />
+<meta name="robots" content={robots} />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

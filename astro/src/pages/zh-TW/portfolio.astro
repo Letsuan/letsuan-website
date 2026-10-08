@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/zh-TW/Nav.astro';
 import PortfolioHero from '../../components/zh-TW/PortfolioHero.astro';
 import ProjectGrid from '../../components/zh-TW/ProjectGrid.astro';
-import { organizationJsonLd } from '../../data/organization';
+import { organizationJsonLdZh } from '../../data/organization';
 import { projects } from '../../data/portfolio-zh';
 
 const title = '麗荃室內裝修 | 展覽與室內設計作品集';
@@ -58,7 +58,7 @@ const pageJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, pageJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLdZh, pageJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs}>
   <div class="ltsuan-page">
     <Nav active="exhibition" enHref="/portfolio" />
 

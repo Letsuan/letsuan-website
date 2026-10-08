@@ -4,7 +4,7 @@ import Nav from '../../components/zh-TW/Nav.astro';
 import Hero from '../../components/Hero.astro';
 import ServicesGrid from '../../components/ServicesGrid.astro';
 import PortfolioPreview from '../../components/PortfolioPreview.astro';
-import { organizationJsonLd } from '../../data/organization';
+import { organizationJsonLdZh } from '../../data/organization';
 import { heroSlides, services, featuredProjects } from '../../data/homepage-zh';
 import { responsiveSrcset, avifPath } from '../../utils/images';
 
@@ -43,7 +43,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLd, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs} preloadImage={preloadImage}>
+<Layout title={title} description={description} canonical={canonical} ogImage={ogImage} jsonLd={[organizationJsonLdZh, faqJsonLd]} lang="zh-TW" alternateHrefs={alternateHrefs} preloadImage={preloadImage}>
   <div class="ltsuan-page">
     <Nav active="home" enHref="/" />
 
