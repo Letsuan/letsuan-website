@@ -39,7 +39,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
 });
 ---
 
-<section id="hero" data-auto-ms={autoAdvanceMs}>
+<section id="hero" tabindex="-1" data-auto-ms={autoAdvanceMs}>
   {slides.map((slide, i) => {
     const isActive = i === 0;
     const TitleTag = isActive ? 'h1' : 'div';
