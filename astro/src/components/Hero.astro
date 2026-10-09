@@ -109,7 +109,7 @@ const speedStreaks = Array.from({ length: 14 }, () => {
                 data-src={i === 0 ? undefined : avifPath(slide.personImg)}
                 width={slide.personWidth}
                 height={slide.personHeight}
-                loading="lazy"
+                loading={i === 0 ? 'lazy' : undefined}
                 decoding="async"
                 style={i === 1 ? 'object-fit:contain;object-position:center bottom;filter:brightness(.78) contrast(1.35) saturate(1.05)' : 'object-fit:contain;object-position:center 100%'}
               />
@@ -1055,18 +1055,28 @@ const speedStreaks = Array.from({ length: 14 }, () => {
     autoTimer = setTimeout(() => changeSlide((active + 1) % total), autoAdvanceMs);
   }
 
-  function changeSlide(idx: number) {
-    if (idx === active || transitioning) return;
-    const entering = layers[idx];
-    // Non-first person cutouts load only when their slide is reached (see markup)
-    entering.querySelectorAll<HTMLSourceElement>('source[data-srcset]').forEach((s) => {
+  // Non-first person cutouts are held back from first paint (see markup) and
+  // assigned here: when their slide is reached, or in the background after load
+  function loadPersonImages(layer: HTMLElement) {
+    layer.querySelectorAll<HTMLSourceElement>('source[data-srcset]').forEach((s) => {
       s.srcset = s.dataset.srcset!;
       s.removeAttribute('data-srcset');
     });
-    entering.querySelectorAll<HTMLImageElement>('img[data-src]').forEach((img) => {
+    layer.querySelectorAll<HTMLImageElement>('img[data-src]').forEach((img) => {
       img.src = img.dataset.src!;
       img.removeAttribute('data-src');
     });
+  }
+
+  window.addEventListener('load', () => {
+    const schedule = 'requestIdleCallback' in window ? window.requestIdleCallback : (cb: () => void) => setTimeout(cb, 1000);
+    schedule(() => layers.forEach(loadPersonImages));
+  });
+
+  function changeSlide(idx: number) {
+    if (idx === active || transitioning) return;
+    const entering = layers[idx];
+    loadPersonImages(entering);
     entering.style.transition = 'none';
     entering.style.transform = 'translateY(100%)';
     void entering.offsetHeight;
