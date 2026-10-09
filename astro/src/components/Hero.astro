@@ -974,6 +974,31 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   .ltsuan-hero3-person-flyin {
     animation: ltsuanHero3TextFlyIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s 1 both;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    /* Decorative loops and light sweeps: hide them rather than freeze mid-frame */
+    .ltsuan-beam,
+    .ltsuan-beam-twinkle,
+    .ltsuan-speed-streak,
+    .ltsuan-dot-ping,
+    .ltsuan-hero-intro-bg,
+    .ltsuan-hero-intro-streaks {
+      display: none;
+    }
+    /* Entrance and camera-move animations: drop the motion, keep the end state */
+    .ltsuan-slow-parallax,
+    .ltsuan-person-grow-glow {
+      animation: none !important;
+    }
+    .ltsuan-hero-intro-img,
+    .ltsuan-hero3-reveal,
+    .ltsuan-hero1-reveal,
+    .ltsuan-hero3-text-flyin,
+    .ltsuan-hero3-person-flyin {
+      animation: none !important;
+      transform: none;
+    }
+  }
 </style>
 
 <script>
