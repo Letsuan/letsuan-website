@@ -101,11 +101,12 @@ const speedStreaks = Array.from({ length: 14 }, () => {
         {slide.personImg && (
           <div class:list={['ltsuan-hero-person-box', personBoxClass]}>
             <picture style="display:block;width:100%;height:100%">
-              <source type="image/avif" srcset={avifPath(slide.personImg)} />
+              <source type="image/avif" srcset={i === 0 ? avifPath(slide.personImg) : undefined} data-srcset={i === 0 ? undefined : avifPath(slide.personImg)} />
               <img
                 class:list={['ltsuan-hero-person-img', personZoomClass]}
                 alt={slide.personAlt}
-                src={slide.personImg}
+                src={i === 0 ? slide.personImg : undefined}
+                data-src={i === 0 ? undefined : avifPath(slide.personImg)}
                 width={slide.personWidth}
                 height={slide.personHeight}
                 loading="lazy"
@@ -1057,6 +1058,15 @@ const speedStreaks = Array.from({ length: 14 }, () => {
   function changeSlide(idx: number) {
     if (idx === active || transitioning) return;
     const entering = layers[idx];
+    // Non-first person cutouts load only when their slide is reached (see markup)
+    entering.querySelectorAll<HTMLSourceElement>('source[data-srcset]').forEach((s) => {
+      s.srcset = s.dataset.srcset!;
+      s.removeAttribute('data-srcset');
+    });
+    entering.querySelectorAll<HTMLImageElement>('img[data-src]').forEach((img) => {
+      img.src = img.dataset.src!;
+      img.removeAttribute('data-src');
+    });
     entering.style.transition = 'none';
     entering.style.transform = 'translateY(100%)';
     void entering.offsetHeight;
