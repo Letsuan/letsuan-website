@@ -1,4 +1,72 @@
-const organizationNode = (description: string) => ({
+const copyEn = {
+  credential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'Government License',
+    name: "室內裝修業登記證 (Interior Decorators' Registration Certificate)",
+    recognizedBy: {
+      '@type': 'GovernmentOrganization',
+      name: '內政部國土管理署 (National Land Management Agency, MOI)',
+      alternateName: '內政部營建署',
+    },
+    identifier: '40E2007328',
+  },
+  knows: [
+    'Exhibition Design',
+    'Museum Engineering',
+    'Interior Design',
+    'Visual Design',
+    'Heritage Site Non-Invasive Construction',
+    'VR Immersive Space Integration',
+    'Licensed Interior Decoration',
+  ],
+  offers: {
+    '@type': 'OfferCatalog',
+    name: 'Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exhibition Design', serviceType: 'Exhibition Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design', serviceType: 'Interior Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual Design', serviceType: 'Visual Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Design-Build Construction', serviceType: 'Construction', provider: { '@id': 'https://letsuan.com/#organization' } } },
+    ],
+  },
+};
+
+const copyZh = {
+  credential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'Government License',
+    name: '室內裝修從業者登記字號',
+    recognizedBy: {
+      '@type': 'GovernmentOrganization',
+      name: '內政部國土管理署',
+      alternateName: '內政部營建署',
+    },
+    identifier: '40E2007328',
+  },
+  knows: [
+    '展覽設計',
+    '博物館工程',
+    '室內設計',
+    '視覺設計',
+    '文化場館無損施工',
+    '沉浸式空間整合',
+    '合法室內裝修',
+  ],
+  offers: {
+    '@type': 'OfferCatalog',
+    name: '服務項目',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '展覽設計', serviceType: '展覽設計', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '室內設計', serviceType: '室內設計', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '視覺設計', serviceType: '視覺設計', provider: { '@id': 'https://letsuan.com/#organization' } } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '全案施工', serviceType: '施工', provider: { '@id': 'https://letsuan.com/#organization' } } },
+    ],
+  },
+};
+
+type Copy = typeof copyEn;
+
+const organizationNode = (description: string, t: Copy = copyEn) => ({
   '@type': ['GeneralContractor', 'ProfessionalService'],
   '@id': 'https://letsuan.com/#organization',
   name: 'Letsuan Design',
@@ -7,7 +75,7 @@ const organizationNode = (description: string) => ({
   logo: 'https://letsuan.com/assets/logo.png',
   image: 'https://letsuan.com/assets/logo.png',
   description,
-  foundingDate: '2010',
+  foundingDate: '2014',
   telephone: '+886-4-2321-5956',
   email: 'info@letsuan.com',
   priceRange: '$$$$',
@@ -39,47 +107,20 @@ const organizationNode = (description: string) => ({
     areaServed: ['TW', 'International'],
   },
   areaServed: ['TW', 'International'],
-  hasCredential: {
-    '@type': 'EducationalOccupationalCredential',
-    credentialCategory: 'Government License',
-    name: "室內裝修業登記證 (Interior Decorators' Registration Certificate)",
-    recognizedBy: {
-      '@type': 'GovernmentOrganization',
-      name: '內政部國土管理署 (National Land Management Agency, MOI)',
-      alternateName: '內政部營建署',
-    },
-    identifier: '40E2007328',
-  },
+  hasCredential: t.credential,
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '09:00',
     closes: '18:00',
   },
-  knowsAbout: [
-    'Exhibition Design',
-    'Museum Engineering',
-    'Interior Design',
-    'Visual Design',
-    'Heritage Site Non-Invasive Construction',
-    'VR Immersive Space Integration',
-    'Licensed Interior Decoration',
-  ],
+  knowsAbout: t.knows,
   sameAs: [
     'https://www.facebook.com/LETSUANDESIGN',
     'https://www.pinterest.com/Letsuan_Design/',
     'https://www.linkedin.com/company/letsuan-design/',
   ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Exhibition Design', serviceType: 'Exhibition Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Interior Design', serviceType: 'Interior Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Visual Design', serviceType: 'Visual Design', provider: { '@id': 'https://letsuan.com/#organization' } } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Design-Build Construction', serviceType: 'Construction', provider: { '@id': 'https://letsuan.com/#organization' } } },
-    ],
-  },
+  hasOfferCatalog: t.offers,
 });
 
 const websiteNode = (inLanguage: string) => ({
@@ -108,6 +149,7 @@ export const organizationJsonLdZh = {
   '@graph': [
     organizationNode(
       '麗荃室內裝修（Letsuan Design）是一間位於臺灣臺中與臺北的專業設計與工程工作室，專精於博物館展示設計、文化場館策展、商業室內設計與全案工程施作。',
+      copyZh
     ),
     websiteNode('zh-TW'),
   ],
